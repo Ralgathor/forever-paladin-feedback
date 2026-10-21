@@ -2,7 +2,7 @@
 
 Unofficial player feedback for the Paladin in **World of Warcraft: Forever**. This project is not affiliated with Blizzard Entertainment.
 
-It contains 17 talent proposals (3 of them new talents) for Holy, Protection and Retribution, 1 Judgement proposal, and a talent calculator that opens in Proposed mode, with a Beta toggle.
+It contains 18 talent proposals (3 of them new talents) for Holy, Protection and Retribution, 1 Judgement proposal, and a talent calculator that opens in Proposed mode, with a Beta toggle.
 
 ## The three biggest changes
 
