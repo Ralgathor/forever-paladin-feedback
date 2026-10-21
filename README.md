@@ -2,13 +2,13 @@
 
 Unofficial player feedback for the Paladin in **World of Warcraft: Forever**. This project is not affiliated with Blizzard Entertainment.
 
-It contains 17 talent proposals (15 changes and 2 new talents) for Holy, Protection and Retribution, plus a talent calculator that opens in Proposed mode, with a Beta toggle.
+It contains 16 talent proposals (3 of them new talents) for Holy, Protection and Retribution, 1 Judgement proposal, and a talent calculator that opens in Proposed mode, with a Beta toggle.
 
 ## The three biggest changes
 
-- **Protection: crushing blows.** Casting Holy Shield also triggers Redoubt, so block stays high enough to push most crushing blows off the attack table (P4).
-- **Protection: Reckoning.** Charges come from Block, Dodge and Parry as well as from being crit. Holy Strike releases up to 2 stored extra attacks (P8).
-- **Holy: mana and layout.** Reverence gives 17/33/50% regen while casting and moves to row 2, so Protection and Ret can use it with an 8-point dip. Healing Light moves to row 6 (H1, H6).
+- **Protection: crushing blows.** Casting Holy Shield also triggers Redoubt, so block stays high enough to push most crushing blows off the attack table (P2).
+- **Protection: Reckoning.** Charges come from Block, Dodge and Parry as well as from being crit. Holy Strike releases up to 2 stored extra attacks (P6).
+- **Holy: mana and layout.** Reverence gives 17/33/50% regen while casting and moves to row 2, so Protection and Ret can use it with an 8-point dip. Healing Light moves to row 6 (H1, H4).
 
 ## Read and try
 
@@ -19,9 +19,9 @@ Talent icons load from Wowhead's icon server (wow.zamimg.com). If they cannot lo
 
 ## How the proposals were made
 
-- Beta client build 1.60.1.70425. Talent text comes from [wowforevertalents.com](https://wowforevertalents.com/), tested behavior from player tests.
+- Forever client build 1.60.1.70450 with the server hotfixes of 18 October 2026. Talent text comes from [wowforevertalents.com](https://wowforevertalents.com/), tested behavior from player tests.
 - Each proposal follows a talent another class already has in the same beta (Warrior, Druid, Priest, Shaman, Hunter, Mage).
-- Combat and mana numbers use Classic 1.12 rules unless a test says otherwise. Burst and threat numbers are estimates, not simulations.
+- Combat and mana numbers use Classic 1.12 rules unless a test says otherwise. Burst numbers are estimates; Reckoning and mana numbers come from simple simulations. Each estimate lists its assumptions.
 
 ## Feedback
 

@@ -175,7 +175,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
     <button id="resetAll" type="button">Reset all</button>
   </section>
 
-  <div class="mode-note" id="modeNote" hidden><b>Proposed trees.</b> Talents with a purple P-tag (P2, P8…) differ from the beta. Builds made here don't load in the beta trees.</div>
+  <div class="mode-note" id="modeNote" hidden><b>Proposed trees.</b> Talents with a purple P-tag (P1, P6…) differ from the beta. Builds made here don't load in the beta trees.</div>
 
   <div class="trees" id="trees"></div>
 
@@ -197,7 +197,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
 
   <footer class="foot">
     <p>Click a talent to add a point, right-click to remove one. Shift-click fills or empties a talent. On a phone, tap a talent and use − and + in the card below the tree. Each row opens after 5 points per row in that tree, and a talent with an arrow needs the talent above it at full rank.</p>
-    <p>In Beta mode, tiers, rank counts, prerequisites and tooltips follow the Forever beta data (build 1.60.1.70425, 16 October 2026). The grid layout matches Wowhead's Forever calculator. Talent icons load from Wowhead's image server when this file is opened directly in a browser. Unofficial fan tool, not affiliated with Blizzard Entertainment or Wowhead.</p>
+    <p>In Beta mode, tiers, rank counts, prerequisites and tooltips follow the Forever beta data (client build 1.60.1.70450 with the server hotfixes of 18 October 2026). The grid layout matches Wowhead's Forever calculator. Talent icons load from Wowhead's image server when this file is opened directly in a browser. Unofficial fan tool, not affiliated with Blizzard Entertainment or Wowhead.</p>
   </footer>
 </div>
 
@@ -263,53 +263,51 @@ const RAW=[
 // Proposed changes: patches to RAW talents, keyed by talent key. "replace" swaps a talent out for a new one in the same spot.
 const PROPOSED={
  rev:{pid:"H1",tier:2,col:2,rt:["Allows 17% of your Mana regeneration to continue while casting.","Allows 33% of your Mana regeneration to continue while casting.","Allows 50% of your Mana regeneration to continue while casting."]},
- hl:{pid:"H6",tier:6,col:1,ranks:2,rt:["Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 6%.","Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 12%."]},
- cg:{pid:"H6",tier:3,col:4},
- uf:{pid:"H6",tier:2,col:3},
- rec:{pid:"P8",rt:["Gives you a 20% chance to gain an extra attack after Blocking, Dodging, Parrying or being the victim of a non-periodic critical strike. Cannot occur from Blocks, Dodges or Parries more than once every 4 sec. Stores up to 4 extra attacks. Your Holy Strike releases up to 2 stored extra attacks.","Gives you a 40% chance to gain an extra attack after Blocking, Dodging, Parrying or being the victim of a non-periodic critical strike. Cannot occur from Blocks, Dodges or Parries more than once every 4 sec. Stores up to 4 extra attacks. Your Holy Strike releases up to 2 stored extra attacks.","Gives you a 60% chance to gain an extra attack after Blocking, Dodging, Parrying or being the victim of a non-periodic critical strike. Cannot occur from Blocks, Dodges or Parries more than once every 4 sec. Stores up to 4 extra attacks. Your Holy Strike releases up to 2 stored extra attacks.","Gives you a 80% chance to gain an extra attack after Blocking, Dodging, Parrying or being the victim of a non-periodic critical strike. Cannot occur from Blocks, Dodges or Parries more than once every 4 sec. Stores up to 4 extra attacks. Your Holy Strike releases up to 2 stored extra attacks.","Gives you a 100% chance to gain an extra attack after Blocking, Dodging, Parrying or being the victim of a non-periodic critical strike. Cannot occur from Blocks, Dodges or Parries more than once every 4 sec. Stores up to 4 extra attacks. Your Holy Strike releases up to 2 stored extra attacks."]},
- ds:{pid:"H7",removed:true},
- is:{pid:"H7",tier:1,col:2,ranks:5,rt:["Increases the damage done by your Seals and Judgements by 3%.","Increases the damage done by your Seals and Judgements by 6%.","Increases the damage done by your Seals and Judgements by 9%.","Increases the damage done by your Seals and Judgements by 12%.","Increases the damage done by your Seals and Judgements by 15%."]},
- isf:{pid:"P7",replace:{key:"rdef",name:"Righteous Defense",tier:4,col:3,r1:"Forces all enemies within 10 yards to attack you for 6 sec.",status:"N",info:"Instant · 10 min cooldown"}},
- irf:{pid:"P7",removed:true},
- sj:{pid:"P7",req:null,tier:3,col:1},
- sf:{pid:"H6",tier:4,col:1},
- iol:{pid:"H5",tier:2,col:1,rt:["Your Holy Shock, Holy Strike and Flash of Light critical hits reduce the cast time of your next Holy Light cast within 15 sec by 0.5 sec.","Your Holy Shock, Holy Strike and Flash of Light critical hits reduce the cast time of your next Holy Light cast within 15 sec by 1 sec."]},
- lv:{pid:"H3",info:"About 500 Mana · 20 yd range · 1.5 sec cast · 6 sec cooldown"},
- ihoj:{pid:"P2",tier:3,col:2},
- red:{pid:"P4",rt:["Damaging melee attacks against you have a 10% chance to increase your chance to block by 4%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 8%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 12%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 16%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 20%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect."]},
- ic:{pid:"P5",r1:"Increases the threat generated by your Holy Strike ability by 5%. While Righteous Fury is active, reduces your damage taken by 2%.",rN:"Increases the threat generated by your Holy Strike ability by 25%. While Righteous Fury is active, reduces your damage taken by 10%."},
- tou:{pid:"P6",replace:{key:"ds",name:"Divine Strength",r1:"Increases your Strength by 2%.",rN:"Increases your Strength by 10%.",status:"N"}},
+ hl:{pid:"H4",tier:6,col:1,ranks:2,rt:["Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 6%.","Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 12%."]},
+ cg:{pid:"H4",tier:3,col:4},
+ uf:{pid:"H4",tier:2,col:3},
+ rec:{pid:"P6",rt:["Gives you a 20% chance to gain an extra attack after Blocking, Dodging, Parrying or being the victim of a non-periodic critical strike. Cannot occur from Blocks, Dodges or Parries more than once every 4 sec. Stores up to 4 extra attacks. Your Holy Strike releases up to 2 stored extra attacks.","Gives you a 40% chance to gain an extra attack after Blocking, Dodging, Parrying or being the victim of a non-periodic critical strike. Cannot occur from Blocks, Dodges or Parries more than once every 4 sec. Stores up to 4 extra attacks. Your Holy Strike releases up to 2 stored extra attacks.","Gives you a 60% chance to gain an extra attack after Blocking, Dodging, Parrying or being the victim of a non-periodic critical strike. Cannot occur from Blocks, Dodges or Parries more than once every 4 sec. Stores up to 4 extra attacks. Your Holy Strike releases up to 2 stored extra attacks.","Gives you a 80% chance to gain an extra attack after Blocking, Dodging, Parrying or being the victim of a non-periodic critical strike. Cannot occur from Blocks, Dodges or Parries more than once every 4 sec. Stores up to 4 extra attacks. Your Holy Strike releases up to 2 stored extra attacks.","Gives you a 100% chance to gain an extra attack after Blocking, Dodging, Parrying or being the victim of a non-periodic critical strike. Cannot occur from Blocks, Dodges or Parries more than once every 4 sec. Stores up to 4 extra attacks. Your Holy Strike releases up to 2 stored extra attacks."]},
+ ds:{pid:"H5",removed:true},
+ is:{pid:"H5",tier:1,col:2,ranks:5,rt:["Increases the damage done by your Seals and Judgements by 3%.","Increases the damage done by your Seals and Judgements by 6%.","Increases the damage done by your Seals and Judgements by 9%.","Increases the damage done by your Seals and Judgements by 12%.","Increases the damage done by your Seals and Judgements by 15%."]},
+ isf:{pid:"P5",replace:{key:"rdef",name:"Righteous Defense",tier:4,col:3,r1:"Forces all enemies within 10 yards to attack you for 6 sec.",status:"N",info:"Instant · 10 min cooldown"}},
+ irf:{pid:"P5",removed:true},
+ sj:{pid:"P5",req:null,tier:3,col:1},
+ sf:{pid:"H4",tier:4,col:1},
+ iol:{pid:"H3",tier:2,col:1,rt:["Your Holy Shock, Holy Strike and Flash of Light critical hits reduce the cast time of your next Holy Light cast within 15 sec by 0.5 sec.","Your Holy Shock, Holy Strike and Flash of Light critical hits reduce the cast time of your next Holy Light cast within 15 sec by 1 sec."]},
+ ihoj:{pid:"P1",tier:3,col:2},
+ red:{pid:"P2",rt:["Damaging melee attacks against you have a 10% chance to increase your chance to block by 4%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 8%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 12%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 16%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 20%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect."]},
+ ic:{pid:"P3",r1:"Increases the threat generated by your Holy Strike ability by 5%. While Righteous Fury is active, reduces your damage taken by 2%.",rN:"Increases the threat generated by your Holy Strike ability by 25%. While Righteous Fury is active, reduces your damage taken by 10%."},
+ tou:{pid:"P4",replace:{key:"ds",name:"Divine Strength",r1:"Increases your Strength by 2%.",rN:"Increases your Strength by 10%.",status:"N"}},
  con:{pid:"R1",r1:"Improves your chance to get a critical strike with attacks and spells by 1%.",rN:"Improves your chance to get a critical strike with attacks and spells by 5%."},
- ths:{pid:"R3",tier:4,col:4},
- sa:{pid:"R5",tier:5,col:3,r1:"Causes your Holy Strike ability to always trigger the effect of your active Seal and to refresh all Judgement effects on the target, including those of other Paladins. Does not trigger the stun of Seal of Justice.",rN:null},
- rep:{pid:"R5",tier:4,col:3},
- tol:{pid:"R6",r1:"Reduces the Mana cost of your Seal spells by 20%. When you replace your Seal of Command, Seal of Righteousness, Seal of Fury, or Seal of Justice with a different Seal, you gain an Echo of that Seal for 10 sec. While the Echo lasts, your melee attacks also apply the replaced Seal's effects."}
+ ths:{pid:"R2",tier:4,col:4},
+ sa:{pid:"R3",tier:5,col:3,r1:"Causes your Holy Strike ability to always trigger the effect of your active Seal and to refresh all Judgement effects on the target, including those of other Paladins. Does not trigger the stun of Seal of Justice.",rN:null},
+ rep:{pid:"R3",tier:4,col:3},
+ tol:{pid:"R4",r1:"Reduces the Mana cost of your Seal spells by 20%. When you replace your Seal of Command, Seal of Righteousness, Seal of Fury, or Seal of Justice with a different Seal, you gain an Echo of that Seal for 10 sec. While the Echo lasts, your melee attacks also apply the replaced Seal's effects."}
 };
-const PROPOSED_NEW=[{pid:"H4",tree:"holy",key:"sw",name:"Lingering Light",tier:5,col:3,ranks:2,rt:["Your non-periodic critical heals cause the target to be healed for an additional 15% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing.","Your non-periodic critical heals cause the target to be healed for an additional 30% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing."],req:null,status:"N",info:""},{pid:"P9",tree:"prot",key:"fj",name:"Fury's Reach",tier:4,col:1,ranks:2,rt:["Increases the range of your Judgement by 5 yards while Seal of Fury is active.","Increases the range of your Judgement by 10 yards while Seal of Fury is active."],req:"sj",status:"N",info:""}];
+const PROPOSED_NEW=[{pid:"H2",tree:"holy",key:"sw",name:"Lingering Light",tier:5,col:3,ranks:2,rt:["Your non-periodic critical heals cause the target to be healed for an additional 15% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing.","Your non-periodic critical heals cause the target to be healed for an additional 30% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing."],req:null,status:"N",info:""},{pid:"P7",tree:"prot",key:"fj",name:"Fury's Reach",tier:4,col:1,ranks:2,rt:["Increases the range of your Judgement by 5 yards while Seal of Fury is active.","Increases the range of your Judgement by 10 yards while Seal of Fury is active."],req:"sj",status:"N",info:""}];
 // Rows for the proposals table: [id, talent key in proposed trees, talent, tree, today, proposed]
 const PROPOSALS=[
- ["H1","rev","Reverence","Holy, 10 points","10/20/30% of Mana regeneration while casting","17/33/50%, matching Priest, Druid and Shaman"],
- ["H3","lv","Light's Vigil","Holy, 30 points","730 mana","About 500 mana; the full combo costs the same as Holy Light"],
- ["H4","sw","Lingering Light (new)","Holy, 25 points","—","2 ranks: critical heals add a rolling heal over time of 15/30% of the heal"],
- ["H5","iol","Infusion of Light","Holy, 15 points","Holy Shock and Flash of Light crits speed up the next Holy Light","Holy Strike crits also trigger it"],
- ["H6","hl","Holy layout","Holy, rows 2–6","Healing Light row 2 (3 ranks); Reverence row 3; Infusion of Light row 4; Consecrated Ground row 5","Healing Light row 6 (2 ranks, 6/12%); Infusion of Light and Reverence row 2; Consecrated Ground row 3; Spiritual Focus row 4; Lingering Light row 5"],
- ["H7","is","Divine Strength → Improved Seals","Holy, row 1","Divine Strength +2–10% Strength (row 1); Improved Seals 5/10/15% (row 2, 3 ranks)","Divine Strength removed; Improved Seals moves to row 1, 5 ranks, 3/6/9/12/15%"],
- ["P2","ihoj","Improved Hammer of Justice","Protection, 15 points","3 ranks, −5/10/15 sec","Same values; moves to row 3"],
- ["P4","red","Redoubt","Protection, row 1","10% chance for +4–20% block","Same proc, and every Holy Shield cast also triggers it"],
- ["P5","ic","Iron Creed","Protection, 25 points","Damage taken −2–10% for 6 sec after Holy Strike","Same threat; damage taken −2–10% while Righteous Fury is active, no timer"],
- ["P6","ds","Toughness → Divine Strength","Protection, row 1","Toughness: armor from items +2–10%","Replaced by Divine Strength (+2–10% Strength), moved from Holy row 1 (H7)"],
- ["P7","irf","Improved Seal of Fury → Righteous Defense; Improved Righteous Fury","Protection, row 3","Mana when Seal of Fury's shield is absorbed; damage taken −2–6% with Righteous Fury","Improved Righteous Fury removed (Iron Creed gives Warrior's 10%); Improved Seal of Fury replaced by Righteous Defense, a 10 min area taunt like Challenging Shout and Challenging Roar"],
- ["P8","rec","Reckoning","Protection, 20 points","8–40% chance on block, 20–100% on being crit, for an extra attack; stores up to 4","20–100% chance on block, dodge or parry (once every 4 sec) or on being crit, for a charge (up to 4); Holy Strike spends up to 2 charges as extra attacks"],
- ["P9","fj","Fury's Reach (new)","Protection, 15 points","—","2 ranks: Judgement range +5/10 yards; requires Swift Judgement while Seal of Fury is active"],
- ["R1","con","Conviction","Retribution, 5 points","Melee crit +1–5%","Attack and spell crit +1–5%"],
- ["R3","ths","Two-Handed Weapon Specialization","Retribution","Opens at 20 points","Opens at 15 points"],
- ["R5","sa","Sacred Arbiter and Repentance","Retribution","Sacred Arbiter at 15, Repentance at 20","Swapped; Holy Strike always triggers your active Seal's effect"],
- ["R6","tol","Twist of Light","Retribution, 30 points","Echo lasts one melee attack","Echo lasts 10 sec"]
+ ["H1", "rev", "Reverence", "Holy, row 2", "10/20/30% of mana regen while casting", "17/33/50%"],
+ ["H2", "sw", "Lingering Light (new)", "Holy, row 5", "—", "2 ranks: critical heals add a heal over time worth 15/30% of the heal"],
+ ["H3", "iol", "Infusion of Light", "Holy, row 2", "Holy Shock and Flash of Light crits speed up the next Holy Light", "Holy Strike crits also count"],
+ ["H4", "hl", "Holy layout", "Holy, rows 2–6", "Healing Light in row 2", "Healing Light moves to row 6 with 2 ranks (6/12%); five other talents move up or across"],
+ ["H5", "is", "Improved Seals", "Holy, row 1", "Row 2, 3 ranks, 5/10/15%", "Row 1, 5 ranks, 3/6/9/12/15%; replaces Divine Strength"],
+ ["P1", "ihoj", "Improved Hammer of Justice", "Protection, row 3", "Row 4", "Row 3; same values (3 ranks, −5/10/15 sec)"],
+ ["P2", "red", "Redoubt", "Protection, row 1", "10% chance on being hit: +4–20% block", "Same, and every Holy Shield cast also triggers it"],
+ ["P3", "ic", "Iron Creed", "Protection, row 6", "−2–10% damage taken for 6 sec after Holy Strike", "−2–10% damage taken while Righteous Fury is active; same threat bonus"],
+ ["P4", "ds", "Divine Strength", "Protection, row 1", "Toughness: +2–10% armor from items", "Divine Strength (+2–10% Strength), moved from Holy"],
+ ["P5", "rdef", "Righteous Defense (new)", "Protection, rows 3–4", "Improved Seal of Fury and Improved Righteous Fury in row 3", "Both removed; Swift Judgement moves to row 3; new area taunt in row 4"],
+ ["P6", "rec", "Reckoning", "Protection, row 5", "Extra attack from block (40%) or being crit (100%); fires on the next swing", "Charge from block, dodge, parry (once every 4 sec) or being crit; Holy Strike releases up to 2"],
+ ["P7", "fj", "Fury's Reach (new)", "Protection, row 4", "—", "2 ranks: Judgement range +5/10 yards while Seal of Fury is active"],
+ ["R1", "con", "Conviction", "Retribution, row 2", "Melee crit +1–5%", "Attack and spell crit +1–5%"],
+ ["R2", "ths", "Two-Handed Weapon Specialization", "Retribution, row 4", "Opens at 20 points", "Opens at 15 points"],
+ ["R3", "sa", "Sacred Arbiter and Repentance", "Retribution, rows 4–5", "Sacred Arbiter at 15 points (+20% Holy Strike damage), Repentance at 20", "Rows swapped; Holy Strike always triggers your active Seal"],
+ ["R4", "tol", "Twist of Light", "Retribution, row 7", "The Echo applies to the next melee attack only", "The Echo applies to every melee attack for 10 sec"]
 ];
 const BASELINE=[
- ["J5","Judgement of the Crusader","Raid debuff that takes the Paladin's one Judgement slot","Personal debuff outside the Judgement limit, so two Paladins keep Light and Wisdom up and Ret or Protection keep their own Crusader (recommended)"],
- ["J1","Judgement of Light and Wisdom","Two separate Judgements","Fallback: merged into one Judgement of Grace that heals and restores mana"],
- ["J4","Twist of Light","Echo for damage Seals only","Optional extra: replaced Light, Wisdom or Justice Judgements leave a 40-sec Echo"]
+ ["J1", "Judgement of the Crusader", "Uses the Paladin's one Judgement slot", "Personal debuff outside the one-Judgement limit (recommended)"],
+ ["J2", "Judgement of Light and Wisdom", "Two separate Judgements", "Fallback if J1 is rejected: merged into one Judgement of Grace that heals and restores mana"],
+ ["J3", "Twist of Light", "Echo for damage Seals only", "Optional add-on to J1: a replaced Light, Wisdom or Justice Judgement stays as a 40 sec Echo"]
 ];
 let mode="prop",T=[],BY={};
 function makeTalents(m){
