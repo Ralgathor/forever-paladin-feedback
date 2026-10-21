@@ -57,7 +57,10 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
 .tabs button[aria-selected="true"]{background:var(--panel);border-color:var(--ink)}
 .trees{display:flex;gap:14px;justify-content:center}
 .tree{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 30px 16px;width:var(--tw,326px);flex:0 0 auto;position:relative;overflow:hidden;box-shadow:var(--shadow)}
-.tree::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 60% at 50% 0%,var(--tc) 0%,transparent 70%);opacity:.10;pointer-events:none}
+.tree::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(120% 60% at 50% 0%,var(--tc) 0%,transparent 70%);opacity:.10;pointer-events:none}
+.tree::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(rgba(10,10,14,.35),rgba(10,10,14,.55)),var(--bgimg) 0 0/100% 100% no-repeat}
+.tree>*{position:relative;z-index:1}
+.tree[data-tree="holy"]{--bgimg:url("https://wow.zamimg.com/images/wow/talents/backgrounds/classicplus/382.jpg")}.tree[data-tree="prot"]{--bgimg:url("https://wow.zamimg.com/images/wow/talents/backgrounds/classicplus/383.jpg")}.tree[data-tree="ret"]{--bgimg:url("https://wow.zamimg.com/images/wow/talents/backgrounds/classicplus/381.jpg")}
 .tree[data-tree="holy"]{--tc:var(--holy)}.tree[data-tree="prot"]{--tc:var(--prot)}.tree[data-tree="ret"]{--tc:var(--ret)}
 .thead{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:12px;position:relative}
 .thead h2{font-family:var(--f-display);font-weight:400;font-size:20px;margin:0;color:var(--tc)}
