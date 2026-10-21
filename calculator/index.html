@@ -120,6 +120,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
 .mode button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 .mode-note{font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .mode-note b{color:var(--gold);font-weight:500}
+.chgbox{margin-top:8px;padding:6px 8px;border-left:3px solid #7b3fe4;background:rgba(123,63,228,.14);border-radius:3px;font-size:12px;line-height:1.4}.chgbox .was{color:var(--muted)}.chgbox .now{color:#cdb4ff;font-weight:600}
 .tal.chg::after{content:attr(data-pid);position:absolute;left:-8px;top:-8px;background:#7b3fe4;color:#fff;border:1px solid #d9c2ff;border-radius:4px;font-family:var(--f-mono);font-size:10px;font-weight:700;line-height:14px;padding:0 4px;pointer-events:none;box-shadow:0 1px 3px rgba(0,0,0,.6)}
 .pid{font-family:var(--f-mono);font-size:11px;color:var(--gold);border:1px solid var(--gold-glow);border-radius:3px;padding:0 4px;margin-right:4px}
 .props{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow)}
@@ -443,15 +444,17 @@ function renderDetail(){
   const next=t.pts>0&&t.pts<t.ranks?`<p class="next"><b>Next rank:</b> ${rankText(t,t.pts+1)}</p>`:"";
   d.innerHTML=`<div class="tal ${st}" style="--tc:var(--${t.tree})">${icon(t.key)}<span class="rank mono">${t.pts}/${t.ranks}</span></div>
   <div class="body"><h3>${t.name}</h3><div class="meta">Rank ${t.pts}/${t.ranks} · ${statusOf(t)}${t.info?" · "+t.info:""}</div><div class="meta">${reqLine(t)}</div>
-  <p class="desc">${t.pts===0?"<b>Rank 1:</b> ":""}${cur}</p>${next}</div>
+  <p class="desc">${t.pts===0?"<b>Rank 1:</b> ":""}${cur}</p>${next}${chgBlock(t)}</div>
   <div class="steppers"><button type="button" id="minus" aria-label="Remove a point from ${t.name}" ${canRemove(t)?"":"disabled"}>−</button><button type="button" id="plus" aria-label="Add a point to ${t.name}" ${canAdd(t)?"":"disabled"}>+</button></div>`;
   d.querySelector("#minus").onclick=()=>{remove(t);render();};
   d.querySelector("#plus").onclick=()=>{add(t);render();};
 }
 const tip=document.getElementById("tip");
+function chgBlock(t){if(!t.pid)return"";const r=PROPOSALS.find(x=>x[0]===t.pid);if(!r)return"";
+  return `<div class="chgbox"><b>Proposed change ${t.pid}</b><br><span class="was">Beta:</span> ${esc(r[4])}<br><span class="now">Proposed:</span> ${esc(r[5])}</div>`;}
 function showTip(t,el){
   const cur=t.pts>0?rankText(t,t.pts):rankText(t,1);
-  tip.innerHTML=`<h4>${t.pid?`<span class="pid">${t.pid}</span>`:""}${t.name}</h4><div class="meta">Rank ${t.pts}/${t.ranks}${t.info?" · "+t.info:""}</div><div class="meta">${reqLine(t)}</div><p>${cur}</p>${t.pts>0&&t.pts<t.ranks?`<p class="meta"><b>Next rank:</b> ${rankText(t,t.pts+1)}</p>`:""}<div class="hint">Click to learn · Right-click to unlearn</div>`;
+  tip.innerHTML=`<h4>${t.pid?`<span class="pid">${t.pid}</span>`:""}${t.name}</h4><div class="meta">Rank ${t.pts}/${t.ranks}${t.info?" · "+t.info:""}</div><div class="meta">${reqLine(t)}</div><p>${cur}</p>${t.pts>0&&t.pts<t.ranks?`<p class="meta"><b>Next rank:</b> ${rankText(t,t.pts+1)}</p>`:""}${chgBlock(t)}<div class="hint">Click to learn · Right-click to unlearn</div>`;
   tip.hidden=false;const r=el.getBoundingClientRect(),w=tip.offsetWidth,h=tip.offsetHeight;
   let x=r.right+10,y=r.top;if(x+w>innerWidth-8)x=r.left-w-10;if(x<8)x=8;if(y+h>innerHeight-8)y=innerHeight-h-8;if(y<8)y=8;
   tip.style.left=x+"px";tip.style.top=y+"px";
