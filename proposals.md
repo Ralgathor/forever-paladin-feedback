@@ -27,7 +27,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 18 chan
 | C7 | Iron Creed | Protection, row 6 | −2–10% damage taken for 6 sec after Holy Strike | −2–10% damage taken while Righteous Fury is active |
 | C8 | Divine Strength replaces Toughness | Protection, row 1 | Toughness: +2–10% armor from items | Divine Strength: +2–10% Strength (from Holy row 1) |
 | C9 | Improved Righteous Fury | Protection, row 3 | −2–6% damage taken with Righteous Fury | Removed |
-| C10 | Righteous Defense (new) replaces Improved Seal of Fury | Protection, row 3 → row 4 | Improved Seal of Fury: mana when the Seal of Fury shield absorbs a hit | Righteous Defense: area taunt, 10 yards, 6 sec, 10 min cooldown |
+| C10 | Shoulder the Burden (new) replaces Improved Seal of Fury | Protection, row 3 → row 4 | Improved Seal of Fury: mana when the Seal of Fury shield absorbs a hit | Shoulder the Burden: 50% of the threat of an ally moves to you, 1 min cooldown |
 | C11 | Reckoning | Protection, row 5 | Extra attack after a block (40%) or a critical hit taken (100%). It hits with the next swing | Charge after a block, dodge or parry (once each 4 sec) or a critical hit taken. Holy Strike releases up to 2 charges |
 | C12 | Fury's Reach (new) | Protection, row 4 | — | 2 ranks: Judgement range +5/10 yards while Seal of Fury is active |
 | C13 | Shield Specialization | Protection, row 3 | Mana return once each 3 sec | Mana return once each 2 sec |
@@ -178,7 +178,7 @@ The Protection proposals give:
 | 1 (0) | Divine Strength (C8), Redoubt (C6) | 10 |
 | 2 (5) | Precision, Guardian's Favor, Anticipation | 10 |
 | 3 (10) | Swift Judgement (M5), Improved Hammer of Justice (M4), Shield Specialization (C13), Sacred Duty | 9 |
-| 4 (15) | Fury's Reach (C12), One-Handed Weapon Specialization, Righteous Defense (C10) | 6 |
+| 4 (15) | Fury's Reach (C12), One-Handed Weapon Specialization, Shoulder the Burden (C10) | 6 |
 | 5 (20) | Templar's Bulwark, Reckoning (C11) | 6 |
 | 6 (25) | Iron Creed (C7) | 5 |
 | 7 (30) | Holy Shield (C14) | 1 |
@@ -217,17 +217,21 @@ The Protection proposals give:
 - With Iron Creed always active (C7), the two talents gave about 15% damage reduction.
 - Iron Creed alone gives 10%, the same as the Warrior.
 
-### C10. Righteous Defense (new talent) replaces Improved Seal of Fury: row 4, column 3
+### C10. Shoulder the Burden (new talent) replaces Improved Seal of Fury: row 4, column 3
 
-- **Proposed text.** "Forces all enemies within 10 yards to attack you for 6 sec." Instant, 10 min cooldown.
+- **Proposed text.** "Transfers 50% of the threat of a friendly party or raid member to you, on all enemies." Instant, 30 yards, 1 min cooldown, 45 mana (3% of base mana).
 - **Why remove Improved Seal of Fury.** It was a second "mana when you are hit" talent. Its mana return does not change with the rank of the Seal. Reverence in row 2 (C1) is the mana talent now (see Mana).
-- **Model.** Challenging Shout (Warrior) and Challenging Roar (Druid) have the same range, duration and cooldown.
-- **Single-target taunt.** Judgement of Fury stays the single-target taunt.
+- **Problem.** When an ally has too much threat, the Paladin tank can only taunt one enemy with Judgement of Fury, at 10 yards. The Paladin has no tool to save an ally from a group of enemies.
+- **Change.** Shoulder the Burden moves half of the threat of the ally to the Paladin, on each enemy. The ally keeps the other half. Thus, the ally must still control their threat.
+- **Model.** Fade (Priest) and Feint (Rogue) decrease the threat of a player. Shoulder the Burden also moves that threat to the tank.
+- **Raw threat.** The threat that moves does not change. Righteous Fury does not multiply it.
+- **Tank swaps.** On the other tank, it moves half of their threat to you. Then use Judgement of Fury to take the boss.
+- **PvP.** Players do not use threat. Thus, the talent has no effect in PvP.
 - **Signature talents.** Each tree keeps a 1-point signature talent in rows 3 and 4:
   - Holy: Voice of Truth and Divine Favor.
   - Retribution: Seal of Command and Repentance (M7).
-  - Protection: Swift Judgement and Righteous Defense.
-- **Other specs.** Holy and Retribution can get it with 15 points. But they do not need an area taunt.
+  - Protection: Swift Judgement and Shoulder the Burden.
+- **Other specs.** Holy and Retribution can get it with 15 points. A Holy Paladin can use it to save an ally in a group.
 - **No change.** Righteous Fury, Seal of Fury and its absorb shield stay baseline spells.
 
 ### C11. Reckoning: charges from block, dodge and parry, released by Holy Strike
@@ -272,7 +276,7 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 - **Position.** Row 4, column 1, 2 ranks. It requires Swift Judgement (straight arrow from row 3).
 - **Why.** Protection has no ranged pull and no ranged taunt. The Seal of Fury Judgement does 153–167 Holy damage and taunts for 4 sec. But its range is only 10 yards. At 2/2, the range is 20 yards: two times the base range.
 - **Model.** Vanguard (Warrior): Charge in Defensive Stance, row 4, 1 point. Feral Charge (Druid, row 3) and a ranged pull in Feral.
-- **Why 2 ranks.** Row 4 already has a 1-point talent (Righteous Defense). Thus, this talent has ranks, as the other talents in the row.
+- **Why 2 ranks.** Row 4 already has a 1-point talent (Shoulder the Burden). Thus, this talent has ranks, as the other talents in the row.
 - **Why only with Seal of Fury.** Judgement of Command does 388–422 damage to a stunned target. Without the Seal of Fury condition, a 20 yard range gives more burst to hybrids in PvP. With the condition, Holy and Retribution get almost nothing from the dip.
 - **Threat and mana.** No change while you tank. Judgement still costs 91 mana and has a 10 sec cooldown. Only the first pull changes. The full path costs 3 points (Swift Judgement and 2 ranks).
 
@@ -1013,6 +1017,10 @@ We examined these ideas and rejected them. They are not proposals.
 | Holy Shield threat bonus +50% or +100% (not +20%) | Flat: +100% is better than the Warrior at fresh level 60. +50% is too weak in late raids |
 | Iron Creed: +25% threat on all Holy damage | Flat. It works as an improved Righteous Fury. It does not increase with content |
 | Righteous Fury also increases physical damage threat (×1.5) with a shield | Too weak in late raids (88% of the Druid). It changes Righteous Fury for all specs |
+| Righteous Defense: area taunt (10 yards, 6 sec, 10 min cooldown, as Challenging Shout) | An area taunt with a 10 min cooldown gives little. Shoulder the Burden (C10) saves an ally without a taunt |
+| Righteous Defense: Blessing of Protection also makes up to 3 enemies attack you | Only 3 enemies, and only when Blessing of Protection is used. Shoulder the Burden (C10) works on all enemies |
+| A shield interrupt in Protection | Paladins have no interrupt by design |
+| A passive share of the threat of an ally (as Vigilance, Warrior, a later expansion) | Not a new design. Shoulder the Burden is an active spell with a cooldown |
 
 ## Sources
 
