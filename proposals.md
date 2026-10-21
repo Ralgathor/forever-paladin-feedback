@@ -303,7 +303,7 @@ This is the build p-5532000210215-50005031211331 in the calculator: Protection 2
 - **What changes.** Each block adds 200% of your block value to Holy Shield's damage. Block chance, charges, cooldown and the threat bonus stay as in the beta.
 - **Problem.** Warrior and Druid threat grows with gear and with boss damage, because their rage comes from the hits they take. Paladin threat only grows with spell power: about +32 threat per second per +100 spell power. In the gear model, the Paladin without C14 falls from 107% of the Druid's threat at fresh level 60 to 80% in Naxxramas (see Threat).
 - **Why block value.** It is a gear stat on the character sheet, easy to read and to gear for. It grows about 5 times from fresh level 60 to Naxxramas, much faster than spell power. It ties the Paladin's tank stats together: the shield, Strength (Divine Strength, C9) and Shield Specialization (+30% block value). Warrior's Shield Slam already adds block value to its damage.
-- **Result.** The Paladin stays between the Druid and the Warrior at every gear tier: 116% of the Druid's threat at fresh level 60, 102% in Naxxramas. With flatter gear progression it ends at 94–110% in Naxxramas (see Threat, Flatter gear progression).
+- **Result.** The Paladin stays between the Druid and the Warrior at every gear tier: 116% of the Druid's threat at fresh level 60, 102% in Naxxramas. With flatter gear progression it ends at 94–110% in Naxxramas (see Threat, part 3).
 - **Why 200%.** At 100% the Paladin is still at 91% of the Druid in Naxxramas. At 300% it passes the Warrior from pre-raid gear on.
 - **No new button.** Holy Shield is already used on cooldown, and C7 keeps it blocking about 3 attacks per 10 sec.
 - **PvP.** At about 125 block value, each block deals about 250 more Holy damage, at most 4 blocks per 10 sec, and only against melee attacks. Only Protection has Holy Shield.
@@ -364,66 +364,84 @@ The two tanks are level. The Paladin's gap closes with gear; the Warrior's gaps 
 
 ### Threat
 
-This section compares single-target threat per second for the three tanks at level 60 against a level 63 boss. It is a model built from beta tests and developer notes, not a combat log. The inputs are listed at the end, and the unknowns are in Open questions.
+This section compares the threat of the three tanks: Warrior, Druid and Paladin. The unit is threat per second (TPS) on one boss. The tanks are level 60. The boss is level 63.
 
-#### Results
+The values come from a model. The model uses beta tests and developer notes. It is not a combat log. The inputs are at the end of this section. The values that are not known are in Open questions.
 
-One boss. Boss armor reduced by 5 Sunder Armor and Faerie Fire. Paladin with 200 spell power (pre-raid estimate).
+#### Summary
+
+- With all proposals, the Paladin has about the same threat as the Druid and the Warrior.
+- Without the proposals, the Paladin has less threat than the other two tanks at all gear levels.
+- C14 (Holy Shield damage increases with block value) is necessary. Without C14, the Paladin falls behind in raids.
+- C19 (Judgement of the Crusader for each Paladin) gives the Paladin tank about +50 TPS.
+- If the gear progression is flatter, C14 at 200% is still correct.
+
+#### 1. Result with the same gear
+
+Conditions:
+
+- All tanks have pre-raid gear.
+- The Paladin has 200 spell power and 60 block value.
+- The boss has 5 Sunder Armor and Faerie Fire.
 
 | Boss hit before armor | Warrior | Druid | Paladin, beta | Paladin, all proposals | Paladin, all proposals + Consecration |
 | --- | --- | --- | --- | --- | --- |
-| 3,000 | about 525 | about 520 | about 355 | about 540 | about 625 |
-| 4,500 | about 600 | about 585 | about 355 | about 540 | about 625 |
-| 6,000 | about 660 | about 650 | about 355 | about 540 | about 625 |
+| 3,000 | 525 | 520 | 355 | 540 | 625 |
+| 4,500 | 600 | 585 | 355 | 540 | 625 |
+| 6,000 | 660 | 650 | 355 | 540 | 625 |
 
-- **Warrior** gains about +135 if Shield Slam has a ×2.25 threat multiplier like Revenge (not tested).
-- **Paladin, beta** has no Judgement of the Crusader, because Judgement of Fury may remove it (see below). With Crusader it is about 400.
-- **Paladin, all proposals** includes Judgement of the Crusader (C19) and C14 with about 60 block value (pre-raid estimate). Without C14 it is about 455, or about 545 with Consecration.
-- **Without armor debuffs on the boss** (4,500 hits): Warrior about 470, Druid about 425, Paladin with all proposals about 515. Most Paladin threat is Holy damage, which ignores armor.
-- **Retribution Aura** instead of Devotion Aura adds about +25 for the Paladin, at the cost of 735 armor.
+All values are approximate.
 
-**Proposed Paladin, where the threat comes from (200 spell power)**
+- Warrior and Druid get rage when the boss hits them. Thus, their threat increases when the boss hits harder. Paladin threat does not change with boss damage.
+- If Shield Slam has a ×2.25 threat multiplier (not tested), add 135 TPS to the Warrior.
+- The beta Paladin has no Judgement of the Crusader in this table. Judgement of Fury can remove it. With Judgement of the Crusader, the beta Paladin has about 400 TPS.
+- Without C14, the proposed Paladin has about 455 TPS (545 TPS with Consecration).
+- If the boss has no armor debuffs (4,500 hits): Warrior 470 TPS, Druid 425 TPS, Paladin 515 TPS. Most Paladin threat is Holy damage. Armor does not decrease Holy damage.
+- Retribution Aura gives the Paladin about +25 TPS. But the Paladin then does not have Devotion Aura (735 armor).
 
-| Source | Threat per sec |
+**Threat sources of the proposed Paladin (200 spell power, 60 block value)**
+
+| Source | TPS |
 | --- | --- |
-| Holy Shield blocks (about 180 base, about 80 from block value with C14) | about 260 |
-| Judgement of Fury (every 10 sec, plus Swift Judgement once per minute) | about 70 |
-| Holy Strike with Iron Creed | about 57 |
-| Reckoning extra attacks (C11) | about 53 |
-| Seal of Fury | about 49 |
-| Auto attacks | about 49 |
-| **Total** | **about 540** |
+| Holy Shield blocks: 180 from the base damage, 80 from block value (C14) | 260 |
+| Judgement of Fury: one each 10 sec, plus one Swift Judgement each minute | 70 |
+| Holy Strike with Iron Creed | 57 |
+| Reckoning extra attacks (C11) | 53 |
+| Seal of Fury | 49 |
+| Auto attacks | 49 |
+| **Total** | **540** |
 
-**Spell power.** Each +100 spell power adds about +32 threat per second. Judgement of the Crusader counts like +161 spell power against its target, so it is worth about +50, more than going from 150 to 300 spell power.
+The proposals give the Paladin about +185 TPS more than the beta:
+
+- C14 (block value on Holy Shield): about +80 TPS.
+- C19 (Judgement of the Crusader): about +50 TPS.
+- C7 (more Holy Shield blocks) and C11 (Reckoning): the remaining TPS.
+
+**Spell power**
+
+Each +100 spell power gives about +32 TPS.
 
 | Spell power | 100 | 150 | 200 | 250 | 300 | 350 |
 | --- | --- | --- | --- | --- | --- | --- |
-| Paladin, all proposals (60 block value) | about 505 | about 525 | about 540 | about 555 | about 570 | about 585 |
+| Paladin, all proposals (60 block value) | 505 | 525 | 540 | 555 | 570 | 585 |
 
-Expected spell power at level 60, based on about 100–120 at level 30: about 150 in balanced pre-raid tank gear, 200–250 with some threat gear, 300–350 in early raid gear. No Forever level 60 item data is public yet.
+Judgement of the Crusader adds 161 spell power against the boss. This is more than the difference between 150 and 300 spell power.
 
-#### What the results mean
+Spell power at level 60 is not known. At level 30, players have 100–120 spell power. The estimates for level 60 are:
 
-- **With the same gear, the three tanks are close on moderate bosses.** All proposals raise the Paladin by about +185 threat per second over the beta: block value on Holy Shield (C14, about +80), Judgement of the Crusader (C19, about +50), more Holy Shield blocks (C7) and Reckoning (C11).
-- **With the same gear, harder-hitting bosses still favor Warriors and Druids.** They get rage from the damage they take, so their threat grows with boss damage. Paladin threat does not. In real progression, gear and boss damage rise together, and C14 makes Paladin threat grow with gear (see Gear tiers).
-- **The Paladin has no stance or form multiplier.** Righteous Fury (×1.9) only applies to Holy damage. Auto attacks and Reckoning attacks get ×1.0, while Defensive Stance gives ×1.495 and Bear Form ×1.5 on everything.
-- **The Paladin has no strong, frequent attack.**
+- Pre-raid tank gear: about 150.
+- Pre-raid gear with some threat items: 200–250.
+- First raid gear: 300–350.
 
-| Attack | Total threat multiplier | Cooldown |
-| --- | --- | --- |
-| Primal Bite (Druid, new in Forever) | ×4.5 (×3, Bear Form ×1.5) | 6 sec |
-| Revenge (Warrior) | ×3.4 (×2.25, Defensive Stance and Defiance ×1.495) | 5 sec |
-| Maul (Druid) | ×2.6 (×1.75, Bear Form ×1.5) | Every swing |
-| Holy Strike with Iron Creed 5/5 (Paladin) | ×2.4 (Righteous Fury ×1.9, Iron Creed ×1.25) | 10 sec |
-| Paladin auto attacks and Reckoning attacks | ×1.0 | — |
+#### 2. Result with gear progression
 
-- **Paladin strengths.** Its threat does not depend on boss armor or rage. Consecration and Holy Shield work on every attacker, so the Paladin is strongest on packs.
+In raids, the gear and the boss damage increase together. This table shows the five gear tiers of the model.
 
-#### Gear tiers
+- The fresh level 60 tier uses a real gear profile (crafted items and dungeon items, without talents).
+- The other tiers are estimates. Each tier has about 15–20% more stats, as in Classic.
+- The Warrior and the Druid have the same Attack Power and weapon as the Paladin.
 
-The fresh level 60 row uses a real gear profile: crafted and dungeon items, before talents. The later tiers are extrapolated: about 15–20% more stats per tier, following Classic item levels. Warrior and Druid get the same Attack Power and weapon as the Paladin.
-
-| Tier | Spell power | Attack Power | Weapon damage per sec | Block value (with Shield Specialization) | Max mana | Boss hit before armor |
+| Tier | Spell power | Attack Power | Weapon damage per sec | Block value (with Shield Specialization) | Maximum mana | Boss hit before armor |
 | --- | --- | --- | --- | --- | --- | --- |
 | Fresh level 60 (real profile) | 208 | 428 | 27.5 (2.2 sec) | 26 | 2,897 | 3,000 |
 | Pre-raid best in slot | 260 | 520 | 42 | 60 | 3,400 | 3,500 |
@@ -431,90 +449,147 @@ The fresh level 60 row uses a real gear profile: crafted and dungeon items, befo
 | Blackwing Lair | 380 | 700 | 60 | 100 | 4,400 | 6,000 |
 | Naxxramas | 440 | 800 | 66 | 125 | 4,900 | 8,000 |
 
-Threat per second, one boss, boss armor debuffed. The percentage is the share of the Druid's threat.
+TPS on one boss. The percentage is the Paladin TPS divided by the Druid TPS.
 
 | Tier | Warrior | Druid | Paladin, beta | Paladin, proposals without C14 | **Paladin, all proposals** | All proposals + Consecration |
 | --- | --- | --- | --- | --- | --- | --- |
-| Fresh level 60 | about 490 | about 405 | about 335 (83%) | about 430 (107%) | **about 470 (116%)** | about 555 |
-| Pre-raid best in slot | about 545 | about 455 | about 370 (81%) | about 470 (104%) | **about 555 (122%)** | about 645 |
-| Molten Core | about 640 | about 530 | about 405 (76%) | about 515 (97%) | **about 625 (118%)** | about 720 |
-| Blackwing Lair | about 755 | about 635 | about 450 (71%) | about 565 (89%) | **about 700 (111%)** | about 800 |
-| Naxxramas | about 815 | about 760 | about 485 (64%) | about 605 (80%) | **about 775 (102%)** | about 880 |
+| Fresh level 60 | 490 | 405 | 335 (83%) | 430 (107%) | **470 (116%)** | 555 |
+| Pre-raid best in slot | 545 | 455 | 370 (81%) | 470 (104%) | **555 (122%)** | 645 |
+| Molten Core | 640 | 530 | 405 (76%) | 515 (97%) | **625 (118%)** | 720 |
+| Blackwing Lair | 755 | 635 | 450 (71%) | 565 (89%) | **700 (111%)** | 800 |
+| Naxxramas | 815 | 760 | 485 (64%) | 605 (80%) | **775 (102%)** | 880 |
 
-- **Without C14** the Paladin falls behind from Molten Core on. Warriors and Druids gain Attack Power and more rage from harder boss hits; the Paladin only gains spell power.
-- **With C14** the Paladin stays between the Druid and the Warrior at every tier.
-- **The beta Paladin** is behind at every tier, from 83% of the Druid at fresh level 60 to 64% in Naxxramas.
-- **Mana improves with gear,** because Shield Specialization returns 4% of max mana. Tanking without Consecration goes from about +3 mana per sec at fresh level 60 (2,897 mana) to about +27 in Naxxramas.
+- With all proposals, the Paladin is between the Druid and the Warrior at all tiers.
+- Without C14, the Paladin falls behind from Molten Core. The Warrior and the Druid get more Attack Power and more rage. The Paladin gets only spell power.
+- The beta Paladin is behind at all tiers: 83% of the Druid at fresh level 60, and 64% in Naxxramas.
+- Shield Specialization gives 4% of maximum mana. Thus, more mana gives more mana return. Tanking without Consecration gives about +3 mana per sec at fresh level 60 and about +27 mana per sec in Naxxramas.
 
-#### Flatter gear progression
+#### 3. Result with flatter gear
 
-Blizzard has said it wants flatter, more horizontal gear progression. This is an intention, not a promise. In a model where gear grows half as fast after pre-raid, C14 still keeps the Paladin at 94–120% of the Druid's threat. The weakest case is flat gear with bosses that keep hitting harder, because Warrior and Druid rage still grows with boss damage. Block value per tier is the value to watch.
+Blizzard said that it wants flatter gear progression. This is an intention, not a promise. This part shows the result if the gear increases more slowly.
 
-Model: fresh level 60 and pre-raid as above. From Molten Core on, spell power, Attack Power, weapon damage, crit and block value gain half of the growth in the Gear tiers table (block value 70, 80 and 92 instead of 80, 100 and 125).
+Model:
 
-| Tier | Gear as in Gear tiers | Flat gear, boss hits as in Gear tiers | Flat gear, boss hits also flatter |
+- Fresh level 60 and pre-raid are the same as in part 2.
+- From Molten Core, the gear increases at half the rate of part 2. Block value is 70, 80 and 92 (not 80, 100 and 125).
+- Two cases for boss damage: boss hits as in part 2, or boss hits that also increase at half the rate (4,000, 4,750 and 5,750 before armor).
+
+Paladin with all proposals. The first value is the percentage of the Druid TPS. The value in brackets is the percentage of the Warrior TPS.
+
+| Tier | Gear as in part 2 | Flatter gear, boss hits as in part 2 | Flatter gear, flatter boss hits |
 | --- | --- | --- | --- |
 | Fresh level 60 | 116% (96%) | 116% (96%) | 116% (96%) |
 | Pre-raid best in slot | 122% (101%) | 122% (101%) | 122% (101%) |
 | Molten Core | 118% (97%) | 114% (95%) | 120% (99%) |
 | Blackwing Lair | 111% (93%) | 104% (88%) | 115% (95%) |
 | Naxxramas | 102% (95%) | 94% (89%) | 110% (91%) |
-| Without C14, Naxxramas | 80% | 76% | 89% |
+| Naxxramas, without C14 | 80% | 76% | 89% |
 
-Paladin with all proposals, as a share of the Druid's threat, with the share of the Warrior's in brackets. "Boss hits also flatter": boss hits grow half as fast after pre-raid (4,000, 4,750 and 5,750 before armor instead of 4,500, 6,000 and 8,000).
+- C14 at 200% is correct for all three cases. At 150%, the Paladin falls to 89% of the Druid if boss hits continue to increase. At 300%, the Paladin has more threat than the Warrior if all values are flat.
+- Without C14, the Paladin falls behind in all cases. Thus, C14 is more important with flatter gear.
+- The weakest case is flatter gear with boss hits that continue to increase. The Warrior and the Druid still get more rage from bigger hits. Monitor the block value of each gear tier.
+- Mana: if maximum mana increases more slowly (3,650, 3,900 and 4,150), tanking without Consecration gives +12, +15 and +18 mana per sec. C13 is more important.
+- Defense: if gear gives Defense more slowly, tanks get to 440 Defense later. The boss can then make critical hits for a longer time. C7 and the Reckoning critical-hit trigger stay useful for a longer time.
+- C19: the +161 bonus from Judgement of the Crusader is more important when gear gives less spell power.
+- The PvP burst check (C11) uses fresh and pre-raid stats. It stays correct for a longer time.
 
-- **C14 at 200% fits all three cases.** At 150% the Paladin would fall to 89% of the Druid in Naxxramas when boss hits keep growing. At 300% it would pass the Warrior when everything is flat.
-- **Without C14 the Paladin falls behind in every case,** so flatter gear makes C14 more important.
-- **Mana.** Shield Specialization returns 4% of max mana. With max mana growing half as fast (about 3,650, 3,900 and 4,150), tanking without Consecration gives about +12, +15 and +18 mana per sec instead of +15, +21 and +27. C13 matters more.
-- **Defense.** If gear gives Defense more slowly, tanks reach 440 Defense later and bosses keep a small crit chance for longer. C7 (Holy Shield triggers Redoubt) and Reckoning's crit trigger stay useful longer.
-- **Judgement of the Crusader (C19).** Its +161 bonus is worth relatively more when spell power on gear grows slowly.
-- **PvP burst check (C11).** It uses fresh and pre-raid level stats, so it stays valid longer with flatter gear.
+#### 4. Why the Paladin is different
 
-#### Options if Protection threat is too low
+- **No stance or form multiplier.** Righteous Fury (×1.9) is for Holy damage only. Paladin auto attacks and Reckoning attacks get ×1.0. Defensive Stance gives ×1.495 to all Warrior damage. Bear Form gives ×1.5 to all Druid damage.
+- **No strong attack with a short cooldown.**
 
-If testing shows Protection threat is still short with C14, these are the next steps. They are not proposals yet.
-
-| Option | Effect |
-| --- | --- |
-| Iron Creed: Holy Strike threat +20/40/60/80/100% instead of +5/10/15/20/25% | About +30 to +50 threat per second at every tier. Threat only, so no PvP effect |
-| A shield attack in Protection row 4 (6 sec cooldown, weapon damage + 100 Holy damage, ×2 threat) | About +170 to +200 threat per second. Adds a button; the Druid's new Primal Bite is the precedent |
-
-Other options were checked and dropped (see Withdrawn ideas).
-
-#### Inputs
-
-- **All tanks.** Level 60, 500 Attack Power, 3% hit, one-handed weapon of 45 damage per sec at 2.7 sec (Druid: 260 per swing every 2.5 sec). Crit 6% (Druid 12% with Sharpened Claws).
-- **Attacking a level 63 boss from the front.** 6% miss, 6.5% dodge, 14% parry, 40% glancing white hits at −35% damage.
-- **Boss.** 3,731 armor; 976 after 5 Sunder Armor (450 each) and Faerie Fire. A swing every 2 sec. 64% of its swings land on the tank.
-- **Rage (normalized in Forever).** Auto attacks: 3.46 rage × weapon speed (×1.3 for two-handers and Bears), double on a crit, none on a miss, dodge or parry. Damage taken: 2.5 × 0.6 × unmitigated hit ÷ 243.6 at level 63, ×1.5 for crushing blows. Heroic Strike and Maul hits give no rage (assumed, as in Classic). 5 threat per rage gained.
-- **Warrior.** Defensive Stance ×1.3 threat and −10% damage, Defiance 3/3 ×1.15, One-Handed Weapon Specialization +10%, Improved Revenge 3/3. Revenge: damage × 2.25, with 28% of Attack Power. Shield Slam: 640–670 + 50 block value, threat = damage. Heroic Strike rank 9: damage + about 145. 5 rage on each block, dodge and parry. Spare rage goes to Sunder Armor (about 225 threat before stance).
-- **Druid.** Bear Form ×1.5, Maul ×1.75, Primal Bite ×3, Swipe ×1.75. Ferocity 5/5, Savage Fury 2/2, Feral Instinct 3/3. Lacerate and Faerie Fire are not included.
-- **Paladin.**
-  - Threat and damage modifiers: Righteous Fury ×1.9 on Holy damage only; One-Handed Weapon Specialization +10% (not on Consecration or Retribution Aura); Improved Seals +15% from the 8-point Holy dip.
-  - Spell power coefficients: Seal of Fury 10% per hit, Judgement of Fury 42.9%, Holy Strike 21.45%, Holy Shield 10.7% per block (assumed: 42.9% split over 4 charges), Consecration 33.6% (15% of ticks miss).
-  - Rates: 3 Holy Shield blocks per 10 sec (2.5 in the beta), 2.0 Reckoning attacks per 10 sec (1.0 in the beta).
-
-#### Spell data from beta tests
-
-| Spell | Behavior in the beta | Source |
+| Attack | Total threat multiplier | Cooldown |
 | --- | --- | --- |
-| Holy Strike | Normalized weapon damage. The flat Holy part scales at 0.429 × the weapon %: 21.45% of spell power at rank 8. Does not trigger Seal of Fury, Righteousness or Command; does trigger Seal of Light, Justice and Wisdom | Player tests |
-| Seal of Fury | 10% of spell power per hit (11.5% with Improved Seals). No Attack Power scaling. Melee crit for double damage, rolled on its own. Cannot miss | Player tests |
-| Seal of Righteousness | 10% of spell power with a one-hander, 12% with a two-hander, whatever the speed | Player tests; patch note of 16 October |
-| Seal of Command | 29% × 70% weapon damage = 20.3% of spell power. 7 procs per minute. Uses the melee hit table | Player tests |
-| Judgements of Fury, Righteousness and Command | 42.9% of spell power (instant-cast value). Melee hit table, double damage on a crit. Judgement of Command deals double damage to stunned targets | Player tests; patch note of 16 October |
-| Judgement of Fury | The damage lands before the taunt, so the taunt copies the top threat but the Judgement's own threat is not added on top | Player tests |
-| Judgement of the Crusader | Its bonus uses each spell's coefficient, like spell power. Seal of Command gets the full 29% from it | Player tests |
-| Consecration | 0.042 of spell power per tick (33.6% per target), first 4 enemies only | Patch note of 16 October |
-| Retribution Aura | 6% of spell power | Patch note of 8 October |
-| Holy Shield | Spell power scaling not known. Classic used 5% per block | Classic data |
-| Mana gains | Shield Specialization, Improved Seal of Fury and Sanctified Judgement mana returns cause no threat | Patch notes of 8 and 16 October |
-| Rage | Damage-taken rage fixed on 8 October and balanced around 20–40% armor depending on level. Crits give double rage. Bear Form threat ×1.5 | Patch note of 8 October |
+| Primal Bite (Druid, new in Forever) | ×4.5 (×3, Bear Form ×1.5) | 6 sec |
+| Revenge (Warrior) | ×3.4 (×2.25, Defensive Stance and Defiance ×1.495) | 5 sec |
+| Maul (Druid) | ×2.6 (×1.75, Bear Form ×1.5) | Each swing |
+| Holy Strike with Iron Creed 5/5 (Paladin) | ×2.4 (Righteous Fury ×1.9, Iron Creed ×1.25) | 10 sec |
+| Paladin auto attacks and Reckoning attacks | ×1.0 | — |
 
-#### Findings to report to Blizzard
+- **Paladin advantages.** Boss armor and rage do not change Paladin threat. Consecration and Holy Shield hit all attackers. Thus, the Paladin is strongest against groups of enemies.
 
-- **Judgement of Fury applies its damage before its taunt.** The taunt should come first, so the Paladin ends slightly ahead of the top threat instead of level with it.
-- **Holy Strike triggers only some Seals.** It triggers Seal of Light, Justice and Wisdom, but not the damage Seals (Fury, Righteousness, Command). C17 makes this consistent for Retribution.
+#### 5. Next steps if threat is too low
+
+Use these steps only if tests show that Protection threat is too low with C14. They are not proposals now.
+
+| Step | Effect |
+| --- | --- |
+| Iron Creed: Holy Strike threat +20/40/60/80/100% (not +5/10/15/20/25%) | +30 to +50 TPS at each tier. Threat only, no PvP effect |
+| A shield attack in Protection row 4: 6 sec cooldown, weapon damage + 100 Holy damage, ×2 threat | +170 to +200 TPS. Adds a button. The new Druid attack Primal Bite is the precedent |
+
+Other options were examined and rejected. See Withdrawn ideas.
+
+#### 6. Inputs
+
+**All tanks**
+
+- Level 60, 500 Attack Power, 3% hit.
+- One-handed weapon: 45 damage per sec, 2.7 sec speed. Druid: 260 damage for each swing, 2.5 sec.
+- Critical hit chance: 6%. Druid: 12% (Sharpened Claws).
+
+**Attacks against a level 63 boss (from the front)**
+
+- 6% miss, 6.5% dodge, 14% parry.
+- 40% of auto attacks are glancing blows (−35% damage).
+
+**Boss**
+
+- 3,731 armor. 976 armor after 5 Sunder Armor (450 each) and Faerie Fire.
+- One swing each 2 sec. 64% of the swings hit the tank.
+
+**Rage (normalized in Forever)**
+
+- Auto attack: 3.46 rage × weapon speed. ×1.3 for two-handed weapons and Bear Form. ×2 for a critical hit. No rage for a miss, dodge or parry.
+- Damage taken: 2.5 × 0.6 × boss hit before armor ÷ 243.6 (level 63). ×1.5 for a crushing blow.
+- Heroic Strike and Maul hits give no rage (assumed, as in Classic).
+- Each rage point gives 5 threat.
+
+**Warrior**
+
+- Defensive Stance: ×1.3 threat, −10% damage. Defiance 3/3: ×1.15 threat.
+- One-Handed Weapon Specialization: +10% damage. Improved Revenge 3/3.
+- Revenge: threat = damage × 2.25. Damage includes 28% of Attack Power.
+- Shield Slam: 640–670 damage + 50 block value. Threat = damage.
+- Heroic Strike rank 9: threat = damage + about 145.
+- 5 rage for each block, dodge and parry.
+- Extra rage goes to Sunder Armor (about 225 threat before Defensive Stance).
+
+**Druid**
+
+- Bear Form ×1.5, Maul ×1.75, Primal Bite ×3, Swipe ×1.75.
+- Ferocity 5/5, Savage Fury 2/2, Feral Instinct 3/3.
+- Lacerate and Faerie Fire are not in the model.
+
+**Paladin**
+
+- Righteous Fury: ×1.9 threat for Holy damage only.
+- One-Handed Weapon Specialization: +10% damage (not for Consecration or Retribution Aura).
+- Improved Seals: +15% (8-point dip into Holy).
+- Spell power coefficients: Seal of Fury 10% for each hit, Judgement of Fury 42.9%, Holy Strike 21.45%, Holy Shield 10.7% for each block (assumed: 42.9% divided by 4 charges), Consecration 33.6% (15% of ticks miss).
+- Holy Shield: 3 blocks each 10 sec (beta: 2.5).
+- Reckoning: 2.0 extra attacks each 10 sec (beta: 1.0).
+
+#### 7. Spell data from beta tests
+
+| Spell | Data from the beta | Source |
+| --- | --- | --- |
+| Holy Strike | Uses normalized weapon damage. The Holy part uses 0.429 × weapon %: 21.45% of spell power at rank 8. Does not trigger Seal of Fury, Righteousness or Command. Triggers Seal of Light, Justice and Wisdom | Player tests |
+| Seal of Fury | 10% of spell power for each hit (11.5% with Improved Seals). No Attack Power. Critical hit: ×2 damage, with a separate roll. Cannot miss | Player tests |
+| Seal of Righteousness | 10% of spell power with a one-handed weapon, 12% with a two-handed weapon. Weapon speed has no effect | Player tests; patch note, 16 October |
+| Seal of Command | 29% × 70% weapon damage = 20.3% of spell power. 7 procs each minute. Uses the melee hit table | Player tests |
+| Judgement of Fury, Righteousness and Command | 42.9% of spell power. Melee hit table. Critical hit: ×2 damage. Judgement of Command: ×2 damage against a stunned target | Player tests; patch note, 16 October |
+| Judgement of Fury | The damage hits before the taunt. The taunt copies the top threat. The threat from the damage is not added | Player tests |
+| Judgement of the Crusader | The bonus uses the coefficient of each spell, as spell power does. Seal of Command gets the full 29% | Player tests |
+| Consecration | 0.042 of spell power for each tick (33.6% for each target). First 4 enemies only | Patch note, 16 October |
+| Retribution Aura | 6% of spell power | Patch note, 8 October |
+| Holy Shield | Spell power scaling is not known. Classic: 5% for each block | Classic data |
+| Mana return | Mana from Shield Specialization, Improved Seal of Fury and Sanctified Judgement gives no threat | Patch notes, 8 and 16 October |
+| Rage | Rage from damage taken was repaired on 8 October. It uses 20–40% armor, related to level. Critical hits give ×2 rage. Bear Form: ×1.5 threat | Patch note, 8 October |
+
+#### 8. Problems to report to Blizzard
+
+- **Judgement of Fury: the damage hits before the taunt.** The taunt must apply first. Then the Paladin gets a small threat lead, not only equal threat.
+- **Holy Strike triggers only some Seals.** It triggers Seal of Light, Justice and Wisdom. It does not trigger Seal of Fury, Righteousness or Command. C17 makes this consistent for Retribution.
 
 ### Protection: beta test results
 
@@ -719,7 +794,7 @@ These are risks to check in testing. None of them needs a change now.
 | W8 | Fury's Reach (C12): a 15-point Protection dip plus Swift Judgement gives a 20 yard Judgement | Watch: the range only works with Seal of Fury |
 | W9 | Repentance at 15 Retribution points and Templar's Bulwark (an absorb of 100% of health, three times Warrior's Last Stand) are strong PvP dips | Watch |
 | W10 | Shield Specialization (C13) may make Consecration tanking too cheap against fast-hitting packs (up to 80 mana per sec) | Go back to 3 sec, or lower the return from 4% to 3% |
-| W11 | Protection single-target threat in late raids depends on C14 and on block value in Forever gear (see Threat, Gear tiers) | Re-tune C14's 200%; then Iron Creed +100% Holy Strike threat; a shield attack only as a last step |
+| W11 | Protection single-target threat in late raids depends on C14 and on block value in Forever gear (see Threat, part 2) | Re-tune C14's 200%; then Iron Creed +100% Holy Strike threat; a shield attack only as a last step |
 
 ## Open questions
 
