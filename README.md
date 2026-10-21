@@ -31,13 +31,13 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C7 Iron Creed:** −2–10% damage taken while Righteous Fury is active (beta: for 6 sec after Holy Strike).
 - **C8 Divine Strength replaces Toughness:** +2–10% Strength, from Holy row 1.
 - **C9 Improved Righteous Fury:** removed. Iron Creed alone gives −10% damage taken.
-- **C10 Righteous Defense (new) replaces Improved Seal of Fury:** your Blessing of Protection also makes up to 3 enemies that attack the target attack you for 6 sec. Row 3. It requires Guardian's Favor.
+- **C10 Righteous Defense (new) replaces Improved Seal of Fury:** area taunt, 10 yards, 6 sec, 10 min cooldown.
 - **C11 Reckoning:** block, dodge and parry also give charges (once each 4 sec). Holy Strike releases up to 2 charges.
-- **C12 Fury's Reach (new):** Judgement range +5/10 yards while Seal of Fury is active. Row 4, column 2. It requires Swift Judgement. One-Handed Weapon Specialization moves to column 3.
+- **C12 Fury's Reach (new):** Judgement range +5/10 yards while Seal of Fury is active.
 - **C13 Shield Specialization:** mana return once each 2 sec (beta: 3 sec).
 - **C14 Holy Shield:** each block also does 200% of your block value as Holy damage. Paladin threat then increases with gear, as Warrior and Druid threat does.
-- **M4 Improved Hammer of Justice:** row 4, column 3 → row 3, column 1.
-- **M5 Swift Judgement:** stays in row 4, column 1. It has no requirement now (C10 removes Improved Seal of Fury).
+- **M4 Improved Hammer of Justice:** row 4 → row 3.
+- **M5 Swift Judgement:** row 4 → row 3, with no requirement.
 
 **Retribution**
 
