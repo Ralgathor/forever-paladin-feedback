@@ -27,7 +27,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 18 chan
 | C7 | Iron Creed | Protection, row 6 | −2–10% damage taken for 6 sec after Holy Strike | −2–10% damage taken while Righteous Fury is active |
 | C8 | Divine Strength replaces Toughness | Protection, row 1 | Toughness: +2–10% armor from items | Divine Strength: +2–10% Strength (from Holy row 1) |
 | C9 | Improved Righteous Fury | Protection, row 3 | −2–6% damage taken with Righteous Fury | Removed |
-| C10 | Righteous Defense (new) replaces Improved Seal of Fury | Protection, row 3 → row 4 | Improved Seal of Fury: mana when the Seal of Fury shield absorbs a hit | Righteous Defense: area taunt, 10 yards, 6 sec, 10 min cooldown |
+| C10 | Righteous Defense (new) replaces Improved Seal of Fury | Protection, row 3 → row 4 | Improved Seal of Fury: mana when the Seal of Fury shield absorbs a hit | Righteous Defense: Blessing of Protection also makes up to 3 enemies that attack the target attack you for 6 sec |
 | C11 | Reckoning | Protection, row 5 | Extra attack after a block (40%) or a critical hit taken (100%). It hits with the next swing | Charge after a block, dodge or parry (once each 4 sec) or a critical hit taken. Holy Strike releases up to 2 charges |
 | C12 | Fury's Reach (new) | Protection, row 4 | — | 2 ranks: Judgement range +5/10 yards while Seal of Fury is active |
 | C13 | Shield Specialization | Protection, row 3 | Mana return once each 3 sec | Mana return once each 2 sec |
@@ -219,15 +219,19 @@ The Protection proposals give:
 
 ### C10. Righteous Defense (new talent) replaces Improved Seal of Fury: row 4, column 3
 
-- **Proposed text.** "Forces all enemies within 10 yards to attack you for 6 sec." Instant, 10 min cooldown.
-- **Why remove Improved Seal of Fury.** It was a second "mana when you are hit" talent. Its mana return does not change with the rank of the Seal. Reverence in row 2 (C1) is the mana talent now (see Mana).
-- **Model.** Challenging Shout (Warrior) and Challenging Roar (Druid) have the same range, duration and cooldown.
-- **Single-target taunt.** Judgement of Fury stays the single-target taunt.
+- **Proposed text.** "Your Blessing of Protection also forces up to 3 enemies that are attacking the target to attack you for 6 sec." Passive, 1 point.
+- **Why remove Improved Seal of Fury.** It was a second "mana when you are hit" talent. Its mana return does not change with the rank of the Seal. Reverence in row 2 (C1) is the mana talent now (see Analysis, Mana).
+- **Problem.** Blessing of Protection stops physical attacks on an ally. But the enemies then attack the next player on their threat list. This is often a healer.
+- **Change.** With Righteous Defense, up to 3 of these enemies attack the Paladin. The Paladin saves the ally and keeps the enemies.
+- **No new button.** Blessing of Protection is a baseline spell. Guardian's Favor (row 2) decreases its cooldown by 2 min.
+- **Use.** Cast Blessing of Protection on a healer or a player in cloth armor. Blessing of Protection does not stop spells. Thus, a healer can continue to heal.
+- **Model.** Righteous Defense (Paladin, a later expansion) forces up to 3 enemies that attack an ally to attack the Paladin. Guardian's Favor is the Forever precedent for a talent that changes Blessing of Protection.
+- **Not an area taunt.** The Paladin protects allies with Blessing of Protection. An area taunt with a 10 min cooldown gives little (see Withdrawn ideas).
 - **Signature talents.** Each tree keeps a 1-point signature talent in rows 3 and 4:
   - Holy: Voice of Truth and Divine Favor.
   - Retribution: Seal of Command and Repentance (M7).
   - Protection: Swift Judgement and Righteous Defense.
-- **Other specs.** Holy and Retribution can get it with 15 points. But they do not need an area taunt.
+- **Other specs.** Holy and Retribution can get it with 15 points. In PvP, a taunt has no effect on players.
 - **No change.** Righteous Fury, Seal of Fury and its absorb shield stay baseline spells.
 
 ### C11. Reckoning: charges from block, dodge and parry, released by Holy Strike
@@ -1013,6 +1017,8 @@ We examined these ideas and rejected them. They are not proposals.
 | Holy Shield threat bonus +50% or +100% (not +20%) | Flat: +100% is better than the Warrior at fresh level 60. +50% is too weak in late raids |
 | Iron Creed: +25% threat on all Holy damage | Flat. It works as an improved Righteous Fury. It does not increase with content |
 | Righteous Fury also increases physical damage threat (×1.5) with a shield | Too weak in late raids (88% of the Druid). It changes Righteous Fury for all specs |
+| Righteous Defense as an area taunt (10 yards, 6 sec, 10 min cooldown, as Challenging Shout) | The Paladin protects allies with Blessing of Protection. An area taunt with a 10 min cooldown gives little. C10 links a taunt to Blessing of Protection |
+| A shield interrupt in Protection row 4 | Paladins have no interrupt by design |
 
 ## Sources
 
