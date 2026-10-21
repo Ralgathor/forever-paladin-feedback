@@ -1,6 +1,6 @@
 # Forever Paladin Talent Proposals
 
-This document proposes 16 talent changes and 1 Judgement change for the WoW Forever Paladin. Three of the talent changes are new talents. The goal is to follow the rules Forever already uses for the other classes, without changing what each tree is about. Each proposal points to a talent that another class already has in the same beta build.
+This document proposes 17 talent changes and 1 Judgement change for the WoW Forever Paladin. Three of the talent changes are new talents. The goal is to follow the rules Forever already uses for the other classes, without changing what each tree is about. Each proposal points to a talent that another class already has in the same beta build.
 
 ## How to read this document
 
@@ -26,6 +26,7 @@ This document proposes 16 talent changes and 1 Judgement change for the WoW Fore
 | P5 | Righteous Defense (new) | Protection, rows 3–4 | Improved Seal of Fury and Improved Righteous Fury in row 3 | Both removed; Swift Judgement moves to row 3; new area taunt in row 4 |
 | P6 | Reckoning | Protection, row 5 | Extra attack from block (40%) or being crit (100%); fires on the next swing | Charge from block, dodge, parry (once every 4 sec) or being crit; Holy Strike releases up to 2 |
 | P7 | Fury's Reach (new) | Protection, row 4 | — | 2 ranks: Judgement range +5/10 yards while Seal of Fury is active |
+| P8 | Shield Specialization | Protection, row 3 | Mana return at most once every 3 sec | At most once every 2 sec; nothing else changes |
 | R1 | Conviction | Retribution, row 2 | Melee crit +1–5% | Attack and spell crit +1–5% |
 | R2 | Two-Handed Weapon Specialization | Retribution, row 4 | Opens at 20 points | Opens at 15 points |
 | R3 | Sacred Arbiter and Repentance | Retribution, rows 4–5 | Sacred Arbiter at 15 points (+20% Holy Strike damage), Repentance at 20 | Rows swapped; Holy Strike always triggers your active Seal |
@@ -153,7 +154,7 @@ Holy goes from 46 to 44 points. Every talent can be used when its row opens. Ill
 
 ## Protection
 
-Protection gets a fix for crushing blows (P2), its biggest gap with Warrior, a cleaner tree (P1, P3, P4, P5), a Reckoning that works at endgame (P6) and a ranged pull (P7).
+Protection gets a fix for crushing blows (P2), its biggest gap with Warrior, a cleaner tree (P1, P3, P4, P5), a Reckoning that works at endgame (P6), a ranged pull (P7) and steadier tanking mana (P8).
 
 ### Protection layout after P1, P4, P5 and P7
 
@@ -285,6 +286,16 @@ This is the build p-5532000210215-50005031211331 in the calculator: Protection 2
 - **Why only with Seal of Fury.** Judgement of Command deals 388–422 to a stunned target. Without the condition, a 20 yard range would add burst for hybrids in PvP. With it, Holy and Retribution gain almost nothing from the dip.
 - **Threat and mana.** No change while tanking: Judgement still costs 91 mana and has a 10 sec cooldown. Only the opening pull changes. The full path costs 3 points (Swift Judgement plus 2 ranks).
 
+### P8. Shield Specialization: mana return once every 2 sec
+
+- **Proposed text (rank 3).** "Increases the amount of damage absorbed by your shield by 30%, and gives your blocks a 100% chance to restore 4% of your maximum Mana. May only occur once every 2 sec."
+- **What changes.** Only the limit, from once every 3 sec to once every 2 sec. The ranks, the chance and the 4% return stay as in the beta.
+- **Why.** P5 removes Improved Seal of Fury, worth about 23 mana per sec while tanking. Reverence (H1) and the extra blocks from P2 give back about 13, and Holy Shield rank 3 costs 24 mana per sec. Without P8, tanking without Consecration is about break-even (−1.4 mana per sec).
+- **Value.** A boss swinging every 2 sec can now trigger it on every blocked swing: 160 mana × 60% block ÷ 2 sec = 48 mana per sec, up from 30. Tanking without Consecration goes to +16.6 mana per sec (see Mana).
+- **Model.** Warriors and Druids gain Rage from being hit, and Shaman's Water Shield is Forever's precedent for mana from being hit. Shield Specialization is already the Paladin's version, so no new talent is needed.
+- **Synergy.** More block means more mana, so the crush fix (P2) and the mana fix support each other.
+- **Limits.** Against packs it returns at most 80 mana per sec (beta: 53). It gives nothing to a Paladin who is not being hit; Reverence (H1) covers that case.
+
 ### Crushing blows
 
 #### The problem
@@ -349,7 +360,7 @@ The two tanks are level. The Paladin's gap closes with gear; the Warrior's gaps 
 | Anticipation | A raid boss stops critting at 440 Defense; Anticipation gives 20 | The stat targets assume this cap |
 | Improved Seal of Fury | Mana return ignores the Seal's rank; no threat from the mana | Removed by P5 |
 | Improved Righteous Fury | Applies after armor; multiplies with Iron Creed (×0.94 × 0.90) | Removed by P5 |
-| Shield Specialization | Multiplies Shield Block Value; mana return is 4%; no threat from the mana | Stays: Protection's main mana source |
+| Shield Specialization | Multiplies Shield Block Value; mana return is 4%; no threat from the mana | Stays Protection's main mana source; P8 shortens its limit to 2 sec |
 | Sacred Duty | % of total Stamina, multiplies with Kings; shortens the cooldowns of Forbearance spells | None |
 | Swift Judgement | Off the global cooldown | None |
 | One-Handed Weapon Specialization | Melee, Seals, Judgements, Holy Strike and Twist of Light Echo | None |
@@ -471,7 +482,7 @@ Retribution stays at 44 points.
 ### The fix
 
 - **Reverence in row 2 (H4)** gives Protection and Retribution regen while casting for 8 Holy points, like Enhancement Shaman with Mindfulness: about 10 mana per sec at 50% (H1) and 120–130 Spirit.
-- **Shield Specialization stays.** It is the tank's main source and has a Forever precedent in Shaman's Water Shield.
+- **Shield Specialization triggers once every 2 sec instead of 3 (P8).** It stays the tank's main source, with a Forever precedent in Shaman's Water Shield.
 - **Improved Seal of Fury is removed (P5).**
 - **R4 fixes Retribution.**
 
@@ -483,18 +494,18 @@ Retribution stays at 44 points.
 
 | Source | Beta | Proposed | How it is counted |
 | --- | --- | --- | --- |
-| Shield Specialization: 160 mana per block, once every 3 sec | 26.7 | 30.0 | With a swing every 2 sec, the 3 sec limit skips the next swing. Block chance 50% in the beta, 60% with P2 |
+| Shield Specialization: 160 mana per block | 26.7 (once every 3 sec) | 48.0 (once every 2 sec, P8) | Beta: with a swing every 2 sec, the 3 sec limit skips the next swing; 50% block. Proposed: every blocked swing counts; 60% block with P2 |
 | Improved Seal of Fury: 87 mana per shield used up | 23.3 | — (P5) | 60 mana +45% against a boss. Each of your swings makes a new shield; it pays out when a boss hit lands before your next swing (64% of boss swings land) |
 | Reverence 50% (H1, H4) | — | 10.3 | Half of 41 mana every 2 sec at 130 Spirit |
-| **Total** | **50.0** | **40.3** |  |
+| **Total** | **50.0** | **58.3** |  |
 
 **Protection spending per sec.** 41.7 without Consecration and 112.4 with it. With the Retribution dip: 37.6 and 75.7.
 
 | Protection, 4,000 mana | Beta | Proposed |
 | --- | --- | --- |
-| Tanking, no Consecration | +8.3 per sec, sustainable | −1.4 per sec: about 48 min, close to break-even |
-| Tanking, Consecration on cooldown | −62.4 per sec: 64 sec | −72.1 per sec: 55 sec |
-| Tanking, Consecration on cooldown, Retribution dip | −25.7 per sec: 2 min 36 sec | −35.4 per sec: 1 min 53 sec |
+| Tanking, no Consecration | +8.3 per sec, sustainable | +16.6 per sec, sustainable |
+| Tanking, Consecration on cooldown | −62.4 per sec: 64 sec | −54.1 per sec: 74 sec |
+| Tanking, Consecration on cooldown, Retribution dip | −25.7 per sec: 2 min 36 sec | −17.4 per sec: 3 min 50 sec |
 | Not being hit, no Consecration | −41.7 per sec: 1 min 36 sec | −31.4 per sec: 2 min 7 sec |
 | Not being hit, Consecration on cooldown | −112.4 per sec: 36 sec | −102.1 per sec: 39 sec |
 
@@ -505,10 +516,10 @@ Retribution stays at 44 points.
 
 Retribution spending assumes Sanctified Judgement returns 60% of the Seal's base cost (126 mana) per Judgement, as tested.
 
-- **Tanking without Consecration goes from +8 mana per sec to about break-even.** Removing Improved Seal of Fury (P5) costs 23 mana per sec. Reverence and the extra blocks from P2 give back 13.
+- **Tanking stays sustainable without Consecration:** +16.6 mana per sec, against +8.3 in the beta. Removing Improved Seal of Fury (P5) costs 23 mana per sec. Reverence, the extra blocks from P2 and the 2 sec limit (P8) give back 31.
+- **Consecration on cooldown lasts a little longer than in the beta:** 74 sec against 64, or 3 min 50 sec with the Retribution dip. It stays a tool for packs, not a full-time rotation.
 - **Reverence pays off when the Paladin is not being hit:** about 30 sec more without Consecration.
-- **Consecration on cooldown stays a tool for packs:** about 1 min either way, or about 2 min with the Retribution dip.
-- **If tanking mana is too tight in testing,** the simplest fix is a 2 sec limit on Shield Specialization instead of 3 sec: +18 mana per sec at 60% block.
+- **Raid buffs are not counted.** Blessing of Wisdom adds 8 mana per sec, and Judgement of Wisdom on the boss adds more.
 
 ## Tree balance review
 
@@ -539,7 +550,7 @@ These are risks to check in testing. None of them needs a change now.
 | W7 | Iron Creed (P3) gives −10% damage taken to any spec with Righteous Fury and 25 Protection points | Watch in PvP; deliberate exception to the no-improved-buff rule |
 | W8 | Fury's Reach (P7): a 15-point Protection dip plus Swift Judgement gives a 20 yard Judgement | Watch: the range only works with Seal of Fury |
 | W9 | Repentance at 15 Retribution points and Templar's Bulwark (an absorb of 100% of health, three times Warrior's Last Stand) are strong PvP dips | Watch |
-| W10 | Tanking mana is close to break-even without Consecration (Mana) | Shield Specialization limit from 3 to 2 sec |
+| W10 | Shield Specialization (P8) may make Consecration tanking too cheap against fast-hitting packs (up to 80 mana per sec) | Go back to 3 sec, or lower the return from 4% to 3% |
 
 ## Open questions
 
