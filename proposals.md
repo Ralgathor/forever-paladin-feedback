@@ -27,7 +27,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 18 chan
 | C7 | Iron Creed | Protection, row 6 | −2–10% damage taken for 6 sec after Holy Strike | −2–10% damage taken while Righteous Fury is active |
 | C8 | Divine Strength replaces Toughness | Protection, row 1 | Toughness: +2–10% armor from items | Divine Strength: +2–10% Strength (from Holy row 1) |
 | C9 | Improved Righteous Fury | Protection, row 3 | −2–6% damage taken with Righteous Fury | Removed |
-| C10 | Shoulder the Burden (new) replaces Improved Seal of Fury | Protection, row 3 → row 4 | Improved Seal of Fury: mana when the Seal of Fury shield absorbs a hit | Shoulder the Burden: 50% of the threat of an ally moves to you, 3 min cooldown |
+| C10 | Shoulder the Burden (new) replaces Improved Seal of Fury | Protection, row 3 → row 4 | Improved Seal of Fury: mana when the Seal of Fury shield absorbs a hit | Shoulder the Burden: 50% of the threat of an ally moves to you, 5 min cooldown. Sacred Duty decreases the cooldown |
 | C11 | Reckoning | Protection, row 5 | Extra attack after a block (40%) or a critical hit taken (100%). It hits with the next swing | Charge after a block, dodge or parry (once each 4 sec) or a critical hit taken. Holy Strike releases up to 2 charges |
 | C12 | Fury's Reach (new) | Protection, row 4 | — | 2 ranks: Judgement range +5/10 yards while Seal of Fury is active |
 | C13 | Shield Specialization | Protection, row 3 | Mana return once each 3 sec | Mana return once each 2 sec |
@@ -219,7 +219,7 @@ The Protection proposals give:
 
 ### C10. Shoulder the Burden (new talent) replaces Improved Seal of Fury: row 4, column 3
 
-- **Proposed text.** "Transfers 50% of the threat of a friendly party or raid member to you, on all enemies." Instant, 30 yards, 3 min cooldown, 45 mana (3% of base mana).
+- **Proposed text.** "Transfers 50% of the threat of a friendly party or raid member to you, on all enemies." Instant, 30 yards, 5 min cooldown, 45 mana (3% of base mana).
 - **Why remove Improved Seal of Fury.** It was a second "mana when you are hit" talent. Its mana return does not change with the rank of the Seal. Reverence in row 2 (C1) is the mana talent now (see Mana).
 - **Problem.** When an ally has too much threat, the Paladin tank can only taunt one enemy with Judgement of Fury, at 10 yards. The Paladin has no tool to save an ally from a group of enemies.
 - **Change.** Shoulder the Burden moves half of the threat of the ally to the Paladin, on each enemy. The ally keeps the other half. Thus, the ally must still control their threat.
@@ -227,6 +227,8 @@ The Protection proposals give:
 - **Raw threat.** The threat that moves does not change. Righteous Fury does not multiply it.
 - **Tank swaps.** First use Judgement of Fury to take the boss. Then use Shoulder the Burden on the other tank. You then have 1.5 times their threat, and they keep 0.5 times. Do not use it before the taunt: the threat of the other tank decreases, and a damage dealer can then pull the boss.
 - **PvP.** Players do not use threat. Thus, the talent has no effect in PvP.
+- **Why 5 min.** It works on all enemies that the ally has threat on, at any range, and the threat stays moved. Thus, it is near an area taunt. Challenging Shout (Warrior) has 10 min. Mocking Blow (Warrior) has 2 min, but it works on one target for 6 sec. 5 min is the cooldown of the other Paladin protection spells: Blessing of Protection, Divine Shield and Divine Protection.
+- **Sacred Duty.** Sacred Duty also decreases the cooldown of Shoulder the Burden by 30/60 sec. At 2/2, the cooldown is 4 min. New Sacred Duty text: "Increases your total Stamina by 2/4% and reduces the cooldown of your Divine Shield, Divine Protection, Templar's Bulwark, and Shoulder the Burden spells by 30/60 sec."
 - **Signature talents.** Each tree keeps a 1-point signature talent in rows 3 and 4:
   - Holy: Voice of Truth and Divine Favor.
   - Retribution: Seal of Command and Repentance (M7).
