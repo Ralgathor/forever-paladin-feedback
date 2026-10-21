@@ -301,10 +301,10 @@ This is the build p-5532000210215-50005031211331 in the calculator: Protection 2
 
 - **Proposed text (rank 3).** "Increases chance to block by 30% for 10 sec, and deals 221 Holy damage plus 200% of your block value for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."
 - **What changes.** Each block adds 200% of your block value to Holy Shield's damage. Block chance, charges, cooldown and the threat bonus stay as in the beta.
-- **Problem.** Warrior and Druid threat grows with gear and with boss damage, because their rage comes from the hits they take. Paladin threat only grows with spell power: about +32 threat per second per +100 spell power. In the gear model, the Paladin with C6–C13 falls from 107% of the Druid's threat at fresh level 60 to 80% in Naxxramas (see Threat).
+- **Problem.** Warrior and Druid threat grows with gear and with boss damage, because their rage comes from the hits they take. Paladin threat only grows with spell power: about +32 threat per second per +100 spell power. In the gear model, the Paladin without C14 falls from 107% of the Druid's threat at fresh level 60 to 80% in Naxxramas (see Threat).
 - **Why block value.** It is a gear stat on the character sheet, easy to read and to gear for. It grows about 5 times from fresh level 60 to Naxxramas, much faster than spell power. It ties the Paladin's tank stats together: the shield, Strength (Divine Strength, C9) and Shield Specialization (+30% block value). Warrior's Shield Slam already adds block value to its damage.
 - **Result.** The Paladin stays between the Druid and the Warrior at every gear tier: 116% of the Druid's threat at fresh level 60, 102% in Naxxramas.
-- **Why 200%.** At 100% the Paladin is still at 91% of the Druid in Naxxramas. At 300% it passes the Warrior from Blackwing Lair on.
+- **Why 200%.** At 100% the Paladin is still at 91% of the Druid in Naxxramas. At 300% it passes the Warrior from pre-raid gear on.
 - **No new button.** Holy Shield is already used on cooldown, and C7 keeps it blocking about 3 attacks per 10 sec.
 - **PvP.** At about 125 block value, each block deals about 250 more Holy damage, at most 4 blocks per 10 sec, and only against melee attacks. Only Protection has Holy Shield.
 
@@ -370,44 +370,42 @@ This section compares single-target threat per second for the three tanks at lev
 
 One boss. Boss armor reduced by 5 Sunder Armor and Faerie Fire. Paladin with 200 spell power (pre-raid estimate).
 
-| Boss hit before armor | Warrior | Druid | Paladin, beta | Paladin, proposed | Paladin, proposed + Consecration |
+| Boss hit before armor | Warrior | Druid | Paladin, beta | Paladin, all proposals | Paladin, all proposals + Consecration |
 | --- | --- | --- | --- | --- | --- |
-| 3,000 | about 525 | about 520 | about 355 | about 455 | about 545 |
-| 4,500 | about 600 | about 585 | about 355 | about 455 | about 545 |
-| 6,000 | about 660 | about 650 | about 355 | about 455 | about 545 |
+| 3,000 | about 525 | about 520 | about 355 | about 540 | about 625 |
+| 4,500 | about 600 | about 585 | about 355 | about 540 | about 625 |
+| 6,000 | about 660 | about 650 | about 355 | about 540 | about 625 |
 
 - **Warrior** gains about +135 if Shield Slam has a ×2.25 threat multiplier like Revenge (not tested).
 - **Paladin, beta** has no Judgement of the Crusader, because Judgement of Fury may remove it (see below). With Crusader it is about 400.
-- **Paladin, proposed** includes all proposals and Judgement of the Crusader from C19.
-- **Without armor debuffs on the boss** (4,500 hits): Warrior about 470, Druid about 425, proposed Paladin about 435. Most Paladin threat is Holy damage, which ignores armor.
+- **Paladin, all proposals** includes Judgement of the Crusader (C19) and C14 with about 60 block value (pre-raid estimate). Without C14 it is about 455, or about 545 with Consecration.
+- **Without armor debuffs on the boss** (4,500 hits): Warrior about 470, Druid about 425, Paladin with all proposals about 515. Most Paladin threat is Holy damage, which ignores armor.
 - **Retribution Aura** instead of Devotion Aura adds about +25 for the Paladin, at the cost of 735 armor.
-
-**With C14.** The results above are for C6–C13. With C14 and about 60 block value, the proposed Paladin reaches about 540 threat per second (about 625 with Consecration). The next table shows how the tanks compare as gear improves.
 
 **Proposed Paladin, where the threat comes from (200 spell power)**
 
 | Source | Threat per sec |
 | --- | --- |
-| Holy Shield blocks | about 180 |
+| Holy Shield blocks (about 180 base, about 80 from block value with C14) | about 260 |
 | Judgement of Fury (every 10 sec, plus Swift Judgement once per minute) | about 70 |
 | Holy Strike with Iron Creed | about 57 |
 | Reckoning extra attacks (C11) | about 53 |
 | Seal of Fury | about 49 |
 | Auto attacks | about 49 |
-| **Total** | **about 455** |
+| **Total** | **about 540** |
 
 **Spell power.** Each +100 spell power adds about +32 threat per second. Judgement of the Crusader counts like +161 spell power against its target, so it is worth about +50, more than going from 150 to 300 spell power.
 
 | Spell power | 100 | 150 | 200 | 250 | 300 | 350 |
 | --- | --- | --- | --- | --- | --- | --- |
-| Paladin, proposed | about 425 | about 440 | about 455 | about 475 | about 490 | about 505 |
+| Paladin, all proposals (60 block value) | about 505 | about 525 | about 540 | about 555 | about 570 | about 585 |
 
 Expected spell power at level 60, based on about 100–120 at level 30: about 150 in balanced pre-raid tank gear, 200–250 with some threat gear, 300–350 in early raid gear. No Forever level 60 item data is public yet.
 
 #### What the results mean
 
-- **On moderate bosses the three tanks are close.** The proposals raise the Paladin by about +100 threat per second over the beta: Judgement of the Crusader (C19), more Holy Shield blocks (C7) and Reckoning (C11).
-- **On hard-hitting bosses the Paladin falls behind.** Warriors and Druids get rage from the damage they take, so their threat grows with boss damage. Paladin threat stays the same and only grows with gear.
+- **With the same gear, the three tanks are close on moderate bosses.** All proposals raise the Paladin by about +185 threat per second over the beta: block value on Holy Shield (C14, about +80), Judgement of the Crusader (C19, about +50), more Holy Shield blocks (C7) and Reckoning (C11).
+- **With the same gear, harder-hitting bosses still favor Warriors and Druids.** They get rage from the damage they take, so their threat grows with boss damage. Paladin threat does not. In real progression, gear and boss damage rise together, and C14 makes Paladin threat grow with gear (see Gear tiers).
 - **The Paladin has no stance or form multiplier.** Righteous Fury (×1.9) only applies to Holy damage. Auto attacks and Reckoning attacks get ×1.0, while Defensive Stance gives ×1.495 and Bear Form ×1.5 on everything.
 - **The Paladin has no strong, frequent attack.**
 
@@ -435,7 +433,7 @@ The fresh level 60 row uses a real gear profile: crafted and dungeon items, befo
 
 Threat per second, one boss, boss armor debuffed. The percentage is the share of the Druid's threat.
 
-| Tier | Warrior | Druid | Paladin, beta | Paladin, C6–C13 | **Paladin, C6–C14** | C6–C14 + Consecration |
+| Tier | Warrior | Druid | Paladin, beta | Paladin, proposals without C14 | **Paladin, all proposals** | All proposals + Consecration |
 | --- | --- | --- | --- | --- | --- | --- |
 | Fresh level 60 | about 490 | about 405 | about 335 (83%) | about 430 (107%) | **about 470 (116%)** | about 555 |
 | Pre-raid best in slot | about 545 | about 455 | about 370 (81%) | about 470 (104%) | **about 555 (122%)** | about 645 |
