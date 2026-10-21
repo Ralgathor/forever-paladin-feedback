@@ -2,7 +2,7 @@
 
 Unofficial player feedback for the Paladin in **World of Warcraft: Forever**. This project is not affiliated with Blizzard Entertainment.
 
-It contains 17 talent proposals (15 changes and 2 new talents) for Holy, Protection and Retribution, plus a talent calculator with a **Beta / Proposed** switch.
+It contains 17 talent proposals (15 changes and 2 new talents) for Holy, Protection and Retribution, plus a talent calculator that opens in Proposed mode, with a Beta toggle.
 
 ## The three biggest changes
 
@@ -13,7 +13,7 @@ It contains 17 talent proposals (15 changes and 2 new talents) for Holy, Protect
 ## Read and try
 
 - [Proposals (full document)](proposals.md): every change with the beta text, the proposed text, the reason, the model talent from another class, tests and numbers.
-- [Talent calculator](calculator/index.html): open it and switch to **Proposed** mode. Build codes starting with `p-` load a Proposed build. Live version: https://ralgathor.github.io/forever-paladin-feedback/calculator/
+- [Talent calculator](calculator/index.html): it opens in **Proposed** mode; use the **Beta** button to compare with the current beta trees. Build codes starting with `p` load a Proposed build, and codes without it load a Beta build. Live version: https://ralgathor.github.io/forever-paladin-feedback/calculator/
 
 ## How the proposals were made
 
