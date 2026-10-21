@@ -30,7 +30,7 @@
 
 body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.45;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 40px}
-.wrap{max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+.wrap{max-width:1190px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
 h1{font-family:var(--f-display);font-weight:400;font-size:clamp(26px,4vw,34px);margin:0;letter-spacing:.02em;text-wrap:balance}
 .sub{color:var(--muted);margin:2px 0 0}
 .mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
@@ -56,18 +56,18 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
 .tabs button{flex:1;font-family:var(--f-display);letter-spacing:.03em}
 .tabs button[aria-selected="true"]{background:var(--panel);border-color:var(--ink)}
 .trees{display:flex;gap:14px;justify-content:center}
-.tree{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 12px 16px;width:326px;flex:0 0 auto;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.tree{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 12px 16px;width:var(--tw,326px);flex:0 0 auto;position:relative;overflow:hidden;box-shadow:var(--shadow)}
 .tree::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 60% at 50% 0%,var(--tc) 0%,transparent 70%);opacity:.10;pointer-events:none}
 .tree[data-tree="holy"]{--tc:var(--holy)}.tree[data-tree="prot"]{--tc:var(--prot)}.tree[data-tree="ret"]{--tc:var(--ret)}
 .thead{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:12px;position:relative}
 .thead h2{font-family:var(--f-display);font-weight:400;font-size:20px;margin:0;color:var(--tc)}
 .thead .pts{font-family:var(--f-mono);font-size:15px}
 .thead button{padding:2px 8px;font-size:12px}
-.grid{position:relative;width:300px;height:512px;margin:0 auto}
-.tier{position:absolute;left:0;width:18px;text-align:right;font-family:var(--f-mono);font-size:10px;color:var(--muted);height:56px;line-height:56px}
+.grid{position:relative;width:var(--gw,300px);height:var(--gh,512px);margin:0 auto}
+.tier{position:absolute;left:0;width:18px;text-align:right;font-family:var(--f-mono);font-size:10px;color:var(--muted);height:var(--cell,56px);line-height:var(--cell,56px)}
 .tier.ok{color:var(--avail)}
 
-.tal{position:absolute;width:56px;height:56px;border-radius:7px;cursor:pointer;user-select:none;-webkit-user-select:none;touch-action:manipulation;
+.tal{position:absolute;width:var(--cell,56px);height:var(--cell,56px);border-radius:7px;cursor:pointer;user-select:none;-webkit-user-select:none;touch-action:manipulation;
   background:linear-gradient(150deg,color-mix(in srgb,var(--tc) 85%,#fff 15%),color-mix(in srgb,var(--tc) 60%,#000 40%));
   border:2px solid color-mix(in srgb,var(--tc) 40%,#000 60%);color:var(--tile-ink);display:grid;place-items:center;
   font-family:var(--f-display);font-size:17px;letter-spacing:.02em;text-shadow:0 1px 2px rgba(0,0,0,.55);transition:filter .15s,opacity .15s,border-color .15s,box-shadow .15s}
@@ -137,9 +137,9 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
 .foot p{margin:0}
 .toast{min-height:1.2em;color:var(--avail)}
 
-@media (max-width:1010px){
+@media (max-width:1230px){
   .trees{flex-wrap:wrap}
-  .tree{width:100%;max-width:360px}
+  .tree{max-width:100%}
 }
 @media (max-width:760px){
   .detail{position:sticky;bottom:calc(8px + env(safe-area-inset-bottom,0px));z-index:5;max-height:42vh;overflow:auto;box-shadow:0 -6px 24px rgba(0,0,0,.28)}
@@ -295,7 +295,7 @@ const PROPOSALS=[
  ["P5","ic","Iron Creed","Protection, 25 points","Damage taken −2–10% for 6 sec after Holy Strike","Same threat; damage taken −2–10% while Righteous Fury is active, no timer"],
  ["P6","ds","Toughness → Divine Strength","Protection, row 1","Toughness: armor from items +2–10%","Replaced by Divine Strength (+2–10% Strength), moved from Holy row 1 (H7)"],
  ["P7","irf","Improved Seal of Fury → Righteous Defense; Improved Righteous Fury","Protection, row 3","Mana when Seal of Fury's shield is absorbed; damage taken −2–6% with Righteous Fury","Improved Righteous Fury removed (Iron Creed gives Warrior's 10%); Improved Seal of Fury replaced by Righteous Defense, a 10 min area taunt like Challenging Shout and Challenging Roar"],
- ["P8","rec","Reckoning","Protection, 20 points","8–40% chance on block, 20–100% on being crit, for an extra attack; stores up to 4","20–100% chance on block, dodge or parry (once every 4 sec) or on being crit, for a charge (up to 4); Holy Strike spends all charges as extra attacks"],
+ ["P8","rec","Reckoning","Protection, 20 points","8–40% chance on block, 20–100% on being crit, for an extra attack; stores up to 4","20–100% chance on block, dodge or parry (once every 4 sec) or on being crit, for a charge (up to 4); Holy Strike spends up to 2 charges as extra attacks"],
  ["P9","fj","Fury's Reach (new)","Protection, 15 points","—","2 ranks: Judgement range +5/10 yards; requires Swift Judgement while Seal of Fury is active"],
  ["R1","con","Conviction","Retribution, 5 points","Melee crit +1–5%","Attack and spell crit +1–5%"],
  ["R3","ths","Two-Handed Weapon Specialization","Retribution","Opens at 20 points","Opens at 15 points"],
@@ -319,7 +319,9 @@ function makeTalents(m){
   return out;
 }
 function setTalents(m){mode=m;T=makeTalents(m);BY={};T.forEach(t=>BY[t.key]=t);if(!BY[selected])selected=T[0].key;}
-const MAXPTS=51, CELL=56, GX=18, GY=20, GUT=26;
+const MAXPTS=51, GUT=26; let CELL=56, GX=18, GY=20;
+function metrics(){const small=window.innerWidth<430;CELL=small?56:60;GX=small?18:28;GY=small?20:26;const gw=GUT+4*CELL+3*GX,gh=7*CELL+6*GY,st=document.documentElement.style;st.setProperty("--cell",CELL+"px");st.setProperty("--gw",gw+"px");st.setProperty("--gh",gh+"px");st.setProperty("--tw",(gw+26)+"px");return small;}
+let lastSmall=metrics();
 let level=60, selected="ds", activeTab="holy", lastPointer="mouse";
 
 const SHIELD='<path d="M12 2.5 19.5 5.2V11c0 4.6-3.2 8.2-7.5 10.5C7.7 19.2 4.5 15.6 4.5 11V5.2Z"/>';
@@ -519,6 +521,7 @@ const h=(location.hash||"").slice(1);
 if(h&&h!=="x"&&decode(h)){
   const tp=TREES.map(tr=>treePts(tr.id));activeTab=TREES[tp.indexOf(Math.max(...tp))].id;}
 tabs();render();
+addEventListener("resize",()=>{const sm=metrics();if(sm!==lastSmall){lastSmall=sm;build();render();}});
 </script>
 
 </body>
