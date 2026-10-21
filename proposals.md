@@ -303,7 +303,7 @@ This is the build p-5532000210215-50005031211331 in the calculator: Protection 2
 - **What changes.** Each block adds 200% of your block value to Holy Shield's damage. Block chance, charges, cooldown and the threat bonus stay as in the beta.
 - **Problem.** Warrior and Druid threat grows with gear and with boss damage, because their rage comes from the hits they take. Paladin threat only grows with spell power: about +32 threat per second per +100 spell power. In the gear model, the Paladin without C14 falls from 107% of the Druid's threat at fresh level 60 to 80% in Naxxramas (see Threat).
 - **Why block value.** It is a gear stat on the character sheet, easy to read and to gear for. It grows about 5 times from fresh level 60 to Naxxramas, much faster than spell power. It ties the Paladin's tank stats together: the shield, Strength (Divine Strength, C9) and Shield Specialization (+30% block value). Warrior's Shield Slam already adds block value to its damage.
-- **Result.** The Paladin stays between the Druid and the Warrior at every gear tier: 116% of the Druid's threat at fresh level 60, 102% in Naxxramas.
+- **Result.** The Paladin stays between the Druid and the Warrior at every gear tier: 116% of the Druid's threat at fresh level 60, 102% in Naxxramas. With flatter gear progression it ends at 94–110% in Naxxramas (see Threat, Flatter gear progression).
 - **Why 200%.** At 100% the Paladin is still at 91% of the Druid in Naxxramas. At 300% it passes the Warrior from pre-raid gear on.
 - **No new button.** Holy Shield is already used on cooldown, and C7 keeps it blocking about 3 attacks per 10 sec.
 - **PvP.** At about 125 block value, each block deals about 250 more Holy damage, at most 4 blocks per 10 sec, and only against melee attacks. Only Protection has Holy Shield.
@@ -445,6 +445,30 @@ Threat per second, one boss, boss armor debuffed. The percentage is the share of
 - **With C14** the Paladin stays between the Druid and the Warrior at every tier.
 - **The beta Paladin** is behind at every tier, from 83% of the Druid at fresh level 60 to 64% in Naxxramas.
 - **Mana improves with gear,** because Shield Specialization returns 4% of max mana. Tanking without Consecration goes from about +3 mana per sec at fresh level 60 (2,897 mana) to about +27 in Naxxramas.
+
+#### Flatter gear progression
+
+Blizzard has said it wants flatter, more horizontal gear progression. This is an intention, not a promise. In a model where gear grows half as fast after pre-raid, C14 still keeps the Paladin at 94–120% of the Druid's threat. The weakest case is flat gear with bosses that keep hitting harder, because Warrior and Druid rage still grows with boss damage. Block value per tier is the value to watch.
+
+Model: fresh level 60 and pre-raid as above. From Molten Core on, spell power, Attack Power, weapon damage, crit and block value gain half of the growth in the Gear tiers table (block value 70, 80 and 92 instead of 80, 100 and 125).
+
+| Tier | Gear as in Gear tiers | Flat gear, boss hits as in Gear tiers | Flat gear, boss hits also flatter |
+| --- | --- | --- | --- |
+| Fresh level 60 | 116% (96%) | 116% (96%) | 116% (96%) |
+| Pre-raid best in slot | 122% (101%) | 122% (101%) | 122% (101%) |
+| Molten Core | 118% (97%) | 114% (95%) | 120% (99%) |
+| Blackwing Lair | 111% (93%) | 104% (88%) | 115% (95%) |
+| Naxxramas | 102% (95%) | 94% (89%) | 110% (91%) |
+| Without C14, Naxxramas | 80% | 76% | 89% |
+
+Paladin with all proposals, as a share of the Druid's threat, with the share of the Warrior's in brackets. "Boss hits also flatter": boss hits grow half as fast after pre-raid (4,000, 4,750 and 5,750 before armor instead of 4,500, 6,000 and 8,000).
+
+- **C14 at 200% fits all three cases.** At 150% the Paladin would fall to 89% of the Druid in Naxxramas when boss hits keep growing. At 300% it would pass the Warrior when everything is flat.
+- **Without C14 the Paladin falls behind in every case,** so flatter gear makes C14 more important.
+- **Mana.** Shield Specialization returns 4% of max mana. With max mana growing half as fast (about 3,650, 3,900 and 4,150), tanking without Consecration gives about +12, +15 and +18 mana per sec instead of +15, +21 and +27. C13 matters more.
+- **Defense.** If gear gives Defense more slowly, tanks reach 440 Defense later and bosses keep a small crit chance for longer. C7 (Holy Shield triggers Redoubt) and Reckoning's crit trigger stay useful longer.
+- **Judgement of the Crusader (C19).** Its +161 bonus is worth relatively more when spell power on gear grows slowly.
+- **PvP burst check (C11).** It uses fresh and pre-raid level stats, so it stays valid longer with flatter gear.
 
 #### Options if Protection threat is too low
 
