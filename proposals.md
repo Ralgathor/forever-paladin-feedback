@@ -4,7 +4,7 @@ This document proposes 18 talent changes and 1 Judgement change for the WoW Fore
 
 ## How to read this document
 
-- **IDs.** H = Holy, P = Protection, R = Retribution, J = Judgements. Only active proposals have an ID. Ideas that were dropped are listed at the end, under Withdrawn ideas, and are not used anywhere else.
+- **IDs.** Each change has one ID, C1 to C19, numbered in the order of this document. C19a and C19b are the two alternatives to C19. Only active proposals have an ID. Ideas that were dropped are listed at the end, under Withdrawn ideas, and are not used anywhere else.
 - **Each proposal** gives the change, the proposed tooltip, the reason and the talent it follows.
 - **Data.** Forever client build 1.60.1.70450 with the server hotfixes of 18 October 2026, read from wowforevertalents.com. Tested behavior comes from player tests shared on 19 October 2026. Where an in-game tooltip was used instead, the text says so.
 - **Limits.** These are design ideas, not tested in play. Combat and mana numbers use Classic 1.12 rules unless a test says otherwise. Every estimate lists its assumptions.
@@ -14,33 +14,33 @@ This document proposes 18 talent changes and 1 Judgement change for the WoW Fore
 
 | ID | Talent | Tree and row | Beta | Proposed |
 | --- | --- | --- | --- | --- |
-| H1 | Reverence | Holy, row 2 | 10/20/30% of mana regen while casting | 17/33/50% |
-| H2 | Lingering Light (new) | Holy, row 5 | — | 2 ranks: critical heals add a heal over time worth 15/30% of the heal |
-| H3 | Infusion of Light | Holy, row 2 | Holy Shock and Flash of Light crits speed up the next Holy Light | Holy Strike crits also count |
-| H4 | Holy layout | Holy, rows 2–6 | Healing Light in row 2 | Healing Light moves to row 6 with 2 ranks (6/12%); five other talents move up or across |
-| H5 | Improved Seals | Holy, row 1 | Row 2, 3 ranks, 5/10/15% | Row 1, 5 ranks, 3/6/9/12/15%; replaces Divine Strength |
-| P1 | Improved Hammer of Justice | Protection, row 3 | Row 4 | Row 3; same values (3 ranks, −5/10/15 sec) |
-| P2 | Redoubt | Protection, row 1 | 10% chance on being hit: +4–20% block | Same, and every Holy Shield cast also triggers it |
-| P3 | Iron Creed | Protection, row 6 | −2–10% damage taken for 6 sec after Holy Strike | −2–10% damage taken while Righteous Fury is active; same threat bonus |
-| P4 | Divine Strength | Protection, row 1 | Toughness: +2–10% armor from items | Divine Strength (+2–10% Strength), moved from Holy |
-| P5 | Righteous Defense (new) | Protection, rows 3–4 | Improved Seal of Fury and Improved Righteous Fury in row 3 | Both removed; Swift Judgement moves to row 3; new area taunt in row 4 |
-| P6 | Reckoning | Protection, row 5 | Extra attack from block (40%) or being crit (100%); fires on the next swing | Charge from block, dodge, parry (once every 4 sec) or being crit; Holy Strike releases up to 2 |
-| P7 | Fury's Reach (new) | Protection, row 4 | — | 2 ranks: Judgement range +5/10 yards while Seal of Fury is active |
-| P8 | Shield Specialization | Protection, row 3 | Mana return at most once every 3 sec | At most once every 2 sec; nothing else changes |
-| P9 | Holy Shield | Protection, row 7 | 221 Holy damage per block (rank 3) | 221 Holy damage plus 200% of your block value per block |
-| R1 | Conviction | Retribution, row 2 | Melee crit +1–5% | Attack and spell crit +1–5% |
-| R2 | Two-Handed Weapon Specialization | Retribution, row 4 | Opens at 20 points | Opens at 15 points |
-| R3 | Sacred Arbiter and Repentance | Retribution, rows 4–5 | Sacred Arbiter at 15 points (+20% Holy Strike damage), Repentance at 20 | Rows swapped; Holy Strike always triggers your active Seal |
-| R4 | Twist of Light | Retribution, row 7 | The Echo applies to the next melee attack only | The Echo applies to every melee attack for 10 sec |
-| J1 | Judgement of the Crusader | Baseline | Uses the Paladin's one Judgement slot | Personal debuff outside the one-Judgement limit |
+| C1 | Reverence | Holy, row 2 | 10/20/30% of mana regen while casting | 17/33/50% |
+| C2 | Lingering Light (new) | Holy, row 5 | — | 2 ranks: critical heals add a heal over time worth 15/30% of the heal |
+| C3 | Infusion of Light | Holy, row 2 | Holy Shock and Flash of Light crits speed up the next Holy Light | Holy Strike crits also count |
+| C4 | Holy layout | Holy, rows 2–6 | Healing Light in row 2 | Healing Light moves to row 6 with 2 ranks (6/12%); five other talents move up or across |
+| C5 | Improved Seals | Holy, row 1 | Row 2, 3 ranks, 5/10/15% | Row 1, 5 ranks, 3/6/9/12/15%; replaces Divine Strength |
+| C6 | Improved Hammer of Justice | Protection, row 3 | Row 4 | Row 3; same values (3 ranks, −5/10/15 sec) |
+| C7 | Redoubt | Protection, row 1 | 10% chance on being hit: +4–20% block | Same, and every Holy Shield cast also triggers it |
+| C8 | Iron Creed | Protection, row 6 | −2–10% damage taken for 6 sec after Holy Strike | −2–10% damage taken while Righteous Fury is active; same threat bonus |
+| C9 | Divine Strength | Protection, row 1 | Toughness: +2–10% armor from items | Divine Strength (+2–10% Strength), moved from Holy |
+| C10 | Righteous Defense (new) | Protection, rows 3–4 | Improved Seal of Fury and Improved Righteous Fury in row 3 | Both removed; Swift Judgement moves to row 3; new area taunt in row 4 |
+| C11 | Reckoning | Protection, row 5 | Extra attack from block (40%) or being crit (100%); fires on the next swing | Charge from block, dodge, parry (once every 4 sec) or being crit; Holy Strike releases up to 2 |
+| C12 | Fury's Reach (new) | Protection, row 4 | — | 2 ranks: Judgement range +5/10 yards while Seal of Fury is active |
+| C13 | Shield Specialization | Protection, row 3 | Mana return at most once every 3 sec | At most once every 2 sec; nothing else changes |
+| C14 | Holy Shield | Protection, row 7 | 221 Holy damage per block (rank 3) | 221 Holy damage plus 200% of your block value per block |
+| C15 | Conviction | Retribution, row 2 | Melee crit +1–5% | Attack and spell crit +1–5% |
+| C16 | Two-Handed Weapon Specialization | Retribution, row 4 | Opens at 20 points | Opens at 15 points |
+| C17 | Sacred Arbiter and Repentance | Retribution, rows 4–5 | Sacred Arbiter at 15 points (+20% Holy Strike damage), Repentance at 20 | Rows swapped; Holy Strike always triggers your active Seal |
+| C18 | Twist of Light | Retribution, row 7 | The Echo applies to the next melee attack only | The Echo applies to every melee attack for 10 sec |
+| C19 | Judgement of the Crusader | Baseline | Uses the Paladin's one Judgement slot | Personal debuff outside the one-Judgement limit |
 
-J1 has two alternatives in the Judgements section: J2 (fallback) and J3 (optional add-on).
+C19 has two alternatives in the Judgements section: C19a (fallback) and C19b (optional add-on).
 
 ## Design rules
 
 Forever builds its talent trees with five rules. Every proposal follows them.
 
-1. **No improved-buff talents.** Buffs such as Blessing of Kings come from the trainer, not from talents. Iron Creed (P3) is the one stated exception.
+1. **No improved-buff talents.** Buffs such as Blessing of Kings come from the trainer, not from talents. Iron Creed (C8) is the one stated exception.
 2. **Rows 1–2 tempt the other specs.** Early talents should make the other two specs want to put a few points into the tree.
 3. **Shared stats cover melee and spells.** Precision gives hit for both, like Thundering Strikes gives crit for both to Shaman.
 4. **Each tree has 1-point signature talents** in rows 3 and 4, and ends on a 1-point capstone at 30 points.
@@ -62,29 +62,29 @@ Forever builds its talent trees with five rules. Every proposal follows them.
 
 Most saved Holy builds stop around 20 points. These changes make the deep Holy talents worth taking for a healer, and give Retribution and Protection clear reasons to put a few points into Holy.
 
-### Holy layout after H2, H4 and H5
+### Holy layout after C2, C4 and C5
 
 | Row (points needed) | Talents | Points in the row |
 | --- | --- | --- |
-| 1 (0) | Improved Seals (H5), Divine Intellect | 10 |
+| 1 (0) | Improved Seals (C5), Divine Intellect | 10 |
 | 2 (5) | Infusion of Light, Reverence, Unyielding Faith | 7 |
 | 3 (10) | Voice of Truth, Purifying Power, Consecrated Ground | 5 |
 | 4 (15) | Spiritual Focus, Illumination, Divine Favor | 8 |
-| 5 (20) | Divine Precision, Holy Shock, Lingering Light (H2) | 6 |
+| 5 (20) | Divine Precision, Holy Shock, Lingering Light (C2) | 6 |
 | 6 (25) | Healing Light, Holy Power | 7 |
 | 7 (30) | Light's Vigil | 1 |
 
 Holy goes from 46 to 44 points. Every talent can be used when its row opens. Illumination still requires Reverence (straight arrow down column 2).
 
-### H1. Reverence: 10/20/30% → 17/33/50%
+### C1. Reverence: 10/20/30% → 17/33/50%
 
 - **Proposed text.** "Allows 17/33/50% of your Mana regeneration to continue while casting."
 - **Model.** Meditation (Priest), Reflection (Druid) and Mindfulness (Shaman) all give 50% in 3 ranks.
 - **Why Illumination is not enough.** Other healers also have a mana return on top of their 50% (Litany of Light, Water Shield, Mana Tide Totem). Forever also halved Illumination: it returns 50% of the base cost.
-- **With H4.** Reverence moves to row 2, so it is also the regen talent for Protection and Retribution (see Mana).
+- **With C4.** Reverence moves to row 2, so it is also the regen talent for Protection and Retribution (see Mana).
 - **If it proves too strong:** 13/27/40%.
 
-### H2. New talent: Lingering Light (row 5, column 3, 2 ranks)
+### C2. New talent: Lingering Light (row 5, column 3, 2 ranks)
 
 - **Proposed text.** "Your non-periodic critical heals cause the target to be healed for an additional 15/30% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing."
 - **Identity.** A heal over time from crits is a Paladin idea (Sheath of Light in a later expansion). It is not Priest's Divine Aegis, which is a shield, and it is Holy's only heal over time.
@@ -105,16 +105,16 @@ Holy goes from 46 to 44 points. Every talent can be used when its row opens. Ill
 - **No double bonus.** Healing bonuses apply once, to the crit. The heal over time is not increased again and cannot crit.
 - **In play.** Repeated crits on the tank build a bigger heal over time. Divine Favor on Holy Light gives a planned large one. Holy Shock crits (+15% crit from Holy Power) add frequent small amounts.
 
-### H3. Infusion of Light: Holy Strike crits also count
+### C3. Infusion of Light: Holy Strike crits also count
 
 - **Proposed text.** "Your Holy Shock, Holy Strike and Flash of Light critical hits reduce the cast time of your next Holy Light cast within 15 sec by 0.5/1 sec."
 - **What changes.** Only Holy Strike is added. Values and duration stay as in the beta.
 - **Why.** Holy Power gives +15% crit to both Holy Shock and Holy Strike, but only Holy Shock feeds Infusion of Light today.
 - **In play.** A Holy Paladin who melees between heals gets a reason to use Holy Strike. Retribution and Protection, who use Holy Strike in their rotation, get faster emergency Holy Lights.
 - **Limit.** Holy Strike has a 10 sec cooldown, so it adds at most one chance every 10 sec.
-- **Risk.** With H4 it is in row 2, so a 7-point Holy dip gives Retribution or Protection a faster self-heal in PvP. The 10 sec cooldown keeps it small.
+- **Risk.** With C4 it is in row 2, so a 7-point Holy dip gives Retribution or Protection a faster self-heal in PvP. The 10 sec cooldown keeps it small.
 
-### H4. Holy layout: Healing Light moves to row 6
+### C4. Holy layout: Healing Light moves to row 6
 
 | Talent | Beta | Proposed | Why |
 | --- | --- | --- | --- |
@@ -123,28 +123,28 @@ Holy goes from 46 to 44 points. Every talent can be used when its row opens. Ill
 | Reverence | Row 3 | Row 2 | Gives Protection and Retribution regen while casting for 8 Holy points, like Enhancement Shaman reaches Mindfulness with 8 Restoration points |
 | Consecrated Ground | Row 5 | Row 3 | Row 3 opens at level 20, when Consecration is learned. Protection reaches it with 12 Holy points instead of 22, for area threat |
 | Spiritual Focus | Row 2 | Row 4 | Makes room in row 2. Spell pushback only matters to healers |
-| Lingering Light (H2) | — | Row 5 | Next to Holy Shock, whose crits trigger it |
-| Unyielding Faith | Row 2, column 4 | Row 2, column 3 | Fills the slot left when Improved Seals moves to row 1 (H5), so row 2 has no empty slot between talents |
+| Lingering Light (C2) | — | Row 5 | Next to Holy Shock, whose crits trigger it |
+| Unyielding Faith | Row 2, column 4 | Row 2, column 3 | Fills the slot left when Improved Seals moves to row 1 (C5), so row 2 has no empty slot between talents |
 
 - **Deep Holy** keeps Healing Light, Holy Power, Lingering Light and Light's Vigil, so going deep stays clearly better for healing.
 - **Cost.** A leveling Holy Paladin gets the full +12% healing at level 36 instead of level 17.
 
-### H5. Row 1: Improved Seals replaces Divine Strength
+### C5. Row 1: Improved Seals replaces Divine Strength
 
 - **Proposed text.** "Increases the damage done by your Seals and Judgements by 3/6/9/12/15%."
-- **What changes.** Improved Seals moves from row 2 (3 ranks, 5/10/15%) to row 1 with 5 ranks. Max rank stays 15%. Divine Strength leaves Holy and moves to Protection row 1 (P4).
+- **What changes.** Improved Seals moves from row 2 (3 ranks, 5/10/15%) to row 1 with 5 ranks. Max rank stays 15%. Divine Strength leaves Holy and moves to Protection row 1 (C9).
 - **Dip.** 5 Holy points now give +15% Seal and Judgement damage to Retribution and Protection. Seals are the class's own damage, so this dip is more Paladin-specific than Strength.
 
 ### Holy: beta test results
 
 | Talent | Observed in the beta | Effect on the proposals |
 | --- | --- | --- |
-| Divine Strength, Divine Intellect | % of base, gear and flat-buff stats; multiplies with Kings | Divine Strength moves to Protection (P4) |
-| Healing Light | Boosts the whole heal, not just its base | Supports H2: a second flat healing talent would overlap |
+| Divine Strength, Divine Intellect | % of base, gear and flat-buff stats; multiplies with Kings | Divine Strength moves to Protection (C9) |
+| Healing Light | Boosts the whole heal, not just its base | Supports C2: a second flat healing talent would overlap |
 | Spiritual Focus | Adds to other pushback resistance (Concentration Aura 35% + 70% = immune) | None |
 | Improved Seals | Boosts the whole damage, not just its base; doesn't affect Seal of the Crusader | None |
 | Unyielding Faith | Diminishing returns not tested | None |
-| Reverence | Keeps a % of Spirit regen while casting; the 5-second rule restarts when a cast ends | Supports H1 |
+| Reverence | Keeps a % of Spirit regen while casting; the 5-second rule restarts when a cast ends | Supports C1 |
 | Purifying Power | Multiplies with Benediction (×0.80 × 0.90) | None |
 | Illumination | Returns 50% of the base cost, so cost discounts don't reduce the return | None |
 | Divine Favor | Off the global cooldown | None |
@@ -155,68 +155,68 @@ Holy goes from 46 to 44 points. Every talent can be used when its row opens. Ill
 
 ## Protection
 
-Protection gets a fix for crushing blows (P2), its biggest gap with Warrior, a cleaner tree (P1, P3, P4, P5), a Reckoning that works at endgame (P6), a ranged pull (P7), steadier tanking mana (P8) and threat that grows with gear (P9).
+Protection gets a fix for crushing blows (C7), its biggest gap with Warrior, a cleaner tree (C6, C8, C9, C10), a Reckoning that works at endgame (C11), a ranged pull (C12), steadier tanking mana (C13) and threat that grows with gear (C14).
 
-### Protection layout after P1, P4, P5 and P7
+### Protection layout after C6, C9, C10 and C12
 
 | Row (points needed) | Talents | Points in the row |
 | --- | --- | --- |
-| 1 (0) | Divine Strength (P4), Redoubt | 10 |
+| 1 (0) | Divine Strength (C9), Redoubt | 10 |
 | 2 (5) | Precision, Guardian's Favor, Anticipation | 10 |
-| 3 (10) | Swift Judgement, Improved Hammer of Justice (P1), Shield Specialization, Sacred Duty | 9 |
-| 4 (15) | Fury's Reach (P7), One-Handed Weapon Specialization, Righteous Defense (P5) | 6 |
+| 3 (10) | Swift Judgement, Improved Hammer of Justice (C6), Shield Specialization, Sacred Duty | 9 |
+| 4 (15) | Fury's Reach (C12), One-Handed Weapon Specialization, Righteous Defense (C10) | 6 |
 | 5 (20) | Templar's Bulwark, Reckoning | 6 |
 | 6 (25) | Iron Creed | 5 |
 | 7 (30) | Holy Shield | 1 |
 
 Protection goes from 48 to 47 points. Rows 1–4 hold 35 points, more than the 20 needed to open row 5.
 
-### P1. Improved Hammer of Justice: moves to row 3
+### C6. Improved Hammer of Justice: moves to row 3
 
 - **Proposed text.** "Decreases the cooldown of your Hammer of Justice spell by 5/10/15 sec." Same 3 ranks and values as the beta. Only the row changes.
 - **Model.** Druid's Brutal Impact on Bash, which also has a 60 sec base cooldown.
-- **Why.** It is one of the least-taken Paladin talents, and P5 frees space in row 3.
+- **Why.** It is one of the least-taken Paladin talents, and C10 frees space in row 3.
 - **PvP.** Holy or Retribution now reach the full −15 sec (a 45 sec Hammer of Justice) with 13 Protection points instead of 18. Druid has Brutal Impact in Feral row 2 (−30 sec on Bash), so this stays in line.
 
-### P2. Redoubt: Holy Shield also triggers it
+### C7. Redoubt: Holy Shield also triggers it
 
 - **Proposed text.** "Damaging melee attacks against you have a 10% chance to increase your chance to block by 4/8/12/16/20%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect."
 - **What changes.** Only the Holy Shield trigger is new. Triggering Redoubt while it is active resets it to 10 sec and 5 blocks.
 - **Why.** It removes most crushing blows. See Crushing blows below.
-- **Blizzard's direction.** The October 1 patch moved block from Redoubt (6–30% → 4–20%) to Holy Shield (20% → 30%). P2 keeps those values. Redoubt only gains uptime.
+- **Blizzard's direction.** The October 1 patch moved block from Redoubt (6–30% → 4–20%) to Holy Shield (20% → 30%). C7 keeps those values. Redoubt only gains uptime.
 - **Other specs.** Holy and Retribution don't have Holy Shield, so their Redoubt doesn't change.
 - **Side effects.** Block from talents goes from about 40% on average (30% Holy Shield + about 10% Redoubt) to 50%. This gives slightly more Reckoning charges, Shield Specialization mana and Holy Shield damage.
 
-### P3. Iron Creed: damage reduction while Righteous Fury is active
+### C8. Iron Creed: damage reduction while Righteous Fury is active
 
 - **Proposed text.** "Increases the threat generated by your Holy Strike ability by 5/10/15/20/25%. While Righteous Fury is active, reduces your damage taken by 2/4/6/8/10%."
 - **Problem.** In the beta the reduction lasts 6 sec after a Holy Strike, which has a 10 sec cooldown. At 5/5 it averages 6 sec ÷ 10 sec × 10% = 6%.
-- **Change.** The reduction works whenever Righteous Fury is active. It has no timer and no Holy Strike condition, so Holy Strike keeps only one extra mechanic (Reckoning, P6).
+- **Change.** The reduction works whenever Righteous Fury is active. It has no timer and no Holy Strike condition, so Holy Strike keeps only one extra mechanic (Reckoning, C11).
 - **Threat bonus kept.** +25% Holy Strike threat is worth about 11 threat per second at 5/5 and 200 spell power (see Threat).
-- **Total.** −10% damage taken, the same as Warrior's Defensive Stance. Improved Righteous Fury, which stacked to about 15% in total, is removed by P5.
+- **Total.** −10% damage taken, the same as Warrior's Defensive Stance. Improved Righteous Fury, which stacked to about 15% in total, is removed by C10.
 - **Rule exception.** It works like an improved Righteous Fury, but it needs 25 Protection points. Watch it in PvP, because any spec can use Righteous Fury.
 
-### P4. Toughness → Divine Strength (from Holy)
+### C9. Toughness → Divine Strength (from Holy)
 
 - **Proposed text.** "Increases your Strength by 2/4/6/8/10%." Same as the beta. Only its tree changes.
 - **Why remove Toughness.** Forever moved away from flat armor talents for tanks: Warrior's Toughness was removed, Shaman's now gives Stamina, and Druid's Thick Hide grows with Defense. Paladin's Toughness was the last flat armor talent.
-- **Why Divine Strength.** Strength is the Protection Paladin's stat: Attack Power for threat, and block value (20 Strength = 1). Holy no longer needs it (H5).
+- **Why Divine Strength.** Strength is the Protection Paladin's stat: Attack Power for threat, and block value (20 Strength = 1). Holy no longer needs it (C5).
 - **Row 1 for every spec.** Holy and Retribution pass through Protection row 1 to reach Precision, and Divine Strength is useful to all three specs.
 - **Parity.** One % Strength talent for the class, like Druid's Heart of the Wild. No extra Stamina talent: only Sacred Duty's +4%.
 
-### P5. Rows 3–4: remove two talents, add Righteous Defense
+### C10. Rows 3–4: remove two talents, add Righteous Defense
 
-- **Improved Righteous Fury: removed.** With Iron Creed always active (P3), the two stacked to about 15% damage reduction. Iron Creed alone gives Warrior's 10%.
-- **Improved Seal of Fury: removed.** It was a second "mana from being hit" talent, and its return ignores the Seal's rank. Reverence in row 2 (H4) is the mana talent instead (see Mana).
+- **Improved Righteous Fury: removed.** With Iron Creed always active (C8), the two stacked to about 15% damage reduction. Iron Creed alone gives Warrior's 10%.
+- **Improved Seal of Fury: removed.** It was a second "mana from being hit" talent, and its return ignores the Seal's rank. Reverence in row 2 (C4) is the mana talent instead (see Mana).
 - **Swift Judgement moves to row 3** and no longer needs Improved Seal of Fury.
 - **New: Righteous Defense (row 4, column 3, 1 point).** "Forces all enemies within 10 yards to attack you for 6 sec." Instant, 10 min cooldown.
   - It matches Warrior's Challenging Shout and Druid's Challenging Roar: same range, duration and cooldown.
   - Judgement of Fury stays the single-target taunt.
-  - Every tree keeps a 1-point signature talent in rows 3 and 4: Holy has Voice of Truth and Divine Favor, Retribution has Seal of Command and Repentance (after R3), Protection has Swift Judgement and Righteous Defense.
+  - Every tree keeps a 1-point signature talent in rows 3 and 4: Holy has Voice of Truth and Divine Favor, Retribution has Seal of Command and Repentance (after C17), Protection has Swift Judgement and Righteous Defense.
   - Holy and Retribution can reach it with 15 points but have no use for an area taunt.
 - **Unchanged.** Righteous Fury, Seal of Fury and its absorb shield stay baseline.
 
-### P6. Reckoning: charges from avoidance, released by Holy Strike
+### C11. Reckoning: charges from avoidance, released by Holy Strike
 
 - **Proposed text.** "Gives you a 20/40/60/80/100% chance to gain an extra attack after Blocking, Dodging, Parrying or being the victim of a non-periodic critical strike. Cannot occur from Blocks, Dodges or Parries more than once every 4 sec. Stores up to 4 extra attacks. Your Holy Strike releases up to 2 stored extra attacks."
 - **Beta text.** "Gives you a 8/16/24/32/40% chance after Blocking and a 20/40/60/80/100% chance after receiving a non-periodic critical strike to gain an extra attack. Stores up to 4 extra attacks. Cannot occur from Blocks more than once every 1.5 sec."
@@ -238,7 +238,7 @@ Protection goes from 48 to 47 points. Rows 1–4 hold 35 points, more than the 2
 
 **Value for a tank at 5/5**
 
-Simulation: boss swings every 2 sec; 60% block with P2, 10.7% dodge, 15% parry; no crits; Holy Strike every 10 sec. Each extra attack deals about 200 damage and causes about 273 threat (200 physical + Seal of Fury's 35 Holy damage, +10% from One-Handed Weapon Specialization, ×1.9 from Righteous Fury). The beta rows use the beta's 50% block.
+Simulation: boss swings every 2 sec; 60% block with C7, 10.7% dodge, 15% parry; no crits; Holy Strike every 10 sec. Each extra attack deals about 200 damage and causes about 273 threat (200 physical + Seal of Fury's 35 Holy damage, +10% from One-Handed Weapon Specialization, ×1.9 from Righteous Fury). The beta rows use the beta's 50% block.
 
 | Case | Charges gained per 10 sec | Extra attacks per 10 sec | Extra damage per sec | Extra threat per sec |
 | --- | --- | --- | --- | --- |
@@ -267,7 +267,7 @@ This is the build p-5532000210215-50005031211331 in the calculator: Protection 2
 
 | Part of the burst | Proposed | Beta, nothing stored | Beta, 4 charges stored |
 | --- | --- | --- | --- |
-| Holy Strike | about 600 (always triggers Seal of Command, R3) | about 390 (+20% damage, no Seal effect) | about 390 |
+| Holy Strike | about 600 (always triggers Seal of Command, C17) | about 390 (+20% damage, no Seal effect) | about 390 |
 | Extra attacks (about 390 each) | 2: about 780 | 0 | 4: about 1,570 |
 | Auto attacks (about 1.7) | about 670 | about 670 | about 670 |
 | Two stunned Judgements (about 535 each) | about 1,070 | about 1,070 | about 1,070 |
@@ -277,7 +277,7 @@ This is the build p-5532000210215-50005031211331 in the calculator: Protection 2
 - **Uncertainty.** About ±25%, so 2,350–3,900.
 - **Swift Judgement** is about 17% of the burst. When it is on cooldown (60 sec, against 50 sec for Hammer of Justice), the proposed total is about 2,590. It stays on the watch list.
 
-### P7. Fury's Reach: a ranged pull for Protection (new)
+### C12. Fury's Reach: a ranged pull for Protection (new)
 
 - **Proposed text.** "Increases the range of your Judgement by 5/10 yards while Seal of Fury is active."
 - **Place.** Row 4, column 1, 2 ranks. Requires Swift Judgement (straight arrow from row 3). Righteous Defense sits in column 3.
@@ -287,25 +287,25 @@ This is the build p-5532000210215-50005031211331 in the calculator: Protection 2
 - **Why only with Seal of Fury.** Judgement of Command deals 388–422 to a stunned target. Without the condition, a 20 yard range would add burst for hybrids in PvP. With it, Holy and Retribution gain almost nothing from the dip.
 - **Threat and mana.** No change while tanking: Judgement still costs 91 mana and has a 10 sec cooldown. Only the opening pull changes. The full path costs 3 points (Swift Judgement plus 2 ranks).
 
-### P8. Shield Specialization: mana return once every 2 sec
+### C13. Shield Specialization: mana return once every 2 sec
 
 - **Proposed text (rank 3).** "Increases the amount of damage absorbed by your shield by 30%, and gives your blocks a 100% chance to restore 4% of your maximum Mana. May only occur once every 2 sec."
 - **What changes.** Only the limit, from once every 3 sec to once every 2 sec. The ranks, the chance and the 4% return stay as in the beta.
-- **Why.** P5 removes Improved Seal of Fury, worth about 23 mana per sec while tanking. Reverence (H1) and the extra blocks from P2 give back about 13, and Holy Shield rank 3 costs 24 mana per sec. Without P8, tanking without Consecration is about break-even (−1.4 mana per sec).
+- **Why.** C10 removes Improved Seal of Fury, worth about 23 mana per sec while tanking. Reverence (C1) and the extra blocks from C7 give back about 13, and Holy Shield rank 3 costs 24 mana per sec. Without C13, tanking without Consecration is about break-even (−1.4 mana per sec).
 - **Value.** A boss swinging every 2 sec can now trigger it on every blocked swing: 160 mana × 60% block ÷ 2 sec = 48 mana per sec, up from 30. Tanking without Consecration goes to +16.6 mana per sec (see Mana).
 - **Model.** Warriors and Druids gain Rage from being hit, and Shaman's Water Shield is Forever's precedent for mana from being hit. Shield Specialization is already the Paladin's version, so no new talent is needed.
-- **Synergy.** More block means more mana, so the crush fix (P2) and the mana fix support each other.
-- **Limits.** Against packs it returns at most 80 mana per sec (beta: 53). It gives nothing to a Paladin who is not being hit; Reverence (H1) covers that case.
+- **Synergy.** More block means more mana, so the crush fix (C7) and the mana fix support each other.
+- **Limits.** Against packs it returns at most 80 mana per sec (beta: 53). It gives nothing to a Paladin who is not being hit; Reverence (C1) covers that case.
 
-### P9. Holy Shield: damage grows with block value
+### C14. Holy Shield: damage grows with block value
 
 - **Proposed text (rank 3).** "Increases chance to block by 30% for 10 sec, and deals 221 Holy damage plus 200% of your block value for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."
 - **What changes.** Each block adds 200% of your block value to Holy Shield's damage. Block chance, charges, cooldown and the threat bonus stay as in the beta.
-- **Problem.** Warrior and Druid threat grows with gear and with boss damage, because their rage comes from the hits they take. Paladin threat only grows with spell power: about +32 threat per second per +100 spell power. In the gear model, the Paladin with P1–P8 falls from 107% of the Druid's threat at fresh level 60 to 80% in Naxxramas (see Threat).
-- **Why block value.** It is a gear stat on the character sheet, easy to read and to gear for. It grows about 5 times from fresh level 60 to Naxxramas, much faster than spell power. It ties the Paladin's tank stats together: the shield, Strength (Divine Strength, P4) and Shield Specialization (+30% block value). Warrior's Shield Slam already adds block value to its damage.
+- **Problem.** Warrior and Druid threat grows with gear and with boss damage, because their rage comes from the hits they take. Paladin threat only grows with spell power: about +32 threat per second per +100 spell power. In the gear model, the Paladin with C6–C13 falls from 107% of the Druid's threat at fresh level 60 to 80% in Naxxramas (see Threat).
+- **Why block value.** It is a gear stat on the character sheet, easy to read and to gear for. It grows about 5 times from fresh level 60 to Naxxramas, much faster than spell power. It ties the Paladin's tank stats together: the shield, Strength (Divine Strength, C9) and Shield Specialization (+30% block value). Warrior's Shield Slam already adds block value to its damage.
 - **Result.** The Paladin stays between the Druid and the Warrior at every gear tier: 116% of the Druid's threat at fresh level 60, 102% in Naxxramas.
 - **Why 200%.** At 100% the Paladin is still at 91% of the Druid in Naxxramas. At 300% it passes the Warrior from Blackwing Lair on.
-- **No new button.** Holy Shield is already used on cooldown, and P2 keeps it blocking about 3 attacks per 10 sec.
+- **No new button.** Holy Shield is already used on cooldown, and C7 keeps it blocking about 3 attacks per 10 sec.
 - **PvP.** At about 125 block value, each block deals about 250 more Holy damage, at most 4 blocks per 10 sec, and only against melee attacks. Only Protection has Holy Shield.
 
 ### Crushing blows
@@ -320,12 +320,12 @@ A raid boss is 3 levels above the player. With Classic rules, it has a 15% chanc
 | Druid | No shield; Thick Hide armor grows with Defense; Bear Form adds up to +20% Stamina | Always crushable, but has the armor and health to take it |
 | Paladin (beta) | Holy Shield: +30% block, 4 charges, 10 sec, 10 sec cooldown; Redoubt is a 10% proc | Needs about 72% avoidance from gear: crushable like a Druid, without the Druid's armor and health |
 
-P2 takes Warrior's path: push crushes off the table with block, the stat the tree already builds on.
+C7 takes Warrior's path: push crushes off the table with block, the stat the tree already builds on.
 
-#### How P2 fixes it
+#### How C7 fixes it
 
 - **Redoubt in the beta** is a block buff with charges: +4–20% block for 10 sec or 5 blocks. Only 10% of melee hits start it, so it is up about half the time.
-- **With P2,** each Holy Shield cast (every 10 sec) restarts Redoubt, so both buffs are always up together.
+- **With C7,** each Holy Shield cast (every 10 sec) restarts Redoubt, so both buffs are always up together.
 - **The charges are enough.** A boss swinging every 2 sec swings 5 times in 10 sec, and about 3 of those are blocked. That is fewer than Redoubt's 5 blocks and Holy Shield's 4 charges.
 - **First hit.** Casting Holy Shield before the pull covers the boss's first swing.
 - **Holy Shield stays at +30%.** With the Redoubt trigger, +30% already matches Warrior.
@@ -358,7 +358,7 @@ Both tanks at 440 Defense with about 100 Agility, against a boss swinging every 
 |  | Swings covered | Crush chance on the other swings | Swings that can crush |
 | --- | --- | --- | --- |
 | Warrior | About 80% (2 of 2.5 swings per 5 sec) | 15% | About 3% |
-| Paladin with P2 | About 100% | About 4.3% | About 4.3% |
+| Paladin with C7 | About 100% | About 4.3% | About 4.3% |
 
 The two tanks are level. The Paladin's gap closes with gear; the Warrior's gaps depend on boss swing speed.
 
@@ -378,11 +378,11 @@ One boss. Boss armor reduced by 5 Sunder Armor and Faerie Fire. Paladin with 200
 
 - **Warrior** gains about +135 if Shield Slam has a ×2.25 threat multiplier like Revenge (not tested).
 - **Paladin, beta** has no Judgement of the Crusader, because Judgement of Fury may remove it (see below). With Crusader it is about 400.
-- **Paladin, proposed** includes all proposals and Judgement of the Crusader from J1.
+- **Paladin, proposed** includes all proposals and Judgement of the Crusader from C19.
 - **Without armor debuffs on the boss** (4,500 hits): Warrior about 470, Druid about 425, proposed Paladin about 435. Most Paladin threat is Holy damage, which ignores armor.
 - **Retribution Aura** instead of Devotion Aura adds about +25 for the Paladin, at the cost of 735 armor.
 
-**With P9.** The results above are for P1–P8. With P9 and about 60 block value, the proposed Paladin reaches about 540 threat per second (about 625 with Consecration). The next table shows how the tanks compare as gear improves.
+**With C14.** The results above are for C6–C13. With C14 and about 60 block value, the proposed Paladin reaches about 540 threat per second (about 625 with Consecration). The next table shows how the tanks compare as gear improves.
 
 **Proposed Paladin, where the threat comes from (200 spell power)**
 
@@ -391,7 +391,7 @@ One boss. Boss armor reduced by 5 Sunder Armor and Faerie Fire. Paladin with 200
 | Holy Shield blocks | about 180 |
 | Judgement of Fury (every 10 sec, plus Swift Judgement once per minute) | about 70 |
 | Holy Strike with Iron Creed | about 57 |
-| Reckoning extra attacks (P6) | about 53 |
+| Reckoning extra attacks (C11) | about 53 |
 | Seal of Fury | about 49 |
 | Auto attacks | about 49 |
 | **Total** | **about 455** |
@@ -406,7 +406,7 @@ Expected spell power at level 60, based on about 100–120 at level 30: about 15
 
 #### What the results mean
 
-- **On moderate bosses the three tanks are close.** The proposals raise the Paladin by about +100 threat per second over the beta: Judgement of the Crusader (J1), more Holy Shield blocks (P2) and Reckoning (P6).
+- **On moderate bosses the three tanks are close.** The proposals raise the Paladin by about +100 threat per second over the beta: Judgement of the Crusader (C19), more Holy Shield blocks (C7) and Reckoning (C11).
 - **On hard-hitting bosses the Paladin falls behind.** Warriors and Druids get rage from the damage they take, so their threat grows with boss damage. Paladin threat stays the same and only grows with gear.
 - **The Paladin has no stance or form multiplier.** Righteous Fury (×1.9) only applies to Holy damage. Auto attacks and Reckoning attacks get ×1.0, while Defensive Stance gives ×1.495 and Bear Form ×1.5 on everything.
 - **The Paladin has no strong, frequent attack.**
@@ -435,7 +435,7 @@ The fresh level 60 row uses a real gear profile: crafted and dungeon items, befo
 
 Threat per second, one boss, boss armor debuffed. The percentage is the share of the Druid's threat.
 
-| Tier | Warrior | Druid | Paladin, beta | Paladin, P1–P8 | **Paladin, P1–P9** | P1–P9 + Consecration |
+| Tier | Warrior | Druid | Paladin, beta | Paladin, C6–C13 | **Paladin, C6–C14** | C6–C14 + Consecration |
 | --- | --- | --- | --- | --- | --- | --- |
 | Fresh level 60 | about 490 | about 405 | about 335 (83%) | about 430 (107%) | **about 470 (116%)** | about 555 |
 | Pre-raid best in slot | about 545 | about 455 | about 370 (81%) | about 470 (104%) | **about 555 (122%)** | about 645 |
@@ -443,14 +443,14 @@ Threat per second, one boss, boss armor debuffed. The percentage is the share of
 | Blackwing Lair | about 755 | about 635 | about 450 (71%) | about 565 (89%) | **about 700 (111%)** | about 800 |
 | Naxxramas | about 815 | about 760 | about 485 (64%) | about 605 (80%) | **about 775 (102%)** | about 880 |
 
-- **Without P9** the Paladin falls behind from Molten Core on. Warriors and Druids gain Attack Power and more rage from harder boss hits; the Paladin only gains spell power.
-- **With P9** the Paladin stays between the Druid and the Warrior at every tier.
+- **Without C14** the Paladin falls behind from Molten Core on. Warriors and Druids gain Attack Power and more rage from harder boss hits; the Paladin only gains spell power.
+- **With C14** the Paladin stays between the Druid and the Warrior at every tier.
 - **The beta Paladin** is behind at every tier, from 83% of the Druid at fresh level 60 to 64% in Naxxramas.
 - **Mana improves with gear,** because Shield Specialization returns 4% of max mana. Tanking without Consecration goes from about +3 mana per sec at fresh level 60 (2,897 mana) to about +27 in Naxxramas.
 
 #### Options if Protection threat is too low
 
-If testing shows Protection threat is still short with P9, these are the next steps. They are not proposals yet.
+If testing shows Protection threat is still short with C14, these are the next steps. They are not proposals yet.
 
 | Option | Effect |
 | --- | --- |
@@ -492,58 +492,58 @@ Other options were checked and dropped (see Withdrawn ideas).
 #### Findings to report to Blizzard
 
 - **Judgement of Fury applies its damage before its taunt.** The taunt should come first, so the Paladin ends slightly ahead of the top threat instead of level with it.
-- **Holy Strike triggers only some Seals.** It triggers Seal of Light, Justice and Wisdom, but not the damage Seals (Fury, Righteousness, Command). R3 makes this consistent for Retribution.
+- **Holy Strike triggers only some Seals.** It triggers Seal of Light, Justice and Wisdom, but not the damage Seals (Fury, Righteousness, Command). C17 makes this consistent for Retribution.
 
 ### Protection: beta test results
 
 | Talent | Observed in the beta | Effect on the proposals |
 | --- | --- | --- |
-| Toughness | Only armor from items; nothing from Devotion Aura, scrolls, elixirs, potions or Mark of the Wild | Supports P4 |
-| Redoubt | A blocked hit can trigger it without using a charge | P2 keeps the proc |
+| Toughness | Only armor from items; nothing from Devotion Aura, scrolls, elixirs, potions or Mark of the Wild | Supports C9 |
+| Redoubt | A blocked hit can trigger it without using a charge | C7 keeps the proc |
 | Precision | Melee, ranged and spell hit; each ability uses the matching hit type | Confirms it as the shared hit talent |
 | Anticipation | A raid boss stops critting at 440 Defense; Anticipation gives 20 | The stat targets assume this cap |
-| Improved Seal of Fury | Mana return ignores the Seal's rank; no threat from the mana | Removed by P5 |
-| Improved Righteous Fury | Applies after armor; multiplies with Iron Creed (×0.94 × 0.90) | Removed by P5 |
-| Shield Specialization | Multiplies Shield Block Value; mana return is 4%; no threat from the mana | Stays Protection's main mana source; P8 shortens its limit to 2 sec |
+| Improved Seal of Fury | Mana return ignores the Seal's rank; no threat from the mana | Removed by C10 |
+| Improved Righteous Fury | Applies after armor; multiplies with Iron Creed (×0.94 × 0.90) | Removed by C10 |
+| Shield Specialization | Multiplies Shield Block Value; mana return is 4%; no threat from the mana | Stays Protection's main mana source; C13 shortens its limit to 2 sec |
 | Sacred Duty | % of total Stamina, multiplies with Kings; shortens the cooldowns of Forbearance spells | None |
 | Swift Judgement | Off the global cooldown | None |
 | One-Handed Weapon Specialization | Melee, Seals, Judgements, Holy Strike and Twist of Light Echo | None |
 | Templar's Bulwark | An absorb, not a heal: Mortal Strike effects don't reduce it | None |
-| Reckoning | Stored attacks fire on the next melee hit; each can trigger Seals and Judgements | P6: charges are released by Holy Strike |
-| Iron Creed | Holy Strike threat ×1.90 (Righteous Fury) × 1.25 | P3 keeps these multipliers |
+| Reckoning | Stored attacks fire on the next melee hit; each can trigger Seals and Judgements | C11: charges are released by Holy Strike |
+| Iron Creed | Holy Strike threat ×1.90 (Righteous Fury) × 1.25 | C8 keeps these multipliers |
 | Holy Shield | Threat ×1.90 (Righteous Fury) × 1.20; more testing needed | None |
 
 ## Retribution
 
 These changes link Retribution's melee to its Holy spells and cut the Seal-swapping load.
 
-### Retribution layout after R2 and R3
+### Retribution layout after C16 and C17
 
 | Row (points needed) | Talents | Points in the row |
 | --- | --- | --- |
 | 1 (0) | Deflection, Benediction | 10 |
 | 2 (5) | Improved Judgement, Holy Conduit, Conviction | 9 |
 | 3 (10) | Vindication, Sanctified Judgement, Seal of Command, Pursuit of Justice | 9 |
-| 4 (15) | Eye for an Eye, Repentance (R3), Two-Handed Weapon Specialization (R2) | 6 |
-| 5 (20) | Vengeance, Sacred Arbiter (R3) | 4 |
+| 4 (15) | Eye for an Eye, Repentance (C17), Two-Handed Weapon Specialization (C16) | 6 |
+| 5 (20) | Vengeance, Sacred Arbiter (C17) | 4 |
 | 6 (25) | Champion of the Light, Instrument of Law | 5 |
 | 7 (30) | Twist of Light | 1 |
 
 Retribution stays at 44 points.
 
-### R1. Conviction: attacks and spells
+### C15. Conviction: attacks and spells
 
 - **Proposed text.** "Improves your chance to get a critical strike with attacks and spells by 1/2/3/4/5%."
 - **Model.** Shaman's Thundering Strikes made the same change.
 - **Real change.** In the beta, Conviction already crits damaging Seals and Hammer of Wrath. The change only adds Holy Shock, Exorcism, Consecration and heals.
 - **Cost for healers.** A Holy Paladin needs 10 Retribution points to get it (5 in row 1, then 5 in Conviction).
 
-### R2. Two-Handed Weapon Specialization: 20 → 15 points
+### C16. Two-Handed Weapon Specialization: 20 → 15 points
 
 - **Model.** Warrior's version opens at 15 points.
-- **Room.** Retribution row 4 has space after R3. Values stay at 2/4/6%.
+- **Room.** Retribution row 4 has space after C17. Values stay at 2/4/6%.
 
-### R3. Sacred Arbiter and Repentance: swap rows, make Sacred Arbiter stronger
+### C17. Sacred Arbiter and Repentance: swap rows, make Sacred Arbiter stronger
 
 - **Proposed text.** "Causes your Holy Strike ability to always trigger the effect of your active Seal and to refresh all Judgement effects on the target, including those of other Paladins. Does not trigger the stun of Seal of Justice."
 - **Rows.** Sacred Arbiter moves from 15 to 20 points, Repentance from 20 to 15.
@@ -552,13 +552,13 @@ Retribution stays at 44 points.
 - **Safety.** It triggers the Seal, not a second Judgement. The stun exception keeps a guaranteed stun every 10 sec out of PvP.
 - **Tradeoffs.** Protection builds that take Sacred Arbiter for its Judgement refresh now need 20 Retribution points. Repentance becomes easier to reach for Holy and Protection in PvP.
 
-### R4. Twist of Light: the Echo lasts 10 sec
+### C18. Twist of Light: the Echo lasts 10 sec
 
 - **Problem.** Each Echo lasts for one melee attack, so full value means swapping Seals before almost every swing. With a 3.5 sec two-hander, that is about 80% of the time in global cooldowns. Players on the beta forums cite a developer statement that rotations should stay around four buttons.
 - **Proposed text.** "Reduces the Mana cost of your Seal spells by 20%. When you replace your Seal of Command, Seal of Righteousness, Seal of Fury, or Seal of Justice with a different Seal, you gain an Echo of that Seal for 10 sec. While the Echo lasts, your melee attacks also apply the replaced Seal's effects."
 - **Same action, slower rhythm.** You still swap Seals, but once every 10 sec, next to Holy Strike and Judgement.
 
-| Every 10 sec, 3.5 sec weapon | Beta | With R4 |
+| Every 10 sec, 3.5 sec weapon | Beta | With C18 |
 | --- | --- | --- |
 | Seal casts | About 3 | 1 |
 | Holy Strike | 1 | 1 |
@@ -566,7 +566,7 @@ Retribution stays at 44 points.
 | Time in global cooldown (1.5 sec each, Judgement included) | About 79% | About 49% |
 | Mana spent, single target | About 41.6 per sec | About 11.4 per sec |
 
-- **Mana.** With one swap every 10 sec, Sanctified Judgement's refund covers most of the cost, so R4 is also Retribution's main mana fix (see Mana).
+- **Mana.** With one swap every 10 sec, Sanctified Judgement's refund covers most of the cost, so C18 is also Retribution's main mana fix (see Mana).
 
 ### Retribution: beta test results
 
@@ -574,13 +574,13 @@ Retribution stays at 44 points.
 | --- | --- | --- |
 | Benediction | Its cost cut multiplies with Purifying Power, Holy Conduit and Twist of Light | None |
 | Holy Conduit | With Benediction, Consecration costs ×0.60 × 0.90 | None |
-| Conviction | Also crits damaging Seals and Hammer of Wrath | R1 only adds Holy Shock, Exorcism, Consecration and heals |
+| Conviction | Also crits damaging Seals and Hammer of Wrath | C15 only adds Holy Shock, Exorcism, Consecration and heals |
 | Vindication | About 5 procs per minute; ranks −67/136/204 target Attack Power and +1/2/3% yours | None |
 | Sanctified Judgement | Refunds more than 60% of the Seal's base cost with Benediction | Probably a bug to report |
 | Pursuit of Justice | 15% at 2/2; beats the 8% boot enchant | On the watch list |
 | Eye for an Eye | Uses damage taken after armor and resistance | None |
-| Sacred Arbiter | +20% Holy Strike damage; refreshes Light, Wisdom, Justice and Crusader | R3 replaces the +20% with the Seal trigger |
-| Two-Handed Weapon Specialization | Melee, Seals, Judgements, Holy Strike and Twist of Light Echo | Supports R2 |
+| Sacred Arbiter | +20% Holy Strike damage; refreshes Light, Wisdom, Justice and Crusader | C17 replaces the +20% with the Seal trigger |
+| Two-Handed Weapon Specialization | Melee, Seals, Judgements, Holy Strike and Twist of Light Echo | Supports C16 |
 | Vengeance | Multiplies with other % damage; crits from procs add stacks | None |
 | Repentance | Diminishing returns category not tested | None |
 | Instrument of Law | Rank 2 makes Hammer of Wrath instant; the threat cut multiplies with Salvation | None |
@@ -594,22 +594,22 @@ Retribution stays at 44 points.
 - **The conflict.** Since the October 15 patch, Salvation no longer uses a Blessing slot, so two Paladins cover a raid's Blessings. But raids prefer Judgement of Light and Wisdom, which help everyone, over Crusader, which mostly boosts the Paladins' own Holy damage. Crusader gets dropped, so Retribution loses damage and Protection loses threat.
 - **Sacred Arbiter doesn't fix it.** Holy Strike refreshes all Judgements on the target, including other Paladins', but each Paladin still owns only one.
 
-### J1. Personal Judgement of the Crusader (recommended)
+### C19. Personal Judgement of the Crusader (recommended)
 
 - **Change.** Judgement of the Crusader no longer counts toward the one-Judgement limit, but it only increases Holy damage from the Paladin who applied it.
 - **Precedent.** Salvation leaving the Blessing slot; Improved Seal of the Crusader made baseline.
 - **Tradeoff.** Other Holy damage dealers lose the bonus.
 
-**For Protection.** Judgement of Fury may remove the tank's own Judgement of the Crusader, because a Paladin can have only one Judgement active. With J1, Crusader stays up. It is worth about +50 threat per second for a Protection Paladin (see Threat).
+**For Protection.** Judgement of Fury may remove the tank's own Judgement of the Crusader, because a Paladin can have only one Judgement active. With C19, Crusader stays up. It is worth about +50 threat per second for a Protection Paladin (see Threat).
 
-### Alternatives to J1
+### Alternatives to C19
 
 | ID | Option | How it works | Precedent | Tradeoff |
 | --- | --- | --- | --- | --- |
-| J2 | Merge Light and Wisdom (fallback if J1 is rejected) | Judging Seal of Light or Wisdom applies one Judgement of Grace: attacks can heal the attacker for 61 and restore 59 mana | Weaponmaster merging four weapon talents | A single Paladin still has to choose |
-| J3 | Judgement Echo (optional, with J1) | When your next Judgement replaces your Judgement of Light, Wisdom or Justice, the replaced Judgement stays on the target as an Echo for 40 sec | Twist of Light's Seal Echo | Needs a 30-point Retribution Paladin |
+| C19a | Merge Light and Wisdom (fallback if C19 is rejected) | Judging Seal of Light or Wisdom applies one Judgement of Grace: attacks can heal the attacker for 61 and restore 59 mana | Weaponmaster merging four weapon talents | A single Paladin still has to choose |
+| C19b | Judgement Echo (optional, with C19) | When your next Judgement replaces your Judgement of Light, Wisdom or Justice, the replaced Judgement stays on the target as an Echo for 40 sec | Twist of Light's Seal Echo | Needs a 30-point Retribution Paladin |
 
-| Two-Paladin raid | Beta | J1 | J2 | J3 alone |
+| Two-Paladin raid | Beta | C19 | C19a | C19b alone |
 | --- | --- | --- | --- | --- |
 | Holy + Holy | Light + Wisdom | Light + Wisdom | Grace | Light + Wisdom |
 | Holy + Retribution | Two of three | All three | Grace + Crusader | All three |
@@ -627,10 +627,10 @@ Retribution stays at 44 points.
 
 ### The fix
 
-- **Reverence in row 2 (H4)** gives Protection and Retribution regen while casting for 8 Holy points, like Enhancement Shaman with Mindfulness: about 10 mana per sec at 50% (H1) and 120–130 Spirit.
-- **Shield Specialization triggers once every 2 sec instead of 3 (P8).** It stays the tank's main source, with a Forever precedent in Shaman's Water Shield.
-- **Improved Seal of Fury is removed (P5).**
-- **R4 fixes Retribution.**
+- **Reverence in row 2 (C4)** gives Protection and Retribution regen while casting for 8 Holy points, like Enhancement Shaman with Mindfulness: about 10 mana per sec at 50% (C1) and 120–130 Spirit.
+- **Shield Specialization triggers once every 2 sec instead of 3 (C13).** It stays the tank's main source, with a Forever precedent in Shaman's Water Shield.
+- **Improved Seal of Fury is removed (C10).**
+- **C18 fixes Retribution.**
 
 ### Results
 
@@ -640,9 +640,9 @@ Retribution stays at 44 points.
 
 | Source | Beta | Proposed | How it is counted |
 | --- | --- | --- | --- |
-| Shield Specialization: 160 mana per block | 26.7 (once every 3 sec) | 48.0 (once every 2 sec, P8) | Beta: with a swing every 2 sec, the 3 sec limit skips the next swing; 50% block. Proposed: every blocked swing counts; 60% block with P2 |
-| Improved Seal of Fury: 87 mana per shield used up | 23.3 | — (P5) | 60 mana +45% against a boss. Each of your swings makes a new shield; it pays out when a boss hit lands before your next swing (64% of boss swings land) |
-| Reverence 50% (H1, H4) | — | 10.3 | Half of 41 mana every 2 sec at 130 Spirit |
+| Shield Specialization: 160 mana per block | 26.7 (once every 3 sec) | 48.0 (once every 2 sec, C13) | Beta: with a swing every 2 sec, the 3 sec limit skips the next swing; 50% block. Proposed: every blocked swing counts; 60% block with C7 |
+| Improved Seal of Fury: 87 mana per shield used up | 23.3 | — (C10) | 60 mana +45% against a boss. Each of your swings makes a new shield; it pays out when a boss hit lands before your next swing (64% of boss swings land) |
+| Reverence 50% (C1, C4) | — | 10.3 | Half of 41 mana every 2 sec at 130 Spirit |
 | **Total** | **50.0** | **58.3** |  |
 
 **Protection spending per sec.** 41.7 without Consecration and 112.4 with it. With the Retribution dip: 37.6 and 75.7.
@@ -658,11 +658,11 @@ Retribution stays at 44 points.
 | Retribution, single target | Spending | No regen | With Reverence 50% (9.75 per sec) |
 | --- | --- | --- | --- |
 | Beta Seal swapping (about 3 Seals every 10 sec) | 41.6 per sec | 1 min 36 sec | 2 min 6 sec |
-| R4 (one Seal every 10 sec) | 11.4 per sec | 5 min 51 sec | About 40 min, close to sustainable |
+| C18 (one Seal every 10 sec) | 11.4 per sec | 5 min 51 sec | About 40 min, close to sustainable |
 
 Retribution spending assumes Sanctified Judgement returns 60% of the Seal's base cost (126 mana) per Judgement, as tested.
 
-- **Tanking stays sustainable without Consecration:** +16.6 mana per sec, against +8.3 in the beta. Removing Improved Seal of Fury (P5) costs 23 mana per sec. Reverence, the extra blocks from P2 and the 2 sec limit (P8) give back 31.
+- **Tanking stays sustainable without Consecration:** +16.6 mana per sec, against +8.3 in the beta. Removing Improved Seal of Fury (C10) costs 23 mana per sec. Reverence, the extra blocks from C7 and the 2 sec limit (C13) give back 31.
 - **Consecration on cooldown lasts a little longer than in the beta:** 74 sec against 64, or 3 min 50 sec with the Retribution dip. It stays a tool for packs, not a full-time rotation.
 - **Reverence pays off when the Paladin is not being hit:** about 30 sec more without Consecration.
 - **Raid buffs are not counted.** Blessing of Wisdom adds 8 mana per sec, and Judgement of Wisdom on the boss adds more.
@@ -692,27 +692,27 @@ These are risks to check in testing. None of them needs a change now.
 | W3 | Retribution gets Strength and 3% hit in one 8-point Protection dip | Watch |
 | W4 | A 7-point Retribution dip cuts Protection's spending with Consecration from about 112 to 76 mana per sec | Watch: it may become a mandatory Protection dip |
 | W5 | Holy is the main dip for both other trees (Seal damage, Infusion of Light, Reverence, Consecrated Ground) | Watch: Retribution and Protection still offer parry, crit, mana costs, Strength and hit |
-| W6 | Reckoning (P6): a 0/26/25 two-hander bursts for about 3,130 in one Hammer of Justice stun | Watch: below the beta's best case (about 3,700). Swift Judgement is about 17% of it |
-| W7 | Iron Creed (P3) gives −10% damage taken to any spec with Righteous Fury and 25 Protection points | Watch in PvP; deliberate exception to the no-improved-buff rule |
-| W8 | Fury's Reach (P7): a 15-point Protection dip plus Swift Judgement gives a 20 yard Judgement | Watch: the range only works with Seal of Fury |
+| W6 | Reckoning (C11): a 0/26/25 two-hander bursts for about 3,130 in one Hammer of Justice stun | Watch: below the beta's best case (about 3,700). Swift Judgement is about 17% of it |
+| W7 | Iron Creed (C8) gives −10% damage taken to any spec with Righteous Fury and 25 Protection points | Watch in PvP; deliberate exception to the no-improved-buff rule |
+| W8 | Fury's Reach (C12): a 15-point Protection dip plus Swift Judgement gives a 20 yard Judgement | Watch: the range only works with Seal of Fury |
 | W9 | Repentance at 15 Retribution points and Templar's Bulwark (an absorb of 100% of health, three times Warrior's Last Stand) are strong PvP dips | Watch |
-| W10 | Shield Specialization (P8) may make Consecration tanking too cheap against fast-hitting packs (up to 80 mana per sec) | Go back to 3 sec, or lower the return from 4% to 3% |
-| W11 | Protection single-target threat in late raids depends on P9 and on block value in Forever gear (see Threat, Gear tiers) | Re-tune P9's 200%; then Iron Creed +100% Holy Strike threat; a shield attack only as a last step |
+| W10 | Shield Specialization (C13) may make Consecration tanking too cheap against fast-hitting packs (up to 80 mana per sec) | Go back to 3 sec, or lower the return from 4% to 3% |
+| W11 | Protection single-target threat in late raids depends on C14 and on block value in Forever gear (see Threat, Gear tiers) | Re-tune C14's 200%; then Iron Creed +100% Holy Strike threat; a shield attack only as a last step |
 
 ## Open questions
 
 - [ ] Forever changed the spell hit cap. Did the crushing blow rules change too? A test against a raid boss would confirm the stat targets.
 - [ ] Do regen-while-casting effects add together (capped at 100%) in Forever, as in Classic?
-- [ ] Would R1 (Conviction for spells) make a Holy dip into Retribution too strong for healers?
+- [ ] Would C15 (Conviction for spells) make a Holy dip into Retribution too strong for healers?
 - [ ] Should Retribution have a group contribution like Druid's Leader of the Pack, or is Vindication's Attack Power debuff enough?
-- [ ] Is a 20 yard pull worth 3 Protection points (P7)?
-- [ ] Does Judgement use the global cooldown in Forever? The R4 table assumes it does.
+- [ ] Is a 20 yard pull worth 3 Protection points (C12)?
+- [ ] Does Judgement use the global cooldown in Forever? The C18 table assumes it does.
 - [ ] Does Judgement of Fury remove your own Judgement of the Crusader?
 - [ ] Does Holy Shield's damage scale with spell power, and by how much per block?
 - [ ] Does Shield Slam have a threat multiplier, like Revenge's ×2.25? (Warrior testers)
 - [ ] Do Heroic Strike and Maul hits give rage? (Warrior and Druid testers)
 - [ ] Champion of the Light: the patch note of 16 October says 10/20/30% of Intellect, the client data of 18 October says 20/40/60%. Which is live?
-- [ ] How much block value do Forever shields and tank gear give at each tier? P9's 200% is tuned on Classic-like values.
+- [ ] How much block value do Forever shields and tank gear give at each tier? C14's 200% is tuned on Classic-like values.
 
 **Answered**
 
@@ -734,14 +734,14 @@ These ideas were considered and dropped. They are not part of the proposals.
 | Unyielding Faith adds spell threat reduction | Not needed: Salvation no longer uses a Blessing slot, and a threat cut must not affect Protection |
 | Holy Shield +35% or +40% block | With the Redoubt trigger, +30% already matches Warrior. +35% beats Warrior, and +40% also removes crits below 440 Defense |
 | Holy Strike crits reset Hammer of Wrath | Hammer of Wrath's 6 sec cooldown is shorter than Holy Strike's 10 sec, and it only works below 20% health: about +1 damage per second |
-| Champion of the Light adds healing | At 60% of Intellect it would match deep Holy's healing and pull Holy Paladins into Retribution. Could come back at 10/20/30%, now that H4 puts Healing Light out of a Retribution hybrid's reach |
-| Sacred Ward (critical heals add a shield) | The same talent as Priest's Divine Aegis. Replaced by Lingering Light (H2) |
+| Champion of the Light adds healing | At 60% of Intellect it would match deep Holy's healing and pull Holy Paladins into Retribution. Could come back at 10/20/30%, now that C4 puts Healing Light out of a Retribution hybrid's reach |
+| Sacred Ward (critical heals add a shield) | The same talent as Priest's Divine Aegis. Replaced by Lingering Light (C2) |
 | Other ideas for the new Holy talent (smart heal splash, aura boost, Cleanse, Lay on Hands) | Too modern, or utility instead of engaging healing |
 | Steadfast Faith (stun duration) in Protection row 1 | Two crowd-control reduction talents; other classes have one |
-| Toughness that also gives Stamina | Replaced by Divine Strength from Holy (P4) |
+| Toughness that also gives Stamina | Replaced by Divine Strength from Holy (C9) |
 | Hallowed Ground, or Shield Specialization, in Protection row 1 | Tank-only talents leave Holy and Retribution 5 wasted points before Precision |
 | A regen talent in each tree (Iron Creed, Righteous Fury, Seal of Fury) | Reverence in row 2 does the same with one talent. The Righteous Fury and Seal of Fury versions could be used by Holy |
-| Survive crushes with more armor, health and a stronger Seal of Fury absorb | Healers would still face the spikes. P2 removes the crushes instead |
+| Survive crushes with more armor, health and a stronger Seal of Fury absorb | Healers would still face the spikes. C7 removes the crushes instead |
 | Holy Shield or Seal of Fury turns crushes into normal hits | Bypasses the attack table |
 | Redoubt charges that each add a % of block | Block buffs with charges give one fixed bonus |
 | Redoubt on every hit with a 6 sec cooldown | The Holy Shield trigger gives the same uptime with no new rule |
@@ -757,12 +757,12 @@ These ideas were considered and dropped. They are not part of the proposals.
 | Reckoning at 100% chance, once every 1.5 sec | Charges sit at the cap of 4; more than half the procs are lost and holding charges is no longer a choice |
 | Swap Reckoning (row 5) and Iron Creed (row 6) | Makes Reckoning cost 25 points but does not stop a 0/30/21 hybrid. The 2-charge limit does the job without moving talents |
 | Iron Creed without the Holy Strike threat bonus | Simpler wording, but loses about 10 threat per second |
-| Aura Mastery or another improved aura talent for Protection | An improved-buff talent with low value (about −4% damage taken at 3 points). Fury's Reach (P7) covers the utility gap instead |
+| Aura Mastery or another improved aura talent for Protection | An improved-buff talent with low value (about −4% damage taken at 3 points). Fury's Reach (C12) covers the utility gap instead |
 | Sacred Arbiter with +30% Holy Strike damage | About +8 damage per second: too small for a 20-point talent |
-| Two Seals active at once (instead of R4) | Uses fewer global cooldowns but removes Seal swapping, the action the talent is built on |
-| Two Judgements per Paladin | More global cooldowns, against R4 |
+| Two Seals active at once (instead of C18) | Uses fewer global cooldowns but removes Seal swapping, the action the talent is built on |
+| Two Judgements per Paladin | More global cooldowns, against C18 |
 | Judgement of the Crusader moves into Retribution (Holy Strike applies it) | A raid without a Retribution Paladin loses the debuff |
-| Holy Shield deals 3% of each blocked attack's damage (instead of P9) | Same result as P9, but based on damage taken instead of a stat, so it is hard to read and to gear for |
+| Holy Shield deals 3% of each blocked attack's damage (instead of C14) | Same result as C14, but based on damage taken instead of a stat, so it is hard to read and to gear for |
 | Righteous Fury threat ×2.2 or ×2.5 (instead of ×1.9) | Flat: too strong early or too weak late. Also boosts Consecration on every target and changes a baseline spell Blizzard just tuned on 16 October |
 | Holy Shield threat bonus +50% or +100% (instead of +20%) | Flat: +100% beats the Warrior at fresh level 60, +50% is too weak in late raids |
 | Iron Creed: +25% threat on all Holy damage | Flat, and works like an improved Righteous Fury. Does not grow with content |

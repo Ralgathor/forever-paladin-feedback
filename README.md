@@ -6,9 +6,9 @@ It contains 18 talent proposals (3 of them new talents) for Holy, Protection and
 
 ## The three biggest changes
 
-- **Protection: crushing blows.** Casting Holy Shield also triggers Redoubt, so block stays high enough to push most crushing blows off the attack table (P2).
-- **Protection: Reckoning.** Charges come from Block, Dodge and Parry as well as from being crit. Holy Strike releases up to 2 stored extra attacks (P6).
-- **Holy: mana and layout.** Reverence gives 17/33/50% regen while casting and moves to row 2, so Protection and Ret can use it with an 8-point dip. Healing Light moves to row 6 (H1, H4).
+- **Protection: crushing blows.** Casting Holy Shield also triggers Redoubt, so block stays high enough to push most crushing blows off the attack table (C7).
+- **Protection: Reckoning.** Charges come from Block, Dodge and Parry as well as from being crit. Holy Strike releases up to 2 stored extra attacks (C11).
+- **Holy: mana and layout.** Reverence gives 17/33/50% regen while casting and moves to row 2, so Protection and Ret can use it with an 8-point dip. Healing Light moves to row 6 (C1, C4).
 
 ## Read and try
 
