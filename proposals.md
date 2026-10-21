@@ -29,7 +29,7 @@ This document proposes 17 talent changes and 1 Judgement change for the WoW Fore
 | P8 | Shield Specialization | Protection, row 3 | Mana return at most once every 3 sec | At most once every 2 sec; nothing else changes |
 | R1 | Conviction | Retribution, row 2 | Melee crit +1–5% | Attack and spell crit +1–5% |
 | R2 | Two-Handed Weapon Specialization | Retribution, row 4 | Opens at 20 points | Opens at 15 points |
-| R3 | Sacred Arbiter and Repentance | Retribution, rows 4–5 | Sacred Arbiter at 15 points (+20% Holy Strike damage), Repentance at 20 | Rows swapped; Holy Strike always triggers your active Seal |
+| R3 | Sacred Arbiter and Repentance | Retribution, rows 4–5 | Sacred Arbiter at 15 points (+20% Holy Strike damage), Repentance at 20 | Rows swapped; Holy Strike triggers your active Seal |
 | R4 | Twist of Light | Retribution, row 7 | The Echo applies to the next melee attack only | The Echo applies to every melee attack for 10 sec |
 | J1 | Judgement of the Crusader | Baseline | Uses the Paladin's one Judgement slot | Personal debuff outside the one-Judgement limit |
 
@@ -262,17 +262,17 @@ This is the build p-5532000210215-50005031211331 in the calculator: Protection 2
 - Seal of Command procs 7 times per minute: a 41% chance per swing, each proc 70% of weapon damage as Holy damage.
 - Holy Strike rank 8: 50% of weapon damage plus 81–105, all as Holy damage.
 - Judgement of Command on a stunned target: 388–422 (in-game tooltip with gear; the base value is 339–373). Swift Judgement allows a second Judgement in the same stun.
-- Extra attacks count as auto attacks, Seal of Command procs included.
+- Holy Strike does not trigger Seals in the beta. Extra attacks count as auto attacks, Seal of Command procs included.
 
 | Part of the burst | Proposed | Beta, nothing stored | Beta, 4 charges stored |
 | --- | --- | --- | --- |
-| Holy Strike | 600 (Seal of Command always triggers, R3) | 500 (+20% damage, normal Seal chance) | 500 |
+| Holy Strike | about 600 (triggers Seal of Command, R3) | about 390 (+20% damage, no Seal effect) | about 390 |
 | Extra attacks (about 390 each) | 2: about 780 | 0 | 4: about 1,570 |
 | Auto attacks (about 1.7) | about 670 | about 670 | about 670 |
 | Two stunned Judgements (about 535 each) | about 1,070 | about 1,070 | about 1,070 |
-| **Total** | **about 3,130** | **about 2,250** | **about 3,810** |
+| **Total** | **about 3,130** | **about 2,130** | **about 3,700** |
 
-- **Result.** The proposal is about 40% above the beta's usual burst and about 18% below the beta's best case (the Classic bomb with 4 stored attacks).
+- **Result.** The proposal is about 47% above the beta's usual burst and about 15% below the beta's best case (the Classic bomb with 4 stored attacks).
 - **Uncertainty.** About ±25%, so 2,350–3,900.
 - **Swift Judgement** is about 17% of the burst. When it is on cooldown (60 sec, against 50 sec for Hammer of Justice), the proposed total is about 2,590. It stays on the watch list.
 
@@ -401,9 +401,9 @@ Retribution stays at 44 points.
 
 ### R3. Sacred Arbiter and Repentance: swap rows, make Sacred Arbiter stronger
 
-- **Proposed text.** "Causes your Holy Strike ability to always trigger the effect of your active Seal and to refresh all Judgement effects on the target, including those of other Paladins. Does not trigger the stun of Seal of Justice."
+- **Proposed text.** "Causes your Holy Strike ability to trigger the effect of your active Seal and to refresh all Judgement effects on the target, including those of other Paladins. Does not trigger the stun of Seal of Justice."
 - **Rows.** Sacred Arbiter moves from 15 to 20 points, Repentance from 20 to 15.
-- **What it replaces.** The beta's +20% Holy Strike damage, worth about 5 damage per second with a typical two-hander. A guaranteed Seal of Command effect adds about 13. (Holy Strike: 50% of a 300 swing plus 93 Holy, every 10 sec. Without the talent, Seal of Command already procs on 41% of Holy Strikes.)
+- **What it replaces.** The beta's +20% Holy Strike damage, worth about 5 damage per second with a typical two-hander. Holy Strike does not trigger Seals in the beta, so a Seal of Command effect on every Holy Strike adds about 22 (70% of a 300 swing, +6% from Two-Handed Weapon Specialization, every 10 sec).
 - **Model.** Retribution's core payoff, as Stormstrike is for Enhancement.
 - **Safety.** It triggers the Seal, not a second Judgement. The stun exception keeps a guaranteed stun every 10 sec out of PvP.
 - **Tradeoffs.** Protection builds that take Sacred Arbiter for its Judgement refresh now need 20 Retribution points. Repentance becomes easier to reach for Holy and Protection in PvP.
@@ -546,7 +546,7 @@ These are risks to check in testing. None of them needs a change now.
 | W3 | Retribution gets Strength and 3% hit in one 8-point Protection dip | Watch |
 | W4 | A 7-point Retribution dip cuts Protection's spending with Consecration from about 112 to 76 mana per sec | Watch: it may become a mandatory Protection dip |
 | W5 | Holy is the main dip for both other trees (Seal damage, Infusion of Light, Reverence, Consecrated Ground) | Watch: Retribution and Protection still offer parry, crit, mana costs, Strength and hit |
-| W6 | Reckoning (P6): a 0/26/25 two-hander bursts for about 3,130 in one Hammer of Justice stun | Watch: below the beta's best case (about 3,810). Swift Judgement is about 17% of it |
+| W6 | Reckoning (P6): a 0/26/25 two-hander bursts for about 3,130 in one Hammer of Justice stun | Watch: below the beta's best case (about 3,700). Swift Judgement is about 17% of it |
 | W7 | Iron Creed (P3) gives −10% damage taken to any spec with Righteous Fury and 25 Protection points | Watch in PvP; deliberate exception to the no-improved-buff rule |
 | W8 | Fury's Reach (P7): a 15-point Protection dip plus Swift Judgement gives a 20 yard Judgement | Watch: the range only works with Seal of Fury |
 | W9 | Repentance at 15 Retribution points and Templar's Bulwark (an absorb of 100% of health, three times Warrior's Last Stand) are strong PvP dips | Watch |
