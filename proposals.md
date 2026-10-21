@@ -219,7 +219,7 @@ The Protection proposals give:
 
 ### C10. Shoulder the Burden (new talent) replaces Improved Seal of Fury: row 4, column 3
 
-- **Proposed text.** "Transfers 50% of the threat of a friendly party or raid member to you, on all enemies." Instant, 30 yards, 5 min cooldown, 45 mana (3% of base mana).
+- **Proposed text.** "You shoulder the burden of a friendly party or raid member, transferring 50% of their threat against all enemies to you." Instant, 30 yards, 5 min cooldown, 45 mana (3% of base mana).
 - **Why remove Improved Seal of Fury.** It was a second "mana when you are hit" talent. Its mana return does not change with the rank of the Seal. Reverence in row 2 (C1) is the mana talent now (see Mana).
 - **Problem.** When an ally has too much threat, the Paladin tank can only taunt one enemy with Judgement of Fury, at 10 yards. The Paladin has no tool to save an ally from a group of enemies.
 - **Change.** Shoulder the Burden moves half of the threat of the ally to the Paladin, on each enemy. The ally keeps the other half. Thus, the ally must still control their threat.
