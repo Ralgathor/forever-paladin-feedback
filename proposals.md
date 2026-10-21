@@ -225,7 +225,7 @@ The Protection proposals give:
 - **Change.** Shoulder the Burden moves half of the threat of the ally to the Paladin, on each enemy. The ally keeps the other half. Thus, the ally must still control their threat.
 - **Model.** Fade (Priest) and Feint (Rogue) decrease the threat of a player. Shoulder the Burden also moves that threat to the tank.
 - **Raw threat.** The threat that moves does not change. Righteous Fury does not multiply it.
-- **Tank swaps.** On the other tank, it moves half of their threat to you. Then use Judgement of Fury to take the boss.
+- **Tank swaps.** First use Judgement of Fury to take the boss. Then use Shoulder the Burden on the other tank. You then have 1.5 times their threat, and they keep 0.5 times. Do not use it before the taunt: the threat of the other tank decreases, and a damage dealer can then pull the boss.
 - **PvP.** Players do not use threat. Thus, the talent has no effect in PvP.
 - **Signature talents.** Each tree keeps a 1-point signature talent in rows 3 and 4:
   - Holy: Voice of Truth and Divine Favor.
