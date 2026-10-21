@@ -31,7 +31,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C7 Iron Creed:** −2–10% damage taken while Righteous Fury is active (beta: for 6 sec after Holy Strike).
 - **C8 Divine Strength replaces Toughness:** +2–10% Strength, from Holy row 1.
 - **C9 Improved Righteous Fury:** removed. Iron Creed alone gives −10% damage taken.
-- **C10 Shoulder the Burden (new) replaces Improved Seal of Fury:** 50% of the threat of an ally moves to you. 1 min cooldown. It has no effect in PvP.
+- **C10 Shoulder the Burden (new) replaces Improved Seal of Fury:** 50% of the threat of an ally moves to you. 3 min cooldown. It has no effect in PvP.
 - **C11 Reckoning:** block, dodge and parry also give charges (once each 4 sec). Holy Strike releases up to 2 charges.
 - **C12 Fury's Reach (new):** Judgement range +5/10 yards while Seal of Fury is active.
 - **C13 Shield Specialization:** mana return once each 2 sec (beta: 3 sec).
