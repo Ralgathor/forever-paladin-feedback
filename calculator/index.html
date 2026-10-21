@@ -89,12 +89,12 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
 .flag{position:absolute;left:-6px;top:-6px;font-family:var(--f-body);font-size:9px;font-weight:700;letter-spacing:.06em;line-height:14px;padding:0 4px;border-radius:3px;text-shadow:none;pointer-events:none;
   background:var(--panel);border:1px solid var(--line);color:var(--muted)}
 .flag.n{color:var(--gold);border-color:var(--gold-glow)}
-.arrow{position:absolute;background:var(--line);pointer-events:none}
+.arrow{position:absolute;background:#a9afba;pointer-events:none;filter:drop-shadow(0 0 2px rgba(0,0,0,.9))}
 .arrow.on{background:var(--gold-glow)}
 .arrow::after{content:"";position:absolute;border:6px solid transparent}
-.arrow.v{width:4px}.arrow.v::after{left:-4px;bottom:-9px;border-top-color:inherit;border-top:7px solid var(--line)}
+.arrow.v{width:5px}.arrow.v::after{left:-4px;bottom:-9px;border-top-color:inherit;border-top:7px solid #a9afba}
 .arrow.v.on::after{border-top-color:var(--gold-glow)}
-.arrow.h{height:4px}.arrow.h::after{top:-4px;left:-9px;border-right:7px solid var(--line)}
+.arrow.h{height:5px}.arrow.h::after{top:-4px;left:-9px;border-right:7px solid #a9afba}
 .arrow.h.on::after{border-right-color:var(--gold-glow)}
 
 .detail{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:grid;grid-template-columns:auto 1fr auto;gap:6px 14px;align-items:start;box-shadow:var(--shadow)}
