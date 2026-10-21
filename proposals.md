@@ -29,7 +29,7 @@ This document proposes 17 talent changes and 1 Judgement change for the WoW Fore
 | P8 | Shield Specialization | Protection, row 3 | Mana return at most once every 3 sec | At most once every 2 sec; nothing else changes |
 | R1 | Conviction | Retribution, row 2 | Melee crit +1–5% | Attack and spell crit +1–5% |
 | R2 | Two-Handed Weapon Specialization | Retribution, row 4 | Opens at 20 points | Opens at 15 points |
-| R3 | Sacred Arbiter and Repentance | Retribution, rows 4–5 | Sacred Arbiter at 15 points (+20% Holy Strike damage), Repentance at 20 | Rows swapped; Holy Strike triggers your active Seal |
+| R3 | Sacred Arbiter and Repentance | Retribution, rows 4–5 | Sacred Arbiter at 15 points (+20% Holy Strike damage), Repentance at 20 | Rows swapped; Holy Strike always triggers your active Seal |
 | R4 | Twist of Light | Retribution, row 7 | The Echo applies to the next melee attack only | The Echo applies to every melee attack for 10 sec |
 | J1 | Judgement of the Crusader | Baseline | Uses the Paladin's one Judgement slot | Personal debuff outside the one-Judgement limit |
 
@@ -266,7 +266,7 @@ This is the build p-5532000210215-50005031211331 in the calculator: Protection 2
 
 | Part of the burst | Proposed | Beta, nothing stored | Beta, 4 charges stored |
 | --- | --- | --- | --- |
-| Holy Strike | about 600 (triggers Seal of Command, R3) | about 390 (+20% damage, no Seal effect) | about 390 |
+| Holy Strike | about 600 (always triggers Seal of Command, R3) | about 390 (+20% damage, no Seal effect) | about 390 |
 | Extra attacks (about 390 each) | 2: about 780 | 0 | 4: about 1,570 |
 | Auto attacks (about 1.7) | about 670 | about 670 | about 670 |
 | Two stunned Judgements (about 535 each) | about 1,070 | about 1,070 | about 1,070 |
@@ -401,7 +401,7 @@ Retribution stays at 44 points.
 
 ### R3. Sacred Arbiter and Repentance: swap rows, make Sacred Arbiter stronger
 
-- **Proposed text.** "Causes your Holy Strike ability to trigger the effect of your active Seal and to refresh all Judgement effects on the target, including those of other Paladins. Does not trigger the stun of Seal of Justice."
+- **Proposed text.** "Causes your Holy Strike ability to always trigger the effect of your active Seal and to refresh all Judgement effects on the target, including those of other Paladins. Does not trigger the stun of Seal of Justice."
 - **Rows.** Sacred Arbiter moves from 15 to 20 points, Repentance from 20 to 15.
 - **What it replaces.** The beta's +20% Holy Strike damage, worth about 5 damage per second with a typical two-hander. Holy Strike does not trigger Seals in the beta, so a Seal of Command effect on every Holy Strike adds about 22 (70% of a 300 swing, +6% from Two-Handed Weapon Specialization, every 10 sec).
 - **Model.** Retribution's core payoff, as Stormstrike is for Enhancement.

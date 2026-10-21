@@ -281,7 +281,7 @@ const PROPOSED={
  tou:{pid:"P4",replace:{key:"ds",name:"Divine Strength",r1:"Increases your Strength by 2%.",rN:"Increases your Strength by 10%.",status:"N"}},
  con:{pid:"R1",r1:"Improves your chance to get a critical strike with attacks and spells by 1%.",rN:"Improves your chance to get a critical strike with attacks and spells by 5%."},
  ths:{pid:"R2",tier:4,col:4},
- sa:{pid:"R3",tier:5,col:3,r1:"Causes your Holy Strike ability to trigger the effect of your active Seal and to refresh all Judgement effects on the target, including those of other Paladins. Does not trigger the stun of Seal of Justice.",rN:null},
+ sa:{pid:"R3",tier:5,col:3,r1:"Causes your Holy Strike ability to always trigger the effect of your active Seal and to refresh all Judgement effects on the target, including those of other Paladins. Does not trigger the stun of Seal of Justice.",rN:null},
  rep:{pid:"R3",tier:4,col:3},
  tol:{pid:"R4",r1:"Reduces the Mana cost of your Seal spells by 20%. When you replace your Seal of Command, Seal of Righteousness, Seal of Fury, or Seal of Justice with a different Seal, you gain an Echo of that Seal for 10 sec. While the Echo lasts, your melee attacks also apply the replaced Seal's effects."}
 };
@@ -303,7 +303,7 @@ const PROPOSALS=[
  ["P8", "ss", "Shield Specialization", "Protection, row 3", "Mana return at most once every 3 sec", "At most once every 2 sec; nothing else changes"],
  ["R1", "con", "Conviction", "Retribution, row 2", "Melee crit +1–5%", "Attack and spell crit +1–5%"],
  ["R2", "ths", "Two-Handed Weapon Specialization", "Retribution, row 4", "Opens at 20 points", "Opens at 15 points"],
- ["R3", "sa", "Sacred Arbiter and Repentance", "Retribution, rows 4–5", "Sacred Arbiter at 15 points (+20% Holy Strike damage), Repentance at 20", "Rows swapped; Holy Strike triggers your active Seal"],
+ ["R3", "sa", "Sacred Arbiter and Repentance", "Retribution, rows 4–5", "Sacred Arbiter at 15 points (+20% Holy Strike damage), Repentance at 20", "Rows swapped; Holy Strike always triggers your active Seal"],
  ["R4", "tol", "Twist of Light", "Retribution, row 7", "The Echo applies to the next melee attack only", "The Echo applies to every melee attack for 10 sec"]
 ];
 const BASELINE=[
