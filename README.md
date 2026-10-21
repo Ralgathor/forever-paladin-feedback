@@ -12,12 +12,44 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C (change):** the proposal changes what a talent does, adds a talent or removes a talent.
 - **M (move):** the proposal moves a talent to a different row or column. The talent text does not change.
 
-## Main changes
+## Changes and moves
 
-- **Protection: crushing blows (C6).** Each Holy Shield cast also starts Redoubt. The block chance stays high. Most crushing blows stop.
-- **Protection: threat (C14).** Holy Shield damage increases with block value. Paladin threat then increases with gear, as Warrior and Druid threat does.
-- **Protection: Reckoning (C11).** Block, dodge and parry also give charges. Holy Strike releases up to 2 charges.
-- **Holy: mana and layout (C1, C4, M1–M3).** Reverence gives 17/33/50% mana regeneration while casting. It moves to row 2. Protection and Retribution can get it with 8 Holy points. Healing Light moves to row 6.
+**Holy**
+
+- **C1 Reverence:** 17/33/50% mana regeneration while casting (beta: 10/20/30%). It moves from row 3 to row 2. Protection and Retribution can get it with 8 Holy points.
+- **C2 Lingering Light (new):** a critical heal adds a heal over time of 15/30% of the heal.
+- **C3 Infusion of Light:** Holy Strike critical hits also make the next Holy Light faster. It moves from row 4 to row 2.
+- **C4 Healing Light:** 2 ranks, 6/12% (beta: 3 ranks, 4/8/12%). It moves from row 2 to row 6.
+- **C5 Improved Seals:** 5 ranks, 3/6/9/12/15% (beta: 3 ranks). It moves from row 2 to row 1 and replaces Divine Strength.
+- **M1 Consecrated Ground:** row 5 → row 3.
+- **M2 Spiritual Focus:** row 2 → row 4.
+- **M3 Unyielding Faith:** row 2, column 4 → column 3.
+
+**Protection**
+
+- **C6 Redoubt:** each Holy Shield cast also starts it. The block chance stays high. Most crushing blows stop.
+- **C7 Iron Creed:** −2–10% damage taken while Righteous Fury is active (beta: for 6 sec after Holy Strike).
+- **C8 Divine Strength replaces Toughness:** +2–10% Strength, from Holy row 1.
+- **C9 Improved Righteous Fury:** removed. Iron Creed alone gives −10% damage taken.
+- **C10 Righteous Defense (new) replaces Improved Seal of Fury:** area taunt, 10 yards, 6 sec, 10 min cooldown.
+- **C11 Reckoning:** block, dodge and parry also give charges (once each 4 sec). Holy Strike releases up to 2 charges.
+- **C12 Fury's Reach (new):** Judgement range +5/10 yards while Seal of Fury is active.
+- **C13 Shield Specialization:** mana return once each 2 sec (beta: 3 sec).
+- **C14 Holy Shield:** each block also does 200% of your block value as Holy damage. Paladin threat then increases with gear, as Warrior and Druid threat does.
+- **M4 Improved Hammer of Justice:** row 4 → row 3.
+- **M5 Swift Judgement:** row 4 → row 3, with no requirement.
+
+**Retribution**
+
+- **C15 Conviction:** +1–5% critical hit chance with attacks and spells (beta: melee only).
+- **C16 Sacred Arbiter:** Holy Strike always triggers your active Seal (beta: +20% Holy Strike damage). It moves from row 4 to row 5.
+- **C17 Twist of Light:** the Echo applies to all melee attacks for 10 sec (beta: the next melee attack only).
+- **M6 Two-Handed Weapon Specialization:** row 5 → row 4 (20 → 15 points).
+- **M7 Repentance:** row 5 → row 4 (20 → 15 points).
+
+**Judgements**
+
+- **C18 Judgement of the Crusader:** a personal debuff. It does not count against the one-Judgement limit. C18a and C18b are alternatives.
 
 ## Read and try
 
