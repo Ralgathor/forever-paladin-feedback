@@ -280,11 +280,11 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 
 - **Proposed text (rank 3).** "Increases the amount of damage absorbed by your shield by 30%, and gives your blocks a 100% chance to restore 4% of your maximum Mana. May only occur once every 2 sec."
 - **Change.** Only the limit changes: once each 2 sec, not once each 3 sec. The ranks, the chance and the 4% return do not change.
-- **Why.** C10 removes Improved Seal of Fury (about 23 mana per sec while you tank). Reverence (C1) and the extra blocks from C6 give back about 13. Holy Shield rank 3 costs 24 mana per sec. Without C13, tanking without Consecration gives about −1.4 mana per sec.
-- **Value.** A boss that swings each 2 sec can trigger it with each block: 160 mana × 60% block ÷ 2 sec = 48 mana per sec (beta: 30). Tanking without Consecration gives +16.6 mana per sec (see Analysis, Mana).
+- **Why.** C10 removes Improved Seal of Fury (about 23 mana per sec while you tank). Reverence (C1) and the extra blocks from C6 give back about 13. Holy Shield rank 3 costs 24 mana per sec. Without C13, a fresh level 60 tank (2,897 mana) loses about 9 mana per sec without Consecration.
+- **Value.** A boss that swings each 2 sec can trigger it with each block: 4% of maximum mana × 60% block ÷ 2 sec. This is 35 mana per sec at fresh level 60 and 59 in Naxxramas (beta: 19 and 33). Tanking without Consecration gives +4 to +30 mana per sec (see Analysis, Mana).
 - **Model.** Warriors and Druids get rage when they are hit. Water Shield (Shaman) gives mana when the Shaman is hit. Shield Specialization is already the Paladin version. Thus, no new talent is necessary.
 - **Synergy.** More block gives more mana. Thus, the crushing blow fix (C6) and the mana fix help each other.
-- **Limits.** Against groups of enemies, it gives a maximum of 80 mana per sec (beta: 53). It gives nothing to a Paladin who is not hit. Reverence (C1) is for that case.
+- **Limits.** Against groups of enemies, it gives a maximum of 2% of maximum mana each sec: 58 at fresh level 60, 98 in Naxxramas (beta: 39 and 65). It gives nothing to a Paladin who is not hit. Reverence (C1) is for that case.
 
 ### C14. Holy Shield: damage increases with block value
 
@@ -562,7 +562,7 @@ TPS on one boss. The percentage is the Paladin TPS divided by the Druid TPS.
 - With all proposals, the Paladin is between the Druid and the Warrior at all tiers.
 - Without C14, the Paladin falls behind from Molten Core. The Warrior and the Druid get more Attack Power and more rage. The Paladin gets only spell power.
 - The beta Paladin is behind at all tiers: 94% of the Druid at fresh level 60, and 70% in Naxxramas.
-- Shield Specialization gives 4% of maximum mana. Thus, more mana gives more mana return. Tanking without Consecration gives about +3 mana per sec at fresh level 60 and about +27 mana per sec in Naxxramas.
+- Shield Specialization gives 4% of maximum mana. Thus, more mana gives more mana return. Tanking without Consecration gives about +4 mana per sec at fresh level 60 and about +30 mana per sec in Naxxramas (see Analysis, Mana).
 
 #### 3. Result with flatter gear
 
@@ -588,7 +588,7 @@ Paladin with all proposals. The first value is the percentage of the Druid TPS. 
 - C14 at 200% is correct for all three cases. At 150%, the Paladin falls to 89% of the Druid if boss hits continue to increase. At 300%, the Paladin has more threat than the Warrior if all values are flat.
 - Without C14, the Paladin falls behind in all cases. Thus, C14 is more important with flatter gear.
 - The weakest case is flatter gear with boss hits that continue to increase. The Warrior and the Druid still get more rage from bigger hits. Monitor the block value of each gear tier.
-- Mana: if maximum mana increases more slowly (3,650, 3,900 and 4,150), tanking without Consecration gives +12, +15 and +18 mana per sec. C13 is more important.
+- Mana: if maximum mana increases more slowly (3,650, 3,900 and 4,150), tanking without Consecration gives +14, +17 and +20 mana per sec. C13 is more important.
 - Defense: if gear gives Defense more slowly, tanks get to 440 Defense later. The boss can then make critical hits for a longer time. C6 and the Reckoning critical-hit trigger stay useful for a longer time.
 - C18: the +161 bonus from Judgement of the Crusader is more important when gear gives less spell power.
 - The PvP burst check (C11) uses fresh and pre-raid stats. It stays correct for a longer time.
@@ -723,45 +723,69 @@ All values are approximate.
 
 **Inputs**
 
-- 4,000 maximum mana. Base mana 1,512 (Classic value, not confirmed for Forever).
-- 130 Spirit for Protection, 120 for Retribution.
-- The boss swings each 2.0 sec. One-handed weapon: 2.7 sec.
+- Maximum mana and mp5 come from the gear tiers (see Threat, part 2). Fresh level 60 uses the real gear profile: 2,897 mana, 3 mp5.
+- Tank gear does not give much Spirit. All tiers use 130 Spirit (the fresh profile has 129 with buffs).
+- Base mana 1,512 (Classic value, not confirmed for Forever).
+- The boss swings each 2.0 sec. One-handed weapon: 2.7 sec. Block: 50% in the beta, 60% with C6.
 - Level 60 costs (Forever spellbook): Holy Shield rank 3: 240. Holy Strike: 20. Judgement: 6% of base mana (91), 10 sec cooldown. Seal of Fury rank 7: 200 each 30 sec. Seal of Command: 210. Consecration rank 5: 565 each 8 sec.
 - The Retribution dip applies Benediction (×0.90 on all costs) and Holy Conduit (×0.60 on Consecration).
+- Raid buffs are not in the model. Blessing of Wisdom gives 8 mana per sec. Judgement of Wisdom on the boss gives more.
 
 **Protection: mana income per sec while tanking**
 
 | Source | Beta | Proposed | How it is calculated |
 | --- | --- | --- | --- |
-| Shield Specialization: 160 mana for each block | 26.7 (once each 3 sec) | 48.0 (once each 2 sec, C13) | Beta: with a swing each 2 sec, the 3 sec limit skips the next swing. 50% block. Proposed: each blocked swing counts. 60% block with C6 |
-| Improved Seal of Fury: 87 mana for each shield used | 23.3 | — (C10) | 60 mana +45% against a boss. Each of your swings makes a new shield. You get the mana when a boss hit occurs before your next swing (64% of the boss swings hit) |
+| Shield Specialization: 4% of maximum mana for each block | Maximum mana × 0.04 ÷ 6 sec | Maximum mana × 0.04 × 60% ÷ 2 sec (C13) | Beta: the 3 sec limit skips the next swing, 50% block. Proposed: each blocked swing counts, 60% block (C6) |
+| Improved Seal of Fury: 87 mana for each shield used | 23.3 | — (C10) | 60 mana +45% against a boss. You get the mana when a boss hit occurs before your next swing |
 | Reverence 50% (C1) | — | 10.3 | Half of 41 mana each 2 sec at 130 Spirit |
-| **Total** | **50.0** | **58.3** |  |
+| mp5 from gear | 0.6–2.4 | 0.6–2.4 | 3–12 mp5 |
 
-**Protection: mana used per sec.** 41.7 without Consecration, 112.4 with Consecration. With the Retribution dip: 37.6 and 75.7.
+| Tier (maximum mana) | Shield Specialization, beta | Shield Specialization, proposed | Total income, beta | Total income, proposed |
+| --- | --- | --- | --- | --- |
+| Fresh level 60 (2,897) | 19.3 | 34.8 | 43.2 | 45.6 |
+| Pre-raid best in slot (3,400) | 22.7 | 40.8 | 47.0 | 52.0 |
+| Molten Core (3,900) | 26.0 | 46.8 | 50.9 | 58.6 |
+| Blackwing Lair (4,400) | 29.3 | 52.8 | 54.6 | 65.0 |
+| Naxxramas (4,900) | 32.7 | 58.8 | 58.4 | 71.5 |
 
-| Protection, 4,000 mana | Beta | Proposed |
-| --- | --- | --- |
-| Tanking, no Consecration | +8.3 per sec: no mana loss | +16.6 per sec: no mana loss |
-| Tanking, Consecration on cooldown | −62.4 per sec: 64 sec | −54.1 per sec: 74 sec |
-| Tanking, Consecration on cooldown, Retribution dip | −25.7 per sec: 2 min 36 sec | −17.4 per sec: 3 min 50 sec |
-| Not hit, no Consecration | −41.7 per sec: 1 min 36 sec | −31.4 per sec: 2 min 7 sec |
-| Not hit, Consecration on cooldown | −112.4 per sec: 36 sec | −102.1 per sec: 39 sec |
+**Protection: mana used per sec.** 41.7 without Consecration, 112.4 with Consecration. With the Retribution dip: 37.6 and 75.7. These costs do not change with gear.
+
+**Protection: mana per sec and time until no mana**
+
+| Case | Fresh level 60, beta | Fresh level 60, proposed | Naxxramas, beta | Naxxramas, proposed |
+| --- | --- | --- | --- | --- |
+| Tanking, no Consecration | +1.5 | +3.9 | +16.7 | +29.8 |
+| Tanking, Consecration on cooldown | −69.2: 42 sec | −66.8: 43 sec | −54.0: 1 min 30 sec | −41.0: 1 min 59 sec |
+| Tanking, Consecration on cooldown, Retribution dip | −32.5: 1 min 29 sec | −30.1: 1 min 36 sec | −17.3: 4 min 42 sec | −4.2: 19 min |
+| Not hit, no Consecration | −41.1: 1 min 10 sec | −30.9: 1 min 33 sec | −39.3: 2 min 4 sec | −29.1: 2 min 48 sec |
+| Not hit, Consecration on cooldown | −111.8: 26 sec | −101.5: 29 sec | −110.0: 45 sec | −99.7: 49 sec |
+
+**Tanking without Consecration, all tiers**
+
+| Tier | Beta | Proposed | Proposed, flatter gear (see Threat, part 3) |
+| --- | --- | --- | --- |
+| Fresh level 60 | +1.5 | +3.9 | +3.9 |
+| Pre-raid best in slot | +5.3 | +10.3 | +10.3 |
+| Molten Core | +9.2 | +16.9 | +13.7 |
+| Blackwing Lair | +12.9 | +23.3 | +16.9 |
+| Naxxramas | +16.7 | +29.8 | +20.1 |
 
 **Retribution, one target**
 
-| Case | Mana used | No regeneration | With Reverence 50% (9.75 per sec) |
+| Case | Mana used | No regeneration (2,897 → 4,900 mana) | With Reverence 50% (9.75 per sec) |
 | --- | --- | --- | --- |
-| Beta Seal swaps (about 3 Seals each 10 sec) | 41.6 per sec | 1 min 36 sec | 2 min 6 sec |
-| C17 (one Seal each 10 sec) | 11.4 per sec | 5 min 51 sec | About 40 min: almost no mana loss |
+| Beta Seal swaps (about 3 Seals each 10 sec) | 41.6 per sec | 1 min 10 sec → 1 min 58 sec | 1 min 31 sec → 2 min 34 sec |
+| C17 (one Seal each 10 sec) | 11.4 per sec | 4 min 14 sec → 7 min 10 sec | 29 min → 49 min: almost no mana loss |
 
 The Retribution values assume that Sanctified Judgement returns 60% of the base cost of the Seal (126 mana) for each Judgement. Tests show this.
 
-- **Tanking without Consecration has no mana loss:** +16.6 mana per sec (beta: +8.3). C10 removes Improved Seal of Fury (−23 mana per sec). Reverence, the extra blocks from C6 and C13 give back 31.
-- **Consecration on cooldown lasts a little longer than in the beta:** 74 sec (beta: 64). With the Retribution dip: 3 min 50 sec. Use Consecration for groups of enemies, not all the time.
-- **Reverence is useful when the Paladin is not hit:** about 30 sec more without Consecration.
-- **Raid buffs are not in the model.** Blessing of Wisdom gives 8 mana per sec. Judgement of Wisdom on the boss gives more.
-- **Gear.** Shield Specialization returns 4% of maximum mana. With less maximum mana, the return is smaller. A fresh level 60 Paladin with 2,897 mana gets about +3 mana per sec while tanking without Consecration (see Threat, part 2).
+- **The mana of the tank increases with gear.** Shield Specialization returns 4% of maximum mana. Thus, the mana income increases with each gear tier.
+- **A fresh level 60 tank has almost no extra mana.** Without Consecration, the proposed tank gets +3.9 mana per sec (beta: +1.5). Without C13, the proposed tank loses about 9 mana per sec.
+- **In raids, tanking without Consecration has no mana loss:** +10 to +30 mana per sec (beta: +5 to +17).
+- **Consecration is for groups of enemies.** On cooldown, it uses all mana in 43 sec at fresh level 60 and in about 2 min in Naxxramas. With the Retribution dip, it lasts 1 min 36 sec to 19 min.
+- **Reverence is useful when the Paladin is not hit:** about 20–45 sec more without Consecration.
+- **Flatter gear.** With less maximum mana, the income stays lower: +14 to +20 mana per sec in late raids. C13 is more important.
+- **Intellect.** For a Protection Paladin, Intellect gives mana and also increases the Shield Specialization return. Thus, Intellect is a tank stat for the Paladin.
 
 ### Tree balance
 
@@ -882,7 +906,7 @@ These are risks to check in tests. None of them needs a change now.
 | W7 | Iron Creed (C7) gives −10% damage taken to all specs with Righteous Fury and 25 Protection points | Monitor in PvP. This is the one exception to the rule on talents that improve a buff |
 | W8 | Fury's Reach (C12): a 15-point Protection dip with Swift Judgement gives a 20 yard Judgement | Monitor: the range works only with Seal of Fury |
 | W9 | Repentance at 15 Retribution points (M7) and Templar's Bulwark (an absorb of 100% of health, three times Last Stand) are strong PvP dips | Monitor |
-| W10 | Shield Specialization (C13) can make Consecration too cheap against groups that hit fast (up to 80 mana per sec) | Go back to 3 sec, or decrease the return from 4% to 3% |
+| W10 | Shield Specialization (C13) can make Consecration too cheap against groups that hit fast (up to 58–98 mana per sec, related to maximum mana) | Go back to 3 sec, or decrease the return from 4% to 3% |
 | W11 | Protection threat in late raids depends on C14 and on the block value of Forever gear (see Threat, part 2) | Change the 200% of C14. Then Iron Creed +100% Holy Strike threat. A shield attack only as the last step |
 
 ## Open questions
