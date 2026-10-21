@@ -27,7 +27,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 18 chan
 | C7 | Iron Creed | Protection, row 6 | −2–10% damage taken for 6 sec after Holy Strike | −2–10% damage taken while Righteous Fury is active |
 | C8 | Divine Strength replaces Toughness | Protection, row 1 | Toughness: +2–10% armor from items | Divine Strength: +2–10% Strength (from Holy row 1) |
 | C9 | Improved Righteous Fury | Protection, row 3 | −2–6% damage taken with Righteous Fury | Removed |
-| C10 | Righteous Defense (new) replaces Improved Seal of Fury | Protection, row 3 → row 4 | Improved Seal of Fury: mana when the Seal of Fury shield absorbs a hit | Righteous Defense: Blessing of Protection also makes up to 3 enemies that attack the target attack you for 6 sec |
+| C10 | Righteous Defense (new) replaces Improved Seal of Fury | Protection, row 3, requires Guardian's Favor | Improved Seal of Fury: mana when the Seal of Fury shield absorbs a hit | Righteous Defense: Blessing of Protection also makes up to 3 enemies that attack the target attack you for 6 sec |
 | C11 | Reckoning | Protection, row 5 | Extra attack after a block (40%) or a critical hit taken (100%). It hits with the next swing | Charge after a block, dodge or parry (once each 4 sec) or a critical hit taken. Holy Strike releases up to 2 charges |
 | C12 | Fury's Reach (new) | Protection, row 4 | — | 2 ranks: Judgement range +5/10 yards while Seal of Fury is active |
 | C13 | Shield Specialization | Protection, row 3 | Mana return once each 3 sec | Mana return once each 2 sec |
@@ -44,8 +44,8 @@ This document gives talent proposals for the WoW Forever Paladin. It has 18 chan
 | M1 | Consecrated Ground | Holy | Row 5 | Row 3 |
 | M2 | Spiritual Focus | Holy | Row 2 | Row 4 |
 | M3 | Unyielding Faith | Holy | Row 2, column 4 | Row 2, column 3 |
-| M4 | Improved Hammer of Justice | Protection | Row 4 | Row 3 |
-| M5 | Swift Judgement | Protection | Row 4, requires Improved Seal of Fury | Row 3, no requirement |
+| M4 | Improved Hammer of Justice | Protection | Row 4, column 3 | Row 3, column 1 |
+| M5 | Swift Judgement | Protection | Row 4, column 1, requires Improved Seal of Fury | Row 4, column 3, no requirement |
 | M6 | Two-Handed Weapon Specialization | Retribution | Row 5 (20 points) | Row 4 (15 points) |
 | M7 | Repentance | Retribution | Row 5 (20 points) | Row 4 (15 points) |
 
@@ -177,11 +177,13 @@ The Protection proposals give:
 | --- | --- | --- |
 | 1 (0) | Divine Strength (C8), Redoubt (C6) | 10 |
 | 2 (5) | Precision, Guardian's Favor, Anticipation | 10 |
-| 3 (10) | Swift Judgement (M5), Improved Hammer of Justice (M4), Shield Specialization (C13), Sacred Duty | 9 |
-| 4 (15) | Fury's Reach (C12), One-Handed Weapon Specialization, Righteous Defense (C10) | 6 |
+| 3 (10) | Improved Hammer of Justice (M4), Righteous Defense (C10), Shield Specialization (C13), Sacred Duty | 9 |
+| 4 (15) | One-Handed Weapon Specialization, Swift Judgement (M5), Fury's Reach (C12) | 6 |
 | 5 (20) | Templar's Bulwark, Reckoning (C11) | 6 |
 | 6 (25) | Iron Creed (C7) | 5 |
 | 7 (30) | Holy Shield (C14) | 1 |
+
+Arrows: Guardian's Favor → Righteous Defense (column 2, down). Swift Judgement → Fury's Reach (row 4, column 3 to column 4). Redoubt → Shield Specialization (column 3, down).
 
 - Protection has 47 points (beta: 48).
 - Rows 1–4 have 35 points. Row 5 opens at 20 points.
@@ -217,9 +219,10 @@ The Protection proposals give:
 - With Iron Creed always active (C7), the two talents gave about 15% damage reduction.
 - Iron Creed alone gives 10%, the same as the Warrior.
 
-### C10. Righteous Defense (new talent) replaces Improved Seal of Fury: row 4, column 3
+### C10. Righteous Defense (new talent) replaces Improved Seal of Fury: row 3, column 2
 
 - **Proposed text.** "Your Blessing of Protection also forces up to 3 enemies that are attacking the target to attack you for 6 sec." Passive, 1 point.
+- **Requirement.** Guardian's Favor 2/2 (straight arrow from row 2). Guardian's Favor decreases the cooldown of Blessing of Protection. Righteous Defense adds the taunt. The two talents make one Blessing of Protection path.
 - **Why remove Improved Seal of Fury.** It was a second "mana when you are hit" talent. Its mana return does not change with the rank of the Seal. Reverence in row 2 (C1) is the mana talent now (see Analysis, Mana).
 - **Problem.** Blessing of Protection stops physical attacks on an ally. But the enemies then attack the next player on their threat list. This is often a healer.
 - **Change.** With Righteous Defense, up to 3 of these enemies attack the Paladin. The Paladin saves the ally and keeps the enemies.
@@ -273,10 +276,10 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 ### C12. Fury's Reach (new talent): a ranged pull for Protection
 
 - **Proposed text.** "Increases the range of your Judgement by 5/10 yards while Seal of Fury is active."
-- **Position.** Row 4, column 1, 2 ranks. It requires Swift Judgement (straight arrow from row 3).
+- **Position.** Row 4, column 4, 2 ranks. It requires Swift Judgement (arrow from column 3 in the same row).
 - **Why.** Protection has no ranged pull and no ranged taunt. The Seal of Fury Judgement does 153–167 Holy damage and taunts for 4 sec. But its range is only 10 yards. At 2/2, the range is 20 yards: two times the base range.
 - **Model.** Vanguard (Warrior): Charge in Defensive Stance, row 4, 1 point. Feral Charge (Druid, row 3) and a ranged pull in Feral.
-- **Why 2 ranks.** Row 4 already has a 1-point talent (Righteous Defense). Thus, this talent has ranks, as the other talents in the row.
+- **Why 2 ranks.** Row 4 already has a 1-point talent (Swift Judgement). Thus, this talent has ranks, as the other talents in the row.
 - **Why only with Seal of Fury.** Judgement of Command does 388–422 damage to a stunned target. Without the Seal of Fury condition, a 20 yard range gives more burst to hybrids in PvP. With the condition, Holy and Retribution get almost nothing from the dip.
 - **Threat and mana.** No change while you tank. Judgement still costs 91 mana and has a 10 sec cooldown. Only the first pull changes. The full path costs 3 points (Swift Judgement and 2 ranks).
 
@@ -301,17 +304,18 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 - **No new button.** You already use Holy Shield on cooldown. C6 keeps about 3 blocks each 10 sec.
 - **PvP.** At about 125 block value, each block does about 250 more Holy damage. The maximum is 4 blocks each 10 sec, against melee attacks only. Only Protection has Holy Shield.
 
-### M4. Improved Hammer of Justice: row 4 → row 3
+### M4. Improved Hammer of Justice: row 4, column 3 → row 3, column 1
 
 - **Text.** "Decreases the cooldown of your Hammer of Justice spell by 5/10/15 sec." 3 ranks, the same as the beta.
 - **Model.** Brutal Impact (Druid) on Bash. Bash also has a 60 sec base cooldown.
-- **Why.** It is one of the Paladin talents that players take least. C10 makes space in row 3.
+- **Why.** It is one of the Paladin talents that players take least. Improved Seal of Fury leaves row 3 (C10) and makes space.
 - **PvP.** Holy or Retribution get the full −15 sec (a 45 sec Hammer of Justice) with 13 Protection points (beta: 18). Brutal Impact is in Feral row 2 (−30 sec on Bash). Thus, this stays in line with the Druid.
 
-### M5. Swift Judgement: row 4 → row 3, no requirement
+### M5. Swift Judgement: row 4, column 1 → column 3, no requirement
 
 - In the beta, Swift Judgement requires Improved Seal of Fury. C10 removes Improved Seal of Fury. Thus, Swift Judgement has no requirement.
-- Row 3 has space after C9 and C10.
+- It stays in row 4. It is the 1-point signature talent of row 4.
+- In column 3, it is next to Fury's Reach (C12, column 4). Fury's Reach requires Swift Judgement.
 
 ## Retribution
 
