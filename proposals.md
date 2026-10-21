@@ -373,7 +373,7 @@ The values come from a model. The model uses beta tests and developer notes. It 
 - With all proposals, the Paladin has about the same threat as the Druid and the Warrior.
 - Without the proposals, the Paladin has less threat than the other two tanks at all gear levels.
 - C14 (Holy Shield damage increases with block value) is necessary. Without C14, the Paladin falls behind in raids.
-- C19 (Judgement of the Crusader for each Paladin) gives the Paladin tank about +50 TPS.
+- Judgement of the Crusader gives the Paladin tank about +50 TPS. Judgement of Fury does not remove it. C19 lets the tank keep it when the raid also needs the tank's Judgement for Light or Wisdom.
 - If the gear progression is flatter, C14 at 200% is still correct.
 
 #### 1. Result with the same gear
@@ -386,15 +386,15 @@ Conditions:
 
 | Boss hit before armor | Warrior | Druid | Paladin, beta | Paladin, all proposals | Paladin, all proposals + Consecration |
 | --- | --- | --- | --- | --- | --- |
-| 3,000 | 525 | 520 | 355 | 540 | 625 |
-| 4,500 | 600 | 585 | 355 | 540 | 625 |
-| 6,000 | 660 | 650 | 355 | 540 | 625 |
+| 3,000 | 525 | 520 | 400 | 540 | 625 |
+| 4,500 | 600 | 585 | 400 | 540 | 625 |
+| 6,000 | 660 | 650 | 400 | 540 | 625 |
 
 All values are approximate.
 
 - Warrior and Druid get rage when the boss hits them. Thus, their threat increases when the boss hits harder. Paladin threat does not change with boss damage.
 - If Shield Slam has a ×2.25 threat multiplier (not tested), add 135 TPS to the Warrior.
-- The beta Paladin has no Judgement of the Crusader in this table. Judgement of Fury can remove it. With Judgement of the Crusader, the beta Paladin has about 400 TPS.
+- Both Paladin columns include Judgement of the Crusader. Judgement of Fury does not remove it. In the beta, a raid can need the tank's only Judgement for Light or Wisdom. Then the beta Paladin has no Crusader and about 355 TPS. With C19, the tank keeps Crusader in all cases.
 - Without C14, the proposed Paladin has about 455 TPS (545 TPS with Consecration).
 - If the boss has no armor debuffs (4,500 hits): Warrior 470 TPS, Druid 425 TPS, Paladin 515 TPS. Most Paladin threat is Holy damage. Armor does not decrease Holy damage.
 - Retribution Aura gives the Paladin about +25 TPS. But the Paladin then does not have Devotion Aura (735 armor).
@@ -411,11 +411,11 @@ All values are approximate.
 | Auto attacks | 49 |
 | **Total** | **540** |
 
-The proposals give the Paladin about +185 TPS more than the beta:
+The proposals give the Paladin about +140 TPS more than the beta:
 
 - C14 (block value on Holy Shield): about +80 TPS.
-- C19 (Judgement of the Crusader): about +50 TPS.
-- C7 (more Holy Shield blocks) and C11 (Reckoning): the remaining TPS.
+- C7 (more Holy Shield blocks) and C11 (Reckoning): about +60 TPS.
+- C19 (Judgement of the Crusader for each Paladin): +50 TPS more when the raid needs the tank's Judgement for Light or Wisdom.
 
 **Spell power**
 
@@ -453,15 +453,16 @@ TPS on one boss. The percentage is the Paladin TPS divided by the Druid TPS.
 
 | Tier | Warrior | Druid | Paladin, beta | Paladin, proposals without C14 | **Paladin, all proposals** | All proposals + Consecration |
 | --- | --- | --- | --- | --- | --- | --- |
-| Fresh level 60 | 490 | 405 | 335 (83%) | 430 (107%) | **470 (116%)** | 555 |
-| Pre-raid best in slot | 545 | 455 | 370 (81%) | 470 (104%) | **555 (122%)** | 645 |
-| Molten Core | 640 | 530 | 405 (76%) | 515 (97%) | **625 (118%)** | 720 |
-| Blackwing Lair | 755 | 635 | 450 (71%) | 565 (89%) | **700 (111%)** | 800 |
-| Naxxramas | 815 | 760 | 485 (64%) | 605 (80%) | **775 (102%)** | 880 |
+| Fresh level 60 | 490 | 405 | 380 (94%) | 430 (107%) | **470 (116%)** | 555 |
+| Pre-raid best in slot | 545 | 455 | 415 (91%) | 470 (104%) | **555 (122%)** | 645 |
+| Molten Core | 640 | 530 | 450 (86%) | 515 (97%) | **625 (118%)** | 720 |
+| Blackwing Lair | 755 | 635 | 495 (78%) | 565 (89%) | **700 (111%)** | 800 |
+| Naxxramas | 815 | 760 | 535 (70%) | 605 (80%) | **775 (102%)** | 880 |
 
+- All Paladin columns include Judgement of the Crusader. Without it (a raid that needs the beta tank's Judgement for Light or Wisdom), subtract about 50 TPS from the beta column.
 - With all proposals, the Paladin is between the Druid and the Warrior at all tiers.
 - Without C14, the Paladin falls behind from Molten Core. The Warrior and the Druid get more Attack Power and more rage. The Paladin gets only spell power.
-- The beta Paladin is behind at all tiers: 83% of the Druid at fresh level 60, and 64% in Naxxramas.
+- The beta Paladin is behind at all tiers: 94% of the Druid at fresh level 60, and 70% in Naxxramas.
 - Shield Specialization gives 4% of maximum mana. Thus, more mana gives more mana return. Tanking without Consecration gives about +3 mana per sec at fresh level 60 and about +27 mana per sec in Naxxramas.
 
 #### 3. Result with flatter gear
@@ -578,7 +579,7 @@ Other options were examined and rejected. See Withdrawn ideas.
 | Seal of Righteousness | 10% of spell power with a one-handed weapon, 12% with a two-handed weapon. Weapon speed has no effect | Player tests; patch note, 16 October |
 | Seal of Command | 29% × 70% weapon damage = 20.3% of spell power. 7 procs each minute. Uses the melee hit table | Player tests |
 | Judgement of Fury, Righteousness and Command | 42.9% of spell power. Melee hit table. Critical hit: ×2 damage. Judgement of Command: ×2 damage against a stunned target | Player tests; patch note, 16 October |
-| Judgement of Fury | The damage hits before the taunt. The taunt copies the top threat. The threat from the damage is not added | Player tests |
+| Judgement of Fury | The damage hits before the taunt. The taunt copies the top threat. The threat from the damage is not added. The taunt does not remove Judgement of the Crusader | Player tests |
 | Judgement of the Crusader | The bonus uses the coefficient of each spell, as spell power does. Seal of Command gets the full 29% | Player tests |
 | Consecration | 0.042 of spell power for each tick (33.6% for each target). First 4 enemies only | Patch note, 16 October |
 | Retribution Aura | 6% of spell power | Patch note, 8 October |
@@ -697,7 +698,7 @@ Retribution stays at 44 points.
 - **Precedent.** Salvation leaving the Blessing slot; Improved Seal of the Crusader made baseline.
 - **Tradeoff.** Other Holy damage dealers lose the bonus.
 
-**For Protection.** Judgement of Fury may remove the tank's own Judgement of the Crusader, because a Paladin can have only one Judgement active. With C19, Crusader stays up. It is worth about +50 threat per second for a Protection Paladin (see Threat).
+**For Protection.** Judgement of Fury does not remove Judgement of the Crusader. But a Paladin can have only one Judgement active, so a raid that needs the tank's Judgement for Light or Wisdom takes Crusader away from the tank. With C19, the tank keeps Crusader and can still judge Light or Wisdom. It is worth about +50 threat per second for a Protection Paladin (see Threat).
 
 ### Alternatives to C19
 
@@ -804,7 +805,7 @@ These are risks to check in testing. None of them needs a change now.
 - [ ] Should Retribution have a group contribution like Druid's Leader of the Pack, or is Vindication's Attack Power debuff enough?
 - [ ] Is a 20 yard pull worth 3 Protection points (C12)?
 - [ ] Does Judgement use the global cooldown in Forever? The C18 table assumes it does.
-- [ ] Does Judgement of Fury remove your own Judgement of the Crusader?
+- [x] Does Judgement of Fury remove your own Judgement of the Crusader? No (player test).
 - [ ] Does Holy Shield's damage scale with spell power, and by how much per block?
 - [ ] Does Shield Slam have a threat multiplier, like Revenge's ×2.25? (Warrior testers)
 - [ ] Do Heroic Strike and Maul hits give rage? (Warrior and Druid testers)
