@@ -45,7 +45,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 18 chan
 | M2 | Spiritual Focus | Holy | Row 2 | Row 4 |
 | M3 | Unyielding Faith | Holy | Row 2, column 4 | Row 2, column 3 |
 | M4 | Improved Hammer of Justice | Protection | Row 4, column 3 | Row 3, column 1 |
-| M5 | Swift Judgement | Protection | Row 4, column 1, requires Improved Seal of Fury | Row 4, column 3, no requirement |
+| M5 | Swift Judgement | Protection | Row 4, column 1, requires Improved Seal of Fury | Row 4, column 1, no requirement (same position) |
 | M6 | Two-Handed Weapon Specialization | Retribution | Row 5 (20 points) | Row 4 (15 points) |
 | M7 | Repentance | Retribution | Row 5 (20 points) | Row 4 (15 points) |
 
@@ -178,12 +178,12 @@ The Protection proposals give:
 | 1 (0) | Divine Strength (C8), Redoubt (C6) | 10 |
 | 2 (5) | Precision, Guardian's Favor, Anticipation | 10 |
 | 3 (10) | Improved Hammer of Justice (M4), Righteous Defense (C10), Shield Specialization (C13), Sacred Duty | 9 |
-| 4 (15) | One-Handed Weapon Specialization, Swift Judgement (M5), Fury's Reach (C12) | 6 |
+| 4 (15) | Swift Judgement (M5), Fury's Reach (C12), One-Handed Weapon Specialization | 6 |
 | 5 (20) | Templar's Bulwark, Reckoning (C11) | 6 |
 | 6 (25) | Iron Creed (C7) | 5 |
 | 7 (30) | Holy Shield (C14) | 1 |
 
-Arrows: Guardian's Favor → Righteous Defense (column 2, down). Swift Judgement → Fury's Reach (row 4, column 3 to column 4). Redoubt → Shield Specialization (column 3, down).
+Arrows: Guardian's Favor → Righteous Defense (column 2, down). Swift Judgement → Fury's Reach (row 4, column 1 to column 2). Redoubt → Shield Specialization (column 3, down).
 
 - Protection has 47 points (beta: 48).
 - Rows 1–4 have 35 points. Row 5 opens at 20 points.
@@ -276,7 +276,7 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 ### C12. Fury's Reach (new talent): a ranged pull for Protection
 
 - **Proposed text.** "Increases the range of your Judgement by 5/10 yards while Seal of Fury is active."
-- **Position.** Row 4, column 4, 2 ranks. It requires Swift Judgement (arrow from column 3 in the same row).
+- **Position.** Row 4, column 2, 2 ranks. It requires Swift Judgement (arrow from column 1 in the same row). One-Handed Weapon Specialization moves from column 2 to column 3. Its text does not change.
 - **Why.** Protection has no ranged pull and no ranged taunt. The Seal of Fury Judgement does 153–167 Holy damage and taunts for 4 sec. But its range is only 10 yards. At 2/2, the range is 20 yards: two times the base range.
 - **Model.** Vanguard (Warrior): Charge in Defensive Stance, row 4, 1 point. Feral Charge (Druid, row 3) and a ranged pull in Feral.
 - **Why 2 ranks.** Row 4 already has a 1-point talent (Swift Judgement). Thus, this talent has ranks, as the other talents in the row.
@@ -311,11 +311,12 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 - **Why.** It is one of the Paladin talents that players take least. Improved Seal of Fury leaves row 3 (C10) and makes space.
 - **PvP.** Holy or Retribution get the full −15 sec (a 45 sec Hammer of Justice) with 13 Protection points (beta: 18). Brutal Impact is in Feral row 2 (−30 sec on Bash). Thus, this stays in line with the Druid.
 
-### M5. Swift Judgement: row 4, column 1 → column 3, no requirement
+### M5. Swift Judgement: row 4, column 1, no requirement
 
 - In the beta, Swift Judgement requires Improved Seal of Fury. C10 removes Improved Seal of Fury. Thus, Swift Judgement has no requirement.
-- It stays in row 4. It is the 1-point signature talent of row 4.
-- In column 3, it is next to Fury's Reach (C12, column 4). Fury's Reach requires Swift Judgement.
+- It stays in row 4, column 1, the same position as in the beta. Only the requirement changes.
+- It is the 1-point signature talent of row 4.
+- Fury's Reach (C12) is next to it in column 2. Fury's Reach requires Swift Judgement.
 
 ## Retribution
 
