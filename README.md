@@ -15,6 +15,8 @@ It contains 17 talent proposals (15 changes and 2 new talents) for Holy, Protect
 - [Proposals (full document)](proposals.md): every change with the beta text, the proposed text, the reason, the model talent from another class, tests and numbers.
 - [Talent calculator](calculator/index.html): it opens in **Proposed** mode; use the **Beta** button to compare with the current beta trees. Build codes starting with `p` load a Proposed build, and codes without it load a Beta build. Live version: https://ralgathor.github.io/forever-paladin-feedback/calculator/
 
+Talent icons load from Wowhead's icon server (wow.zamimg.com). If they cannot load, the calculator shows drawn placeholder icons instead. No game assets are stored in this repo.
+
 ## How the proposals were made
 
 - Beta client build 1.60.1.70425. Talent text comes from [wowforevertalents.com](https://wowforevertalents.com/), tested behavior from player tests.
