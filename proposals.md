@@ -19,7 +19,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 19 chan
 | ID | Talent | Tree and row | Beta | Proposed |
 | --- | --- | --- | --- | --- |
 | C1 | Reverence | Holy, row 3 → row 2 | 10/20/30% of mana regeneration while casting | 17/33/50% |
-| C2 | Lingering Light (new) | Holy, row 5 | — | 2 ranks: a critical heal adds a heal over time of 15/30% of the heal |
+| C2 | Lingering Light (new) | Holy, row 5 | — | 2 ranks: a critical heal adds a heal over time of 10/20% of the heal |
 | C3 | Infusion of Light | Holy, row 4 → row 2 | Holy Shock and Flash of Light critical hits make the next Holy Light faster | All Holy Shock, Flash of Light and Holy Strike hits do this. No critical hit is necessary |
 | C4 | Healing Light | Holy, row 2 → row 6, column 3 | 3 ranks: 4/8/12% | 3 ranks: 10/20/30% (with C19) |
 | C5 | Improved Seals | Holy, row 2 → row 1 | 3 ranks: 5/10/15% | 5 ranks: 3/6/9/12/15% |
@@ -103,17 +103,18 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 
 ### C2. Lingering Light (new talent): row 5, column 3, 2 ranks
 
-- **Proposed text.** "Your non-periodic critical heals cause the target to be healed for an additional 15/30% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing."
+- **Proposed text.** "Your non-periodic critical heals cause the target to be healed for an additional 10/20% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing."
 - **Identity.** A heal over time after a critical heal is a Paladin idea (Sheath of Light, a later expansion). It is not the same as Divine Aegis (Priest), because Divine Aegis is a shield. It is the only Holy heal over time.
 - **Text model.** "Non-periodic critical heals" comes from Divine Aegis and Inspiration (Priest). "Refreshing this effect carries over any remaining healing" comes from Blessed Recovery (Priest). Blessed Recovery already works this way in Forever.
 - **Why critical heals.** Healing Light already gives a flat healing bonus. The Holy tree has many critical hit talents (Illumination, Divine Favor, Holy Power). This talent gives them more value.
-- **Value.** At 25% critical heal chance: 25% × 30% = about +7.5% healing. Some of it is overhealing on targets with full health.
+- **Value.** At 25% critical heal chance: 25% × 1.5 (critical heal) × 20% = about +7.5% of a normal heal. Some of it is overhealing on targets with full health.
+- **Why 10/20%.** Healing Light (C4) gives the main healing bonus. Lingering Light gives a smaller bonus, only on critical heals. At 20%, it gives about 3.3% for each point, as Spiritual Healing (Priest) does. With critical heals, the Paladin is about 5–8% above Healing Wave (Shaman) (see Analysis, Healing, part 7). At 30%, the lead was about 11%, and the overhealing risk was larger.
 
 **How the heal over time works.** It works as Ignite and Blessed Recovery do in Forever, not as Deep Wounds.
 
 |  | Ignite (Mage) | Deep Wounds (Warrior) | Lingering Light |
 | --- | --- | --- | --- |
-| Amount | 8–40% of the critical hit damage | 20–60% of average weapon damage, the same for each critical hit | 15/30% of the critical heal |
+| Amount | 8–40% of the critical hit damage | 20–60% of average weapon damage, the same for each critical hit | 10/20% of the critical heal |
 | Duration | 4 sec, one tick each 2 sec | 12 sec | 6 sec, one tick each 2 sec |
 | New critical hit while active | The remaining damage stays and the new damage is added | Only the duration starts again | The remaining healing stays. The new healing is added. The total spreads over a new 6 sec |
 | Number | One for each Mage on each target | One for each target | One for each Paladin on each target |
@@ -898,7 +899,7 @@ This section compares the big heals of the four healer classes. It also checks C
 - **With gear, Flash of Light is the most efficient heal in the game.** Each point of healing power gives about 2.5 times more healing per mana to Flash of Light than to the big heals of the other classes.
 - **Holy Light gets the smallest increase in healing per second from healing power.** The big heals of the other healers have a talent that decreases the cast time by 0.5 sec. Holy Light has none.
 - **From 300 healing power, Healing Wave (Shaman) is the best big heal.** It gives more healing per second and more healing per mana than Holy Light. Healing Way (+25%, flat in Forever), Purification (+10%) and Improved Healing Wave (−0.5 sec) all apply to it.
-- **C3 puts the Paladin at the level of Healing Wave**, not above it. With C19, the Paladin is 1–3% below Healing Wave without critical heals, and about 10% above it with critical heals (part 7).
+- **C3 puts the Paladin at the level of Healing Wave**, not above it. With C19, the Paladin is 1–3% below Healing Wave without critical heals, and about 5–8% above it with critical heals (part 7).
 - **In PvP, C3 gives Retribution and Protection one fast Holy Light each 10 sec.** The mana cost and the interrupts limit it.
 
 #### 1. Model
@@ -1021,21 +1022,21 @@ Healing per second · healing per mana. No critical heals.
 **With critical heals**
 
 - The Paladin has 25% critical heal chance: Holy Power gives +5%, and Intellect gives more critical heal chance to Paladins than to other classes. The other healers have 20%.
-- A critical heal heals ×1.5. Lingering Light (C2) at 2/2 adds 30% of the critical heal over 6 sec.
+- A critical heal heals ×1.5. Lingering Light (C2) at 2/2 adds 20% of the critical heal over 6 sec.
 
 | Healing power | Paladin: Flash of Light + Holy Light | Healing Wave (Shaman) | Greater Heal (Priest) |
 | --- | --- | --- | --- |
-| 300 | 1,197 | 1,100 | 1,031 |
-| 900 | 1,564 | 1,411 | 1,279 |
+| 300 | 1,160 | 1,100 | 1,031 |
+| 900 | 1,517 | 1,411 | 1,279 |
 
-- With critical heals, the Paladin is about 9–11% above the Shaman. Lingering Light gives the lead. Thus, C2 is necessary for the single-target goal.
-- The Lingering Light heal can overheal a tank with full health. If half of it is overhealing, the lead decreases to about +5% (W13).
+- With critical heals, the Paladin is about 5–8% above the Shaman. Lingering Light gives the lead. Thus, C2 is necessary for the single-target goal.
+- The Lingering Light heal can overheal a tank with full health. If half of it is overhealing, the lead decreases to about +4% (W13).
 
 **Burst at 900 healing power**
 
 | Healer | Burst | Healing |
 | --- | --- | --- |
-| Paladin | Holy Shock, then Holy Light with Divine Favor and the C3 trigger (1.5 sec cast): 3 sec | 918 + 4,335 = 5,253, then 1,300 from Lingering Light in 6 sec |
+| Paladin | Holy Shock, then Holy Light with Divine Favor and the C3 trigger (1.5 sec cast): 3 sec | 918 + 4,335 = 5,253, then 867 from Lingering Light in 6 sec |
 | Druid | Nature's Swiftness + Healing Touch (instant) | 3,437 |
 | Shaman | Nature's Swiftness + Healing Wave (instant), then Lesser Healing Wave (1.5 sec) | 3,207 + 1,306 = 4,514 |
 
@@ -1044,7 +1045,7 @@ Healing per second · healing per mana. No critical heals.
 **Result**
 
 - With C19, the Holy Paladin is the best single-target healer with critical heals and in emergencies. Without critical heals, it is second, after the Shaman. This agrees with the Holy tree, which uses critical heals (Illumination, Divine Favor, Holy Power, Lingering Light).
-- With Healing Light at 35%, the Paladin is first in all measures: 1,312 healing per sec and 5.63 healing per mana at 900 healing power, and about +14% above the Shaman with critical heals. The Shaman then has no single-target role. Thus, C19 uses 30%.
+- With Healing Light at 35%, the Paladin is first in all measures: 1,312 healing per sec and 5.63 healing per mana at 900 healing power, and about +12% above the Shaman with critical heals. The Shaman then has no single-target role. Thus, C19 uses 30%.
 
 ### Tree balance
 
