@@ -136,6 +136,9 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
 .ptable tr[data-key]:hover td{background:color-mix(in srgb,var(--gold-glow) 10%,transparent)}
 .ptable td.id{font-family:var(--f-mono);color:var(--gold);white-space:nowrap}
 .ptable td.today{color:var(--muted)}
+#compare .ptable table{table-layout:fixed}
+#compare .ptable th:first-child{width:19%}
+#compare .ptable th:not(:first-child){width:27%}
 .share{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--muted)}
 .share input{flex:1 1 220px;min-width:0;font-family:var(--f-mono);font-size:12px}
 .foot{font-size:12.5px;color:var(--muted);max-width:75ch;display:flex;flex-direction:column;gap:6px}
@@ -191,9 +194,55 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
   </div>
 
   <section class="props" id="props" aria-labelledby="propsTitle">
-    <h2 id="propsTitle">Proposed talent changes</h2>
-    <p>Changes we propose for the Forever Paladin trees, kept within Forever's design rules: no improved-buff talents, row 1–2 talents that tempt other specs, and a single-point capstone at 30 points. Switch to Proposed above to build with them, or select a row to jump to that talent.</p>
+    <h2 id="propsTitle">Proposed changes</h2>
+    <p>These are the changes that we propose for the Forever Paladin. They follow the design rules of Forever: no talents that improve a buff, talents in rows 1–2 that the other specs want, and a 1-point talent at 30 points. Push Proposed above to make a build with them. Select a row in a talent table to go to that talent.</p>
     <div id="propsBody"></div>
+  </section>
+
+  <section class="props" id="compare" aria-labelledby="cmpTitle">
+    <h2 id="cmpTitle">Beta and proposals compared, by role</h2>
+    <p>This is an overview. The values come from the models of the proposals document, not from combat logs. Level 60, one level 63 boss, unless the row gives a different condition. The proposals document gives the details and the limits of each value.</p>
+
+    <h3>Healer (Holy)</h3>
+    <div class="ptable"><table><thead><tr><th>Topic</th><th>Beta</th><th>Proposed</th><th>Other classes</th></tr></thead><tbody>
+    <tr><td>Mana income in long fights</td><td class="today">22.6 mana per sec. The lowest of the four healers. Illumination returns 50%</td><td>More income: Illumination returns 75% (C20), Reverence gives 50% (C1)</td><td>Priest, Druid and Shaman: 27.6–33.4 mana per sec</td></tr>
+    <tr><td>Healing in long fights</td><td class="today">First only in fights of 3–5 min</td><td>First in fights of up to 10 min (+4% to +22%). About equal in longer fights (−4% to +2%)</td><td>In the beta, the Shaman is first in fights of 10 min and more</td></tr>
+    <tr><td>Big heal</td><td class="today">No talent decreases the Holy Light cast. Infusion of Light works only after a critical heal</td><td>Flash of Light, then a 1.5 sec Holy Light (C3)</td><td>Each other healer has a talent for −0.5 sec on the big heal</td></tr>
+    <tr><td>Healing per sec, 900 healing power</td><td class="today">Holy Light only: 1,175</td><td>Flash of Light and Holy Light: 1,264–1,281</td><td>Healing Wave (Shaman): 1,283</td></tr>
+    <tr><td>Critical heal chance</td><td class="today">17%</td><td>22%: Conviction for spells (C15), 5 Retribution points (M8)</td><td>Restoration Shaman: Thundering Strikes for 5 points</td></tr>
+    <tr><td>Blessing of Light</td><td class="today">Uses a Blessing slot. The healing changes with the number of Paladins in the raid</td><td>Removed. Healing Light gives +30% (C4, C19)</td><td>—</td></tr>
+    <tr><td>Deep Holy talents</td><td class="today">Most saved builds stop at about 20 Holy points</td><td>34–35 useful Holy points. Conviction and saves with the other points</td><td>—</td></tr>
+    </tbody></table></div>
+
+    <h3>Tank (Protection)</h3>
+    <div class="ptable"><table><thead><tr><th>Topic</th><th>Beta</th><th>Proposed</th><th>Other classes</th></tr></thead><tbody>
+    <tr><td>Crushing blows (level 63 boss)</td><td class="today">Holy Shield gives +30% block. Redoubt is a 10% proc. You need about 72% avoidance from gear</td><td>Holy Shield also starts Redoubt (C6): 60% block. About 4.3% of the swings can crush (440 Defense, 100 Agility)</td><td>Warrior: about 3% (Shield Block). Druid: crushing blows always occur, with more armor and health</td></tr>
+    <tr><td>Threat, as a % of the Druid</td><td class="today">94% at fresh level 60, 70% in Naxxramas</td><td>116% at fresh level 60, 102% in Naxxramas (C14)</td><td>The Paladin stays between the Druid and the Warrior at all gear tiers</td></tr>
+    <tr><td>Mana while tanking, no Consecration</td><td class="today">+1.5 mana per sec at fresh level 60, +16.7 in Naxxramas</td><td>+3.9 and +29.8 (C13, C1)</td><td>Warrior and Druid get rage from the hits that they take</td></tr>
+    <tr><td>Damage reduction</td><td class="today">Iron Creed: about 6% (6 sec after Holy Strike), with Improved Righteous Fury</td><td>Iron Creed: 10% while Righteous Fury is active (C7, C9)</td><td>Warrior, Defensive Stance: 10%</td></tr>
+    <tr><td>Reckoning on a boss</td><td class="today">About 1 extra attack each 10 sec. The critical hit trigger does not work at 440 Defense</td><td>About 2 extra attacks each 10 sec: block, dodge and parry give charges (C11)</td><td>—</td></tr>
+    <tr><td>Pull and group tools</td><td class="today">Judgement of Fury at 10 yards</td><td>Judgement of Fury at 20 yards (C12). Shoulder the Burden (C10)</td><td>Warrior: Charge in Defensive Stance. Druid: Feral Charge</td></tr>
+    <tr><td>Dungeons</td><td class="today">—</td><td>No crushing blows below level 63. A dungeon tank uses the Anticipation and Deflection points for threat</td><td>—</td></tr>
+    </tbody></table></div>
+
+    <h3>Damage (Retribution)</h3>
+    <div class="ptable"><table><thead><tr><th>Topic</th><th>Beta</th><th>Proposed</th><th>Other classes</th></tr></thead><tbody>
+    <tr><td>DPS on one boss, fresh level 60</td><td class="today">847 (MythicSim): 95% of the pure average</td><td>About 934: 105% of the pure average, 101% of Fury (C16)</td><td>Pure average 893. Fury Warrior 929. Survival Hunter 1,088. Enhancement Shaman 741</td></tr>
+    <tr><td>DPS with better gear</td><td class="today">—</td><td>About 82% of Fury in Naxxramas (87% with flatter gear). See watch list W15</td><td>Fury and Rogue increase more with gear</td></tr>
+    <tr><td>Seal changes</td><td class="today">About 3 Seal casts each 10 sec. The global cooldown is active 79% of the time</td><td>1 Seal cast each 10 sec. 49% of the time (C17)</td><td>—</td></tr>
+    <tr><td>Mana</td><td class="today">Zero after 72 sec of Seal changes. Then Seal of Command only (−10%)</td><td>Lasts about 18 min with Blessing of Wisdom (C17, C21)</td><td>—</td></tr>
+    <tr><td>Holy Strike</td><td class="today">Does not trigger Seal of Command or Seal of Righteousness</td><td>Triggers your active Seal and the Echo (C16)</td><td>Stormstrike (Shaman) is the core attack of Enhancement</td></tr>
+    <tr><td>Two-Handed Weapon Specialization</td><td class="today">6% at 20 points</td><td>6% at 15 points (M6)</td><td>Warrior: 3%</td></tr>
+    </tbody></table></div>
+
+    <h3>PvP (all specs)</h3>
+    <div class="ptable"><table><thead><tr><th>Topic</th><th>Beta</th><th>Proposed</th><th>Other classes</th></tr></thead><tbody>
+    <tr><td>Reckoning burst in one stun (0/26/25)</td><td class="today">About 2,130. About 3,700 with 4 stored attacks</td><td>About 3,020 (C11, C16). See watch list W6</td><td>—</td></tr>
+    <tr><td>Fast heal for Retribution and Protection</td><td class="today">Infusion of Light only after a critical heal</td><td>A 1.5 sec Holy Light after each Holy Strike, with 7 Holy points (C3). See W12</td><td>—</td></tr>
+    <tr><td>Hammer of Justice each 45 sec</td><td class="today">18 Protection points</td><td>13 Protection points (M4)</td><td>Druid: Brutal Impact in Feral row 2</td></tr>
+    <tr><td>Holy healer: critical heals and Blessing of Protection each 3 min</td><td class="today">17 points: it does not fit in a Holy build</td><td>15 points: it fits (M8, C21)</td><td>—</td></tr>
+    <tr><td>Iron Creed with Righteous Fury always active</td><td class="today">About 6%</td><td>10% with 25 Protection points (C7). See W7 and W17</td><td>Iron Will (Warrior): −15% stun and fear for 5 points</td></tr>
+    </tbody></table></div>
   </section>
 
   <footer class="foot">
@@ -510,13 +559,13 @@ function esc(x){return String(x).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;","
 function renderProps(){
   const groups=[["H","Holy"],["P","Protection"],["R","Retribution"]];
   let html="";
-  groups.forEach(([p,name])=>{
-    html+=`<h3>${name}</h3><div class="ptable"><table><thead><tr><th>#</th><th>Talent</th><th>Where</th><th>Beta</th><th>Proposed</th></tr></thead><tbody>`;
-    PROPOSALS.filter(r=>r[3].startsWith(name)).forEach(r=>{html+=`<tr data-key="${r[1]}" tabindex="0"><td class="id">${r[0]}</td><td>${esc(r[2])}</td><td>${esc(r[3])}</td><td class="today">${esc(r[4])}</td><td>${esc(r[5])}</td></tr>`;});
-    html+=`</tbody></table></div>`;});
-  html+=`<h3>Spell changes (not shown in the trees)</h3><p>C16 changes Holy Strike for all specs. Since the October 15 patch, Salvation no longer takes a Blessing slot, so two Paladins cover a raid's blessings. Each Paladin still keeps only one Judgement on a target, so Crusader tends to be dropped for Light and Wisdom.</p><div class="ptable"><table><thead><tr><th>#</th><th>Change</th><th>Beta</th><th>Proposed</th></tr></thead><tbody>`;
+  html+=`<h3>Spell changes (not shown in the trees)</h3><p>C16 changes Holy Strike for all specs. Since the patch of 15 October, Salvation does not use a Blessing slot. Thus, two Paladins give all Blessings to a raid. But each Paladin keeps only one Judgement on a target. Thus, raids usually use Light and Wisdom, not Crusader.</p><div class="ptable"><table><thead><tr><th>#</th><th>Change</th><th>Beta</th><th>Proposed</th></tr></thead><tbody>`;
   BASELINE.forEach(r=>{html+=`<tr><td class="id">${r[0]}</td><td>${esc(r[1])}</td><td class="today">${esc(r[2])}</td><td>${esc(r[3])}</td></tr>`;});
   html+=`</tbody></table></div>`;
+  groups.forEach(([p,name])=>{
+    html+=`<h3>Talent changes: ${name}</h3><div class="ptable"><table><thead><tr><th>#</th><th>Talent</th><th>Where</th><th>Beta</th><th>Proposed</th></tr></thead><tbody>`;
+    PROPOSALS.filter(r=>r[3].startsWith(name)).forEach(r=>{html+=`<tr data-key="${r[1]}" tabindex="0"><td class="id">${r[0]}</td><td>${esc(r[2])}</td><td>${esc(r[3])}</td><td class="today">${esc(r[4])}</td><td>${esc(r[5])}</td></tr>`;});
+    html+=`</tbody></table></div>`;});
   const body=document.getElementById("propsBody");body.innerHTML=html;
   body.querySelectorAll("tr[data-key]").forEach(tr=>{const go=()=>{switchMode("prop");selected=tr.dataset.key;render();const el=document.getElementById("t-"+selected);if(el){el.scrollIntoView({behavior:"smooth",block:"center"});el.focus({preventScroll:true});}};
     tr.addEventListener("click",go);tr.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}});});
