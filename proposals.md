@@ -1,6 +1,6 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 20 changes and 7 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 20 changes and 8 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
 
 ## How to read this document
 
@@ -32,7 +32,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 20 chan
 | C12 | Fury's Reach (new) | Protection, row 4 | — | 2 ranks: Judgement range +5/10 yards while Seal of Fury is active |
 | C13 | Shield Specialization | Protection, row 3 | Mana return once each 3 sec | Mana return once each 2 sec |
 | C14 | Holy Shield | Protection, row 7 | 221 Holy damage for each block (rank 3) | 221 Holy damage plus 200% of your block value for each block |
-| C15 | Conviction | Retribution, row 2 | +1–5% critical hit chance with melee attacks | +1–5% critical hit chance with attacks and spells |
+| C15 | Conviction | Retribution, row 2 → row 1 (M8) | +1–5% critical hit chance with melee attacks | +1–5% critical hit chance with attacks and spells |
 | C16 | Sacred Arbiter | Retribution, row 4 → row 5 | +20% Holy Strike damage | Holy Strike always triggers your active Seal |
 | C17 | Twist of Light | Retribution, row 7 | The Echo applies to the next melee attack only | The Echo applies to all melee attacks for 10 sec |
 | C18 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
@@ -50,6 +50,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 20 chan
 | M5 | Swift Judgement | Protection | Row 4, requires Improved Seal of Fury | Row 3, no requirement |
 | M6 | Two-Handed Weapon Specialization | Retribution | Row 5 (20 points) | Row 4 (15 points) |
 | M7 | Repentance | Retribution | Row 5 (20 points) | Row 4 (15 points) |
+| M8 | Conviction and Benediction | Retribution | Benediction row 1, Conviction row 2 | Conviction row 1, Benediction row 2 |
 
 ## Design rules
 
@@ -341,8 +342,8 @@ These proposals connect the melee attacks of Retribution to its Holy spells. The
 
 | Row (points necessary) | Talents | Points in the row |
 | --- | --- | --- |
-| 1 (0) | Deflection, Benediction | 10 |
-| 2 (5) | Improved Judgement, Holy Conduit, Conviction (C15) | 9 |
+| 1 (0) | Deflection, Conviction (C15, M8) | 10 |
+| 2 (5) | Improved Judgement, Holy Conduit, Benediction (M8) | 9 |
 | 3 (10) | Vindication, Sanctified Judgement, Seal of Command, Pursuit of Justice | 9 |
 | 4 (15) | Eye for an Eye, Repentance (M7), Two-Handed Weapon Specialization (M6) | 6 |
 | 5 (20) | Vengeance, Sacred Arbiter (C16) | 4 |
@@ -356,7 +357,7 @@ Retribution has 44 points (beta: 44).
 - **Proposed text.** "Improves your chance to get a critical strike with attacks and spells by 1/2/3/4/5%."
 - **Model.** Thundering Strikes (Shaman) has the same change.
 - **Real change.** In the beta, Conviction already applies to damage Seals and Hammer of Wrath. The change adds only Holy Shock, Exorcism, Consecration and heals.
-- **Cost for healers.** A Holy Paladin needs 10 Retribution points: 5 in row 1, then 5 in Conviction.
+- **Cost for healers.** With M8, Conviction is in row 1. Thus, a Holy Paladin needs only 5 Retribution points.
 
 ### C16. Sacred Arbiter: Holy Strike always triggers your Seal, row 4 → row 5
 
@@ -393,6 +394,14 @@ Retribution has 44 points (beta: 44).
 
 - It takes the row 4 place of Sacred Arbiter (C16).
 - Holy and Protection can get it more easily in PvP (see Watch list, W9).
+
+### M8. Conviction and Benediction change rows (Conviction row 2 → row 1)
+
+- **Move.** Conviction goes to row 1, column 3. Benediction goes to row 2, column 3. The text of the two talents does not change. Conviction keeps the C15 text.
+- **Parity.** All other +5% critical hit talents are in row 1: Cruelty (Warrior), Malice (Rogue), Lethal Attacks (Hunter) and Thundering Strikes (Shaman).
+- **Holy.** A Holy Paladin gets +5% critical heal chance for 5 Retribution points, not 10. A Restoration Shaman also pays 5 points for Thundering Strikes. A Holy PvP build can then also take the Protection dip: 35/7/9 (see Analysis, Tree balance).
+- **Protection and Retribution.** Benediction stays in reach in row 2. Retribution gets critical hit earlier when it levels.
+- **Risk.** All specs get +5% critical hit for 5 points. The other classes have the same.
 
 ## Judgements and Blessings in raids
 
@@ -1035,7 +1044,7 @@ Healing per second · healing per mana. No critical heals.
 
 **With critical heals**
 
-- The Paladin has about 22% critical heal chance: 12% from the gear profile, +5% from Holy Power and +5% from Conviction (C15, 10 Retribution points). The Priest and the Shaman have about 17%: 12% from the gear and +5% from Holy Specialization or Tidal Mastery.
+- The Paladin has about 22% critical heal chance: 12% from the gear profile, +5% from Holy Power and +5% from Conviction (C15 and M8, 5 Retribution points). The Priest and the Shaman have about 17%: 12% from the gear and +5% from Holy Specialization or Tidal Mastery.
 - A critical heal heals ×1.5. Lingering Light (C2) at 2/2 adds 20% of the critical heal over 6 sec.
 
 | Healing power | Paladin: Flash of Light + Holy Light | Paladin without Conviction (17%) | Healing Wave (Shaman) | Greater Heal (Priest) |
@@ -1126,25 +1135,93 @@ This part compares the mana of the four healers. The design goal of Holy is a he
 
 ### Tree balance
 
-Two checks:
+Three rules:
 
 1. Rows 1 and 2 must give something to the other specs.
-2. Talents must be equal to the talents of other classes.
+2. Row 3 is an investment choice. Another spec puts 10 points or more in the tree for it.
+3. Talents must be in parity with the talents of other classes, not equal. A Paladin talent can be stronger when this is a strength of the class.
 
-| Tree | Talents in rows 1–2 for other specs | Specs that use them | Cost |
+The comparison uses rows 1–3 of the 24 trees of the other classes (build 70450). The sources do not give the columns of the other classes.
+
+#### How the other classes use rows 1–3
+
+| Row | Usual content | Examples |
+| --- | --- | --- |
+| 1 | A main stat, or +5% critical hit or hit, for all specs of the class | Cruelty, Malice, Lethal Attacks, Thundering Strikes (+5% critical hit). Elemental Precision, Shadow Focus, Suppression (+5% hit). Ancestral Knowledge, Heart of the Wild (+10% stat). Deflection (parry) |
+| 2 | Efficiency, utility, more stats. Sometimes the healer mana talent | Precision (Rogue), Mental Strength (Priest), Mindfulness (Shaman), Nature's Majesty (+4% critical hit), Anticipation (Warrior), Elusiveness (Rogue) |
+| 3 | A 1-point signature talent, and investment talents | Anger Management, Last Stand, Riposte, Pyroblast, Ice Lance, Inner Focus, Holy Nova, Water Shield, Feral Charge. Healer mana: Meditation, Reflection |
+
+Healer dips of other classes:
+
+- **Restoration Shaman** puts 10 points in Enhancement row 1: Ancestral Knowledge (+10% Intellect) and Thundering Strikes (+5% critical hit).
+- **Restoration Druid** puts 5 points in Feral row 1: Heart of the Wild.
+- **Holy Priest** gets Twin Disciplines (row 1), Mental Strength (row 2) and Meditation (row 3) from Discipline.
+
+#### Rule 1: rows 1 and 2 give something to the other specs
+
+This table uses the proposed trees with M8.
+
+| Tree | Rows 1–2 | Retribution gets | Protection gets | Holy gets |
+| --- | --- | --- | --- | --- |
+| Holy | Improved Seals, Divine Intellect · Infusion of Light, Reverence, Unyielding Faith | Seal damage, regeneration while casting, a fast Holy Light (7–8 points) | Seal damage, regeneration, Intellect for Shield Specialization (8 points) | — |
+| Retribution | Deflection, Conviction · Improved Judgement, Holy Conduit, Benediction | — | Parry, critical hit, Judgement −2 sec (5–12 points) | +5% critical heal chance (5 points). Instant spells cost −10%: Holy Shock, Cleanse (4–5 more points) |
+| Protection | Divine Strength, Redoubt · Precision, Guardian's Favor, Anticipation | +10% Strength, +3% hit (8 points) | — | PvP: Redoubt, then Guardian's Favor (7 points) |
+
+**Protection for Holy is a PvP dip.** Other classes also use a defensive tree for PvP: Iron Will (Warrior), Frost Warding (Mage), Deflection (Hunter). Redoubt gives Holy only a small defense. Guardian's Favor gives more saves: Blessing of Protection each 3 min, and Blessing of Freedom +6 sec.
+
+Redoubt in PvP (block value 44, from the gear profile):
+
+| Attacker | Redoubt active | More blocks | Melee damage removed |
 | --- | --- | --- | --- |
-| Holy | Improved Seals (+15% Seal damage), Divine Intellect, Infusion of Light, Reverence, Unyielding Faith | Retribution and Protection (Seal damage, mana regeneration, faster Holy Light). Casters (Intellect) | 5–8 points |
-| Retribution | Deflection, Benediction, Improved Judgement, Holy Conduit, Conviction | Protection (parry, critical hit, mana costs). Holy (Benediction, Holy Conduit) | 5–10 points |
-| Protection | Divine Strength, Precision (+3% hit), Guardian's Favor | All specs (Strength, hit). Holy (Guardian's Favor in PvP) | 5–8 points |
+| Rogue with two weapons, from the front | About 77% of the time | About 15% of the hits | About 2% |
+| Rogue from behind | — | None: you cannot block from behind | 0% |
+| Warrior with a two-handed weapon | About 34% of the time | About 7% of the hits | About 0.5% |
 
-**Parity with other classes**
+**The points must fit in a Holy build.** A Holy healer uses about 35 Holy points. Thus, 16 points are free.
 
-- Divine Intellect = Ancestral Knowledge (Shaman, +10%).
-- Deflection = Deflection (Warrior).
-- Conviction = Cruelty (Warrior, +5%).
-- Benediction = Convection (Shaman, −10%).
-- Anticipation = Anticipation (Warrior, +20 Defense).
-- Divine Strength = Heart of the Wild (Druid).
+| Build | Retribution | Protection | Result |
+| --- | --- | --- | --- |
+| Beta layout | Benediction 5 + Conviction 5 = 10 | Redoubt 5 + Guardian's Favor 2 = 7 | 17 points: does not fit |
+| With M8 | Conviction 5 + Benediction 4 = 9 | Redoubt 5 + Guardian's Favor 2 = 7 | 16 points: fits (35/7/9) |
+
+Without M8, Holy must choose between +5% critical heal chance and Guardian's Favor. Thus, M8 is necessary for rule 1.
+
+#### Rule 2: row 3 is an investment
+
+| Tree | Row 3 | Who puts 10 points or more |
+| --- | --- | --- |
+| Holy | Voice of Truth (1-point signature), Purifying Power, Consecrated Ground | Protection: Consecrated Ground (area threat). Retribution: Exorcism and Holy Wrath cooldowns. All specs in PvP: Voice of Truth |
+| Protection | Swift Judgement (1-point signature), Improved Hammer of Justice, Shield Specialization, Sacred Duty | All specs in PvP: Hammer of Justice each 45 sec, Divine Shield −60 sec. Retribution: a Judgement reset |
+| Retribution | Seal of Command (1-point signature), Vindication, Sanctified Judgement, Pursuit of Justice | Holy: Pursuit of Justice. Protection: Vindication (a debuff on the boss), Sanctified Judgement (mana) |
+
+Each row 3 has a 1-point signature talent, as in the other classes. Each also has a reason for another spec to invest. The strong PvP dips are on the watch list (W1, W2, W9).
+
+#### Rule 3: parity with other classes
+
+| Paladin talent | Comparable talents | Result |
+| --- | --- | --- |
+| Divine Intellect (+10% Intellect, row 1) | Ancestral Knowledge (row 1), Mental Strength (row 2) | Equal |
+| Divine Strength (+10% Strength, Protection row 1, C8) | Heart of the Wild (row 1) | Equal |
+| Deflection (+5% parry, row 1) | Deflection (Warrior, Hunter, row 1) | Equal |
+| Conviction (+5% critical hit, row 1 with M8) | Cruelty, Malice, Lethal Attacks, Thundering Strikes (all row 1) | Equal with M8. In the beta, it is one row deeper |
+| Benediction (instant spells −10%) | Convection (row 1) | Parity: more spells, but Paladin instant spells cost less |
+| Precision (+3% hit, row 2) | Precision (Rogue, row 2), Surefooted (row 3) | Equal |
+| Anticipation (+20 Defense, row 2) | Anticipation (Warrior, row 2) | Equal |
+| Reverence (50%, row 2, C1) | Mindfulness (row 2), Meditation and Reflection (row 3) | Equal |
+| Improved Seals (+15% Seals and Judgements, row 1) | Concussion (+5%), Improved Eviscerate (+20%) | Parity |
+| Unyielding Faith (−30% Fear and Disorient, 2 points) | Iron Will (−15% stun and fear, 5 points), Silent Resolve (−15%, 3 points) | Stronger. Resistance to fear is a Paladin strength. If PvP shows a problem: −10/20% |
+| Holy Conduit (−40% on 4 spells, 2 points) | Moonglow (−25%, 3 points), Cataclysm (−10%, 3 points) | Stronger for each point, but on few spells (W4) |
+| Improved Judgement (−2 sec, 2 points) | Improved Mind Blast (−2.5 sec, 5 points), Reverberation (−1 sec, 5 points) | Stronger for each point. It is the Classic value |
+| Guardian's Favor, Sacred Duty, Improved Hammer of Justice | Endurance, Elusiveness, Brutal Impact | Parity. The Paladin is a little stronger on saves |
+
+#### Paladin strengths
+
+These talents are stronger than, or different from, the talents of other classes. This is intentional:
+
+- A fast emergency heal for hybrids (Infusion of Light, C3).
+- More saves (Guardian's Favor, Sacred Duty).
+- Resistance to fear (Unyielding Faith).
+- Seal and Judgement damage as a dip from Holy (Improved Seals).
 
 **Points in each tree.** Beta: Holy 46, Protection 48, Retribution 44. Proposed: Holy 45, Protection 47, Retribution 44.
 
@@ -1327,6 +1404,7 @@ We examined these ideas and rejected them. They are not proposals.
 | A Holy aura that gives the Blessing of Light bonus | Aura slots have the same limit as Blessing slots. It competes with Devotion Aura and Concentration Aura |
 | A second Holy talent: +6/12/18% to Holy Light and Flash of Light | The same value as C19, but two talents for one bonus |
 | Healing Light at 35% (not 30%) | The Paladin is then first in all measures. The Shaman has no single-target role. It is the W13 action |
+| Guardian's Favor to Protection row 1 | Not necessary. With M8, a Holy PvP build has the points for Redoubt and Guardian's Favor. In row 1, all specs would take a 2-point Guardian's Favor |
 
 ## Sources
 

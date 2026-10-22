@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 20 changes (C1–C20) and 7 moves (M1–M7) for the Holy, Protection and Retribution trees. Three changes are new talents.
+- **Proposals:** 20 changes (C1–C20) and 8 moves (M1–M8) for the Holy, Protection and Retribution trees. Three changes are new talents.
 - **Talent calculator:** you can try the proposals and compare them with the beta trees.
 
 ## IDs
@@ -47,6 +47,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C17 Twist of Light:** the Echo applies to all melee attacks for 10 sec (beta: the next melee attack only).
 - **M6 Two-Handed Weapon Specialization:** row 5 → row 4 (20 → 15 points).
 - **M7 Repentance:** row 5 → row 4 (20 → 15 points).
+- **M8 Conviction and Benediction:** they change rows. Conviction goes to row 1, as all other +5% critical hit talents. A Holy Paladin gets it for 5 points.
 
 **Judgements and Blessings**
 
