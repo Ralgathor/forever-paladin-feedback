@@ -256,7 +256,7 @@ The Protection proposals give:
   - Holy: Voice of Truth and Divine Favor.
   - Retribution: Seal of Command and Sacred Arbiter.
   - Protection: Swift Judgement and Shoulder the Burden.
-- **Other specs.** Holy and Retribution can get it with 15 points. A Holy Paladin can use it to save an ally in a group.
+- **Other specs.** Holy and Retribution can get it with 15 points, but they have no use for it. The threat goes to them, not to a tank. Blessing of Protection and Hammer of Justice save an ally without this threat. Thus, only Protection takes Shoulder the Burden.
 - **No change.** Righteous Fury, Seal of Fury and its absorb shield stay baseline spells.
 
 ### C11. Reckoning: charges from block, dodge and parry, released by Holy Strike
@@ -1419,7 +1419,6 @@ This section examines the builds that are possible with the proposed trees. It g
 | Tank | Retribution with Righteous Fury and a two-handed weapon | 12/8/31 (RB2) | 75–95% of the PB3 threat. About 1.65 times the damage taken | Possible in easy dungeons. The healer must do more work |
 | Tank | Holy Shock tank | 30/21/0: p500520312013125-053201321301 | 60% of the PB3 threat (74% with Consecration). The mana lasts about 2 min (35 sec with Consecration) | For leveling and solo play |
 | PvP | Holy Shock with Iron Creed | 21/30/0: p50052030201012-05320132130145 | Righteous Fury stays active in PvP. Iron Creed then gives −10% damage taken. The build also has Templar's Bulwark, Reckoning and Holy Shock | Strong survival. See W17 |
-| Healer | Holy with Shoulder the Burden | 28/16/7: p53102132251010002-05323102-02005 | −8% healing for the full fight. No Holy Power, no Light's Vigil | Possible, but weaker |
 | Tank | Healing tank | 29/22/0: p53202132251010002-0532013113011001 | See part 6 | Not good |
 
 - **Holy Shock (rank 4).** 334–362 damage or 307–333 healing, 325 mana, 10 sec cooldown, 42.9% spell damage coefficient. On cooldown, it costs 32.5 mana per sec.
