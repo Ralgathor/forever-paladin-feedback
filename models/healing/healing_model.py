@@ -8,6 +8,8 @@
 # - Heals over time can be critical heals in Forever: each tick (HOT_CRIT). Lingering Light (C2) too, but a
 #   critical tick does not start it again (only non-periodic critical heals do).
 # - One tank: a Riptide or a Regrowth can be kept for its full duration, or recast.
+# - Review of 22 October 2026 (2): Druid instants use the 1.5 sec global cooldown. Swiftmend heals for 12 sec
+#   of Rejuvenation or 18 sec of Regrowth. Inner Focus + Prayer of Healing scales the coefficient the same way.
 import math
 from scipy.optimize import linprog
 
@@ -37,7 +39,7 @@ def cd_limit(cd, time):
     return lambda T: uses(T, cd, time)
 
 # ---------------------------------------------------------------- Lingering Light (C2) pool
-def ll_ticks(events, rng_crit=None):
+def ll_ticks(events):
     """Lingering Light on one target, as its text says. events: (time, amount added) for each non-periodic
     critical heal. The new amount and the healing that remains are added together and spread over a new
     6 sec: one tick each 2 sec. Returns the list of (tick time, tick amount)."""
@@ -64,6 +66,7 @@ def ll_end_pool(heal, c, ling, samples=4000, seed=1):
     return tot / samples
 
 # ---------------------------------------------------------------- Paladin
+# tank: not used (the Paladin has the same spells for raid and one tank)
 def paladin(hp=HPG, tank=False, rev=0.30, illum=0.50, light=1.12, bol=True, ling=0.0, conv=0.0,
             bened=0.10, inf_all=False, hs_heal_mult=1.0, hs_cost_mult=1.0,
             lv=True, lv_cost_mult=1.0, lv_heal_mult=1.0, lv_coef=0.15, lv_per_crit=False):
@@ -90,7 +93,7 @@ def paladin(hp=HPG, tank=False, rev=0.30, illum=0.50, light=1.12, bol=True, ling
     df_r = hl*1.5 + ling*hl*1.5*kt
     sp.append(Spell("Divine Favor + Holy Light", df_r, hl*1.5*0.8 + ling*hl*1.5*kt*0.5,
                     660 - illum*660 + 0.04*1512, t_df, maxn=cd_limit(120, t_df)))
-    sp.append(Spell("Holy Shock", hs_r, hs_e, hs_cost, 1.5, maxn=cd_limit(10, 1.5), groups=(("hs", 1),)))
+    sp.append(Spell("Holy Shock", hs_r, hs_e, hs_cost, 1.5, maxn=cd_limit(10, 1.5)))
     if lv:
         # Light's Vigil rank 3: 1,340 mana, 1.5 sec cast, 6 sec cooldown. The next Holy Shock on the
         # target has no cooldown and heals the party (5) for 684-724 each. Coefficient assumed 15%.
@@ -116,7 +119,7 @@ def paladin(hp=HPG, tank=False, rev=0.30, illum=0.50, light=1.12, bol=True, ling
 def priest(hp_gear=HPG, tank=False):
     hp = hp_gear + 84          # Spiritual Guidance 5/5: 25% of 336 Spirit
     d = hp - 799
-    c = 0.1903; k = 1 + 0.5*c
+    c = 0.1903; k = 1 + 0.5*c; k_if = 1 + 0.5*(c + 0.25)
     def S(name, J, I, crit, cost, time, oh, **kw):
         raw = (J + I*d) * (k if crit else 1.0)
         return Spell(name, raw, raw*(1-oh), cost, time, **kw)
@@ -126,7 +129,8 @@ def priest(hp_gear=HPG, tank=False):
       S("Penance", 1887.3, 0.623, True, 289, 2.0, 0.25, maxn=cd_limit(12, 2.0)),
       # Binding Heal: half heals the Priest. The DoubleZug sheet casts it 2 times each min.
       S("Binding Heal", 2544.9, 0.934, True, 342, 1.5, 0.25, maxn=lambda T: round(2*T/60), tank=0.5),
-      S("Inner Focus + Prayer of Healing", 5416.5, 5*0.315*1.1, False, 0, 3.0, 0.35, maxn=cd_limit(180, 3.0), tank=0.2),
+      # Inner Focus: no cost, +25% critical chance. Both the base heal and the coefficient use this multiplier.
+      S("Inner Focus + Prayer of Healing", 5*886.9*k_if/k, 5*0.315*k_if/k, True, 0, 3.0, 0.35, maxn=cd_limit(180, 3.0), tank=0.2),
       S("Greater Heal", 2688.8, 0.934, True, 491, 2.5, 0.25),
       S("Flash Heal", 1272.4, 0.467, True, 342, 1.5, 0.25),
     ]
@@ -150,17 +154,18 @@ def druid(hp=HPG, tank=False, ooc_wg=0, sm_consumes=False):
     rg_dir = (1021 + 0.3*hp)*1.114; rg_hot0 = (994 + 0.621*hp)*1.114; rg_hot = rg_hot0*kh
     rg_dir_c = rg_dir*(1 + 0.5*(c + 0.5))
     rg = rg_dir_c + rg_hot
-    # Swiftmend: a direct heal for the full value of the heal over time it uses. It can be a critical heal.
-    sm = (rej0 + rg_hot0)/2*k
-    if sm_consumes: sm -= 0.5*(rej + rg_hot)/2  # if it removes the heal over time (half of it is left)
+    # Swiftmend: a direct heal (can be critical) for 12 sec of Rejuvenation or 18 sec of Regrowth.
+    # One tank: a Rejuvenation is always on the tank. Raid: the plan casts Regrowth, so Swiftmend uses it.
+    sm = rej0*k if tank else rg_hot0*18/21*k
+    if sm_consumes: sm -= 0.5*(rej if tank else rg_hot)  # if it removes the heal over time (half of it is left)
     sp = [
       Spell("Tranquility", (9115.6 + 1.8*(hp-715))*kh, (9115.6 + 1.8*(hp-715))*kh*0.6, 833, 10.0, maxn=cd_limit(120, 10.0), tank=0.2),
-      Spell("Swiftmend", sm, sm*0.8, 249, 1.0, maxn=cd_limit(15, 1.0)),
+      Spell("Swiftmend", sm, sm*0.8, 249, 1.5, maxn=cd_limit(15, 1.5)),
       Spell("Healing Touch", (2934.8 + 1.1*(hp-715))*k, (2934.8 + 1.1*(hp-715))*k*0.8, 680, 3.0),
     ]
     wg = (4854.4 + 1.305*(hp-715))*kh           # heal over time: critical ticks in Forever
     if tank:
-        sp.append(Spell("Rejuvenation (one at a time)", rej, rej*0.75, 360, 1.0, maxn=lambda T: math.floor(T/12)))
+        sp.append(Spell("Rejuvenation (one at a time)", rej, rej*0.75, 360, 1.5, maxn=lambda T: math.floor(T/12)))
         # Regrowth kept for 21 sec, or recast: the new one replaces the heal over time after 2 sec
         sp.append(Spell("Regrowth (kept 21 sec)", rg, rg*0.75, 525, 2.0, groups=(("rg_slot", 21),)))
         rr = rg_dir_c + rg_hot*2/21
@@ -168,11 +173,11 @@ def druid(hp=HPG, tank=False, ooc_wg=0, sm_consumes=False):
         groups = {"rg_slot": lambda T: T}
     else:
         sp += [Spell("Regrowth", rg, rg*0.75, 525, 2.0),
-               Spell("Rejuvenation", rej, rej*0.75, 360, 1.0),
-               Spell("Wild Growth", wg, wg*0.5, 1050, 1.0, maxn=cd_limit(6, 1.0), tank=0.2)]
+               Spell("Rejuvenation", rej, rej*0.75, 360, 1.5),
+               Spell("Wild Growth", wg, wg*0.5, 1050, 1.5, maxn=cd_limit(6, 1.5), tank=0.2)]
         groups = {}
     if ooc_wg:
-        sp.append(Spell("Wild Growth (free, Omen of Clarity)", wg, wg*0.5, 0, 1.0,
+        sp.append(Spell("Wild Growth (free, Omen of Clarity)", wg, wg*0.5, 0, 1.5,
                         maxn=lambda T: round(ooc_wg*T/60), tank=0.2))
     regen = regen_full("dru", 386)
     innerv = lambda T: uses(T, 360, 20) * 20 * (5*regen - 0.5*regen)   # Innervate on itself

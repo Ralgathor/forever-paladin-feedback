@@ -173,15 +173,15 @@ The mana values use a fresh level 60 Holy profile with no raid buffs and no cons
 
 **Why 50%**
 
-At 900 healing power, Flash of Light and Holy Light give 5.42 healing for each mana point (C19). Thus, 4,000 healing costs about 738 mana. If the drain is less than 738 mana, Lay on Hands is more efficient than the usual heals.
+At 900 healing power, Flash of Light and Holy Light give 5.75 healing for each mana point (C19, 19% critical heals). Thus, 4,000 healing costs about 695 mana. If the drain is less than 695 mana, Lay on Hands is more efficient than the usual heals.
 
 | Drain (% of the remaining mana) | Drain at full mana (Holy) | More efficient than the usual heals below | Mana that stays after a cast at 30% mana |
 | --- | --- | --- | --- |
-| 25% | 1,104 | 67% mana | 994 |
-| 40% | 1,766 | 42% mana | 795 |
-| 50% (C22, rank 2) | 2,208 | 33% mana | 662 |
-| 75% (C22, rank 1) | 3,312 | 22% mana | 331 |
-| 100% (beta) | 4,416 | 17% mana | 0 |
+| 25% | 1,104 | 63% mana | 994 |
+| 40% | 1,766 | 39% mana | 795 |
+| 50% (C22, rank 2) | 2,208 | 31% mana | 662 |
+| 75% (C22, rank 1) | 3,312 | 21% mana | 331 |
+| 100% (beta) | 4,416 | 16% mana | 0 |
 
 - Below 50%, a healer can use Lay on Hands for mana at half mana. Then it is not an emergency heal.
 - Above 60%, the drain is almost the same as the beta.

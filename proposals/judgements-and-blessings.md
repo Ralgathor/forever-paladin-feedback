@@ -40,7 +40,7 @@
 | 2 | Kings + Might | Kings + Wisdom | Kings + Might, or Kings + Light |
 | 3 or more | Kings + Might + Light | Kings + Wisdom + Light | Kings + Might + Light |
 
-- **Effect on Holy.** In raids with 1 or 2 Paladins, most targets do not receive Blessing of Light. At 900 healing power, Flash of Light + Holy Light (C3) then gives 1,089 healing per sec and 4.67 healing per mana. With Blessing of Light, it gives 1,281 and 5.49.
+- **Effect on Holy.** In raids with 1 or 2 Paladins, most targets do not receive Blessing of Light. At 900 healing power, Flash of Light + Holy Light (C3) then gives 1,194 healing per sec and 4.96 healing per mana (19% critical heals). With Blessing of Light, it gives 1,405 and 5.83.
 - **The same problem as C18.** The healing of the class changes with the number of Paladins in the raid.
 
 ## C19. Blessing of Light: removed, Healing Light gives 10/20/30% (recommended)
@@ -54,7 +54,7 @@
 - **Holy Shock** also gets +30% (beta: +12%). It heals about 920 at 900 healing power. It stays an emergency heal.
 - **Leveling.** Healing Light 3/3 comes at level 37. Blessing of Light rank 1 came at level 40.
 
-Flash of Light + Holy Light (C3), healing per sec:
+Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 
 | Healing power | Beta, Light on the target | Beta, no Light (1 or 2 Paladins) | C19 |
 | --- | --- | --- | --- |
@@ -78,7 +78,7 @@ Flash of Light + Holy Light (C3), healing per sec:
 
 |  | Beta | C19 | C19a | C19b |
 | --- | --- | --- | --- | --- |
-| Raid with 1 or 2 Paladins, 900 healing power | 1,089 | 1,264 | 1,281 | 1,281 |
+| Raid with 1 or 2 Paladins, 900 healing power, no critical heals | 1,089 | 1,264 | 1,281 | 1,281 |
 | Increases with gear | No | Yes | No | No |
 | Blessing to cast | Yes | No | Yes | No |
 | Hybrid burst heal in PvP (3 sec) | 2,231 | 2,231 | 2,746 | 2,746 |
