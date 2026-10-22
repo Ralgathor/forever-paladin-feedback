@@ -2,6 +2,9 @@
 Healing that lands on the tank in the first 3 and 6 sec after the hit. The healer starts to cast at 0.
 No overhealing (the tank has a large health deficit). Heals over time count only the ticks inside the window.
 Two cases: all cooldowns ready, and only short cooldowns (less than 1 min) ready.
+The healer heals the tank before the hit: the Paladin has cast Flash of Light (Infusion of Light can be
+active), and the Druid has a Rejuvenation on the tank (Swiftmend is ready). Heals from casts before the
+hit do not count.
 Run: python3 recovery.py"""
 import itertools
 from healing_model import HPG, CRIT_BASE
@@ -12,9 +15,12 @@ class B:
     def __init__(s, name, t, direct, hot=0.0, dur=1.0, cd=None, tags=()):
         s.name, s.t, s.direct, s.hot, s.dur, s.cd, s.tags = name, t, direct, hot, dur, cd, set(tags)
 
+START = "start"   # marker for the state at the hit
+
 def landed(seq, W, infusion_cut):
-    """Healing that lands in W sec for a cast sequence. infusion_cut(prev, spell) gives the cast time cut."""
-    t = 0.0; total = 0.0; prev = None
+    """Healing that lands in W sec for a cast sequence. infusion_cut(prev, spell) gives the cast time cut.
+    prev is START for the first cast: the state from the casts before the hit."""
+    t = 0.0; total = 0.0; prev = START
     for s in seq:
         cut = infusion_cut(prev, s)
         ct = max(1.5, s.t - cut) if cut > 0 else s.t     # s.t is the cast time, or the global cooldown
@@ -39,7 +45,7 @@ def best(spells, W, long_cd=True, infusion_cut=lambda p, s: 0.0, needs=None):
     return best_v, best_seq
 
 # ---------------------------------------------------------------- classes (715 healing power)
-def paladin_burst(hp=HPG, light=1.12, bol=True, ling=0.0, conv=0.0, inf_all=False):
+def paladin_burst(hp=HPG, light=1.12, bol=True, ling=0.0, conv=0.0, inf_all=False, before=10):
     c = CRIT_BASE + 0.05 + conv; c_hs = CRIT_BASE + 0.15 + conv
     fol = (308 + (115 if bol else 0) + 1.5/3.5*hp) * light
     hl = (1580 + (400 if bol else 0) + 2.5/3.5*hp) * light
@@ -51,8 +57,13 @@ def paladin_burst(hp=HPG, light=1.12, bol=True, ling=0.0, conv=0.0, inf_all=Fals
           B("Divine Favor + Holy Light", 2.5, hl*1.5, ling*hl*1.5, 6, cd="long", tags=("infusable",))]
     # Infusion of Light: the Holy Light after a Flash of Light or Holy Shock is 1 sec faster.
     # Beta: only after a critical heal (chance c or c_hs). C3: after each hit.
+    # Before the hit, the Paladin casts Flash of Light on the tank: "before" casts in the last 15 sec.
+    # Infusion of Light is then active at the hit: always with C3, else if one of them was a critical heal.
+    p_start = 1.0 if inf_all else 1 - (1 - c)**before
     def cut(prev, s):
-        if prev is None or "trigger" not in prev.tags or "infusable" not in s.tags: return 0.0
+        if "infusable" not in s.tags: return 0.0
+        if prev is START: return 1.0 * p_start
+        if prev is None or "trigger" not in prev.tags: return 0.0
         if inf_all: return 1.0
         return 1.0 * (c_hs if "hs" in prev.tags else c)
     return sp, cut
@@ -76,12 +87,9 @@ def druid_burst(hp=HPG):
           B("Rejuvenation", 1.0, 0, rej, 12, tags=("fast_gcd", "hot")),
           B("Swiftmend", 1.0, rej, cd="short", tags=("fast_gcd", "sm")),   # uses the Rejuvenation on the tank
           B("Nature's Swiftness + Healing Touch", 1.5, ht, cd="long")]
-    def needs(seq):   # Swiftmend needs a Rejuvenation on the tank, cast before it in the window
-        if sum(1 for x in seq if x.name in ("Regrowth", "Rejuvenation")) > 2: return False
+    def needs(seq):   # a Rejuvenation is already on the tank at the hit: Swiftmend is ready
         if [x.name for x in seq].count("Regrowth") > 1: return False      # a new Regrowth replaces the old one
         if [x.name for x in seq].count("Rejuvenation") > 1: return False
-        for i, s in enumerate(seq):
-            if "sm" in s.tags and not any("hot" in x.tags for x in seq[:i]): return False
         return True
     return sp, (lambda p, s: 0.0), needs
 
