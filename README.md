@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 22 changes (C1–C22) and 6 moves (M1, M2, M4–M6 and M8; M3 and M7 are withdrawn) for the Holy, Protection and Retribution trees. Three changes are new talents.
+- **Proposals:** 21 changes (C1–C22; C20 is withdrawn) and 6 moves (M1, M2, M4–M6 and M8; M3 and M7 are withdrawn) for the Holy, Protection and Retribution trees. Three changes are new talents.
 - **Talent calculator:** you can try the proposals and compare them with the beta trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
 - **Builds:** the best builds for each spec and role (raid, dungeon, PvP), with calculator codes. Also the builds that use a different tree for a role.
@@ -23,7 +23,6 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C3 Infusion of Light:** all Holy Shock, Flash of Light and Holy Strike hits make the next Holy Light faster (beta: critical hits only). It moves from row 4 to row 2.
 - **C4 Healing Light:** 3 ranks, 10/20/30% (beta: 4/8/12%), with C19. It moves from row 2 to row 6, column 3. Holy Power moves to column 1.
 - **C5 Improved Seals:** 5 ranks, 3/6/9/12/15% (beta: 3 ranks). It moves from row 2 to row 1 and replaces Divine Strength.
-- **C20 Illumination:** critical heals return 75% of the base cost (beta: 50%, Classic: 100%). It adds 7–11% in raids and 5–8% on one tank. The raid healing is already about equal to the Shaman without it (see Analysis, Healing, part 6).
 - **M1 Consecrated Ground:** row 5 → row 3.
 - **M2 Spiritual Focus:** row 2, column 2 → column 3 (Reverence takes column 2). It stays in row 2, so a Holy healer needs less filler. Unyielding Faith stays in its beta place (row 2, column 4).
 

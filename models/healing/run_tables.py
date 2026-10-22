@@ -3,7 +3,7 @@ Healing per sec after overhealing (raid and one tank) for fights of 3, 5 and 10 
 import healing_model as H
 from healing_model import paladin, priest, druid, shaman, solve, budget, max_hps
 
-PROP = dict(rev=0.5, illum=0.75, light=1.30, bol=False, ling=0.2, conv=0.05, bened=0.09, inf_all=True)
+PROP = dict(rev=0.5, light=1.30, bol=False, ling=0.2, conv=0.05, bened=0.09, inf_all=True)
 TS = (180, 300, 600)
 OTHERS = (("Priest", priest), ("Druid", druid), ("Shaman", shaman))
 
