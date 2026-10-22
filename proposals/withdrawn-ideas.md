@@ -16,7 +16,7 @@ We examined these ideas and rejected them. They are not proposals.
 | Toughness that also gives Stamina | Divine Strength from Holy (C8) replaces it |
 | Hallowed Ground or Shield Specialization in Protection row 1 | Talents only for tanks. Holy and Retribution then lose 5 points before Precision |
 | A mana talent in each tree (Iron Creed, Righteous Fury, Seal of Fury) | Reverence in row 2 does the same with one talent. Holy can then use the Righteous Fury and Seal of Fury versions |
-| Survive crushing blows with more armor, health and a stronger Seal of Fury absorb | Healers still get the damage spikes. C6 removes the crushing blows |
+| Survive crushing blows with more armor, health and a stronger Seal of Fury absorb | Healers still receive the damage spikes. C6 removes the crushing blows |
 | Holy Shield or Seal of Fury changes crushing blows into normal hits | It goes around the attack table |
 | Redoubt charges that each add a % of block | Block buffs with charges give one fixed bonus |
 | Redoubt on each hit with a 6 sec cooldown | The Holy Shield trigger gives the same uptime with no new rule |

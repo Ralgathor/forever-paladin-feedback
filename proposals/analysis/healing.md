@@ -10,7 +10,7 @@ This section compares the Holy Paladin with the three other healers of Forever: 
 - **The Druid talents make the Druid strong.** Nature's Splendor makes Rejuvenation and Regrowth last longer. Swiftmend heals for the full heal over time and does not remove it (player test). Gift of the Earthmother gives a global cooldown of 1 sec.
 - **With the proposals, the Paladin is about equal to the Shaman in raids** (−4% to +2%). It is 14–24% below the Druid and 29–34% below the Priest. C1 gives the mana. C2, C19 and Conviction give larger heals (part 4).
 - **On one tank, the proposed Paladin is about equal to the Druid** (−3% to +5%), and 11–27% above the Shaman and the Priest. Thus, the proposals do not make the Paladin the best single-target healer. In the beta, the Paladin is 9–17% below the Druid (part 5).
-- **After a large hit on one tank, the Druid is first.** The proposed Paladin is 16–19% below it after 3 sec, and 5% below after 6 sec. It is 8% or more above the Shaman and the Priest. In the beta, the Paladin is 20–23% below the Druid (part 5).
+- **After a large hit on one tank, the Druid is first.** The proposed Paladin is 16–18% below it after 3 sec, and 5% below after 6 sec. It is 8% or more above the Shaman and the Priest. In the beta, the Paladin is 20–22% below the Druid (part 5).
 - **Heals over time can be critical heals in Forever.** This helps the Priest, the Druid and the Shaman. The Paladin has almost no heals over time. With the Classic rule, the proposed Paladin was 1–4% higher against each healer (part 8).
 - **We withdrew C20.** With C20, the Paladin is first on one tank by 4–10%, and 5–10% above the Shaman in raids. Healing Light at 35% gives +1% to +9% on one tank (part 6, W14).
 - **A stronger Holy Shock or Light's Vigil is not necessary in raids.** The raid healing is already at the level of the Shaman (part 6).
@@ -121,13 +121,13 @@ Healing per sec after overhealing, on one tank. "Maximum" is the raw healing per
 | Paladin, beta | 4,977 | 8,039 | 3,851 | 6,913 | Holy Light (Infusion of Light), Holy Shock, Holy Light, Flash of Light |
 | Paladin, proposed | 5,154 | 9,602 | 4,133 | 8,275 | Holy Light (1.5 sec), Flash of Light, Holy Light (1.5 sec), Holy Shock |
 
-- The heals over time on the tank at the hit give the other healers 300–680 in the first 3 sec: Druid 684, Priest 383, Shaman 301. The Lingering Light pool of the Paladin gives 153.
-- The Druid is first in all cases: its heals over time are on the tank, and Swiftmend heals for a full Rejuvenation with a global cooldown of 1 sec. The proposed Paladin is 16–19% below the Druid after 3 sec, and 5% below after 6 sec.
+- The heals over time on the tank at the hit give the other healers 300–690 in the first 3 sec: Druid 684, Priest 383, Shaman 301. The Lingering Light pool of the Paladin gives 153.
+- The Druid is first in all cases: its heals over time are on the tank, and Swiftmend heals for a full Rejuvenation with a global cooldown of 1 sec. The proposed Paladin is 16–18% below the Druid after 3 sec, and 5% below after 6 sec.
 - The proposed Paladin is 8% or more above the Shaman and the Priest in all cases.
-- In the beta, the Paladin is 20–23% below the Druid.
+- In the beta, the Paladin is 20–22% below the Druid.
 - C3 makes each Holy Light after a Flash of Light or Holy Shock a 1.5 sec cast. Without C3, the proposed Paladin heals 1–2% less after 3 sec, and 7–9% less after 6 sec. The beta often has Infusion of Light active at the hit. Thus, C3 adds little in the first 3 sec.
 - Lingering Light ticks each 2 sec. Thus, a critical heal after the hit gives its first tick 2 sec later. In the first 3 sec, Lingering Light adds little.
-- If only the heals cast after the hit count, the proposed Paladin is 6–12% below the Druid after 3 sec, and 5–7% above it after 6 sec.
+- If only the heals cast after the hit count, the proposed Paladin is 6–11% below the Druid after 3 sec, and 5–7% above it after 6 sec.
 - At 900 healing power, the result is almost the same.
 - Power Word: Shield is not in the table. It absorbs about 1,100 damage and uses one global cooldown.
 
@@ -194,7 +194,7 @@ Assumptions:
 - **With C3, the Paladin heals about 2,230 in 3 sec** (Holy Light after Holy Strike, then Flash of Light). Two Lesser Healing Waves heal about 1,860. The Paladin cannot do this again before the next Holy Strike.
 - **Mana is the main limit.** A Retribution Paladin with about 4,000 mana can cast 5–6 Holy Light. Then it has no mana for Seals and Judgement. A 7-point dip with Infusion of Light has no points for Reverence.
 - **Players can stop it.** Kick, Pummel and Earth Shock interrupt the cast. Mortal Strike and Wound Poison decrease the heal by 50%. Spiritual Focus is in row 2. Concentration Aura gives only 35% pushback resistance.
-- **It costs damage.** Each heal uses a global cooldown in which the Paladin does not attack.
+- **It costs damage.** Each heal uses a global cooldown. During it, the Paladin does not attack.
 - **Combinations.** Hammer of Justice or Repentance, then Holy Strike, then a 1.5 sec Holy Light gives a free heal of about 1,800. The beta already lets the Paladin cast Holy Light during Divine Shield.
 
 ## 8. Limits
