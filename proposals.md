@@ -21,7 +21,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 19 chan
 | C1 | Reverence | Holy, row 3 → row 2 | 10/20/30% of mana regeneration while casting | 17/33/50% |
 | C2 | Lingering Light (new) | Holy, row 5 | — | 2 ranks: a critical heal adds a heal over time of 15/30% of the heal |
 | C3 | Infusion of Light | Holy, row 4 → row 2 | Holy Shock and Flash of Light critical hits make the next Holy Light faster | All Holy Shock, Flash of Light and Holy Strike hits do this. No critical hit is necessary |
-| C4 | Healing Light | Holy, row 2 → row 6 | 3 ranks: 4/8/12% | 3 ranks: 10/20/30% (with C19) |
+| C4 | Healing Light | Holy, row 2 → row 6, column 3 | 3 ranks: 4/8/12% | 3 ranks: 10/20/30% (with C19) |
 | C5 | Improved Seals | Holy, row 2 → row 1 | 3 ranks: 5/10/15% | 5 ranks: 3/6/9/12/15% |
 | C6 | Redoubt | Protection, row 1 | 10% chance when you are hit: +4–20% block | The same. Each Holy Shield cast also starts it |
 | C7 | Iron Creed | Protection, row 6 | −2–10% damage taken for 6 sec after Holy Strike | −2–10% damage taken while Righteous Fury is active |
@@ -85,7 +85,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 | 3 (10) | Voice of Truth, Purifying Power, Consecrated Ground (M1) | 5 |
 | 4 (15) | Spiritual Focus (M2), Illumination, Divine Favor | 8 |
 | 5 (20) | Divine Precision, Holy Shock, Lingering Light (C2) | 6 |
-| 6 (25) | Healing Light (C4), Holy Power | 8 |
+| 6 (25) | Holy Power, Healing Light (C4) | 8 |
 | 7 (30) | Light's Vigil | 1 |
 
 - Holy has 45 points (beta: 46).
@@ -139,6 +139,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Proposed text.** "Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 10/20/30%."
 - **Change.** 3 ranks: 10/20/30% (beta: 4/8/12%). The maximum increases from 12% to 30%, because C19 removes Blessing of Light. The 18% difference replaces the Blessing of Light bonus (see C19).
 - **Why row 6.** The healing bonus is now at 25 points, as Spiritual Healing (Priest) and Purification (Shaman) are. A Holy Paladin with 28 points in Retribution has only 23 points for Holy. This Paladin cannot get Healing Light.
+- **Column.** Healing Light goes to column 3. Holy Power moves from column 3 to column 1 in the same row. Its text does not change.
 - **Deep Holy** keeps Healing Light, Holy Power, Lingering Light and Light's Vigil. Thus, a deep Holy build stays clearly better for healing.
 - **Cost.** A Holy Paladin who levels gets the full bonus at level 37, not at level 17. Blessing of Light rank 1 came at level 40.
 
