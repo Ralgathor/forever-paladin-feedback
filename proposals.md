@@ -1,20 +1,20 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 20 changes and 7 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 21 changes and 7 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
 
 **Contents**
 
 - [How to read this document](#mzhg23y101g.322363) · [Summary](#mzhg23y101g.323287) · [Design rules](#mzhg23y101g.326276)
 - **Holy:** [C1 Reverence](#mzhg23y101g.328844) · [C2 Lingering Light](#mzhg23y101g.329447) · [C3 Infusion of Light](#mzhg23y101g.331643) · [C4 Healing Light](#mzhg23y101g.332649) · [C5 Improved Seals](#mzhg23y101g.333321) · [M1 Consecrated Ground](#mzhg23y101g.333804) · [M2 Spiritual Focus](#mzhg23y101g.333983) · [M3 Unyielding Faith](#mzhg23y101g.334094) · [C20 Illumination](#mzhg23y101g.437451)
 - **Protection:** [C6 Redoubt](#mzhg23y101g.335168) · [C7 Iron Creed](#mzhg23y101g.336049) · [C8 Divine Strength](#mzhg23y101g.337064) · [C9 Improved Righteous Fury](#mzhg23y101g.337936) · [C10 Shoulder the Burden](#mzhg23y101g.407137) · [C11 Reckoning](#mzhg23y101g.339091) · [C12 Fury's Reach](#mzhg23y101g.342190) · [C13 Shield Specialization](#mzhg23y101g.343369) · [C14 Holy Shield](#mzhg23y101g.344682) · [M4 Improved Hammer of Justice](#mzhg23y101g.407467) · [M5 Swift Judgement](#mzhg23y101g.409860)
-- **Retribution:** [C15 Conviction](#mzhg23y101g.347909) · [C16 Holy Strike](#mzhg23y101g.348361) · [C17 Twist of Light](#mzhg23y101g.349382) · [M6 Two-Handed Weapon Specialization](#mzhg23y101g.350635) · [M8 Conviction and Benediction](#mzhg23y101g.451134)
+- **Retribution:** [C15 Conviction](#mzhg23y101g.347909) · [C16 Holy Strike](#mzhg23y101g.348361) · [C17 Twist of Light](#mzhg23y101g.349382) · [M6 Two-Handed Weapon Specialization](#mzhg23y101g.350635) · [M8 Conviction and Benediction](#mzhg23y101g.451134) · [C21 Benediction](#mzhg23y101g.479364)
 - **Judgements and Blessings:** [The problem](#mzhg23y101g.351019) · [C18 Judgement of the Crusader](#mzhg23y101g.351763) · [Alternatives](#mzhg23y101g.352438) · [Blessings](#mzhg23y101g.427469) · [C19 Blessing of Light](#mzhg23y101g.428675) · [Alternatives to C19](#mzhg23y101g.430584)
 - **Analysis:** [Crushing blows](#mzhg23y101g.353472) · [Threat](#mzhg23y101g.357087) · [PvP burst check](#mzhg23y101g.368176) · [Mana](#mzhg23y101g.370341) · [Healing](#mzhg23y101g.419556) · [Damage](#mzhg23y101g.452318) · [Tree balance](#mzhg23y101g.374454)
 - [Beta test results](#mzhg23y101g.375616) · [Problems to report to Blizzard](#mzhg23y101g.381821) · [Watch list](#mzhg23y101g.382305) · [Open questions](#mzhg23y101g.384242) · [Withdrawn ideas](#mzhg23y101g.385874) · [Sources](#mzhg23y101g.391119)
 
 ## How to read this document
 
-- **C (change).** C1 to C20 change what a talent does, add a talent or remove a talent. C16, C18 and C19 change baseline spells. A change can also move the talent. The text then gives the new row.
+- **C (change).** C1 to C21 change what a talent does, add a talent or remove a talent. C16, C18 and C19 change baseline spells. A change can also move the talent. The text then gives the new row.
 - **M (move).** M1 to M8 move a talent (M7 is withdrawn) to a different row or column. The talent text does not change.
 - **C18a and C18b** are the two alternatives to C18.
 - **Withdrawn ideas** have no ID. They are in the Withdrawn ideas section only.
@@ -48,6 +48,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 20 chan
 | C18 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
 | C19 | Blessing of Light | Baseline spell, and Healing Light (C4) | +400 Holy Light, +115 Flash of Light. Uses a Blessing slot | Removed. Healing Light gives 10/20/30% |
 | C20 | Illumination | Holy, row 4 | Critical heals return 50% of the base cost (Classic: 100%) | Critical heals return 75% of the base cost |
+| C21 | Benediction | Retribution, row 2 (M8) | 5 ranks: 2/4/6/8/10% on instant spells and abilities | 3 ranks: 3/6/9% |
 
 **Moves**
 
@@ -352,14 +353,14 @@ These proposals connect the melee attacks of Retribution to its Holy spells. The
 | Row (points necessary) | Talents | Points in the row |
 | --- | --- | --- |
 | 1 (0) | Deflection, Conviction (C15, M8) | 10 |
-| 2 (5) | Improved Judgement, Holy Conduit, Benediction (M8) | 9 |
+| 2 (5) | Improved Judgement, Holy Conduit, Benediction (M8, C21) | 7 |
 | 3 (10) | Vindication, Sanctified Judgement, Seal of Command, Pursuit of Justice | 9 |
 | 4 (15) | Eye for an Eye, Sacred Arbiter, Two-Handed Weapon Specialization (M6) | 6 |
 | 5 (20) | Vengeance, Repentance | 4 |
 | 6 (25) | Champion of the Light, Instrument of Law | 5 |
 | 7 (30) | Twist of Light (C17) | 1 |
 
-Retribution has 44 points (beta: 44).
+Retribution has 42 points (beta: 44).
 
 ### C15. Conviction: attacks and spells
 
@@ -406,9 +407,25 @@ Retribution has 44 points (beta: 44).
 
 - **Move.** Conviction goes to row 1, column 3. Benediction goes to row 2, column 3. The text of the two talents does not change. Conviction keeps the C15 text.
 - **Parity.** All other +5% critical hit talents are in row 1: Cruelty (Warrior), Malice (Rogue), Lethal Attacks (Hunter) and Thundering Strikes (Shaman).
-- **Holy.** A Holy Paladin gets +5% critical heal chance for 5 Retribution points, not 10. A Restoration Shaman also pays 5 points for Thundering Strikes. A Holy PvP build can then also take the Protection dip: 35/7/9 (see Analysis, Tree balance).
+- **Holy.** A Holy Paladin gets +5% critical heal chance for 5 Retribution points, not 10. A Restoration Shaman also pays 5 points for Thundering Strikes. A Holy PvP build can then also take the Protection dip: 35/7/9, or 36/7/8 with C21 (see Analysis, Tree balance).
 - **Protection and Retribution.** Benediction stays in reach in row 2. Retribution gets critical hit earlier when it levels.
 - **Risk.** All specs get +5% critical hit for 5 points. The other classes have the same.
+
+### C21. Benediction: 3 ranks, 3/6/9%
+
+- **Proposed text.** "Reduces the Mana cost of all instant cast spells and abilities by 3/6/9%."
+- **Change.** 3 ranks, not 5 ranks (2/4/6/8/10%). The maximum decreases from 10% to 9%.
+- **Precedent.** Cataclysm (Warlock) gives −10% for 3 points in Forever. Forever uses fewer ranks for cost talents.
+- **Why.** With M8, Benediction is in row 2. Rows 1 and 2 must give the other specs a reason to put points in the tree (design rule 2). With 3 ranks, the dips into Retribution cost 2 points less.
+
+| Dip | Beta ranks | C21 |
+| --- | --- | --- |
+| Holy PvP build (Conviction, Benediction, Redoubt, Guardian's Favor) | 35/7/9: Benediction 4/5 (8%) | 36/7/8: Benediction 3/3 (9%), 1 more point for Holy |
+| Protection Consecration dip (Deflection 5, Holy Conduit 2, Benediction) | 12 points (10%) | 10 points (9%) |
+| Retribution with 3 points in Benediction | 6% | 9% |
+
+- **Mana.** Retribution spends about 1 mana per sec less (see Analysis, Damage). For a full investment, Holy Shock costs about 3 mana more than with 10%. The Protection mana tables change by less than 1 mana per sec.
+- **Points.** Retribution has 42 points (beta: 44). Rows 1 and 2 have 17 points. Row 3 still opens at 10 points.
 
 ## Judgements and Blessings in raids
 
@@ -854,7 +871,7 @@ This section compares the mana of the Paladin in the beta and with the proposals
 | Consecration rank 5 | 565 mana, each 8 sec |
 
 - Base mana 1,512 is the Classic value. It is not confirmed for Forever.
-- The Retribution dip gives Benediction (all costs ×0.90) and Holy Conduit (Consecration ×0.60).
+- The Retribution dip (10 points: Deflection 5, Holy Conduit 2, Benediction 3) gives Benediction (all costs ×0.91, C21) and Holy Conduit (Consecration ×0.60). The tables use ×0.90 (beta, 5 points). With ×0.91, the values change by less than 1 mana per sec.
 - Raid buffs are not in the model. Blessing of Wisdom gives 8 MPS. Judgement of Wisdom on the boss gives more.
 
 #### 4. Protection results
@@ -1158,7 +1175,7 @@ This section compares the single-target damage of Retribution with the other dam
 - **Build.** 12/8/31: p00050030200002-503-03225031201330321 in the calculator.
   - Holy 12: Improved Seals 5/5, Reverence 3/3, Infusion of Light 2/2, Consecrated Ground 2/2.
   - Protection 8: Divine Strength 5/5, Precision 3/3.
-  - Retribution 31: Conviction 5/5, Benediction 3/5, Improved Judgement 2/2, Holy Conduit 2/2, Sanctified Judgement 3/3, Seal of Command, Pursuit of Justice 2/2, Two-Handed Weapon Specialization 3/3, Sacred Arbiter, Vengeance 3/3, Champion of the Light 3/3, Instrument of Law 2/2, Twist of Light.
+  - Retribution 31: Conviction 5/5, Benediction 3/3 (C21), Improved Judgement 2/2, Holy Conduit 2/2, Sanctified Judgement 3/3, Seal of Command, Pursuit of Justice 2/2, Two-Handed Weapon Specialization 3/3, Sacred Arbiter, Vengeance 3/3, Champion of the Light 3/3, Instrument of Law 2/2, Twist of Light.
 - **Gear.** A real fresh level 60 profile: crafted items, dungeon items and quest rewards. Without talents and buffs: 283 Strength, 74 Agility, 770 Attack Power, 5.9% critical hit, 5% hit, 254 spell damage, 87 Intellect and 2,537 mana.
 - **Weapon.** Stormcarver (Blacksmithing, item level 63): 155–233 damage, 3.6 sec, +32 spell damage.
 - **With talents and raid buffs.** 1,244 Attack Power, 319 spell damage (Champion of the Light gives 65), 8% hit and 2,866 mana.
@@ -1197,7 +1214,7 @@ All proposals (C16 as in this document), raid buffs, 2 min fight:
 
 - About 70% of the damage is Holy damage. Armor does not decrease it.
 - The global cooldown is active 54% of the time. Thus, you have time for Exorcism or Consecration.
-- Mana: −3.8 mana per sec with Blessing of Wisdom. The mana lasts about 12 min. A melee player gets Blessing of Wisdom only with 3 Paladins in the raid (see The problem with Blessings). Without it: −11.8 mana per sec, and the mana lasts about 4 min.
+- Mana: −2.6 mana per sec with Blessing of Wisdom. The mana lasts about 18 min. A melee player gets Blessing of Wisdom only with 3 Paladins in the raid (see The problem with Blessings). Without it: −10.6 mana per sec, and the mana lasts about 4.5 min.
 
 #### 4. Proposals against the beta
 
@@ -1318,7 +1335,7 @@ Judgement of the Crusader gives about +9% DPS at fresh level 60. It adds 161 Hol
 
 - **Stat values (raid buffs, 5 min fight).** 1 spell damage: 0.20 DPS. 1 Attack Power: 0.12 DPS. 1 Strength: 0.29 DPS. 1% critical hit: 5.0 DPS. 1% hit: 5.4 DPS, up to the cap. Thus, 1 spell damage is worth about 1.7 Attack Power. Plate items with spell damage are good for Retribution, and Warriors do not want them.
 - **Hit cap.** The build has 8% hit (Precision 3% + 5% from gear). The cap is about 9%.
-- **Consecrated Ground with Consecration on cooldown.** About +23% on one target (370 → 456 DPS). This is true if the +10% applies to all your Holy damage on the target, as the beta tests show. The mana is zero after 66 sec. It is strong burst for 2 Holy points (see Watch list, W16).
+- **Consecrated Ground with Consecration on cooldown.** About +23% on one target (370 → 456 DPS). This is true if the +10% applies to all your Holy damage on the target, as the beta tests show. The mana is zero after 70 sec. It is strong burst for 2 Holy points (see Watch list, W16).
 - **Exorcism against Undead and Demons.** About +12% (414 DPS). If you use it on cooldown, the mana is zero after about 2 min.
 - **Two-Handed Weapon Specialization.** The Paladin talent gives 6%. The Warrior talent in Forever gives 3%. Each 1% gives Retribution about 3.3 DPS (0.9%). At 6%, Retribution is 101% of Fury at fresh level 60 and 82% in Naxxramas. At 3%, it is 98% and 79%. The 6% stays: it is an intentional Paladin strength (see Tree balance, Paladin strengths).
 
@@ -1363,7 +1380,7 @@ This table uses the proposed trees with M8.
 | Tree | Rows 1–2 | Retribution gets | Protection gets | Holy gets |
 | --- | --- | --- | --- | --- |
 | Holy | Improved Seals, Divine Intellect · Infusion of Light, Reverence, Unyielding Faith | Seal damage, regeneration while casting, a fast Holy Light (7–8 points) | Seal damage, regeneration, Intellect for Shield Specialization (8 points) | — |
-| Retribution | Deflection, Conviction · Improved Judgement, Holy Conduit, Benediction | — | Parry, critical hit, Judgement −2 sec (5–12 points) | +5% critical heal chance (5 points). Instant spells cost −10%: Holy Shock, Cleanse (4–5 more points) |
+| Retribution | Deflection, Conviction · Improved Judgement, Holy Conduit, Benediction | — | Parry, critical hit, Judgement −2 sec (5–12 points) | +5% critical heal chance (5 points). Instant spells cost −9%: Holy Shock, Cleanse (3 more points, C21) |
 | Protection | Divine Strength, Redoubt · Precision, Guardian's Favor, Anticipation | +10% Strength, +3% hit (8 points) | — | PvP: Redoubt, then Guardian's Favor (7 points) |
 
 **Protection for Holy is a PvP dip.** Other classes also use a defensive tree for PvP: Iron Will (Warrior), Frost Warding (Mage), Deflection (Hunter). Redoubt gives Holy only a small defense. Guardian's Favor gives more saves: Blessing of Protection each 3 min, and Blessing of Freedom +6 sec.
@@ -1381,7 +1398,7 @@ Redoubt in PvP (block value 44, from the gear profile):
 | Build | Retribution | Protection | Result |
 | --- | --- | --- | --- |
 | Beta layout | Benediction 5 + Conviction 5 = 10 | Redoubt 5 + Guardian's Favor 2 = 7 | 17 points: does not fit |
-| With M8 | Conviction 5 + Benediction 4 = 9 | Redoubt 5 + Guardian's Favor 2 = 7 | 16 points: fits (35/7/9) |
+| With M8 and C21 | Conviction 5 + Benediction 3 = 8 | Redoubt 5 + Guardian's Favor 2 = 7 | 15 points: fits, with 1 more point for Holy (36/7/8) |
 
 Without M8, Holy must choose between +5% critical heal chance and Guardian's Favor. Thus, M8 is necessary for rule 1.
 
@@ -1403,7 +1420,7 @@ Each row 3 has a 1-point signature talent, as in the other classes. Each also ha
 | Divine Strength (+10% Strength, Protection row 1, C8) | Heart of the Wild (row 1) | Equal |
 | Deflection (+5% parry, row 1) | Deflection (Warrior, Hunter, row 1) | Equal |
 | Conviction (+5% critical hit, row 1 with M8) | Cruelty, Malice, Lethal Attacks, Thundering Strikes (all row 1) | Equal with M8. In the beta, it is one row deeper |
-| Benediction (instant spells −10%) | Convection (row 1) | Parity: more spells, but Paladin instant spells cost less |
+| Benediction (instant spells −9%, 3 points, C21) | Cataclysm (−10%, 3 points), Convection (row 1) | Equal: more spells, but Paladin instant spells cost less |
 | Precision (+3% hit, row 2) | Precision (Rogue, row 2), Surefooted (row 3) | Equal |
 | Anticipation (+20 Defense, row 2) | Anticipation (Warrior, row 2) | Equal |
 | Reverence (50%, row 2, C1) | Mindfulness (row 2), Meditation and Reflection (row 3) | Equal |
@@ -1424,7 +1441,7 @@ These talents are stronger than, or different from, the talents of other classes
 - Seal and Judgement damage as a dip from Holy (Improved Seals).
 - Two-handed weapon damage (Two-Handed Weapon Specialization 6%, Warrior 3%). It also increases Seal and Judgement damage. Retribution judges with a two-handed weapon and Seals (design rule 5). The Warrior has other damage multipliers: Impale, Weaponmaster, Deep Wounds and Death Wish.
 
-**Points in each tree.** Beta: Holy 46, Protection 48, Retribution 44. Proposed: Holy 45, Protection 47, Retribution 44.
+**Points in each tree.** Beta: Holy 46, Protection 48, Retribution 44. Proposed: Holy 45, Protection 47, Retribution 42.
 
 ## Beta test results
 
@@ -1469,7 +1486,7 @@ These talents are stronger than, or different from, the talents of other classes
 
 | Talent | Result in the beta | Effect on the proposals |
 | --- | --- | --- |
-| Benediction | Its cost decrease multiplies with Purifying Power, Holy Conduit and Twist of Light | None |
+| Benediction | Its cost decrease multiplies with Purifying Power, Holy Conduit and Twist of Light | C21 changes the ranks to 3/6/9% |
 | Holy Conduit | With Benediction, Consecration costs ×0.60 × 0.90 | None |
 | Conviction | Also applies to damage Seals and Hammer of Wrath | C15 adds only Holy Shock, Exorcism, Consecration and heals |
 | Vindication | About 5 procs each minute. Ranks: −67/136/204 Attack Power on the target and +1/2/3% on you | None |
@@ -1481,7 +1498,7 @@ These talents are stronger than, or different from, the talents of other classes
 | Vengeance | Multiplies with other % damage. Critical hits from procs add stacks | None |
 | Repentance | Diminishing returns category not tested | None |
 | Instrument of Law | Rank 2 makes Hammer of Wrath instant. The threat decrease multiplies with Salvation | None |
-| Twist of Light | More tests are necessary. With Benediction, Seals cost ×0.72 | None |
+| Twist of Light | More tests are necessary. With Benediction, Seals cost ×0.72 (×0.73 with C21) | None |
 
 ### Spells
 
@@ -1515,7 +1532,7 @@ These are risks to check in tests. None of them needs a change now.
 | W1 | Pursuit of Justice (+15% speed at 10 Retribution points) is better than the boot enchant | Decrease it to 10% if all Paladins take it |
 | W2 | Sacred Duty gives Divine Shield −60 sec at 10 Protection points. This is a PvP dip | Decrease it to −30 sec if all players take it |
 | W3 | Retribution gets Strength and 3% hit with one 8-point Protection dip | Monitor |
-| W4 | A 7-point Retribution dip decreases the mana that Protection uses with Consecration from about 112 to 76 per sec | Monitor: all Protection players can take this dip |
+| W4 | A 10-point Retribution dip (Deflection 5, Holy Conduit 2, Benediction 3) decreases the mana that Protection uses with Consecration from about 112 to 76 per sec | Monitor: all Protection players can take this dip |
 | W5 | Holy is the main dip for the two other trees (Seal damage, Infusion of Light, Reverence, Consecrated Ground) | Monitor: Retribution and Protection still give parry, critical hit, mana costs, Strength and hit |
 | W6 | Reckoning (C11): a 0/26/25 two-handed build bursts for about 3,020 in one Hammer of Justice stun | Monitor: this is below the best beta case (about 3,700). Swift Judgement gives about 18% of it |
 | W7 | Iron Creed (C7) gives −10% damage taken to all specs with Righteous Fury and 25 Protection points | Monitor in PvP. This is the one exception to the rule on talents that improve a buff |
@@ -1527,7 +1544,7 @@ These are risks to check in tests. None of them needs a change now.
 | W13 | C19: the Holy Paladin is the best single-target healer only with critical heals and Lingering Light (C2). The Lingering Light heal can overheal | Increase Healing Light to 35% (5 ranks: 7/14/21/28/35%) |
 | W14 | Illumination (C20) at 75% gives Holy more mana in PvP and in long fights | Decrease it to 65% if Holy is first by more than 20% in fights of 10 min |
 | W15 | Retribution with C16 is about equal to Fury Warrior at fresh level 60 (101%). It falls to about 82% of Fury in Naxxramas (see Analysis, Damage, part 6) | Compare Retribution with Fury at each gear tier, not only at fresh level 60. If Retribution is above the pure damage classes in raids, decrease the Sacred Arbiter bonus first (+20% → +10%) |
-| W16 | Consecrated Ground (2 Holy points) with Consecration on cooldown gives Retribution about +23% on one target. The mana lasts about 66 sec | If Retribution uses it on bosses, apply the +10% only to Holy spells, as the tooltip says, not to Seals and Judgements |
+| W16 | Consecrated Ground (2 Holy points) with Consecration on cooldown gives Retribution about +23% on one target. The mana lasts about 70 sec | If Retribution uses it on bosses, apply the +10% only to Holy spells, as the tooltip says, not to Seals and Judgements |
 
 ## Open questions
 
