@@ -984,6 +984,7 @@ This section compares the Holy Paladin with the three other healers of Forever: 
 - **The Paladin also has the least mana.** Reverence keeps 30% of the Spirit regeneration while casting. Meditation, Reflection and Mindfulness keep 50% (part 2).
 - **On one tank, the beta Paladin is already about equal to the best other healer** (0% to +6%) (part 5).
 - **With the proposals, the Paladin is about equal to the Shaman and the Druid in raids** (−8% to +4%). It is still 26–33% below the Priest. C1 gives the mana. C2, C19 and Conviction give larger heals (part 4).
+- **After a large hit on one tank, the proposed Paladin heals 14–28% more than the best other healer in the first 3–6 sec.** C3 gives most of this result. In the beta, the Paladin is 4–9% below (part 5).
 - **On one tank, the proposals put the Paladin 11–22% above the best other healer.** This is about the 20% limit of W14. Its maximum is 19% above the Shaman (part 5).
 - **We withdrew C20.** Illumination at 75% is not necessary in raids, and it puts the lead on one tank at 18–29% (part 6).
 - **A stronger Holy Shock or Light's Vigil is not necessary.** The raid healing is already at the level of the Shaman and the Druid. A Holy Shock change also increases the lead on one tank (part 6).
@@ -1079,6 +1080,24 @@ Healing per sec after overhealing, on one tank. "Maximum" is the raw healing per
 - With the proposals, the Paladin is first by 11–15% in fights of 3 min, and by 15–22% in fights of 5 and 10 min. Its maximum is 19% above the Shaman.
 - The proposals give more mana (C1) and larger heals (C2, C19, Conviction). The lead increases with the fight length. The other healers must stop and wait for more mana.
 - This is about the 20% limit of W14. If tests show more, Healing Light at 25% gives 7–17% (part 6).
+
+**Holy Light in the model.** The values above count all healing on the tank as equal. Thus, the model casts Holy Light only after Infusion of Light or with Divine Favor. Holy Light gives about 30% of the healing in fights of 3 min and 6% in fights of 10 min. The other heals are Flash of Light, because it gives more healing for each mana point (7.8 against 5.6). In play, a Paladin casts more Holy Light after a large hit. The table below shows this value.
+
+**Recovery after a large hit.** Healing that lands on the tank in the first 3 and 6 sec after the hit, at 715 healing power. The healer starts to cast at the hit. There is no overhealing. Heals over time count only the ticks in the window. The long cooldowns are Divine Favor, Nature's Swiftness and Inner Focus.
+
+| Healer | 3 sec | 6 sec | 3 sec, no long cooldown | 6 sec, no long cooldown | Best casts (6 sec, no long cooldown) |
+| --- | --- | --- | --- | --- | --- |
+| Priest | 3,281 | 6,741 | 2,945 | 6,405 | Flash Heal, Greater Heal, Penance |
+| Druid | 3,502 | 7,815 | 3,203 | 6,407 | Healing Touch, Healing Touch |
+| Shaman | 4,425 | 7,669 | 3,036 | 6,071 | Healing Wave, Healing Wave |
+| Paladin, beta | 4,184 | 7,243 | 3,059 | 6,118 | Holy Light, Holy Light |
+| Paladin, proposed | 5,052 | 9,460 | 4,023 | 8,123 | Holy Shock, Holy Light (1.5 sec), Flash of Light, Holy Light (1.5 sec) |
+
+- In the beta, the Paladin is 4–9% below the best other healer after a large hit. Holy Light needs 2.5 sec, and Infusion of Light works only after a critical heal.
+- With the proposals, the Paladin is first by 14–28%. Holy Shock or Flash of Light makes the next Holy Light a 1.5 sec cast (C3).
+- C3 gives most of this result. Without C3, the proposed Paladin is about equal to the beta Paladin.
+- At 900 healing power, the result is almost the same: beta −6% to −9%, proposals +14% to +28%.
+- Power Word: Shield is not in the table. It absorbs about 1,100 damage and uses one global cooldown.
 
 #### 6. Options and changes examined
 
