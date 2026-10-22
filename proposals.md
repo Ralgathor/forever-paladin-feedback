@@ -14,7 +14,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 21 chan
 
 ## How to read this document
 
-- **C (change).** C1 to C22 (C20 is withdrawn) change what a talent does, add a talent or remove a talent. C16, C18 and C19 change baseline spells. A change can also move the talent. The text then gives the new row.
+- **C (change).** C1 to C22 (we withdrew C20) change what a talent does, add a talent or remove a talent. C16, C18 and C19 change baseline spells. A change can also move the talent. The text then gives the new row.
 - **M (move).** M1 to M8 move a talent (M3 and M7 are withdrawn) to a different row or column. The talent text does not change.
 - **C18a and C18b** are the two alternatives to C18.
 - **Withdrawn ideas** have no ID. They are in the Withdrawn ideas section only.
@@ -108,7 +108,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 
 - **Proposed text.** "Allows 17/33/50% of your Mana regeneration to continue while casting."
 - **Model.** Meditation (Priest), Reflection (Druid) and Mindfulness (Shaman) give 50% with 3 ranks.
-- **Illumination is not sufficient.** Other healers have a mana return in addition to their 50% (Litany of Light, Water Shield, Mana Tide Totem). Forever also decreased Illumination to 50% of the base cost. Illumination stays at 50% (C20 is withdrawn).
+- **Illumination is not sufficient.** Other healers have a mana return in addition to their 50% (Litany of Light, Water Shield, Mana Tide Totem). Forever also decreased Illumination to 50% of the base cost. Illumination stays at 50% (we withdrew C20).
 - **Row 2.** In row 2, Reverence is also the mana talent for Protection and Retribution. They get it with 8 Holy points (see Mana).
 - **If it is too strong:** use 13/27/40%.
 
@@ -119,7 +119,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Text model.** "Non-periodic critical heals" comes from Divine Aegis and Inspiration (Priest). "Refreshing this effect carries over any remaining healing" comes from Blessed Recovery (Priest). Blessed Recovery already works this way in Forever.
 - **Why critical heals.** Healing Light already gives a flat healing bonus. The Holy tree has many critical hit talents (Illumination, Divine Favor, Holy Power). This talent gives them more value.
 - **Value.** At 22% critical heal chance: 22% × 1.5 (critical heal) × 20% = about +6.6% of a normal heal. Some of it is overhealing on targets with full health.
-- **Why 10/20%.** Healing Light (C4) gives the main healing bonus. Lingering Light gives a smaller bonus, only on critical heals. At 20%, it gives about 3.3% for each point, as Spiritual Healing (Priest) does. Lingering Light gives about 4% on one tank in fights of 10 min (see Analysis, Healing, part 5). At 30%, the lead on one tank and the overhealing risk were larger.
+- **Why 10/20%.** Healing Light (C4) gives the main healing bonus. Lingering Light gives a smaller bonus, and only on critical heals. At 20%, it gives about 3.3% for each point, as Spiritual Healing (Priest) does. Lingering Light gives about 4% on one tank in fights of 10 min (see Analysis, Healing, part 5). At 30%, the lead on one tank and the overhealing risk were larger.
 
 **How the heal over time works.** It works as Ignite and Blessed Recovery do in Forever, not as Deep Wounds.
 
@@ -505,7 +505,7 @@ Retribution has 42 points (beta: 44).
 | 2 | Kings + Might | Kings + Wisdom | Kings + Might, or Kings + Light |
 | 3 or more | Kings + Might + Light | Kings + Wisdom + Light | Kings + Might + Light |
 
-- **Effect on Holy.** In raids with 1 or 2 Paladins, most targets do not get Blessing of Light. At 900 healing power, Flash of Light + Holy Light (C3) then gives 1,089 healing per sec and 4.67 healing per mana. With Blessing of Light, it gives 1,281 and 5.49.
+- **Effect on Holy.** In raids with 1 or 2 Paladins, most targets do not receive Blessing of Light. At 900 healing power, Flash of Light + Holy Light (C3) then gives 1,089 healing per sec and 4.67 healing per mana. With Blessing of Light, it gives 1,281 and 5.49.
 - **The same problem as C18.** The healing of the class changes with the number of Paladins in the raid.
 
 ### C19. Blessing of Light: removed, Healing Light gives 10/20/30% (recommended)
@@ -983,31 +983,31 @@ This section compares the Holy Paladin with the three other healers of Forever: 
 - **The cooldown heals make the difference.** For the other healers, a cooldown heal is the most efficient spell: Prayer of Mending, Riptide, Swiftmend and Tranquility. For the Paladin, Holy Shock and Light's Vigil are the least efficient spells (part 3).
 - **The Paladin also has the least mana.** Reverence keeps 30% of the Spirit regeneration while casting. Meditation, Reflection and Mindfulness keep 50% (part 2).
 - **On one tank, the beta Paladin is already about equal to the best other healer** (0% to +6%) (part 5).
-- **With the proposals, the Paladin is about equal to the Shaman and the Druid in raids** (−8% to +4%). It is still 26–33% below the Priest. C1 gives the mana, and C2, C19 and Conviction give bigger heals (part 4).
+- **With the proposals, the Paladin is about equal to the Shaman and the Druid in raids** (−8% to +4%). It is still 26–33% below the Priest. C1 gives the mana. C2, C19 and Conviction give larger heals (part 4).
 - **On one tank, the proposals put the Paladin 11–22% above the best other healer.** This is about the 20% limit of W14. Its maximum is 19% above the Shaman (part 5).
-- **C20 is withdrawn.** Illumination at 75% is not necessary in raids, and it puts the lead on one tank at 18–29% (part 6).
-- **A stronger Holy Shock or Light's Vigil is not necessary.** The raid healing is already at the level of the Shaman and the Druid, and a Holy Shock change also increases the lead on one tank (part 6).
+- **We withdrew C20.** Illumination at 75% is not necessary in raids, and it puts the lead on one tank at 18–29% (part 6).
+- **A stronger Holy Shock or Light's Vigil is not necessary.** The raid healing is already at the level of the Shaman and the Druid. A Holy Shock change also increases the lead on one tank (part 6).
 
 #### 1. Model
 
-- **Source.** The model uses the method of the DoubleZug sheets for the four Forever healers (early beta). Each class gets the same gear, buffs and fight. We compared each spell value with the Forever spellbook. An independent review of the first version found errors. This version corrects them (22 October 2026).
+- **Source.** The model uses the method of the DoubleZug sheets for the four Forever healers (early beta). All classes use the same gear, buffs and fight. We compared each spell value with the Forever spellbook. An independent review of the first version found errors. This version corrects them (22 October 2026).
 - **Gear.** 715 healing power, 315 Intellect, 249 Spirit, 40 mana each 5 sec, 4% spell critical chance. Parts 4 and 5 also use 900 healing power (raids).
-- **Raid buffs.** Arcane Intellect, Mark of the Wild, Blessing of Kings, Divine Spirit, Blessing of Wisdom, Mana Spring Totem, a 3% spell critical aura and a mana oil. Thus, each healer gets 117 mana each 5 sec.
-- **Consumables and other healers.** One major mana potion each 2 min (1,800 mana). One Mana Tide Totem each 5 min (1,160 mana) for each healer. A potion or a cooldown counts only if it ends before the end of the fight: 2 potions in 3 min, 5 potions in 10 min.
+- **Raid buffs.** Arcane Intellect, Mark of the Wild, Blessing of Kings and Divine Spirit give stats. Blessing of Wisdom, Mana Spring Totem and a mana oil give mana. An aura gives +3% spell critical chance. Thus, each healer has 117 mana each 5 sec.
+- **Consumables and other healers.** One major mana potion each 2 min (1,800 mana). One Mana Tide Totem each 5 min (1,160 mana) for each healer. A potion or a cooldown counts only if it ends before the end of the fight. Thus, the healer uses 2 potions in 3 min and 5 potions in 10 min.
 - **Mana pool.** Classic base mana at level 60, plus 15 mana for each point of Intellect. The DoubleZug sheets do not add the base mana.
 - **Spirit regeneration.** The Classic 1.12 formula of each class. Forever did not publish a formula. The DoubleZug tests agree with neither the Classic nor the TBC formula.
-- **Talents.** Each class uses the healer build of its DoubleZug sheet. The beta Paladin: Divine Intellect, Healing Light 3/3, Reverence 3/3, Illumination 5/5, Infusion of Light 2/2, Divine Favor, Holy Shock, Holy Power 5/5, Light's Vigil and Benediction 5/5. Blessing of Light is on the target.
-- **Proposed Paladin.** C1, C2, C3, C19, C21 and Conviction (C15, M8), as in build HB1. Illumination stays at 50% (C20 is withdrawn).
+- **Talents.** Each class uses the healer build of its DoubleZug sheet. The beta Paladin has Divine Intellect, Healing Light 3/3, Reverence 3/3, Illumination 5/5 and Infusion of Light 2/2. It also has Divine Favor, Holy Shock, Holy Power 5/5, Light's Vigil and Benediction 5/5. Blessing of Light is on the target.
+- **Proposed Paladin.** C1, C2, C3, C19, C21 and Conviction (C15, M8), as in build HB1. Illumination stays at 50% (we withdrew C20).
 - **Cast plan.** A linear program finds the best mix of casts for the mana and the time of the fight. The mix can use all heals of the class. After 5 sec with no cast, the full Spirit regeneration starts. The model counts 2/3 of the time with no cast as full regeneration.
 - **Critical heals.** Direct heals can be critical heals. Heals over time cannot (Classic 1.12 rule).
 - **Raid and one tank.** "Raid" counts all heals on all targets. "One tank" counts only the heals on the tank: one target of Prayer of Mending, Wild Growth, Tranquility, Healing Stream Totem and Light's Vigil. Only one Rejuvenation and one Renew at a time. A Riptide or a Regrowth stays for its full duration, or the healer casts it again before the end.
 - **Overhealing (DoubleZug values).** Flash of Light 15%, Holy Light 20%, Holy Shock 15%, Light's Vigil 25%, the Lingering Light heal (C2) 50%. Prayer of Mending 15%. Renew, Greater Heal, Binding Heal and Penance 25%. Regrowth and Rejuvenation 25%, Swiftmend 20%, Tranquility 40%, Wild Growth 50%. Riptide and Chain Heal 25%, Healing Wave 20%, Healing Stream Totem 50%.
-- **Light's Vigil.** Rank 3: 1,340 mana. The next Holy Shock heals each party member for 684–724. The Illumination text names Light's Vigil. The model uses one Illumination return for each cast if one of the 5 heals is a critical heal, a healing power coefficient of 15%, no Holy Power bonus for Holy Shock and no Healing Light bonus. Nobody has tested these values.
+- **Light's Vigil.** Rank 3: 1,340 mana. The next Holy Shock heals each party member for 684–724. The Illumination text names Light's Vigil. The model uses one Illumination return for each cast if one of the 5 heals is critical. It uses a coefficient of 15%, and no Holy Power or Healing Light bonus. No player test gives these values.
 - **Other rules.** Binding Heal: 2 casts each min, because half of it heals the Priest (DoubleZug). Swiftmend does not remove the heal over time that it uses: the Forever text does not have the word "Consumes" of the Classic text.
 - **Corrections to the DoubleZug sheets.**
   - Druid: Rejuvenation rank 11 heals 776 in 12 sec (sheet: 812 in 15 sec). Regrowth heals 994 over time (sheet: 1,278).
   - Druid: the sheet gives 6 free Wild Growth casts from Omen of Clarity. The model gives none, because Omen of Clarity needs melee hits (part 8).
-  - All classes: no critical heals on heals over time. Priest: Prayer of Mending gets critical heals.
+  - All classes: no critical heals on heals over time. Priest: Prayer of Mending can also be a critical heal.
   - Shaman: one Mana Tide Totem (sheet: two) and 715 healing power (sheet: 700).
   - Paladin: Holy Light 1,580 and Flash of Light 308 (sheet: 1,609 and 316).
 - **Not in the model.** Power Word: Shield and Divine Aegis absorbs, the armor from Inspiration and Ancestral Healing, Lay on Hands and Nature's Swiftness.
@@ -1077,7 +1077,7 @@ Healing per sec after overhealing, on one tank. "Maximum" is the raw healing per
 
 - In the beta, the Paladin is about equal to the best other healer (0% to +6%). Its maximum is about equal to the Shaman.
 - With the proposals, the Paladin is first by 11–15% in fights of 3 min, and by 15–22% in fights of 5 and 10 min. Its maximum is 19% above the Shaman.
-- The cause: the proposals give more mana (C1) and bigger heals (C2, C19, Conviction). The lead increases with the fight length, because the other healers must stop to get mana back.
+- The proposals give more mana (C1) and larger heals (C2, C19, Conviction). The lead increases with the fight length. The other healers must stop and wait for more mana.
 - This is about the 20% limit of W14. If tests show more, Healing Light at 25% gives 7–17% (part 6).
 
 #### 6. Options and changes examined
@@ -1092,7 +1092,7 @@ Healing per sec after overhealing, on one tank. "Maximum" is the raw healing per
 | C20: Illumination 75% (withdrawn) | +7% to +12% | +1% to +12% | −19% to −28% | +18% to +29% |
 
 - The proposals put the Paladin at the level of the Shaman and the Druid in raids, and first on one tank by 11–22%.
-- C20 adds 7–11% in raids and 5–8% on one tank. The lead on one tank is then more than the W14 limit. Thus, C20 is withdrawn.
+- C20 adds 7–11% in raids and 5–8% on one tank. The lead on one tank is then more than the W14 limit. Thus, we withdrew C20.
 - If the lead on one tank is too large in tests, Healing Light at 25% gives 7–17% (W14).
 
 **Changes to Holy Shock and Light's Vigil.** With the proposals.
@@ -1111,10 +1111,10 @@ Healing per sec after overhealing, on one tank. "Maximum" is the raw healing per
 | Light's Vigil coefficient 0% or 30% | −2% to +4% | −26% to −33% | +11% to +22% |
 
 - A change to Holy Shock or Light's Vigil is not necessary: the raid healing is already at the level of the Shaman and the Druid.
-- Each Holy Shock change also increases the lead on one tank, which is already at the W14 limit.
-- With Illumination at 50%, the best play does not cast Light's Vigil. Thus, its untested values (coefficient, number of Illumination returns) change the raid result by 5% or less.
+- Each Holy Shock change also increases the lead on one tank. This lead is already at the W14 limit.
+- With Illumination at 50%, the best play does not cast Light's Vigil. Thus, its two values with no test (coefficient, number of Illumination returns) change the raid result by 5% or less.
 - The cost of Light's Vigil is sensitive: at 50% less, the Paladin is 47–69% above the Shaman.
-- Two other untested values make Light's Vigil stronger: the +15% critical chance of Holy Power for Holy Shock, and the Healing Light bonus.
+- Two other values with no test can make Light's Vigil stronger. They are the Holy Power bonus (+15% critical chance for Holy Shock) and the Healing Light bonus.
 
 #### 7. C3 in PvP
 
@@ -1669,7 +1669,7 @@ These are risks to check in tests. None of them needs a change now.
 | W10 | Shield Specialization (C13) can make Consecration too cheap against groups that hit fast (up to 58–98 mana per sec, related to maximum mana) | Go back to 3 sec, or decrease the return from 4% to 3% |
 | W11 | Protection threat in late raids depends on C14 and on the block value of Forever gear (see Threat, part 2) | Change the 200% of C14. Then Iron Creed +100% Holy Strike threat. A shield attack only as the last step |
 | W12 | Infusion of Light (C3): a 7-point Holy dip gives a 1.5 sec Holy Light after each Holy Strike in PvP | Holy Strike gives only −0.25/0.5 sec. Or only Holy Strike critical hits trigger it, as in the beta |
-| W13 | Light's Vigil: the Illumination text names it. If Illumination returns mana for each critical heal of Light's Vigil (up to 5 for each cast), the Paladin gets +3% to +5% against the Shaman in raids. With Illumination at 75% (C20, withdrawn), it is +56% to +86% (see Analysis, Healing, part 6) | Keep Illumination at 50%. Do not decrease the cost of Light's Vigil: at 50% less, the Paladin is 47–69% above the Shaman |
+| W13 | Light's Vigil: the Illumination text names it. Illumination can return mana for each critical heal of Light's Vigil (up to 5 for each cast). Then the Paladin is +3% to +5% against the Shaman in raids. With Illumination at 75% (C20, withdrawn), it is +56% to +86% (see Analysis, Healing, part 6) | Keep Illumination at 50%. Do not decrease the cost of Light's Vigil: at 50% less, the Paladin is 47–69% above the Shaman |
 | W14 | With the proposals, the Paladin is first on one tank by 11–22%. In fights of 5 and 10 min at 900 healing power, the lead is 20–22%: at the limit of 20% (see Analysis, Healing, part 5). | Decrease Healing Light (C19) to 25%: +7% to +17% on one tank, raid −6% to 0% against the Shaman (see Analysis, Healing, part 6) |
 | W15 | Retribution with C16 is about equal to Fury Warrior at fresh level 60 (101%). It falls to about 82% of Fury in Naxxramas (see Analysis, Damage, part 6) | Compare Retribution with Fury at each gear tier, not only at fresh level 60. If Retribution is above the pure damage classes in raids, decrease the Sacred Arbiter bonus first (+20% → +10%) |
 | W16 | Consecrated Ground (2 Holy points) with Consecration on cooldown gives Retribution about +23% on one target. The mana lasts about 70 sec | If Retribution uses it on bosses, apply the +10% only to Holy spells, as the tooltip says, not to Seals and Judgements |
@@ -1700,7 +1700,7 @@ These are risks to check in tests. None of them needs a change now.
 - [ ] Does the Light's Vigil heal use the +15% critical chance of Holy Power for Holy Shock? Does Healing Light increase it? Both make Light's Vigil stronger (see Analysis, Healing, part 6).
 - [ ] What is the Spirit regeneration formula in Forever? Does Intellect change it? The DoubleZug tests agree with neither the Classic nor the TBC formula.
 - [ ] Does Swiftmend remove the Rejuvenation or Regrowth that it uses? (Druid testers)
-- [ ] Can a Druid get Omen of Clarity while healing, and use it for Wild Growth? (Druid testers)
+- [ ] Can heals start Omen of Clarity for a Druid? Can the Druid use it for Wild Growth? (Druid testers)
 - [ ] How many targets does Prayer of Mending heal in a raid fight? The Priest result depends on it (Priest testers)
 
 **Answered**
@@ -1778,7 +1778,7 @@ We examined these ideas and rejected them. They are not proposals.
 | Lay on Hands with no drain | This is the change of patch 3.0.2 (Wrath of the Lich King), a later expansion. A full heal with no cost each 20 min is too strong |
 | Lay on Hands with a fixed cost (for example 30% of maximum mana) | At low mana, you cannot cast it. A drain of a % of the remaining mana keeps this use |
 | Holy Shock heals ×2 or ×2.5 | With the proposals, the raid healing is already at the level of the Shaman and the Druid. The lead on one tank increases to 19–40% (see Analysis, Healing, part 6) |
-| Holy Shock costs 50% less (now) | The Paladin is then +1% to +9% against the Shaman in raids, and the lead on one tank increases to 15–26% (see Analysis, Healing, part 6) |
+| Holy Shock costs 50% less (now) | The Paladin is then +1% to +9% against the Shaman in raids. The lead on one tank increases to 15–26% (see Analysis, Healing, part 6) |
 | Light's Vigil heals ×1.25 or ×2 | With the proposals, the Paladin is then 0% to +35% against the Shaman in raids. Not necessary: the raid healing is already at the level of the Shaman (see Analysis, Healing, part 6) |
 | C20: Illumination returns 75% of the base cost (beta: 50%) | Not necessary. With 50% and the other proposals, the Paladin is about equal to the Shaman in raids (−2% to +4%). At 75%, the lead on one tank is 18–29%, more than the W14 limit. If Illumination returns mana for each critical heal of Light's Vigil, 75% puts the Paladin 56–86% above the Shaman (see Analysis, Healing, part 6) |
 
