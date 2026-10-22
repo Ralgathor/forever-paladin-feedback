@@ -33,8 +33,8 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Identity.** It is the only Holy heal over time. It is not the same as Divine Aegis (Priest), because Divine Aegis is a shield.
 - **Text model.** "Non-periodic critical heals" comes from Divine Aegis and Inspiration (Priest). "Refreshing this effect carries over any remaining healing" comes from Blessed Recovery (Priest). Blessed Recovery already works this way in Forever.
 - **Why critical heals.** Healing Light already gives a flat healing bonus. The Holy tree has many critical hit talents (Illumination, Divine Favor, Holy Power). This talent gives them more value.
-- **Value.** At 22% critical heal chance: 22% × 1.5 (critical heal) × 20% = about +6.6% of a normal heal. Some of it is overhealing on targets with full health.
-- **Why 10/20%.** Healing Light (C4) gives the main healing bonus. Lingering Light gives a smaller bonus, and only on critical heals. At 20%, it gives about 3.3% for each point, as Spiritual Healing (Priest) does. Lingering Light gives about 4% on one tank in fights of 10 min (see Analysis, Healing, part 5). At 30%, the lead on one tank and the overhealing risk were larger.
+- **Value.** At 22% critical heal chance: 22% × 1.5 (critical heal) × 20% = about +6.6% of a normal heal. Critical ticks add about 11% to this: about +7.3%. Some of it is overhealing on targets with full health.
+- **Why 10/20%.** Healing Light (C4) gives the main healing bonus. Lingering Light gives a smaller bonus, and only on critical heals. At 20%, it gives about 3.6% for each point, as Spiritual Healing (Priest) does. Lingering Light gives about 5% on one tank in fights of 10 min (see Analysis, Healing, part 5). At 30%, the lead on one tank and the overhealing risk were larger.
 
 **How the heal over time works.** It works as Ignite and Blessed Recovery do in Forever, not as Deep Wounds.
 
@@ -46,7 +46,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 | Number | One for each Mage on each target | One for each target | One for each Paladin on each target |
 
 - **Amount.** It uses the full critical heal, with the overhealing.
-- **No double bonus.** Healing bonuses apply one time, to the critical heal. They do not apply again to the heal over time. The heal over time cannot be a critical heal.
+- **No double bonus.** Healing bonuses apply one time, to the critical heal. They do not apply again to the heal over time. Each tick can be a critical heal, as other heals over time in Forever. A critical tick does not start Lingering Light again. Only a direct critical heal starts it again.
 - **In play.** Many critical heals on the tank make a large heal over time. Divine Favor on Holy Light gives one large heal over time when you want it. Holy Shock critical heals (+15% from Holy Power) give many small amounts.
 
 ## C3. Infusion of Light: no critical hit necessary, Holy Strike added, row 4 → row 2

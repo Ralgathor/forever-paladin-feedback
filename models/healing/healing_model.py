@@ -5,7 +5,8 @@
 # Version 2 (review of 22 October 2026):
 # - The cast plan is a linear program: the best mix of all spells for the mana and the time.
 # - Cooldowns and consumables count only uses that start early enough to end in the fight.
-# - Heals over time can be critical heals in Forever: each tick (HOT_CRIT). Lingering Light (C2) cannot (its text).
+# - Heals over time can be critical heals in Forever: each tick (HOT_CRIT). Lingering Light (C2) too, but a
+#   critical tick does not start it again (only non-periodic critical heals do).
 # - One tank: a Riptide or a Regrowth can be kept for its full duration, or recast.
 import math
 from scipy.optimize import linprog
@@ -45,9 +46,11 @@ def paladin(hp=HPG, tank=False, rev=0.30, illum=0.50, light=1.12, bol=True, ling
         return (base + (blessing if bol else 0) + coef * hp) * light
     fol = heal(308, 1.5/3.5, 115); hl = heal(1580, 2.5/3.5, 400)
     hs = (320 + 1.5/3.5 * hp) * light * hs_heal_mult
-    # direct heal with critical heals; Lingering Light (C2): 20% of a critical heal as a heal over time
+    # direct heal with critical heals; Lingering Light (C2): 20% of a critical heal as a heal over time.
+    # Its ticks can be critical heals (chance c). A critical tick does not start Lingering Light again.
+    kt = (1 + 0.5*c) if HOT_CRIT else 1.0
     def direct(h, cc, oh):
-        ll = ling * h * 1.5 * cc
+        ll = ling * h * 1.5 * cc * kt
         return h*(1 + 0.5*cc) + ll, h*(1 + 0.5*cc)*(1-oh) + ll*0.5   # half of Lingering Light overheals
     fol_r, fol_e = direct(fol, c, 0.15); hl_r, hl_e = direct(hl, c, 0.20); hs_r, hs_e = direct(hs, c_hs, 0.15)
     fol_cost = 140 - illum*140*c
@@ -57,8 +60,8 @@ def paladin(hp=HPG, tank=False, rev=0.30, illum=0.50, light=1.12, bol=True, ling
     sp = []
     # Divine Favor: the next Holy Light is a critical heal. 2 min cooldown, 4% of base mana
     t_df = 1.5 if inf_all else 2.5
-    df_r = hl*1.5 + ling*hl*1.5
-    sp.append(Spell("Divine Favor + Holy Light", df_r, hl*1.5*0.8 + ling*hl*1.5*0.5,
+    df_r = hl*1.5 + ling*hl*1.5*kt
+    sp.append(Spell("Divine Favor + Holy Light", df_r, hl*1.5*0.8 + ling*hl*1.5*kt*0.5,
                     660 - illum*660 + 0.04*1512, t_df, maxn=cd_limit(120, t_df)))
     sp.append(Spell("Holy Shock", hs_r, hs_e, hs_cost, 1.5, maxn=cd_limit(10, 1.5), groups=(("hs", 1),)))
     if lv:

@@ -51,11 +51,12 @@ def paladin_burst(hp=HPG, light=1.12, bol=True, ling=0.0, conv=0.0, inf_all=Fals
     fol = (308 + (115 if bol else 0) + 1.5/3.5*hp) * light
     hl = (1580 + (400 if bol else 0) + 2.5/3.5*hp) * light
     hs = (320 + 1.5/3.5*hp) * light
-    ll = lambda h, cc: ling*h*1.5*cc                        # Lingering Light: heal over time, 6 sec
+    kt = (1 + 0.5*c) if H.HOT_CRIT else 1.0                 # Lingering Light ticks can be critical heals
+    ll = lambda h, cc: ling*h*1.5*cc*kt                     # Lingering Light: heal over time, 6 sec
     sp = [B("Flash of Light", 1.5, fol*(1+0.5*c), ll(fol, c), 6, tags=("trigger",)),
           B("Holy Light", 2.5, hl*(1+0.5*c), ll(hl, c), 6, tags=("infusable",)),
           B("Holy Shock", 1.5, hs*(1+0.5*c_hs), ll(hs, c_hs), 6, cd="short", tags=("trigger", "hs")),
-          B("Divine Favor + Holy Light", 2.5, hl*1.5, ling*hl*1.5, 6, cd="long", tags=("infusable",))]
+          B("Divine Favor + Holy Light", 2.5, hl*1.5, ling*hl*1.5*kt, 6, cd="long", tags=("infusable",))]
     # Infusion of Light: the Holy Light after a Flash of Light or Holy Shock is 1 sec faster.
     # Beta: only after a critical heal (chance c or c_hs). C3: after each hit.
     # Before the hit, the Paladin casts Flash of Light on the tank: "before" casts in the last 15 sec.
