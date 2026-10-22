@@ -23,7 +23,7 @@ class Spell:
 # ---------------------------------------------------------------- classes
 def paladin(hp_gear=HPG, rev=0.30, illum=0.50, light=1.12, bol=True, ling=0.0, conv=0.0,
             bened=0.10, inf_all=False, hs_heal_mult=1.0, hs_cost_mult=1.0, hs_holy_power=0.0,
-            lv=True, lv_cost_mult=1.0, lv_heal_mult=1.0, lv_coef=0.15, lv_illum=True):
+            lv=True, lv_cost_mult=1.0, lv_heal_mult=1.0, lv_coef=0.15, lv_illum=True, lv_per_crit=False):
     hp = hp_gear
     c = CRIT_BASE + 0.05 + conv            # Holy Power +5% (all spells)
     c_hs = CRIT_BASE + 0.15 + conv         # Holy Power +15% for Holy Shock
@@ -53,7 +53,7 @@ def paladin(hp_gear=HPG, rev=0.30, illum=0.50, light=1.12, bol=True, ling=0.0, c
     lvh = (704 + lv_coef*hp) * lv_heal_mult
     p_any = 1 - (1-c)**5
     lv_raw = 5*crit_heal(lvh, c) + hs_raw
-    lv_cost = 1340*lv_cost_mult - (illum*1340*p_any if lv_illum else 0) + hs_cost
+    lv_cost = 1340*lv_cost_mult - ((illum*1340*(5*c if lv_per_crit else p_any)) if lv_illum else 0) + hs_cost
     lvs = Spell("Light's Vigil + Holy Shock", lv_raw, lv_cost, 3.0, 0, cd=6, fixed=True,
                 tank=(lvh*(1+0.5*c) + hs_raw)/lv_raw)
     lvs.eff = 5*eff(crit_heal(lvh, c), lvh, c, 0.25) + eff(hs_raw, hs, c_hs, 0.15)
