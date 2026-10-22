@@ -5,13 +5,14 @@
 # Version 2 (review of 22 October 2026):
 # - The cast plan is a linear program: the best mix of all spells for the mana and the time.
 # - Cooldowns and consumables count only uses that start early enough to end in the fight.
-# - Heals over time cannot be critical heals (Classic 1.12 rule). Direct heals can.
+# - Heals over time can be critical heals in Forever: each tick (HOT_CRIT). Lingering Light (C2) cannot (its text).
 # - One tank: a Riptide or a Regrowth can be kept for its full duration, or recast.
 import math
 from scipy.optimize import linprog
 
 HPG = 715          # healing power from gear (DoubleZug profile)
 CRIT_BASE = 0.143  # 4% gear + 3% aura + 7.3% from 438 Intellect
+HOT_CRIT = True    # heals over time can be critical heals in Forever (each tick, x1.5). False: Classic 1.12 rule
 MP5 = 117          # 40 gear + 25 Mana Spring + 40 Wisdom + 12 mana oil
 POT = 1800         # one major mana potion, 2 min cooldown
 TIDE = 1160        # Mana Tide Totem (4 x 290 over 12 sec), 5 min cooldown
@@ -96,7 +97,7 @@ def priest(hp_gear=HPG, tank=False):
       S("Greater Heal", 2688.8, 0.934, True, 491, 2.5, 0.25),
       S("Flash Heal", 1272.4, 0.467, True, 342, 1.5, 0.25),
     ]
-    renew = S("Renew", 1941.2, 1.316, False, 296, 1.5, 0.25)          # heal over time: no critical heal
+    renew = S("Renew", 1941.2, 1.316, HOT_CRIT, 296, 1.5, 0.25)       # heal over time: critical ticks in Forever
     if tank: renew.maxn = lambda T: math.floor(T/15); renew.name = "Renew (one at a time)"
     sp.append(renew)
     if not tank:
@@ -107,21 +108,24 @@ def priest(hp_gear=HPG, tank=False):
 # ---------------------------------------------------------------- Druid
 def druid(hp=HPG, tank=False, ooc_wg=0, sm_consumes=False):
     c = 0.183; k = 1 + 0.5*c
-    # Rejuvenation rank 11: 776 over 12 sec, 360 mana. Coefficient 12/15 = 0.8. Talents x1.328. No critical heal.
-    rej = (776 + 0.8*hp)*1.328
+    kh = k if HOT_CRIT else 1.0                 # heals over time: critical ticks in Forever
+    # Rejuvenation rank 11: 776 over 12 sec, 360 mana. Coefficient 12/15 = 0.8. Talents x1.328.
+    rej0 = (776 + 0.8*hp)*1.328
+    rej = rej0*kh
     # Regrowth rank 9: 965-1077 direct (Improved Regrowth: 68% critical), 994 over 21 sec, 525 mana.
     # Coefficients 0.3 / 0.621 (DoubleZug). Talents x1.114.
-    rg_dir = (1021 + 0.3*hp)*1.114; rg_hot = (994 + 0.621*hp)*1.114
+    rg_dir = (1021 + 0.3*hp)*1.114; rg_hot0 = (994 + 0.621*hp)*1.114; rg_hot = rg_hot0*kh
     rg_dir_c = rg_dir*(1 + 0.5*(c + 0.5))
     rg = rg_dir_c + rg_hot
-    sm = (rej + rg_hot)/2                       # Swiftmend: full value of the heal over time it uses
+    # Swiftmend: a direct heal for the full value of the heal over time it uses. It can be a critical heal.
+    sm = (rej0 + rg_hot0)/2*k
     if sm_consumes: sm -= 0.5*(rej + rg_hot)/2  # if it removes the heal over time (half of it is left)
     sp = [
-      Spell("Tranquility", 9115.6 + 1.8*(hp-715), (9115.6 + 1.8*(hp-715))*0.6, 833, 10.0, maxn=cd_limit(120, 10.0), tank=0.2),
+      Spell("Tranquility", (9115.6 + 1.8*(hp-715))*kh, (9115.6 + 1.8*(hp-715))*kh*0.6, 833, 10.0, maxn=cd_limit(120, 10.0), tank=0.2),
       Spell("Swiftmend", sm, sm*0.8, 249, 1.0, maxn=cd_limit(15, 1.0)),
       Spell("Healing Touch", (2934.8 + 1.1*(hp-715))*k, (2934.8 + 1.1*(hp-715))*k*0.8, 680, 3.0),
     ]
-    wg = (4854.4 + 1.305*(hp-715))              # heal over time: no critical heal
+    wg = (4854.4 + 1.305*(hp-715))*kh           # heal over time: critical ticks in Forever
     if tank:
         sp.append(Spell("Rejuvenation (one at a time)", rej, rej*0.75, 360, 1.0, maxn=lambda T: math.floor(T/12)))
         # Regrowth kept for 21 sec, or recast: the new one replaces the heal over time after 2 sec
@@ -145,13 +149,14 @@ def druid(hp=HPG, tank=False, ooc_wg=0, sm_consumes=False):
 # ---------------------------------------------------------------- Shaman
 def shaman(hp=HPG, tank=False, T=180):
     c = 0.243; k = 1 + 0.5*c
+    kh = k if HOT_CRIT else 1.0                 # heals over time: critical ticks in Forever
     # Riptide rank 3: direct 799-883 (coefficient 0.2), 805 over 15 sec (0.5). Purification x1.1.
-    rt_dir = (841 + 0.2*hp)*1.1*k; rt_hot = (805 + 0.5*hp)*1.1
+    rt_dir = (841 + 0.2*hp)*1.1*k; rt_hot = (805 + 0.5*hp)*1.1*kh
     hw = (1371.5 + 3/3.5*hp)*1.1*1.24*k
     ch_j = (490 + 2.5/3.5*hp)*1.1
     ch = 2431.2*ch_j/1089.0                     # 2.5 targets, 90% on a Riptide target (DoubleZug)
     n_hst = uses(T, 300, 0)
-    hst = (11 + 0.02*hp)*(T/2)*5/n_hst          # Healing Stream Totem: 5 min, 5 targets, each 2 sec
+    hst = (11 + 0.02*hp)*(T/2)*5/n_hst*kh       # Healing Stream Totem: 5 min, 5 targets, each 2 sec
     sp = [Spell("Healing Stream Totem", hst, hst*0.5, 80, 1.5, maxn=lambda TT: n_hst, tank=0.2),
           Spell("Healing Wave", hw, hw*0.8, 507, 2.5),
           Spell("Lesser Healing Wave", (820 + 1.5/3.5*hp)*1.1*k, (820 + 1.5/3.5*hp)*1.1*k*0.85, 380*0.95 - 24.7, 1.5)]

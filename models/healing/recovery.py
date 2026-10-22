@@ -7,6 +7,7 @@ active), and the Druid has a Rejuvenation on the tank (Swiftmend is ready). Heal
 hit do not count.
 Run: python3 recovery.py"""
 import itertools
+import healing_model as H
 from healing_model import HPG, CRIT_BASE
 
 class B:
@@ -71,21 +72,22 @@ def paladin_burst(hp=HPG, light=1.12, bol=True, ling=0.0, conv=0.0, inf_all=Fals
 def priest_burst(hp=HPG):
     hp = hp + 84; d = hp - 799; c = 0.1903; k = 1 + 0.5*c; k_if = 1 + 0.5*(c + 0.25)
     gh = 2688.8 + 0.934*d
+    kh = k if H.HOT_CRIT else 1.0
     return [B("Flash Heal", 1.5, (1272.4 + 0.467*d)*k),
             B("Greater Heal", 2.5, gh*k),
             B("Penance", 2.0, (1887.3 + 0.623*d)*k, cd="short"),
-            B("Renew", 1.5, 0, 1941.2 + 1.316*d, 15),
+            B("Renew", 1.5, 0, (1941.2 + 1.316*d)*kh, 15),
             B("Inner Focus + Greater Heal", 2.5, gh*k_if, cd="long")], (lambda p, s: 0.0)
 
 def druid_burst(hp=HPG):
-    c = 0.183; k = 1 + 0.5*c
-    rej = (776 + 0.8*hp)*1.328
-    rg_dir = (1021 + 0.3*hp)*1.114*(1 + 0.5*(c + 0.5)); rg_hot = (994 + 0.621*hp)*1.114
+    c = 0.183; k = 1 + 0.5*c; kh = k if H.HOT_CRIT else 1.0
+    rej0 = (776 + 0.8*hp)*1.328; rej = rej0*kh
+    rg_dir = (1021 + 0.3*hp)*1.114*(1 + 0.5*(c + 0.5)); rg_hot = (994 + 0.621*hp)*1.114*kh
     ht = (2934.8 + 1.1*(hp - 715))*k
     sp = [B("Healing Touch", 3.0, ht),
           B("Regrowth", 2.0, rg_dir, rg_hot, 21),
           B("Rejuvenation", 1.0, 0, rej, 12, tags=("fast_gcd", "hot")),
-          B("Swiftmend", 1.0, rej, cd="short", tags=("fast_gcd", "sm")),   # uses the Rejuvenation on the tank
+          B("Swiftmend", 1.0, rej0*k, cd="short", tags=("fast_gcd", "sm")),   # uses the Rejuvenation on the tank; direct heal, can crit
           B("Nature's Swiftness + Healing Touch", 1.5, ht, cd="long")]
     def needs(seq):   # a Rejuvenation is already on the tank at the hit: Swiftmend is ready
         if [x.name for x in seq].count("Regrowth") > 1: return False      # a new Regrowth replaces the old one
@@ -94,11 +96,11 @@ def druid_burst(hp=HPG):
     return sp, (lambda p, s: 0.0), needs
 
 def shaman_burst(hp=HPG):
-    c = 0.243; k = 1 + 0.5*c
+    c = 0.243; k = 1 + 0.5*c; kh = k if H.HOT_CRIT else 1.0
     hw = (1371.5 + 3/3.5*hp)*1.1*1.24*k
     return [B("Healing Wave", 2.5, hw),
             B("Lesser Healing Wave", 1.5, (820 + 1.5/3.5*hp)*1.1*k),
-            B("Riptide", 1.5, (841 + 0.2*hp)*1.1*k, (805 + 0.5*hp)*1.1, 15, cd="short"),
+            B("Riptide", 1.5, (841 + 0.2*hp)*1.1*k, (805 + 0.5*hp)*1.1*kh, 15, cd="short"),
             B("Chain Heal (on the tank, after Riptide)", 2.5, (490 + 2.5/3.5*hp)*1.1*1.25*k),
             B("Nature's Swiftness + Healing Wave", 1.5, hw, cd="long")], (lambda p, s: 0.0)
 
