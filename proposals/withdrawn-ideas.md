@@ -50,7 +50,7 @@ We examined these ideas and rejected them. They are not proposals.
 | Merge Blessing of Light and Blessing of Wisdom (Blessing of Grace) | Tanks must then choose between Might and Grace. It does not help melee |
 | A Holy aura that gives the Blessing of Light bonus | Aura slots have the same limit as Blessing slots. It competes with Devotion Aura and Concentration Aura |
 | A second Holy talent: +6/12/18% to Holy Light and Flash of Light | The same value as C19, but two talents for one bonus |
-| Healing Light at 35% (not 30%) | At 35%, the lead on one tank is 12–21%: more than the W14 limit in long fights. At 30%, it is 7–17% (see Analysis, Healing, part 6) |
+| Healing Light at 35% (not 30%) | Not proposed now. At 35%, the Paladin is first on one tank by 1–9%. At 30%, it is about equal to the Druid (−3% to +5%) (see Analysis, Healing, part 6, and W14) |
 | Guardian's Favor to Protection row 1 | Not necessary. With M8, a Holy PvP build has the points for Redoubt and Guardian's Favor. In row 1, all specs take a 2-point Guardian's Favor |
 | Sacred Arbiter: Holy Strike always triggers Seal of Command (first version of C16) | +13% Retribution damage against the beta. Retribution is then above Fury Warrior at fresh level 60 (see Analysis, Damage) |
 | Sacred Arbiter: Holy Strike triggers Seal of Command by chance | A talent that gives only a chance to trigger is weak design. C16 puts the usual Seal rule in the spell |
@@ -62,7 +62,7 @@ We examined these ideas and rejected them. They are not proposals.
 | A new Improved Lay on Hands talent for the drain | Forever removes this talent. A talent only to remove a penalty is a tax. C22 uses Guardian's Favor |
 | Lay on Hands with no drain | This is the change of patch 3.0.2 (Wrath of the Lich King), a later expansion. A full heal with no cost each 20 min is too strong |
 | Lay on Hands with a fixed cost (for example 30% of maximum mana) | At low mana, you cannot cast it. A drain of a % of the remaining mana keeps this use |
-| Holy Shock heals ×2 or ×2.5 | With the proposals, the raid healing is already at the level of the Shaman. The lead on one tank increases to 15–34% (see Analysis, Healing, part 6) |
-| Holy Shock costs 50% less (now) | The Paladin is then 0% to +7% against the Shaman in raids. The lead on one tank increases to 10–20% (see Analysis, Healing, part 6) |
+| Holy Shock heals ×2 or ×2.5 | With the proposals, the raid healing is already at the level of the Shaman. On one tank, the Paladin is then first by 2–20% (see Analysis, Healing, part 6) |
+| Holy Shock costs 50% less (now) | The Paladin is then 0% to +7% against the Shaman in raids, and first on one tank by 1–8% (see Analysis, Healing, part 6) |
 | Light's Vigil heals ×1.25 or ×2 | With the proposals, the Paladin is then −2% to +31% against the Shaman in raids. Not necessary: the raid healing is already at the level of the Shaman (see Analysis, Healing, part 6) |
-| C20: Illumination returns 75% of the base cost (beta: 50%) | Not necessary. With 50% and the other proposals, the Paladin is about equal to the Shaman in raids (−4% to +2%). At 75%, the lead on one tank is 14–23%, more than the W14 limit in long fights. If Illumination returns mana for each critical heal of Light's Vigil, 75% puts the Paladin 54–79% above the Shaman (see Analysis, Healing, part 6) |
+| C20: Illumination returns 75% of the base cost (beta: 50%) | Not necessary in raids: with 50% and the other proposals, the Paladin is about equal to the Shaman (−4% to +2%). At 75%, the Paladin is first on one tank by 4–10%. See W14. If Illumination returns mana for each critical heal of Light's Vigil, 75% puts the Paladin 54–79% above the Shaman (see Analysis, Healing, part 6) |

@@ -27,7 +27,7 @@ These are risks to check in tests. None of them needs a change now.
 | W11 | Protection threat in late raids depends on C14 and on the block value of Forever gear (see Threat, part 2) | Change the 200% of C14. Then Iron Creed +100% Holy Strike threat. A shield attack only as the last step |
 | W12 | Infusion of Light (C3): a 7-point Holy dip gives a 1.5 sec Holy Light after each Holy Strike in PvP | Holy Strike gives only −0.25/0.5 sec. Or only Holy Strike critical hits trigger it, as in the beta |
 | W13 | Light's Vigil: the Illumination text names it. Illumination can return mana for each critical heal of Light's Vigil (up to 5 for each cast). Then the Paladin is −2% to +3% against the Shaman in raids. With Illumination at 75% (C20, withdrawn), it is +54% to +79% (see Analysis, Healing, part 6) | Keep Illumination at 50%. Do not decrease the cost of Light's Vigil: at 50% less, the Paladin is 45–62% above the Shaman |
-| W14 | With the proposals, the Paladin is first on one tank by 7–17%. The limit is 20% (see Analysis, Healing, part 5). Player tests can show a larger lead | If the lead is more than 20%, decrease Healing Light (C19) to 25%: +3% to +12% on one tank, raid −8% to −2% against the Shaman (see Analysis, Healing, part 6) |
+| W14 | The design goal of Holy is the best single-target healer. With the proposals, the Paladin is about equal to the Druid on one tank (−3% to +5%), and 11–27% above the Shaman and the Priest (see Analysis, Healing, part 5) | If tests confirm it, add Illumination 75% (C20): +4% to +10% on one tank. Or use Healing Light 35%: +1% to +9%. A lead of more than 20% is too strong (see Analysis, Healing, part 6) |
 | W15 | Retribution with C16 is about equal to Fury Warrior at fresh level 60 (101%). It falls to about 82% of Fury in Naxxramas (see Analysis, Damage, part 6) | Compare Retribution with Fury at each gear tier, not only at fresh level 60. If Retribution is above the pure damage classes in raids, decrease the Sacred Arbiter bonus first (+20% → +10%) |
 | W16 | Consecrated Ground (2 Holy points) with Consecration on cooldown gives Retribution about +23% on one target. The mana lasts about 70 sec | If Retribution uses it on bosses, apply the +10% only to Holy spells, as the tooltip says, not to Seals and Judgements |
 | W17 | Holy Shock with Iron Creed (21/30/0): Righteous Fury stays active in PvP. The build then gets −10% damage taken, Templar's Bulwark, Reckoning and Holy Shock (see Analysis, Builds, part 5) | Monitor in PvP with W7 and W9 |
@@ -56,7 +56,6 @@ These are risks to check in tests. None of them needs a change now.
 - [ ] Light's Vigil: the Illumination text names it. Does Illumination return mana one time for each cast, or one time for each critical heal (up to 5)? With Illumination at 50%, the effect is small (W13).
 - [ ] Does the Light's Vigil heal use the +15% critical chance of Holy Power for Holy Shock? Does Healing Light increase it? Both make Light's Vigil stronger (see Analysis, Healing, part 6).
 - [ ] What is the Spirit regeneration formula in Forever? Does Intellect change it? The DoubleZug tests agree with neither the Classic nor the TBC formula.
-- [ ] Does Swiftmend remove the Rejuvenation or Regrowth that it uses? (Druid testers)
 - [ ] Can heals start Omen of Clarity for a Druid? Can the Druid use it for Wild Growth? (Druid testers)
 - [ ] How many targets does Prayer of Mending heal in a raid fight? The Priest result depends on it (Priest testers)
 
@@ -70,3 +69,4 @@ These are risks to check in tests. None of them needs a change now.
 - [x] Level 60 costs (Forever spellbook): Seal of Fury rank 7: 200 mana. Seal of Command: 210. Consecration: 565. Holy Shield rank 3: 240.
 - [x] Light's Vigil has 3 ranks: 730, 1,000 and 1,340 mana.
 - [x] Can heals over time be critical heals in Forever? Yes, each tick ([Warcraft Tavern](https://www.warcrafttavern.com/forever/guides/restoration-druid/)). Analysis, Healing uses this rule.
+- [x] Does Swiftmend remove the Rejuvenation or Regrowth that it uses? No (player test).
