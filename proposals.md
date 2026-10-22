@@ -903,7 +903,7 @@ Assumptions:
 
 | Heal | Healing | Cast | Limit |
 | --- | --- | --- | --- |
-| Flash of Light (Paladin) | 474 | 1.5 sec | — |
+| Flash of Light (Paladin) | 437 | 1.5 sec | — |
 | Holy Light (Paladin) | 1,794 | 2.5 sec | — |
 | Holy Light after Holy Strike (C3 rank 2) | 1,794 | 1.5 sec | One time each 10 sec |
 | Lesser Healing Wave (Enhancement Shaman) | About 930 | 1.5 sec | — |
@@ -916,7 +916,7 @@ Assumptions:
 | Mana | About 500 | About 1,980 |
 
 - **Without C3, the hybrid Paladin has no good fast heal.** Flash of Light heals half of Lesser Healing Wave. A 2.5 sec Holy Light is easy to interrupt.
-- **With C3, the Paladin heals about 2,270 in 3 sec** (Holy Light after Holy Strike, then Flash of Light). Two Lesser Healing Waves heal about 1,860. The Paladin cannot do this again before the next Holy Strike.
+- **With C3, the Paladin heals about 2,230 in 3 sec** (Holy Light after Holy Strike, then Flash of Light). Two Lesser Healing Waves heal about 1,860. The Paladin cannot do this again before the next Holy Strike.
 - **Mana is the main limit.** A Retribution Paladin with about 4,000 mana can cast 5–6 Holy Light. Then it has no mana for Seals and Judgement. A 7-point dip with Infusion of Light has no points for Reverence.
 - **Players can stop it.** Kick, Pummel and Earth Shock interrupt the cast. Mortal Strike and Wound Poison decrease the heal by 50%. Spiritual Focus is in row 4. Concentration Aura gives only 35% pushback resistance.
 - **It costs damage.** Each heal uses a global cooldown in which the Paladin does not attack.
