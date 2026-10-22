@@ -16,8 +16,10 @@ The healer heals the tank before the hit (warm start):
   beta: a critical heal only). It stays active until a Holy Light uses it.
 - The Paladin values come from a simulation (Monte Carlo) of the critical heals, Infusion of Light and the
   Lingering Light pool, before and after the hit. The same random numbers are used for each sequence.
-- The Druid has a Rejuvenation on the tank: Swiftmend is ready. Swiftmend heals for 12 sec of Rejuvenation.
-  If the Rejuvenation ran out before the Swiftmend, it uses the Regrowth (18 sec of it).
+- The Druid has a Rejuvenation on the tank: Swiftmend is ready.
+  If the Rejuvenation ran out before the Swiftmend, it uses the Regrowth. Swiftmend heals for the full heal over
+  time (Forever text). Druid talents: Nature's Splendor (Rejuvenation 15 sec, Regrowth 27 sec) and Gift of the
+  Earthmother (1 sec global cooldown for Rejuvenation and Swiftmend). The Priest has no Penance (DoubleZug build).
 Run: python3 recovery.py"""
 import itertools, math, random
 import healing_model as H
@@ -135,37 +137,38 @@ def priest_burst(hp=HPG):
     renew = (1941.2 + 1.316*d)*kh
     sp = [B("Flash Heal", 1.5, (1272.4 + 0.467*d)*k),
           B("Greater Heal", 2.5, gh*k),
-          B("Penance", 2.0, (1887.3 + 0.623*d)*k, cd="short"),
           B("Renew", GCD, 0, renew, 15),
           B("Inner Focus + Greater Heal", 2.5, gh*k_if, cd="long")]
     return sp, None, [("Renew", renew/15, 15)], None
 
 def druid_burst(hp=HPG):
     c = 0.183; k = 1 + 0.5*c; kh = k if H.HOT_CRIT else 1.0
-    rej0 = (776 + 0.8*hp)*1.328; rej = rej0*kh
-    rg_dir = (1021 + 0.3*hp)*1.114*(1 + 0.5*(c + 0.5)); rg_hot0 = (994 + 0.621*hp)*1.114; rg_hot = rg_hot0*kh
+    # Nature's Splendor: Rejuvenation 15 sec, Regrowth 27 sec. Gift of the Earthmother: 1 sec global cooldown
+    # for Rejuvenation and Swiftmend. Genesis: +5% periodic healing.
+    rej0 = (776*15/12 + 1.0*hp)*1.1*1.15*1.05; rej = rej0*kh
+    rg_dir = (1021 + 0.3*hp)*1.1*(1 + 0.5*(c + 0.5)); rg_hot0 = (994 + 0.621*hp)*27/21*1.1*1.05; rg_hot = rg_hot0*kh
     ht = (2934.8 + 1.1*(hp - 715))*k
-    sm_rej = rej0*k                     # Swiftmend: 12 sec of Rejuvenation, a direct heal (can be critical)
-    sm_rg = rg_hot0*18/21*k             # or 18 sec of Regrowth
+    sm_rej = rej0*k                     # Swiftmend: the full Rejuvenation, a direct heal (can be critical)
+    sm_rg = rg_hot0*k                   # or the full Regrowth heal over time
     def swiftmend(end, before):
         if "Rejuvenation" in before: return sm_rej
-        p_rej = max(0.0, 1 - end/12)    # the Rejuvenation on the tank is still there
-        p_rg = 1.0 if "Regrowth" in before else max(0.0, 1 - end/21)
+        p_rej = max(0.0, 1 - end/15)    # the Rejuvenation on the tank is still there
+        p_rg = 1.0 if "Regrowth" in before else max(0.0, 1 - end/27)
         return p_rej*sm_rej + (1 - p_rej)*p_rg*sm_rg
     sp = [B("Healing Touch", 3.0, ht),
-          B("Regrowth", 2.0, rg_dir, rg_hot, 21),
-          B("Rejuvenation", GCD, 0, rej, 12),
-          B("Swiftmend", GCD, 0, cd="short", fn=swiftmend),
+          B("Regrowth", 2.0, rg_dir, rg_hot, 27),
+          B("Rejuvenation", 1.0, 0, rej, 15),
+          B("Swiftmend", 1.0, 0, cd="short", fn=swiftmend),
           B("Nature's Swiftness + Healing Touch", 1.5, ht, cd="long")]
     def needs(seq):   # a new Regrowth or Rejuvenation replaces the old one
         names = [x.name for x in seq]
         return names.count("Regrowth") <= 1 and names.count("Rejuvenation") <= 1
-    pre = [("Rejuvenation", rej/12, 12), ("Regrowth", rg_hot/21, 21)]
+    pre = [("Rejuvenation", rej/15, 15), ("Regrowth", rg_hot/27, 27)]
     return sp, needs, pre, None
 
 def shaman_burst(hp=HPG):
     c = 0.243; k = 1 + 0.5*c; kh = k if H.HOT_CRIT else 1.0
-    hw = (1371.5 + 3/3.5*hp)*1.1*1.24*k
+    hw = (1371.5 + 3/3.5*hp)*1.1*1.25*k
     rt_hot = (805 + 0.5*hp)*1.1*kh
     sp = [B("Healing Wave", 2.5, hw),
           B("Lesser Healing Wave", 1.5, (820 + 1.5/3.5*hp)*1.1*k),

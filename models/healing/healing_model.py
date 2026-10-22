@@ -8,8 +8,11 @@
 # - Heals over time can be critical heals in Forever: each tick (HOT_CRIT). Lingering Light (C2) too, but a
 #   critical tick does not start it again (only non-periodic critical heals do).
 # - One tank: a Riptide or a Regrowth can be kept for its full duration, or recast.
-# - Review of 22 October 2026 (2): Druid instants use the 1.5 sec global cooldown. Swiftmend heals for 12 sec
-#   of Rejuvenation or 18 sec of Regrowth. Inner Focus + Prayer of Healing scales the coefficient the same way.
+# - Talent review (22 October 2026): Druid: Gift of the Earthmother (global cooldown 1 sec for Rejuvenation,
+#   Swiftmend, Wild Growth), Nature's Splendor (Rejuvenation 15 sec, Regrowth 27 sec), Genesis on periodic
+#   healing only, Swiftmend heals for the full heal over time (Forever text). Priest: no Penance (the DoubleZug
+#   build has Prayer of Mending and Binding Heal; Penance needs 20 Discipline points more). Shaman: Healing Way 25%.
+#   Inner Focus + Prayer of Healing scales the coefficient the same way as the base heal.
 import math
 from scipy.optimize import linprog
 
@@ -126,7 +129,6 @@ def priest(hp_gear=HPG, tank=False):
     sp = [
       # Prayer of Mending: direct heal, 5 targets, 10 sec cooldown. The tank gets one of the 5 heals.
       S("Prayer of Mending (5 targets)", 5*869.105, 5*0.491, True, 257, 1.5, 0.15, maxn=cd_limit(10, 1.5), tank=0.2),
-      S("Penance", 1887.3, 0.623, True, 289, 2.0, 0.25, maxn=cd_limit(12, 2.0)),
       # Binding Heal: half heals the Priest. The DoubleZug sheet casts it 2 times each min.
       S("Binding Heal", 2544.9, 0.934, True, 342, 1.5, 0.25, maxn=lambda T: round(2*T/60), tank=0.5),
       # Inner Focus: no cost, +25% critical chance. Both the base heal and the coefficient use this multiplier.
@@ -146,38 +148,42 @@ def priest(hp_gear=HPG, tank=False):
 def druid(hp=HPG, tank=False, ooc_wg=0, sm_consumes=False):
     c = 0.183; k = 1 + 0.5*c
     kh = k if HOT_CRIT else 1.0                 # heals over time: critical ticks in Forever
-    # Rejuvenation rank 11: 776 over 12 sec, 360 mana. Coefficient 12/15 = 0.8. Talents x1.328.
-    rej0 = (776 + 0.8*hp)*1.328
+    # Talents (DoubleZug build): Gift of Nature +10% healing, Improved Rejuvenation +15%, Genesis +5% periodic
+    # healing, Improved Regrowth +50% critical chance, Gift of the Earthmother (global cooldown 1 sec for
+    # Rejuvenation, Swiftmend and Wild Growth), Nature's Splendor (Rejuvenation +3 sec, Regrowth +6 sec).
+    # Rejuvenation rank 11: 776 over 12 sec, 360 mana, coefficient 0.8. With Nature's Splendor: 15 sec, the
+    # same ticks: 970 and coefficient 1.0.
+    rej0 = (776*15/12 + 1.0*hp)*1.1*1.15*1.05
     rej = rej0*kh
-    # Regrowth rank 9: 965-1077 direct (Improved Regrowth: 68% critical), 994 over 21 sec, 525 mana.
-    # Coefficients 0.3 / 0.621 (DoubleZug). Talents x1.114.
-    rg_dir = (1021 + 0.3*hp)*1.114; rg_hot0 = (994 + 0.621*hp)*1.114; rg_hot = rg_hot0*kh
+    # Regrowth rank 9: 965-1077 direct (coefficient 0.3), 994 over 21 sec (0.621), 525 mana.
+    # With Nature's Splendor: 27 sec, 1,278 and coefficient 0.798.
+    rg_dir = (1021 + 0.3*hp)*1.1; rg_hot0 = (994 + 0.621*hp)*27/21*1.1*1.05; rg_hot = rg_hot0*kh
     rg_dir_c = rg_dir*(1 + 0.5*(c + 0.5))
     rg = rg_dir_c + rg_hot
-    # Swiftmend: a direct heal (can be critical) for 12 sec of Rejuvenation or 18 sec of Regrowth.
-    # One tank: a Rejuvenation is always on the tank. Raid: the plan casts Regrowth, so Swiftmend uses it.
-    sm = rej0*k if tank else rg_hot0*18/21*k
+    # Swiftmend (Forever text): heals for the full periodic value of the Rejuvenation or Regrowth on the target.
+    # A direct heal (can be critical). One tank: a Rejuvenation is always on the tank. Raid: the plan casts Regrowth.
+    sm = rej0*k if tank else rg_hot0*k
     if sm_consumes: sm -= 0.5*(rej if tank else rg_hot)  # if it removes the heal over time (half of it is left)
     sp = [
       Spell("Tranquility", (9115.6 + 1.8*(hp-715))*kh, (9115.6 + 1.8*(hp-715))*kh*0.6, 833, 10.0, maxn=cd_limit(120, 10.0), tank=0.2),
-      Spell("Swiftmend", sm, sm*0.8, 249, 1.5, maxn=cd_limit(15, 1.5)),
+      Spell("Swiftmend", sm, sm*0.8, 249, 1.0, maxn=cd_limit(15, 1.0)),
       Spell("Healing Touch", (2934.8 + 1.1*(hp-715))*k, (2934.8 + 1.1*(hp-715))*k*0.8, 680, 3.0),
     ]
     wg = (4854.4 + 1.305*(hp-715))*kh           # heal over time: critical ticks in Forever
     if tank:
-        sp.append(Spell("Rejuvenation (one at a time)", rej, rej*0.75, 360, 1.5, maxn=lambda T: math.floor(T/12)))
-        # Regrowth kept for 21 sec, or recast: the new one replaces the heal over time after 2 sec
-        sp.append(Spell("Regrowth (kept 21 sec)", rg, rg*0.75, 525, 2.0, groups=(("rg_slot", 21),)))
-        rr = rg_dir_c + rg_hot*2/21
+        sp.append(Spell("Rejuvenation (one at a time)", rej, rej*0.75, 360, 1.0, maxn=lambda T: math.floor(T/15)))
+        # Regrowth kept for 27 sec, or recast: the new one replaces the heal over time after 2 sec
+        sp.append(Spell("Regrowth (kept 27 sec)", rg, rg*0.75, 525, 2.0, groups=(("rg_slot", 27),)))
+        rr = rg_dir_c + rg_hot*2/27
         sp.append(Spell("Regrowth (recast)", rr, rr*0.75, 525, 2.0, groups=(("rg_slot", 2),)))
         groups = {"rg_slot": lambda T: T}
     else:
         sp += [Spell("Regrowth", rg, rg*0.75, 525, 2.0),
-               Spell("Rejuvenation", rej, rej*0.75, 360, 1.5),
-               Spell("Wild Growth", wg, wg*0.5, 1050, 1.5, maxn=cd_limit(6, 1.5), tank=0.2)]
+               Spell("Rejuvenation", rej, rej*0.75, 360, 1.0),
+               Spell("Wild Growth", wg, wg*0.5, 1050, 1.0, maxn=cd_limit(6, 1.0), tank=0.2)]
         groups = {}
     if ooc_wg:
-        sp.append(Spell("Wild Growth (free, Omen of Clarity)", wg, wg*0.5, 0, 1.5,
+        sp.append(Spell("Wild Growth (free, Omen of Clarity)", wg, wg*0.5, 0, 1.0,
                         maxn=lambda T: round(ooc_wg*T/60), tank=0.2))
     regen = regen_full("dru", 386)
     innerv = lambda T: uses(T, 360, 20) * 20 * (5*regen - 0.5*regen)   # Innervate on itself
@@ -190,7 +196,7 @@ def shaman(hp=HPG, tank=False, T=180):
     kh = k if HOT_CRIT else 1.0                 # heals over time: critical ticks in Forever
     # Riptide rank 3: direct 799-883 (coefficient 0.2), 805 over 15 sec (0.5). Purification x1.1.
     rt_dir = (841 + 0.2*hp)*1.1*k; rt_hot = (805 + 0.5*hp)*1.1*kh
-    hw = (1371.5 + 3/3.5*hp)*1.1*1.24*k
+    hw = (1371.5 + 3/3.5*hp)*1.1*1.25*k        # Purification +10%, Healing Way +25% (Forever text)
     ch_j = (490 + 2.5/3.5*hp)*1.1
     ch = 2431.2*ch_j/1089.0                     # 2.5 targets, 90% on a Riptide target (DoubleZug)
     n_hst = uses(T, 300, 0)
