@@ -287,7 +287,7 @@ const PROPOSED={
  ben:{pid:"M8",tier:2,col:3},
  con:{pid:"C15",tier:1,col:3,r1:"Improves your chance to get a critical strike with attacks and spells by 1%.",rN:"Improves your chance to get a critical strike with attacks and spells by 5%."},
  ths:{pid:"M6",tier:4,col:4},
- sa:{pid:"C16",tier:5,col:3,r1:"Causes your Holy Strike ability to always trigger the effect of your active Seal and to refresh all Judgement effects on the target, including those of other Paladins. Does not trigger the stun of Seal of Justice.",rN:null},
+ sa:{pid:"C16",tier:5,col:3,r1:"Increases the damage of your Holy Strike ability by 10% and causes it to refresh all Judgement effects on the target, including those of other Paladins. (C16 also changes Holy Strike: it triggers your active Seal and Echo the same as a melee attack.)",rN:null},
  rep:{pid:"M7",tier:4,col:3},
  tol:{pid:"C17",r1:"Reduces the Mana cost of your Seal spells by 20%. When you replace your Seal of Command, Seal of Righteousness, Seal of Fury, or Seal of Justice with a different Seal, you gain an Echo of that Seal for 10 sec. While the Echo lasts, your melee attacks also apply the replaced Seal's effects."}
 };
@@ -315,13 +315,14 @@ const PROPOSALS=[
  ["M4", "ihoj", "Improved Hammer of Justice", "Protection, row 4 → row 3", "Row 4", "Row 3 (move only)"],
  ["M5", "sj", "Swift Judgement", "Protection, row 4 → row 3", "Row 4, requires Improved Seal of Fury", "Row 3, no requirement (move only)"],
  ["C15", "con", "Conviction", "Retribution, row 2 → row 1 (M8)", "+1–5% critical hit chance with melee attacks", "+1–5% critical hit chance with attacks and spells"],
- ["C16", "sa", "Sacred Arbiter", "Retribution, row 4 → row 5", "+20% Holy Strike damage", "Holy Strike always triggers your active Seal"],
+ ["C16", "sa", "Sacred Arbiter", "Retribution, row 4 → row 5", "+20% Holy Strike damage", "+10% Holy Strike damage. Holy Strike triggers your Seal and Echo (all specs)"],
  ["C17", "tol", "Twist of Light", "Retribution, row 7", "The Echo applies to the next melee attack only", "The Echo applies to all melee attacks for 10 sec"],
  ["M6", "ths", "Two-Handed Weapon Specialization", "Retribution, row 5 → row 4", "Row 5 (20 points)", "Row 4 (15 points) (move only)"],
  ["M7", "rep", "Repentance", "Retribution, row 5 → row 4", "Row 5 (20 points)", "Row 4 (15 points) (move only)"],
  ["M8", "ben", "Conviction and Benediction", "Retribution, rows 1 and 2", "Benediction row 1, Conviction row 2", "Conviction row 1, Benediction row 2 (move only)"]
 ];
 const BASELINE=[
+ ["C16", "Holy Strike", "Triggers Seal of Light, Justice and Wisdom only", "Triggers your active Seal and Echo the same as a melee attack. Seal of Command keeps its usual chance (7 procs each minute)"],
  ["C18", "Judgement of the Crusader", "Uses the one Judgement of the Paladin", "Personal debuff outside the one-Judgement limit (recommended)"],
  ["C18a", "Judgement of Light and Wisdom", "Two separate Judgements", "Use if C18 is rejected: one Judgement of Grace that heals and restores mana"],
  ["C18b", "Twist of Light", "Echo for damage Seals only", "Optional, with C18: a replaced Light, Wisdom or Justice Judgement stays as a 40 sec Echo"],
@@ -518,7 +519,7 @@ function renderProps(){
     html+=`<h3>${name}</h3><div class="ptable"><table><thead><tr><th>#</th><th>Talent</th><th>Where</th><th>Beta</th><th>Proposed</th></tr></thead><tbody>`;
     PROPOSALS.filter(r=>r[3].startsWith(name)).forEach(r=>{html+=`<tr data-key="${r[1]}" tabindex="0"><td class="id">${r[0]}</td><td>${esc(r[2])}</td><td>${esc(r[3])}</td><td class="today">${esc(r[4])}</td><td>${esc(r[5])}</td></tr>`;});
     html+=`</tbody></table></div>`;});
-  html+=`<h3>Judgements (not shown in the trees)</h3><p>Since the October 15 patch, Salvation no longer takes a Blessing slot, so two Paladins cover a raid's blessings. Each Paladin still keeps only one Judgement on a target, so Crusader tends to be dropped for Light and Wisdom.</p><div class="ptable"><table><thead><tr><th>#</th><th>Change</th><th>Beta</th><th>Proposed</th></tr></thead><tbody>`;
+  html+=`<h3>Spell changes (not shown in the trees)</h3><p>C16 changes Holy Strike for all specs. Since the October 15 patch, Salvation no longer takes a Blessing slot, so two Paladins cover a raid's blessings. Each Paladin still keeps only one Judgement on a target, so Crusader tends to be dropped for Light and Wisdom.</p><div class="ptable"><table><thead><tr><th>#</th><th>Change</th><th>Beta</th><th>Proposed</th></tr></thead><tbody>`;
   BASELINE.forEach(r=>{html+=`<tr><td class="id">${r[0]}</td><td>${esc(r[1])}</td><td class="today">${esc(r[2])}</td><td>${esc(r[3])}</td></tr>`;});
   html+=`</tbody></table></div>`;
   const body=document.getElementById("propsBody");body.innerHTML=html;

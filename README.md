@@ -43,7 +43,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 **Retribution**
 
 - **C15 Conviction:** +1–5% critical hit chance with attacks and spells (beta: melee only).
-- **C16 Sacred Arbiter:** Holy Strike always triggers your active Seal (beta: +20% Holy Strike damage). It moves from row 4 to row 5.
+- **C16 Holy Strike and Sacred Arbiter:** Holy Strike triggers your active Seal and Echo the same as a melee attack, for all specs. Sacred Arbiter gives +10% Holy Strike damage (beta: +20%) and keeps the Judgement refresh. It moves from row 4 to row 5.
 - **C17 Twist of Light:** the Echo applies to all melee attacks for 10 sec (beta: the next melee attack only).
 - **M6 Two-Handed Weapon Specialization:** row 5 → row 4 (20 → 15 points).
 - **M7 Repentance:** row 5 → row 4 (20 → 15 points).
