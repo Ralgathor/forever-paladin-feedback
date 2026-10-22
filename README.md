@@ -23,7 +23,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C3 Infusion of Light:** all Holy Shock, Flash of Light and Holy Strike hits make the next Holy Light faster (beta: critical hits only). It moves from row 4 to row 2.
 - **C4 Healing Light:** 3 ranks, 10/20/30% (beta: 4/8/12%), with C19. It moves from row 2 to row 6, column 3. Holy Power moves to column 1.
 - **C5 Improved Seals:** 5 ranks, 3/6/9/12/15% (beta: 3 ranks). It moves from row 2 to row 1 and replaces Divine Strength.
-- **C20 Illumination:** critical heals return 75% of the base cost (beta: 50%, Classic: 100%). Thus, Holy keeps more healing than the other healers in long fights.
+- **C20 Illumination:** critical heals return 75% of the base cost (beta: 50%, Classic: 100%). Light's Vigil then becomes an efficient raid heal. Thus, Holy is about equal to the Shaman and the Druid in raids.
 - **M1 Consecrated Ground:** row 5 → row 3.
 - **M2 Spiritual Focus:** row 2, column 2 → column 3 (Reverence takes column 2). It stays in row 2, so a Holy healer needs less filler. Unyielding Faith stays in its beta place (row 2, column 4).
 
@@ -72,7 +72,7 @@ The talent icons come from the Wowhead icon server (wow.zamimg.com). If the icon
 - **Models.** Each proposal uses a talent from another class in the same beta as a model (Warrior, Druid, Priest, Shaman, Hunter, Mage).
 - **Rules.** The combat and mana values use Classic 1.12 rules when no test gives a different rule.
 - **Estimates.** The burst values are estimates. The Reckoning, threat, mana, healing and damage values come from simple models, not combat logs. Each estimate gives its assumptions and limits.
-- **Other classes.** The healing comparison uses Classic base values −10% for the other healers. The damage comparison uses the ratios of one external simulation ([MythicSim](https://mythicsim.com/wow-forever/tier-list)) and a same-gear model check.
+- **Other classes.** The healing comparison uses the DoubleZug sheets for the four Forever healers, with the spell values of the Forever spellbook ([model](models/healing/)). The damage comparison uses the ratios of one external simulation ([MythicSim](https://mythicsim.com/wow-forever/tier-list)) and a same-gear model check.
 
 ## Feedback
 
