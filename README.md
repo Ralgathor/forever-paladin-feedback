@@ -57,7 +57,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Read and try
 
-- **[Proposals](proposals.md).** The full document. For each proposal, it gives the beta text, the proposed text, the reason and the model talent from another class. It also gives the analysis, the test results and the open questions.
+- **[Proposals](proposals/README.md).** The full document, in one file for each part. For each proposal, it gives the beta text, the proposed text, the reason and the model talent from another class. It also gives the analysis, the test results and the open questions.
 - **[Talent calculator](calculator/index.html).** Live version: https://ralgathor.github.io/forever-paladin-feedback/calculator/
   - The calculator opens with the proposed trees. Push **Beta** to see the beta trees.
   - A purple tag (C) shows a changed talent. A blue tag (M) shows a talent that only moves.

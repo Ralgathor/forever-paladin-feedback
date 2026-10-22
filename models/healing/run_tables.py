@@ -1,4 +1,4 @@
-"""Tables of Analysis, Healing (proposals.md). Run: python3 run_tables.py
+"""Tables of Analysis, Healing (proposals/analysis/healing.md). Run: python3 run_tables.py
 Healing per sec after overhealing (raid and one tank) for fights of 3, 5 and 10 min."""
 import healing_model as H
 from healing_model import paladin, priest, druid, shaman, solve, budget, max_hps
