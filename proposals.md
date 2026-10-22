@@ -1,21 +1,21 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 20 changes and 8 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 20 changes and 7 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
 
 **Contents**
 
 - [How to read this document](#mzhg23y101g.322363) · [Summary](#mzhg23y101g.323287) · [Design rules](#mzhg23y101g.326276)
 - **Holy:** [C1 Reverence](#mzhg23y101g.328844) · [C2 Lingering Light](#mzhg23y101g.329447) · [C3 Infusion of Light](#mzhg23y101g.331643) · [C4 Healing Light](#mzhg23y101g.332649) · [C5 Improved Seals](#mzhg23y101g.333321) · [M1 Consecrated Ground](#mzhg23y101g.333804) · [M2 Spiritual Focus](#mzhg23y101g.333983) · [M3 Unyielding Faith](#mzhg23y101g.334094) · [C20 Illumination](#mzhg23y101g.437451)
 - **Protection:** [C6 Redoubt](#mzhg23y101g.335168) · [C7 Iron Creed](#mzhg23y101g.336049) · [C8 Divine Strength](#mzhg23y101g.337064) · [C9 Improved Righteous Fury](#mzhg23y101g.337936) · [C10 Shoulder the Burden](#mzhg23y101g.407137) · [C11 Reckoning](#mzhg23y101g.339091) · [C12 Fury's Reach](#mzhg23y101g.342190) · [C13 Shield Specialization](#mzhg23y101g.343369) · [C14 Holy Shield](#mzhg23y101g.344682) · [M4 Improved Hammer of Justice](#mzhg23y101g.407467) · [M5 Swift Judgement](#mzhg23y101g.409860)
-- **Retribution:** [C15 Conviction](#mzhg23y101g.347909) · [C16 Holy Strike and Sacred Arbiter](#mzhg23y101g.348361) · [C17 Twist of Light](#mzhg23y101g.349382) · [M6 Two-Handed Weapon Specialization](#mzhg23y101g.350635) · [M7 Repentance](#mzhg23y101g.350827) · [M8 Conviction and Benediction](#mzhg23y101g.451134)
+- **Retribution:** [C15 Conviction](#mzhg23y101g.347909) · [C16 Holy Strike](#mzhg23y101g.348361) · [C17 Twist of Light](#mzhg23y101g.349382) · [M6 Two-Handed Weapon Specialization](#mzhg23y101g.350635) · [M8 Conviction and Benediction](#mzhg23y101g.451134)
 - **Judgements and Blessings:** [The problem](#mzhg23y101g.351019) · [C18 Judgement of the Crusader](#mzhg23y101g.351763) · [Alternatives](#mzhg23y101g.352438) · [Blessings](#mzhg23y101g.427469) · [C19 Blessing of Light](#mzhg23y101g.428675) · [Alternatives to C19](#mzhg23y101g.430584)
 - **Analysis:** [Crushing blows](#mzhg23y101g.353472) · [Threat](#mzhg23y101g.357087) · [PvP burst check](#mzhg23y101g.368176) · [Mana](#mzhg23y101g.370341) · [Healing](#mzhg23y101g.419556) · [Damage](#mzhg23y101g.452318) · [Tree balance](#mzhg23y101g.374454)
 - [Beta test results](#mzhg23y101g.375616) · [Problems to report to Blizzard](#mzhg23y101g.381821) · [Watch list](#mzhg23y101g.382305) · [Open questions](#mzhg23y101g.384242) · [Withdrawn ideas](#mzhg23y101g.385874) · [Sources](#mzhg23y101g.391119)
 
 ## How to read this document
 
-- **C (change).** C1 to C18 change what a talent does, add a talent or remove a talent. A change can also move the talent. The text then gives the new row.
-- **M (move).** M1 to M7 move a talent to a different row or column. The talent text does not change.
+- **C (change).** C1 to C20 change what a talent does, add a talent or remove a talent. A change can also move the talent. The text then gives the new row.
+- **M (move).** M1 to M8 move a talent (M7 is withdrawn) to a different row or column. The talent text does not change.
 - **C18a and C18b** are the two alternatives to C18.
 - **Withdrawn ideas** have no ID. They are in the Withdrawn ideas section only.
 - **Data.** Forever client build 1.60.1.70450, with the server hotfixes of 18 October 2026, from wowforevertalents.com. Player tests from 19 October 2026 and later. The text tells you when a value comes from an in-game tooltip.
@@ -43,7 +43,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 20 chan
 | C13 | Shield Specialization | Protection, row 3 | Mana return once each 3 sec | Mana return once each 2 sec |
 | C14 | Holy Shield | Protection, row 7 | 221 Holy damage for each block (rank 3) | 221 Holy damage plus 200% of your block value for each block |
 | C15 | Conviction | Retribution, row 2 → row 1 (M8) | +1–5% critical hit chance with melee attacks | +1–5% critical hit chance with attacks and spells |
-| C16 | Sacred Arbiter | Retribution, row 4 → row 5 | +20% Holy Strike damage | Holy Strike triggers your Seal and Echo (all specs). Sacred Arbiter: +10% Holy Strike damage |
+| C16 | Holy Strike | Spell, all specs (Sacred Arbiter as in the beta) | Triggers only Seal of Light, Justice and Wisdom | Triggers your active Seal and Echo the same as a melee attack |
 | C17 | Twist of Light | Retribution, row 7 | The Echo applies to the next melee attack only | The Echo applies to all melee attacks for 10 sec |
 | C18 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
 | C19 | Blessing of Light | Baseline spell, and Healing Light (C4) | +400 Holy Light, +115 Flash of Light. Uses a Blessing slot | Removed. Healing Light gives 10/20/30% |
@@ -59,7 +59,6 @@ This document gives talent proposals for the WoW Forever Paladin. It has 20 chan
 | M4 | Improved Hammer of Justice | Protection | Row 4 | Row 3 |
 | M5 | Swift Judgement | Protection | Row 4, requires Improved Seal of Fury | Row 3, no requirement |
 | M6 | Two-Handed Weapon Specialization | Retribution | Row 5 (20 points) | Row 4 (15 points) |
-| M7 | Repentance | Retribution | Row 5 (20 points) | Row 4 (15 points) |
 | M8 | Conviction and Benediction | Retribution | Benediction row 1, Conviction row 2 | Conviction row 1, Benediction row 2 |
 
 ## Design rules
@@ -260,7 +259,7 @@ The Protection proposals give:
 - **Sacred Duty.** Sacred Duty also decreases the cooldown of Shoulder the Burden by 30/60 sec. At 2/2, the cooldown is 4 min. New Sacred Duty text: "Increases your total Stamina by 2/4% and reduces the cooldown of your Divine Shield, Divine Protection, Templar's Bulwark, and Shoulder the Burden spells by 30/60 sec."
 - **Signature talents.** Each tree keeps a 1-point signature talent in rows 3 and 4:
   - Holy: Voice of Truth and Divine Favor.
-  - Retribution: Seal of Command and Repentance (M7).
+  - Retribution: Seal of Command and Sacred Arbiter.
   - Protection: Swift Judgement and Shoulder the Burden.
 - **Other specs.** Holy and Retribution can get it with 15 points. A Holy Paladin can use it to save an ally in a group.
 - **No change.** Righteous Fury, Seal of Fury and its absorb shield stay baseline spells.
@@ -355,8 +354,8 @@ These proposals connect the melee attacks of Retribution to its Holy spells. The
 | 1 (0) | Deflection, Conviction (C15, M8) | 10 |
 | 2 (5) | Improved Judgement, Holy Conduit, Benediction (M8) | 9 |
 | 3 (10) | Vindication, Sanctified Judgement, Seal of Command, Pursuit of Justice | 9 |
-| 4 (15) | Eye for an Eye, Repentance (M7), Two-Handed Weapon Specialization (M6) | 6 |
-| 5 (20) | Vengeance, Sacred Arbiter (C16) | 4 |
+| 4 (15) | Eye for an Eye, Sacred Arbiter, Two-Handed Weapon Specialization (M6) | 6 |
+| 5 (20) | Vengeance, Repentance | 4 |
 | 6 (25) | Champion of the Light, Instrument of Law | 5 |
 | 7 (30) | Twist of Light (C17) | 1 |
 
@@ -369,20 +368,17 @@ Retribution has 44 points (beta: 44).
 - **Real change.** In the beta, Conviction already applies to damage Seals and Hammer of Wrath. The change adds only Holy Shock, Exorcism, Consecration and heals.
 - **Cost for healers.** With M8, Conviction is in row 1. Thus, a Holy Paladin needs only 5 Retribution points.
 
-### C16. Holy Strike triggers your Seals, Sacred Arbiter +10%, row 4 → row 5
+### C16. Holy Strike triggers your Seal and Echo (spell change)
 
 - **Proposed Holy Strike text (spell, all specs).** "An instant strike that causes 50% weapon damage plus an additional 81 to 105 as Holy damage. Triggers your active Seal and Echo the same as a melee attack."
-- **Proposed Sacred Arbiter text.** "Increases the damage of your Holy Strike ability by 10% and causes it to refresh all Judgement effects on the target, including those of other Paladins."
 - **Change.** In the beta, Holy Strike triggers Seal of Light, Justice and Wisdom. It does not trigger Seal of Command, Righteousness or Fury. With C16, Holy Strike triggers all Seals, as all melee attacks do. Seal of Command keeps its usual chance: 7 procs each minute (42% with a 3.6 sec weapon). Holy Strike also triggers a Twist of Light Echo, because the Echo applies to melee attacks.
-- **Sacred Arbiter.** It keeps the Judgement refresh of the beta. The damage bonus goes from 20% to 10%.
+- **Sacred Arbiter does not change.** It keeps the beta text (+20% Holy Strike damage and the Judgement refresh) and the beta row (row 4, 15 points).
 - **Why the trigger is in the spell.** A talent that gives only a chance to trigger is weak design: the player does not see its effect each time. In the spell, the chance is the usual Seal rule. Thus, one rule is true for all melee attacks, with no exceptions.
-- **Value.** Retribution gets +9% DPS against the beta (see Analysis, Damage). The first version of C16 (Holy Strike always triggers Seal of Command) gave +13% and put Retribution above Fury Warrior.
+- **Value.** Retribution gets +10% DPS against the beta (see Analysis, Damage). The first version of C16 (Sacred Arbiter: Holy Strike always triggers Seal of Command) gave +13% and put Retribution above Fury Warrior.
 - **Model.** Stormstrike (Shaman) makes the weapon strike the core of Enhancement. Holy Strike with your Seals does the same for Retribution.
 - **Protection.** Seal of Fury on each Holy Strike gives about +10 TPS. The Threat tables do not include it.
 - **Seal of Justice.** In the beta, Holy Strike already triggers Seal of Justice and its stun chance. C16 does not change this.
-- **Row.** Sacred Arbiter goes from 15 to 20 points. Repentance goes from 20 to 15 points (M7).
-- **Tradeoffs.** Protection builds that take Sacred Arbiter for its Judgement refresh now need 20 Retribution points.
-- **Tuning.** If Retribution does more damage than the pure damage classes, decrease the Sacred Arbiter bonus first (see Watch list, W15).
+- **Tuning.** If Retribution does more damage than the pure damage classes in raids, decrease the Sacred Arbiter bonus first: +20% → +10% (see Watch list, W15).
 
 ### C17. Twist of Light: the Echo lasts 10 sec
 
@@ -404,12 +400,7 @@ Retribution has 44 points (beta: 44).
 
 - **Model.** The Warrior version opens at 15 points.
 - **Values.** 2/4/6%, the same as the beta.
-- **Space.** Row 4 has space after C16.
-
-### M7. Repentance: row 5 → row 4 (20 → 15 points)
-
-- It takes the row 4 place of Sacred Arbiter (C16).
-- Holy and Protection can get it more easily in PvP (see Watch list, W9).
+- **Space.** Row 4 has a free column.
 
 ### M8. Conviction and Benediction change rows (Conviction row 2 → row 1)
 
@@ -796,17 +787,17 @@ The values are estimates, not a simulation.
 
 | Part of the burst | Proposed | Beta, no stored attacks | Beta, 4 stored attacks |
 | --- | --- | --- | --- |
-| Holy Strike | 470 (+10%, and Seal of Command on 41% of Holy Strikes, C16) | 390 (+20% damage, no Seal effect) | 390 |
+| Holy Strike | 500 (+20%, and Seal of Command on 41% of Holy Strikes, C16) | 390 (+20% damage, no Seal effect) | 390 |
 | Extra attacks (about 390 each) | 2: 780 | 0 | 4: 1,570 |
 | Auto attacks (about 1.7) | 670 | 670 | 670 |
 | Two Judgements on a stunned target (about 535 each) | 1,070 | 1,070 | 1,070 |
-| **Total** | **2,990** | **2,130** | **3,700** |
+| **Total** | **3,020** | **2,130** | **3,700** |
 
 All values are approximate.
 
-- **Result.** The proposal is about 40% above the usual beta burst. It is about 19% below the best beta burst (the Classic bomb with 4 stored attacks).
-- **Uncertainty.** About ±25%: 2,240–3,740.
-- **Swift Judgement** gives about 18% of the burst. When Swift Judgement is on cooldown (60 sec, and 50 sec for Hammer of Justice), the proposed total is about 2,450. It is on the watch list (W6).
+- **Result.** The proposal is about 42% above the usual beta burst. It is about 18% below the best beta burst (the Classic bomb with 4 stored attacks).
+- **Uncertainty.** About ±25%: 2,270–3,780.
+- **Swift Judgement** gives about 18% of the burst. When Swift Judgement is on cooldown (60 sec, and 50 sec for Hammer of Justice), the proposed total is about 2,490. It is on the watch list (W6).
 
 ### Mana
 
@@ -1155,10 +1146,10 @@ This section compares the single-target damage of Retribution with the other dam
 
 #### Summary
 
-- With all proposals, Retribution is about equal to Fury Warrior at fresh level 60. It is 99% of Fury and 103% of the average of the pure damage classes.
+- With all proposals, Retribution is about equal to Fury Warrior at fresh level 60. It is 101% of Fury and 105% of the average of the pure damage classes.
 - In the beta, Retribution is 95% of the pure damage classes. This is the hybrid target. Players report it from developer comments: hybrids do about 5% less damage than pure damage classes.
 - C16 gives almost all of the increase. C17 gives the same damage as the beta Seal swap, but the mana lasts for the full fight.
-- Retribution increases less with gear than Fury and Rogue. In Naxxramas, it is about 80% of Fury (86% with flatter gear). Thus, the advantage at fresh level 60 does not stay.
+- Retribution increases less with gear than Fury and Rogue. In Naxxramas, it is about 82% of Fury (87% with flatter gear). Thus, the advantage at fresh level 60 does not stay.
 - Judgement of the Crusader gives Retribution about +9% DPS at fresh level 60. C18 makes this possible for each Paladin.
 
 #### 1. Build and gear
@@ -1197,11 +1188,11 @@ All proposals (C16 as in this document), raid buffs, 2 min fight:
 | --- | --- | --- |
 | Auto attacks | 115 | 31% |
 | Seal of Command | 80 | 22% |
+| Holy Strike | 54 | 15% |
 | Judgement | 52 | 14% |
-| Holy Strike | 50 | 14% |
 | Seal of Righteousness (Echo) | 47 | 13% |
 | Hammer of Wrath (last 20% of the fight) | 22 | 6% |
-| **Total** | **366** |  |
+| **Total** | **370** |  |
 
 - About 70% of the damage is Holy damage. Armor does not decrease it.
 - The global cooldown is active 54% of the time. Thus, you have time for Exorcism or Consecration.
@@ -1216,14 +1207,15 @@ Same build and gear, raid buffs, 2 min fight. The beta build has the same damage
 | Beta: a Seal change before each swing | 336 | — | −39.6 per sec: zero after 72 sec |
 | Beta: Seal of Command only, no Seal changes | 301 | −10% | Lasts |
 | C16, first version: Holy Strike always triggers Seal of Command, no damage bonus | 379 | +13% | Lasts |
-| C16: Holy Strike triggers your Seal and Echo, Sacred Arbiter +20% | 370 | +10% | Lasts |
-| **C16: Holy Strike triggers your Seal and Echo, Sacred Arbiter +10%** | **366** | **+9%** | **Lasts** |
+| **C16: Holy Strike triggers your Seal and Echo, Sacred Arbiter as in the beta (+20%)** | **370** | **+10%** | **Lasts** |
+| C16: Holy Strike triggers your Seal and Echo, Sacred Arbiter +10% | 366 | +9% | Lasts |
 | C16: Holy Strike triggers your Seal and Echo, Sacred Arbiter +0% | 361 | +8% | Lasts |
 | C16: only Seal of Command, by chance, Sacred Arbiter +0% | 349 | +4% | Lasts |
 
-- **C16 gives the increase.** Holy Strike gives about 30 DPS more than in the beta. Seal of Command triggers on 42% of Holy Strikes, Seal of Righteousness triggers on all Holy Strikes, and Sacred Arbiter gives +10%.
+- **C16 gives the increase.** Holy Strike gives about 34 DPS more than in the beta. Seal of Command triggers on 42% of Holy Strikes, and Seal of Righteousness triggers on all Holy Strikes.
 - **C17 does not add damage.** It gives the damage of the beta Seal swap for the full fight. In the beta, the mana is zero after 72 sec. Then the Paladin can use only Seal of Command (301 DPS).
-- **The C16 value is a choice.** The first version (+13%) puts Retribution above Fury Warrior (see part 5). The version with the Echo and +10% has one rule for all melee attacks, and it is 4% less.
+- **The C16 value is a choice.** The first version (+13%) puts Retribution above Fury Warrior (see part 5). The version in this document has one rule for all melee attacks and keeps Sacred Arbiter as in the beta. It is 2% less.
+- **Sacred Arbiter at +10% changes little.** It gives only 4 DPS (1%) less. From Molten Core, Retribution is already below Fury (part 6).
 
 #### 5. Comparison with the other damage classes
 
@@ -1235,8 +1227,8 @@ The pure average is the best spec of each pure damage class: Warrior 929, Rogue 
 | --- | --- | --- |
 | Survival Hunter (melee weaving) | 1,088 | 122% |
 | Retribution, C16 first version | About 957 | 107% |
+| **Retribution, all proposals** | **About 934** | **105%** |
 | Fury Warrior | 929 | 104% |
-| **Retribution, all proposals** | **About 923** | **103%** |
 | Demonology Warlock | 885 | 99% |
 | Fire Mage | 860 | 96% |
 | Retribution, beta | 847 | 95% |
@@ -1249,7 +1241,7 @@ The pure average is the best spec of each pure damage class: Warrior 929, Rogue 
 | Elemental Shaman | 519 | 58% |
 
 - **In the beta, Retribution is 95% of the pure average.** This is the hybrid target.
-- **With all proposals, Retribution is 99% of Fury and 103% of the pure average.** Without Combat Rogue (the lowest pure class), the pure average is 940. Retribution is then 98% of it.
+- **With all proposals, Retribution is 101% of Fury and 105% of the pure average.** Without Combat Rogue (the lowest pure class), the pure average is 940. Retribution is then 99% of it.
 - **Retribution is the strongest hybrid** in the beta and with the proposals. In the beta, it is 7% above Feral and 14% above Enhancement.
 - **Check with the same gear.** The model also calculates an Arms Warrior with the gear of part 1. The beta Retribution is 5% above Arms. MythicSim gives 6%. Thus, the model and MythicSim agree.
 - **One source only.** The MythicSim page has some errors in its rank order. Its Hunter values use melee weaving. Nobody has confirmed melee weaving in a raid.
@@ -1264,7 +1256,7 @@ Retribution increases less with gear than the pure melee classes. Blizzard said 
 - Weapons follow the Classic steps. Two-handed: 54, 56, 63, 66 and 75 damage per sec. One-handed (main hand and off hand): 42 and 40 at fresh level 60, up to 64 and 60 in Naxxramas.
 - Retribution, Fury (two weapons), Arms and Combat Rogue get the same gear and the same raid buffs.
 - Flatter gear: from Molten Core, the gear increases at half the rate, as in Threat, part 3.
-- The model uses only the increase of each class from fresh level 60. Retribution starts at 99% of Fury (part 5).
+- The model uses only the increase of each class from fresh level 60. Retribution starts at 101% of Fury (part 5).
 - Two cases for Retribution: plate gear gives more spell damage at each tier, or the spell damage stays at 254.
 
 **DPS increase from fresh level 60 (Classic steps)**
@@ -1281,11 +1273,11 @@ Retribution increases less with gear than the pure melee classes. Blizzard said 
 
 | Tier | Classic steps | Classic steps, spell damage stays at 254 | Flatter gear | Flatter gear, spell damage stays at 254 |
 | --- | --- | --- | --- | --- |
-| Fresh level 60 | 99% | 99% | 99% | 99% |
-| Pre-raid best in slot | 93% | 91% | 93% | 91% |
-| Molten Core | 89% | 85% | 91% | 88% |
-| Blackwing Lair | 84% | 78% | 88% | 84% |
-| Naxxramas | 80% | 74% | 86% | 81% |
+| Fresh level 60 | 101% | 101% | 101% | 101% |
+| Pre-raid best in slot | 94% | 92% | 94% | 92% |
+| Molten Core | 90% | 86% | 92% | 89% |
+| Blackwing Lair | 85% | 80% | 89% | 85% |
+| Naxxramas | 82% | 75% | 87% | 82% |
 
 **Why Retribution increases less**
 
@@ -1299,8 +1291,8 @@ Retribution increases less with gear than the pure melee classes. Blizzard said 
 
 **Result**
 
-- **Retribution at the level of Fury at fresh level 60 is not too strong for a full content phase.** It is above the hybrid target only until about pre-raid best in slot. From Molten Core, it is 11–20% below Fury (9–14% with flatter gear).
-- **Recommendation: keep C16 with Sacred Arbiter at +10%.** Check Retribution against Fury at each gear tier, not only at fresh level 60 (see Watch list, W15).
+- **Retribution at the level of Fury at fresh level 60 is not too strong for a full content phase.** It is above the hybrid target only until about pre-raid best in slot. From Molten Core, it is 10–18% below Fury (8–13% with flatter gear).
+- **Recommendation: keep C16, with Sacred Arbiter as in the beta (+20%).** Check Retribution against Fury at each gear tier, not only at fresh level 60 (see Watch list, W15).
 - **The tier that Blizzard uses for balance is important.** If Blizzard balances at the raid release (9 December 2026), the proposals are correct for the first weeks. After that, Retribution falls behind.
 
 #### 7. Judgement of the Crusader
@@ -1312,7 +1304,7 @@ Judgement of the Crusader gives about +9% DPS at fresh level 60. It adds 161 Hol
 | Seal of Command (29%) | 57 | About 0.15 | +9 |
 | Seal of Righteousness (12%) | 24 | About 0.35 | +8 |
 | Judgement (42.9%) | 84 | About 0.13 | +11 |
-| Holy Strike (21.45%) | 40 | About 0.10 | +4 |
+| Holy Strike (21.45%) | 44 | About 0.10 | +4 |
 | Hammer of Wrath (42.9%, last 20% of the fight) | 69 | About 0.03 | +2 |
 | **Total** |  |  | **About +34 (+9%)** |
 
@@ -1325,8 +1317,8 @@ Judgement of the Crusader gives about +9% DPS at fresh level 60. It adds 161 Hol
 
 - **Stat values (raid buffs, 5 min fight).** 1 spell damage: 0.20 DPS. 1 Attack Power: 0.12 DPS. 1 Strength: 0.29 DPS. 1% critical hit: 5.0 DPS. 1% hit: 5.4 DPS, up to the cap. Thus, 1 spell damage is worth about 1.7 Attack Power. Plate items with spell damage are good for Retribution, and Warriors do not want them.
 - **Hit cap.** The build has 8% hit (Precision 3% + 5% from gear). The cap is about 9%.
-- **Consecrated Ground with Consecration on cooldown.** About +23% on one target (366 → 451 DPS). This is true if the +10% applies to all your Holy damage on the target, as the beta tests show. The mana is zero after 66 sec. It is strong burst for 2 Holy points (see Watch list, W16).
-- **Exorcism against Undead and Demons.** About +12% (410 DPS). If you use it on cooldown, the mana is zero after about 2 min.
+- **Consecrated Ground with Consecration on cooldown.** About +23% on one target (370 → 456 DPS). This is true if the +10% applies to all your Holy damage on the target, as the beta tests show. The mana is zero after 66 sec. It is strong burst for 2 Holy points (see Watch list, W16).
+- **Exorcism against Undead and Demons.** About +12% (414 DPS). If you use it on cooldown, the mana is zero after about 2 min.
 
 #### 9. Limits
 
@@ -1480,7 +1472,7 @@ These talents are stronger than, or different from, the talents of other classes
 | Sanctified Judgement | Returns more than 60% of the base cost of the Seal with Benediction | Possibly a bug (see Problems to report to Blizzard) |
 | Pursuit of Justice | 15% at 2/2. Better than the 8% boot enchant | On the watch list (W1) |
 | Eye for an Eye | Uses the damage taken after armor and resistance | None |
-| Sacred Arbiter | +20% Holy Strike damage. Refreshes Light, Wisdom, Justice and Crusader | C16: +10%, and Holy Strike triggers all Seals |
+| Sacred Arbiter | +20% Holy Strike damage. Refreshes Light, Wisdom, Justice and Crusader | C16 keeps the +20%. Holy Strike triggers all Seals (spell change) |
 | Two-Handed Weapon Specialization | Melee attacks, Seals, Judgements, Holy Strike and the Twist of Light Echo | Supports M6 |
 | Vengeance | Multiplies with other % damage. Critical hits from procs add stacks | None |
 | Repentance | Diminishing returns category not tested | None |
@@ -1521,16 +1513,16 @@ These are risks to check in tests. None of them needs a change now.
 | W3 | Retribution gets Strength and 3% hit with one 8-point Protection dip | Monitor |
 | W4 | A 7-point Retribution dip decreases the mana that Protection uses with Consecration from about 112 to 76 per sec | Monitor: all Protection players can take this dip |
 | W5 | Holy is the main dip for the two other trees (Seal damage, Infusion of Light, Reverence, Consecrated Ground) | Monitor: Retribution and Protection still give parry, critical hit, mana costs, Strength and hit |
-| W6 | Reckoning (C11): a 0/26/25 two-handed build bursts for about 2,990 in one Hammer of Justice stun | Monitor: this is below the best beta case (about 3,700). Swift Judgement gives about 18% of it |
+| W6 | Reckoning (C11): a 0/26/25 two-handed build bursts for about 3,020 in one Hammer of Justice stun | Monitor: this is below the best beta case (about 3,700). Swift Judgement gives about 18% of it |
 | W7 | Iron Creed (C7) gives −10% damage taken to all specs with Righteous Fury and 25 Protection points | Monitor in PvP. This is the one exception to the rule on talents that improve a buff |
 | W8 | Fury's Reach (C12): a 15-point Protection dip with Swift Judgement gives a 20 yard Judgement | Monitor: the range works only with Seal of Fury |
-| W9 | Repentance at 15 Retribution points (M7) and Templar's Bulwark (an absorb of 100% of health, three times Last Stand) are strong PvP dips | Monitor |
+| W9 | Templar's Bulwark (an absorb of 100% of health, three times Last Stand) is a strong PvP dip | Monitor |
 | W10 | Shield Specialization (C13) can make Consecration too cheap against groups that hit fast (up to 58–98 mana per sec, related to maximum mana) | Go back to 3 sec, or decrease the return from 4% to 3% |
 | W11 | Protection threat in late raids depends on C14 and on the block value of Forever gear (see Threat, part 2) | Change the 200% of C14. Then Iron Creed +100% Holy Strike threat. A shield attack only as the last step |
 | W12 | Infusion of Light (C3): a 7-point Holy dip gives a 1.5 sec Holy Light after each Holy Strike in PvP | Holy Strike gives only −0.25/0.5 sec. Or only Holy Strike critical hits trigger it, as in the beta |
 | W13 | C19: the Holy Paladin is the best single-target healer only with critical heals and Lingering Light (C2). The Lingering Light heal can overheal | Increase Healing Light to 35% (5 ranks: 7/14/21/28/35%) |
 | W14 | Illumination (C20) at 75% gives Holy more mana in PvP and in long fights | Decrease it to 65% if Holy is first by more than 20% in fights of 10 min |
-| W15 | Retribution with C16 is about equal to Fury Warrior at fresh level 60 (99%). It falls to about 80% of Fury in Naxxramas (see Analysis, Damage, part 6) | Compare Retribution with Fury at each gear tier, not only at fresh level 60. If Retribution is above the pure damage classes in raids, decrease the Sacred Arbiter bonus first (+10% → +0%) |
+| W15 | Retribution with C16 is about equal to Fury Warrior at fresh level 60 (101%). It falls to about 82% of Fury in Naxxramas (see Analysis, Damage, part 6) | Compare Retribution with Fury at each gear tier, not only at fresh level 60. If Retribution is above the pure damage classes in raids, decrease the Sacred Arbiter bonus first (+20% → +10%) |
 | W16 | Consecrated Ground (2 Holy points) with Consecration on cooldown gives Retribution about +23% on one target. The mana lasts about 66 sec | If Retribution uses it on bosses, apply the +10% only to Holy spells, as the tooltip says, not to Seals and Judgements |
 
 ## Open questions
@@ -1590,13 +1582,13 @@ We examined these ideas and rejected them. They are not proposals.
 | Two-Handed Weapon Specialization at 10% | 6% is already more than the 3% of the Warrior |
 | Fix the flat ranks of Vindication | Forever already changed it |
 | Reckoning works only with a shield | It would stop the Classic two-handed Reckoning bomb |
-| Holy Strike releases all 4 Reckoning charges | The 0/26/25 burst would be about 3,770, not 2,990 (+26%) |
+| Holy Strike releases all 4 Reckoning charges | The 0/26/25 burst would be about 3,800, not 3,020 (+26%) |
 | Reckoning at 40% chance, once each 1.5 sec | Not sufficient charges on a boss (about 1.6 extra attacks each 10 sec) |
 | Reckoning at 100% chance, once each 1.5 sec | The charges stay at the maximum of 4. More than half of the procs are lost. You cannot choose when to keep charges |
 | Exchange Reckoning (row 5) and Iron Creed (row 6) | Reckoning then costs 25 points, but this does not stop a 0/30/21 hybrid. The 2-charge limit does the job without a move |
 | Iron Creed without the Holy Strike threat bonus | Simpler text, but about 10 TPS less |
 | Aura Mastery or another talent that improves an aura | A talent that improves a buff, with low value (about −4% damage taken at 3 points). Fury's Reach (C12) gives the utility |
-| Sacred Arbiter with +30% Holy Strike damage | About +8 damage per sec: too small for a 20-point talent |
+| Sacred Arbiter with +30% Holy Strike damage | About +8 damage per sec: too small for a 15-point talent |
 | Two Seals active at the same time (not C17) | Fewer global cooldowns, but no Seal swaps. The talent is about Seal swaps |
 | Two Judgements for each Paladin | More global cooldowns. This is against C17 |
 | Judgement of the Crusader goes into Retribution (Holy Strike applies it) | A raid without a Retribution Paladin loses the debuff |
@@ -1618,6 +1610,8 @@ We examined these ideas and rejected them. They are not proposals.
 | Sacred Arbiter: Holy Strike always triggers Seal of Command (first version of C16) | +13% Retribution damage against the beta. Retribution is then above Fury Warrior at fresh level 60 (see Analysis, Damage) |
 | Sacred Arbiter: Holy Strike triggers Seal of Command by chance | A talent that gives only a chance to trigger is weak design. C16 puts the usual Seal rule in the spell |
 | Holy Strike triggers the active Seal, but not the Twist of Light Echo | One more rule to learn. Holy Strike is a melee attack, and the Echo applies to melee attacks |
+| Sacred Arbiter at +10% (with C16) | Only about 1% less damage (4 DPS) at fresh level 60. From Molten Core, Retribution is already below Fury. The beta talent needs no change |
+| M7: Repentance to row 4 (15 points), Sacred Arbiter to row 5 | Not necessary. C16 does not change Sacred Arbiter, so it stays in row 4. Repentance stays a 20-point talent |
 
 ## Sources
 
