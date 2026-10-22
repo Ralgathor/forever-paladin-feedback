@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 21 changes (C1–C21) and 6 moves (M1, M2, M4–M6 and M8; M3 and M7 are withdrawn) for the Holy, Protection and Retribution trees. Three changes are new talents.
+- **Proposals:** 22 changes (C1–C22) and 6 moves (M1, M2, M4–M6 and M8; M3 and M7 are withdrawn) for the Holy, Protection and Retribution trees. Three changes are new talents.
 - **Talent calculator:** you can try the proposals and compare them with the beta trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
 - **Builds:** the best builds for each spec and role (raid, dungeon, PvP), with calculator codes. Also the builds that use a different tree for a role.
@@ -40,6 +40,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C14 Holy Shield:** each block also does 200% of your block value as Holy damage. Paladin threat then increases with gear, as Warrior and Druid threat does.
 - **M4 Improved Hammer of Justice:** row 4 → row 3.
 - **M5 Swift Judgement:** row 4 → row 3, with no requirement.
+- **C22 Guardian's Favor:** Lay on Hands drains only 75/50% of your remaining mana (beta: all of it). The talent keeps its Blessing of Protection and Blessing of Freedom effects. Alternative C22a: the spell drains 50% for all Paladins.
 
 **Retribution**
 

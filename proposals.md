@@ -1,12 +1,12 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 21 changes and 6 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 22 changes and 6 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
 
 **Contents**
 
 - [How to read this document](#mzhg23y101g.322363) · [Summary](#mzhg23y101g.323287) · [Design rules](#mzhg23y101g.326276)
 - **Holy:** [C1 Reverence](#mzhg23y101g.328844) · [C2 Lingering Light](#mzhg23y101g.329447) · [C3 Infusion of Light](#mzhg23y101g.331643) · [C4 Healing Light](#mzhg23y101g.332649) · [C5 Improved Seals](#mzhg23y101g.333321) · [M1 Consecrated Ground](#mzhg23y101g.333804) · [M2 Spiritual Focus](#mzhg23y101g.333983) · [C20 Illumination](#mzhg23y101g.437451)
-- **Protection:** [C6 Redoubt](#mzhg23y101g.335168) · [C7 Iron Creed](#mzhg23y101g.336049) · [C8 Divine Strength](#mzhg23y101g.337064) · [C9 Improved Righteous Fury](#mzhg23y101g.337936) · [C10 Shoulder the Burden](#mzhg23y101g.407137) · [C11 Reckoning](#mzhg23y101g.339091) · [C12 Fury's Reach](#mzhg23y101g.342190) · [C13 Shield Specialization](#mzhg23y101g.343369) · [C14 Holy Shield](#mzhg23y101g.344682) · [M4 Improved Hammer of Justice](#mzhg23y101g.407467) · [M5 Swift Judgement](#mzhg23y101g.409860)
+- **Protection:** [C6 Redoubt](#mzhg23y101g.335168) · [C7 Iron Creed](#mzhg23y101g.336049) · [C8 Divine Strength](#mzhg23y101g.337064) · [C9 Improved Righteous Fury](#mzhg23y101g.337936) · [C10 Shoulder the Burden](#mzhg23y101g.407137) · [C11 Reckoning](#mzhg23y101g.339091) · [C12 Fury's Reach](#mzhg23y101g.342190) · [C13 Shield Specialization](#mzhg23y101g.343369) · [C14 Holy Shield](#mzhg23y101g.344682) · [M4 Improved Hammer of Justice](#mzhg23y101g.407467) · [M5 Swift Judgement](#mzhg23y101g.409860) · [C22 Guardian's Favor](#mzhg23y101g.494993)
 - **Retribution:** [C15 Conviction](#mzhg23y101g.347909) · [C16 Holy Strike](#mzhg23y101g.348361) · [C17 Twist of Light](#mzhg23y101g.349382) · [M6 Two-Handed Weapon Specialization](#mzhg23y101g.350635) · [M8 Conviction and Benediction](#mzhg23y101g.451134) · [C21 Benediction](#mzhg23y101g.479364)
 - **Judgements and Blessings:** [The problem](#mzhg23y101g.351019) · [C18 Judgement of the Crusader](#mzhg23y101g.351763) · [Alternatives](#mzhg23y101g.352438) · [Blessings](#mzhg23y101g.427469) · [C19 Blessing of Light](#mzhg23y101g.428675) · [Alternatives to C19](#mzhg23y101g.430584)
 - **Analysis:** [Crushing blows](#mzhg23y101g.353472) · [Threat](#mzhg23y101g.357087) · [PvP burst check](#mzhg23y101g.368176) · [Mana](#mzhg23y101g.370341) · [Healing](#mzhg23y101g.419556) · [Damage](#mzhg23y101g.452318) · [Builds](#mzhg23y101g.482029) · [Tree balance](#mzhg23y101g.374454)
@@ -14,7 +14,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 21 chan
 
 ## How to read this document
 
-- **C (change).** C1 to C21 change what a talent does, add a talent or remove a talent. C16, C18 and C19 change baseline spells. A change can also move the talent. The text then gives the new row.
+- **C (change).** C1 to C22 change what a talent does, add a talent or remove a talent. C16, C18 and C19 change baseline spells. A change can also move the talent. The text then gives the new row.
 - **M (move).** M1 to M8 move a talent (M3 and M7 are withdrawn) to a different row or column. The talent text does not change.
 - **C18a and C18b** are the two alternatives to C18.
 - **Withdrawn ideas** have no ID. They are in the Withdrawn ideas section only.
@@ -49,6 +49,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 21 chan
 | C19 | Blessing of Light | Baseline spell, and Healing Light (C4) | +400 Holy Light, +115 Flash of Light. Uses a Blessing slot | Removed. Healing Light gives 10/20/30% |
 | C20 | Illumination | Holy, row 4 | Critical heals return 50% of the base cost (Classic: 100%) | Critical heals return 75% of the base cost |
 | C21 | Benediction | Retribution, row 2 (M8) | 5 ranks: 2/4/6/8/10% on instant spells and abilities | 3 ranks: 3/6/9% |
+| C22 | Guardian's Favor | Protection, row 2 | Blessing of Protection −1/2 min, Blessing of Freedom +3/6 sec. Lay on Hands drains all your remaining mana | The same, and Lay on Hands drains only 75/50% of your remaining mana. Alternative C22a: the spell drains 50% for all Paladins |
 
 **Moves**
 
@@ -193,13 +194,14 @@ The Protection proposals give:
 - A ranged pull (C12).
 - More stable mana for tanks (C13).
 - Threat that increases with gear (C14).
+- A Lay on Hands that does not drain all the mana (C22).
 
 ### Protection layout
 
 | Row (points necessary) | Talents | Points in the row |
 | --- | --- | --- |
 | 1 (0) | Divine Strength (C8), Redoubt (C6) | 10 |
-| 2 (5) | Precision, Guardian's Favor, Anticipation | 10 |
+| 2 (5) | Precision, Guardian's Favor (C22), Anticipation | 10 |
 | 3 (10) | Swift Judgement (M5), Improved Hammer of Justice (M4), Shield Specialization (C13), Sacred Duty | 9 |
 | 4 (15) | Fury's Reach (C12), One-Handed Weapon Specialization, Shoulder the Burden (C10) | 6 |
 | 5 (20) | Templar's Bulwark, Reckoning (C11) | 6 |
@@ -337,6 +339,59 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 
 - In the beta, Swift Judgement requires Improved Seal of Fury. C10 removes Improved Seal of Fury. Thus, Swift Judgement has no requirement.
 - Row 3 has space after C9 and C10.
+
+### C22. Guardian's Favor: Lay on Hands drains less mana
+
+- **Proposed text.** "Reduces the cooldown of your Blessing of Protection by 1/2 min, increases the duration of your Blessing of Freedom by 3/6 sec, and your Lay on Hands drains only 75/50% of your remaining mana." 2 ranks in row 2, the same as the beta.
+- **Change.** Only the Lay on Hands part is new. Lay on Hands keeps its heal, its 20 min cooldown and its mana for the target.
+- **Problem.** Lay on Hands drains all the remaining mana of the Paladin (Forever spellbook, all ranks). Forever decreases the cooldown from 1 hour to 20 min. Thus, the Paladin can use it about one time for each boss. But the drain is largest when the mana is full, early in a fight. Thus, Paladins use it only when their mana is already low.
+- **Other saves.** At 0 mana, the Paladin cannot cast Divine Shield (110 mana), Blessing of Protection (7% of base mana) or Hammer of Justice (100 mana). With C22, the Paladin always keeps half of the mana.
+
+**Cast at full mana**
+
+| Spec (maximum mana, mana income) | Heal (maximum health, estimate) | Beta: time until the mana is back | C22 2/2: drain, time until the mana is back |
+| --- | --- | --- | --- |
+| Holy (4,416, +22.6 per sec) | About 4,000 | 3 min 15 sec | 2,208: 1 min 38 sec |
+| Protection, fresh level 60 (2,897, +3.9 per sec while tanking) | About 5,500 | 12 min 23 sec | 1,449: 6 min 11 sec |
+| Protection, Naxxramas (4,900, +29.8 per sec) | About 8,500 | 2 min 44 sec | 2,450: 1 min 22 sec |
+
+The mana values come from Analysis, Mana and Analysis, Healing, part 8.
+
+**Why 50%**
+
+At 900 healing power, Flash of Light and Holy Light give 5.42 healing for each mana point (C19). Thus, 4,000 healing costs about 738 mana. If the drain is less than 738 mana, Lay on Hands is more efficient than the usual heals.
+
+| Drain (% of the remaining mana) | Drain at full mana (Holy) | More efficient than the usual heals below | Mana that stays after a cast at 30% mana |
+| --- | --- | --- | --- |
+| 25% | 1,104 | 67% mana | 994 |
+| 40% | 1,766 | 42% mana | 795 |
+| 50% (C22, rank 2) | 2,208 | 33% mana | 662 |
+| 75% (C22, rank 1) | 3,312 | 22% mana | 331 |
+| 100% (beta) | 4,416 | 17% mana | 0 |
+
+- Below 50%, a healer can use Lay on Hands for mana at half mana. Then it is not an emergency heal.
+- Above 60%, the drain is almost the same as the beta.
+- With better gear, the healing for each mana point increases more than the health. Thus, 50% becomes safer in late raids.
+
+**Mana for the target**
+
+- Rank 3 restores 550 mana to the target. The drain occurs first.
+- If the Paladin casts it on itself, the Paladin gets mana below 1,100 mana (beta: below 550). The maximum is +550 in the two cases, at 0 mana.
+- This is about one time for each boss: about 5% of the mana of a Holy Paladin in a 5 min fight. A Major Mana Potion gives 1,350–2,250 each 2 min. See W18.
+
+**Why Guardian's Favor**
+
+- **Theme.** It improves the saves that the Paladin casts on allies: Blessing of Protection and Blessing of Freedom. Lay on Hands is the third save of this type.
+- **Row 2.** The other specs can get it (design rule 2).
+- **Builds.** All Holy builds, the PvP Retribution builds and two of the four Protection builds already take it (see Analysis, Builds). For these builds, C22 costs no points. The Retribution raid builds do not take it. They keep the full drain.
+- **Precedent.** Sacred Duty gives two effects in one talent. Weaponmaster (Warrior) merges four weapon talents. Forever removes Improved Lay on Hands. Thus, C22 does not add a talent for one spell.
+- **Design rule 1.** Lay on Hands is not a buff. Thus, C22 does not break the rule.
+
+**Alternative to C22**
+
+| ID | Option | How it works | Precedent | Tradeoff |
+| --- | --- | --- | --- | --- |
+| C22a | Change the base spell (use this if Blizzard does not want the talent) | Lay on Hands drains 50% of the remaining mana for all Paladins. Guardian's Favor stays as in the beta | Forever moves the cooldown of Improved Lay on Hands into the spell | All specs get it with no points. There is no talent choice. Retribution raid builds also get it |
 
 ## Retribution
 
@@ -1502,9 +1557,9 @@ This table uses the proposed trees with M8.
 | --- | --- | --- | --- | --- |
 | Holy | Improved Seals, Divine Intellect · Infusion of Light, Reverence, Spiritual Focus, Unyielding Faith | Seal damage, regeneration while casting, a fast Holy Light (7–8 points) | Seal damage, regeneration, Intellect for Shield Specialization (8 points) | — |
 | Retribution | Deflection, Conviction · Improved Judgement, Holy Conduit, Benediction | — | Parry, critical hit, Judgement −2 sec (5–12 points) | +5% critical heal chance (5 points). Instant spells cost −9%: Holy Shock, Cleanse (3 more points, C21) |
-| Protection | Divine Strength, Redoubt · Precision, Guardian's Favor, Anticipation | +10% Strength, +3% hit (8 points) | — | PvP: Redoubt, then Guardian's Favor (7 points) |
+| Protection | Divine Strength, Redoubt · Precision, Guardian's Favor, Anticipation | +10% Strength, +3% hit (8 points) | — | Redoubt, then Guardian's Favor: saves, and Lay on Hands drains only 50% of the mana (C22) (7 points) |
 
-**Protection for Holy is a PvP dip.** Other classes also use a defensive tree for PvP: Iron Will (Warrior), Frost Warding (Mage), Deflection (Hunter). Redoubt gives Holy only a small defense. Guardian's Favor gives more saves: Blessing of Protection each 3 min, and Blessing of Freedom +6 sec.
+**Protection for Holy is a PvP dip.** Other classes also use a defensive tree for PvP: Iron Will (Warrior), Frost Warding (Mage), Deflection (Hunter). Redoubt gives Holy only a small defense. Guardian's Favor gives more saves: Blessing of Protection each 3 min, Blessing of Freedom +6 sec, and a Lay on Hands that drains only 50% of the mana (C22). Thus, Holy healers in raids also take it.
 
 Redoubt in PvP (block value 44, from the gear profile):
 
@@ -1637,6 +1692,7 @@ These talents are stronger than, or different from, the talents of other classes
 | Holy Shield | Spell power scaling is not known. Classic: 5% for each block | Classic data |
 | Mana return | Mana from Shield Specialization, Improved Seal of Fury and Sanctified Judgement gives no threat | Patch notes, 8 and 16 October |
 | Rage | Rage from damage taken was repaired on 8 October. It uses 20–40% armor, related to level. Critical hits give ×2 rage. Bear Form: ×1.5 threat | Patch note, 8 October |
+| Lay on Hands | Heals for your maximum health. Drains all your remaining mana. The drain does not stop mana regeneration. 20 min cooldown (Classic: 1 hour). Ranks 2 and 3 restore 250 and 550 mana to the target | Forever spellbook (client data); player tests |
 
 ## Problems to report to Blizzard
 
@@ -1667,6 +1723,7 @@ These are risks to check in tests. None of them needs a change now.
 | W15 | Retribution with C16 is about equal to Fury Warrior at fresh level 60 (101%). It falls to about 82% of Fury in Naxxramas (see Analysis, Damage, part 6) | Compare Retribution with Fury at each gear tier, not only at fresh level 60. If Retribution is above the pure damage classes in raids, decrease the Sacred Arbiter bonus first (+20% → +10%) |
 | W16 | Consecrated Ground (2 Holy points) with Consecration on cooldown gives Retribution about +23% on one target. The mana lasts about 70 sec | If Retribution uses it on bosses, apply the +10% only to Holy spells, as the tooltip says, not to Seals and Judgements |
 | W17 | Holy Shock with Iron Creed (21/30/0): Righteous Fury stays active in PvP. The build then gets −10% damage taken, Templar's Bulwark, Reckoning and Holy Shock (see Analysis, Builds, part 5) | Monitor in PvP with W7 and W9 |
+| W18 | Lay on Hands with C22 on yourself gives up to +550 mana below 1,100 mana (beta: below 550). Paladins can use it for mana one time for each boss | If all Holy Paladins use it for mana, Lay on Hands does not restore mana when you are the target |
 
 ## Open questions
 
@@ -1687,6 +1744,7 @@ These are risks to check in tests. None of them needs a change now.
 - [ ] What is the Slam cooldown in Forever? The Arms check in Analysis, Damage, uses one Slam each 3 sec at most.
 - [ ] Does Righteous Fury increase the threat of heals in Forever? The text says "Holy attacks". If yes, a tank can use Flash of Light or Holy Light for threat (see Analysis, Builds, part 6).
 - [ ] C8: Divine Strength gives almost no threat to a tank, and the tank builds skip it (see Analysis, Builds, part 3). Keep C8 as a talent for Retribution and change its reason? Or change Divine Strength so that tanks also use it?
+- [ ] C22: when you cast Lay on Hands on yourself, does the drain occur before the 550 mana? If not, you get no mana from it.
 
 **Answered**
 
@@ -1759,6 +1817,9 @@ We examined these ideas and rejected them. They are not proposals.
 | M7: Repentance to row 4 (15 points), Sacred Arbiter to row 5 | Not necessary. C16 does not change Sacred Arbiter, so it stays in row 4. Repentance stays a 20-point talent |
 | Spiritual Focus in row 4 (first version of M2) | A Holy healer then needs 3 points of filler in rows 1–3. HB2 (34/12/5) is not possible. In row 2, the healer needs 2 points of filler (see Analysis, Builds, part 7) |
 | Unyielding Faith in row 2, column 3 (M3) | Spiritual Focus now uses row 2, column 3. Unyielding Faith stays in its beta position (row 2, column 4) |
+| A new Improved Lay on Hands talent for the drain | Forever removes this talent. A talent only to remove a penalty is a tax. C22 uses Guardian's Favor |
+| Lay on Hands with no drain | This is the change of patch 3.0.2 (Wrath of the Lich King), a later expansion. A full heal with no cost each 20 min is too strong |
+| Lay on Hands with a fixed cost (for example 30% of maximum mana) | At low mana, you cannot cast it. A drain of a % of the remaining mana keeps this use |
 
 ## Sources
 
