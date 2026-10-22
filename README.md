@@ -6,10 +6,11 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 - **Proposals:** 20 changes (C1–C20) and 7 moves (M1–M6 and M8; M7 is withdrawn) for the Holy, Protection and Retribution trees. Three changes are new talents.
 - **Talent calculator:** you can try the proposals and compare them with the beta trees.
+- **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage and tree balance, each with its model and limits.
 
 ## IDs
 
-- **C (change):** the proposal changes what a talent does, adds a talent or removes a talent.
+- **C (change):** the proposal changes what a talent does, adds a talent or removes a talent. C16, C18 and C19 change baseline spells.
 - **M (move):** the proposal moves a talent to a different row or column. The talent text does not change.
 
 ## Changes and moves
@@ -68,7 +69,8 @@ The talent icons come from the Wowhead icon server (wow.zamimg.com). If the icon
 - **Data.** Forever client build 1.60.1.70450, with the server hotfixes of 18 October 2026. The talent text comes from [wowforevertalents.com](https://wowforevertalents.com/). Player tests give the talent behavior.
 - **Models.** Each proposal uses a talent from another class in the same beta as a model (Warrior, Druid, Priest, Shaman, Hunter, Mage).
 - **Rules.** The combat and mana values use Classic 1.12 rules when no test gives a different rule.
-- **Estimates.** The burst values are estimates. The Reckoning, threat and mana values come from simple models. Each estimate gives its assumptions.
+- **Estimates.** The burst values are estimates. The Reckoning, threat, mana, healing and damage values come from simple models, not combat logs. Each estimate gives its assumptions and limits.
+- **Other classes.** The healing comparison uses Classic base values −10% for the other healers. The damage comparison uses the ratios of one external simulation ([MythicSim](https://mythicsim.com/wow-forever/tier-list)) and a same-gear model check.
 
 ## Feedback
 

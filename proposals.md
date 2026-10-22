@@ -14,7 +14,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 20 chan
 
 ## How to read this document
 
-- **C (change).** C1 to C20 change what a talent does, add a talent or remove a talent. A change can also move the talent. The text then gives the new row.
+- **C (change).** C1 to C20 change what a talent does, add a talent or remove a talent. C16, C18 and C19 change baseline spells. A change can also move the talent. The text then gives the new row.
 - **M (move).** M1 to M8 move a talent (M7 is withdrawn) to a different row or column. The talent text does not change.
 - **C18a and C18b** are the two alternatives to C18.
 - **Withdrawn ideas** have no ID. They are in the Withdrawn ideas section only.
@@ -115,7 +115,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 ### C2. Lingering Light (new talent): row 5, column 3, 2 ranks
 
 - **Proposed text.** "Your non-periodic critical heals cause the target to be healed for an additional 10/20% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing."
-- **Identity.** A heal over time after a critical heal is a Paladin idea (Sheath of Light, a later expansion). It is not the same as Divine Aegis (Priest), because Divine Aegis is a shield. It is the only Holy heal over time.
+- **Identity.** It is the only Holy heal over time. It is not the same as Divine Aegis (Priest), because Divine Aegis is a shield.
 - **Text model.** "Non-periodic critical heals" comes from Divine Aegis and Inspiration (Priest). "Refreshing this effect carries over any remaining healing" comes from Blessed Recovery (Priest). Blessed Recovery already works this way in Forever.
 - **Why critical heals.** Healing Light already gives a flat healing bonus. The Holy tree has many critical hit talents (Illumination, Divine Favor, Holy Power). This talent gives them more value.
 - **Value.** At 22% critical heal chance: 22% × 1.5 (critical heal) × 20% = about +6.6% of a normal heal. Some of it is overhealing on targets with full health.
@@ -570,6 +570,7 @@ The values come from a model. The model uses beta tests and developer notes. It 
 - C14 (Holy Shield damage increases with block value) is necessary. Without C14, the Paladin falls behind in raids.
 - Judgement of the Crusader gives the Paladin tank about +50 TPS. Judgement of Fury does not remove it. C18 lets the tank keep it when the raid also needs the Judgement of the tank for Light or Wisdom.
 - If the gear progression is flatter, C14 at 200% is still correct.
+- C16 (Holy Strike triggers Seal of Fury) gives about +10 TPS more. The tables do not include it.
 
 #### 1. Result with the same gear
 
@@ -783,7 +784,7 @@ The values are estimates, not a simulation.
 - Seal of Command: 7 procs each minute (41% chance for each swing). Each proc does 70% of weapon damage as Holy damage.
 - Holy Strike rank 8: 50% of weapon damage plus 81–105, all Holy damage.
 - Judgement of Command on a stunned target: 388–422 (in-game tooltip with gear; the base value is 339–373). Swift Judgement gives a second Judgement in the same stun.
-- In the beta, Holy Strike does not trigger Seals. Extra attacks are the same as auto attacks, with Seal of Command procs.
+- In the beta, Holy Strike does not trigger Seal of Command. Extra attacks are the same as auto attacks, with Seal of Command procs.
 
 | Part of the burst | Proposed | Beta, no stored attacks | Beta, 4 stored attacks |
 | --- | --- | --- | --- |
@@ -925,7 +926,7 @@ This section compares the big heals of the four healer classes. It also checks C
 
 #### Summary
 
-- **With gear, Flash of Light is the most efficient heal in the game.** Each point of healing power gives about 2 to 2.5 times more healing per mana to Flash of Light than to the big heals of the other classes.
+- **With gear, Flash of Light is the most efficient heal in the game.** Flash of Light gets 2 to 2.5 times more healing per mana from healing power than the big heals of other classes.
 - **Holy Light gets the smallest increase in healing per second from healing power.** The big heals of the other healers have a talent that decreases the cast time by 0.5 sec. Holy Light has none.
 - **From 300 healing power, Healing Wave (Shaman) is the best big heal.** It gives more healing per second than Holy Light. From 500 healing power, it also gives more healing per mana. Healing Way (+25%, flat in Forever), Purification (+10%) and Improved Healing Wave (−0.5 sec) all apply to it.
 - **C3 puts the Paladin at the level of Healing Wave**, not above it. With C19, the Paladin is 1–3% below Healing Wave without critical heals, and about 6–7% above it with critical heals (part 7).
@@ -935,7 +936,7 @@ This section compares the big heals of the four healer classes. It also checks C
 
 - Heal = (base value + coefficient × healing power) × healing talents.
 - Coefficient = cast time ÷ 3.5 (the Forever rule). A talent that decreases the cast time does not change the coefficient.
-- **Paladin:** base values from the Forever spellbook. Blessing of Light is on the target. Healing Light gives +12%. Part 7 uses C19: no Blessing of Light, and Healing Light gives +30%. Illumination at 25% critical heal chance (parts 2–7) decreases the average cost by 12.5%.
+- **Paladin:** base values from the Forever spellbook. Blessing of Light is on the target. Healing Light gives +12%. Part 7 uses C19: no Blessing of Light, and Healing Light gives +30%. Illumination at 25% critical heal chance (parts 2–7) decreases the average cost by 12.5% (beta Illumination). With C20 (75%) and 22% critical heal chance, the decrease is 16.5%. Thus, the healing per mana of the proposed Paladin in parts 2–7 is about 5% higher than the tables show.
 - **Other healers:** Classic base values −10%. A comparison of the Forever spellbook gives about −10% for most heals.
 - **Talents:** Priest: Divine Fury, Spiritual Healing, Improved Healing. Druid: Naturalist, Gift of Nature, Tranquil Spirit. Shaman: Improved Healing Wave, Purification, Healing Way, Tidal Focus.
 - **Not in the model:** critical heals (other than Illumination), heals over time and overhealing (parts 2–6).
@@ -1075,7 +1076,7 @@ Healing per second · healing per mana. No critical heals.
 **Result**
 
 - With C19, the Holy Paladin is the best single-target healer with critical heals. In emergencies, it is equal first with the Druid, and it has the most saves. Without critical heals, it is second, after the Shaman. This agrees with the Holy tree, which uses critical heals (Illumination, Divine Favor, Holy Power, Lingering Light).
-- With Healing Light at 35%, the Paladin is first in all measures: 1,312 healing per sec and 5.63 healing per mana at 900 healing power, and about +11% above the Shaman with critical heals. The Shaman then has no single-target role. Thus, C19 uses 30%.
+- With Healing Light at 35%, the Paladin is first in all measures. At 900 healing power, it gives 1,312 healing per sec and 5.63 healing per mana. With critical heals, it is about 11% above the Shaman. The Shaman then has no single-target role. Thus, C19 uses 30%.
 
 #### 8. Mana in long fights
 
@@ -1170,7 +1171,7 @@ This section compares the single-target damage of Retribution with the other dam
 - **Critical hit against the boss.** −4.8% for auto attacks and −3% for other attacks (Classic 1.12 rule). A critical hit does ×2 damage, and ×1.5 for spells. The spell hit cap is 18%.
 - **Seals and Judgements** use the melee hit table. Armor does not decrease Holy damage.
 - **Seal of Command.** 7 procs each minute: a 42% chance for each hit with a 3.6 sec weapon. Each proc does 70% of weapon damage + 20.3% of spell damage (29% × 70%). With Improved Seals, this is 80.5% of weapon damage + 23.3% of spell damage.
-- **Seal of Righteousness.** 67.5 + 12% of spell damage for each hit. The 67.5 is for a 3.6 sec weapon, from the range in the tooltip.
+- **Seal of Righteousness.** 67.5 + 12% of spell damage for each hit. The base part (67.5) is for a 3.6 sec weapon, from the range in the tooltip. Weapon speed does not change the spell damage part (see Beta test results, Spells).
 - **Judgement.** One each 8 sec (Improved Judgement 2/2): 186.5 + 42.9% of spell damage.
 - **Holy Strike.** One each 10 sec: 50% of normalized weapon damage (3.3 sec) + 93 + 21.45% of spell damage. All the damage is Holy damage.
 - **Hammer of Wrath.** One each 6 sec in the last 20% of the fight. Instant (Instrument of Law): 498 + 42.9% of spell damage.
@@ -1196,7 +1197,7 @@ All proposals (C16 as in this document), raid buffs, 2 min fight:
 
 - About 70% of the damage is Holy damage. Armor does not decrease it.
 - The global cooldown is active 54% of the time. Thus, you have time for Exorcism or Consecration.
-- Mana: −3.8 mana per sec. The mana lasts about 12 min.
+- Mana: −3.8 mana per sec with Blessing of Wisdom. The mana lasts about 12 min. A melee player gets Blessing of Wisdom only with 3 Paladins in the raid (see The problem with Blessings). Without it: −11.8 mana per sec, and the mana lasts about 4 min.
 
 #### 4. Proposals against the beta
 
@@ -1287,7 +1288,7 @@ Retribution increases less with gear than the pure melee classes. Blizzard said 
 - **Retribution gets the hit cap at pre-raid** (Precision 3% + 6% from gear). More hit then does nothing. The two-weapon classes start at 28% miss. Each point of hit helps them until Naxxramas.
 - **Critical hit helps Fury two times:** more Flurry and two times the rage. For Retribution, it helps only Vengeance.
 - **Improved Seals multiplies the fixed bases** by the same 15% as the weapon part. Thus, it does not change the share that increases with gear.
-- **Rage in Forever.** In Classic, rage came from the damage. Better gear gave more rage and more Heroic Strikes. Forever gives rage from the weapon speed. This removes most of that effect. With Classic rage, the gap would be bigger than these tables show.
+- **Rage in Forever.** In Classic, rage came from the damage. Better gear gave more rage and more Heroic Strikes. Forever gives rage from the weapon speed. This removes most of that effect. With Classic rage, the gap is bigger than these tables show.
 
 **Result**
 
@@ -1319,6 +1320,7 @@ Judgement of the Crusader gives about +9% DPS at fresh level 60. It adds 161 Hol
 - **Hit cap.** The build has 8% hit (Precision 3% + 5% from gear). The cap is about 9%.
 - **Consecrated Ground with Consecration on cooldown.** About +23% on one target (370 → 456 DPS). This is true if the +10% applies to all your Holy damage on the target, as the beta tests show. The mana is zero after 66 sec. It is strong burst for 2 Holy points (see Watch list, W16).
 - **Exorcism against Undead and Demons.** About +12% (414 DPS). If you use it on cooldown, the mana is zero after about 2 min.
+- **Two-Handed Weapon Specialization.** The Paladin talent gives 6%. The Warrior talent in Forever gives 3%. Each 1% gives Retribution about 3.3 DPS (0.9%). At 6%, Retribution is 101% of Fury at fresh level 60 and 82% in Naxxramas. At 3%, it is 98% and 79%.
 
 #### 9. Limits
 
@@ -1410,6 +1412,7 @@ Each row 3 has a 1-point signature talent, as in the other classes. Each also ha
 | Holy Conduit (−40% on 4 spells, 2 points) | Moonglow (−25%, 3 points), Cataclysm (−10%, 3 points) | Stronger for each point, but on few spells (W4) |
 | Improved Judgement (−2 sec, 2 points) | Improved Mind Blast (−2.5 sec, 5 points), Reverberation (−1 sec, 5 points) | Stronger for each point. It is the Classic value |
 | Guardian's Favor, Sacred Duty, Improved Hammer of Justice | Endurance, Elusiveness, Brutal Impact | Parity. The Paladin is a little stronger on saves |
+| Two-Handed Weapon Specialization (+6%, row 4 with M6) | Two-Handed Weapon Specialization (Warrior, +3%, row 4) | Stronger. The 3% difference gives Retribution about +10 DPS (+3%). See Analysis, Damage, part 8 |
 
 #### Paladin strengths
 
@@ -1429,7 +1432,7 @@ These talents are stronger than, or different from, the talents of other classes
 | Talent | Result in the beta | Effect on the proposals |
 | --- | --- | --- |
 | Divine Strength, Divine Intellect | % of base, gear and flat buff stats. Multiplies with Kings | Divine Strength goes to Protection (C8) |
-| Healing Light | Increases the full heal, not only the base | Supports C2: a second flat healing talent would overlap |
+| Healing Light | Increases the full heal, not only the base | Supports C2: a second flat healing talent overlaps with it |
 | Spiritual Focus | Adds to other pushback resistance (Concentration Aura 35% + 70% = immune) | None |
 | Improved Seals | Increases the full damage, not only the base. No effect on Seal of the Crusader | None |
 | Unyielding Faith | Diminishing returns not tested | None |
@@ -1564,14 +1567,14 @@ We examined these ideas and rejected them. They are not proposals.
 | Unyielding Faith decreases spell threat | Not necessary: Salvation does not use a Blessing slot now. A threat decrease must not affect Protection |
 | Holy Shield +35% or +40% block | With the Redoubt trigger, +30% already gives the same result as the Warrior. +35% is better than the Warrior. +40% also removes critical hits below 440 Defense |
 | Holy Strike critical hits reset Hammer of Wrath | Hammer of Wrath has a 6 sec cooldown, shorter than the 10 sec of Holy Strike. It works only below 20% health: about +1 damage per sec |
-| Champion of the Light adds healing | At 60% of Intellect, it gives the same healing as deep Holy. Holy Paladins would go into Retribution. Possible at 10/20/30%, because C4 puts Healing Light too deep for a Retribution hybrid |
+| Champion of the Light adds healing | At 60% of Intellect, it gives the same healing as deep Holy. Holy Paladins then go into Retribution. Possible at 10/20/30%, because C4 puts Healing Light too deep for a Retribution hybrid |
 | Sacred Ward (critical heals add a shield) | The same talent as Divine Aegis (Priest). Lingering Light (C2) replaces it |
 | Other ideas for the new Holy talent (heal splash, aura bonus, Cleanse, Lay on Hands) | Too modern, or utility and not healing |
 | Steadfast Faith (stun duration) in Protection row 1 | Two talents against crowd control. Other classes have one |
 | Toughness that also gives Stamina | Divine Strength from Holy (C8) replaces it |
-| Hallowed Ground or Shield Specialization in Protection row 1 | Talents only for tanks. Holy and Retribution would lose 5 points before Precision |
-| A mana talent in each tree (Iron Creed, Righteous Fury, Seal of Fury) | Reverence in row 2 does the same with one talent. Holy could use the Righteous Fury and Seal of Fury versions |
-| Survive crushing blows with more armor, health and a stronger Seal of Fury absorb | Healers would still get the damage spikes. C6 removes the crushing blows |
+| Hallowed Ground or Shield Specialization in Protection row 1 | Talents only for tanks. Holy and Retribution then lose 5 points before Precision |
+| A mana talent in each tree (Iron Creed, Righteous Fury, Seal of Fury) | Reverence in row 2 does the same with one talent. Holy can then use the Righteous Fury and Seal of Fury versions |
+| Survive crushing blows with more armor, health and a stronger Seal of Fury absorb | Healers still get the damage spikes. C6 removes the crushing blows |
 | Holy Shield or Seal of Fury changes crushing blows into normal hits | It goes around the attack table |
 | Redoubt charges that each add a % of block | Block buffs with charges give one fixed bonus |
 | Redoubt on each hit with a 6 sec cooldown | The Holy Shield trigger gives the same uptime with no new rule |
@@ -1581,8 +1584,8 @@ We examined these ideas and rejected them. They are not proposals.
 | Divine Precision below 18% | Holy Precision (Priest) is the same, and the spell hit cap is 18% |
 | Two-Handed Weapon Specialization at 10% | 6% is already more than the 3% of the Warrior |
 | Fix the flat ranks of Vindication | Forever already changed it |
-| Reckoning works only with a shield | It would stop the Classic two-handed Reckoning bomb |
-| Holy Strike releases all 4 Reckoning charges | The 0/26/25 burst would be about 3,800, not 3,020 (+26%) |
+| Reckoning works only with a shield | It stops the Classic two-handed Reckoning bomb |
+| Holy Strike releases all 4 Reckoning charges | The 0/26/25 burst is then about 3,800, not 3,020 (+26%) |
 | Reckoning at 40% chance, once each 1.5 sec | Not sufficient charges on a boss (about 1.6 extra attacks each 10 sec) |
 | Reckoning at 100% chance, once each 1.5 sec | The charges stay at the maximum of 4. More than half of the procs are lost. You cannot choose when to keep charges |
 | Exchange Reckoning (row 5) and Iron Creed (row 6) | Reckoning then costs 25 points, but this does not stop a 0/30/21 hybrid. The 2-charge limit does the job without a move |
@@ -1606,7 +1609,7 @@ We examined these ideas and rejected them. They are not proposals.
 | A Holy aura that gives the Blessing of Light bonus | Aura slots have the same limit as Blessing slots. It competes with Devotion Aura and Concentration Aura |
 | A second Holy talent: +6/12/18% to Holy Light and Flash of Light | The same value as C19, but two talents for one bonus |
 | Healing Light at 35% (not 30%) | The Paladin is then first in all measures. The Shaman has no single-target role. It is the W13 action |
-| Guardian's Favor to Protection row 1 | Not necessary. With M8, a Holy PvP build has the points for Redoubt and Guardian's Favor. In row 1, all specs would take a 2-point Guardian's Favor |
+| Guardian's Favor to Protection row 1 | Not necessary. With M8, a Holy PvP build has the points for Redoubt and Guardian's Favor. In row 1, all specs take a 2-point Guardian's Favor |
 | Sacred Arbiter: Holy Strike always triggers Seal of Command (first version of C16) | +13% Retribution damage against the beta. Retribution is then above Fury Warrior at fresh level 60 (see Analysis, Damage) |
 | Sacred Arbiter: Holy Strike triggers Seal of Command by chance | A talent that gives only a chance to trigger is weak design. C16 puts the usual Seal rule in the spell |
 | Holy Strike triggers the active Seal, but not the Twist of Light Echo | One more rule to learn. Holy Strike is a melee attack, and the Echo applies to melee attacks |
