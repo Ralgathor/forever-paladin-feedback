@@ -1320,7 +1320,7 @@ Judgement of the Crusader gives about +9% DPS at fresh level 60. It adds 161 Hol
 - **Hit cap.** The build has 8% hit (Precision 3% + 5% from gear). The cap is about 9%.
 - **Consecrated Ground with Consecration on cooldown.** About +23% on one target (370 → 456 DPS). This is true if the +10% applies to all your Holy damage on the target, as the beta tests show. The mana is zero after 66 sec. It is strong burst for 2 Holy points (see Watch list, W16).
 - **Exorcism against Undead and Demons.** About +12% (414 DPS). If you use it on cooldown, the mana is zero after about 2 min.
-- **Two-Handed Weapon Specialization.** The Paladin talent gives 6%. The Warrior talent in Forever gives 3%. Each 1% gives Retribution about 3.3 DPS (0.9%). At 6%, Retribution is 101% of Fury at fresh level 60 and 82% in Naxxramas. At 3%, it is 98% and 79%.
+- **Two-Handed Weapon Specialization.** The Paladin talent gives 6%. The Warrior talent in Forever gives 3%. Each 1% gives Retribution about 3.3 DPS (0.9%). At 6%, Retribution is 101% of Fury at fresh level 60 and 82% in Naxxramas. At 3%, it is 98% and 79%. The 6% stays: it is an intentional Paladin strength (see Tree balance, Paladin strengths).
 
 #### 9. Limits
 
@@ -1412,7 +1412,7 @@ Each row 3 has a 1-point signature talent, as in the other classes. Each also ha
 | Holy Conduit (−40% on 4 spells, 2 points) | Moonglow (−25%, 3 points), Cataclysm (−10%, 3 points) | Stronger for each point, but on few spells (W4) |
 | Improved Judgement (−2 sec, 2 points) | Improved Mind Blast (−2.5 sec, 5 points), Reverberation (−1 sec, 5 points) | Stronger for each point. It is the Classic value |
 | Guardian's Favor, Sacred Duty, Improved Hammer of Justice | Endurance, Elusiveness, Brutal Impact | Parity. The Paladin is a little stronger on saves |
-| Two-Handed Weapon Specialization (+6%, row 4 with M6) | Two-Handed Weapon Specialization (Warrior, +3%, row 4) | Stronger. The 3% difference gives Retribution about +10 DPS (+3%). See Analysis, Damage, part 8 |
+| Two-Handed Weapon Specialization (+6%, row 4 with M6) | Two-Handed Weapon Specialization (Warrior, +3%, row 4) | Stronger, intentional. Retribution is the two-handed spec of the class. The 3% difference gives Retribution about +10 DPS (+3%). See Analysis, Damage, part 8 |
 
 #### Paladin strengths
 
@@ -1422,6 +1422,7 @@ These talents are stronger than, or different from, the talents of other classes
 - More saves (Guardian's Favor, Sacred Duty).
 - Resistance to fear (Unyielding Faith).
 - Seal and Judgement damage as a dip from Holy (Improved Seals).
+- Two-handed weapon damage (Two-Handed Weapon Specialization 6%, Warrior 3%). It also increases Seal and Judgement damage. Retribution judges with a two-handed weapon and Seals (design rule 5). The Warrior has other damage multipliers: Impale, Weaponmaster, Deep Wounds and Death Wish.
 
 **Points in each tree.** Beta: Holy 46, Protection 48, Retribution 44. Proposed: Holy 45, Protection 47, Retribution 44.
 
