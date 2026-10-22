@@ -1,6 +1,6 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 19 changes and 7 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 20 changes and 7 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
 
 ## How to read this document
 
@@ -37,6 +37,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 19 chan
 | C17 | Twist of Light | Retribution, row 7 | The Echo applies to the next melee attack only | The Echo applies to all melee attacks for 10 sec |
 | C18 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
 | C19 | Blessing of Light | Baseline spell, and Healing Light (C4) | +400 Holy Light, +115 Flash of Light. Uses a Blessing slot | Removed. Healing Light gives 10/20/30% |
+| C20 | Illumination | Holy, row 4 | Critical heals return 50% of the base cost (Classic: 100%) | Critical heals return 75% of the base cost |
 
 **Moves**
 
@@ -97,7 +98,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 
 - **Proposed text.** "Allows 17/33/50% of your Mana regeneration to continue while casting."
 - **Model.** Meditation (Priest), Reflection (Druid) and Mindfulness (Shaman) give 50% with 3 ranks.
-- **Illumination is not sufficient.** Other healers have a mana return in addition to their 50% (Litany of Light, Water Shield, Mana Tide Totem). Forever also decreased Illumination to 50% of the base cost.
+- **Illumination is not sufficient.** Other healers have a mana return in addition to their 50% (Litany of Light, Water Shield, Mana Tide Totem). Forever also decreased Illumination (see C20) to 50% of the base cost.
 - **Row 2.** In row 2, Reverence is also the mana talent for Protection and Retribution. They get it with 8 Holy points (see Mana).
 - **If it is too strong:** use 13/27/40%.
 
@@ -107,8 +108,8 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Identity.** A heal over time after a critical heal is a Paladin idea (Sheath of Light, a later expansion). It is not the same as Divine Aegis (Priest), because Divine Aegis is a shield. It is the only Holy heal over time.
 - **Text model.** "Non-periodic critical heals" comes from Divine Aegis and Inspiration (Priest). "Refreshing this effect carries over any remaining healing" comes from Blessed Recovery (Priest). Blessed Recovery already works this way in Forever.
 - **Why critical heals.** Healing Light already gives a flat healing bonus. The Holy tree has many critical hit talents (Illumination, Divine Favor, Holy Power). This talent gives them more value.
-- **Value.** At 25% critical heal chance: 25% × 1.5 (critical heal) × 20% = about +7.5% of a normal heal. Some of it is overhealing on targets with full health.
-- **Why 10/20%.** Healing Light (C4) gives the main healing bonus. Lingering Light gives a smaller bonus, only on critical heals. At 20%, it gives about 3.3% for each point, as Spiritual Healing (Priest) does. With critical heals, the Paladin is about 5–8% above Healing Wave (Shaman) (see Analysis, Healing, part 7). At 30%, the lead was about 11%, and the overhealing risk was larger.
+- **Value.** At 22% critical heal chance: 22% × 1.5 (critical heal) × 20% = about +6.6% of a normal heal. Some of it is overhealing on targets with full health.
+- **Why 10/20%.** Healing Light (C4) gives the main healing bonus. Lingering Light gives a smaller bonus, only on critical heals. At 20%, it gives about 3.3% for each point, as Spiritual Healing (Priest) does. With critical heals, the Paladin is about 6–7% above Healing Wave (Shaman) (see Analysis, Healing, part 7). At 30%, the lead was about 10%, and the overhealing risk was larger.
 
 **How the heal over time works.** It works as Ignite and Blessed Recovery do in Forever, not as Deep Wounds.
 
@@ -164,6 +165,18 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 
 - It fills the space that Improved Seals leaves when it goes to row 1 (C5).
 - Thus, row 2 has no empty space between talents.
+
+### C20. Illumination: 75% of the base cost (beta: 50%)
+
+- **Proposed text.** "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 20/40/60/80/100% chance to gain Mana equal to 75% of the base cost of the spell."
+- **Change.** The mana return increases from 50% to 75% of the base cost. Classic gives 100%. The chance and the ranks do not change.
+- **Problem.** The Holy Paladin has the lowest mana income of the four healers: 22.6 mana per sec. The other healers have 27.6–33.4 (see Analysis, Healing, part 8). The cause is the class tools, not the gear. The other healers have Litany of Light, Inner Focus, Innervate, Water Shield, Mana Spring Totem and Mana Tide. The Paladin has only Illumination, and Forever decreased it to 50%.
+- **Design goal.** Holy is the healer for long fights. With 50%, the Paladin is first only in fights of 3–5 min. In fights of 10 min and more, the Shaman is first.
+- **Why 75%.** With 75% and 22% critical heal chance, the Paladin is first in fights of up to 10 min: +4% to +22%. In very long fights, it is almost equal to the Shaman (−4% to +2%). With 100%, the lead is +15% to +34%. This is too much.
+- **Why Illumination.** It is the Paladin mana talent in Classic. Its mana return increases with critical heal chance, thus with Intellect, Holy Power and Conviction. It is not a flat value. Only Holy can get it: it is in row 4, and it requires Reverence.
+- **Dependency.** The values use Conviction for spells (C15). Without C15, the Paladin has 17% critical heal chance. With 75%, it is then first in fights of up to 5 min (+5% to +11%). At 10 min, it is equal or a little better (0% to +5%).
+- **No change to the maximum healing.** Illumination changes only the mana.
+- **Risk.** Holy gets more mana in PvP and in long fights (W14).
 
 ## Protection
 
@@ -899,17 +912,18 @@ This section compares the big heals of the four healer classes. It also checks C
 - **With gear, Flash of Light is the most efficient heal in the game.** Each point of healing power gives about 2.5 times more healing per mana to Flash of Light than to the big heals of the other classes.
 - **Holy Light gets the smallest increase in healing per second from healing power.** The big heals of the other healers have a talent that decreases the cast time by 0.5 sec. Holy Light has none.
 - **From 300 healing power, Healing Wave (Shaman) is the best big heal.** It gives more healing per second and more healing per mana than Holy Light. Healing Way (+25%, flat in Forever), Purification (+10%) and Improved Healing Wave (−0.5 sec) all apply to it.
-- **C3 puts the Paladin at the level of Healing Wave**, not above it. With C19, the Paladin is 1–3% below Healing Wave without critical heals, and about 5–8% above it with critical heals (part 7).
+- **C3 puts the Paladin at the level of Healing Wave**, not above it. With C19, the Paladin is 1–3% below Healing Wave without critical heals, and about 6–7% above it with critical heals (part 7).
 - **In PvP, C3 gives Retribution and Protection one fast Holy Light each 10 sec.** The mana cost and the interrupts limit it.
 
 #### 1. Model
 
 - Heal = (base value + coefficient × healing power) × healing talents.
 - Coefficient = cast time ÷ 3.5 (the Forever rule). A talent that decreases the cast time does not change the coefficient.
-- **Paladin:** base values from the Forever spellbook. Blessing of Light is on the target. Healing Light gives +12%. Part 7 uses C19: no Blessing of Light, and Healing Light gives +30%. Illumination at 25% critical heal chance decreases the average cost by 12.5%.
+- **Paladin:** base values from the Forever spellbook. Blessing of Light is on the target. Healing Light gives +12%. Part 7 uses C19: no Blessing of Light, and Healing Light gives +30%. Illumination at 25% critical heal chance (parts 2–7) decreases the average cost by 12.5%.
 - **Other healers:** Classic base values −10%. A comparison of the Forever spellbook gives about −10% for most heals.
 - **Talents:** Priest: Divine Fury, Spiritual Healing, Improved Healing. Druid: Naturalist, Gift of Nature, Tranquil Spirit. Shaman: Improved Healing Wave, Purification, Healing Way, Tidal Focus.
 - **Not in the model:** critical heals (other than Illumination), heals over time and overhealing.
+- **Gear profile.** A real Holy Paladin profile at fresh level 60 (phase 1). It uses Blacksmithing items and dungeon and quest items. Without talents and buffs, it has 702 healing, 193 Intellect, 162 Spirit, no mana each 5 sec, 4,127 mana and 12.2% spell critical chance. Forever uses horizontal gear progression. Thus, healing power increases slowly. This analysis uses 700 (fresh level 60) and 900 (raids). With this profile, Illumination decreases the cost by about 11%, not 12.5%. The healing per mana values in parts 2–7 are then about 2% lower.
 - Forever decreased the base values of spells. Gear gives more healing power during leveling to compensate. The healing power values are estimates.
 
 #### 2. Big heals
@@ -1021,16 +1035,16 @@ Healing per second · healing per mana. No critical heals.
 
 **With critical heals**
 
-- The Paladin has 25% critical heal chance: Holy Power gives +5%, and Intellect gives more critical heal chance to Paladins than to other classes. The other healers have 20%.
+- The Paladin has about 22% critical heal chance: 12% from the gear profile, +5% from Holy Power and +5% from Conviction (C15, 10 Retribution points). The Priest and the Shaman have about 17%: 12% from the gear and +5% from Holy Specialization or Tidal Mastery.
 - A critical heal heals ×1.5. Lingering Light (C2) at 2/2 adds 20% of the critical heal over 6 sec.
 
-| Healing power | Paladin: Flash of Light + Holy Light | Healing Wave (Shaman) | Greater Heal (Priest) |
-| --- | --- | --- | --- |
-| 300 | 1,160 | 1,100 | 1,031 |
-| 900 | 1,517 | 1,411 | 1,279 |
+| Healing power | Paladin: Flash of Light + Holy Light | Paladin without Conviction (17%) | Healing Wave (Shaman) | Greater Heal (Priest) |
+| --- | --- | --- | --- | --- |
+| 700 | 1,370 | 1,323 | 1,290 | 1,180 |
+| 900 | 1,486 | 1,436 | 1,392 | 1,262 |
 
-- With critical heals, the Paladin is about 5–8% above the Shaman. Lingering Light gives the lead. Thus, C2 is necessary for the single-target goal.
-- The Lingering Light heal can overheal a tank with full health. If half of it is overhealing, the lead decreases to about +4% (W13).
+- With critical heals, the Paladin is about 6–7% (3% without Conviction) above the Shaman. Lingering Light gives the lead. Thus, C2 is necessary for the single-target goal.
+- The Lingering Light heal can overheal a tank with full health. If half of it is overhealing, the lead decreases to about +3–4% (W13).
 
 **Burst at 900 healing power**
 
@@ -1045,7 +1059,64 @@ Healing per second · healing per mana. No critical heals.
 **Result**
 
 - With C19, the Holy Paladin is the best single-target healer with critical heals and in emergencies. Without critical heals, it is second, after the Shaman. This agrees with the Holy tree, which uses critical heals (Illumination, Divine Favor, Holy Power, Lingering Light).
-- With Healing Light at 35%, the Paladin is first in all measures: 1,312 healing per sec and 5.63 healing per mana at 900 healing power, and about +12% above the Shaman with critical heals. The Shaman then has no single-target role. Thus, C19 uses 30%.
+- With Healing Light at 35%, the Paladin is first in all measures: 1,312 healing per sec and 5.63 healing per mana at 900 healing power, and about +11% above the Shaman with critical heals. The Shaman then has no single-target role. Thus, C19 uses 30%.
+
+#### 8. Mana in long fights
+
+This part compares the mana of the four healers. The design goal of Holy is a healer for long fights. Thus, the Paladin must keep more healing than the other healers when the fight is long.
+
+**Model**
+
+- **Gear.** All healers have the same gear: the gear profile of part 1. Thus, only the class talents and spells make the difference. Divine Intellect (Paladin) and Mental Strength (Priest) give +10% Intellect. Living Spirit (Druid) gives +15% Spirit.
+- **Spirit regeneration.** Classic values for each 2 sec: Priest 13 + Spirit ÷ 4. Paladin and Druid 15 + Spirit ÷ 5. Shaman 17 + Spirit ÷ 5. While casting, all healers keep 50% (Reverence, Meditation, Reflection, Mindfulness).
+- **Critical heal chance.** Paladin 22% (with Conviction, C15). Priest and Shaman 17%. Druid 12%.
+- **Blessing of Wisdom.** 8 mana per sec for all healers.
+- **Class tools, as an average over time.** Divine Favor (one Holy Light critical heal each 2 min, with Illumination). Litany of Light (changes between Greater Heal and Renew). Inner Focus (one free Greater Heal each 3 min). Innervate (each 6 min, Classic: Spirit regeneration ×5, 100% while casting, for 20 sec). Mana Spring Totem (6.25 per sec, with Restorative Totems). Water Shield (2% of maximum mana for each critical heal). Mana Tide (352 mana each 5 min).
+- **Heals on one tank (C19 values).** Paladin: Flash of Light + Holy Light (C3), or only Flash of Light when the mana is low. Priest: Greater Heal, with Renew always active. Druid: Healing Touch, with Rejuvenation always active. Shaman: Healing Wave. No lower ranks, because of the Forever downranking penalty.
+- **Sustained healing.** The healing per sec that the mana allows for the full fight: (mana pool + income × fight time) × healing per mana ÷ fight time. It cannot be more than the maximum healing per sec.
+- **Not in the model.** Potions and runes (the same for all), the group value of totems, and overhealing.
+
+**Mana income while casting (mana per sec)**
+
+| Source | Paladin | Priest | Druid | Shaman |
+| --- | --- | --- | --- | --- |
+| Spirit (50%) | 11.8 | 13.4 | 13.1 | 12.3 |
+| Blessing of Wisdom | 8.0 | 8.0 | 8.0 | 8.0 |
+| Class tools | 2.8 | 10.9 | 6.5 | 13.0 |
+| Total | 22.6 | 32.2 | 27.6 | 33.4 |
+| Mana pool | 4,416 | 4,340 | 3,859 | 4,135 |
+
+**Sustained healing on one tank, beta Illumination (50%)**
+
+| Fight time | Paladin | Priest | Druid | Shaman |
+| --- | --- | --- | --- | --- |
+| 700 healing power, 3 min | 299 | 263 | 228 | 284 |
+| 700 healing power, 5 min | 237 | 220 | 190 | 238 |
+| 700 healing power, 10 min | 190 | 187 | 161 | 203 |
+| 700 healing power, very long | 143 | 155 | 143 | 169 |
+| 900 healing power, 3 min | 341 | 289 | 251 | 307 |
+| 900 healing power, 5 min | 270 | 243 | 210 | 257 |
+| 900 healing power, 10 min | 217 | 208 | 179 | 219 |
+| 900 healing power, very long | 164 | 173 | 160 | 182 |
+
+- The Paladin has the largest mana pool and the most efficient heal (Flash of Light). Thus, it is first in short fights.
+- The Paladin has the lowest income. Thus, it falls behind when the fight is long. In fights of 10 min and more, the Shaman is first.
+
+**Illumination values: Paladin compared with the best other healer**
+
+| Illumination | 700: 3 min | 700: 5 min | 700: 10 min | 700: very long | 900: 3 min | 900: 5 min | 900: 10 min | 900: very long |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 50% (beta) | +5% | −1% | −7% | −15% | +11% | +5% | −1% | −10% |
+| 75% (C20) | +15% | +10% | +4% | −4% | +22% | +16% | +10% | +2% |
+| 100% (Classic) | +27% | +22% | +16% | +9% | +34% | +29% | +23% | +15% |
+
+- Without Conviction (17% critical heal chance), 75% gives +10%, +5%, 0% and −8% at 700 healing power, and +17%, +11%, +5% and −3% at 900.
+
+**Result**
+
+- With C20 (75%), the Paladin is first in fights of up to 10 min. The lead decreases when the fight is longer. In very long fights, the Paladin is almost equal to the Shaman. This agrees with the design goal: a fair advantage over time.
+- At 100%, the Paladin is first by too much in all fights.
+- The gear and the class tools are estimates. Tests of the mana income in long fights can confirm the values.
 
 ### Tree balance
 
@@ -1170,6 +1241,7 @@ These are risks to check in tests. None of them needs a change now.
 | W11 | Protection threat in late raids depends on C14 and on the block value of Forever gear (see Threat, part 2) | Change the 200% of C14. Then Iron Creed +100% Holy Strike threat. A shield attack only as the last step |
 | W12 | Infusion of Light (C3): a 7-point Holy dip gives a 1.5 sec Holy Light after each Holy Strike in PvP | Holy Strike gives only −0.25/0.5 sec. Or only Holy Strike critical hits trigger it, as in the beta |
 | W13 | C19: the Holy Paladin is the best single-target healer only with critical heals and Lingering Light (C2). The Lingering Light heal can overheal | Increase Healing Light to 35% (5 ranks: 7/14/21/28/35%) |
+| W14 | Illumination (C20) at 75% gives Holy more mana in PvP and in long fights | Decrease it to 65% if Holy is first by more than 20% in fights of 10 min |
 
 ## Open questions
 

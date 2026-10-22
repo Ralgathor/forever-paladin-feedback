@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 19 changes (C1–C19) and 7 moves (M1–M7) for the Holy, Protection and Retribution trees. Three changes are new talents.
+- **Proposals:** 20 changes (C1–C20) and 7 moves (M1–M7) for the Holy, Protection and Retribution trees. Three changes are new talents.
 - **Talent calculator:** you can try the proposals and compare them with the beta trees.
 
 ## IDs
@@ -21,6 +21,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C3 Infusion of Light:** all Holy Shock, Flash of Light and Holy Strike hits make the next Holy Light faster (beta: critical hits only). It moves from row 4 to row 2.
 - **C4 Healing Light:** 3 ranks, 10/20/30% (beta: 4/8/12%), with C19. It moves from row 2 to row 6, column 3. Holy Power moves to column 1.
 - **C5 Improved Seals:** 5 ranks, 3/6/9/12/15% (beta: 3 ranks). It moves from row 2 to row 1 and replaces Divine Strength.
+- **C20 Illumination:** critical heals return 75% of the base cost (beta: 50%, Classic: 100%). Thus, Holy keeps more healing than the other healers in long fights.
 - **M1 Consecrated Ground:** row 5 → row 3.
 - **M2 Spiritual Focus:** row 2 → row 4.
 - **M3 Unyielding Faith:** row 2, column 4 → column 3.

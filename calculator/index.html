@@ -263,6 +263,7 @@ const RAW=[
 ];
 // Proposed changes: patches to RAW talents, keyed by talent key. "replace" swaps a talent out for a new one in the same spot.
 const PROPOSED={
+ ill:{pid:"C20",rt:["After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 20% chance to gain Mana equal to 75% of the base cost of the spell.","After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 40% chance to gain Mana equal to 75% of the base cost of the spell.","After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 60% chance to gain Mana equal to 75% of the base cost of the spell.","After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 80% chance to gain Mana equal to 75% of the base cost of the spell.","After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 100% chance to gain Mana equal to 75% of the base cost of the spell."]},
  rev:{pid:"C1",tier:2,col:2,rt:["Allows 17% of your Mana regeneration to continue while casting.","Allows 33% of your Mana regeneration to continue while casting.","Allows 50% of your Mana regeneration to continue while casting."]},
  hp:{pid:null,tier:6,col:1},
  hl:{pid:"C4",tier:6,col:3,ranks:3,rt:["Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 10%.","Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 20%.","Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 30%."]},
@@ -300,6 +301,7 @@ const PROPOSALS=[
  ["M1", "cg", "Consecrated Ground", "Holy, row 5 → row 3", "Row 5", "Row 3 (move only)"],
  ["M2", "sf", "Spiritual Focus", "Holy, row 2 → row 4", "Row 2", "Row 4 (move only)"],
  ["M3", "uf", "Unyielding Faith", "Holy, row 2", "Column 4", "Column 3 (move only)"],
+ ["C20", "ill", "Illumination", "Holy, row 4", "Critical heals return 50% of the base cost (Classic: 100%)", "Critical heals return 75% of the base cost"],
  ["C6", "red", "Redoubt", "Protection, row 1", "10% chance when you are hit: +4–20% block", "The same. Each Holy Shield cast also starts it"],
  ["C7", "ic", "Iron Creed", "Protection, row 6", "−2–10% damage taken for 6 sec after Holy Strike", "−2–10% damage taken while Righteous Fury is active"],
  ["C8", "ds", "Divine Strength replaces Toughness", "Protection, row 1", "Toughness: +2–10% armor from items", "Divine Strength: +2–10% Strength (from Holy row 1)"],
