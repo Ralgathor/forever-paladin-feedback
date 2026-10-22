@@ -36,6 +36,33 @@ class Spell:
 def cd_limit(cd, time):
     return lambda T: uses(T, cd, time)
 
+# ---------------------------------------------------------------- Lingering Light (C2) pool
+def ll_ticks(events, rng_crit=None):
+    """Lingering Light on one target, as its text says. events: (time, amount added) for each non-periodic
+    critical heal. The new amount and the healing that remains are added together and spread over a new
+    6 sec: one tick each 2 sec. Returns the list of (tick time, tick amount)."""
+    ticks = []
+    for t, add in sorted(events):
+        rem = sum(a for tt, a in ticks if tt > t)
+        ticks = [(tt, a) for tt, a in ticks if tt <= t]
+        pool = rem + add
+        ticks += [(t + 2, pool/3), (t + 4, pool/3), (t + 6, pool/3)]
+    return ticks
+
+def ll_spam_history(heal, c, ling, n=20, cast=1.5, rng=None):
+    """Events of Flash of Light spam that ends at time 0: n casts, one each 1.5 sec, critical with chance c."""
+    import random
+    rng = rng or random
+    return [(-cast*i, ling*heal*1.5) for i in range(n) if rng.random() < c]
+
+def ll_end_pool(heal, c, ling, samples=4000, seed=1):
+    """Lingering Light healing that remains after the last cast (expected value). At the end of a fight it is lost."""
+    import random
+    rng = random.Random(seed); tot = 0.0
+    for _ in range(samples):
+        tot += sum(a for t, a in ll_ticks(ll_spam_history(heal, c, ling, rng=rng)) if t > 0)
+    return tot / samples
+
 # ---------------------------------------------------------------- Paladin
 def paladin(hp=HPG, tank=False, rev=0.30, illum=0.50, light=1.12, bol=True, ling=0.0, conv=0.0,
             bened=0.10, inf_all=False, hs_heal_mult=1.0, hs_cost_mult=1.0,
@@ -79,8 +106,11 @@ def paladin(hp=HPG, tank=False, rev=0.30, illum=0.50, light=1.12, bol=True, ling
     sp.append(Spell("Flash of Light, Holy Light on Infusion", fol_r + p_inf*hl_r, fol_e + p_inf*hl_e,
                     fol_cost + p_inf*hl_cost, 1.5 + p_inf*1.5))
     sp.append(Spell("Holy Light", hl_r, hl_e, hl_cost, 2.5))
+    # Lingering Light carries over the remaining healing at each refresh: no healing is lost, but the healing
+    # that remains at the end of the fight does not land.
+    end = ll_end_pool(fol, c, ling) * kt if ling else 0.0
     return dict(cls="Paladin", pool=1512 - 280 + 15*438, regen=regen_full("pal", 336), castfrac=rev,
-                extra=None, spells=sp, groups={}, crit=c)
+                extra=None, spells=sp, groups={}, crit=c, end_loss=(end, end*0.5))
 
 # ---------------------------------------------------------------- Priest
 def priest(hp_gear=HPG, tank=False):
@@ -206,6 +236,8 @@ def solve(k, T=180, tank=False, metric="eff", mana_limit=True):
     raw = sum(s.raw*wi*x for s, wi, x in zip(sp, w, r.x[:-1]))
     eff = sum(s.eff*wi*x for s, wi, x in zip(sp, w, r.x[:-1]))
     spent = sum(s.cost*x for s, x in zip(sp, r.x[:-1]))
+    el_raw, el_eff = k.get("end_loss", (0.0, 0.0))     # Lingering Light healing still in the pool at the end
+    raw -= el_raw; eff -= el_eff
     return dict(eff=eff/T, raw=raw/T, casts=casts, idle=r.x[-1], spent=spent)
 
 def max_hps(k, T=30):
