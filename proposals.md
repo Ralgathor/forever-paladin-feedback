@@ -1,6 +1,6 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 18 changes and 7 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 19 changes and 7 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
 
 ## How to read this document
 
@@ -21,7 +21,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 18 chan
 | C1 | Reverence | Holy, row 3 → row 2 | 10/20/30% of mana regeneration while casting | 17/33/50% |
 | C2 | Lingering Light (new) | Holy, row 5 | — | 2 ranks: a critical heal adds a heal over time of 15/30% of the heal |
 | C3 | Infusion of Light | Holy, row 4 → row 2 | Holy Shock and Flash of Light critical hits make the next Holy Light faster | All Holy Shock, Flash of Light and Holy Strike hits do this. No critical hit is necessary |
-| C4 | Healing Light | Holy, row 2 → row 6 | 3 ranks: 4/8/12% | 2 ranks: 6/12% |
+| C4 | Healing Light | Holy, row 2 → row 6 | 3 ranks: 4/8/12% | 3 ranks: 10/20/30% (with C19) |
 | C5 | Improved Seals | Holy, row 2 → row 1 | 3 ranks: 5/10/15% | 5 ranks: 3/6/9/12/15% |
 | C6 | Redoubt | Protection, row 1 | 10% chance when you are hit: +4–20% block | The same. Each Holy Shield cast also starts it |
 | C7 | Iron Creed | Protection, row 6 | −2–10% damage taken for 6 sec after Holy Strike | −2–10% damage taken while Righteous Fury is active |
@@ -36,6 +36,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 18 chan
 | C16 | Sacred Arbiter | Retribution, row 4 → row 5 | +20% Holy Strike damage | Holy Strike always triggers your active Seal |
 | C17 | Twist of Light | Retribution, row 7 | The Echo applies to the next melee attack only | The Echo applies to all melee attacks for 10 sec |
 | C18 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
+| C19 | Blessing of Light | Baseline spell, and Healing Light (C4) | +400 Holy Light, +115 Flash of Light. Uses a Blessing slot | Removed. Healing Light gives 10/20/30% |
 
 **Moves**
 
@@ -84,10 +85,10 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 | 3 (10) | Voice of Truth, Purifying Power, Consecrated Ground (M1) | 5 |
 | 4 (15) | Spiritual Focus (M2), Illumination, Divine Favor | 8 |
 | 5 (20) | Divine Precision, Holy Shock, Lingering Light (C2) | 6 |
-| 6 (25) | Healing Light (C4), Holy Power | 7 |
+| 6 (25) | Healing Light (C4), Holy Power | 8 |
 | 7 (30) | Light's Vigil | 1 |
 
-- Holy has 44 points (beta: 46).
+- Holy has 45 points (beta: 46).
 - You can use each talent when its row opens.
 - Illumination still requires Reverence (straight arrow in column 2).
 - Divine Strength leaves Holy. It goes to Protection row 1 (C8).
@@ -126,20 +127,20 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Proposed text.** "Your Holy Shock and Flash of Light spells and your Holy Strike hits reduce the cast time of your next Holy Light cast within 15 sec by 0.5/1 sec."
 - **Change.** A critical hit is not necessary now. Holy Strike is a new trigger. A miss, dodge or parry does not trigger it. The values and the duration are the same as in the beta.
 - **Problem.** No talent decreases the cast time of Holy Light. Divine Fury (Priest), Naturalist (Druid) and Improved Healing Wave (Shaman) give −0.5 sec to the big heal of their class. Thus, healing power gives the smallest increase in healing per second to the Paladin (see Analysis, Healing). In the beta, Infusion of Light works only after a critical hit. Thus, it is not reliable.
-- **In play (Holy).** Cast Flash of Light, then Holy Light, and do this again. At rank 2, Holy Light then has a 1.5 sec cast. With 900 healing power, this gives 1,281 healing per sec and 5.49 healing per mana. Holy Light alone gives 1,175 and 5.09. Healing Wave (Shaman) gives 1,283 and 5.45.
+- **In play (Holy).** Cast Flash of Light, then Holy Light, and do this again. At rank 2, Holy Light then has a 1.5 sec cast. With 900 healing power, this gives 1,281 healing per sec and 5.49 healing per mana. Holy Light alone gives 1,175 and 5.09. Healing Wave (Shaman) gives 1,283 and 5.45. With C19 (no Blessing of Light, Healing Light 30%), the mix gives 1,264 and 5.42.
 - **Long fights.** The best play also uses the least mana. Flash of Light is the most efficient heal, and it makes Holy Light faster.
 - **In play (Retribution and Protection).** These specs have only two heals. Flash of Light is too small in PvP. After each Holy Strike, the next Holy Light has a 1.5 sec cast. This is a fast emergency heal one time each 10 sec.
 - **Limits.** Holy Strike has a 10 sec cooldown. Holy Light costs 660 mana. Players can still interrupt the cast. Mortal Strike decreases the heal by 50% (see Analysis, Healing, part 5).
 - **Row 2.** Retribution and Protection keep a healing reason to put points in Holy: faster heals, not larger heals.
 - **Risk.** A 7-point Holy dip gives a 1.5 sec Holy Light after each Holy Strike in PvP. This is on the watch list (W12).
 
-### C4. Healing Light: row 2 → row 6, 2 ranks
+### C4. Healing Light: row 2 → row 6, 10/20/30%
 
-- **Proposed text.** "Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 6/12%."
-- **Change.** 2 ranks (6/12%), not 3 ranks (4/8/12%). The maximum stays 12%.
-- **Why.** The +12% healing bonus is now at 25 points, as Spiritual Healing (Priest) and Purification (Shaman) are. A Holy Paladin with 28 points in Retribution has only 23 points for Holy. This Paladin cannot get Healing Light.
+- **Proposed text.** "Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 10/20/30%."
+- **Change.** 3 ranks: 10/20/30% (beta: 4/8/12%). The maximum increases from 12% to 30%, because C19 removes Blessing of Light. The 18% difference replaces the Blessing of Light bonus (see C19).
+- **Why row 6.** The healing bonus is now at 25 points, as Spiritual Healing (Priest) and Purification (Shaman) are. A Holy Paladin with 28 points in Retribution has only 23 points for Holy. This Paladin cannot get Healing Light.
 - **Deep Holy** keeps Healing Light, Holy Power, Lingering Light and Light's Vigil. Thus, a deep Holy build stays clearly better for healing.
-- **Cost.** A Holy Paladin who levels gets the full +12% at level 36, not at level 17.
+- **Cost.** A Holy Paladin who levels gets the full bonus at level 37, not at level 17. Blessing of Light rank 1 came at level 40.
 
 ### C5. Improved Seals: row 2 → row 1, 5 ranks
 
@@ -378,7 +379,7 @@ Retribution has 44 points (beta: 44).
 - It takes the row 4 place of Sacred Arbiter (C16).
 - Holy and Protection can get it more easily in PvP (see Watch list, W9).
 
-## Judgements in raids
+## Judgements and Blessings in raids
 
 ### The problem
 
@@ -407,6 +408,62 @@ Retribution has 44 points (beta: 44).
 | Holy + Retribution | Two of three | All three | Grace + Crusader | All three |
 | Holy + Protection | Two of three | All three | Grace + Crusader | Two of three |
 | Protection + Retribution | Two of three | All three | Grace + Crusader | All three |
+
+### The problem with Blessings
+
+- **The rule.** A player can have one Blessing from each Paladin. Since the patch of 15 October, Salvation does not use a Blessing slot. Forever removed Blessing of Sanctuary.
+- **The order.** Each player takes Kings first. Then melee players take Might, and the other players take Wisdom. Blessing of Light is always third, because it increases only the heals of Paladins.
+- **Greater Blessings work on a class.** To put Light only on the tanks, a Paladin must cast the single Blessing on each tank. This replaces the Kings of the same Paladin on that tank.
+
+| Paladins in the raid | Melee | Casters and healers | Tanks |
+| --- | --- | --- | --- |
+| 1 | Kings | Kings | Kings |
+| 2 | Kings + Might | Kings + Wisdom | Kings + Might, or Kings + Light |
+| 3 or more | Kings + Might + Light | Kings + Wisdom + Light | Kings + Might + Light |
+
+- **Effect on Holy.** In raids with 1 or 2 Paladins, most targets do not get Blessing of Light. At 900 healing power, Flash of Light + Holy Light (C3) then gives 1,089 healing per sec and 4.67 healing per mana. With Blessing of Light, it gives 1,281 and 5.49. Healing Wave (Shaman) gives 1,283 and 5.45.
+- **The same problem as C18.** The healing of the class changes with the number of Paladins in the raid.
+
+### C19. Blessing of Light: removed, Healing Light gives 10/20/30% (recommended)
+
+- **Change.** Remove Blessing of Light and Greater Blessing of Light. Healing Light (C4) gets 3 ranks: 10/20/30% (beta: 4/8/12%).
+- **Proposed text (Healing Light).** "Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 10/20/30%."
+- **Precedent.** Forever removed Blessing of Sanctuary.
+- **Why a %.** Forever talents give a % bonus, not a flat value. A % bonus also increases with gear, as Forever wants. Blessing of Light gives a flat +400 to Holy Light and +115 to Flash of Light. Its value decreases with gear. At 700–900 healing power, it gives about +17–19% to these two heals. Thus, 12% + 18% = 30%.
+- **Why Holy only.** Retribution and Protection lose almost nothing. In raids with 1 or 2 Paladins, they did not get Blessing of Light. In PvP, a Paladin alone puts Kings on himself, not Light. Thus, the hybrid burst heal in PvP stays at 2,231 (see W12).
+- **One or the other.** If Blessing of Light stays, raids with 3 or more Paladins get the two bonuses. Thus, C19 removes the spell.
+- **Holy Shock** also gets +30% (beta: +12%). It heals about 920 at 900 healing power. It stays an emergency heal.
+- **Leveling.** Healing Light 3/3 comes at level 37. Blessing of Light rank 1 came at level 40.
+
+Flash of Light + Holy Light (C3), healing per sec:
+
+| Healing power | Beta, Light on the target | Beta, no Light (1 or 2 Paladins) | C19 |
+| --- | --- | --- | --- |
+| 0 | 897 | 705 | 818 (−9%) |
+| 300 | 1,025 | 833 | 967 (−6%) |
+| 900 | 1,281 | 1,089 | 1,264 (−1%) |
+| 1,100 | 1,366 | 1,174 | 1,363 (0%) |
+
+- The % compares C19 with the beta when the target has Light.
+- Raids with 3 or more Paladins lose 1–9%, mostly with little gear. C19 is equal at about 1,150 healing power.
+- Raids with 1 or 2 Paladins get 16–17% more healing.
+- The healing of the Paladin does not change with the number of Paladins.
+- For the comparison with the other healers, see Analysis, Healing, part 7.
+
+### Alternatives to C19
+
+| ID | Option | How it works | Precedent | Tradeoff |
+| --- | --- | --- | --- | --- |
+| C19a | Blessing of Light uses no Blessing slot (use this if Blizzard keeps the spell) | Blessing of Light is a fourth Blessing outside the limit, as Salvation is | Salvation, patch of 15 October | Raids must still cast it. The bonus stays flat. A Retribution Paladin in PvP gets Kings and Light |
+| C19b | The Blessing of Light bonus goes into the base values | Remove the Blessing. Holy Light rank 9 heals 1,980 (beta: 1,580). Flash of Light rank 6 heals 423 (beta: 308). Each rank from level 40 gets the bonus of the Blessing rank of its level | Forever removed Blessing of Sanctuary | Base values go up. This is against the Forever direction. All specs get the bonus |
+
+|  | Beta | C19 | C19a | C19b |
+| --- | --- | --- | --- | --- |
+| Raid with 1 or 2 Paladins, 900 healing power | 1,089 | 1,264 | 1,281 | 1,281 |
+| Increases with gear | No | Yes | No | No |
+| Blessing to cast | Yes | No | Yes | No |
+| Hybrid burst heal in PvP (3 sec) | 2,231 | 2,231 | 2,746 | 2,746 |
+| Spell removed | No | Yes | No | Yes |
 
 ## Analysis
 
@@ -840,14 +897,14 @@ This section compares the big heals of the four healer classes. It also checks C
 - **With gear, Flash of Light is the most efficient heal in the game.** Each point of healing power gives about 2.5 times more healing per mana to Flash of Light than to the big heals of the other classes.
 - **Holy Light gets the smallest increase in healing per second from healing power.** The big heals of the other healers have a talent that decreases the cast time by 0.5 sec. Holy Light has none.
 - **From 300 healing power, Healing Wave (Shaman) is the best big heal.** It gives more healing per second and more healing per mana than Holy Light. Healing Way (+25%, flat in Forever), Purification (+10%) and Improved Healing Wave (−0.5 sec) all apply to it.
-- **C3 puts the Paladin at the level of Healing Wave**, not above it.
+- **C3 puts the Paladin at the level of Healing Wave**, not above it. With C19, the Paladin is 1–3% below Healing Wave without critical heals, and about 10% above it with critical heals (part 7).
 - **In PvP, C3 gives Retribution and Protection one fast Holy Light each 10 sec.** The mana cost and the interrupts limit it.
 
 #### 1. Model
 
 - Heal = (base value + coefficient × healing power) × healing talents.
 - Coefficient = cast time ÷ 3.5 (the Forever rule). A talent that decreases the cast time does not change the coefficient.
-- **Paladin:** base values from the Forever spellbook. Blessing of Light is on the target. Healing Light gives +12%. Illumination at 25% critical heal chance decreases the average cost by 12.5%.
+- **Paladin:** base values from the Forever spellbook. Blessing of Light is on the target. Healing Light gives +12%. Part 7 uses C19: no Blessing of Light, and Healing Light gives +30%. Illumination at 25% critical heal chance decreases the average cost by 12.5%.
 - **Other healers:** Classic base values −10%. A comparison of the Forever spellbook gives about −10% for most heals.
 - **Talents:** Priest: Divine Fury, Spiritual Healing, Improved Healing. Druid: Naturalist, Gift of Nature, Tranquil Spirit. Shaman: Improved Healing Wave, Purification, Healing Way, Tidal Focus.
 - **Not in the model:** critical heals (other than Illumination), heals over time and overhealing.
@@ -926,9 +983,67 @@ Assumptions:
 
 - **Long fights.** With gear, the Holy Paladin is the most efficient healer. The mana problem is mostly during leveling and at fresh level 60 (see Mana).
 - **Single target.** Blessing of Light, Lay on Hands, Blessing of Protection and Blessing of Sacrifice give the Paladin the most single-target tools. But in the beta, Holy Light is not the best big heal. C3 fixes the cast time.
-- **Blessing of Light decreases in value with gear.** Its +400 is 25% of Holy Light with no healing power and 18% with 900.
+- **Blessing of Light decreases in value with gear.** Its +400 is 25% of Holy Light with no healing power and 18% with 900. C19 replaces it with a % bonus that increases with gear.
 - **Downranking.** Since 1 October, ranks far below your level get less healing power. The Paladin has only two heals. Monitor this.
 - **Light's Vigil.** The coefficient of its party heal is not known (see Open questions).
+
+#### 7. Single-target healing with C19
+
+Healing Light gives +30%. There is no Blessing of Light. The other values are as in part 1.
+
+**Sustained healing on one target**
+
+Healing per second · healing per mana. No critical heals.
+
+| Healing power | Holy Light only | Flash of Light + Holy Light (C3) | Flash of Light only | Greater Heal (Priest) | Healing Touch (Druid) | Healing Wave (Shaman) |
+| --- | --- | --- | --- | --- | --- | --- |
+| 0 | 822 · 3.56 | 818 · 3.51 | 267 · 3.27 | 824 · 3.41 | 816 · 3.40 | 859 · 3.65 |
+| 300 | 933 · 4.04 | 967 · 4.14 | 378 · 4.63 | 937 · 3.88 | 926 · 3.86 | 1,000 · 4.25 |
+| 500 | 1,007 · 4.36 | 1,066 · 4.57 | 453 · 5.54 | 1,012 · 4.19 | 999 · 4.16 | 1,095 · 4.65 |
+| 700 | 1,082 · 4.68 | 1,165 · 4.99 | 527 · 6.45 | 1,088 · 4.51 | 1,072 · 4.47 | 1,189 · 5.05 |
+| 900 | 1,156 · 5.00 | 1,264 · 5.42 | 601 · 7.36 | 1,163 · 4.82 | 1,146 · 4.77 | 1,283 · 5.45 |
+| 1,100 | 1,230 · 5.33 | 1,363 · 5.84 | 676 · 8.27 | 1,239 · 5.13 | 1,219 · 5.08 | 1,377 · 5.85 |
+
+| Play | Mana per sec |
+| --- | --- |
+| Holy Light only | 231 |
+| Flash of Light + Holy Light | 233 |
+| Flash of Light only | 82 |
+| Greater Heal | 241 |
+| Healing Touch | 240 |
+| Healing Wave | 236 |
+
+- Holy Light alone is equal to Greater Heal and better than Healing Touch.
+- The best Paladin play is 1–3% below Healing Wave.
+- Flash of Light only uses about 1/3 of the mana per sec of the other plays. It is the tool for long fights.
+
+**With critical heals**
+
+- The Paladin has 25% critical heal chance: Holy Power gives +5%, and Intellect gives more critical heal chance to Paladins than to other classes. The other healers have 20%.
+- A critical heal heals ×1.5. Lingering Light (C2) at 2/2 adds 30% of the critical heal over 6 sec.
+
+| Healing power | Paladin: Flash of Light + Holy Light | Healing Wave (Shaman) | Greater Heal (Priest) |
+| --- | --- | --- | --- |
+| 300 | 1,197 | 1,100 | 1,031 |
+| 900 | 1,564 | 1,411 | 1,279 |
+
+- With critical heals, the Paladin is about 9–11% above the Shaman. Lingering Light gives the lead. Thus, C2 is necessary for the single-target goal.
+- The Lingering Light heal can overheal a tank with full health. If half of it is overhealing, the lead decreases to about +5% (W13).
+
+**Burst at 900 healing power**
+
+| Healer | Burst | Healing |
+| --- | --- | --- |
+| Paladin | Holy Shock, then Holy Light with Divine Favor and the C3 trigger (1.5 sec cast): 3 sec | 918 + 4,335 = 5,253, then 1,300 from Lingering Light in 6 sec |
+| Druid | Nature's Swiftness + Healing Touch (instant) | 3,437 |
+| Shaman | Nature's Swiftness + Healing Wave (instant), then Lesser Healing Wave (1.5 sec) | 3,207 + 1,306 = 4,514 |
+
+- The Paladin also has the most single-target saves: Lay on Hands, Blessing of Protection and Blessing of Sacrifice.
+
+**Result**
+
+- With C19, the Holy Paladin is the best single-target healer with critical heals and in emergencies. Without critical heals, it is second, after the Shaman. This agrees with the Holy tree, which uses critical heals (Illumination, Divine Favor, Holy Power, Lingering Light).
+- With Healing Light at 35%, the Paladin is first in all measures: 1,312 healing per sec and 5.63 healing per mana at 900 healing power, and about +14% above the Shaman with critical heals. The Shaman then has no single-target role. Thus, C19 uses 30%.
 
 ### Tree balance
 
@@ -952,7 +1067,7 @@ Two checks:
 - Anticipation = Anticipation (Warrior, +20 Defense).
 - Divine Strength = Heart of the Wild (Druid).
 
-**Points in each tree.** Beta: Holy 46, Protection 48, Retribution 44. Proposed: Holy 44, Protection 47, Retribution 44.
+**Points in each tree.** Beta: Holy 46, Protection 48, Retribution 44. Proposed: Holy 45, Protection 47, Retribution 44.
 
 ## Beta test results
 
@@ -1052,6 +1167,7 @@ These are risks to check in tests. None of them needs a change now.
 | W10 | Shield Specialization (C13) can make Consecration too cheap against groups that hit fast (up to 58–98 mana per sec, related to maximum mana) | Go back to 3 sec, or decrease the return from 4% to 3% |
 | W11 | Protection threat in late raids depends on C14 and on the block value of Forever gear (see Threat, part 2) | Change the 200% of C14. Then Iron Creed +100% Holy Strike threat. A shield attack only as the last step |
 | W12 | Infusion of Light (C3): a 7-point Holy dip gives a 1.5 sec Holy Light after each Holy Strike in PvP | Holy Strike gives only −0.25/0.5 sec. Or only Holy Strike critical hits trigger it, as in the beta |
+| W13 | C19: the Holy Paladin is the best single-target healer only with critical heals and Lingering Light (C2). The Lingering Light heal can overheal | Increase Healing Light to 35% (5 ranks: 7/14/21/28/35%) |
 
 ## Open questions
 
@@ -1126,6 +1242,11 @@ We examined these ideas and rejected them. They are not proposals.
 | Righteous Defense: Blessing of Protection also makes up to 3 enemies attack you | Only 3 enemies, and only when Blessing of Protection is used. Shoulder the Burden (C10) works on all enemies |
 | A shield interrupt in Protection | Paladins have no interrupt by design |
 | A passive share of the threat of an ally (as Vigilance, Warrior, a later expansion) | Not a new design. Shoulder the Burden is an active spell with a cooldown |
+| Healing Light adds a flat +200/400 to Holy Light and +58/115 to Flash of Light | Talents give a % bonus, not a flat value. C19 uses a % |
+| Merge Blessing of Light and Blessing of Wisdom (Blessing of Grace) | Tanks must then choose between Might and Grace. It does not help melee |
+| A Holy aura that gives the Blessing of Light bonus | Aura slots have the same limit as Blessing slots. It competes with Devotion Aura and Concentration Aura |
+| A second Holy talent: +6/12/18% to Holy Light and Flash of Light | The same value as C19, but two talents for one bonus |
+| Healing Light at 35% (not 30%) | The Paladin is then first in all measures. The Shaman has no single-target role. It is the W13 action |
 
 ## Sources
 

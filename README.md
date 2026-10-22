@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 18 changes (C1–C18) and 7 moves (M1–M7) for the Holy, Protection and Retribution trees. Three changes are new talents.
+- **Proposals:** 19 changes (C1–C19) and 7 moves (M1–M7) for the Holy, Protection and Retribution trees. Three changes are new talents.
 - **Talent calculator:** you can try the proposals and compare them with the beta trees.
 
 ## IDs
@@ -19,7 +19,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C1 Reverence:** 17/33/50% mana regeneration while casting (beta: 10/20/30%). It moves from row 3 to row 2. Protection and Retribution can get it with 8 Holy points.
 - **C2 Lingering Light (new):** a critical heal adds a heal over time of 15/30% of the heal.
 - **C3 Infusion of Light:** all Holy Shock, Flash of Light and Holy Strike hits make the next Holy Light faster (beta: critical hits only). It moves from row 4 to row 2.
-- **C4 Healing Light:** 2 ranks, 6/12% (beta: 3 ranks, 4/8/12%). It moves from row 2 to row 6.
+- **C4 Healing Light:** 3 ranks, 10/20/30% (beta: 4/8/12%), with C19. It moves from row 2 to row 6.
 - **C5 Improved Seals:** 5 ranks, 3/6/9/12/15% (beta: 3 ranks). It moves from row 2 to row 1 and replaces Divine Strength.
 - **M1 Consecrated Ground:** row 5 → row 3.
 - **M2 Spiritual Focus:** row 2 → row 4.
@@ -47,9 +47,10 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **M6 Two-Handed Weapon Specialization:** row 5 → row 4 (20 → 15 points).
 - **M7 Repentance:** row 5 → row 4 (20 → 15 points).
 
-**Judgements**
+**Judgements and Blessings**
 
 - **C18 Judgement of the Crusader:** a personal debuff. It does not count against the one-Judgement limit. C18a and C18b are alternatives.
+- **C19 Blessing of Light:** removed. Healing Light (C4) gives 10/20/30%. Thus, Holy healing does not change with the number of Paladins in the raid. C19a and C19b are alternatives.
 
 ## Read and try
 
