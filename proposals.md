@@ -1,21 +1,21 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 21 changes and 7 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 21 changes and 6 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
 
 **Contents**
 
 - [How to read this document](#mzhg23y101g.322363) · [Summary](#mzhg23y101g.323287) · [Design rules](#mzhg23y101g.326276)
-- **Holy:** [C1 Reverence](#mzhg23y101g.328844) · [C2 Lingering Light](#mzhg23y101g.329447) · [C3 Infusion of Light](#mzhg23y101g.331643) · [C4 Healing Light](#mzhg23y101g.332649) · [C5 Improved Seals](#mzhg23y101g.333321) · [M1 Consecrated Ground](#mzhg23y101g.333804) · [M2 Spiritual Focus](#mzhg23y101g.333983) · [M3 Unyielding Faith](#mzhg23y101g.334094) · [C20 Illumination](#mzhg23y101g.437451)
+- **Holy:** [C1 Reverence](#mzhg23y101g.328844) · [C2 Lingering Light](#mzhg23y101g.329447) · [C3 Infusion of Light](#mzhg23y101g.331643) · [C4 Healing Light](#mzhg23y101g.332649) · [C5 Improved Seals](#mzhg23y101g.333321) · [M1 Consecrated Ground](#mzhg23y101g.333804) · [M2 Spiritual Focus](#mzhg23y101g.333983) · [C20 Illumination](#mzhg23y101g.437451)
 - **Protection:** [C6 Redoubt](#mzhg23y101g.335168) · [C7 Iron Creed](#mzhg23y101g.336049) · [C8 Divine Strength](#mzhg23y101g.337064) · [C9 Improved Righteous Fury](#mzhg23y101g.337936) · [C10 Shoulder the Burden](#mzhg23y101g.407137) · [C11 Reckoning](#mzhg23y101g.339091) · [C12 Fury's Reach](#mzhg23y101g.342190) · [C13 Shield Specialization](#mzhg23y101g.343369) · [C14 Holy Shield](#mzhg23y101g.344682) · [M4 Improved Hammer of Justice](#mzhg23y101g.407467) · [M5 Swift Judgement](#mzhg23y101g.409860)
 - **Retribution:** [C15 Conviction](#mzhg23y101g.347909) · [C16 Holy Strike](#mzhg23y101g.348361) · [C17 Twist of Light](#mzhg23y101g.349382) · [M6 Two-Handed Weapon Specialization](#mzhg23y101g.350635) · [M8 Conviction and Benediction](#mzhg23y101g.451134) · [C21 Benediction](#mzhg23y101g.479364)
 - **Judgements and Blessings:** [The problem](#mzhg23y101g.351019) · [C18 Judgement of the Crusader](#mzhg23y101g.351763) · [Alternatives](#mzhg23y101g.352438) · [Blessings](#mzhg23y101g.427469) · [C19 Blessing of Light](#mzhg23y101g.428675) · [Alternatives to C19](#mzhg23y101g.430584)
-- **Analysis:** [Crushing blows](#mzhg23y101g.353472) · [Threat](#mzhg23y101g.357087) · [PvP burst check](#mzhg23y101g.368176) · [Mana](#mzhg23y101g.370341) · [Healing](#mzhg23y101g.419556) · [Damage](#mzhg23y101g.452318) · [Tree balance](#mzhg23y101g.374454)
+- **Analysis:** [Crushing blows](#mzhg23y101g.353472) · [Threat](#mzhg23y101g.357087) · [PvP burst check](#mzhg23y101g.368176) · [Mana](#mzhg23y101g.370341) · [Healing](#mzhg23y101g.419556) · [Damage](#mzhg23y101g.452318) · [Builds](#mzhg23y101g.482029) · [Tree balance](#mzhg23y101g.374454)
 - [Beta test results](#mzhg23y101g.375616) · [Problems to report to Blizzard](#mzhg23y101g.381821) · [Watch list](#mzhg23y101g.382305) · [Open questions](#mzhg23y101g.384242) · [Withdrawn ideas](#mzhg23y101g.385874) · [Sources](#mzhg23y101g.391119)
 
 ## How to read this document
 
 - **C (change).** C1 to C21 change what a talent does, add a talent or remove a talent. C16, C18 and C19 change baseline spells. A change can also move the talent. The text then gives the new row.
-- **M (move).** M1 to M8 move a talent (M7 is withdrawn) to a different row or column. The talent text does not change.
+- **M (move).** M1 to M8 move a talent (M3 and M7 are withdrawn) to a different row or column. The talent text does not change.
 - **C18a and C18b** are the two alternatives to C18.
 - **Withdrawn ideas** have no ID. They are in the Withdrawn ideas section only.
 - **Data.** Forever client build 1.60.1.70450, with the server hotfixes of 18 October 2026, from wowforevertalents.com. Player tests from 19 October 2026 and later. The text tells you when a value comes from an in-game tooltip.
@@ -55,8 +55,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 21 chan
 | ID | Talent | Tree | Beta | Proposed |
 | --- | --- | --- | --- | --- |
 | M1 | Consecrated Ground | Holy | Row 5 | Row 3 |
-| M2 | Spiritual Focus | Holy | Row 2 | Row 4 |
-| M3 | Unyielding Faith | Holy | Row 2, column 4 | Row 2, column 3 |
+| M2 | Spiritual Focus | Holy | Row 2, column 2 | Row 2, column 3 |
 | M4 | Improved Hammer of Justice | Protection | Row 4 | Row 3 |
 | M5 | Swift Judgement | Protection | Row 4, requires Improved Seal of Fury | Row 3, no requirement |
 | M6 | Two-Handed Weapon Specialization | Retribution | Row 5 (20 points) | Row 4 (15 points) |
@@ -93,9 +92,9 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 | Row (points necessary) | Talents | Points in the row |
 | --- | --- | --- |
 | 1 (0) | Improved Seals (C5), Divine Intellect | 10 |
-| 2 (5) | Infusion of Light (C3), Reverence (C1), Unyielding Faith (M3) | 7 |
+| 2 (5) | Infusion of Light (C3), Reverence (C1), Spiritual Focus (M2), Unyielding Faith | 9 |
 | 3 (10) | Voice of Truth, Purifying Power, Consecrated Ground (M1) | 5 |
-| 4 (15) | Spiritual Focus (M2), Illumination, Divine Favor | 8 |
+| 4 (15) | Illumination, Divine Favor | 6 |
 | 5 (20) | Divine Precision, Holy Shock, Lingering Light (C2) | 6 |
 | 6 (25) | Holy Power, Healing Light (C4) | 8 |
 | 7 (30) | Light's Vigil | 1 |
@@ -167,15 +166,10 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - Row 3 opens at level 20. Paladins learn Consecration at level 20.
 - Protection gets it with 12 Holy points (beta: 22) for more area threat.
 
-### M2. Spiritual Focus: row 2 → row 4
+### M2. Spiritual Focus: row 2, column 2 → column 3
 
-- It makes space in row 2.
-- Only healers need resistance to spell pushback.
-
-### M3. Unyielding Faith: row 2, column 4 → column 3
-
-- It fills the space that Improved Seals leaves when it goes to row 1 (C5).
-- Thus, row 2 has no empty space between talents.
+- Reverence (C1) goes to row 2, column 2. Thus, Spiritual Focus moves one column to the right. It stays in row 2, as in the beta.
+- Only healers need resistance to spell pushback. In row 2, it helps a Holy healer to open rows 4 and 6 with less filler (see Analysis, Builds, part 7).
 
 ### C20. Illumination: 75% of the base cost (beta: 50%)
 
@@ -1025,7 +1019,7 @@ Assumptions:
 - **Without C3, the hybrid Paladin has no good fast heal.** Flash of Light heals half of Lesser Healing Wave. A 2.5 sec Holy Light is easy to interrupt.
 - **With C3, the Paladin heals about 2,230 in 3 sec** (Holy Light after Holy Strike, then Flash of Light). Two Lesser Healing Waves heal about 1,860. The Paladin cannot do this again before the next Holy Strike.
 - **Mana is the main limit.** A Retribution Paladin with about 4,000 mana can cast 5–6 Holy Light. Then it has no mana for Seals and Judgement. A 7-point dip with Infusion of Light has no points for Reverence.
-- **Players can stop it.** Kick, Pummel and Earth Shock interrupt the cast. Mortal Strike and Wound Poison decrease the heal by 50%. Spiritual Focus is in row 4. Concentration Aura gives only 35% pushback resistance.
+- **Players can stop it.** Kick, Pummel and Earth Shock interrupt the cast. Mortal Strike and Wound Poison decrease the heal by 50%. Spiritual Focus is in row 2. Concentration Aura gives only 35% pushback resistance.
 - **It costs damage.** Each heal uses a global cooldown in which the Paladin does not attack.
 - **Combinations.** Hammer of Justice or Repentance, then Holy Strike, then a 1.5 sec Holy Light gives a free heal of about 1,800. The beta already lets the Paladin cast Holy Light during Divine Shield.
 
@@ -1349,6 +1343,134 @@ Judgement of the Crusader gives about +9% DPS at fresh level 60. It adds 161 Hol
 - Boss armor is the same at all tiers, as in Classic.
 - Consumables are not in the model.
 
+### Builds
+
+This section examines the builds that are possible with the proposed trees. It gives the best builds for each spec and role. It also gives the builds that use a different tree for a role.
+
+#### Summary
+
+- The proposed trees have about 3.5 × 10^15 legal builds of 51 points. A search examined them for each role with the models of this document.
+- Each talent is in at least one good build. No talent is without a use.
+- Each spec has a clear main build. Each role also has real choices: mana, threat, saves and PvP control.
+- Only one build outside the main tree is good: Shock-Retribution (21/0/30) for short fights and PvP. Tanks and healers outside their tree are weaker.
+- Divine Strength (C8) gives almost no threat to a tank. The tank builds do not take it. Retribution takes it.
+- Two hybrids need 52 points: Holy Shock with Twist of Light, and Holy Shock with Holy Shield. This 1-point gap stops the two strongest hybrids.
+
+#### 1. Method
+
+- **Search.** A program examined all legal builds for each role. It moved points between talents and kept the best result. It used the row rules and the requirements of the calculator.
+- **Damage.** The model of Analysis, Damage: raid buffs, a level 63 boss, a 2 min fight.
+- **Threat and mana.** The models of Analysis, Threat and Mana: pre-raid gear, 200 spell power, 60 block value, 3,400 mana. The mana column uses fresh level 60 gear (2,897 mana).
+- **Healing.** The model of Analysis, Healing: 900 healing power. The "full fight" values use a 10 min fight.
+- **PvP burst.** The model of Analysis, PvP burst check: one 6 sec Hammer of Justice stun.
+- **Codes.** All codes open in the calculator with 51 points and no error. A code that starts with "p" opens the proposed trees.
+
+#### 2. Holy
+
+| Build | Points and code | Healing | What it gives |
+| --- | --- | --- | --- |
+| HB1. Raid and PvP healer | 35/7/9: p53202132251010512-0502-03015 | Reference. 22% critical heal chance | All useful Holy talents (35 points). Conviction and Benediction. Redoubt and Guardian's Favor (Blessing of Protection each 3 min). Holy Conduit 1 |
+| HB2. Healer with more saves | 34/12/5: p53201132251010512-05320002-00005 | The same as HB1 | Sacred Duty 2/2 (Divine Shield −60 sec, +4% Stamina) and Guardian's Favor. No Benediction. Possible only with Spiritual Focus in row 2 (M2) |
+| HB3. PvP, Hammer of Justice each 45 sec | 30/13/8: p53202132251010102-05320000003-03005 | −3% maximum, −6% for the full fight | Improved Hammer of Justice 3/3. No Light's Vigil. Holy Power 1/5 |
+
+- **Holy is complete at 34–35 points.** These points give all healing talents and the useful utility talents.
+- **Conviction is the best next talent.** It gives +8% healing for the full fight: more critical heals and more mana from Illumination.
+- **The other points give only utility:** Blessing of Protection, Divine Shield or run speed (Pursuit of Justice). The 51st point has no healing value.
+- **Value of each Holy talent for the full fight:** Reverence 38%, Illumination 28%, Healing Light 23%, Divine Favor 13%, Conviction 8%, Holy Power 8%, Lingering Light 6%. For the maximum healing per second: Infusion of Light 25%, Healing Light 23%.
+- **Without the Retribution dip** (45/6/0): −4% maximum, −8% for the full fight. The extra Holy points have no healing value.
+
+#### 3. Protection
+
+| Build | Points and code | Threat per sec (one target / with Consecration) | Mana per sec, fresh level 60 | What it gives |
+| --- | --- | --- | --- | --- |
+| PB1. Raid tank | 8/35/8: p0005003-053051321301551-50003 | 562 / 650 | +4.5 | Improved Seals and Reverence. Sacred Duty 2/2. Deflection 5 and Anticipation 5 for the stat targets against a boss (see Crushing blows) |
+| PB2. Raid tank, more critical hit | 5/35/11: p0005-053051321301551-51005 | 569 / 657 | −4.5 | Conviction 5 and Benediction 1. No Reverence |
+| PB3. Dungeon tank, mana | 8/33/10: p0005003-0532013113015512-03025 | 569 / 657 | +8.3. Consecration lasts 96 sec (140 sec with pre-raid mana) | No Anticipation, no Deflection. Conviction, Holy Conduit and Benediction. Fury's Reach and Shoulder the Burden |
+| PB4. Dungeon tank, area threat | 12/34/5: p00050030200002-0532013213015512-00005 | 569 / 714 | +4.5. Consecration lasts 44 sec (57 sec with pre-raid mana) | Consecrated Ground: +10% Holy damage in Consecration |
+
+- **Holy Shield needs 31 Protection points.** A tank build with only useful points uses 33–35.
+- **Bosses and dungeons need different builds.** Only enemies that are 3 or more levels above you can hit with crushing blows. Dungeon enemies are level 62 or lower. Thus, a dungeon tank does not need Anticipation and Deflection. It uses these 10 points for threat and utility.
+- **Raid tank: PB1 is better.** PB2 gives only +1% threat and loses 9 mana per sec.
+- **Dungeon tank: the choice is mana or area threat.** PB3 keeps Consecration for longer. PB4 gives +9% threat with Consecration. With Deflection 5 in place of Conviction 5 (p0005003-0532013113015512-5302), PB3 gets +5% parry and −18 threat per sec.
+- **Threat per sec for each point:** Holy Shield 270 (1 point), Redoubt 18, Reckoning 11, Swift Judgement 10 (1 point), One-Handed Weapon Specialization 9, Improved Seals 4, Precision 4, Conviction 4, Iron Creed 2 (and −10% damage taken), Divine Strength less than 1.
+- **Divine Strength (C8).** +10% Strength gives a tank about +15 Strength with pre-raid gear. This is about +30 Attack Power and +1 block value. Thus, all tank builds skip it. The C8 reason ("Strength is the stat of the Protection Paladin") is not correct for threat. Divine Strength stays a good talent for Retribution (+7 DPS). See Open questions.
+
+#### 4. Retribution
+
+| Build | Points and code | Raid DPS (with Consecration) | PvP burst (one stun) | What it gives |
+| --- | --- | --- | --- | --- |
+| RB1. Raid | 10/8/33: p000500302-503-03225331101330321 | 374 (424) | About 1,830 | Vindication 3. The best build on one target |
+| RB2. Raid with Consecration | 12/8/31: p00050030200002-503-03225031201330321 | 370 (450) | About 1,830 | Consecrated Ground (see W16). The build of Analysis, Damage |
+| RB3. PvP, Hammer of Justice each 45 sec | 0/14/37: p-50320000103-03225331221331321 | 350 | About 2,240 | Swift Judgement, Repentance, Eye for an Eye and Guardian's Favor |
+| RB4. PvP, fear and heals | 9/8/34: p000520002-503-03225031221331321 | 370 | About 1,830 | Unyielding Faith, Infusion of Light and Repentance |
+| RB5. Reckoning (Protection and Retribution) | 0/26/25: p-5532000210215-50005031211331 | 285 | About 3,020 | The build of PvP burst check (see W6) |
+
+- **DPS for each point:** Seal of Command 82 (1 point), Twist of Light 47 (1 point), Sacred Arbiter 9 (1 point), Two-Handed Weapon Specialization 6.6, Vengeance 5.3, Improved Judgement 5.2, Conviction 5.0, Precision 4.9, Improved Seals 4.7, Champion of the Light 4.4, Instrument of Law 1.9, Divine Strength 1.4, Vindication 1.3.
+- **About 6 points are free.** Each choice gives 1.5% DPS or less: Vindication, Consecrated Ground, Infusion of Light or Pursuit of Justice.
+- **The dips into Holy and Protection are strong:** Improved Seals +6%, Precision +4%, Divine Strength +2%. Thus, rule 1 of Tree balance works for Retribution.
+- **Holy Power is not good for Retribution.** A 30/0/21 build loses Twist of Light and Vengeance: −23%.
+
+#### 5. Builds outside the main tree
+
+| Role | Build | Points and code | Result | Status |
+| --- | --- | --- | --- | --- |
+| Damage | Shock-Retribution | 21/0/30: p50052030201012--0322513110133032 | 351 DPS (95% of RB2) for 2 min. Holy Shock replaces Twist of Light. After about 2 min, the mana is too low for Holy Shock: 305 DPS (82%) | Good for short fights and PvP. In PvP, one Holy Shock adds about 560 damage to the burst (about 2,340) |
+| Damage | Shockadin | 38/0/13: p5005213225131251--031250002 | 311 DPS. The mana is zero after 30–50 sec. 63–70% for 2 min | Not good in raids |
+| Tank | Retribution with Righteous Fury and a two-handed weapon | 12/8/31 (RB2) | 75–95% of the PB3 threat. About 1.65 times the damage taken | Possible in easy dungeons. The healer must do more work |
+| Tank | Holy Shock tank | 30/21/0: p500520312013125-053201321301 | 60% of the PB3 threat (74% with Consecration). The mana lasts about 2 min (35 sec with Consecration) | For leveling and solo play |
+| PvP | Holy Shock with Iron Creed | 21/30/0: p50052030201012-05320132130145 | Righteous Fury stays active in PvP. Iron Creed then gives −10% damage taken. The build also has Templar's Bulwark, Reckoning and Holy Shock | Strong survival. See W17 |
+| Healer | Holy with Shoulder the Burden | 28/16/7: p53102132251010002-05323102-02005 | −8% healing for the full fight. No Holy Power, no Light's Vigil | Possible, but weaker |
+| Tank | Healing tank | 29/22/0: p53202132251010002-0532013113011001 | See part 6 | Not good |
+
+- **Holy Shock (rank 4).** 334–362 damage or 307–333 healing, 325 mana, 10 sec cooldown, 42.9% spell damage coefficient. On cooldown, it costs 32.5 mana per sec.
+- **Threat for each mana point:** Holy Shield 10.8, Judgement 8.2, Holy Shock 2.9, Consecration 1.2 (one target).
+- **Healing Light needs 28 Holy points.** A healer with fewer Holy points loses 23% healing. Thus, no healer build uses a different main tree.
+- **Retribution tank.** The values use attacks from the front (14% parry) and dungeon buffs (Blessing of Might only). From behind with raid buffs, the model gives 106%. That value is not correct for a tank.
+- **The 52-point gaps.** Holy Shock needs 21 Holy points. Twist of Light and Holy Shield each need 31 points in their tree. Do not move Holy Shock up, or Twist of Light or Holy Shield down, without a new check of these two hybrids.
+
+#### 6. Healing threat
+
+A tank can heal itself to get threat.
+
+- **Rules (Classic).** Each point of effective healing gives 0.5 threat. Overhealing gives no threat. The threat is divided between all enemies in the fight.
+- **Righteous Fury.** Its Forever text says "Holy attacks". Nobody has tested it on heals (see Open questions). The table gives the two cases.
+
+| Plan, one target | Healing on yourself per sec | Threat per sec (Righteous Fury ×1 / ×1.9 on heals) | Mana per sec | The mana lasts |
+| --- | --- | --- | --- | --- |
+| PB3, no heals | 0 | 567 / 567 | +14 | All the fight |
+| PB3 and 1 Flash of Light each 10 sec | 42 | 578 / 597 | 0 | All the fight |
+| PB3 and 1 Holy Light each 10 sec | 183 | 642 / 725 | −52 | 66 sec |
+| Healing tank (29/22/0), 1 Holy Light and 1 Flash of Light each 10 sec | 293 | 348 / 480 | −68 | 50 sec |
+| Healing tank (29/22/0), 2 Holy Light and 2 Flash of Light each 10 sec | 586 | 477 / 740 | −143 | 24 sec |
+
+- **A healing tank is not a good build.** The mana lasts 24–50 sec. It has no Holy Shield and no Iron Creed.
+- **Self-healing is a good tool.** If Righteous Fury multiplies healing threat, one Flash of Light each 10 sec gives +5% threat at no mana cost. One Holy Light each 10 sec gives +28% threat for about 1 min. With Infusion of Light (PB4), Holy Light has a 1.5 sec cast after Holy Strike.
+- **With 4 enemies,** each enemy gets 25% of the healing threat in this table.
+- The values include the melee swings that stop during a cast. Healing threat is only possible when you have lost that much health.
+
+#### 7. Points that the rows force
+
+The row rules make some builds take talents that do not help their role (filler).
+
+| Build | Filler | Cause |
+| --- | --- | --- |
+| Holy healer | 2 points (Unyielding Faith or Voice of Truth) | Row 4 needs 15 points in rows 1–3. Row 6 needs 25 points in rows 1–5 |
+| Holy dip into Protection for Guardian's Favor | Redoubt 5 | Row 2 needs 5 points in row 1 |
+| Holy PvP with Improved Hammer of Justice | Precision 3 | Row 3 needs 10 points in rows 1–2 |
+| Main builds of Protection and Retribution | None | Useful talents fill all rows |
+
+- **M2 decreases the filler for Holy.** With Spiritual Focus in row 4 (first version of M2), a Holy healer needed 3 points of filler. HB2 was not possible.
+- Purifying Power counts as a useful talent here (Cleanse costs 20% less).
+
+#### 8. Limits
+
+- The values come from models, not from combat logs.
+- The damage-taken values are approximate: one enemy hit of 1,000, 60 block value and the same gear for all tanks. Use them to compare builds, not as exact values.
+- The Shockadin model uses a two-handed weapon and Retribution gear. A Shockadin with caster gear is not in the model.
+- The mana values include Blessing of Wisdom when the text does not give a different condition.
+- Spell miss against level 62 enemies: 6% (assumed).
+- Holy Shock range: 20 yards in the client data. One website gives 40 yards.
+
 ### Tree balance
 
 Three rules:
@@ -1379,7 +1501,7 @@ This table uses the proposed trees with M8.
 
 | Tree | Rows 1–2 | Retribution gets | Protection gets | Holy gets |
 | --- | --- | --- | --- | --- |
-| Holy | Improved Seals, Divine Intellect · Infusion of Light, Reverence, Unyielding Faith | Seal damage, regeneration while casting, a fast Holy Light (7–8 points) | Seal damage, regeneration, Intellect for Shield Specialization (8 points) | — |
+| Holy | Improved Seals, Divine Intellect · Infusion of Light, Reverence, Spiritual Focus, Unyielding Faith | Seal damage, regeneration while casting, a fast Holy Light (7–8 points) | Seal damage, regeneration, Intellect for Shield Specialization (8 points) | — |
 | Retribution | Deflection, Conviction · Improved Judgement, Holy Conduit, Benediction | — | Parry, critical hit, Judgement −2 sec (5–12 points) | +5% critical heal chance (5 points). Instant spells cost −9%: Holy Shock, Cleanse (3 more points, C21) |
 | Protection | Divine Strength, Redoubt · Precision, Guardian's Favor, Anticipation | +10% Strength, +3% hit (8 points) | — | PvP: Redoubt, then Guardian's Favor (7 points) |
 
@@ -1545,6 +1667,7 @@ These are risks to check in tests. None of them needs a change now.
 | W14 | Illumination (C20) at 75% gives Holy more mana in PvP and in long fights | Decrease it to 65% if Holy is first by more than 20% in fights of 10 min |
 | W15 | Retribution with C16 is about equal to Fury Warrior at fresh level 60 (101%). It falls to about 82% of Fury in Naxxramas (see Analysis, Damage, part 6) | Compare Retribution with Fury at each gear tier, not only at fresh level 60. If Retribution is above the pure damage classes in raids, decrease the Sacred Arbiter bonus first (+20% → +10%) |
 | W16 | Consecrated Ground (2 Holy points) with Consecration on cooldown gives Retribution about +23% on one target. The mana lasts about 70 sec | If Retribution uses it on bosses, apply the +10% only to Holy spells, as the tooltip says, not to Seals and Judgements |
+| W17 | Holy Shock with Iron Creed (21/30/0): Righteous Fury stays active in PvP. The build then gets −10% damage taken, Templar's Bulwark, Reckoning and Holy Shock (see Analysis, Builds, part 5) | Monitor in PvP with W7 and W9 |
 
 ## Open questions
 
@@ -1563,6 +1686,8 @@ These are risks to check in tests. None of them needs a change now.
 - [ ] Does Holy Strike use the weapon speed (3.6 sec) or the normalized speed (3.3 sec) for the Seal of Command chance (C16)?
 - [ ] Does MythicSim include Judgement of the Crusader in its raid debuffs? It changes the Retribution comparison by about 9% (see Analysis, Damage, part 7).
 - [ ] What is the Slam cooldown in Forever? The Arms check in Analysis, Damage, uses one Slam each 3 sec at most.
+- [ ] Does Righteous Fury increase the threat of heals in Forever? The text says "Holy attacks". If yes, a tank can use Flash of Light or Holy Light for threat (see Analysis, Builds, part 6).
+- [ ] C8: Divine Strength gives almost no threat to a tank, and the tank builds skip it (see Analysis, Builds, part 3). Keep C8 as a talent for Retribution and change its reason? Or change Divine Strength so that tanks also use it?
 
 **Answered**
 
@@ -1633,6 +1758,8 @@ We examined these ideas and rejected them. They are not proposals.
 | Holy Strike triggers the active Seal, but not the Twist of Light Echo | One more rule to learn. Holy Strike is a melee attack, and the Echo applies to melee attacks |
 | Sacred Arbiter at +10% (with C16) | Only about 1% less damage (4 DPS) at fresh level 60. From Molten Core, Retribution is already below Fury. The beta talent needs no change |
 | M7: Repentance to row 4 (15 points), Sacred Arbiter to row 5 | Not necessary. C16 does not change Sacred Arbiter, so it stays in row 4. Repentance stays a 20-point talent |
+| Spiritual Focus in row 4 (first version of M2) | A Holy healer then needs 3 points of filler in rows 1–3. HB2 (34/12/5) is not possible. In row 2, the healer needs 2 points of filler (see Analysis, Builds, part 7) |
+| Unyielding Faith in row 2, column 3 (M3) | Spiritual Focus now uses row 2, column 3. Unyielding Faith stays in its beta position (row 2, column 4) |
 
 ## Sources
 
