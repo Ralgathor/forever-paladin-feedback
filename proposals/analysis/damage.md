@@ -2,14 +2,16 @@
 
 This section compares the single-target damage of Retribution with the other damage classes. The unit is damage per second (DPS) on one level 63 boss. The values come from a model, not from combat logs.
 
+The script models/damage/run_tables.py calculates all values of this section. Fury, Arms and Combat Rogue use the Forever spellbook and talents (wowforevertalents.com) and the Forever rage formula (see Threat, part 6). No value is fitted to the first calculation.
+
 ## Summary
 
-- With all proposals, Retribution is about equal to Fury Warrior at fresh level 60. It is 101% of Fury and 103% of the average of the pure damage classes.
+- With all proposals, Retribution is about equal to Fury Warrior at fresh level 60. It is 100% of Fury and 103% of the average of the pure damage classes.
 - The hybrid target is 95% of the pure damage classes. Players report it from developer comments: hybrids do about 5% less damage than pure damage classes. In the beta, Retribution is 93%.
 - C16 gives almost all of the increase. C17 gives the same damage as the beta Seal swap, but the mana lasts for the full fight.
-- Retribution increases less with gear than Fury. In Naxxramas, it is about 82% of Fury (87% with flatter gear). No talent change can close this gap (part 6).
-- Fury increases more with gear than the other classes. Against the pure average, Retribution goes from 103% at fresh level 60 to about 92% in Naxxramas. The hybrid target is 95%.
-- Judgement of the Crusader gives Retribution about +9% DPS at fresh level 60. C18 makes this possible for each Paladin.
+- Retribution increases less with gear than Fury. In Naxxramas, it is about 89% of Fury (91% with flatter gear). No talent change closes this gap (part 6).
+- Fury increases more with gear than the other classes. Against the pure average, Retribution goes from 103% at fresh level 60 to about 94% in Naxxramas. The hybrid target is 95%.
+- Judgement of the Crusader gives Retribution about +10% DPS at fresh level 60. C18 makes this possible for each Paladin.
 
 ## 1. Build and gear
 
@@ -48,14 +50,14 @@ All proposals (C16 as in this document), raid buffs, 2 min fight:
 | --- | --- | --- |
 | Auto attacks | 115 | 31% |
 | Seal of Command | 80 | 22% |
-| Holy Strike | 54 | 15% |
+| Holy Strike | 55 | 15% |
 | Judgement | 52 | 14% |
 | Seal of Righteousness (Echo) | 47 | 13% |
 | Hammer of Wrath (last 20% of the fight) | 22 | 6% |
-| **Total** | **370** |  |
+| **Total** | **371** |  |
 
 - About 70% of the damage is Holy damage. Armor does not decrease it.
-- The global cooldown is active 54% of the time. Thus, you have time for Exorcism or Consecration.
+- The global cooldown is active 52% of the time. Thus, you have time for Exorcism or Consecration.
 - Mana: −2.6 mana per sec with Blessing of Wisdom. The mana lasts about 18 min. A melee player gets Blessing of Wisdom only with 3 Paladins in the raid (see The problem with Blessings). Without it: −10.6 mana per sec, and the mana lasts about 4.5 min.
 
 ## 4. Proposals against the beta
@@ -64,16 +66,16 @@ Same build and gear, raid buffs, 2 min fight. The beta build has the same damage
 
 | Version | DPS | Change | Mana |
 | --- | --- | --- | --- |
-| Beta: a Seal change before each swing | 336 | — | −39.6 per sec: zero after 72 sec |
-| Beta: Seal of Command only, no Seal changes | 301 | −10% | Lasts |
-| C16, first version: Holy Strike always triggers Seal of Command, no damage bonus | 379 | +13% | Lasts |
-| **C16: Holy Strike triggers your Seal and Echo, Sacred Arbiter as in the beta (+20%)** | **370** | **+10%** | **Lasts** |
-| C16: Holy Strike triggers your Seal and Echo, Sacred Arbiter +10% | 366 | +9% | Lasts |
-| C16: Holy Strike triggers your Seal and Echo, Sacred Arbiter +0% | 361 | +8% | Lasts |
+| Beta: a Seal change before each swing | 337 | — | −39.6 per sec: zero after 72 sec |
+| Beta: Seal of Command only, no Seal changes | 302 | −10% | Lasts |
+| C16, first version: Holy Strike always triggers Seal of Command, no damage bonus | 380 | +13% | Lasts |
+| **C16: Holy Strike triggers your Seal and Echo, Sacred Arbiter as in the beta (+20%)** | **371** | **+10%** | **Lasts** |
+| C16: Holy Strike triggers your Seal and Echo, Sacred Arbiter +10% | 367 | +9% | Lasts |
+| C16: Holy Strike triggers your Seal and Echo, Sacred Arbiter +0% | 362 | +8% | Lasts |
 | C16: only Seal of Command, by chance, Sacred Arbiter +0% | 349 | +4% | Lasts |
 
 - **C16 gives the increase.** Holy Strike gives about 34 DPS more than in the beta. Seal of Command triggers on 42% of Holy Strikes, and Seal of Righteousness triggers on all Holy Strikes.
-- **C17 does not add damage.** It gives the damage of the beta Seal swap for the full fight. In the beta, the mana is zero after 72 sec. Then the Paladin can use only Seal of Command (301 DPS).
+- **C17 does not add damage.** It gives the damage of the beta Seal swap for the full fight. In the beta, the mana is zero after 72 sec. Then the Paladin can use only Seal of Command (302 DPS).
 - **The C16 value is a choice.** The first version (+13%) puts Retribution above Fury Warrior (see part 5). The version in this document has one rule for all melee attacks and keeps Sacred Arbiter as in the beta. It is 2% less.
 - **Sacred Arbiter at +10% changes little.** It gives only 4 DPS (1%) less. From Molten Core, Retribution is already below Fury (part 6).
 
@@ -86,8 +88,8 @@ The pure average is the best spec of each pure damage class: Warrior 929, Rogue 
 | Spec | DPS | Against the pure average (909) |
 | --- | --- | --- |
 | Survival Hunter (melee weaving) | 1,175 | 129% |
-| Retribution, C16 first version | About 957 | 105% |
-| **Retribution, all proposals** | **About 934** | **103%** |
+| Retribution, C16 first version | About 955 | 105% |
+| **Retribution, all proposals** | **About 933** | **103%** |
 | Fury Warrior | 929 | 102% |
 | Demonology Warlock | 879 | 97% |
 | Fire Mage | 860 | 95% |
@@ -101,9 +103,9 @@ The pure average is the best spec of each pure damage class: Warrior 929, Rogue 
 | Elemental Shaman | 519 | 57% |
 
 - **The hybrid target is 95% of the pure average.** In the beta, Retribution is 93%.
-- **With all proposals, Retribution is 101% of Fury and 103% of the pure average.** Without Combat Rogue (the lowest pure class), the pure average is 961. Retribution is then 97% of it.
+- **With all proposals, Retribution is 100% of Fury and 103% of the pure average.** Without Combat Rogue (the lowest pure class), the pure average is 961. Retribution is then 97% of it.
 - **Retribution is the strongest hybrid** in the beta and with the proposals. In the beta, it is 7% above Feral and 14% above Enhancement.
-- **Check with the same gear.** The model also calculates an Arms Warrior with the gear of part 1. The beta Retribution is 5% above Arms. MythicSim gives 6%. Thus, the model and MythicSim agree.
+- **Check with the same gear.** The model also calculates Arms, Fury and Combat Rogue with the gear of part 1 and Forever rage. The beta Retribution is 29% above Arms (MythicSim: 6%). Thus, the model gives too little damage to the Warriors with the same gear. The causes can be the gear (no hit for two weapons), consumables or the rotation. Part 6 uses only the increase with gear.
 - **One source only.** The MythicSim page has some errors in its rank order. Its Hunter values use melee weaving. No player has confirmed melee weaving in a raid.
 - **No raid gear.** MythicSim has no raid gear tiers. Part 6 uses a model for the increase with gear.
 
@@ -113,11 +115,14 @@ Retribution increases less with gear than the pure melee classes. Blizzard said 
 
 **Model**
 
-- The five gear tiers of Threat, part 2. Each tier gives about 15–20% more Attack Power, critical hit and spell damage from gear. Hit goes from 5% to 9%.
-- Weapons follow the Classic steps. Two-handed: 54, 56, 63, 66 and 75 damage per sec. One-handed (main hand and off hand): 42 and 40 at fresh level 60, up to 64 and 60 in Naxxramas.
+- The five gear tiers of Threat, part 2. Each tier gives 17.5% more Strength, Agility, Attack Power, critical hit, spell damage and Intellect from gear. Hit goes from 5% to 9%.
+- Weapons follow the Classic steps. Two-handed: 54, 56, 63, 66 and 75 damage per sec. One-handed (main hand and off hand, 2.6 sec): 42 and 40 at fresh level 60, then 47/44, 52/49, 57/54 and 64/60.
 - Retribution, Fury (two weapons), Arms and Combat Rogue get the same gear and the same raid buffs.
+- Fury: Bloodthirst, Whirlwind, then Heroic Strike with the extra rage, and Execute in the last 20% of the fight. Flurry, Death Wish (one use) and Deep Wounds. Off-hand rage is half of the main-hand rage (not known in Forever).
+- Arms: Mortal Strike, Overpower after a dodge, Slam, then Heroic Strike, and Execute in the last 20% of the fight. Deep Wounds.
+- Combat Rogue: Sinister Strike, Slice and Dice, and Eviscerate with 5 combo points. Blade Flurry and Adrenaline Rush (one use each). Eviscerate gets 15% of Attack Power (assumed). No poisons.
 - Flatter gear: from Molten Core, the gear increases at half the rate, as in Threat, part 3.
-- The model uses only the increase of each class from fresh level 60. Retribution starts at 101% of Fury (part 5).
+- The model uses only the increase of each class from fresh level 60. Retribution starts at 100% of Fury (part 5).
 - Two cases for Retribution: plate gear gives more spell damage at each tier, or the spell damage stays at 254.
 
 **DPS increase from fresh level 60 (Classic steps)**
@@ -125,30 +130,30 @@ Retribution increases less with gear than the pure melee classes. Blizzard said 
 | Tier | Retribution | Retribution, spell damage stays at 254 | Fury | Arms | Combat Rogue |
 | --- | --- | --- | --- | --- | --- |
 | Fresh level 60 | ×1.00 | ×1.00 | ×1.00 | ×1.00 | ×1.00 |
-| Pre-raid best in slot | ×1.14 | ×1.11 | ×1.22 | ×1.15 | ×1.16 |
-| Molten Core | ×1.28 | ×1.22 | ×1.43 | ×1.34 | ×1.31 |
-| Blackwing Lair | ×1.42 | ×1.33 | ×1.68 | ×1.52 | ×1.49 |
-| Naxxramas | ×1.61 | ×1.48 | ×1.98 | ×1.78 | ×1.71 |
+| Pre-raid best in slot | ×1.11 | ×1.09 | ×1.14 | ×1.11 | ×1.12 |
+| Molten Core | ×1.25 | ×1.20 | ×1.32 | ×1.26 | ×1.26 |
+| Blackwing Lair | ×1.40 | ×1.31 | ×1.53 | ×1.42 | ×1.42 |
+| Naxxramas | ×1.60 | ×1.46 | ×1.80 | ×1.65 | ×1.62 |
 
 **Retribution as a % of Fury**
 
 | Tier | Classic steps | Classic steps, spell damage stays at 254 | Flatter gear | Flatter gear, spell damage stays at 254 |
 | --- | --- | --- | --- | --- |
-| Fresh level 60 | 101% | 101% | 101% | 101% |
-| Pre-raid best in slot | 94% | 92% | 94% | 92% |
-| Molten Core | 90% | 86% | 92% | 89% |
-| Blackwing Lair | 85% | 80% | 89% | 85% |
-| Naxxramas | 82% | 75% | 87% | 82% |
+| Fresh level 60 | 100% | 100% | 100% | 100% |
+| Pre-raid best in slot | 98% | 96% | 98% | 96% |
+| Molten Core | 95% | 91% | 96% | 92% |
+| Blackwing Lair | 92% | 86% | 93% | 89% |
+| Naxxramas | 89% | 82% | 91% | 86% |
 
 **Why Retribution increases less**
 
 - **About 24% of the damage is fixed base values.** Gear does not change them: Judgement (186.5), Seal of Righteousness (67.5 for each hit), Hammer of Wrath (498) and the +93 of Holy Strike.
-- **About 12% comes from spell damage.** The coefficients are small (12–43%). +100 spell damage gives only about +20 DPS.
-- **Only about 64% increases with weapon damage and Attack Power:** auto attacks, Seal of Command and the weapon part of Holy Strike. For Fury and Rogue, it is almost 100%.
+- **About 18% comes from spell damage.** The coefficients are small (12–43%). +100 spell damage gives only about +20 DPS.
+- **Only about 58% increases with weapon damage and Attack Power:** auto attacks, Seal of Command and the weapon part of Holy Strike. For Fury and Rogue, it is almost 100%.
 - **Retribution gets the hit cap at pre-raid** (Precision 3% + 6% from gear). More hit then does nothing. The two-weapon classes start at 28% miss. Each point of hit helps them until Naxxramas.
 - **Critical hit helps Fury two times:** more Flurry and two times the rage. For Retribution, it helps only Vengeance.
 - **Improved Seals multiplies the fixed bases** by the same 15% as the weapon part. Thus, it does not change the share that increases with gear.
-- **Rage in Forever.** In Classic, rage came from the damage. Better gear gave more rage and more Heroic Strikes. Forever gives rage from the weapon speed. This removes most of that effect. With Classic rage, the gap is bigger than these tables show.
+- **Rage in Forever.** In Classic, rage came from the damage. Better gear gave more rage and more Heroic Strikes. Forever gives rage from the weapon speed. This removes most of that effect. With Classic rage, the gap is larger than these tables show.
 
 **The limit of the Retribution increase**
 
@@ -156,19 +161,19 @@ The increase of each damage source from fresh level 60 to Naxxramas (Classic ste
 
 | Source | Increase |
 | --- | --- |
-| Seal of Command | ×1.78 |
-| Auto attacks | ×1.74 |
-| Holy Strike | ×1.64 |
+| Seal of Command | ×1.75 |
+| Auto attacks | ×1.70 |
+| Holy Strike | ×1.60 |
 | Judgement | ×1.49 |
-| Seal of Righteousness | ×1.43 |
-| Hammer of Wrath | ×1.26 |
-| **Retribution** | **×1.61** |
-| Fury Warrior | ×1.98 |
+| Seal of Righteousness | ×1.36 |
+| Hammer of Wrath | ×1.29 |
+| **Retribution** | **×1.60** |
+| Fury Warrior | ×1.80 |
 
-- The best sources of Retribution increase only about ×1.75. The slow two-handed weapon, the hit cap and no Flurry limit them.
-- Thus, a Retribution with no fixed values also increases only about ×1.75. This is 88% of the Fury increase. No talent change can close the gap to Fury.
-- **Talent tests.** Each test keeps the DPS at fresh level 60 equal. The tests: Seal of Command 85% of weapon damage, more weapon damage on Holy Strike, Vengeance 5 stacks, Vindication +10% Attack Power. Each test gives 0 to 2 points against Fury in Naxxramas.
-- **Fury is the outlier.** In Naxxramas, Retribution is still 106% of Arms and 125% of Combat Rogue.
+- The best sources of Retribution increase about ×1.70–1.75. The slow two-handed weapon, the hit cap and no Flurry limit them.
+- Thus, a Retribution with no fixed values increases about ×1.75. This is 97% of the Fury increase. The fixed values cause most of the gap. But a talent change cannot remove them.
+- **Talent tests.** Each test keeps the DPS at fresh level 60 equal. The tests: Seal of Command 85% of weapon damage, more weapon damage on Holy Strike, Vengeance 5 stacks, Vindication +10% Attack Power. Each test gives 0 to 1.3 points against Fury in Naxxramas.
+- **Fury is the outlier.** In Naxxramas, Retribution is still 113% of Arms and 131% of Combat Rogue.
 
 **Against the pure average**
 
@@ -176,18 +181,18 @@ The hybrid target is 95% of the pure average (part 5), not 100% of Fury. Fury an
 
 | Hunter, Mage and Warlock in Naxxramas | Fresh level 60 | Pre-raid best in slot | Molten Core | Blackwing Lair | Naxxramas |
 | --- | --- | --- | --- | --- | --- |
-| ×1.60 | 103% | 104% | 103% | 101% | 98% |
-| ×1.75 (as Arms and Rogue) | 103% | 102% | 100% | 97% | 92% |
-| ×1.90 | 103% | 101% | 98% | 93% | 88% |
-| ×1.75, spell damage stays at 254 | 103% | 99% | 96% | 91% | 85% |
+| ×1.60 | 103% | 103% | 102% | 101% | 100% |
+| ×1.75 | 103% | 101% | 99% | 97% | 94% |
+| ×1.90 | 103% | 100% | 96% | 93% | 89% |
+| ×1.75, spell damage stays at 254 | 103% | 99% | 95% | 90% | 86% |
 
-- In the middle case, Retribution is 2–8 points above the hybrid target until Molten Core. It is 3 points below the target in Naxxramas.
+- In the middle case, Retribution is 4–8 points above the hybrid target until Molten Core. It is 1 point below the target in Naxxramas.
 - Over the full game, the average is near the target.
-- **Spell damage on plate items is the largest lever.** It gives 7 points in Naxxramas (85% → 92%). This is an item rule, not a talent.
+- **Spell damage on plate items is the largest lever.** It gives 8 points in Naxxramas (86% → 94%). This is an item rule, not a talent.
 
 **Result**
 
-- **Retribution at the level of Fury at fresh level 60 is not too strong for a full content phase.** It is above the hybrid target until about Molten Core. From Molten Core, it is 10–18% below Fury (8–13% with flatter gear).
+- **Retribution at the level of Fury at fresh level 60 is not too strong for a full content phase.** It is above the hybrid target until about Blackwing Lair. From Molten Core, it is 5–11% below Fury (4–9% with flatter gear).
 - **Recommendation: keep C16, with Sacred Arbiter as in the beta (+20%).** Do not change talents to correct the increase with gear.
 - **Compare Retribution with the pure average at each gear tier,** not only with Fury (see Watch list, W15).
 - **Request to Blizzard:** put spell damage on Paladin plate items at each tier.
@@ -195,34 +200,35 @@ The hybrid target is 95% of the pure average (part 5), not 100% of Fury. Fury an
 
 ## 7. Judgement of the Crusader
 
-Judgement of the Crusader gives about +9% DPS at fresh level 60. It adds 161 Holy damage taken. Each hit gets 161 × its spell damage coefficient. Seal of Command gets the full 29%, not 20.3%. Parts 3–6 do not include it.
+Judgement of the Crusader gives about +10% DPS at fresh level 60. It adds 161 Holy damage taken. Each hit gets 161 × its spell damage coefficient. Seal of Command gets the full 29%, not 20.3%. Parts 3–6 do not include it.
 
 | Hit | Bonus for each hit (with Improved Seals and Two-Handed Weapon Specialization) | Hits each sec | DPS |
 | --- | --- | --- | --- |
 | Seal of Command (29%) | 57 | About 0.15 | +9 |
-| Seal of Righteousness (12%) | 24 | About 0.35 | +8 |
+| Seal of Righteousness (12%) | 24 | About 0.35 | +9 |
 | Judgement (42.9%) | 84 | About 0.13 | +11 |
-| Holy Strike (21.45%) | 44 | About 0.10 | +4 |
+| Holy Strike (21.45%) | 44 | About 0.10 | +5 |
 | Hammer of Wrath (42.9%, last 20% of the fight) | 69 | About 0.03 | +2 |
-| **Total** |  |  | **About +34 (+9%)** |
+| **Total** |  |  | **About +36 (+10%)** |
 
 - The bonus is about the same % for the beta and for all versions of C16. Thus, the comparisons in part 4 do not change.
-- If MythicSim includes Judgement of the Crusader in its raid debuffs, part 5 is correct. If not, Retribution with a Crusader Paladin in the raid is about 9% higher.
-- The +161 does not increase with gear. It is about 9% at fresh level 60 and about 6% in Naxxramas.
+- If MythicSim includes Judgement of the Crusader in its raid debuffs, part 5 is correct. If not, Retribution with a Crusader Paladin in the raid is about 10% higher.
+- The +161 does not increase with gear. It is about 10% at fresh level 60 and about 6% in Naxxramas.
 - With C18, each Retribution Paladin keeps its own Judgement of the Crusader. Holy Strike refreshes it (Sacred Arbiter). This is a strong reason for C18.
 
 ## 8. Other results
 
-- **Stat values (raid buffs, 5 min fight).** 1 spell damage: 0.20 DPS. 1 Attack Power: 0.12 DPS. 1 Strength: 0.29 DPS. 1% critical hit: 5.0 DPS. 1% hit: 5.4 DPS, up to the cap. Thus, 1 spell damage is worth about 1.7 Attack Power. Plate items with spell damage are good for Retribution, and Warriors do not want them.
+- **Stat values (raid buffs, 5 min fight).** 1 spell damage: 0.21 DPS. 1 Attack Power: 0.11 DPS. 1 Strength: 0.26 DPS. 1% critical hit: 5.2 DPS. 1% hit: 4.9 DPS, up to the cap. Thus, 1 spell damage is worth about 1.9 Attack Power. Plate items with spell damage are good for Retribution, and Warriors do not want them.
 - **Hit cap.** The build has 8% hit (Precision 3% + 5% from gear). The cap is about 9%.
-- **Consecrated Ground with Consecration on cooldown.** About +23% on one target (370 → 456 DPS). This is true if the +10% applies to all your Holy damage on the target, as the beta tests show. The mana is zero after 70 sec. It is strong burst for 2 Holy points (see Watch list, W16).
-- **Exorcism against Undead and Demons.** About +12% (414 DPS). If you use it on cooldown, the mana is zero after about 2 min.
-- **Two-Handed Weapon Specialization.** The Paladin talent gives 6%. The Warrior talent in Forever gives 3%. Each 1% gives Retribution about 3.3 DPS (0.9%). At 6%, Retribution is 101% of Fury at fresh level 60 and 82% in Naxxramas. At 3%, it is 98% and 79%. The 6% stays: it is an intentional Paladin strength (see Tree balance, Paladin strengths).
+- **Consecrated Ground with Consecration on cooldown.** About +23% on one target (371 → 457 DPS). This is true if the +10% applies to all your Holy damage on the target, as the beta tests show. The mana is zero after 70 sec. It is strong burst for 2 Holy points (see Watch list, W16).
+- **Exorcism against Undead and Demons.** About +13% (418 DPS). If you use it on cooldown, the mana is zero after about 2 min.
+- **Two-Handed Weapon Specialization.** The Paladin talent gives 6%. The Warrior talent in Forever gives 3%. Each 1% gives Retribution about 3.3 DPS (0.9%). At 6%, Retribution is 100% of Fury at fresh level 60 and 89% in Naxxramas. At 3%, it is 98% and 87%. The 6% stays: it is an intentional Paladin strength (see Tree balance, Paladin strengths).
 
 ## 9. Limits
 
 - The model calculates averages. It is not a full simulation.
-- Not confirmed: the critical hit decrease against a boss, the Seal of Righteousness value at 3.6 sec, the cooldown of Slam (Arms) and the rage from off-hand attacks (Fury).
+- Not confirmed: the critical hit decrease against a boss, the Seal of Righteousness value at 3.6 sec, the rage from off-hand attacks (Fury) and the Attack Power part of Eviscerate (Rogue).
+- The Fury, Arms and Combat Rogue rotations and talents are assumptions. Recklessness, Rend, Sweeping Strikes and poisons are not in the model.
 - Champion of the Light: this section uses 60% of Intellect. At 30%, Retribution loses about 7 DPS (see Open questions).
 - The gear tiers are estimates with Classic steps. The Forever raid items are not known.
 - The Fury and Rogue values with the same gear are less certain than their increase with gear. Thus, part 6 uses only the increase.
