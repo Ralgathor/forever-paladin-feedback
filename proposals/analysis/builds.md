@@ -113,7 +113,7 @@ The row rules make some builds take talents that do not help their role (filler)
 | Holy PvP with Improved Hammer of Justice | Precision 3 | Row 3 needs 10 points in rows 1–2 |
 | Main builds of Protection and Retribution | None | Useful talents fill all rows |
 
-- **M2 decreases the filler for Holy.** With Spiritual Focus in row 4 (first version of M2), a Holy healer needed 3 points of filler. HB2 was not possible.
+- **Spiritual Focus in row 2 decreases the filler for Holy.** With Spiritual Focus in row 4 (a withdrawn idea), a Holy healer needed 3 points of filler. HB2 was not possible.
 - Purifying Power counts as a useful talent here (Cleanse costs 20% less).
 
 ## 8. Limits

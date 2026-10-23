@@ -1,6 +1,6 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 21 changes and 6 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 21 changes and 5 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
 
 **Contents**
 
@@ -12,7 +12,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 21 chan
 ## How to read this document
 
 - **C (change).** C1 to C19, C21 and C22 change what a talent does, add a talent or remove a talent. C16, C18 and C19 change baseline spells. A change can also move the talent. The text then gives the new row.
-- **M (move).** M1, M2, M4 to M6 and M8 move a talent to a different row or column. The talent text does not change.
+- **M (move).** M1, M4 to M6 and M8 move a talent to a different row. The talent text does not change.
 - **C18a and C18b** are the two alternatives to C18.
 - **Withdrawn ideas** have no ID. They are in [Withdrawn ideas](withdrawn-ideas.md) only.
 - **Data.** Forever client build 1.60.1.70450, with the server hotfixes of 18 October 2026, from wowforevertalents.com. Player tests from 19 October 2026 and later. The text tells you when a value comes from an in-game tooltip.
@@ -28,7 +28,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 21 chan
 | C1 | Reverence | Holy, row 3 → row 2 | 10/20/30% of mana regeneration while casting | 17/33/50% |
 | C2 | Lingering Light (new) | Holy, row 5 | — | 2 ranks: a critical heal adds a heal over time of 10/20% of the heal |
 | C3 | Infusion of Light | Holy, row 4 → row 2 | Holy Shock and Flash of Light critical hits make the next Holy Light faster | All Holy Shock, Flash of Light and Holy Strike hits do this. No critical hit is necessary |
-| C4 | Healing Light | Holy, row 2 → row 6, column 3 | 3 ranks: 4/8/12% | 3 ranks: 10/20/30% (with C19) |
+| C4 | Healing Light | Holy, row 2 → row 6 | 3 ranks: 4/8/12% | 3 ranks: 10/20/30% (with C19) |
 | C5 | Improved Seals | Holy, row 2 → row 1 | 3 ranks: 5/10/15% | 5 ranks: 3/6/9/12/15% |
 | C6 | Redoubt | Protection, row 1 | 10% chance when you are hit: +4–20% block | The same. Each Holy Shield cast also starts it |
 | C7 | Iron Creed | Protection, row 6 | −2–10% damage taken for 6 sec after Holy Strike | −2–10% damage taken while Righteous Fury is active |
@@ -52,7 +52,6 @@ This document gives talent proposals for the WoW Forever Paladin. It has 21 chan
 | ID | Talent | Tree | Beta | Proposed |
 | --- | --- | --- | --- | --- |
 | M1 | Consecrated Ground | Holy | Row 5 | Row 3 |
-| M2 | Spiritual Focus | Holy | Row 2, column 2 | Row 2, column 3 |
 | M4 | Improved Hammer of Justice | Protection | Row 4 | Row 3 |
 | M5 | Swift Judgement | Protection | Row 4, requires Improved Seal of Fury | Row 3, no requirement |
 | M6 | Two-Handed Weapon Specialization | Retribution | Row 5 (20 points) | Row 4 (15 points) |
