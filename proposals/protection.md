@@ -153,10 +153,10 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 
 - **Proposed text (rank 3).** "Increases chance to block by 30% for 10 sec, and deals 221 Holy damage plus 200% of your block value for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."
 - **Change.** Each block adds 200% of your block value to the Holy Shield damage. The block chance, the charges, the cooldown and the threat bonus do not change.
-- **Problem.** Warrior and Druid threat increases with gear and with boss damage, because their rage comes from the hits they take. Paladin threat increases only with spell power: about +35 TPS for each +100 spell power. Without C14, the Paladin falls from 97% of the Druid threat at fresh level 60 to 81% in Naxxramas (see Analysis, Threat).
+- **Problem.** Warrior and Druid threat increases with gear and with boss damage, because their rage comes from the hits they take. Paladin threat increases only with spell power: about +35 TPS for each +100 spell power. Without C14, the Paladin falls from 85% of the Druid threat at fresh level 60 to 67% in Naxxramas (see Analysis, Threat).
 - **Why block value.** It is a gear stat on the character sheet. It is easy to read and easy to collect. It increases about 5 times from fresh level 60 to Naxxramas, much faster than spell power. It connects the tank stats of the Paladin: the shield, Strength (C8) and Shield Specialization (+30% block value). Shield Slam (Warrior) already adds block value to its damage.
-- **Result.** The Paladin stays between the Druid and the Warrior at all gear tiers: 106% of the Druid threat at fresh level 60, 105% in Naxxramas. With flatter gear progression, it is 96–104% in Naxxramas (see Threat, part 3).
-- **Why 200%.** At 100%, the Paladin has only 93% of the Druid threat in Naxxramas. At 300%, the Paladin has more threat than the Warrior from pre-raid gear.
+- **Result.** The Paladin has 92% of the Druid threat at fresh level 60 and 86% in Naxxramas. With flatter gear progression, it has 81–85% in Naxxramas (see Threat, part 3).
+- **Why 200%.** At 100%, the Paladin has only 76% of the Druid threat in Naxxramas. At 300%, it has 95%. The Warrior and Druid values have some unknown threat values (see Threat, part 6).
 - **No new button.** You already use Holy Shield on cooldown. C6 keeps about 3 blocks each 10 sec.
 - **PvP.** At about 125 block value, each block does about 250 more Holy damage. The maximum is 4 blocks each 10 sec, against melee attacks only. Only Protection has Holy Shield.
 

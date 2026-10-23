@@ -7,8 +7,8 @@
 # Warrior and Druid threat comes from their attacks and from rage: each rage point gives 5 threat.
 # Their rage comes partly from damage taken. Thus, their threat increases when the boss hits harder.
 #
-# Two values are fitted to the part 1 table (least squares), because Forever data for them is not known:
-# the Revenge base damage (Warrior) and the Primal Bite damage (Druid). See WAR and DRU.
+# Warrior and Druid values come from the Forever spellbook and talents (wowforevertalents.com) and player data.
+# No value is fitted to the first calculation.
 
 # ---------------------------------------------------------------- fight (part 6)
 MISS, DODGE, PARRY = 0.06, 0.065, 0.14   # attacks from the front against a level 63 boss
@@ -33,11 +33,9 @@ def table(hit, crit, auto):
 
 # ---------------------------------------------------------------- gear (parts 1, 2 and 3)
 class Gear:
-    """druid: (damage for each swing, speed) in Bear Form. None: the damage per sec of the Paladin weapon and
-    Attack Power, with the Bear Form speed of 2.5 sec (part 2)."""
-    def __init__(s, name, sp, ap, wdps, wspeed, bv, mana, boss_hit, hit=0.03, crit=0.06, druid=None, armor=BOSS_ARMOR):
+    def __init__(s, name, sp, ap, wdps, wspeed, bv, mana, boss_hit, hit=0.03, crit=0.06, armor=BOSS_ARMOR):
         s.name, s.sp, s.ap, s.wdps, s.wspeed, s.bv, s.mana, s.boss_hit = name, sp, ap, wdps, wspeed, bv, mana, boss_hit
-        s.hit, s.crit, s.druid, s.armor = hit, crit, druid, armor
+        s.hit, s.crit, s.armor = hit, crit, armor
     def weapon(s, speed=None):
         """Average weapon hit with Attack Power. speed: normalized speed (Holy Strike), else the weapon speed."""
         return s.wdps * s.wspeed + s.ap / 14 * (speed or s.wspeed)
@@ -46,7 +44,7 @@ class Gear:
         g.__dict__.update(kw); return g
 
 # Part 1: pre-raid gear, 200 spell power, 60 block value. Part 6: 500 Attack Power, 45 DPS 2.7 sec weapon.
-PART1 = Gear("Part 1", sp=200, ap=500, wdps=45, wspeed=2.7, bv=60, mana=3400, boss_hit=4500, druid=(260, 2.5))
+PART1 = Gear("Part 1", sp=200, ap=500, wdps=45, wspeed=2.7, bv=60, mana=3400, boss_hit=4500)
 
 # Part 2: the fresh level 60 tier is a real gear profile. The other tiers are estimates (+15-20% each).
 # The Warrior and the Druid have the same Attack Power and weapon as the Paladin.
@@ -159,27 +157,37 @@ def paladin(g, tal=PB1, proposed=True, c14=2.0, crusader=True, consecration=Fals
 RAGE_TAKEN = 2.5 * 0.6 / 243.6           # rage for each point of boss hit before armor (level 63)
 RAGE_SWING = 3.46                        # normalized rage: 3.46 x weapon speed for each hit, x2 for a critical hit
 
-def rage_taken(g):
-    return RAGE_TAKEN * g.boss_hit * HIT_FRAC / SWING
+def rage_taken(g, crush=0.0):
+    """Rage per sec from boss hits. crush: share of the boss swings that are crushing blows (x1.5 rage)."""
+    return RAGE_TAKEN * g.boss_hit * (HIT_FRAC + 0.5 * crush) / SWING
 
-WAR_STANCE = 1.3 * 1.15                  # Defensive Stance x Defiance 3/3
-WAR = dict(dmg=0.9 * 1.10,               # Defensive Stance -10% damage, One-Handed Weapon Specialization +10%
-           revenge_base=337,             # fitted to the part 1 table (Classic rank 6: 81-99). With 28% of Attack Power
-           revenge_ap=0.28, revenge_cd=5, revenge_cost=5,
-           slam=655 + 50, slam_cd=6, slam_cost=20,       # 640-670 + 50 block value; not OHWS
-           sunder=35 + 41 * 4, sunder_ap=0.05, sunder_cost=15,   # player sheet: rank 1 35, rank 2 76 (+41 for each rank) + 5% AP
-           hs_bonus=138, hs_threat=145, hs_cost=15, avoid_rage=5,
-           block_cost=10, block_cd=5)      # Shield Block on cooldown (Analysis, Crushing blows), not on the global cooldown
+BOSS_MISS = 0.05                         # boss swings that miss the tank (not dodged, parried or blocked)
+
+# Warrior: Forever spellbook and talents (wowforevertalents.com, client 1.60.1.70450). Assumed Protection build:
+# Defiance 3/3, Bastion 5/5, Improved Revenge 3/3, Shield Specialization 5/5, Master of Defense 2/2,
+# Improved Sunder Armor 3/3, Focused Rage 3/3 and Improved Heroic Strike 3/3.
+WAR_STANCE = 1.3 * 1.15                  # Defensive Stance x Defiance 3/3 (+15% with a shield)
+WAR = dict(dmg=0.9 * 1.10,               # Defensive Stance -10% damage, Bastion +10% damage with a shield
+           revenge=153, revenge_ap=0.28, revenge_mult=1.6,  # rank 6: 138-168, 28% AP (player sheet), Improved Revenge +60%
+           revenge_cd=5, revenge_cost=5 - 3,                # Focused Rage
+           slam=655, slam_cd=6, slam_cost=20 - 3,           # rank 4: 640-670 + block value
+           sunder=35 + 41 * 4, sunder_ap=0.05, sunder_cost=15 - 3 - 3,   # player sheet: rank 1 35, rank 2 76 + 5% AP
+           hs_bonus=157, hs_threat=145, hs_cost=15 - 3 - 3, # rank 9: +157 damage. Threat bonus: not known (Classic)
+           block_cost=10, block_cd=5,    # Shield Block on cooldown, not on the global cooldown
+           event_rage=5,                 # Shield Specialization and Master of Defense: 5 rage for each block, dodge, parry
+           blocked=0.86,                 # share of the hits that Shield Block (80% of the swings) and base block stop
+           crush=0.03)                   # crushing blows between Shield Blocks (Analysis, Crushing blows)
 
 def warrior(g, slam_mult=1.0, detail=False):
     """Shield Slam, Revenge and Shield Block on cooldown, Sunder Armor in the other global cooldowns, then Heroic Strike
-    with the spare rage. slam_mult: Shield Slam threat multiplier (2.25 is not tested)."""
+    with the spare rage. slam_mult: Shield Slam threat multiplier (not known: "a very high amount of threat")."""
     w = WAR; dr = armor_dr(g.armor)
     land_a, f_auto = table(g.hit, g.crit, auto=True)
     land_s, f_spec = table(g.hit, g.crit, auto=False)
     rate = 1 / g.wspeed
     swing_rage = RAGE_SWING * g.wspeed * (land_a + g.crit)
-    taken = rage_taken(g) + w["avoid_rage"] * (1 - HIT_FRAC) / SWING   # 5 rage for each block, dodge and parry
+    events = (1 - HIT_FRAC - BOSS_MISS) + HIT_FRAC * w["blocked"]       # dodges, parries and blocks for each swing
+    taken = rage_taken(g, w["crush"]) + w["event_rage"] * events / SWING
     spare = (taken + rate * swing_rage - w["slam_cost"] / w["slam_cd"] - w["revenge_cost"] / w["revenge_cd"]
              - w["block_cost"] / w["block_cd"])
     gcd_left = 1 / GCD - 1 / w["slam_cd"] - 1 / w["revenge_cd"]
@@ -190,40 +198,55 @@ def warrior(g, slam_mult=1.0, detail=False):
     src = {}
     src["Auto attacks"] = g.weapon() * phys * f_auto * rate * (1 - hs)
     src["Heroic Strike"] = ((g.weapon() + w["hs_bonus"]) * phys * f_spec + w["hs_threat"] * land_s) * rate * hs
-    src["Shield Slam"] = w["slam"] * (1 - dr) * 0.9 * f_spec * slam_mult / w["slam_cd"]
-    src["Revenge"] = (w["revenge_base"] + w["revenge_ap"] * g.ap) * phys * f_spec * 2.25 / w["revenge_cd"]
+    src["Shield Slam"] = (w["slam"] + g.bv) * phys * f_spec * slam_mult / w["slam_cd"]
+    src["Revenge"] = ((w["revenge"] + w["revenge_ap"] * g.ap) * w["revenge_mult"] * phys * f_spec * 2.25
+                      / w["revenge_cd"])
     src["Sunder Armor"] = (w["sunder"] + w["sunder_ap"] * g.ap) * land_s * sunders
     src["Rage"] = RAGE_THREAT * (taken + rate * swing_rage * (1 - hs))
     src = {k: v * WAR_STANCE for k, v in src.items()}
     total = sum(src.values())
     return (total, src) if detail else total
 
-BEAR = 1.5                               # Bear Form with Feral Instinct 3/3
-DRU = dict(crit=0.12,                    # Sharpened Claws
-           maul_bonus=128 * 1.2, maul_mult=1.75, maul_cost=10,   # Savage Fury 2/2, Ferocity 5/5
-           bite=266,                     # Primal Bite damage: fitted to the part 1 table
-           bite_mult=3.0, bite_cd=6, bite_cost=10,
-           swipe=83 * 1.2, swipe_mult=1.75, swipe_cost=15)
+# Druid: Forever spellbook, talents and player data. Assumed Feral build: Ferocity 5/5, Savage Fury 2/2,
+# Feral Instinct 3/3, Sharpened Claws 2/2, Predatory Strikes 3/3, Blood Frenzy 2/2 and Natural Reaction 5/5.
+BEAR = 1.5                               # Bear Form threat
+DRU = dict(crit=0.12,                    # 6% from gear + Sharpened Claws 6%
+           ap=1.5 * 60,                  # Predatory Strikes: +150% of the level as Attack Power
+           maul_bonus=128, maul_mult=1.75, maul_cost=15 - 5,          # rank 7, Ferocity
+           savage=1.1,                   # Savage Fury: Maul and Swipe damage +10%
+           bite=77, bite_mult=3.0, bite_cd=6, bite_cost=20 - 5,      # rank 4: 100% normal damage + 77
+           swipe=83, swipe_ap=0.03, swipe_fi=1.3, swipe_mult=1.75, swipe_cost=20 - 5,   # Feral Instinct +30% damage
+           ff=2 * 60, ff_cd=6,           # Faerie Fire in Bear Form: 2 x level threat, 6 sec cooldown, no rage
+           crit_rage=5,                  # Blood Frenzy: 5 rage for each critical hit
+           dodge_rage=5,                 # Natural Reaction: 5 rage for each dodge
+           crush=0.15)                   # no block: crushing blows at the full rate (Analysis, Crushing blows)
 
 def druid(g, detail=False):
-    """Primal Bite on cooldown, Maul with the spare rage, then Swipe in the other global cooldowns."""
+    """Primal Bite and Faerie Fire on cooldown, Maul with the spare rage, then Swipe in the other global cooldowns.
+    Bear Form damage: weapon damage per sec + Attack Power / 14, 2.5 sec swing (player data). Lacerate is not in
+    the model: its threat is not known."""
     d = DRU; dr = armor_dr(g.armor); crit = d["crit"]
-    sw, speed = g.druid or ((g.wdps + g.ap / 14) * 2.5, 2.5)
+    speed = 2.5
+    ap = g.ap + d["ap"]
+    sw = (g.wdps + ap / 14) * speed
     land_a, f_auto = table(g.hit, crit, auto=True)
     land_s, f_spec = table(g.hit, crit, auto=False)
     rate = 1 / speed
     swing_rage = RAGE_SWING * speed * 1.3 * (land_a + crit)            # x1.3 in Bear Form
-    taken = rage_taken(g)
+    taken = (rage_taken(g, d["crush"]) + d["dodge_rage"] * (1 - HIT_FRAC - BOSS_MISS) / SWING
+             + d["crit_rage"] * crit * (rate + 1 / d["bite_cd"]))       # swings and Primal Bite
     spare = taken + rate * swing_rage - d["bite_cost"] / d["bite_cd"]
     maul = max(0.0, min(1.0, spare / (rate * (d["maul_cost"] + swing_rage))))   # Maul hits give no rage
     spare -= maul * rate * (d["maul_cost"] + swing_rage)
-    swipes = max(0.0, min(1 / GCD - 1 / d["bite_cd"], spare / d["swipe_cost"]))
+    swipes = max(0.0, min(1 / GCD - 1 / d["bite_cd"] - 1 / d["ff_cd"], spare / d["swipe_cost"]))
     phys = 1 - dr
     src = {}
     src["Auto attacks"] = sw * phys * f_auto * rate * (1 - maul)
-    src["Maul"] = (sw + d["maul_bonus"]) * phys * f_spec * d["maul_mult"] * rate * maul
-    src["Primal Bite"] = d["bite"] * phys * f_spec * d["bite_mult"] / d["bite_cd"]
-    src["Swipe"] = d["swipe"] * phys * f_spec * d["swipe_mult"] * swipes
+    src["Maul"] = (sw + d["maul_bonus"]) * d["savage"] * phys * f_spec * d["maul_mult"] * rate * maul
+    src["Primal Bite"] = (sw + d["bite"]) * phys * f_spec * d["bite_mult"] / d["bite_cd"]
+    src["Faerie Fire"] = d["ff"] / d["ff_cd"]
+    src["Swipe"] = ((d["swipe"] + d["swipe_ap"] * ap) * d["savage"] * d["swipe_fi"] * phys * f_spec * d["swipe_mult"]
+                    * swipes)
     src["Rage"] = RAGE_THREAT * (taken + rate * swing_rage * (1 - maul))
     src = {k: v * BEAR for k, v in src.items()}
     total = sum(src.values())
