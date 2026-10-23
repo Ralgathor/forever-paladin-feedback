@@ -48,7 +48,7 @@
 | Sanctified Judgement | Returns more than 60% of the base cost of the Seal with Benediction | Possibly a bug (see Problems to report to Blizzard) |
 | Pursuit of Justice | 15% at 2/2. Better than the 8% boot enchant | On the watch list (W1) |
 | Eye for an Eye | Uses the damage taken after armor and resistance | None |
-| Sacred Arbiter | +20% Holy Strike damage. Refreshes Light, Wisdom, Justice and Crusader | C16 keeps the +20%. Holy Strike triggers all Seals (spell change) |
+| Sacred Arbiter | +20% Holy Strike damage. Refreshes Light, Wisdom, Justice and Crusader | Holy Strike triggers all Seals (C16, spell change) |
 | Two-Handed Weapon Specialization | Melee attacks, Seals, Judgements, Holy Strike and the Twist of Light Echo | Supports M6 |
 | Vengeance | Multiplies with other % damage. Critical hits from procs add stacks | None |
 | Repentance | Diminishing returns category not tested | None |

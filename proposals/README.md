@@ -40,7 +40,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 21 chan
 | C13 | Shield Specialization | Protection, row 3 | Mana return once each 3 sec | Mana return once each 2 sec |
 | C14 | Holy Shield | Protection, row 7 | 221 Holy damage for each block (rank 3) | 221 Holy damage plus 200% of your block value for each block |
 | C15 | Conviction | Retribution, row 2 → row 1 (M8) | +1–5% critical hit chance with melee attacks | +1–5% critical hit chance with attacks and spells |
-| C16 | Holy Strike | Spell, all specs (Sacred Arbiter as in the beta) | Triggers only Seal of Light, Justice and Wisdom | Triggers your active Seal and Echo the same as a melee attack |
+| C16 | Holy Strike | Spell, all specs | Triggers only Seal of Light, Justice and Wisdom | Triggers your active Seal and Echo the same as a melee attack |
 | C17 | Twist of Light | Retribution, row 7 | The Echo applies to the next melee attack only | The Echo applies to all melee attacks for 10 sec |
 | C18 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
 | C19 | Blessing of Light | Baseline spell, and Healing Light (C4) | +400 Holy Light, +115 Flash of Light. Uses a Blessing slot | Removed. Healing Light gives 10/20/30% |

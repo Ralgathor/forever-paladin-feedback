@@ -380,7 +380,7 @@ const PROPOSALS=[
  ["M8", "ben", "Conviction and Benediction", "Retribution, rows 1 and 2", "Benediction row 1, Conviction row 2", "Conviction row 1, Benediction row 2 (move only)"]
 ];
 const BASELINE=[
- ["C16", "Holy Strike", "Triggers Seal of Light, Justice and Wisdom only", "Triggers your active Seal and Echo the same as a melee attack. Seal of Command keeps its usual chance (7 procs each minute). Sacred Arbiter does not change (+20%)"],
+ ["C16", "Holy Strike", "Triggers Seal of Light, Justice and Wisdom only", "Triggers your active Seal and Echo the same as a melee attack. Seal of Command keeps its usual chance (7 procs each minute)"],
  ["C18", "Judgement of the Crusader", "Uses the one Judgement of the Paladin", "Personal debuff outside the one-Judgement limit (recommended)"],
  ["C18a", "Judgement of Light and Wisdom", "Two separate Judgements", "Use if C18 is rejected: one Judgement of Grace that heals and restores mana"],
  ["C18b", "Twist of Light", "Echo for damage Seals only", "Optional, with C18: a replaced Light, Wisdom or Justice Judgement stays as a 40 sec Echo"],
@@ -579,8 +579,8 @@ function renderProps(){
 <p class="cat"><b>General</b></p>
 <ul>
 <li>Holy Strike: An instant strike that causes 50% weapon damage plus 81 to 105 Holy damage. It now also triggers your active Seal and Echo, the same as a melee attack (was Seal of Light, Seal of Justice and Seal of Wisdom only). ${g("C16")}
-<ul><li>Seal of Command keeps its usual chance: about 7 procs each minute. Sacred Arbiter does not change (+20% Holy Strike damage).</li></ul>
-${dn("A talent that only gives a chance to trigger a Seal is weak design. The player does not see its effect each time. Now one rule is true for all melee attacks. Holy Strike with your Seal is the core of Retribution, as Stormstrike is for Enhancement.")}</li>
+<ul><li>Seal of Command keeps its usual chance: about 7 procs each minute.</li></ul>
+${dn("Holy Strike triggered only some Seals. Now one rule is true for all melee attacks. Holy Strike with your Seal is the core of Retribution, as Stormstrike is for Enhancement.")}</li>
 <li>Judgement of the Crusader: Increases the Holy damage that the target takes. It is now a personal debuff: it increases only your own Holy damage, and it does not count against your one-Judgement limit. ${g("C18")}
 ${dn("Since the patch of 15 October, Salvation does not use a Blessing slot. Two Paladins now give all Blessings to a raid. But each Paladin keeps only one Judgement on a target. Raids use Light and Wisdom, and the tank loses Crusader. With this change, the tank keeps about 50 threat per second.")}</li>
 <li>Blessing of Light and Greater Blessing of Light removed. ${g("C19")}
