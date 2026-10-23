@@ -153,13 +153,13 @@ def retribution(g, version="c16", sa=1.20, crusader=False, ths=THWS, fight=FIGHT
 # damage + 160, 30 rage, 6 sec), Whirlwind (weapon damage, both weapons, 25 rage, 10 sec), Heroic Strike rank 9
 # (+157 damage, 15 rage), Slam rank 5 (weapon damage + 87, 15 rage, 18 sec), Execute rank 5 (600 + 15 for each
 # extra rage, 15 rage), Overpower rank 4 (weapon damage + 35, 5 rage, 5 sec, after a dodge).
-# Rage: Forever v2 rules (announced fix, player simulations): critical hits +100% rage, off hand +50% with Dual Wield
-# Specialization. With v2 rage, Bloodthirst and Whirlwind are on cooldown with any gear.
+# Rage: Forever v2 rules: critical hits +100% rage (beta notes, 2 October), off hand +50% with Dual Wield
+# Specialization (hotfix after 2 October). With v2 rage, Bloodthirst and Whirlwind are on cooldown with any gear.
 # Talents: Cruelty 5/5 (+5% critical hit), Unbridled Wrath 5/5 (60%: +1 rage for each hit), Improved Heroic Strike
 # 3/3 (-3 rage), Anger Management (1 rage each 3 sec), Deep Wounds 3/3 (60% of the average weapon damage over 12 sec
 # after a critical hit), Impale 2/2 (+20% critical hit damage of abilities).
-# Fury: Dual Wield Specialization 5/5 (+25% off-hand damage, +50% off-hand rage), Furious Precision 3/3 (+10%
-# off-hand hit), Flurry 5/5 (+25% attack speed for 3 swings after a critical hit), Death Wish (+20% physical damage,
+# Fury: Dual Wield Specialization 5/5 (+25% off-hand damage, +50% off-hand rage, no hit), Furious Precision 3/3 (+10%
+# off-hand hit), Raging Blows (Whirlwind -3 rage), Improved Execute 2/2 (-5 rage), Flurry 5/5 (+25% attack speed for 3 swings after a critical hit), Death Wish (+20% physical damage,
 # 30 sec, 3 min cooldown: one use in a 2 min fight), Berserker Stance (+3% critical hit).
 # Arms: Two-Handed Weapon Specialization 3/3 (+3%), Weaponmaster 5/5 (axe: +5% critical hit), Improved Slam 2/2
 # (no swing reset, -3 sec cooldown), Battle Stance.
@@ -178,9 +178,9 @@ def spend(rage, prio):
         rage -= out[name] * cost
     return out
 
-def execute_dps(rage):
-    """Execute phase: all rage to Execute (15 rage: 600 damage + 15 for each extra rage), one each global cooldown."""
-    return min(1 / GCD, rage / 15) * 600 + max(0.0, rage - 15 / GCD) * 15
+def execute_dps(rage, cost=15):
+    """Execute phase: all rage to Execute (600 damage + 15 for each extra rage), one each global cooldown."""
+    return min(1 / GCD, rage / cost) * 600 + max(0.0, rage - cost / GCD) * 15
 
 BLOODRAGE = 20 / 60              # Bloodrage: 20 rage each minute
 
@@ -198,7 +198,7 @@ def fury(g, detail=False):
     phys = (1 - DR) * (1 + 0.20 * 30 / FIGHT)                           # Death Wish: one use
     mh_rage = land_m * (RAGE_SWING * SPEED_1H * (1 + crit_m) + 0.6)
     rage = rate * mh_rage + rate * land_o * (RAGE_SWING * SPEED_1H * (1 + crit_o) * OH_RAGE * 1.5 + 0.6) + 1 / 3 + BLOODRAGE
-    use = spend(rage, (("Bloodthirst", 30, 1 / 6), ("Whirlwind", 25, 1 / 10), ("Heroic Strike", 12 + mh_rage, rate)))
+    use = spend(rage, (("Bloodthirst", 30, 1 / 6), ("Whirlwind", 25 - 3, 1 / 10), ("Heroic Strike", 12 + mh_rage, rate)))
     hs = use["Heroic Strike"] / rate
     src = {}
     src["Main hand"] = mh * f_m * rate * (1 - hs) * phys
@@ -211,7 +211,7 @@ def fury(g, detail=False):
     for k in ("Heroic Strike", "Bloodthirst", "Whirlwind"):
         src[k] *= 1 - EXECUTE
     src["Main hand"] += mh * f_m * rate * hs * phys * EXECUTE           # no Heroic Strike in the Execute phase
-    src["Execute"] = execute_dps(rage) * f_spec * phys * EXECUTE
+    src["Execute"] = execute_dps(rage, 15 - 5) * f_spec * phys * EXECUTE
     total = sum(src.values())
     return (total, src) if detail else total
 
