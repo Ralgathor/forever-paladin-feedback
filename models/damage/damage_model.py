@@ -19,7 +19,7 @@ EXECUTE = 0.2                    # last 20% of the fight: Hammer of Wrath, Execu
 GCD = 1.5
 RAGE_SWING = 3.46                # normalized rage: 3.46 x weapon speed for each auto attack that lands, x2 if critical
 RAGE_2H = 1.3                    # x1.3 for two-handed weapons (Threat, part 6)
-OH_RAGE = 0.5                    # off-hand rage (not known in Forever: half, as in Classic)
+OH_RAGE = 1.0                    # off-hand rage before Dual Wield Specialization (+50%): Forever v2 rage rules (announced fix)
 CRUSADER = 161                   # Judgement of the Crusader: Holy damage taken
 
 def armor_dr(armor=BOSS_ARMOR, level=60):
@@ -153,6 +153,8 @@ def retribution(g, version="c16", sa=1.20, crusader=False, ths=THWS, fight=FIGHT
 # damage + 160, 30 rage, 6 sec), Whirlwind (weapon damage, both weapons, 25 rage, 10 sec), Heroic Strike rank 9
 # (+157 damage, 15 rage), Slam rank 5 (weapon damage + 87, 15 rage, 18 sec), Execute rank 5 (600 + 15 for each
 # extra rage, 15 rage), Overpower rank 4 (weapon damage + 35, 5 rage, 5 sec, after a dodge).
+# Rage: Forever v2 rules (announced fix, player simulations): critical hits +100% rage, off hand +50% with Dual Wield
+# Specialization. With v2 rage, Bloodthirst and Whirlwind are on cooldown with any gear.
 # Talents: Cruelty 5/5 (+5% critical hit), Unbridled Wrath 5/5 (60%: +1 rage for each hit), Improved Heroic Strike
 # 3/3 (-3 rage), Anger Management (1 rage each 3 sec), Deep Wounds 3/3 (60% of the average weapon damage over 12 sec
 # after a critical hit), Impale 2/2 (+20% critical hit damage of abilities).
