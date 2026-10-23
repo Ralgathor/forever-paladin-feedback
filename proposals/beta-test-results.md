@@ -16,7 +16,7 @@
 | Divine Precision | The spell hit cap is 18%, with no fixed 1% miss. 3/3 gives the full cap | None |
 | Holy Shock | Damage uses spell damage. Healing uses healing power. Both at 42.9% | None |
 | Consecrated Ground | Increases all your Holy damage on those targets, also Retribution Aura and Consecration | None |
-| Light's Vigil | 3 ranks: 730, 1,000 and 1,340 mana. Rank 3 heals each party member for 684–724 | None (see Withdrawn ideas) |
+| Light's Vigil | 3 ranks: 730, 1,000 and 1,340 mana. Rank 3 heals each party member for 684–724 | None |
 
 ## Protection talents
 

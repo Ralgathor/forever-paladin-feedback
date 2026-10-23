@@ -11,8 +11,8 @@ This document gives talent proposals for the WoW Forever Paladin. It has 21 chan
 
 ## How to read this document
 
-- **C (change).** C1 to C22 (we withdrew C20) change what a talent does, add a talent or remove a talent. C16, C18 and C19 change baseline spells. A change can also move the talent. The text then gives the new row.
-- **M (move).** M1 to M8 move a talent (M3 and M7 are withdrawn) to a different row or column. The talent text does not change.
+- **C (change).** C1 to C19, C21 and C22 change what a talent does, add a talent or remove a talent. C16, C18 and C19 change baseline spells. A change can also move the talent. The text then gives the new row.
+- **M (move).** M1, M2, M4 to M6 and M8 move a talent to a different row or column. The talent text does not change.
 - **C18a and C18b** are the two alternatives to C18.
 - **Withdrawn ideas** have no ID. They are in [Withdrawn ideas](withdrawn-ideas.md) only.
 - **Data.** Forever client build 1.60.1.70450, with the server hotfixes of 18 October 2026, from wowforevertalents.com. Player tests from 19 October 2026 and later. The text tells you when a value comes from an in-game tooltip.
