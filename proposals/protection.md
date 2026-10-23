@@ -47,8 +47,8 @@ The Protection proposals give:
 
 - **Proposed text.** "Increases your Strength by 2/4/6/8/10%." This is the beta text. Only the tree changes (Holy row 1 → Protection row 1).
 - **Why remove Toughness.** Forever removed flat armor talents for tanks. Toughness (Warrior) was removed. Toughness (Shaman) now gives Stamina. Thick Hide (Druid) increases with Defense. Toughness (Paladin) was the last flat armor talent.
-- **Why Divine Strength.** Strength is the stat of the Protection Paladin. It gives Attack Power for threat and block value (20 Strength = 1 block value). Holy does not need it now (C5).
-- **Row 1 for all specs.** Holy and Retribution go through Protection row 1 to get Precision. Divine Strength is useful for all three specs.
+- **Why Divine Strength.** It gives Retribution a reason to put points in the Protection tree. Retribution goes through Protection row 1 to get Precision, and receives Strength on its path. Holy does not need it now (C5).
+- **Use for Protection.** Strength also gives Attack Power for threat and block value (20 Strength = 1 block value).
 - **Parity.** The class has one % Strength talent, as the Druid has Heart of the Wild. There is no other Stamina talent: only +4% from Sacred Duty.
 
 ## C9. Improved Righteous Fury: removed
@@ -159,7 +159,8 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 - **Proposed text.** "Reduces the cooldown of your Blessing of Protection by 1/2 min, increases the duration of your Blessing of Freedom by 3/6 sec, and your Lay on Hands drains only 75/50% of your remaining mana." 2 ranks in row 2, the same as the beta.
 - **Change.** Only the Lay on Hands part is new. Lay on Hands keeps its heal, its 20 min cooldown and its mana for the target.
 - **Problem.** Lay on Hands drains all the remaining mana of the Paladin (Forever spellbook, all ranks). Forever decreases the cooldown from 1 hour to 20 min. Thus, the Paladin can use it about one time for each boss. But the drain is largest when the mana is full, early in a fight. Thus, Paladins use it only when their mana is already low.
-- **Other saves.** At 0 mana, the Paladin cannot cast Divine Shield (110 mana), Blessing of Protection (7% of base mana) or Hammer of Justice (100 mana). With C22, the Paladin always keeps half of the mana.
+- **Keep mana for the role.** With C22, the Paladin can use Lay on Hands at any time and always keeps half of the mana. The healer continues to heal, the tank keeps its threat, and Retribution keeps its damage. The time until the mana is back is also half (see the table).
+- **Other saves.** At 0 mana, the Paladin cannot cast Divine Shield (110 mana), Blessing of Protection (7% of base mana) or Hammer of Justice (100 mana). With C22, these saves stay available.
 
 **Cast at full mana**
 

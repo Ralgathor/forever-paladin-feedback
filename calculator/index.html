@@ -204,8 +204,8 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
   </div>
 
   <section class="props" id="props" aria-labelledby="propsTitle">
-    <h2 id="propsTitle">Development notes: proposed changes</h2>
-    <p>These development notes list the changes that we propose for the Paladin in WoW Forever. They follow the design rules of Forever: no talents that improve a buff, talents in Rows 1 and 2 that the other specs want, and a 1-point talent at 30 points. Push Proposed above to see the new trees. Select a talent name to go to that talent.</p>
+    <h2 id="propsTitle">Proposed changes</h2>
+    <p>This section lists the changes that we propose for the Paladin in WoW Forever. They follow the design rules of Forever: no talents that improve a buff, talents in Rows 1 and 2 that the other specs want, and a 1-point talent at 30 points. Push Proposed above to see the new trees. Select a talent name to go to that talent.</p>
     <div id="propsBody" class="devnotes"></div>
   </section>
 
@@ -578,11 +578,11 @@ function renderProps(){
   const html=`
 <p class="cat"><b>General</b></p>
 <ul>
-<li>Holy Strike: An instant strike that causes 50% weapon damage plus 81 to 105 Holy damage. It now also triggers your active Seal and Echo, the same as a melee attack (was Seal of Light, Seal of Justice and Seal of Wisdom only). ${g("C16")}
+<li>Holy Strike: An instant strike that causes 50% weapon damage plus 81 to 105 Holy damage. It now also triggers your active Seal and Echo, the same as a melee attack (was Seal of Light, Justice and Wisdom only). ${g("C16")}
 <ul><li>Seal of Command keeps its usual chance: about 7 procs each minute.</li></ul>
 ${dn("Holy Strike triggered only some Seals. Now one rule is true for all melee attacks. Holy Strike with your Seal is the core of Retribution, as Stormstrike is for Enhancement.")}</li>
 <li>Judgement of the Crusader: Increases the Holy damage that the target takes. It is now a personal debuff: it increases only your own Holy damage, and it does not count against your one-Judgement limit. ${g("C18")}
-${dn("Since the patch of 15 October, Salvation does not use a Blessing slot. Two Paladins now give all Blessings to a raid. But each Paladin keeps only one Judgement on a target. Raids use Light and Wisdom, and the tank loses Crusader. With this change, the tank keeps about 50 threat per second.")}</li>
+${dn("Since the patch of 15 October, Salvation does not use a Blessing slot. Two Paladins now give all Blessings to a raid. But each Paladin keeps only one Judgement on a target. Raids use Light and Wisdom and remove Crusader. Thus, Retribution loses damage and Protection loses threat. With this change, each Paladin keeps Crusader for their own Holy damage. The tank keeps about 50 threat per second.")}</li>
 <li>Blessing of Light and Greater Blessing of Light removed. ${g("C19")}
 ${dn("Forever talents give a %, not a flat value. Blessing of Light gives +400 to Holy Light and +115 to Flash of Light, and its value decreases with gear. At 700–900 healing power, it is about +18%. Healing Light now gives this bonus (see Holy). Forever also removed Blessing of Sanctuary.")}</li>
 <li>Alternatives, if the recommended changes are not possible:
@@ -602,13 +602,13 @@ ${dn("Forever talents give a %, not a flat value. Blessing of Light gives +400 t
 ${dn("With 5 Holy points, Retribution and Protection receive +15% Seal and Judgement damage. Seals are the Paladin's own damage. This dip is more specific to the class than Strength.")}</li>
 <li>${t("rev","Reverence")} moved to Row 2 (was Row 3). Keeps 17/33/50% of your mana regeneration during casts (was 10/20/30%). ${g("C1")}
 ${dn("Meditation, Reflection and Mindfulness give 50%. The other healers also have a mana return in addition: Litany of Light, Water Shield and Mana Tide Totem. In Row 2, Reverence is also the mana talent for Protection and Retribution.")}</li>
-<li>${t("iol","Infusion of Light")} moved to Row 2 (was Row 4). Your Holy Shock and Flash of Light spells and your Holy Strike hits reduce the cast time of your next Holy Light within 15 sec by 0.5/1 sec. ${g("C3")}
+<li>${t("iol","Infusion of Light")} moved to Row 2 (was Row 4). Your Holy Shock and Flash of Light casts and your Holy Strike hits reduce the cast time of your next Holy Light by 0.5/1 sec. The effect lasts 15 sec. ${g("C3")}
 <ul><li>A critical hit is no longer necessary (was Holy Shock and Flash of Light critical hits only). Holy Strike is a new trigger.</li></ul>
 ${dn("No talent reduced the cast time of Holy Light. Divine Fury, Naturalist and Improved Healing Wave give −0.5 sec to the large heal of their class. Hybrids also have a fast emergency heal now: after each Holy Strike, Holy Light has a 1.5 sec cast.")}</li>
 <li>${t("sf","Spiritual Focus")} moved to Column 3 (was Column 2). ${g("M2")}</li>
 <li>${t("cg","Consecrated Ground")} moved to Row 3 (was Row 5). ${g("M1")}
 ${dn("Paladins learn Consecration at level 20, when Row 3 opens. Protection now reaches it with 12 Holy points (was 22).")}</li>
-<li>New Talent: ${t("sw","Lingering Light")} (Row 5, Column 3, 2 ranks): Your direct critical heals heal the target for an additional 10/20% of the amount over 6 sec. A new direct critical heal adds the healing that stays, and the total ticks over a new 6 sec. ${g("C2")}
+<li>New Talent: ${t("sw","Lingering Light")} (Row 5, Column 3, 2 ranks): Your direct critical heals also heal the target for 10/20% of the amount over 6 sec. A new direct critical heal adds the healing that stays, and the total ticks over a new 6 sec. ${g("C2")}
 <ul><li>Each tick can be a critical heal. A critical tick does not start the effect again.</li></ul>
 ${dn("Holy had no heal over time. Lingering Light works as Ignite and Blessed Recovery work in Forever. It also gives more value to the critical heal talents of the tree: Illumination, Divine Favor and Holy Power.")}</li>
 <li>${t("hl","Healing Light")} moved to Row 6, Column 3 (was Row 2). Increases the healing of your Holy Light, Flash of Light and Holy Shock spells by 10/20/30% (was 4/8/12%). ${g("C4")}
@@ -621,21 +621,21 @@ ${dn("The extra 18% replaces Blessing of Light. The large healing bonus now need
 <li>Toughness removed. ${g("C8")}
 ${dn("Forever removed the flat armor talents of the other tanks. Toughness was the last one.")}</li>
 <li>${t("ds","Divine Strength")} moved to Row 1 (was Holy Row 1). Increases your Strength by 2/4/6/8/10%. ${g("C8")}
-${dn("Strength gives the Protection Paladin attack power for threat, and block value. Holy has Improved Seals in Row 1 now.")}</li>
-<li>${t("red","Redoubt")}: Damaging melee attacks against you have a 10% chance to increase your chance to block by 4/8/12/16/20%. Lasts 10 sec or 5 blocks. Your Holy Shield casts now also trigger this effect. ${g("C6")}
+${dn("This talent gives Retribution a reason to put points in the Protection tree. Retribution receives Strength on its path to Precision in Row 2. Protection also uses it: Strength gives attack power for threat, and block value. Improved Seals replaces it in Holy Row 1.")}</li>
+<li>${t("red","Redoubt")}: Melee attacks that cause damage to you have a 10% chance to increase your chance to block by 4/8/12/16/20%. Lasts 10 sec or 5 blocks. Your Holy Shield casts now also trigger this effect. ${g("C6")}
 ${dn("This change removes most crushing blows. It keeps the block values of the patch of 1 October. Redoubt is only active for a longer time. Holy and Retribution do not have Holy Shield. Thus, their Redoubt does not change.")}</li>
 <li>${t("gf","Guardian's Favor")}: Reduces the cooldown of your Blessing of Protection by 1/2 min and increases the duration of your Blessing of Freedom by 3/6 sec. Your Lay on Hands now also drains only 75/50% of your current mana (was all your current mana). ${g("C22")}
-${dn("Lay on Hands now has a 20 min cooldown. But the drain is largest at full mana, early in a fight. Thus, Paladins used it only at low mana. At 50%, you always keep mana for Divine Shield, Blessing of Protection and Hammer of Justice.")}</li>
+${dn("Lay on Hands now has a 20 min cooldown, thus about one cast for each boss. But it drains all your mana, and the drain is largest at full mana. Thus, Paladins used it only at low mana. At 50%, you can use it at any time in a fight. You keep half of your mana for your role: heals, threat or damage. You also keep mana for your other saves.")}</li>
 <li>Improved Righteous Fury removed. ${g("C9")}
 ${dn("Iron Creed now gives 10% damage reduction while Righteous Fury is active, the same as Defensive Stance. With Improved Righteous Fury, the total was about 15%.")}</li>
 <li>Improved Seal of Fury removed. ${g("C10")}
 ${dn("It was a second mana talent for hits taken. Shield Specialization already has this role, and Reverence in Row 2 is the mana talent for all specs.")}</li>
 <li>${t("ss","Shield Specialization")}: Increases the damage that your shield absorbs by 10/20/30%. Your blocks have a 33/66/100% chance to restore 4% of your maximum mana. This now occurs once each 2 sec at most (was once each 3 sec). ${g("C13")}
-${dn("Without Improved Seal of Fury, the tank loses about 23 mana per sec. Reverence and the extra blocks from Redoubt give back about 13. This change pays for the rest.")}</li>
+${dn("Without Improved Seal of Fury, the tank loses about 23 mana per sec. Reverence and the extra blocks from Redoubt return about 13. This change pays for the rest.")}</li>
 <li>${t("sd","Sacred Duty")}: Increases your total Stamina by 2/4% and reduces the cooldown of your Divine Shield, Divine Protection and Templar's Bulwark by 30/60 sec. It now also reduces the cooldown of Shoulder the Burden by 30/60 sec. ${g("C10")}</li>
 <li>${t("ihoj","Improved Hammer of Justice")} moved to Row 3 (was Row 4). ${g("M4")}</li>
 <li>${t("sj","Swift Judgement")} moved to Row 3 (was Row 4). It no longer requires Improved Seal of Fury. ${g("M5")}</li>
-<li>New Talent: ${t("rdef","Shoulder the Burden")} (Row 4, Column 3, 1 point): Moves 50% of the threat of a friendly party or raid member to you, on all enemies. Instant, 30 yards, 5 min cooldown. ${g("C10")}
+<li>New Talent: ${t("rdef","Shoulder the Burden")} (Row 4, Column 3, 1 point): Moves 50% of the threat of a party or raid member to you, on all enemies. Instant, 30 yards, 5 min cooldown. ${g("C10")}
 ${dn("The Paladin tank had no tool to save an ally from a group of enemies. The ally keeps half of the threat and must still control it.")}</li>
 <li>New Talent: ${t("fj","Fury's Reach")} (Row 4, Column 1, 2 ranks): While Seal of Fury is active, the range of your Judgement increases by 5/10 yards. Requires Swift Judgement. ${g("C12")}
 ${dn("Protection had no ranged pull and no ranged taunt. The Seal of Fury condition stops a 20-yard Judgement of Command burst in PvP.")}</li>
@@ -651,7 +651,7 @@ ${dn("Warrior and Druid threat increases with gear. Paladin threat increased onl
 <p class="cat"><b>Retribution</b></p>
 <ul>
 <li>${t("con","Conviction")} moved to Row 1 (was Row 2). Increases your critical strike chance with attacks and spells by 1/2/3/4/5% (was melee attacks only). ${g("C15","M8")}
-${dn("All other +5% critical strike talents are in Row 1: Cruelty, Malice, Lethal Attacks and Thundering Strikes. Thundering Strikes has the same change. A Holy Paladin now needs 5 Retribution points, not 10.")}</li>
+${dn("All other +5% critical strike talents are in Row 1: Cruelty, Malice, Lethal Attacks and Thundering Strikes. Thundering Strikes has the same change. With spells, Conviction also gives Holy +5% critical heal chance. A Holy Paladin now needs 5 Retribution points, not 10.")}</li>
 <li>${t("ben","Benediction")} moved to Row 2 (was Row 1). Reduces the mana cost of all your instant spells and abilities by 3/6/9% (was 2/4/6/8/10%, 5 ranks). ${g("C21","M8")}
 ${dn("Cataclysm gives −10% for 3 points. With 3 ranks, a dip into Retribution costs 2 points less.")}</li>
 <li>${t("ths","Two-Handed Weapon Specialization")} moved to Row 4 (was Row 5). Its effect does not change. ${g("M6")}
