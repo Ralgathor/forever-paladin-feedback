@@ -31,7 +31,7 @@ Conditions:
 
 All values are approximate.
 
-- Warrior and Druid get rage when the boss hits them. Thus, their threat increases when the boss hits harder. Paladin threat does not change with boss damage.
+- Warrior and Druid receive rage when the boss hits them. Thus, their threat increases when the boss hits harder. Paladin threat does not change with boss damage.
 - If Shield Slam has a ×2.25 threat multiplier (not tested), add 140 TPS to the Warrior.
 - Both Paladin columns include Judgement of the Crusader. Judgement of Fury does not remove it. In the beta, a raid can need the tank's only Judgement for Light or Wisdom. Then the beta Paladin has no Crusader and about 340 TPS. With C18, the tank keeps Crusader in all cases.
 - Without C14, the proposed Paladin has about 450 TPS (555 TPS with Consecration).
@@ -100,7 +100,7 @@ TPS on one boss. The percentage is the Paladin TPS divided by the Druid TPS.
 
 - All Paladin columns include Judgement of the Crusader. Without it (a raid that needs the beta tank's Judgement for Light or Wisdom), subtract about 50 TPS from the beta column.
 - With all proposals, the Paladin is between the Druid and the Warrior at all tiers.
-- Without C14, the Paladin falls behind the Druid: 97% at fresh level 60, 81% in Naxxramas. The Warrior and the Druid get more Attack Power and more rage. The Paladin gets only spell power.
+- Without C14, the Paladin falls behind the Druid: 97% at fresh level 60, 81% in Naxxramas. The Warrior and the Druid receive more Attack Power and more rage. The Paladin receives only spell power.
 - The beta Paladin is behind at all tiers: 86% of the Druid at fresh level 60, and 71% in Naxxramas.
 - Shield Specialization gives 4% of maximum mana. Thus, more mana gives more mana return. Tanking without Consecration gives about +4 mana per sec at fresh level 60 and about +30 mana per sec in Naxxramas (see Analysis, Mana).
 
@@ -127,9 +127,9 @@ Paladin with all proposals. The first value is the percentage of the Druid TPS. 
 
 - C14 at 200% is correct for all three cases. At 150%, the Paladin falls to 91% of the Druid if boss hits continue to increase. At 300%, the Paladin has more threat than the Warrior if all values are flat (105%).
 - Without C14, the Paladin falls behind in all cases. Thus, C14 is more important with flatter gear.
-- The weakest case is flatter gear with boss hits that continue to increase. The Warrior and the Druid still get more rage from bigger hits. Monitor the block value of each gear tier.
+- The weakest case is flatter gear with boss hits that continue to increase. The Warrior and the Druid still receive more rage from larger hits. Monitor the block value of each gear tier.
 - Mana: if maximum mana increases more slowly (3,650, 3,900 and 4,150), tanking without Consecration gives +14, +17 and +20 mana per sec. C13 is more important.
-- Defense: if gear gives Defense more slowly, tanks get to 440 Defense later. The boss can then make critical hits for a longer time. C6 and the Reckoning critical-hit trigger stay useful for a longer time.
+- Defense: if gear gives Defense more slowly, tanks reach 440 Defense later. The boss can then make critical hits for a longer time. C6 and the Reckoning critical-hit trigger stay useful for a longer time.
 - C18: the +161 bonus from Judgement of the Crusader is more important when gear gives less spell power.
 - The PvP burst check (C11) uses fresh and pre-raid stats. It stays correct for a longer time.
 
