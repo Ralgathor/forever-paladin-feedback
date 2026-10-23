@@ -60,7 +60,7 @@
 | Spell | Result in the beta | Source |
 | --- | --- | --- |
 | Holy Strike | Uses normalized weapon damage. The Holy part uses 0.429 × weapon %: 21.45% of spell power at rank 8. Does not trigger Seal of Fury, Righteousness or Command. Triggers Seal of Light, Justice and Wisdom | Player tests |
-| Seal of Fury | 10% of spell power for each hit (11.5% with Improved Seals). No Attack Power. Critical hit: ×2 damage, with a separate roll. Cannot miss | Player tests |
+| Seal of Fury | 35 Holy damage + 10% of spell power for each hit (rank 7). Improved Seals multiplies the full hit: 40.25 + 11.5% of spell power. No Attack Power. Critical hit: ×2 damage, with a separate roll. Cannot miss | Player tests; game files (flat 35, spell 20418) |
 | Seal of Righteousness | 10% of spell power with a one-handed weapon, 12% with a two-handed weapon. Weapon speed has no effect | Player tests; patch note, 16 October |
 | Seal of Command | 29% × 70% weapon damage = 20.3% of spell power. 7 procs each minute. Uses the melee hit table | Player tests |
 | Judgement of Fury, Righteousness and Command | 42.9% of spell power. Melee hit table. Critical hit: ×2 damage. Judgement of Command: ×2 damage against a stunned target | Player tests; patch note, 16 October |
