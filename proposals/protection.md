@@ -16,7 +16,7 @@ The Protection proposals give:
 | Row (points necessary) | Talents | Points in the row |
 | --- | --- | --- |
 | 1 (0) | Precision (C8), Guardian's Favor (C8, C22), Redoubt (C6) | 10 |
-| 2 (5) | Holy Conduit (C8), Anticipation | 7 |
+| 2 (5) | Anticipation, Holy Conduit (C8) | 7 |
 | 3 (10) | Swift Judgement (M5), Improved Hammer of Justice (M4), Shield Specialization (C13), Sacred Duty | 9 |
 | 4 (15) | Fury's Reach (C12), One-Handed Weapon Specialization, Shoulder the Burden (C10) | 6 |
 | 5 (20) | Templar's Bulwark, Reckoning (C11) | 6 |
@@ -54,7 +54,7 @@ The Protection proposals give:
 | Guardian's Favor | Protection row 2, column 2 | Protection row 1, column 2 | C22 |
 | Holy Conduit | Retribution row 2, column 2 | Protection row 2, column 2 | The same |
 | Vindication | Retribution row 3, column 1 | Retribution row 2, column 2 | 5 ranks (see below) |
-| Unyielding Faith | Holy row 2, column 4 | Holy row 1, column 4 | The same |
+| Unyielding Faith | Holy row 2, column 4 | Holy row 1, column 3 | The same |
 
 - **Vindication text.** "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 41/82/122/163/204, and increase your Attack Power by 1/2/3/4/5% for 30 sec." Beta: 3 ranks, −67/136/204 Attack Power and +1/2/3%.
 - **Why remove Toughness.** Forever removed flat armor talents for tanks. Toughness (Warrior) was removed. Toughness (Shaman) now gives Stamina. Thick Hide (Druid) increases with Defense. Toughness (Paladin) was the last flat armor talent.

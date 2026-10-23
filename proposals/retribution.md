@@ -8,7 +8,7 @@ These proposals connect the melee attacks of Retribution to its Holy spells. The
 | --- | --- | --- |
 | 1 (0) | Deflection, Conviction (C15, M8) | 10 |
 | 2 (5) | Improved Judgement, Vindication (C8), Benediction (M8, C21) | 10 |
-| 3 (10) | Sanctified Judgement, Seal of Command, Pursuit of Justice | 6 |
+| 3 (10) | Pursuit of Justice, Sanctified Judgement, Seal of Command | 6 |
 | 4 (15) | Eye for an Eye, Sacred Arbiter, Two-Handed Weapon Specialization (M6) | 6 |
 | 5 (20) | Vengeance, Repentance | 4 |
 | 6 (25) | Champion of the Light, Instrument of Law | 5 |

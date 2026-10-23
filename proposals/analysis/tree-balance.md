@@ -30,7 +30,7 @@ This table uses the proposed trees with M8 and C8.
 | --- | --- | --- | --- | --- |
 | Holy | Improved Seals, Divine Intellect, Unyielding Faith · Infusion of Light, Reverence, Spiritual Focus | Seal damage, −30% Fear, regeneration while casting, a fast Holy Light (7–10 points) | Seal damage, −30% Fear, regeneration (8 points) | — |
 | Retribution | Deflection, Conviction · Improved Judgement, Vindication, Benediction | — | Parry, critical hit, Judgement −2 sec, a debuff on the boss (5–10 points) | +5% critical heal chance (5 points). Instant spells cost −9%: Holy Shock, Cleanse (3 more points, C21) |
-| Protection | Precision, Guardian's Favor, Redoubt · Holy Conduit, Anticipation | +3% hit, saves, cheaper Exorcism, Hammer of Wrath and Consecration (7 points) | — | Guardian's Favor: saves, and Lay on Hands drains only 50% of the mana (C22) (2 points). Redoubt for PvP (5 more points) |
+| Protection | Precision, Guardian's Favor, Redoubt · Anticipation, Holy Conduit | +3% hit, saves, cheaper Exorcism, Hammer of Wrath and Consecration (7 points) | — | Guardian's Favor: saves, and Lay on Hands drains only 50% of the mana (C22) (2 points). Redoubt for PvP (5 more points) |
 
 **Protection for Holy is a PvP dip.** Other classes also use a defensive tree for PvP: Iron Will (Warrior), Frost Warding (Mage), Deflection (Hunter). Redoubt gives Holy only a small defense. Guardian's Favor gives more saves: Blessing of Protection each 3 min, Blessing of Freedom +6 sec, and a Lay on Hands that drains only 50% of the mana (C22). Thus, Holy healers in raids also take it.
 
