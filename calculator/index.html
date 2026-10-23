@@ -337,7 +337,7 @@ const PROPOSED={
  irf:{pid:"C9",removed:true},
  sd:{pid:"C10",r1:"Increases your total Stamina by 2% and reduces the cooldown of your Divine Shield, Divine Protection, Templar's Bulwark, and Shoulder the Burden spells by 30 sec.",rN:"Increases your total Stamina by 4% and reduces the cooldown of your Divine Shield, Divine Protection, Templar's Bulwark, and Shoulder the Burden spells by 60 sec."},
  sj:{pid:"M5",req:null,tier:3,col:1},
- sf:{pid:"M2",tier:2,col:3},
+ sf:{pid:null,tier:2,col:3},
  iol:{pid:"C3",tier:2,col:1,rt:["Your Holy Shock and Flash of Light spells and your Holy Strike hits reduce the cast time of your next Holy Light cast within 15 sec by 0.5 sec.","Your Holy Shock and Flash of Light spells and your Holy Strike hits reduce the cast time of your next Holy Light cast within 15 sec by 1 sec."]},
  ihoj:{pid:"M4",tier:3,col:2},
  hsh:{pid:"C14",r1:"Increases chance to block by 30% for 10 sec, and deals 110 Holy damage plus 200% of your block value for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."},
@@ -357,10 +357,9 @@ const PROPOSALS=[
  ["C1", "rev", "Reverence", "Holy, row 3 → row 2", "10/20/30% of mana regeneration while casting", "17/33/50%"],
  ["C2", "sw", "Lingering Light (new)", "Holy, row 5", "—", "2 ranks: a critical heal adds a heal over time of 10/20% of the heal"],
  ["C3", "iol", "Infusion of Light", "Holy, row 4 → row 2", "Holy Shock and Flash of Light critical hits make the next Holy Light faster", "All Holy Shock, Flash of Light and Holy Strike hits do this. No critical hit is necessary"],
- ["C4", "hl", "Healing Light", "Holy, row 2 → row 6, column 3", "3 ranks: 4/8/12%", "3 ranks: 10/20/30% (with C19)"],
+ ["C4", "hl", "Healing Light", "Holy, row 2 → row 6", "3 ranks: 4/8/12%", "3 ranks: 10/20/30% (with C19)"],
  ["C5", "is", "Improved Seals", "Holy, row 2 → row 1", "3 ranks: 5/10/15%", "5 ranks: 3/6/9/12/15%"],
  ["M1", "cg", "Consecrated Ground", "Holy, row 5 → row 3", "Row 5", "Row 3 (move only)"],
- ["M2", "sf", "Spiritual Focus", "Holy, row 2", "Column 2", "Column 3 (move only)"],
  ["C21", "ben", "Benediction", "Retribution, row 2 (M8)", "5 ranks: 2/4/6/8/10%", "3 ranks: 3/6/9%"],
  ["C6", "red", "Redoubt", "Protection, row 1", "10% chance when you are hit: +4–20% block", "The same. Each Holy Shield cast also starts it"],
  ["C7", "ic", "Iron Creed", "Protection, row 6", "−2–10% damage taken for 6 sec after Holy Strike", "−2–10% damage taken while Righteous Fury is active"],
@@ -605,15 +604,13 @@ ${dn("Meditation, Reflection and Mindfulness give 50%. The other healers also ha
 <li>${t("iol","Infusion of Light")} moved to Row 2 (was Row 4). Your Holy Shock and Flash of Light casts and your Holy Strike hits reduce the cast time of your next Holy Light by 0.5/1 sec. The effect lasts 15 sec. ${g("C3")}
 <ul><li>A critical hit is no longer necessary (was Holy Shock and Flash of Light critical hits only). Holy Strike is a new trigger.</li></ul>
 ${dn("No talent reduced the cast time of Holy Light. Divine Fury, Naturalist and Improved Healing Wave give −0.5 sec to the large heal of their class. Hybrids also have a fast emergency heal now: after each Holy Strike, Holy Light has a 1.5 sec cast.")}</li>
-<li>${t("sf","Spiritual Focus")} moved to Column 3 (was Column 2). ${g("M2")}</li>
 <li>${t("cg","Consecrated Ground")} moved to Row 3 (was Row 5). ${g("M1")}
 ${dn("Paladins learn Consecration at level 20, when Row 3 opens. Protection now reaches it with 12 Holy points (was 22).")}</li>
 <li>New Talent: ${t("sw","Lingering Light")} (Row 5, Column 3, 2 ranks): Your direct critical heals also heal the target for 10/20% of the amount over 6 sec. A new direct critical heal adds the healing that stays, and the total ticks over a new 6 sec. ${g("C2")}
 <ul><li>Each tick can be a critical heal. A critical tick does not start the effect again.</li></ul>
 ${dn("Holy had no heal over time. Lingering Light works as Ignite and Blessed Recovery work in Forever. It also gives more value to the critical heal talents of the tree: Illumination, Divine Favor and Holy Power.")}</li>
-<li>${t("hl","Healing Light")} moved to Row 6, Column 3 (was Row 2). Increases the healing of your Holy Light, Flash of Light and Holy Shock spells by 10/20/30% (was 4/8/12%). ${g("C4")}
+<li>${t("hl","Healing Light")} moved to Row 6 (was Row 2). Increases the healing of your Holy Light, Flash of Light and Holy Shock spells by 10/20/30% (was 4/8/12%). ${g("C4")}
 ${dn("The extra 18% replaces Blessing of Light. The large healing bonus now needs 25 points, as Spiritual Healing and Purification do. A Holy build with 28 points in Retribution does not have it.")}</li>
-<li>${t("hp","Holy Power")} moved to Column 1 (was Column 3). Its effect does not change. ${g("C4")}</li>
 </ul>
 
 <p class="cat"><b>Protection</b></p>
