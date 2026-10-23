@@ -4,10 +4,11 @@ This section compares the single-target damage of Retribution with the other dam
 
 ## Summary
 
-- With all proposals, Retribution is about equal to Fury Warrior at fresh level 60. It is 101% of Fury and 105% of the average of the pure damage classes.
-- In the beta, Retribution is 95% of the pure damage classes. This is the hybrid target. Players report it from developer comments: hybrids do about 5% less damage than pure damage classes.
+- With all proposals, Retribution is about equal to Fury Warrior at fresh level 60. It is 101% of Fury and 103% of the average of the pure damage classes.
+- The hybrid target is 95% of the pure damage classes. Players report it from developer comments: hybrids do about 5% less damage than pure damage classes. In the beta, Retribution is 93%.
 - C16 gives almost all of the increase. C17 gives the same damage as the beta Seal swap, but the mana lasts for the full fight.
-- Retribution increases less with gear than Fury and Rogue. In Naxxramas, it is about 82% of Fury (87% with flatter gear). Thus, the advantage at fresh level 60 does not stay.
+- Retribution increases less with gear than Fury. In Naxxramas, it is about 82% of Fury (87% with flatter gear). No talent change can close this gap (part 6).
+- Fury increases more with gear than the other classes. Against the pure average, Retribution goes from 103% at fresh level 60 to about 92% in Naxxramas. The hybrid target is 95%.
 - Judgement of the Crusader gives Retribution about +9% DPS at fresh level 60. C18 makes this possible for each Paladin.
 
 ## 1. Build and gear
@@ -77,32 +78,33 @@ Same build and gear, raid buffs, 2 min fight. The beta build has the same damage
 
 ## 5. Comparison with the other damage classes
 
-The values of the other classes come from [MythicSim](https://mythicsim.com/wow-forever/tier-list): wowsims Forever, beta client 1.60.1.70425, simulated on 21 October 2026. It uses curated dungeon and crafted gear, full raid buffs, debuffs and consumables, and a 2 min fight against one level 63 boss. Its Retribution value (847) uses the beta talents. This document uses only its ratios. The Retribution values with the proposals are 847 × the change in part 4.
+The values of the other classes come from [MythicSim](https://mythicsim.com/wow-forever/tier-list): wowsims Forever, beta client 1.60.1.70425, simulated on 22 October 2026 (engine a667dce, 10,000 iterations, no trinkets). It uses curated dungeon and crafted gear, full raid buffs, debuffs and consumables, and a 2 min fight against one level 63 boss. Its Retribution value (847) uses the beta talents. This document uses only its ratios. The Retribution values with the proposals are 847 × the change in part 4.
 
-The pure average is the best spec of each pure damage class: Warrior 929, Rogue 702, Hunter 1,088, Mage 860 and Warlock 885. The average is 893.
+The pure average is the best spec of each pure damage class: Warrior 929, Rogue 702, Hunter 1,175, Mage 860 and Warlock 879. The average is 909.
 
-| Spec | DPS | Against the pure average (893) |
+| Spec | DPS | Against the pure average (909) |
 | --- | --- | --- |
-| Survival Hunter (melee weaving) | 1,088 | 122% |
-| Retribution, C16 first version | About 957 | 107% |
-| **Retribution, all proposals** | **About 934** | **105%** |
-| Fury Warrior | 929 | 104% |
-| Demonology Warlock | 885 | 99% |
-| Fire Mage | 860 | 96% |
-| Retribution, beta | 847 | 95% |
-| Arms Warrior | 800 | 90% |
-| Feral Druid | 794 | 89% |
-| Shadow Priest | 771 | 86% |
-| Enhancement Shaman | 741 | 83% |
-| Combat Rogue | 702 | 79% |
-| Balance Druid | 657 | 74% |
-| Elemental Shaman | 519 | 58% |
+| Survival Hunter (melee weaving) | 1,175 | 129% |
+| Retribution, C16 first version | About 957 | 105% |
+| **Retribution, all proposals** | **About 934** | **103%** |
+| Fury Warrior | 929 | 102% |
+| Demonology Warlock | 879 | 97% |
+| Fire Mage | 860 | 95% |
+| Retribution, beta | 847 | 93% |
+| Arms Warrior | 800 | 88% |
+| Feral Druid | 794 | 87% |
+| Shadow Priest | 771 | 85% |
+| Enhancement Shaman | 741 | 82% |
+| Combat Rogue | 702 | 77% |
+| Balance Druid | 657 | 72% |
+| Elemental Shaman | 519 | 57% |
 
-- **In the beta, Retribution is 95% of the pure average.** This is the hybrid target.
-- **With all proposals, Retribution is 101% of Fury and 105% of the pure average.** Without Combat Rogue (the lowest pure class), the pure average is 940. Retribution is then 99% of it.
+- **The hybrid target is 95% of the pure average.** In the beta, Retribution is 93%.
+- **With all proposals, Retribution is 101% of Fury and 103% of the pure average.** Without Combat Rogue (the lowest pure class), the pure average is 961. Retribution is then 97% of it.
 - **Retribution is the strongest hybrid** in the beta and with the proposals. In the beta, it is 7% above Feral and 14% above Enhancement.
 - **Check with the same gear.** The model also calculates an Arms Warrior with the gear of part 1. The beta Retribution is 5% above Arms. MythicSim gives 6%. Thus, the model and MythicSim agree.
-- **One source only.** The MythicSim page has some errors in its rank order. Its Hunter values use melee weaving. Nobody has confirmed melee weaving in a raid.
+- **One source only.** The MythicSim page has some errors in its rank order. Its Hunter values use melee weaving. No player has confirmed melee weaving in a raid.
+- **No raid gear.** MythicSim has no raid gear tiers. Part 6 uses a model for the increase with gear.
 
 ## 6. Gear progression
 
@@ -147,10 +149,47 @@ Retribution increases less with gear than the pure melee classes. Blizzard said 
 - **Improved Seals multiplies the fixed bases** by the same 15% as the weapon part. Thus, it does not change the share that increases with gear.
 - **Rage in Forever.** In Classic, rage came from the damage. Better gear gave more rage and more Heroic Strikes. Forever gives rage from the weapon speed. This removes most of that effect. With Classic rage, the gap is bigger than these tables show.
 
+**The limit of the Retribution increase**
+
+The increase of each damage source from fresh level 60 to Naxxramas (Classic steps):
+
+| Source | Increase |
+| --- | --- |
+| Seal of Command | ×1.78 |
+| Auto attacks | ×1.74 |
+| Holy Strike | ×1.64 |
+| Judgement | ×1.49 |
+| Seal of Righteousness | ×1.43 |
+| Hammer of Wrath | ×1.26 |
+| **Retribution** | **×1.61** |
+| Fury Warrior | ×1.98 |
+
+- The best sources of Retribution increase only about ×1.75. The slow two-handed weapon, the hit cap and no Flurry limit them.
+- Thus, a Retribution with no fixed values also increases only about ×1.75. This is 88% of the Fury increase. No talent change can close the gap to Fury.
+- **Talent tests.** Each test keeps the DPS at fresh level 60 equal. The tests: Seal of Command 85% of weapon damage, more weapon damage on Holy Strike, Vengeance 5 stacks, Vindication +10% Attack Power. Each test gives 0 to 2 points against Fury in Naxxramas.
+- **Fury is the outlier.** In Naxxramas, Retribution is still 106% of Arms and 125% of Combat Rogue.
+
+**Against the pure average**
+
+The hybrid target is 95% of the pure average (part 5), not 100% of Fury. Fury and Combat Rogue use the increases of this part. The increase of Hunter, Mage and Warlock with raid gear is not known. The table shows three cases.
+
+| Hunter, Mage and Warlock in Naxxramas | Fresh level 60 | Pre-raid best in slot | Molten Core | Blackwing Lair | Naxxramas |
+| --- | --- | --- | --- | --- | --- |
+| ×1.60 | 103% | 104% | 103% | 101% | 98% |
+| ×1.75 (as Arms and Rogue) | 103% | 102% | 100% | 97% | 92% |
+| ×1.90 | 103% | 101% | 98% | 93% | 88% |
+| ×1.75, spell damage stays at 254 | 103% | 99% | 96% | 91% | 85% |
+
+- In the middle case, Retribution is 2–8 points above the hybrid target until Molten Core. It is 3 points below the target in Naxxramas.
+- Over the full game, the average is near the target.
+- **Spell damage on plate items is the largest lever.** It gives 7 points in Naxxramas (85% → 92%). This is an item rule, not a talent.
+
 **Result**
 
-- **Retribution at the level of Fury at fresh level 60 is not too strong for a full content phase.** It is above the hybrid target only until about pre-raid best in slot. From Molten Core, it is 10–18% below Fury (8–13% with flatter gear).
-- **Recommendation: keep C16, with Sacred Arbiter as in the beta (+20%).** Check Retribution against Fury at each gear tier, not only at fresh level 60 (see Watch list, W15).
+- **Retribution at the level of Fury at fresh level 60 is not too strong for a full content phase.** It is above the hybrid target until about Molten Core. From Molten Core, it is 10–18% below Fury (8–13% with flatter gear).
+- **Recommendation: keep C16, with Sacred Arbiter as in the beta (+20%).** Do not change talents to correct the increase with gear.
+- **Compare Retribution with the pure average at each gear tier,** not only with Fury (see Watch list, W15).
+- **Request to Blizzard:** put spell damage on Paladin plate items at each tier.
 - **The tier that Blizzard uses for balance is important.** If Blizzard balances at the raid release (9 December 2026), the proposals are correct for the first weeks. After that, Retribution falls behind.
 
 ## 7. Judgement of the Crusader
