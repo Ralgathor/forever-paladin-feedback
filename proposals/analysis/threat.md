@@ -4,6 +4,8 @@ This section compares the threat of the three tanks: Warrior, Druid and Paladin.
 
 The values come from a model. The model uses beta tests and developer notes. It is not a combat log. The inputs are in part 6. The spell data from beta tests is in Beta test results. The values that are not known are in Open questions.
 
+The script models/threat/run_tables.py calculates the model from the inputs of part 6. Its Paladin values are within about 3% of the tables. Its Warrior and Druid values are within 8%. Forever data for the Revenge and Primal Bite damage is not known. The script sets these two values to agree with part 1.
+
 ## Summary
 
 - With all proposals, the Paladin has about the same threat as the Druid and the Warrior.
