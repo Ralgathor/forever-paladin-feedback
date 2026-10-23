@@ -16,9 +16,9 @@ These are risks to check in tests. None of them needs a change now.
 | --- | --- | --- |
 | W1 | Pursuit of Justice (+15% speed at 10 Retribution points) is better than the boot enchant | Decrease it to 10% if all Paladins take it |
 | W2 | Sacred Duty gives Divine Shield −60 sec at 10 Protection points. This is a PvP dip | Decrease it to −30 sec if all players take it |
-| W3 | Retribution receives Strength and 3% hit with one 8-point Protection dip | Monitor |
-| W4 | A 10-point Retribution dip (Deflection 5, Holy Conduit 2, Benediction 3) decreases the mana that Protection uses with Consecration from about 112 to 76 per sec | Monitor: all Protection players can take this dip |
-| W5 | Holy is the main dip for the two other trees (Seal damage, Infusion of Light, Reverence, Consecrated Ground) | Monitor: Retribution and Protection still give parry, critical hit, mana costs, Strength and hit |
+| W3 | Retribution receives 3% hit, Blessing of Protection each 3 min and Holy Conduit with one 7-point Protection dip (C8) | Monitor |
+| W4 | Holy Conduit is in Protection row 2 (C8). With Consecration on cooldown, a tank uses about 84 mana per sec with no dip (beta: 112). Benediction from a Retribution dip decreases it to about 76 | Monitor: the Retribution dip now saves only about 8 mana per sec |
+| W5 | Holy is the main dip for the two other trees (Seal damage, Infusion of Light, Reverence, Consecrated Ground) | Monitor: Retribution and Protection still give parry, critical hit, mana costs, hit and saves |
 | W6 | Reckoning (C11): a 0/26/25 two-handed build bursts for about 3,020 in one Hammer of Justice stun | Monitor: this is below the best beta case (about 3,700). Swift Judgement gives about 18% of it |
 | W7 | Iron Creed (C7) gives −10% damage taken to all specs with Righteous Fury and 25 Protection points | Monitor in PvP. This is the one exception to the rule on talents that improve a buff |
 | W8 | Fury's Reach (C12): a 15-point Protection dip with Swift Judgement gives a 20 yard Judgement | Monitor: the range works only with Seal of Fury |
@@ -32,6 +32,7 @@ These are risks to check in tests. None of them needs a change now.
 | W16 | Consecrated Ground (2 Holy points) with Consecration on cooldown gives Retribution about +23% on one target. The mana lasts about 70 sec | If Retribution uses it on bosses, apply the +10% only to Holy spells, as the tooltip says, not to Seals and Judgements |
 | W17 | Holy Shock with Iron Creed (21/30/0): Righteous Fury stays active in PvP. The build then has −10% damage taken, Templar's Bulwark, Reckoning and Holy Shock (see Analysis, Builds, part 5) | Monitor in PvP with W7 and W9 |
 | W18 | Lay on Hands with C22 on yourself gives up to +550 mana below 1,100 mana (beta: below 550). Paladins can use it for mana one time for each boss | If all Holy Paladins use it for mana, Lay on Hands does not restore mana when you are the target |
+| W19 | Guardian's Favor is in Protection row 1 (C8). All specs take Blessing of Protection each 3 min and the C22 Lay on Hands for 2 points (see W18). No other class has a save talent in row 1 | Monitor in PvP. If all PvP builds take it, move it back to row 2 |
 
 ## Open questions
 
@@ -39,6 +40,7 @@ These are risks to check in tests. None of them needs a change now.
 - [ ] Do the effects that keep regeneration while casting add together (maximum 100%) in Forever, as in Classic?
 - [ ] Does C15 (Conviction for spells) make a Holy dip into Retribution too strong for healers?
 - [ ] Must Retribution have a group buff, as Leader of the Pack (Druid)? Or is the Attack Power debuff of Vindication sufficient?
+- [ ] Does Vindication stack with Demoralizing Shout (Warrior) and Demoralizing Roar (Druid) in Forever? If not, a tank with Vindication adds nothing in a raid with a Warrior or a Druid (C8).
 - [ ] Is a 20 yard pull worth 3 Protection points (C12)?
 - [ ] Does Judgement use the global cooldown in Forever? The C17 table assumes that it does.
 - [ ] Does the Holy Shield damage increase with spell power? By how much for each block?
@@ -51,7 +53,6 @@ These are risks to check in tests. None of them needs a change now.
 - [ ] Does MythicSim include Judgement of the Crusader in its raid debuffs? It changes the Retribution comparison by about 9% (see Analysis, Damage, part 7).
 - [ ] What is the Slam cooldown in Forever? The Arms check in Analysis, Damage, uses one Slam each 3 sec at most.
 - [ ] Does Righteous Fury increase the threat of heals in Forever? The text says "Holy attacks". If yes, a tank can use Flash of Light or Holy Light for threat (see Analysis, Builds, part 6).
-- [ ] C8: Divine Strength gives almost no threat to a tank, and the tank builds skip it (see Analysis, Builds, part 3). Keep C8 as a talent for Retribution and change its reason? Or change Divine Strength so that tanks also use it?
 - [ ] C22: when you cast Lay on Hands on yourself, does the drain occur before the 550 mana? If not, Lay on Hands gives you no mana.
 - [ ] Light's Vigil: the Illumination text names it. Does Illumination return mana one time for each cast, or one time for each critical heal (up to 5)? With Illumination at 50%, the effect is small (W13).
 - [ ] Does the Light's Vigil heal use the +15% critical chance of Holy Power for Holy Shock? Does Healing Light increase it? Both make Light's Vigil stronger (see Analysis, Healing, part 6).

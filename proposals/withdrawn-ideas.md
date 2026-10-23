@@ -13,8 +13,8 @@ We examined these ideas and rejected them. They are not proposals.
 | Sacred Ward (critical heals add a shield) | The same talent as Divine Aegis (Priest). Lingering Light (C2) replaces it |
 | Other ideas for the new Holy talent (heal splash, aura bonus, Cleanse, Lay on Hands) | Too modern, or utility and not healing |
 | Steadfast Faith (stun duration) in Protection row 1 | Two talents against crowd control. Other classes have one |
-| Toughness that also gives Stamina | Divine Strength from Holy (C8) replaces it |
-| Hallowed Ground or Shield Specialization in Protection row 1 | Talents only for tanks. Holy and Retribution then lose 5 points before Precision |
+| Toughness that also gives Stamina | C8 removes Toughness. Sacred Duty already gives Stamina |
+| Hallowed Ground or Shield Specialization in Protection row 1 | Talents only for tanks. Rows 1 and 2 must give something to the other specs (design rule 2) |
 | A mana talent in each tree (Iron Creed, Righteous Fury, Seal of Fury) | Reverence in row 2 does the same with one talent. Holy can then use the Righteous Fury and Seal of Fury versions |
 | Survive crushing blows with more armor, health and a stronger Seal of Fury absorb | Healers still receive the damage spikes. C6 removes the crushing blows |
 | Holy Shield or Seal of Fury changes crushing blows into normal hits | It goes around the attack table |
@@ -51,14 +51,13 @@ We examined these ideas and rejected them. They are not proposals.
 | A Holy aura that gives the Blessing of Light bonus | Aura slots have the same limit as Blessing slots. It competes with Devotion Aura and Concentration Aura |
 | A second Holy talent: +6/12/18% to Holy Light and Flash of Light | The same value as C19, but two talents for one bonus |
 | Healing Light at 35% (not 30%) | Not proposed now. At 35%, the Paladin is first on one tank by 1–9%. At 30%, it is about equal to the Druid (−3% to +5%) (see Analysis, Healing, part 6, and W14) |
-| Guardian's Favor to Protection row 1 | Not necessary. With M8, a Holy PvP build has the points for Redoubt and Guardian's Favor. In row 1, all specs take a 2-point Guardian's Favor |
 | Sacred Arbiter: Holy Strike always triggers Seal of Command (first version of C16) | +13% Retribution damage against the beta. Retribution is then above Fury Warrior at fresh level 60 (see Analysis, Damage) |
 | Sacred Arbiter: Holy Strike triggers Seal of Command by chance | A talent that gives only a chance to trigger is weak design. C16 puts the usual Seal rule in the spell |
 | Holy Strike triggers the active Seal, but not the Twist of Light Echo | One more rule to learn. Holy Strike is a melee attack, and the Echo applies to melee attacks |
 | Sacred Arbiter at +10% (with C16) | Only about 1% less damage (4 DPS) at fresh level 60. From Molten Core, Retribution is already below Fury. The beta talent needs no change |
 | M7: Repentance to row 4 (15 points), Sacred Arbiter to row 5 | Not necessary. C16 does not change Sacred Arbiter, so it stays in row 4. Repentance stays a 20-point talent |
 | Spiritual Focus in row 4 | A Holy healer then needs 3 points of filler in rows 1–3. HB2 (34/12/5) is not possible. In row 2, the healer needs 2 points of filler (see Analysis, Builds, part 7) |
-| Unyielding Faith in row 2, column 3 (M3) | Spiritual Focus now uses row 2, column 3. Unyielding Faith stays in its beta position (row 2, column 4) |
+| Unyielding Faith in row 2, column 3 (M3) | Spiritual Focus now uses row 2, column 3. C8 moves Unyielding Faith to row 1, column 4 |
 | A new Improved Lay on Hands talent for the drain | Forever removes this talent. A talent only to remove a penalty is a tax. C22 uses Guardian's Favor |
 | Lay on Hands with no drain | This is the change of patch 3.0.2 (Wrath of the Lich King), a later expansion. A full heal with no cost each 20 min is too strong |
 | Lay on Hands with a fixed cost (for example 30% of maximum mana) | At low mana, you cannot cast it. A drain of a % of the remaining mana keeps this use |
@@ -66,3 +65,10 @@ We examined these ideas and rejected them. They are not proposals.
 | Holy Shock costs 50% less (now) | The Paladin is then 0% to +7% against the Shaman in raids, and first on one tank by 1–8% (see Analysis, Healing, part 6) |
 | Light's Vigil heals ×1.25 or ×2 | With the proposals, the Paladin is then −2% to +31% against the Shaman in raids. Not necessary: the raid healing is already at the level of the Shaman (see Analysis, Healing, part 6) |
 | C20: Illumination returns 75% of the base cost (beta: 50%) | Not necessary in raids: with 50% and the other proposals, the Paladin is about equal to the Shaman (−4% to +2%). At 75%, the Paladin is first on one tank by 4–10%. See W14. If Illumination returns mana for each critical heal of Light's Vigil, 75% puts the Paladin 54–79% above the Shaman (see Analysis, Healing, part 6) |
+| Divine Strength in Protection row 1 (first version of C8) | A tank receives less than 1 threat per sec for each point. Retribution receives about 1.4 DPS for each point (see Analysis, Builds). C8 now removes the talent |
+| Improved Seals with 5 ranks, 3/6/9/12/15% (first version of C5) | With Unyielding Faith in Holy row 1 (C8), the 3 beta ranks fill the row |
+| Divine Strength in Retribution row 3 | About 1.4 DPS for each point. A weak 5-point talent only to fill the tree |
+| Sacred Duty with Precision in Protection row 1 | Row 3 loses its save talent, and all PvP builds take Divine Shield −60 sec for 2 points |
+| Unyielding Faith with Precision in Protection row 1 | It works, but C8 uses Unyielding Faith in Holy row 1 |
+| Precision and Redoubt only in Protection row 1 (8 points) | Each row 1 of the other classes has 10 points or more. Holy and Retribution then pay for points that they do not use |
+| Vindication with 5 ranks and the same maximum (+3%) | More points with no more value. +1/2/3/4/5% makes the 5 points useful |

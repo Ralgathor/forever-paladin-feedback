@@ -1,9 +1,10 @@
 # PvP burst check
 
-This check is for C11 (Reckoning). The build is 0/26/25 with a two-handed weapon. It is the build p-5532000210215-50005031211331 in the calculator:
+This check is for C11 (Reckoning). The build is 0/26/25 with a two-handed weapon. It is the build v2p-532300210215002-5005031211331 in the calculator (RB5):
 
 - Protection 26: Reckoning 5/5, Swift Judgement, Improved Hammer of Justice 2/3.
 - Retribution 25: Seal of Command, Sacred Arbiter, Two-Handed Weapon Specialization 3/3, Vengeance 3/3, Conviction 5/5.
+- C8 removes Divine Strength from this build. The model uses a fixed 300 damage for each swing. Thus, the values do not change. Without +10% Strength, the real burst is about 2% lower.
 
 The values are estimates, not a simulation.
 

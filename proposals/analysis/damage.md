@@ -13,10 +13,11 @@ This section compares the single-target damage of Retribution with the other dam
 
 ## 1. Build and gear
 
-- **Build.** 12/8/31: p00050030200002-503-03225031201330321 in the calculator.
-  - Holy 12: Improved Seals 5/5, Reverence 3/3, Infusion of Light 2/2, Consecrated Ground 2/2.
-  - Protection 8: Divine Strength 5/5, Precision 3/3.
-  - Retribution 31: Conviction 5/5, Benediction 3/3 (C21), Improved Judgement 2/2, Holy Conduit 2/2, Sanctified Judgement 3/3, Seal of Command, Pursuit of Justice 2/2, Two-Handed Weapon Specialization 3/3, Sacred Arbiter, Vengeance 3/3, Champion of the Light 3/3, Instrument of Law 2/2, Twist of Light.
+- **Build.** 12/7/32: v2p00032030200002-032000000000002-0325531001330321 in the calculator (RB2).
+  - Holy 12: Improved Seals 3/3, Unyielding Faith 2/2, Reverence 3/3, Infusion of Light 2/2, Consecrated Ground 2/2.
+  - Protection 7: Precision 3/3, Guardian's Favor 2/2, Holy Conduit 2/2 (C8).
+  - Retribution 32: Conviction 5/5, Benediction 3/3 (C21), Improved Judgement 2/2, Vindication 5/5 (C8), Sanctified Judgement 3/3, Seal of Command, Two-Handed Weapon Specialization 3/3, Sacred Arbiter, Vengeance 3/3, Champion of the Light 3/3, Instrument of Law 2/2, Twist of Light.
+- **C8 and the values.** The tables use the build of version 1, with Divine Strength 5/5 and no Vindication. C8 removes Divine Strength (about −7 DPS) and adds Vindication 5/5 (+5% Attack Power, about +7 DPS with full uptime). The net change is less than 0.5%. Thus, the tables keep their values.
 - **Gear.** A real fresh level 60 profile: crafted items, dungeon items and quest rewards. Without talents and buffs: 283 Strength, 74 Agility, 770 Attack Power, 5.9% critical hit, 5% hit, 254 spell damage, 87 Intellect and 2,537 mana.
 - **Weapon.** Stormcarver (Blacksmithing, item level 63): 155–233 damage, 3.6 sec, +32 spell damage.
 - **With talents and raid buffs.** 1,244 Attack Power, 319 spell damage (Champion of the Light gives 65), 8% hit and 2,866 mana.

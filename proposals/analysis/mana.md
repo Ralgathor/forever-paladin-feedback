@@ -8,6 +8,7 @@ This section compares the mana of the Paladin in the beta and with the proposals
 - The tank gets more mana with better gear. In Naxxramas, the tank gets +29.8 MPS with the proposals.
 - C13 (Shield Specialization once each 2 sec) is necessary. Without C13, a fresh level 60 tank loses about 9 MPS.
 - Consecration uses much mana. Use it against groups of enemies, not all the time.
+- C8 puts Holy Conduit in Protection row 2. With Consecration on cooldown, the mana then lasts 1 min 15 sec at fresh level 60 and about 6.5 min in Naxxramas (part 4).
 - C17 (Twist of Light) fixes the mana of Retribution.
 
 ## 1. Problems in the beta
@@ -52,7 +53,8 @@ This section compares the mana of the Paladin in the beta and with the proposals
 | Consecration rank 5 | 565 mana, each 8 sec |
 
 - Base mana 1,512 is the Classic value. It is not confirmed for Forever.
-- The Retribution dip (10 points: Deflection 5, Holy Conduit 2, Benediction 3) gives Benediction (all costs ×0.91, C21) and Holy Conduit (Consecration ×0.60). The tables use ×0.90 (beta, 5 points). With ×0.91, the values change by less than 1 mana per sec.
+- Holy Conduit (Consecration ×0.60) is in Protection row 2 (C8). In the beta, it is in Retribution row 2.
+- The Retribution dip (8 points: Deflection 5, Benediction 3) gives Benediction (all costs ×0.91, C21). The tables use ×0.90 (beta, 5 points). With ×0.91, the values change by less than 1 mana per sec. The "Retribution dip" rows also include Holy Conduit.
 - Raid buffs are not in the model. Blessing of Wisdom gives 8 MPS. Judgement of Wisdom on the boss gives more.
 
 ## 4. Protection results
@@ -72,6 +74,7 @@ This section compares the mana of the Paladin in the beta and with the proposals
 | --- | --- |
 | Tanking, no Consecration | 41.7 |
 | Tanking, Consecration on cooldown | 112.4 |
+| Tanking, Consecration on cooldown, Holy Conduit (C8) | 84.1 |
 | Tanking, no Consecration, Retribution dip | 37.6 |
 | Tanking, Consecration on cooldown, Retribution dip | 75.7 |
 
@@ -94,6 +97,7 @@ The costs do not change with gear.
 | Case | Fresh level 60, beta | Fresh level 60, proposed | Naxxramas, beta | Naxxramas, proposed |
 | --- | --- | --- | --- | --- |
 | Tanking, Consecration on cooldown | −69.2: 42 sec | −66.8: 43 sec | −54.0: 1 min 30 sec | −41.0: 1 min 59 sec |
+| Tanking, Consecration on cooldown, Holy Conduit (C8) | — | −38.5: 1 min 15 sec | — | −12.6: 6 min 29 sec |
 | Tanking, Consecration on cooldown, Retribution dip | −32.5: 1 min 29 sec | −30.1: 1 min 36 sec | −17.3: 4 min 42 sec | −4.2: 19 min |
 | Not hit, no Consecration | −41.1: 1 min 10 sec | −30.9: 1 min 33 sec | −39.3: 2 min 4 sec | −29.1: 2 min 48 sec |
 | Not hit, Consecration on cooldown | −111.8: 26 sec | −101.5: 29 sec | −110.0: 45 sec | −99.7: 49 sec |
@@ -112,7 +116,8 @@ One target. Sanctified Judgement returns 126 mana (60% of the base cost of the S
 - **The tank gets more mana with gear.** Shield Specialization returns 4% of maximum mana for each block. More mana gives a larger return.
 - **At fresh level 60, the tank has almost no extra mana.** It gets +3.9 MPS with the proposals. Without C13, it loses about 9 MPS.
 - **In raids, the tank does not lose mana without Consecration.** It gets +10 to +30 MPS (beta: +5 to +17).
-- **Consecration on cooldown uses all mana quickly:** in 43 sec at fresh level 60, in about 2 min in Naxxramas. With the Retribution dip, it lasts 1 min 36 sec to 19 min.
+- **Consecration on cooldown uses all mana quickly:** in 43 sec at fresh level 60, in about 2 min in Naxxramas. With Holy Conduit in Protection (C8), it lasts 1 min 15 sec to 6 min 29 sec. With Benediction from the Retribution dip also, it lasts 1 min 36 sec to 19 min.
+- **The Retribution dip for mana is now small.** Benediction saves only about 8 mana per sec with Consecration (W4).
 - **Reverence helps when the Paladin is not hit.** It gives 20–45 sec more without Consecration.
 - **Flatter gear gives less mana.** In late raids, the tank gets +14 to +20 MPS. C13 is then more important.
 - **Intellect is a tank stat for the Paladin.** It gives more mana. It also increases the Shield Specialization return.
