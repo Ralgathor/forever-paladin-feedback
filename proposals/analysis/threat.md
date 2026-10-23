@@ -92,11 +92,11 @@ TPS on one boss. The percentage is the Paladin TPS divided by the Druid TPS.
 
 | Tier | Warrior | Druid | Paladin, beta | Paladin, proposals without C14 | **Paladin, all proposals** | All proposals + Consecration |
 | --- | --- | --- | --- | --- | --- | --- |
-| Fresh level 60 | 505 | 435 | 370 (86%) | 420 (97%) | **460 (106%)** | 565 |
-| Pre-raid best in slot | 555 | 495 | 410 (83%) | 470 (95%) | **550 (111%)** | 660 |
+| Fresh level 60 | 500 | 435 | 370 (86%) | 420 (97%) | **460 (106%)** | 565 |
+| Pre-raid best in slot | 560 | 495 | 410 (83%) | 470 (95%) | **550 (111%)** | 660 |
 | Molten Core | 625 | 565 | 445 (78%) | 510 (90%) | **620 (109%)** | 730 |
-| Blackwing Lair | 710 | 660 | 485 (73%) | 555 (84%) | **690 (105%)** | 810 |
-| Naxxramas | 815 | 730 | 515 (71%) | 595 (81%) | **765 (105%)** | 890 |
+| Blackwing Lair | 715 | 660 | 485 (73%) | 555 (84%) | **690 (105%)** | 810 |
+| Naxxramas | 820 | 730 | 515 (71%) | 595 (81%) | **765 (105%)** | 890 |
 
 - All Paladin columns include Judgement of the Crusader. Without it (a raid that needs the beta tank's Judgement for Light or Wisdom), subtract about 50 TPS from the beta column.
 - With all proposals, the Paladin is between the Druid and the Warrior at all tiers.
@@ -121,11 +121,11 @@ Paladin with all proposals. The first value is the percentage of the Druid TPS. 
 | Fresh level 60 | 106% (91%) | 106% (91%) | 106% (91%) |
 | Pre-raid best in slot | 111% (99%) | 111% (99%) | 111% (99%) |
 | Molten Core | 109% (99%) | 106% (96%) | 110% (99%) |
-| Blackwing Lair | 105% (97%) | 99% (91%) | 108% (98%) |
-| Naxxramas | 105% (94%) | 96% (85%) | 104% (96%) |
+| Blackwing Lair | 105% (97%) | 99% (90%) | 108% (98%) |
+| Naxxramas | 105% (93%) | 96% (84%) | 104% (95%) |
 | Naxxramas, without C14 | 81% | 77% | 84% |
 
-- C14 at 200% is correct for all three cases. At 150%, the Paladin falls to 91% of the Druid if boss hits continue to increase. At 300%, the Paladin has more threat than the Warrior if all values are flat (105%).
+- C14 at 200% is correct for all three cases. At 150%, the Paladin falls to 91% of the Druid if boss hits continue to increase. At 300%, the Paladin has more threat than the Warrior if all values are flat (104%).
 - Without C14, the Paladin falls behind in all cases. Thus, C14 is more important with flatter gear.
 - The weakest case is flatter gear with boss hits that continue to increase. The Warrior and the Druid still receive more rage from larger hits. Monitor the block value of each gear tier.
 - Mana: if maximum mana increases more slowly (3,650, 3,900 and 4,150), tanking without Consecration gives +14, +17 and +20 mana per sec. C13 is more important.
@@ -188,14 +188,14 @@ Other options were examined and rejected. See Withdrawn ideas.
 
 - Defensive Stance: ×1.3 threat, −10% damage. Defiance 3/3: ×1.15 threat.
 - One-Handed Weapon Specialization: +10% damage. Improved Revenge 3/3.
-- Revenge: threat = damage × 2.25. Damage includes 28% of Attack Power.
+- Revenge: threat = damage × 2.25. Damage includes 28% of Attack Power (player sheet, see Sources).
 - Shield Slam: 640–670 damage + 50 block value. Threat = damage.
 - Heroic Strike rank 9: threat = damage + about 145.
-- 5 rage for each block, dodge and parry.
-- Extra rage goes to Sunder Armor (about 225 threat before Defensive Stance).
+- 5 rage for each block, dodge and parry: 25 threat (player sheet, see Sources).
+- Extra rage goes to Sunder Armor: 199 threat + 5% of Attack Power (rank 5), before Defensive Stance. The player sheet gives rank 1 (35) and rank 2 (76). Rank 5 uses +41 for each rank.
 - Shield Block on cooldown: 10 rage each 5 sec (see Crushing blows).
 - Rage costs: Shield Slam 20, Revenge 5, Sunder Armor 15, Heroic Strike 15 (+138 damage).
-- Revenge base damage: 336. Forever data is not known (Classic rank 6: 81–99). The script fits this value.
+- Revenge base damage: 337. Forever data is not known (Classic rank 6: 81–99). The script fits this value.
 
 **Druid**
 

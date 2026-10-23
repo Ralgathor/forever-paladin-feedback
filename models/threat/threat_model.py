@@ -164,10 +164,11 @@ def rage_taken(g):
 
 WAR_STANCE = 1.3 * 1.15                  # Defensive Stance x Defiance 3/3
 WAR = dict(dmg=0.9 * 1.10,               # Defensive Stance -10% damage, One-Handed Weapon Specialization +10%
-           revenge_base=336,             # fitted to the part 1 table (Classic rank 6: 81-99). With 28% of Attack Power
+           revenge_base=337,             # fitted to the part 1 table (Classic rank 6: 81-99). With 28% of Attack Power
            revenge_ap=0.28, revenge_cd=5, revenge_cost=5,
            slam=655 + 50, slam_cd=6, slam_cost=20,       # 640-670 + 50 block value; not OHWS
-           sunder=225, sunder_cost=15, hs_bonus=138, hs_threat=145, hs_cost=15, avoid_rage=5,
+           sunder=35 + 41 * 4, sunder_ap=0.05, sunder_cost=15,   # player sheet: rank 1 35, rank 2 76 (+41 for each rank) + 5% AP
+           hs_bonus=138, hs_threat=145, hs_cost=15, avoid_rage=5,
            block_cost=10, block_cd=5)      # Shield Block on cooldown (Analysis, Crushing blows), not on the global cooldown
 
 def warrior(g, slam_mult=1.0, detail=False):
@@ -191,7 +192,7 @@ def warrior(g, slam_mult=1.0, detail=False):
     src["Heroic Strike"] = ((g.weapon() + w["hs_bonus"]) * phys * f_spec + w["hs_threat"] * land_s) * rate * hs
     src["Shield Slam"] = w["slam"] * (1 - dr) * 0.9 * f_spec * slam_mult / w["slam_cd"]
     src["Revenge"] = (w["revenge_base"] + w["revenge_ap"] * g.ap) * phys * f_spec * 2.25 / w["revenge_cd"]
-    src["Sunder Armor"] = w["sunder"] * land_s * sunders
+    src["Sunder Armor"] = (w["sunder"] + w["sunder_ap"] * g.ap) * land_s * sunders
     src["Rage"] = RAGE_THREAT * (taken + rate * swing_rage * (1 - hs))
     src = {k: v * WAR_STANCE for k, v in src.items()}
     total = sum(src.values())
