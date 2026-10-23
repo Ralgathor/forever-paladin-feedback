@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 21 changes (C1–C19, C21 and C22) and 6 moves (M1, M2, M4–M6 and M8) for the Holy, Protection and Retribution trees. Three changes are new talents.
+- **Proposals:** 21 changes (C1–C19, C21 and C22) and 5 moves (M1, M4–M6 and M8) for the Holy, Protection and Retribution trees. Three changes are new talents.
 - **Talent calculator:** you can try the proposals and compare them with the beta trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
 - **Builds:** the best builds for each spec and role (raid, dungeon, PvP), with calculator codes. Also the builds that use a different tree for a role.
@@ -12,7 +12,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 ## IDs
 
 - **C (change):** the proposal changes what a talent does, adds a talent or removes a talent. C16, C18 and C19 change baseline spells.
-- **M (move):** the proposal moves a talent to a different row or column. The talent text does not change.
+- **M (move):** the proposal moves a talent to a different row. The talent text does not change.
 
 ## Changes and moves
 
@@ -21,10 +21,9 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C1 Reverence:** 17/33/50% mana regeneration while casting (beta: 10/20/30%). It moves from row 3 to row 2. Protection and Retribution can get it with 8 Holy points.
 - **C2 Lingering Light (new):** a critical heal adds a heal over time of 10/20% of the heal.
 - **C3 Infusion of Light:** all Holy Shock, Flash of Light and Holy Strike hits make the next Holy Light faster (beta: critical hits only). It moves from row 4 to row 2.
-- **C4 Healing Light:** 3 ranks, 10/20/30% (beta: 4/8/12%), with C19. It moves from row 2 to row 6, column 3. Holy Power moves to column 1.
+- **C4 Healing Light:** 3 ranks, 10/20/30% (beta: 4/8/12%), with C19. It moves from row 2 to row 6.
 - **C5 Improved Seals:** 5 ranks, 3/6/9/12/15% (beta: 3 ranks). It moves from row 2 to row 1 and replaces Divine Strength.
 - **M1 Consecrated Ground:** row 5 → row 3.
-- **M2 Spiritual Focus:** row 2, column 2 → column 3 (Reverence takes column 2). It stays in row 2, so a Holy healer needs less filler. Unyielding Faith stays in its beta place (row 2, column 4).
 
 **Protection**
 

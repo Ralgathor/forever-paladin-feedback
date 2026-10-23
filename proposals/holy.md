@@ -7,7 +7,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 | Row (points necessary) | Talents | Points in the row |
 | --- | --- | --- |
 | 1 (0) | Improved Seals (C5), Divine Intellect | 10 |
-| 2 (5) | Infusion of Light (C3), Reverence (C1), Spiritual Focus (M2), Unyielding Faith | 9 |
+| 2 (5) | Infusion of Light (C3), Reverence (C1), Spiritual Focus, Unyielding Faith | 9 |
 | 3 (10) | Voice of Truth, Purifying Power, Consecrated Ground (M1) | 5 |
 | 4 (15) | Illumination, Divine Favor | 6 |
 | 5 (20) | Divine Precision, Holy Shock, Lingering Light (C2) | 6 |
@@ -66,7 +66,6 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Proposed text.** "Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 10/20/30%."
 - **Change.** 3 ranks: 10/20/30% (beta: 4/8/12%). The maximum increases from 12% to 30%, because C19 removes Blessing of Light. The 18% difference replaces the Blessing of Light bonus (see C19).
 - **Why row 6.** The healing bonus is now at 25 points, as Spiritual Healing (Priest) and Purification (Shaman) are. A Holy Paladin with 28 points in Retribution has only 23 points for Holy. This Paladin cannot get Healing Light.
-- **Column.** Healing Light goes to column 3. Holy Power moves from column 3 to column 1 in the same row. Its text does not change.
 - **Deep Holy** keeps Healing Light, Holy Power, Lingering Light and Light's Vigil. Thus, a deep Holy build stays clearly better for healing.
 - **Cost.** A Holy Paladin who levels gets the full bonus at level 37, not at level 17. Blessing of Light rank 1 came at level 40.
 
@@ -80,8 +79,3 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 
 - Row 3 opens at level 20. Paladins learn Consecration at level 20.
 - Protection gets it with 12 Holy points (beta: 22) for more area threat.
-
-## M2. Spiritual Focus: row 2, column 2 → column 3
-
-- Reverence (C1) goes to row 2, column 2. Thus, Spiritual Focus moves one column to the right. It stays in row 2, as in the beta.
-- Only healers need resistance to spell pushback. In row 2, it helps a Holy healer to open rows 4 and 6 with less filler (see Analysis, Builds, part 7).
