@@ -23,7 +23,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 
 - **Proposed text.** "Allows 17/33/50% of your Mana regeneration to continue while casting."
 - **Model.** Meditation (Priest), Reflection (Druid) and Mindfulness (Shaman) give 50% with 3 ranks.
-- **Illumination is not sufficient.** Other healers have a mana return in addition to their 50% (Litany of Light, Water Shield, Mana Tide Totem). Forever also decreased Illumination to 50% of the base cost. Illumination stays at 50% (we withdrew C20).
+- **Illumination is not sufficient.** Other healers have a mana return in addition to their 50% (Litany of Light, Water Shield, Mana Tide Totem). Forever also decreased Illumination to 50% of the base cost.
 - **Row 2.** In row 2, Reverence is also the mana talent for Protection and Retribution. They get it with 8 Holy points (see Mana).
 - **If it is too strong:** use 13/27/40%.
 
