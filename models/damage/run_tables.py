@@ -26,8 +26,9 @@ def consecration_mana(tier, fight, dt=0.1):
     income = 10.3 + 8 + MP5[tier] / 5
     mana, t, dmg, zero = MANA[tier], 0.0, 0.0, None
     while t < fight:
-        c = cons if mana > 0 else 0.0
-        mana += (income - other - (how if t >= fight * (1 - M.EXECUTE) else 0) - c) * dt
+        rest = income - other - (how if t >= fight * (1 - M.EXECUTE) else 0)
+        c = min(cons, max(0.0, mana / dt + rest))       # at zero mana: Consecration only from the mana that returns
+        mana += (rest - c) * dt
         if mana <= 0 and zero is None:
             zero = t
         mana = max(mana, 0.0)
