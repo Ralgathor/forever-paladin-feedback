@@ -9,9 +9,10 @@ RET_BETA_SIM = 847
 def pct(a, b):
     return f"{a / b:.0%}"
 
-# Mana of Retribution with Consecration on cooldown (Analysis, Mana, parts 3 and 5). Holy Conduit (C8): Consecration
-# x0.60. Twist of Light: Seals x0.80. Sanctified Judgement returns 126 mana. Hammer of Wrath rank 3: 295 mana (Classic
-# value), x0.60, in the execute phase. Income: Reverence 50% at 130 Spirit (10.3), Blessing of Wisdom (8), mp5.
+# Mana of Retribution with Consecration on cooldown (Analysis, Mana, parts 3 and 5). Costs from wowsims Forever.
+# Holy Conduit (C8): Consecration (565) x0.60. Twist of Light: Seal of Command (210) x0.80. Sanctified Judgement
+# returns 60% of the base cost x (2 - the cost multiplier): 210 x 1.2 x 0.6 = 151. Hammer of Wrath rank 3: 425 mana,
+# x0.60, in the execute phase. Income: Reverence 50% at 130 Spirit (10.3), Blessing of Wisdom (8), mp5.
 MANA = (2897, 3400, 3900, 4400, 4900)
 MP5 = (3, 5, 7, 9, 12)
 
@@ -21,8 +22,8 @@ def consecration_mana(tier, fight, dt=0.1):
     g = gear(tier)
     base, full = retribution(g), retribution(g, extra="consecration")
     cons = 565 * 0.60 / 8
-    other = 210 * 0.80 / 10 + 91 / 8 - 126 / 8 + 20 / 10
-    how = 295 * 0.60 / 6
+    other = 210 * 0.80 / 10 + 91 / 8 - 210 * 1.2 * 0.6 / 8 + 20 / 10
+    how = 425 * 0.60 / 6
     income = 10.3 + 8 + MP5[tier] / 5
     mana, t, dmg, zero = MANA[tier], 0.0, 0.0, None
     while t < fight:

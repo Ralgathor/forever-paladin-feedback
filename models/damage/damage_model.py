@@ -144,8 +144,10 @@ def retribution(g, version="c16", sa=1.20, crusader=False, ths=THWS, fight=FIGHT
     if extra == "exorcism":   # rank 6: 475-529 Holy damage, 15 sec cooldown, spell (critical hit x1.5)
         src["Exorcism"] = (502 + 0.429 * sd) * V * (1 + 0.5 * crit_s) / 15
     if extra == "consecration":   # Consecrated Ground: +10% Holy damage on the target. 15% of the ticks miss.
+        # Forever rank 5 (wowsims Forever, spell 1280349): 8 ticks of 12 + 27 Holy damage (the 27 on the first
+        # 4 enemies), 4.2% of spell damage for each tick.
         holy = sum(v for k, v in src.items() if k != "Auto attacks")
-        src["Consecration"] = (384 + 0.336 * sd) * 0.85 * V * 1.1 / 8
+        src["Consecration"] = (312 + 0.336 * sd) * 0.85 * V * 1.1 / 8
         src["Consecrated Ground"] = holy * 0.10
     total = sum(src.values())
     return (total, src, V) if detail else total
