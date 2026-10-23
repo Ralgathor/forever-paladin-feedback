@@ -155,6 +155,8 @@ Use these steps only if tests show that Protection threat is too low with C14. T
 | Iron Creed: Holy Strike threat +20/40/60/80/100% (not +5/10/15/20/25%) | +30 to +50 TPS at each tier. Threat only, no PvP effect |
 | A shield attack in Protection row 4: 6 sec cooldown, weapon damage + 100 Holy damage, ×2 threat | +170 to +200 TPS. Adds a button. The new Druid attack Primal Bite is the precedent |
 
+Other options were examined and rejected. See Withdrawn ideas.
+
 ## 6. Inputs
 
 **All tanks**

@@ -64,14 +64,16 @@ Same build and gear, raid buffs, 2 min fight. The beta build has the same damage
 | --- | --- | --- | --- |
 | Beta: a Seal change before each swing | 336 | — | −39.6 per sec: zero after 72 sec |
 | Beta: Seal of Command only, no Seal changes | 301 | −10% | Lasts |
+| C16, first version: Holy Strike always triggers Seal of Command, no damage bonus | 379 | +13% | Lasts |
 | **C16: Holy Strike triggers your Seal and Echo, Sacred Arbiter as in the beta (+20%)** | **370** | **+10%** | **Lasts** |
 | C16: Holy Strike triggers your Seal and Echo, Sacred Arbiter +10% | 366 | +9% | Lasts |
 | C16: Holy Strike triggers your Seal and Echo, Sacred Arbiter +0% | 361 | +8% | Lasts |
+| C16: only Seal of Command, by chance, Sacred Arbiter +0% | 349 | +4% | Lasts |
 
 - **C16 gives the increase.** Holy Strike gives about 34 DPS more than in the beta. Seal of Command triggers on 42% of Holy Strikes, and Seal of Righteousness triggers on all Holy Strikes.
 - **C17 does not add damage.** It gives the damage of the beta Seal swap for the full fight. In the beta, the mana is zero after 72 sec. Then the Paladin can use only Seal of Command (301 DPS).
-- **C16 has one rule for all melee attacks.** It keeps Sacred Arbiter as in the beta.
-- **Sacred Arbiter at +10% is the tuning step of W15.** It gives only 4 DPS (1%) less. From Molten Core, Retribution is already below Fury (part 6).
+- **The C16 value is a choice.** The first version (+13%) puts Retribution above Fury Warrior (see part 5). The version in this document has one rule for all melee attacks and keeps Sacred Arbiter as in the beta. It is 2% less.
+- **Sacred Arbiter at +10% changes little.** It gives only 4 DPS (1%) less. From Molten Core, Retribution is already below Fury (part 6).
 
 ## 5. Comparison with the other damage classes
 
@@ -82,6 +84,7 @@ The pure average is the best spec of each pure damage class: Warrior 929, Rogue 
 | Spec | DPS | Against the pure average (893) |
 | --- | --- | --- |
 | Survival Hunter (melee weaving) | 1,088 | 122% |
+| Retribution, C16 first version | About 957 | 107% |
 | **Retribution, all proposals** | **About 934** | **105%** |
 | Fury Warrior | 929 | 104% |
 | Demonology Warlock | 885 | 99% |
