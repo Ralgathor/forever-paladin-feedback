@@ -31,7 +31,7 @@ We examined these ideas and rejected them. They are not proposals.
 | Reckoning at 40% chance, once each 1.5 sec | Not sufficient charges on a boss (about 1.6 extra attacks each 10 sec) |
 | Reckoning at 100% chance, once each 1.5 sec | The charges stay at the maximum of 4. More than half of the procs are lost. You cannot choose when to keep charges |
 | Exchange Reckoning (row 5) and Iron Creed (row 6) | Reckoning then costs 25 points, but this does not stop a 0/30/21 hybrid. The 2-charge limit does the job without a move |
-| Iron Creed without the Holy Strike threat bonus | Simpler text, but about 10 TPS less |
+| Iron Creed without the Holy Strike threat bonus | Simpler text, but about 12 TPS less |
 | Aura Mastery or another talent that improves an aura | A talent that improves a buff, with low value (about −4% damage taken at 3 points). Fury's Reach (C12) gives the utility |
 | Sacred Arbiter with +30% Holy Strike damage | About +8 damage per sec: too small for a 15-point talent |
 | Two Seals active at the same time (not C17) | Fewer global cooldowns, but no Seal swaps. The talent is about Seal swaps |
@@ -41,7 +41,7 @@ We examined these ideas and rejected them. They are not proposals.
 | Righteous Fury threat ×2.2 or ×2.5 (not ×1.9) | Flat: too strong early or too weak late. It also increases Consecration on all targets. It changes a baseline spell that Blizzard changed on 16 October |
 | Holy Shield threat bonus +50% or +100% (not +20%) | Flat: +100% is better than the Warrior at fresh level 60. +50% is too weak in late raids |
 | Iron Creed: +25% threat on all Holy damage | Flat. It works as an improved Righteous Fury. It does not increase with content |
-| Righteous Fury also increases physical damage threat (×1.5) with a shield | Too weak in late raids (88% of the Druid). It changes Righteous Fury for all specs |
+| Righteous Fury also increases physical damage threat (×1.5) with a shield | Too weak in late raids (91% of the Druid). It changes Righteous Fury for all specs |
 | Righteous Defense: area taunt (10 yards, 6 sec, 10 min cooldown, as Challenging Shout) | An area taunt with a 10 min cooldown gives little. Shoulder the Burden (C10) saves an ally without a taunt |
 | Righteous Defense: Blessing of Protection also makes up to 3 enemies attack you | Only 3 enemies, and only when Blessing of Protection is used. Shoulder the Burden (C10) works on all enemies |
 | A shield interrupt in Protection | Paladins have no interrupt by design |

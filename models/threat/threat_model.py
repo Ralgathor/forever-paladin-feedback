@@ -7,7 +7,7 @@
 # Warrior and Druid threat comes from their attacks and from rage: each rage point gives 5 threat.
 # Their rage comes partly from damage taken. Thus, their threat increases when the boss hits harder.
 #
-# Two values are calibrated to the part 1 table, because Forever data for them is not known:
+# Two values are fitted to the part 1 table (least squares), because Forever data for them is not known:
 # the Revenge base damage (Warrior) and the Primal Bite damage (Druid). See WAR and DRU.
 
 # ---------------------------------------------------------------- fight (part 6)
@@ -33,7 +33,8 @@ def table(hit, crit, auto):
 
 # ---------------------------------------------------------------- gear (parts 1, 2 and 3)
 class Gear:
-    """druid: (damage for each swing, speed) in Bear Form. None: the Druid uses the weapon of the Paladin (part 2)."""
+    """druid: (damage for each swing, speed) in Bear Form. None: the damage per sec of the Paladin weapon and
+    Attack Power, with the Bear Form speed of 2.5 sec (part 2)."""
     def __init__(s, name, sp, ap, wdps, wspeed, bv, mana, boss_hit, hit=0.03, crit=0.06, druid=None, armor=BOSS_ARMOR):
         s.name, s.sp, s.ap, s.wdps, s.wspeed, s.bv, s.mana, s.boss_hit = name, sp, ap, wdps, wspeed, bv, mana, boss_hit
         s.hit, s.crit, s.druid, s.armor = hit, crit, druid, armor
@@ -76,53 +77,81 @@ NORM_1H = 2.4               # normalized speed of a one-handed weapon (Holy Stri
 OHWS = (0, 0.03, 0.065, 0.10)
 CONS_EVERY = 8              # Consecration on cooldown, as in Analysis, Mana
 
-# Talents. Holy: "is" Improved Seals, "cg" Consecrated Ground. Protection: "prec" Precision, "red" Redoubt,
-# "sj" Swift Judgement, "ohws" One-Handed Weapon Specialization, "reck" Reckoning, "ic" Iron Creed.
-# Retribution: "conv" Conviction. Holy Shield is always taken. Talents with no threat effect are left out.
-PB1 = {"is": 3, "prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 5, "ic": 5, "conv": 3}
+# Talents. Holy: "is" Improved Seals, "cg" Consecrated Ground, "hp" Holy Power. Protection: "prec" Precision,
+# "red" Redoubt, "sj" Swift Judgement, "ohws" One-Handed Weapon Specialization, "reck" Reckoning, "ic" Iron Creed,
+# "hsh" Holy Shield. Retribution: "conv" Conviction, "vind" Vindication. Talents with no threat effect are left out.
+PB1 = {"is": 3, "prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 5, "ic": 5, "hsh": 1, "conv": 3}
 PB2 = dict(PB1, conv=5)
-PB3 = {"is": 3, "cg": 2, "prec": 3, "red": 5, "sj": 1, "reck": 5, "ic": 5}
+PB3 = {"is": 3, "cg": 2, "prec": 3, "red": 5, "sj": 1, "reck": 5, "ic": 5, "hsh": 1}
 PB4 = dict(PB3)             # PB4 differs from PB3 only in Anticipation and Fury's Reach
 PB_BOTH = dict(PB3, ohws=3) # "One build can have both" (Analysis, Builds, part 3)
 BUILDS = (("PB1", PB1), ("PB2", PB2), ("PB3", PB3), ("PB4", PB4), ("PB3 + One-Handed Weapon Specialization", PB_BOTH))
+# Analysis, Builds, parts 5 and 6: tanks with no Holy Shield
+HOLY_SHOCK_TANK = {"is": 3, "cg": 2, "hp": 5, "prec": 3, "red": 5, "sj": 1, "ohws": 3}             # 30/21/0
+HEALING_TANK = {"prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 1}                                # 29/22/0
 
-def paladin(g, tal=PB1, proposed=True, c14=True, crusader=True, consecration=False, c16=False, detail=False):
-    """TPS of a Protection Paladin. proposed: C6, C11 and C15 (C14 has its own switch).
-    consecration: Consecration on cooldown. c16: Holy Strike triggers Seal of Fury (not in the tables)."""
+def paladin(g, tal=PB1, proposed=True, c14=2.0, crusader=True, consecration=False, c16=False, ic_rank=0.05,
+            phys_mult=1.0, holy_shock=False, ret_aura=False, shield_attack=False, casting=0.0, heal=0.0,
+            rf_heals=False, detail=False):
+    """TPS of a Protection Paladin on one boss.
+    proposed: C6, C11 and C15. c14: block value multiplier of C14 (0 = no C14, the beta).
+    consecration: Consecration on cooldown. c16: Holy Strike triggers Seal of Fury (not in the tables).
+    ic_rank: Holy Strike threat for each Iron Creed rank. phys_mult: threat of physical damage (withdrawn idea).
+    holy_shock: Holy Shock each 10 sec. ret_aura: Retribution Aura. shield_attack: the shield attack of
+    Threat, part 5. casting: sec of casts each sec (no auto attacks). heal: healing on yourself per sec."""
     t = lambda k: tal.get(k, 0)
     hit = g.hit + 0.01 * t("prec")
     crit = g.crit + 0.01 * t("conv")
-    spell_crit = crit if proposed else 0.0           # C15: Conviction also for spells (Consecration)
+    spell_crit = crit if proposed else 0.0           # C15: Conviction also for spells
     sp = g.sp + (CRUSADER if crusader else 0)
+    ap = g.ap * (1 + 0.01 * t("vind"))               # Vindication: +1-5% Attack Power (full uptime)
+    w = g.but(ap=ap)
     dr = armor_dr(g.armor)
     ohws = 1 + OHWS[t("ohws")]                       # melee, Seals, Judgements, Holy Strike (beta test)
     seals = 1 + 0.05 * t("is")                       # Seals and Judgements
     cg = 1 + 0.05 * t("cg") if consecration else 1.0 # all Holy damage on targets in Consecration (beta test)
-    if t("red") < 5: raise ValueError("the Holy Shield block rate assumes Redoubt 5/5")
-    hs_blocks = (3.0 if proposed else 2.5) / 10      # Holy Shield blocks per sec (C6)
+    # Holy Shield blocks each 10 sec: 3 with C6 and Redoubt 5/5 (beta: 2.5). Redoubt 5/5 gives about 1 of them.
+    hs_blocks = ((2.0 if proposed else 1.5) + t("red") / 5) / 10
     extra = (2.0 if proposed else 1.0) / 10 * t("reck") / 5   # Reckoning extra attacks per sec (C11)
     land_a, f_auto = table(hit, crit, auto=True)
     land_s, f_spec = table(hit, crit, auto=False)
+    swings = (1 - casting) / g.wspeed                # a cast stops the auto attacks
     src = {}
-    # Holy Shield: 221 + 10.7% of spell power (+ 200% of block value, C14) for each block. Not OHWS. No critical hits.
-    src["Holy Shield, base"] = (221 + 0.107 * sp) * cg * RF * HS_THREAT * hs_blocks
-    src["Holy Shield, block value"] = 2 * g.bv * cg * RF * HS_THREAT * hs_blocks if c14 else 0.0
+    if t("hsh"):
+        # Holy Shield: 221 + 10.7% of spell power (+ c14 x block value) for each block. Not OHWS. No critical hits.
+        src["Holy Shield, base"] = (221 + 0.107 * sp) * cg * RF * HS_THREAT * hs_blocks
+        src["Holy Shield, block value"] = c14 * g.bv * cg * RF * HS_THREAT * hs_blocks
     # Judgement of Fury: 153-167 + 42.9%. Melee hit table, critical hit x2. One each 10 sec, Swift Judgement each min.
     jud = (160 + 0.429 * sp) * seals * ohws * cg * f_spec
     src["Judgement of Fury"] = jud * RF * (1 / 10 + t("sj") / 60)
     # Holy Strike: 50% normalized weapon damage (armor) + 81-105 Holy + 21.45%. Its threat is x1.9 in full
-    # (beta test), x1.05 for each Iron Creed rank.
-    hstr = (0.5 * g.weapon(NORM_1H) * (1 - dr) + (93 + 0.2145 * sp) * cg) * ohws * f_spec
-    src["Holy Strike"] = hstr * RF * (1 + 0.05 * t("ic")) / 10
-    # Auto attacks: physical, x1.0. Reckoning extra attacks: Holy Strike releases them (C11), thus no glancing blows.
-    src["Auto attacks"] = g.weapon() * (1 - dr) * ohws * f_auto / g.wspeed
-    src["Reckoning attacks"] = g.weapon() * (1 - dr) * ohws * f_spec * extra
+    # (beta test), and Iron Creed adds ic_rank for each rank.
+    hstr = (0.5 * w.weapon(NORM_1H) * (1 - dr) + (93 + 0.2145 * sp) * cg) * ohws * f_spec
+    src["Holy Strike"] = hstr * RF * (1 + ic_rank * t("ic")) / 10
+    # Auto attacks: physical. Reckoning extra attacks: in the beta, the next swing (glancing blows possible).
+    # With C11, Holy Strike releases them: no glancing blows.
+    src["Auto attacks"] = w.weapon() * (1 - dr) * ohws * f_auto * swings * phys_mult
+    src["Reckoning attacks"] = w.weapon() * (1 - dr) * ohws * (f_spec if proposed else f_auto) * extra * phys_mult
     # Seal of Fury: 10% of spell power for each melee hit. Cannot miss. Critical hit x2 with a separate roll.
-    hits = land_a / g.wspeed + land_s * extra + (land_s / 10 if c16 else 0)
+    hits = land_a * swings + (land_s if proposed else land_a) * extra + (land_s / 10 if c16 else 0)
     src["Seal of Fury"] = 0.10 * sp * seals * ohws * cg * (1 + crit) * RF * hits
     if consecration:
         # Rank 5: 384 over 8 sec + 33.6% of spell power. 15% of the ticks miss. Not OHWS. Spell critical hit x1.5.
         src["Consecration"] = (384 + 0.336 * sp) * 0.85 * (1 + 0.5 * spell_crit) * cg * RF / CONS_EVERY
+    if holy_shock:
+        # Rank 4: 334-362 + 42.9%, 10 sec cooldown. Holy Power +1-5% critical hit. Spell hit as Consecration.
+        c = spell_crit + 0.01 * t("hp")
+        src["Holy Shock"] = (348 + 0.429 * sp) * 0.85 * (1 + 0.5 * c) * cg * RF / 10
+    if ret_aura:
+        # 20 Holy damage + 6% of spell power for each boss hit that hits the tank.
+        src["Retribution Aura"] = (20 + 0.06 * sp) * cg * RF * HIT_FRAC / SWING
+    if shield_attack:
+        # Threat, part 5: 6 sec cooldown, weapon damage + 100 Holy damage, x2 threat.
+        dmg = (w.weapon() * (1 - dr) * phys_mult + 100 * cg * RF) * ohws * f_spec
+        src["Shield attack"] = dmg * 2 / 6
+    if heal:
+        # Each point of effective healing gives 0.5 threat (Classic), x1.9 if Righteous Fury applies to heals.
+        src["Healing"] = heal * 0.5 * (RF if rf_heals else 1.0)
     total = sum(src.values())
     return (total, src) if detail else total
 
@@ -135,13 +164,14 @@ def rage_taken(g):
 
 WAR_STANCE = 1.3 * 1.15                  # Defensive Stance x Defiance 3/3
 WAR = dict(dmg=0.9 * 1.10,               # Defensive Stance -10% damage, One-Handed Weapon Specialization +10%
-           revenge_base=255,             # calibrated to part 1 (Classic rank 6: 81-99). With 28% of Attack Power
+           revenge_base=336,             # fitted to the part 1 table (Classic rank 6: 81-99). With 28% of Attack Power
            revenge_ap=0.28, revenge_cd=5, revenge_cost=5,
            slam=655 + 50, slam_cd=6, slam_cost=20,       # 640-670 + 50 block value; not OHWS
-           sunder=225, sunder_cost=15, hs_bonus=138, hs_threat=145, hs_cost=15, avoid_rage=5)
+           sunder=225, sunder_cost=15, hs_bonus=138, hs_threat=145, hs_cost=15, avoid_rage=5,
+           block_cost=10, block_cd=5)      # Shield Block on cooldown (Analysis, Crushing blows), not on the global cooldown
 
 def warrior(g, slam_mult=1.0, detail=False):
-    """Shield Slam and Revenge on cooldown, Sunder Armor in the other global cooldowns, then Heroic Strike
+    """Shield Slam, Revenge and Shield Block on cooldown, Sunder Armor in the other global cooldowns, then Heroic Strike
     with the spare rage. slam_mult: Shield Slam threat multiplier (2.25 is not tested)."""
     w = WAR; dr = armor_dr(g.armor)
     land_a, f_auto = table(g.hit, g.crit, auto=True)
@@ -149,7 +179,8 @@ def warrior(g, slam_mult=1.0, detail=False):
     rate = 1 / g.wspeed
     swing_rage = RAGE_SWING * g.wspeed * (land_a + g.crit)
     taken = rage_taken(g) + w["avoid_rage"] * (1 - HIT_FRAC) / SWING   # 5 rage for each block, dodge and parry
-    spare = taken + rate * swing_rage - w["slam_cost"] / w["slam_cd"] - w["revenge_cost"] / w["revenge_cd"]
+    spare = (taken + rate * swing_rage - w["slam_cost"] / w["slam_cd"] - w["revenge_cost"] / w["revenge_cd"]
+             - w["block_cost"] / w["block_cd"])
     gcd_left = 1 / GCD - 1 / w["slam_cd"] - 1 / w["revenge_cd"]
     sunders = max(0.0, min(gcd_left, spare / w["sunder_cost"]))
     spare -= sunders * w["sunder_cost"]
@@ -169,14 +200,14 @@ def warrior(g, slam_mult=1.0, detail=False):
 BEAR = 1.5                               # Bear Form with Feral Instinct 3/3
 DRU = dict(crit=0.12,                    # Sharpened Claws
            maul_bonus=128 * 1.2, maul_mult=1.75, maul_cost=10,   # Savage Fury 2/2, Ferocity 5/5
-           bite=259,                     # Primal Bite damage: calibrated to part 1
+           bite=266,                     # Primal Bite damage: fitted to the part 1 table
            bite_mult=3.0, bite_cd=6, bite_cost=10,
            swipe=83 * 1.2, swipe_mult=1.75, swipe_cost=15)
 
 def druid(g, detail=False):
     """Primal Bite on cooldown, Maul with the spare rage, then Swipe in the other global cooldowns."""
     d = DRU; dr = armor_dr(g.armor); crit = d["crit"]
-    sw, speed = g.druid or (g.weapon(), g.wspeed)
+    sw, speed = g.druid or ((g.wdps + g.ap / 14) * 2.5, 2.5)
     land_a, f_auto = table(g.hit, crit, auto=True)
     land_s, f_spec = table(g.hit, crit, auto=False)
     rate = 1 / speed
