@@ -7,14 +7,14 @@ These proposals connect the melee attacks of Retribution to its Holy spells. The
 | Row (points necessary) | Talents | Points in the row |
 | --- | --- | --- |
 | 1 (0) | Deflection, Conviction (C15, M8) | 10 |
-| 2 (5) | Improved Judgement, Holy Conduit, Benediction (M8, C21) | 7 |
-| 3 (10) | Vindication, Sanctified Judgement, Seal of Command, Pursuit of Justice | 9 |
+| 2 (5) | Improved Judgement, Vindication (C8), Benediction (M8, C21) | 10 |
+| 3 (10) | Pursuit of Justice, Sanctified Judgement, Seal of Command | 6 |
 | 4 (15) | Eye for an Eye, Sacred Arbiter, Two-Handed Weapon Specialization (M6) | 6 |
 | 5 (20) | Vengeance, Repentance | 4 |
 | 6 (25) | Champion of the Light, Instrument of Law | 5 |
 | 7 (30) | Twist of Light (C17) | 1 |
 
-Retribution has 42 points (beta: 44).
+Retribution has 42 points (beta: 44). C8 moves Holy Conduit to Protection row 2. Vindication goes to row 2 with 5 ranks (see Protection, C8).
 
 ## C15. Conviction: attacks and spells
 
@@ -30,7 +30,7 @@ Retribution has 42 points (beta: 44).
 - **Why the trigger is in the spell.** Holy Strike uses the usual Seal rule. Thus, one rule is true for all melee attacks, with no exceptions.
 - **Value.** Retribution gets +10% DPS against the beta (see Analysis, Damage).
 - **Model.** Stormstrike (Shaman) makes the weapon strike the core of Enhancement. Holy Strike with your Seals does the same for Retribution.
-- **Protection.** Seal of Fury on each Holy Strike gives about +10 TPS. The Threat tables do not include it.
+- **Protection.** Seal of Fury on each Holy Strike gives about +8 TPS. The Threat tables do not include it.
 - **Seal of Justice.** In the beta, Holy Strike already triggers Seal of Justice and its stun chance. C16 does not change this.
 - **Tuning.** If Retribution does more damage than the pure damage classes in raids, decrease the Sacred Arbiter bonus first: +20% → +10% (see Watch list, W15).
 
@@ -74,8 +74,8 @@ Retribution has 42 points (beta: 44).
 | Dip | Beta ranks | C21 |
 | --- | --- | --- |
 | Holy PvP build (Conviction, Benediction, Redoubt, Guardian's Favor) | 35/7/9: Benediction 4/5 (8%) | 36/7/8: Benediction 3/3 (9%), 1 more point for Holy |
-| Protection Consecration dip (Deflection 5, Holy Conduit 2, Benediction) | 12 points (10%) | 10 points (9%) |
+| Protection mana dip (Deflection 5, Benediction) | 10 points (10%) | 8 points (9%) |
 | Retribution with 3 points in Benediction | 6% | 9% |
 
 - **Mana.** Retribution spends about 1 mana per sec less (see Analysis, Damage). For a full investment, Holy Shock costs about 3 mana more than with 10%. The Protection mana tables change by less than 1 mana per sec.
-- **Points.** Retribution has 42 points (beta: 44). Rows 1 and 2 have 17 points. Row 3 still opens at 10 points.
+- **Points.** Retribution has 42 points (beta: 44). Rows 1 and 2 have 20 points. Row 3 still opens at 10 points.

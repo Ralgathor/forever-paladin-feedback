@@ -6,18 +6,18 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 
 | Row (points necessary) | Talents | Points in the row |
 | --- | --- | --- |
-| 1 (0) | Improved Seals (C5), Divine Intellect | 10 |
-| 2 (5) | Infusion of Light (C3), Reverence (C1), Spiritual Focus, Unyielding Faith | 9 |
+| 1 (0) | Improved Seals (C5), Divine Intellect, Unyielding Faith (C8) | 10 |
+| 2 (5) | Infusion of Light (C3), Reverence (C1), Spiritual Focus | 7 |
 | 3 (10) | Voice of Truth, Purifying Power, Consecrated Ground (M1) | 5 |
 | 4 (15) | Illumination, Divine Favor | 6 |
 | 5 (20) | Divine Precision, Holy Shock, Lingering Light (C2) | 6 |
 | 6 (25) | Holy Power, Healing Light (C4) | 8 |
 | 7 (30) | Light's Vigil | 1 |
 
-- Holy has 45 points (beta: 46).
+- Holy has 43 points (beta: 46).
 - You can use each talent when its row opens.
 - Illumination still requires Reverence (straight arrow in column 2).
-- Divine Strength leaves Holy. It goes to Protection row 1 (C8).
+- C8 removes Divine Strength. Unyielding Faith goes to row 1 (C8).
 
 ## C1. Reverence: 10/20/30% → 17/33/50%, row 3 → row 2
 
@@ -69,11 +69,12 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Deep Holy** keeps Healing Light, Holy Power, Lingering Light and Light's Vigil. Thus, a deep Holy build stays clearly better for healing.
 - **Cost.** A Holy Paladin who levels gets the full bonus at level 37, not at level 17. Blessing of Light rank 1 came at level 40.
 
-## C5. Improved Seals: row 2 → row 1, 5 ranks
+## C5. Improved Seals: row 2 → row 1
 
-- **Proposed text.** "Increases the damage done by your Seals and Judgements by 3/6/9/12/15%."
-- **Change.** 5 ranks, not 3 ranks (5/10/15%). The maximum stays 15%. Improved Seals replaces Divine Strength in row 1. Divine Strength goes to Protection row 1 (C8).
-- **Dip.** With 5 Holy points, Retribution and Protection get +15% Seal and Judgement damage. Seals are the Paladin's own damage. Thus, this dip is more specific to the Paladin than Strength.
+- **Text.** "Increases the damage done by your Seals and Judgements by 5/10/15%." 3 ranks, the same as the beta.
+- **Change.** Only the row changes. Row 1 has Divine Intellect 5, Improved Seals 3 and Unyielding Faith 2 (C8).
+- **Dip.** With Improved Seals 3 and Unyielding Faith 2, Retribution and Protection open Holy row 2. They receive +15% Seal and Judgement damage and −30% Fear and Disorient duration. Then they take Reverence (8 points).
+- **Why row 1.** Seals are the Paladin's own damage. Thus, this dip is specific to the Paladin.
 
 ## M1. Consecrated Ground: row 5 → row 3
 

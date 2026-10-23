@@ -12,7 +12,7 @@
 - **Change.** Judgement of the Crusader does not count against the one-Judgement limit. But it increases only the Holy damage of the Paladin who applies it.
 - **Precedent.** Salvation does not use a Blessing slot now. Improved Seal of the Crusader is now baseline.
 - **Tradeoff.** Other players who do Holy damage do not get the bonus.
-- **For Protection.** A raid can need the one Judgement of the tank for Light or Wisdom. In the beta, the tank then loses Judgement of the Crusader. With C18, the tank keeps it and can also apply Light or Wisdom. Judgement of the Crusader gives a Protection Paladin about +50 TPS (see Analysis, Threat).
+- **For Protection.** A raid can need the one Judgement of the tank for Light or Wisdom. In the beta, the tank then loses Judgement of the Crusader. With C18, the tank keeps it and can also apply Light or Wisdom. Judgement of the Crusader gives a Protection Paladin about +55 TPS (see Analysis, Threat).
 
 ## Alternatives to C18
 

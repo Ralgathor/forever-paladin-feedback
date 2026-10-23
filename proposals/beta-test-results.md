@@ -4,11 +4,11 @@
 
 | Talent | Result in the beta | Effect on the proposals |
 | --- | --- | --- |
-| Divine Strength, Divine Intellect | % of base, gear and flat buff stats. Multiplies with Kings | Divine Strength goes to Protection (C8) |
+| Divine Strength, Divine Intellect | % of base, gear and flat buff stats. Multiplies with Kings | C8 removes Divine Strength |
 | Healing Light | Increases the full heal, not only the base | Supports C2: a second flat healing talent overlaps with it |
 | Spiritual Focus | Adds to other pushback resistance (Concentration Aura 35% + 70% = immune) | None |
 | Improved Seals | Increases the full damage, not only the base. No effect on Seal of the Crusader | None |
-| Unyielding Faith | Diminishing returns not tested | None |
+| Unyielding Faith | Diminishing returns not tested | C8 moves it to Holy row 1 |
 | Reverence | Keeps a % of Spirit regeneration while casting. The 5-second rule starts again when a cast ends | Supports C1 |
 | Purifying Power | Multiplies with Benediction (×0.80 × 0.90) | None |
 | Illumination | Returns 50% of the base cost. Cost decreases do not decrease the return | None |
@@ -42,9 +42,9 @@
 | Talent | Result in the beta | Effect on the proposals |
 | --- | --- | --- |
 | Benediction | Its cost decrease multiplies with Purifying Power, Holy Conduit and Twist of Light | C21 changes the ranks to 3/6/9% |
-| Holy Conduit | With Benediction, Consecration costs ×0.60 × 0.90 | None |
+| Holy Conduit | With Benediction, Consecration costs ×0.60 × 0.90 | C8 moves it to Protection row 2 |
 | Conviction | Also applies to damage Seals and Hammer of Wrath | C15 adds only Holy Shock, Exorcism, Consecration and heals |
-| Vindication | About 5 procs each minute. Ranks: −67/136/204 Attack Power on the target and +1/2/3% on you | None |
+| Vindication | About 5 procs each minute. Ranks: −67/136/204 Attack Power on the target and +1/2/3% on you | C8: row 2, 5 ranks, +1/2/3/4/5% |
 | Sanctified Judgement | Returns more than 60% of the base cost of the Seal with Benediction | Possibly a bug (see Problems to report to Blizzard) |
 | Pursuit of Justice | 15% at 2/2. Better than the 8% boot enchant | On the watch list (W1) |
 | Eye for an Eye | Uses the damage taken after armor and resistance | None |

@@ -29,10 +29,10 @@ This document gives talent proposals for the WoW Forever Paladin. It has 21 chan
 | C2 | Lingering Light (new) | Holy, row 5 | — | 2 ranks: a critical heal adds a heal over time of 10/20% of the heal |
 | C3 | Infusion of Light | Holy, row 4 → row 2 | Holy Shock and Flash of Light critical hits make the next Holy Light faster | All Holy Shock, Flash of Light and Holy Strike hits do this. No critical hit is necessary |
 | C4 | Healing Light | Holy, row 2 → row 6 | 3 ranks: 4/8/12% | 3 ranks: 10/20/30% (with C19) |
-| C5 | Improved Seals | Holy, row 2 → row 1 | 3 ranks: 5/10/15% | 5 ranks: 3/6/9/12/15% |
+| C5 | Improved Seals | Holy, row 2 → row 1 | 3 ranks: 5/10/15% | The same, in row 1 (with C8) |
 | C6 | Redoubt | Protection, row 1 | 10% chance when you are hit: +4–20% block | The same. Each Holy Shield cast also starts it |
 | C7 | Iron Creed | Protection, row 6 | −2–10% damage taken for 6 sec after Holy Strike | −2–10% damage taken while Righteous Fury is active |
-| C8 | Divine Strength replaces Toughness | Protection, row 1 | Toughness: +2–10% armor from items | Divine Strength: +2–10% Strength (from Holy row 1) |
+| C8 | Toughness and Divine Strength: removed | Protection rows 1–2, Retribution row 2, Holy row 1 | Toughness: +2–10% armor from items. Divine Strength: +2–10% Strength | Both removed. Precision and Guardian's Favor go to Protection row 1, Holy Conduit to Protection row 2. Vindication goes to Retribution row 2 with 5 ranks (+1–5% Attack Power). Unyielding Faith goes to Holy row 1 |
 | C9 | Improved Righteous Fury | Protection, row 3 | −2–6% damage taken with Righteous Fury | Removed |
 | C10 | Shoulder the Burden (new) replaces Improved Seal of Fury | Protection, row 3 → row 4 | Improved Seal of Fury: mana when the Seal of Fury shield absorbs a hit | Shoulder the Burden: 50% of the threat of an ally moves to you, 5 min cooldown. Sacred Duty decreases the cooldown |
 | C11 | Reckoning | Protection, row 5 | Extra attack after a block (40%) or a critical hit taken (100%). It hits with the next swing | Charge after a block, dodge or parry (once each 4 sec) or a critical hit taken. Holy Strike releases up to 2 charges |
@@ -45,7 +45,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 21 chan
 | C18 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
 | C19 | Blessing of Light | Baseline spell, and Healing Light (C4) | +400 Holy Light, +115 Flash of Light. Uses a Blessing slot | Removed. Healing Light gives 10/20/30% |
 | C21 | Benediction | Retribution, row 2 (M8) | 5 ranks: 2/4/6/8/10% on instant spells and abilities | 3 ranks: 3/6/9% |
-| C22 | Guardian's Favor | Protection, row 2 | Blessing of Protection −1/2 min, Blessing of Freedom +3/6 sec. Lay on Hands drains all your remaining mana | The same, and Lay on Hands drains only 75/50% of your remaining mana. Alternative C22a: the spell drains 50% for all Paladins |
+| C22 | Guardian's Favor | Protection, row 2 → row 1 (C8) | Blessing of Protection −1/2 min, Blessing of Freedom +3/6 sec. Lay on Hands drains all your remaining mana | The same, and Lay on Hands drains only 75/50% of your remaining mana. Alternative C22a: the spell drains 50% for all Paladins |
 
 **Moves**
 

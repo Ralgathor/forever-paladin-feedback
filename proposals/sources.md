@@ -37,6 +37,8 @@
 - [WoW Forever Tier List – DPS](https://wowforevertierlist.com/tier-list/dps)
 - [LFCarry – Retribution Paladin PvE guide](https://lfcarry.com/guides/wow-forever-retribution-paladin-pve)
 - [Metaforge – Stormcarver](https://metaforge.app/wow-forever/database/weapons/stormcarver)
+- [Warrior threat values in the Forever beta (player sheet)](https://docs.google.com/spreadsheets/d/e/2PACX-1vQxd44ah_iUJNcTdH2mpI9nTMNbQEGV9COXkD1nRHi6NGxiU-TvdtkIJBik7KkgN6gKCs7Sn2E-LVxU/pubhtml#gid=319413770)
+- [Warrior Compendium: Fury rage under the Forever rage rules (player simulations)](https://ppach-warriorcompendium.share.connect.posit.cloud/rage-on-crit.html)
 - [DoubleZug: Forever Paladin (early beta)](https://docs.google.com/spreadsheets/d/1QT5a7h7Xvdq8FdxSdwXASHlSeYNtGBgera-NfkGGmcI/edit?gid=1807392634#gid=1807392634)
 - [DoubleZug: Forever Priest (early beta)](https://docs.google.com/spreadsheets/d/19SaCaDQJzhMFL-nIW4ryzFwI53FmsnDvaxRfLbvM-CE/edit?usp=sharing)
 - [DoubleZug: Forever Druid (early beta)](https://docs.google.com/spreadsheets/d/1Ycd7oR97PGzJa0Vzm7LvbNo8qnSGc_rx2PvWkpdaPCw/edit?usp=sharing)
