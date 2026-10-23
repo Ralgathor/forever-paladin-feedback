@@ -18,8 +18,10 @@ FIGHT = 120.0
 EXECUTE = 0.2                    # last 20% of the fight: Hammer of Wrath, Execute
 GCD = 1.5
 RAGE_SWING = 3.46                # normalized rage: 3.46 x weapon speed for each auto attack that lands, x2 if critical
+                                 # (Warrior Compendium, Rage on Crit: rage = L + (m - 1) c, with c the critical hits of all swings)
 RAGE_2H = 1.3                    # x1.3 for two-handed weapons (Threat, part 6)
-OH_RAGE = 1.0                    # off-hand rage before Dual Wield Specialization (+50%): Forever v2 rage rules (announced fix)
+OH_RAGE = 0.5                    # off hand: 1.73 x weapon speed, half of the main hand (Warrior Compendium, Rage on Crit),
+                                 # before Dual Wield Specialization (+50%): Forever v2 rage rules (announced fix)
 CRUSADER = 161                   # Judgement of the Crusader: Holy damage taken
 
 def armor_dr(armor=BOSS_ARMOR, level=60):
@@ -154,7 +156,7 @@ def retribution(g, version="c16", sa=1.20, crusader=False, ths=THWS, fight=FIGHT
 # (+157 damage, 15 rage), Slam rank 5 (weapon damage + 87, 15 rage, 18 sec), Execute rank 5 (600 + 15 for each
 # extra rage, 15 rage), Overpower rank 4 (weapon damage + 35, 5 rage, 5 sec, after a dodge).
 # Rage: Forever v2 rules: critical hits +100% rage (beta notes, 2 October), off hand +50% with Dual Wield
-# Specialization (hotfix after 2 October). With v2 rage, Bloodthirst and Whirlwind are on cooldown with any gear.
+# Specialization (hotfix after 2 October). Bloodthirst and Whirlwind use 7.2 rage each sec: 6.5 at fresh level 60, 7.3 in Naxxramas.
 # Talents: Cruelty 5/5 (+5% critical hit), Unbridled Wrath 5/5 (60%: +1 rage for each hit), Improved Heroic Strike
 # 3/3 (-3 rage), Anger Management (1 rage each 3 sec), Deep Wounds 3/3 (60% of the average weapon damage over 12 sec
 # after a critical hit), Impale 2/2 (+20% critical hit damage of abilities).
@@ -196,8 +198,9 @@ def fury(g, detail=False):
     flurry = 1 - (1 - (crit_m + crit_o) / 2) ** 3
     rate = (1 + 0.25 * flurry) / SPEED_1H
     phys = (1 - DR) * (1 + 0.20 * 30 / FIGHT)                           # Death Wish: one use
-    mh_rage = land_m * (RAGE_SWING * SPEED_1H * (1 + crit_m) + 0.6)
-    rage = rate * mh_rage + rate * land_o * (RAGE_SWING * SPEED_1H * (1 + crit_o) * OH_RAGE * 1.5 + 0.6) + 1 / 3 + BLOODRAGE
+    mh_rage = RAGE_SWING * SPEED_1H * (land_m + crit_m) + 0.6 * land_m
+    oh_rage = RAGE_SWING * SPEED_1H * OH_RAGE * 1.5 * (land_o + crit_o) + 0.6 * land_o
+    rage = rate * (mh_rage + oh_rage) + 1 / 3 + BLOODRAGE
     use = spend(rage, (("Bloodthirst", 30, 1 / 6), ("Whirlwind", 25 - 3, 1 / 10), ("Heroic Strike", 12 + mh_rage, rate)))
     hs = use["Heroic Strike"] / rate
     src = {}
@@ -226,7 +229,7 @@ def arms(g, detail=False):
     _, crit_op, f_op = spec_table(hit, crit + 0.5, crit_mult=2.2)     # Improved Overpower
     phys = (1 - DR) * 1.03                                              # Two-Handed Weapon Specialization 3/3
     rate = 1 / sp
-    swing_rage = land_a * (RAGE_SWING * RAGE_2H * sp * (1 + crit_a) + 0.6)
+    swing_rage = RAGE_SWING * RAGE_2H * sp * (land_a + crit_a) + 0.6 * land_a
     rage = rate * swing_rage + 1 / 3 + BLOODRAGE
     op_cap = min(1 / 5, (rate + 1 / 6 + 1 / 15) * DODGE)               # Overpower after a dodge
     use = spend(rage, (("Mortal Strike", 30, 1 / 6), ("Overpower", 5, op_cap), ("Slam", 15, 1 / 15),
