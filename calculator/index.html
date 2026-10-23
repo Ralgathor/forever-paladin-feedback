@@ -574,7 +574,7 @@ function esc(x){return String(x).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;","
 function renderProps(){
   const t=(k,n)=>`<button type="button" class="tk" data-key="${k}">${n}</button>`;
   const g=(...ids)=>ids.map(i=>`<span class="pid">${i}</span>`).join("");
-  const dn=s=>`<ul><li class="dn"><em>Developers' notes: ${s}</em></li></ul>`;
+  const dn=s=>`<ul><li class="dn"><em>Changes' notes: ${s}</em></li></ul>`;
   const html=`
 <p class="cat"><b>General</b></p>
 <ul>
