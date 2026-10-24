@@ -7,14 +7,14 @@ These proposals connect the melee attacks of Retribution to its Holy spells. The
 | Row (points necessary) | Talents | Points in the row |
 | --- | --- | --- |
 | 1 (0) | Deflection, Conviction (C15, M8) | 10 |
-| 2 (5) | Improved Judgement, Vindication (C8), Benediction (M8, C21) | 10 |
+| 2 (5) | Improved Judgement, Holy Conduit, Vindication (C8) | 9 |
 | 3 (10) | Pursuit of Justice, Sanctified Judgement, Seal of Command | 6 |
 | 4 (15) | Eye for an Eye, Sacred Arbiter, Two-Handed Weapon Specialization (M6) | 6 |
 | 5 (20) | Vengeance, Repentance | 4 |
 | 6 (25) | Champion of the Light, Instrument of Law | 5 |
 | 7 (30) | Twist of Light (C17) | 1 |
 
-Retribution has 42 points (beta: 44). C8 moves Holy Conduit to Protection row 2. Vindication goes to row 2 with 5 ranks (see Protection, C8).
+Retribution has 41 points (beta: 44). C8 moves Benediction to Protection row 1. Vindication goes to row 2, column 3, with 5 ranks (see Protection, C8).
 
 ## C15. Conviction: attacks and spells
 
@@ -56,26 +56,10 @@ Retribution has 42 points (beta: 44). C8 moves Holy Conduit to Protection row 2.
 - **Values.** 2/4/6%, the same as the beta.
 - **Space.** Row 4 has a free column.
 
-## M8. Conviction and Benediction change rows (Conviction row 2 → row 1)
+## M8. Conviction: row 2 → row 1
 
-- **Move.** Conviction goes to row 1, column 3. Benediction goes to row 2, column 3. The text of the two talents does not change. Conviction keeps the C15 text.
+- **Move.** Conviction goes to row 1, column 3. C8 moves Benediction from this place to Protection row 1. The text of Conviction does not change. Conviction keeps the C15 text.
 - **Parity.** All other +5% critical hit talents are in row 1: Cruelty (Warrior), Malice (Rogue), Lethal Attacks (Hunter) and Thundering Strikes (Shaman).
-- **Holy.** A Holy Paladin gets +5% critical heal chance for 5 Retribution points, not 10. A Restoration Shaman also pays 5 points for Thundering Strikes. A Holy PvP build can then also take the Protection dip: 35/7/9, or 36/7/8 with C21 (see Analysis, Tree balance).
-- **Protection and Retribution.** Benediction stays in reach in row 2. Retribution gets critical hit earlier when it levels.
+- **Holy.** A Holy Paladin receives +5% critical heal chance for 5 Retribution points, not 10. A Restoration Shaman also pays 5 points for Thundering Strikes. A Holy build can then also take the Protection dip: 35/11/5 (see Analysis, Tree balance).
+- **Retribution.** Retribution has the critical hit at a lower level.
 - **Risk.** All specs get +5% critical hit for 5 points. The other classes have the same.
-
-## C21. Benediction: 3 ranks, 3/6/9%
-
-- **Proposed text.** "Reduces the Mana cost of all instant cast spells and abilities by 3/6/9%."
-- **Change.** 3 ranks, not 5 ranks (2/4/6/8/10%). The maximum decreases from 10% to 9%.
-- **Precedent.** Cataclysm (Warlock) gives −10% for 3 points in Forever. Forever uses fewer ranks for cost talents.
-- **Why.** With M8, Benediction is in row 2. Rows 1 and 2 must give the other specs a reason to put points in the tree (design rule 2). With 3 ranks, the dips into Retribution cost 2 points less.
-
-| Dip | Beta ranks | C21 |
-| --- | --- | --- |
-| Holy PvP build (Conviction, Benediction, Redoubt, Guardian's Favor) | 35/7/9: Benediction 4/5 (8%) | 36/7/8: Benediction 3/3 (9%), 1 more point for Holy |
-| Protection mana dip (Deflection 5, Benediction) | 10 points (10%) | 8 points (9%) |
-| Retribution with 3 points in Benediction | 6% | 9% |
-
-- **Mana.** Retribution spends about 1 mana per sec less (see Analysis, Damage). For a full investment, Holy Shock costs about 3 mana more than with 10%. The Protection mana tables change by less than 1 mana per sec.
-- **Points.** Retribution has 42 points (beta: 44). Rows 1 and 2 have 20 points. Row 3 still opens at 10 points.

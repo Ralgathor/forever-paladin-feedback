@@ -95,7 +95,7 @@ def gear(tier=0, flat=False, sd_fixed=False):
     return g
 
 # ---------------------------------------------------------------- Retribution (parts 1-4, 7, 8)
-# Build 12/7/32 (RB2). Conviction +5% critical hit. Precision +3% hit. Two-Handed Weapon Specialization x1.06.
+# Build 12/8/31 (RB2). Conviction +5% critical hit. Precision +3% hit. Two-Handed Weapon Specialization x1.06.
 # Improved Seals x1.15 (Seals and Judgements). Vindication 5/5 (C8): +5% Attack Power, full uptime on a boss.
 THWS, IMP_SEALS = 1.06, 1.15
 NORM_2H = 3.3
@@ -107,7 +107,7 @@ NORM_2H = 3.3
 # "iol" Instrument of Law, "tol" Twist of Light.
 RB2 = dict(is_=3, di=2, prec=3, conv=5, ij=2, vind=5, soc=1, sa=1, thws=3, veng=3, cotl=3, iol=2, tol=1)
 RB1 = dict(RB2, di=0)                                                     # Pursuit of Justice
-RB3 = dict(RB2, is_=0, di=0, sj=1)                                        # 0/14/37: no Holy points
+RB3 = dict(RB2, is_=0, di=0, sj=1)                                        # 0/15/36: no Holy points
 RB4 = dict(RB2, di=0)                                                     # Repentance, Eye for an Eye
 RB5 = dict(RB2, is_=0, di=0, ij=0, vind=0, cotl=0, iol=0, tol=0, sj=1)    # 0/26/25
 SHOCK_RET = dict(RB2, prec=0, vind=3, iol=0, tol=0, di=5, cg=2, hsk=1)    # 23/0/28: Consecrated Ground (Holy row 5)

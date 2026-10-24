@@ -73,3 +73,8 @@ We examined these ideas and rejected them. They are not proposals.
 | Unyielding Faith with Precision in Protection row 1 | It works, but C8 uses Unyielding Faith in Holy row 1 |
 | Precision and Redoubt only in Protection row 1 (8 points) | Each row 1 of the other classes has 10 points or more. Holy and Retribution then pay for points that they do not use |
 | Vindication with 5 ranks and the same maximum (+3%) | More points with no more value. +1/2/3/4/5% makes the 5 points useful |
+| Precision and Guardian's Favor in Protection row 1, Holy Conduit in Protection row 2 (C8 of 23 October) | Too far from the beta tree. Now Benediction fills the place of Toughness. Precision, Guardian's Favor and Holy Conduit stay in their beta place. Tanks take Holy Conduit with Deflection 5 (7 Retribution points) |
+| C21: Benediction with 3 ranks, 3/6/9% | C8 moves Benediction to Protection row 1. There, Benediction 5 opens row 2 for Holy and Retribution. The 5 beta ranks stay |
+| Benediction in Retribution row 2 (second part of M8) | C8 moves Benediction to Protection row 1. M8 now moves only Conviction |
+| Unyielding Faith in Protection row 2 | Resistance to fear fits a defensive tree. But Precision, Guardian's Favor and Anticipation fill Protection row 2, with the Redoubt arrow in column 3. Unyielding Faith stays in Holy row 1 |
+| Guardian's Favor in row 1 of a tree (W19) | Guardian's Favor stays in Protection row 2, as in the beta. No other class has a save talent in row 1 |

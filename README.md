@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 21 changes (C1–C19, C21 and C22) and 4 moves (M4–M6 and M8) for the Holy, Protection and Retribution trees. Three changes are new talents.
+- **Proposals:** 20 changes (C1–C19 and C22) and 4 moves (M4–M6 and M8) for the Holy, Protection and Retribution trees. Three changes are new talents.
 - **Talent calculator:** you can try the proposals and compare them with the beta trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
 - **Builds:** the best builds for each spec and role (raid, dungeon, PvP), with calculator codes. Also the builds that use a different tree for a role.
@@ -28,7 +28,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 - **C6 Redoubt:** each Holy Shield cast also starts it. The block chance stays high. Most crushing blows stop.
 - **C7 Iron Creed:** −2–10% damage taken while Righteous Fury is active (beta: for 6 sec after Holy Strike).
-- **C8 Toughness and Divine Strength:** removed. Precision and Guardian's Favor go to Protection row 1, Holy Conduit to Protection row 2. Vindication goes to Retribution row 2 with 5 ranks (+1–5% Attack Power). Unyielding Faith goes to Holy row 1. Each point in rows 1 and 2 then has a use for its spec.
+- **C8 Toughness and Divine Strength:** removed. Benediction goes from Retribution row 1 to Protection row 1, with its 5 beta ranks (2–10%). Vindication goes to Retribution row 2 with 5 ranks (+1–5% Attack Power). Unyielding Faith goes to Holy row 1. Precision, Guardian's Favor, Anticipation and Holy Conduit stay in their beta place. Each point in rows 1 and 2 then has a use for its spec.
 - **C9 Improved Righteous Fury:** removed. Iron Creed alone gives −10% damage taken.
 - **C10 Shoulder the Burden (new) replaces Improved Seal of Fury:** 50% of the threat of an ally moves to you. 5 min cooldown (4 min with Sacred Duty 2/2). It has no effect in PvP.
 - **C11 Reckoning:** block, dodge and parry also give charges (once each 4 sec). Holy Strike releases up to 2 charges.
@@ -37,7 +37,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C14 Holy Shield:** each block also does 200% of your block value as Holy damage. Paladin threat then increases with gear, as Warrior and Druid threat does.
 - **M4 Improved Hammer of Justice:** row 4 → row 3.
 - **M5 Swift Judgement:** row 4 → row 3, with no requirement.
-- **C22 Guardian's Favor:** Lay on Hands drains only 75/50% of your remaining mana (beta: all of it). The talent keeps its Blessing of Protection and Blessing of Freedom effects. Alternative C22a: the spell drains 50% for all Paladins. C8 moves the talent to row 1.
+- **C22 Guardian's Favor:** Lay on Hands drains only 75/50% of your remaining mana (beta: all of it). The talent keeps its Blessing of Protection and Blessing of Freedom effects. Alternative C22a: the spell drains 50% for all Paladins.
 
 **Retribution**
 
@@ -45,8 +45,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C16 Holy Strike (spell change):** Holy Strike triggers your active Seal and Echo the same as a melee attack, for all specs (beta: only Seal of Light, Justice and Wisdom).
 - **C17 Twist of Light:** the Echo applies to all melee attacks for 10 sec (beta: the next melee attack only).
 - **M6 Two-Handed Weapon Specialization:** row 5 → row 4 (20 → 15 points).
-- **M8 Conviction and Benediction:** they change rows. Conviction goes to row 1, as all other +5% critical hit talents. A Holy Paladin gets it for 5 points.
-- **C21 Benediction:** 3 ranks, 3/6/9% (beta: 5 ranks, 2/4/6/8/10%). With M8, it is in row 2. The dips into Retribution cost 2 points less. Retribution has 42 points.
+- **M8 Conviction:** row 2 → row 1, as all other +5% critical hit talents. A Holy Paladin takes it for 5 points. Retribution has 41 points.
 
 **Judgements and Blessings**
 
@@ -58,9 +57,9 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **[Proposals](proposals/README.md).** The full document, in one file for each part. For each proposal, it gives the beta text, the proposed text, the reason and the model talent from another class. It also gives the analysis, the test results and the open questions.
 - **[Talent calculator](calculator/index.html).** Live version: https://ralgathor.github.io/forever-paladin-feedback/calculator/
   - The calculator opens with the proposed trees. Push **Beta** to see the beta trees.
-  - **Versions.** Use the Version list to open an earlier version of the proposed trees. Version 3 (24 October 2026) is the current version. Its build codes start with `v3p`. A version 2 code (it starts with `v2p`) opens on the version 2 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v2/. A version 1 code (it starts with `p`) opens on the version 1 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v1/
+  - **Versions.** Use the Version list to open an earlier version of the proposed trees. Version 4 (24 October 2026) is the current version. Its build codes start with `v4p`. A version 3 code (it starts with `v3p`) opens on the version 3 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v3/. A version 2 code (it starts with `v2p`) opens on the version 2 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v2/. A version 1 code (it starts with `p`) opens on the version 1 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v1/
   - A purple tag (C) shows a changed talent. A blue tag (M) shows a talent that only moves.
-  - A build code that starts with `v3p` opens a proposed build. A build code with only digits opens a beta build.
+  - A build code that starts with `v4p` opens a proposed build. A build code with only digits opens a beta build.
 
 The talent icons come from the Wowhead icon server (wow.zamimg.com). If the icons do not load, the calculator shows drawn icons. This project does not keep game files.
 

@@ -187,12 +187,12 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
     <span class="grow"></span>
     <div class="mode" role="group" aria-label="Talent trees to show"><button type="button" id="mProp" aria-pressed="true">Proposed</button><button type="button" id="mBeta" aria-pressed="false">Beta</button></div>
     <label class="lvl" for="ver">Version
-      <select id="ver"><option value="v3">v3 · 24 Oct 2026</option><option value="v2" selected>v2 · 23 Oct 2026</option><option value="v1">v1 · before 23 Oct</option></select>
+      <select id="ver"><option value="v4">v4 · 24 Oct 2026</option><option value="v3">v3 · 24 Oct 2026</option><option value="v2" selected>v2 · 23 Oct 2026</option><option value="v1">v1 · before 23 Oct</option></select>
     </label>
     <button id="resetAll" type="button">Reset all</button>
   </section>
 
-  <div class="mode-note" id="modeNote" hidden><b>Proposed trees.</b> A purple tag (C1, C11…) marks a changed talent. A blue tag (M1, M4…) marks a talent that only moves. Builds made here don't load in the beta trees. This is version 2 of the proposed trees (23 October 2026). Select v3 for the current trees. A version 1 or version 3 code opens on its page.</div>
+  <div class="mode-note" id="modeNote" hidden><b>Proposed trees.</b> A purple tag (C1, C11…) marks a changed talent. A blue tag (M1, M4…) marks a talent that only moves. Builds made here don't load in the beta trees. This is version 2 of the proposed trees (23 October 2026). Select v4 for the current trees. A version 1, 3 or 4 code opens on its page.</div>
 
   <div class="trees" id="trees"></div>
 
@@ -569,7 +569,8 @@ function encodeRaw(){return TREES.map(tr=>T.filter(t=>t.tree===tr.id).map(t=>t.p
 function decode(s){
   s=String(s||"").trim().replace(/^#/,"");
   if(/^p/i.test(s)){location.href="../v1/index.html#"+s;return "v1";}
-  if(/^v3p/i.test(s)){location.href="../index.html#"+s;return "v3";}
+  if(/^v3p/i.test(s)){location.href="../v3/index.html#"+s;return "v3";}
+  if(/^v4p/i.test(s)){location.href="../index.html#"+s;return "v4";}
   s=s.replace(/^v2(?=p)/i,"");const m=/^p/i.test(s)?"prop":"beta";s=s.replace(/^p/i,"");if(!/^[0-5-]*$/.test(s))return false;
   if(m!==mode){setTalents(m);build();syncMode();}
   const parts=s.split("-");T.forEach(t=>t.pts=0);
@@ -692,8 +693,8 @@ const toast=document.getElementById("toast");let tt;
 function say(m){toast.textContent=m;clearTimeout(tt);tt=setTimeout(()=>toast.textContent="",2200);}
 document.getElementById("copy").onclick=()=>{const v=document.getElementById("code").value;const inp=document.getElementById("code");
   try{navigator.clipboard.writeText(v).then(()=>say("Copied"),()=>{inp.select();say("Press Ctrl+C to copy");});}catch(e){inp.select();say("Press Ctrl+C to copy");}};
-document.getElementById("ver").onchange=e=>{if(e.target.value==="v3")location.href="../index.html";if(e.target.value==="v1")location.href="../v1/index.html";};
-document.getElementById("load").onclick=()=>{const r=decode(document.getElementById("code").value);if(r==="v1"){say("Version 1 code: the version 1 page opens");}else if(r==="v3"){say("Version 3 code: the version 3 page opens");}else if(r){changed();render();say("Build loaded");}else say("That code has characters other than 0–5, dashes and a leading v2p");};
+document.getElementById("ver").onchange=e=>{if(e.target.value==="v4")location.href="../index.html";if(e.target.value==="v3")location.href="../v3/index.html";if(e.target.value==="v1")location.href="../v1/index.html";};
+document.getElementById("load").onclick=()=>{const r=decode(document.getElementById("code").value);if(r==="v1"){say("Version 1 code: the version 1 page opens");}else if(r==="v3"){say("Version 3 code: the version 3 page opens");}else if(r==="v4"){say("Version 4 code: the version 4 page opens");}else if(r){changed();render();say("Build loaded");}else say("That code has characters other than 0–5, dashes and a leading v2p");};
 document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{activeTab=b.dataset.t;tabs();});
 function tabs(){document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.t===activeTab));TREES.forEach(tr=>document.getElementById("tree-"+tr.id).classList.toggle("show",tr.id===activeTab));}
 window.addEventListener("scroll",hideTip,{passive:true});
