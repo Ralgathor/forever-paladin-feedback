@@ -105,7 +105,7 @@ The pure average is the best spec of each pure damage class: Warrior 929, Rogue 
 - **The hybrid target is 95% of the pure average.** In the beta, Retribution is 93%.
 - **With all proposals, Retribution is 101% of Fury and 103% of the pure average.** Without Combat Rogue (the lowest pure class), the pure average is 961. Retribution is then 98% of it.
 - **Retribution is the strongest hybrid** in the beta and with the proposals. In the beta, it is 7% above Feral and 14% above Enhancement.
-- **Check with the same gear.** The model also calculates Arms, Fury and Combat Rogue with the gear of part 1 and Forever rage. The beta Retribution is 15% above Arms. wowsims Forever gives 16% with its own pre-raid gear, and MythicSim gives 6%. The Arms rotation is now the wowsims rotation: Rend, Overpower, Mortal Strike, Spearing Strike, Slam, then Heroic Strike. The remaining causes can be the gear, consumables and Windfury Totem. Part 6 uses only the increase with gear.
+- **Check with the same gear.** The model also calculates Arms, Fury and Combat Rogue with the gear of part 1 and Forever rage. The beta Retribution is 15% above Arms. wowsims Forever gives 16% with its own pre-raid gear, and MythicSim gives 6%. The Arms rotation is now the wowsims rotation: Rend, Overpower, Mortal Strike, Spearing Strike, Slam, then Heroic Strike. Other causes can be the gear, consumables and Windfury Totem. Part 6 uses only the increase with gear.
 - **One source only.** The MythicSim page has some errors in its rank order. Its Hunter values use melee weaving. No player has confirmed melee weaving in a raid.
 - **No raid gear.** MythicSim has no raid gear tiers. Part 6 uses a model for the increase with gear.
 
@@ -150,7 +150,7 @@ Retribution increases less with gear than the pure melee classes. Blizzard said 
 - **About 25% of the damage is fixed base values.** Gear does not change them: Judgement (178.2), Seal of Righteousness (67.5 for each hit), Hammer of Wrath (498) and the 46.5 of Holy Strike.
 - **About 18% comes from spell damage.** The coefficients are small (12–43%). +100 spell damage gives only about +20 DPS.
 - **Only about 57% increases with weapon damage and Attack Power:** auto attacks, Seal of Command and the weapon part of Holy Strike. For Fury and Rogue, it is almost 100%.
-- **Retribution gets the hit cap at pre-raid** (Precision 3% + 6% from gear). More hit then does nothing. The two-weapon classes start at 27% miss. Each point of hit helps them until Naxxramas.
+- **Retribution reaches the hit cap at pre-raid** (Precision 3% + 6% from gear). More hit then does nothing. The two-weapon classes start at 27% miss. Each point of hit helps them until Naxxramas.
 - **Critical hit helps Fury two times:** more Flurry and two times the rage. For Retribution, it helps only Vengeance.
 - **Improved Seals multiplies the fixed bases** by the same 15% as the weapon part. Thus, it does not change the share that increases with gear.
 - **Rage in Forever.** In Classic, rage came from the damage. Better gear gave more rage and more Heroic Strikes. Forever gives rage from the weapon speed. This removes most of that effect. With Classic rage, the gap is larger than these tables show.
