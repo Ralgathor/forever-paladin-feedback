@@ -45,7 +45,7 @@
 | Holy Conduit | With Benediction, Consecration costs ×0.60 × 0.90 | C8 moves it to Protection row 2 |
 | Conviction | Also applies to damage Seals and Hammer of Wrath | C15 adds only Holy Shock, Exorcism, Consecration and heals |
 | Vindication | About 5 procs each minute. Ranks: −67/136/204 Attack Power on the target and +1/2/3% on you | C8: row 2, 5 ranks, +1/2/3/4/5% |
-| Sanctified Judgement | Returns more than 60% of the base cost of the Seal with Benediction | Possibly a bug (see Problems to report to Blizzard) |
+| Sanctified Judgement | Returns 60% of the base cost of the Seal, before talent cost decreases: 126 mana for Seal of Command with Benediction and Twist of Light | The mana models use 126 |
 | Pursuit of Justice | 15% at 2/2. Better than the 8% boot enchant | On the watch list (W1) |
 | Eye for an Eye | Uses the damage taken after armor and resistance | None |
 | Sacred Arbiter | +20% Holy Strike damage. Refreshes Light, Wisdom, Justice and Crusader | Holy Strike triggers all Seals (C16, spell change) |
