@@ -86,7 +86,7 @@ CONS_EVERY = 8              # Consecration on cooldown, as in Analysis, Mana
 # "hsh" Holy Shield. Retribution: "conv" Conviction, "vind" Vindication. Talents with no threat effect are left out.
 PB1 = {"is": 3, "prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 5, "ic": 5, "hsh": 1, "conv": 3}
 PB2 = dict(PB1, conv=5)
-PB3 = {"is": 3, "cg": 2, "prec": 3, "red": 5, "sj": 1, "reck": 5, "ic": 5, "hsh": 1}
+PB3 = {"is": 3, "prec": 3, "red": 5, "sj": 1, "ohws": 2, "reck": 5, "ic": 5, "hsh": 1}
 PB4 = dict(PB3)             # PB4 differs from PB3 only in Anticipation and Fury's Reach
 PB_BOTH = dict(PB3, ohws=3) # "One build can have both" (Analysis, Builds, part 3)
 BUILDS = (("PB1", PB1), ("PB2", PB2), ("PB3", PB3), ("PB4", PB4), ("PB3 + One-Handed Weapon Specialization", PB_BOTH))

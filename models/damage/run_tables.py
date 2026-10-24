@@ -21,7 +21,7 @@ BEN, TOL = 0.90, 0.80
 
 def ret_mana(tier, wisdom=True):
     """(mana pool, income, rotation cost, Hammer of Wrath cost, Consecration cost), all per sec except the pool."""
-    intel = (gear(tier)["int"] + M.MOTW) * M.KINGS
+    intel = (gear(tier)["int"] + M.MOTW) * M.KINGS * (1 + 0.02 * M.RB2.get("di", 0))   # Divine Intellect
     pool = 1232 + 15 * intel
     income = 10.3 + (8 if wisdom else 0)
     seal = 210 * BEN * TOL
@@ -158,11 +158,11 @@ if __name__ == "__main__":
           f"1% hit {(retribution(dict(g, hit=0.04), **g5) - retribution(dict(g, hit=0.03), **g5)):.1f}")
     cons = retribution(g, extra="consecration")
     exo = retribution(g, extra="exorcism")
-    print(f"Consecrated Ground with Consecration on cooldown: {cons:.0f} ({cons / P - 1:+.0%}). "
-          f"Exorcism: {exo:.0f} ({exo / P - 1:+.0%})")
-    _, sc8, _ = retribution(g, extra="consecration", detail=True)
-    print(f"Consecration part of the increase: {sc8['Consecration'] / (cons - P):.0%}, "
-          f"Consecrated Ground {sc8['Consecrated Ground'] / (cons - P):.0%}")
+    print(f"Consecration on cooldown: {cons:.0f} ({cons / P - 1:+.0%}). Exorcism: {exo:.0f} ({exo / P - 1:+.0%})")
+    sh, shc = retribution(g, tal=M.SHOCK_RET), retribution(g, tal=M.SHOCK_RET, extra="consecration")
+    _, sc8, _ = retribution(g, tal=M.SHOCK_RET, extra="consecration", detail=True)
+    print(f"Shock-Retribution (Consecrated Ground, Holy row 5) with Consecration: {sh:.0f} -> {shc:.0f} "
+          f"({shc / sh - 1:+.0%}). Consecrated Ground part of the increase: {sc8['Consecrated Ground'] / (shc - sh):.0%}")
     for fight in (120, 180, 300):
         row = []
         for t in range(5):

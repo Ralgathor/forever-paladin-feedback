@@ -8,9 +8,9 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 | --- | --- | --- |
 | 1 (0) | Improved Seals (C5), Divine Intellect, Unyielding Faith (C8) | 10 |
 | 2 (5) | Infusion of Light (C3), Reverence (C1), Spiritual Focus | 7 |
-| 3 (10) | Voice of Truth, Purifying Power, Consecrated Ground (M1) | 5 |
+| 3 (10) | Voice of Truth, Purifying Power | 3 |
 | 4 (15) | Illumination, Divine Favor | 6 |
-| 5 (20) | Divine Precision, Holy Shock, Lingering Light (C2) | 6 |
+| 5 (20) | Divine Precision, Holy Shock, Lingering Light (C2), Consecrated Ground | 8 |
 | 6 (25) | Holy Power, Healing Light (C4) | 8 |
 | 7 (30) | Light's Vigil | 1 |
 
@@ -75,8 +75,3 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Change.** Only the row changes. Row 1 has Divine Intellect 5, Improved Seals 3 and Unyielding Faith 2 (C8).
 - **Dip.** With Improved Seals 3 and Unyielding Faith 2, Retribution and Protection open Holy row 2. They receive +15% Seal and Judgement damage and −30% Fear and Disorient duration. Then they take Reverence (8 points).
 - **Why row 1.** Seals are the Paladin's own damage. Thus, this dip is specific to the Paladin.
-
-## M1. Consecrated Ground: row 5 → row 3
-
-- Row 3 opens at level 20. Paladins learn Consecration at level 20.
-- Protection gets it with 12 Holy points (beta: 22) for more area threat.

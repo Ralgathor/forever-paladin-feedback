@@ -105,12 +105,12 @@ NORM_2H = 3.3
 # "sj" Swift Judgement, "conv" Conviction, "ij" Improved Judgement, "vind" Vindication, "soc" Seal of Command,
 # "sa" Sacred Arbiter, "thws" Two-Handed Weapon Specialization, "veng" Vengeance, "cotl" Champion of the Light,
 # "iol" Instrument of Law, "tol" Twist of Light.
-RB2 = dict(is_=3, cg=2, prec=3, conv=5, ij=2, vind=5, soc=1, sa=1, thws=3, veng=3, cotl=3, iol=2, tol=1)
-RB1 = dict(RB2, cg=0)                                                     # Pursuit of Justice, no Consecrated Ground
-RB3 = dict(RB2, is_=0, cg=0, sj=1)                                        # 0/14/37: no Holy points
-RB4 = dict(RB2, cg=0)                                                     # Repentance, Eye for an Eye
-RB5 = dict(RB2, is_=0, cg=0, ij=0, vind=0, cotl=0, iol=0, tol=0, sj=1)    # 0/26/25
-SHOCK_RET = dict(RB2, prec=0, vind=3, tol=0, di=5, hsk=1)                 # 21/0/30
+RB2 = dict(is_=3, di=2, prec=3, conv=5, ij=2, vind=5, soc=1, sa=1, thws=3, veng=3, cotl=3, iol=2, tol=1)
+RB1 = dict(RB2, di=0)                                                     # Pursuit of Justice
+RB3 = dict(RB2, is_=0, di=0, sj=1)                                        # 0/14/37: no Holy points
+RB4 = dict(RB2, di=0)                                                     # Repentance, Eye for an Eye
+RB5 = dict(RB2, is_=0, di=0, ij=0, vind=0, cotl=0, iol=0, tol=0, sj=1)    # 0/26/25
+SHOCK_RET = dict(RB2, prec=0, vind=3, iol=0, tol=0, di=5, cg=2, hsk=1)    # 23/0/28: Consecrated Ground (Holy row 5)
 RET_BUILDS = (("RB1", RB1), ("RB2", RB2), ("RB3", RB3), ("RB4", RB4), ("RB5", RB5))
 
 def ret_stats(g, cotl=None, ap_pct=None, str_pct=0.0, tal=RB2):

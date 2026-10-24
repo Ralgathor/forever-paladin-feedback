@@ -12,7 +12,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 21 chan
 ## How to read this document
 
 - **C (change).** C1 to C19, C21 and C22 change what a talent does, add a talent or remove a talent. C16, C18 and C19 change baseline spells. A change can also move the talent. The text then gives the new row.
-- **M (move).** M1, M4 to M6 and M8 move a talent to a different row. The talent text does not change.
+- **M (move).** M4 to M6 and M8 move a talent to a different row. The talent text does not change.
 - **C18a and C18b** are the two alternatives to C18.
 - **Withdrawn ideas** have no ID. They are in [Withdrawn ideas](withdrawn-ideas.md) only.
 - **Data.** Forever client build 1.60.1.70450, with the server hotfixes of 18 October 2026, from wowforevertalents.com. Player tests from 19 October 2026 and later. The text tells you when a value comes from an in-game tooltip.
@@ -51,7 +51,6 @@ This document gives talent proposals for the WoW Forever Paladin. It has 21 chan
 
 | ID | Talent | Tree | Beta | Proposed |
 | --- | --- | --- | --- | --- |
-| M1 | Consecrated Ground | Holy | Row 5 | Row 3 |
 | M4 | Improved Hammer of Justice | Protection | Row 4 | Row 3 |
 | M5 | Swift Judgement | Protection | Row 4, requires Improved Seal of Fury | Row 3, no requirement |
 | M6 | Two-Handed Weapon Specialization | Retribution | Row 5 (20 points) | Row 4 (15 points) |
