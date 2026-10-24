@@ -12,8 +12,8 @@ BOSS_ARMOR = 976                 # 3,731 after 5 Sunder Armor and Faerie Fire
 DODGE = 0.065                    # from behind: no parry, no block
 GLANCE, GLANCE_DMG = 0.40, 0.65  # auto attacks only
 CRIT_AUTO, CRIT_SPEC = 0.048, 0.03   # critical hit decrease against a level 63 boss (Classic 1.12 rule)
-MISS = 0.09                      # before hit; the first 1% of hit has no effect, thus 8% hit gives 1% miss
-DW_MISS = 0.28                   # auto attacks with two weapons
+MISS = 0.08                      # before hit; each 1% of hit removes 1% miss (wowsims Forever)
+DW_MISS = 0.27                   # auto attacks with two weapons: 8% + 19%
 FIGHT = 120.0
 EXECUTE = 0.2                    # last 20% of the fight: Hammer of Wrath, Execute
 GCD = 1.5
@@ -39,9 +39,10 @@ def auto_table(hit, crit, dw=False, dodge=DODGE):
     return land, c, GLANCE * GLANCE_DMG + c * 2 + (land - GLANCE - c)
 
 def spec_table(hit, crit, dodge=DODGE, crit_mult=2.0):
-    """Special attacks, Seals and Judgements: (chance to land, chance of a critical hit, damage factor)."""
+    """Special attacks, Seals and Judgements: (chance to land, chance of a critical hit, damage factor).
+    The critical hit is a separate roll on the hits that land (wowsims Forever)."""
     land = 1 - miss(hit) - dodge
-    c = min(max(0.0, crit - CRIT_SPEC), land)
+    c = max(0.0, crit - CRIT_SPEC) * land
     return land, c, land + c * (crit_mult - 1)
 
 def vengeance(crits_per_sec, per=0.03, stacks=3, dur=30.0, fight=FIGHT, dt=0.25):
@@ -122,6 +123,8 @@ def retribution(g, version="c16", sa=1.20, crusader=False, ths=THWS, fight=FIGHT
     wn = s["w"] * s["speed"] + s["ap"] / 14 * NORM_2H
     land_a, crit_a, f_auto = auto_table(s["hit"], s["crit"])
     land, crit_s, f_spec = spec_table(s["hit"], s["crit"])
+    _, crit_j, f_jud = spec_table(s["hit"], s["crit"], dodge=0.0)        # Judgement: no dodge
+    c_seal = max(0.0, s["crit"] - CRIT_SPEC)                             # Seals: a separate roll, cannot miss
     autos, hs_rate, jud_rate = 1 / s["speed"], 1 / 10, 1 / 8           # Improved Judgement 2/2: one each 8 sec
     how_rate = EXECUTE / 6
     soc_chance = 7 / 60 * s["speed"]                                     # 7 procs each minute
@@ -130,19 +133,20 @@ def retribution(g, version="c16", sa=1.20, crusader=False, ths=THWS, fight=FIGHT
     auto_sor = version in ("c16", "c16_first", "c16_soc", "beta_swap")
     soc_rate = (autos * land_a * soc_chance + hs_rate * land * hs_soc) * land     # the proc uses the hit table too
     sor_rate = autos * land_a * auto_sor + hs_rate * land * hs_sor
-    # Vengeance: critical hits of auto attacks, Seal of Command, Holy Strike, Judgement and Hammer of Wrath.
-    # Seal of Righteousness cannot be a critical hit.
-    cps = autos * crit_a + (hs_rate + jud_rate + how_rate) * crit_s + soc_rate * max(0, s["crit"] - CRIT_SPEC)
+    # Vengeance: critical hits of auto attacks, Seals, Holy Strike, Judgement and Hammer of Wrath.
+    cps = autos * crit_a + (hs_rate + how_rate) * crit_s + jud_rate * crit_j + (soc_rate + sor_rate) * c_seal
     V = vengeance(cps, stacks=v_stacks, fight=fight)
     src = {}
     src["Auto attacks"] = wd * (1 - DR) * ths * V * f_auto * autos
-    src["Seal of Command"] = soc_rate * (soc_w * IMP_SEALS * wd + sd_soc) * ths * V * (1 + crit_s)
-    src["Holy Strike"] = hs_rate * (hs_w * wn + 93 + 0.2145 * sd) * sa * ths * V * f_spec
-    src["Judgement"] = jud_rate * (186.5 + 0.429 * sd) * IMP_SEALS * ths * V * f_spec
-    src["Seal of Righteousness"] = sor_rate * (67.5 + 0.12 * sd) * IMP_SEALS * ths * V
+    src["Seal of Command"] = soc_rate * (soc_w * IMP_SEALS * wd + sd_soc) * ths * V * (1 + c_seal)
+    # Holy Strike: hs_w x (normalized weapon damage + 93 + 42.9%). Judgement of Righteousness rank 8: 170-187 + 42.9%.
+    # Seal of Righteousness rank 8: 67.5 + 12% with a two-handed weapon, critical hit x2 with a separate roll.
+    src["Holy Strike"] = hs_rate * hs_w * (wn + 93 + 0.429 * sd) * sa * ths * V * f_spec
+    src["Judgement"] = jud_rate * (178.2 + 0.429 * sd) * IMP_SEALS * ths * V * f_jud
+    src["Seal of Righteousness"] = sor_rate * (67.5 + 0.12 * sd) * IMP_SEALS * ths * V * (1 + c_seal)
     src["Hammer of Wrath"] = how_rate * (498 + 0.429 * sd) * V * f_spec
     if extra == "exorcism":   # rank 6: 475-529 Holy damage, 15 sec cooldown, spell (critical hit x1.5)
-        src["Exorcism"] = (502 + 0.429 * sd) * V * (1 + 0.5 * crit_s) / 15
+        src["Exorcism"] = (502 + 0.429 * sd) * V * (1 + 0.5 * c_seal) / 15
     if extra == "consecration":   # Consecrated Ground: +10% Holy damage on the target. 15% of the ticks miss.
         # Forever rank 5 (wowsims Forever, spell 1280349): 8 ticks of 12 + 27 Holy damage (the 27 on the first
         # 4 enemies), 4.2% of spell damage for each tick.
@@ -166,8 +170,11 @@ def retribution(g, version="c16", sa=1.20, crusader=False, ths=THWS, fight=FIGHT
 # off-hand hit), Raging Blows (Whirlwind -3 rage), Improved Execute 2/2 (-5 rage), Flurry 5/5 (+25% attack speed for 3 swings after a critical hit), Death Wish (+20% physical damage,
 # 30 sec, 3 min cooldown: one use in a 2 min fight), Berserker Stance (+3% critical hit).
 # Arms: Two-Handed Weapon Specialization 3/3 (+3%), Weaponmaster 5/5 (axe: +5% critical hit), Improved Slam 2/2
-# (no swing reset, -3 sec cooldown), Battle Stance.
-# Not in the model: Recklessness, Bloodrage, Rend, Sweeping Strikes, Bloodthrill.
+# (no swing reset, -3 sec cooldown), Battle Stance. As the wowsims Forever Arms build: Improved Rend 3/3 (+35%),
+# Spearing Strike (40% normalized weapon damage, 15 rage, 20 sec), Bloodthrill 5/5 (20% of main-hand swings and
+# Heroic Strikes on a target with Rend open Overpower). Rend rank 7: 7 ticks of 21 + 2% of Attack Power, 10 rage,
+# 21 sec, a bleed (no armor).
+# Not in the model: Recklessness, Sweeping Strikes, Hamstring.
 
 def warrior_stats(g, crit_bonus):
     st = (g["str"] + MOTW) * KINGS
@@ -233,9 +240,10 @@ def arms(g, detail=False):
     rate = 1 / sp
     swing_rage = RAGE_SWING * RAGE_2H * sp * (land_a + crit_a) + 0.6 * land_a
     rage = rate * swing_rage + 1 / 3 + BLOODRAGE
-    op_cap = min(1 / 5, (rate + 1 / 6 + 1 / 15) * DODGE)               # Overpower after a dodge
-    use = spend(rage, (("Mortal Strike", 30, 1 / 6), ("Overpower", 5, op_cap), ("Slam", 15, 1 / 15),
-                       ("Heroic Strike", 12 + swing_rage, rate)))
+    # Overpower after a dodge, or after a Bloodthrill proc (20% of main-hand swings and Heroic Strikes)
+    op_cap = min(1 / 5, (rate + 1 / 6 + 1 / 15 + 1 / 20) * DODGE + rate * land_a * 0.20)
+    use = spend(rage, (("Rend", 10, 1 / 21), ("Overpower", 5, op_cap), ("Mortal Strike", 30, 1 / 6),
+                       ("Spearing Strike", 15, 1 / 20), ("Slam", 15, 1 / 15), ("Heroic Strike", 12 + swing_rage, rate)))
     hs = use["Heroic Strike"] / rate
     src = {}
     src["Auto attacks"] = wd * f_a * rate * (1 - hs) * phys
@@ -243,10 +251,12 @@ def arms(g, detail=False):
     src["Mortal Strike"] = (wn + 160) * f_spec * use["Mortal Strike"] * phys
     src["Slam"] = (wd + 87) * f_spec * use["Slam"] * phys
     src["Overpower"] = (wn + 35) * f_op * use["Overpower"] * phys
-    crits = (rate * land_a * crit_a * (1 - hs) + (use["Heroic Strike"] + use["Mortal Strike"] + use["Slam"]) * crit_s
-             + use["Overpower"] * crit_op)
+    src["Spearing Strike"] = 0.40 * wn * f_spec * use["Spearing Strike"] * phys
+    src["Rend"] = 7 * (21 + 0.02 * ap) * 1.35 * land * use["Rend"] * 1.03            # a bleed: no armor
+    crits = (rate * land_a * crit_a * (1 - hs) + (use["Heroic Strike"] + use["Mortal Strike"] + use["Slam"]
+             + use["Spearing Strike"]) * crit_s + use["Overpower"] * crit_op)
     src["Deep Wounds"] = 0.6 * wd / 12 * (1 - 2.718281828 ** (-crits * 12)) * 1.03
-    for k in ("Heroic Strike", "Mortal Strike", "Slam", "Overpower"):
+    for k in ("Heroic Strike", "Mortal Strike", "Slam", "Overpower", "Spearing Strike", "Rend"):
         src[k] *= 1 - EXECUTE
     src["Auto attacks"] += wd * f_a * rate * hs * phys * EXECUTE
     src["Execute"] = execute_dps(rage) * f_spec * phys * EXECUTE

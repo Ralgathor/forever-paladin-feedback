@@ -38,18 +38,18 @@ This section examines the builds that are possible with the proposed trees. It g
 
 | Build | Points and code | Threat per sec (one target / with Consecration) | Mana per sec, fresh level 60 | What it gives |
 | --- | --- | --- | --- | --- |
-| PB1. Raid tank | 8/35/8: v2p0003203-53051321301551-5003 | 533 / 639 | +4.5 | Improved Seals, Unyielding Faith and Reverence. Sacred Duty 2/2. Deflection 5 and Anticipation 5 for the stat targets against a boss (see Crushing blows) |
-| PB2. Raid tank, more critical hit | 5/35/11: v2p00032-53051321301551-5105 | 539 / 646 | −4.5 | Conviction 5 and Benediction 1. No Reverence |
-| PB3. Dungeon tank | 12/34/5: v2p00032030200002-5323130100155122-5 | 499 / 655 | +4.5. Consecration lasts about 76 sec (108 sec with pre-raid mana) | Consecrated Ground and Holy Conduit (C8). Guardian's Favor, Fury's Reach and Shoulder the Burden. Anticipation 3, Deflection 5. No One-Handed Weapon Specialization, no Sacred Duty |
-| PB4. Raid tank, area threat | 12/34/5: v2p00032030200002-532513010015512-5 | 499 / 655 | The same as PB3 | As PB3, with Anticipation 5 and Deflection 5 for the stat targets against a boss. No Fury's Reach |
+| PB1. Raid tank | 8/35/8: v2p0003203-53051321301551-5003 | 554 / 645 | +4.5 | Improved Seals, Unyielding Faith and Reverence. Sacred Duty 2/2. Deflection 5 and Anticipation 5 for the stat targets against a boss (see Crushing blows) |
+| PB2. Raid tank, more critical hit | 5/35/11: v2p00032-53051321301551-5105 | 560 / 652 | −4.5 | Conviction 5 and Benediction 1. No Reverence |
+| PB3. Dungeon tank | 12/34/5: v2p00032030200002-5323130100155122-5 | 518 / 661 | +4.5. Consecration lasts about 76 sec (108 sec with pre-raid mana) | Consecrated Ground and Holy Conduit (C8). Guardian's Favor, Fury's Reach and Shoulder the Burden. Anticipation 3, Deflection 5. No One-Handed Weapon Specialization, no Sacred Duty |
+| PB4. Raid tank, area threat | 12/34/5: v2p00032030200002-532513010015512-5 | 518 / 661 | The same as PB3 | As PB3, with Anticipation 5 and Deflection 5 for the stat targets against a boss. No Fury's Reach |
 
 - **Holy Shield needs 31 Protection points.** A tank build with only useful points uses 33–35.
 - **Bosses and dungeons.** Only enemies that are 3 or more levels above you can hit with crushing blows. Dungeon enemies are level 62 or lower. Thus, a dungeon tank does not need the full Anticipation. PB3 uses 2 of these points for Fury's Reach. PB3 and PB4 have only these 2 points of difference.
 - **Threat values** come from the threat model script (models/threat/run_tables.py) with the gear of Threat, part 1. Consecrated Ground adds 10% to all Holy damage on targets in Consecration. The mana values come from Analysis, Mana.
 - **Raid tank: PB1 is better.** PB2 gives only +1% threat and loses 9 mana per sec.
-- **Area threat and mana together.** With C8, Holy Conduit is in Protection row 2. PB3 and PB4 have Consecrated Ground and Holy Conduit together. They skip One-Handed Weapon Specialization (about −24 threat per sec on one target) and Sacred Duty. Reckoning (C11) has more value against groups: each block, dodge and parry can give a charge.
-- **One build can have both.** v2p00032030200002-530503013015512-5 (12/34/5) has Consecrated Ground, Holy Conduit and One-Handed Weapon Specialization, with Anticipation 5 and Deflection 5: 523 / 680 threat per sec. It skips Shoulder the Burden, Guardian's Favor and Sacred Duty. Thus, the tank choice is threat or utility, not one target or a group.
-- **Threat per sec for each point:** Holy Shield 260 (1 point), Redoubt 17, Swift Judgement 11 (1 point), Reckoning 10, One-Handed Weapon Specialization 8, Improved Seals 5, Precision 3, Conviction 3, Iron Creed 2 (and −10% damage taken), Vindication about 0.5 (and about −1.5% boss melee damage, if no Demoralizing Shout or Roar is on the boss).
+- **Area threat and mana together.** With C8, Holy Conduit is in Protection row 2. PB3 and PB4 have Consecrated Ground and Holy Conduit together. They skip One-Handed Weapon Specialization (about −26 threat per sec on one target) and Sacred Duty. Reckoning (C11) has more value against groups: each block, dodge and parry can give a charge.
+- **One build can have both.** v2p00032030200002-530503013015512-5 (12/34/5) has Consecrated Ground, Holy Conduit and One-Handed Weapon Specialization, with Anticipation 5 and Deflection 5: 544 / 690 threat per sec. It skips Shoulder the Burden, Guardian's Favor and Sacred Duty. Thus, the tank choice is threat or utility, not one target or a group.
+- **Threat per sec for each point:** Holy Shield 253 (1 point), Redoubt 17, Swift Judgement 13 (1 point), Reckoning 12, One-Handed Weapon Specialization 9, Improved Seals 7, Precision 4, Conviction 3, Iron Creed 2 (and −10% damage taken), Vindication about 0.5 (and about −1.5% boss melee damage, if no Demoralizing Shout or Roar is on the boss).
 - **Divine Strength (removed by C8).** +10% Strength gave a tank about +15 Strength with pre-raid gear: about +30 Attack Power and +1 block value. Thus, all tank builds skipped it. Retribution received about +7 DPS for 5 points.
 
 ## 4. Retribution
@@ -57,7 +57,7 @@ This section examines the builds that are possible with the proposed trees. It g
 | Build | Points and code | Raid DPS (with Consecration) | PvP burst (one stun) | What it gives |
 | --- | --- | --- | --- | --- |
 | RB1. Raid | 10/7/34: v2p000320302-032000000000002-0325531201330321 | About 370 (420) | About 1,830 | Vindication 5 (C8). The best build on one target |
-| RB2. Raid with Consecration | 12/7/32: v2p00032030200002-032000000000002-0325531001330321 | 370 (450) | About 1,830 | Consecrated Ground (see W16). Vindication 5 opens row 6. The build of Analysis, Damage |
+| RB2. Raid with Consecration | 12/7/32: v2p00032030200002-032000000000002-0325531001330321 | 380 (460) | About 1,830 | Consecrated Ground (see W16). Vindication 5 opens row 6. The build of Analysis, Damage |
 | RB3. PvP, Hammer of Justice each 45 sec | 0/14/37: v2p-332000010300002-0325531221331321 | About 345 | About 2,240 | Swift Judgement, Repentance, Eye for an Eye and Guardian's Favor. Redoubt 3 opens Protection row 3 |
 | RB4. PvP, fear and heals | 7/7/37: v2p000320002-032000000000002-0325531221331321 | 370 | About 1,830 | Unyielding Faith (Holy row 1, C8), Infusion of Light and Repentance |
 | RB5. Reckoning (Protection and Retribution) | 0/26/25: v2p-532300210215002-5005031211331 | About 280 | About 3,020 | The build of PvP burst check (see W6) |
@@ -74,13 +74,13 @@ This section examines the builds that are possible with the proposed trees. It g
 | --- | --- | --- | --- | --- |
 | Damage | Shock-Retribution | 21/0/30: v2p50232030201012--032533110133032 | 351 DPS (95% of RB2) for 2 min. Holy Shock replaces Twist of Light. After about 2 min, the mana is too low for Holy Shock: 305 DPS (82%) | Good for short fights and PvP. In PvP, one Holy Shock adds about 560 damage to the burst (about 2,340) |
 | Damage | Shockadin | 38/0/13: v2p5023213225131251--03251002 | 311 DPS. The mana is zero after 30–50 sec. 63–70% for 2 min | Not good in raids |
-| Tank | Retribution with Righteous Fury and a two-handed weapon | 12/7/32 (RB2) | 75–95% of the PB2 threat (539 threat per sec). About 1.65 times the damage taken | Possible in easy dungeons. The healer must do more work |
-| Tank | Holy Shock tank | 30/21/0: v2p502320312013125-53201321301 | 54% of the PB2 threat (79% with Consecration). The mana lasts about 2 min (35 sec with Consecration) | For leveling and solo play |
+| Tank | Retribution with Righteous Fury and a two-handed weapon | 12/7/32 (RB2) | 75–95% of the PB2 threat (560 threat per sec). About 1.65 times the damage taken | Possible in easy dungeons. The healer must do more work |
+| Tank | Holy Shock tank | 30/21/0: v2p502320312013125-53201321301 | 57% of the PB2 threat (79% with Consecration). The mana lasts about 2 min (35 sec with Consecration) | For leveling and solo play |
 | PvP | Holy Shock with Iron Creed | 21/30/0: v2p50232030201012-5320132130145 | Righteous Fury stays active in PvP. Iron Creed then gives −10% damage taken. The build also has Templar's Bulwark, Reckoning and Holy Shock | Strong survival. See W17 |
 | Tank | Healing tank | 29/22/0: v2p53202132251010002-5320131130110001 | See part 6 | Not good |
 
 - **Holy Shock (rank 4).** 334–362 damage or 307–333 healing, 325 mana, 10 sec cooldown, 42.9% spell damage coefficient. On cooldown, it costs 32.5 mana per sec.
-- **Threat for each mana point:** Holy Shield 10.8, Judgement 7.4, Holy Shock 2.6, Consecration 1.6 (one target).
+- **Threat for each mana point:** Holy Shield 10.5, Judgement 8.5, Holy Shock 2.8, Consecration 1.4 (one target).
 - **Healing Light needs 28 Holy points.** A healer with fewer Holy points loses 23% healing. Thus, no healer build uses a different main tree.
 - **Retribution tank.** The values use attacks from the front (14% parry) and dungeon buffs (Blessing of Might only). From behind with raid buffs, the model gives 106%. That value is not correct for a tank.
 - **The 52-point gaps.** Holy Shock needs 21 Holy points. Twist of Light and Holy Shield each need 31 points in their tree. Do not move Holy Shock up, or Twist of Light or Holy Shield down, without a new check of these two hybrids.
@@ -91,18 +91,18 @@ A tank can heal itself to get threat.
 
 - **Rules (Classic).** Each point of effective healing gives 0.5 threat. Overhealing gives no threat. The threat is divided between all enemies in the fight.
 - **Righteous Fury.** Its Forever text says "Holy attacks". No test on heals exists (see Open questions). The table gives the two cases.
-- **Base build.** The table uses the dungeon tank of version 1 (8/33/10: Conviction, Holy Conduit and Benediction). It has the threat talents of PB2: 539 threat per sec. The healing threat does not change with C8.
+- **Base build.** The table uses the dungeon tank of version 1 (8/33/10: Conviction, Holy Conduit and Benediction). It has the threat talents of PB2: 560 threat per sec. The healing threat does not change with C8.
 
 | Plan, one target | Healing on yourself per sec | Threat per sec (Righteous Fury ×1 / ×1.9 on heals) | Mana per sec | The mana lasts |
 | --- | --- | --- | --- | --- |
-| Dungeon tank (version 1), no heals | 0 | 539 / 539 | +14 | All the fight |
-| Dungeon tank (version 1) and 1 Flash of Light each 10 sec | 42 | 547 / 566 | 0 | All the fight |
-| Dungeon tank (version 1) and 1 Holy Light each 10 sec | 183 | 609 / 691 | −52 | 66 sec |
-| Healing tank (29/22/0), 1 Holy Light and 1 Flash of Light each 10 sec | 293 | 322 / 454 | −68 | 50 sec |
-| Healing tank (29/22/0), 2 Holy Light and 2 Flash of Light each 10 sec | 586 | 438 / 701 | −143 | 24 sec |
+| Dungeon tank (version 1), no heals | 0 | 560 / 560 | +14 | All the fight |
+| Dungeon tank (version 1) and 1 Flash of Light each 10 sec | 42 | 565 / 584 | 0 | All the fight |
+| Dungeon tank (version 1) and 1 Holy Light each 10 sec | 183 | 625 / 708 | −52 | 66 sec |
+| Healing tank (29/22/0), 1 Holy Light and 1 Flash of Light each 10 sec | 293 | 335 / 467 | −68 | 50 sec |
+| Healing tank (29/22/0), 2 Holy Light and 2 Flash of Light each 10 sec | 586 | 445 / 709 | −143 | 24 sec |
 
 - **A healing tank is not a good build.** The mana lasts 24–50 sec. It has no Holy Shield and no Iron Creed.
-- **Self-healing is a good tool.** If Righteous Fury multiplies healing threat, one Flash of Light each 10 sec gives +5% threat at no mana cost. One Holy Light each 10 sec gives +28% threat for about 1 min. With Infusion of Light (PB3, PB4), Holy Light has a 1.5 sec cast after Holy Strike.
+- **Self-healing is a good tool.** If Righteous Fury multiplies healing threat, one Flash of Light each 10 sec gives +4% threat at no mana cost. One Holy Light each 10 sec gives +26% threat for about 1 min. With Infusion of Light (PB3, PB4), Holy Light has a 1.5 sec cast after Holy Strike.
 - **With 4 enemies,** each enemy gets 25% of the healing threat in this table.
 - The values include the melee swings that stop during a cast. Healing threat is only possible when you have lost that much health.
 
