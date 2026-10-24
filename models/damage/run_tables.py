@@ -12,7 +12,7 @@ def pct(a, b):
 # Mana of Retribution, build RB2 (Analysis, Mana, parts 3 and 5). Costs from wowsims Forever.
 # Mana pool: 1,232 + 15 x Intellect (Classic formula: base 1,512, the first 20 Intellect give 1 mana each), with Mark
 # of the Wild and Kings, from the Retribution gear of each tier (fresh level 60: 87 Intellect, 2,931 mana with buffs and Divine Intellect 2).
-# Retribution gear has no mp5. Benediction 5/5 (Protection row 1, C8): instant spells x0.90. Twist of Light: Seals x0.80.
+# Retribution gear has no mp5. Benediction 5/5 (Protection row 1, M11): instant spells x0.90. Twist of Light: Seals x0.80.
 # Holy Conduit (Retribution row 2): Consecration (565) x0.60. Sanctified Judgement returns 60% of the base Seal cost, before the
 # talent cost decreases: 210 x 0.6 = 126 (beta test). Judgement: 6% of base mana (91). Holy Strike: 20.
 # Hammer of Wrath rank 3: 425 x0.60, in the execute phase. Income: Reverence 50% (C1) at 130 Spirit (10.3) and

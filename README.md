@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 20 changes (C1–C19 and C22) and 4 moves (M4–M6 and M8) for the Holy, Protection and Retribution trees. Three changes are new talents.
+- **Proposals:** 19 changes (C1–C4, C6–C19 and C22) and 7 moves (M4–M6 and M8–M11) for the Holy, Protection and Retribution trees. Three changes are new talents.
 - **Talent calculator:** you can try the proposals and compare them with the beta trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
 - **Builds:** the best builds for each spec and role (raid, dungeon, PvP), with calculator codes. Also the builds that use a different tree for a role.
@@ -22,13 +22,14 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C2 Lingering Light (new):** a critical heal adds a heal over time of 10/20% of the heal.
 - **C3 Infusion of Light:** all Holy Shock, Flash of Light and Holy Strike hits make the next Holy Light faster (beta: critical hits only). It moves from row 4 to row 2.
 - **C4 Healing Light:** 3 ranks, 10/20/30% (beta: 4/8/12%), with C19. It moves from row 2 to row 6.
-- **C5 Improved Seals:** it moves from row 2 to row 1. It keeps 3 ranks, 5/10/15%.
+- **M9 Improved Seals:** row 2 → row 1. It keeps 3 ranks, 5/10/15%.
+- **M10 Unyielding Faith:** row 2 → row 1, to fill the place of Divine Strength (C8).
 
 **Protection**
 
 - **C6 Redoubt:** each Holy Shield cast also starts it. The block chance stays high. Most crushing blows stop.
 - **C7 Iron Creed:** −2–10% damage taken while Righteous Fury is active (beta: for 6 sec after Holy Strike).
-- **C8 Toughness and Divine Strength:** removed. Benediction goes from Retribution row 1 to Protection row 1, with its 5 beta ranks (2–10%). Vindication goes to Retribution row 2 with 5 ranks (+1–5% Attack Power). Unyielding Faith goes to Holy row 1. Precision, Guardian's Favor, Anticipation and Holy Conduit stay in their beta place. Each point in rows 1 and 2 then has a use for its spec.
+- **C8 Toughness and Divine Strength:** removed. Vindication goes to Retribution row 2 with 5 ranks (+1–5% Attack Power). Benediction (M11) and Unyielding Faith (M10) fill row 1 of Protection and Holy. Precision, Guardian's Favor, Anticipation and Holy Conduit stay in their beta place. Each point in rows 1 and 2 then has a use for its spec.
 - **C9 Improved Righteous Fury:** removed. Iron Creed alone gives −10% damage taken.
 - **C10 Shoulder the Burden (new) replaces Improved Seal of Fury:** 50% of the threat of an ally moves to you. 5 min cooldown (4 min with Sacred Duty 2/2). It has no effect in PvP.
 - **C11 Reckoning:** block, dodge and parry also give charges (once each 4 sec). Holy Strike releases up to 2 charges.
@@ -37,6 +38,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C14 Holy Shield:** each block also does 200% of your block value as Holy damage. Paladin threat then increases with gear, as Warrior and Druid threat does.
 - **M4 Improved Hammer of Justice:** row 4 → row 3.
 - **M5 Swift Judgement:** row 4 → row 3, with no requirement.
+- **M11 Benediction:** Retribution row 1 → Protection row 1, with its 5 beta ranks (2–10%). It takes the place of Toughness (C8).
 - **C22 Guardian's Favor:** Lay on Hands drains only 75/50% of your remaining mana (beta: all of it). The talent keeps its Blessing of Protection and Blessing of Freedom effects. Alternative C22a: the spell drains 50% for all Paladins.
 
 **Retribution**

@@ -4,7 +4,7 @@ The Protection proposals give:
 
 - A fix for crushing blows (C6). This is the largest difference between the Paladin and the Warrior.
 - A simpler tree (C7, C8, C9, C10, M4, M5).
-- Rows 1 and 2 with a use for each point (C8).
+- Rows 1 and 2 with a use for each point (C8, M11).
 - A Reckoning that works at level 60 (C11).
 - A ranged pull (C12).
 - More stable mana for tanks (C13).
@@ -15,7 +15,7 @@ The Protection proposals give:
 
 | Row (points necessary) | Talents | Points in the row |
 | --- | --- | --- |
-| 1 (0) | Benediction (C8), Redoubt (C6) | 10 |
+| 1 (0) | Benediction (M11), Redoubt (C6) | 10 |
 | 2 (5) | Precision, Guardian's Favor (C22), Anticipation | 10 |
 | 3 (10) | Swift Judgement (M5), Improved Hammer of Justice (M4), Shield Specialization (C13), Sacred Duty | 9 |
 | 4 (15) | Fury's Reach (C12), One-Handed Weapon Specialization, Shoulder the Burden (C10) | 6 |
@@ -44,15 +44,15 @@ The Protection proposals give:
 - **Total.** −10% damage taken. This is the same as Defensive Stance (Warrior). Improved Righteous Fury added to this (about 15% total). C9 removes it.
 - **Rule exception.** Iron Creed works as an improved Righteous Fury. But it needs 25 Protection points. Monitor it in PvP, because all specs can use Righteous Fury.
 
-## C8. Toughness and Divine Strength: removed, Benediction to Protection row 1
+## C8. Toughness and Divine Strength: removed, Vindication with 5 ranks
 
-- **Change.** C8 removes Toughness (Protection row 1) and Divine Strength (Holy row 1). Three talents move to fill rows 1 and 2:
+- **Change.** C8 removes Toughness (Protection row 1) and Divine Strength (Holy row 1). Three talents move to fill rows 1 and 2. Benediction (M11) and Unyielding Faith (M10) only move. Vindication also has 5 ranks (C8):
 
 | Talent | Beta | Proposed | Text |
 | --- | --- | --- | --- |
-| Benediction | Retribution row 1, column 3 | Protection row 1, column 2 | The same: 5 ranks, 2/4/6/8/10% |
-| Vindication | Retribution row 3, column 1 | Retribution row 2, column 3 | 5 ranks (see below) |
-| Unyielding Faith | Holy row 2, column 4 | Holy row 1, column 2 | The same |
+| Benediction (M11) | Retribution row 1, column 3 | Protection row 1, column 2 | The same: 5 ranks, 2/4/6/8/10% |
+| Vindication (C8) | Retribution row 3, column 1 | Retribution row 2, column 3 | 5 ranks (see below) |
+| Unyielding Faith (M10) | Holy row 2, column 4 | Holy row 1, column 2 | The same |
 
 - **The other talents stay in their beta place.** Precision, Guardian's Favor and Anticipation stay in Protection row 2. Holy Conduit stays in Retribution row 2. Only Conviction moves in Retribution (M8).
 - **Benediction text.** "Reduces the Mana cost of all instant cast spells and abilities by 2/4/6/8/10%." The same as the beta.
@@ -60,13 +60,13 @@ The Protection proposals give:
 - **Why remove Toughness.** Forever removed flat armor talents for tanks. Toughness (Warrior) was removed. Toughness (Shaman) now gives Stamina. Thick Hide (Druid) increases with Defense. Toughness (Paladin) was the last flat armor talent.
 - **Why remove Divine Strength.** +10% Strength gives a tank about +15 Strength with pre-raid gear. This is less than 1 threat per sec for each point. Retribution receives about +7 DPS for 5 points, the least of its talents (see Analysis, Builds).
 - **Goal.** Each point in rows 1 and 2 has a use for its spec. The other specs keep a reason to put points in each tree (design rule 2). The other talents stay near the beta tree.
-- **Why Benediction goes to Protection.** It takes the place of Toughness. A tank casts many instant spells: Holy Shield, Judgement, Seals and Consecration. In the beta, a tank needs a Retribution dip for Benediction. Now the tank has a mana talent in its own tree.
+- **Why Benediction goes to Protection (M11).** It takes the place of Toughness. A tank casts many instant spells: Holy Shield, Judgement, Seals and Consecration. In the beta, a tank needs a Retribution dip for Benediction. Now the tank has a mana talent in its own tree.
 - **Protection.** A tank uses Redoubt, Precision (threat), Anticipation (Defense against bosses) and Guardian's Favor (saves). Benediction is the mana choice. At 5/5, it saves about 4 mana per sec without Consecration and 11 with Consecration (see Analysis, Mana).
 - **Retribution.** Benediction 5 opens Protection row 2. Retribution then takes Precision 3 (+3% hit). This dip is 8 points. Benediction also decreases the cost of Judgement, Holy Strike, Seals and Consecration.
 - **Holy.** Benediction 5 opens Protection row 2. Holy then takes Guardian's Favor 2. Holy Shock and Cleanse cost 10% less. This dip is 7 points.
 - **Holy Conduit.** It stays in Retribution row 2, as in the beta. A tank takes it with Deflection 5 and Holy Conduit 2 (7 points). Deflection is also a tank talent. With Benediction and Holy Conduit, Consecration on cooldown costs 76 mana per sec, not 112 (see Analysis, Mana).
 - **Why Vindication goes to row 2.** It takes the row 2 place of Conviction (M8). With 5 ranks, Retribution keeps 41 points. +5% Attack Power gives about +6 DPS. A tank has the boss debuff with 10 Retribution points (beta: 13).
-- **Why Unyielding Faith goes to row 1.** Improved Seals (C5) keeps its 3 beta ranks. Unyielding Faith fills the other 2 points of Holy row 1. Retribution and Protection open Holy row 2 with Improved Seals 3 and Unyielding Faith 2, then take Reverence. Iron Will (Warrior) is also in row 1.
+- **Why Unyielding Faith goes to row 1 (M10).** Improved Seals (M9) keeps its 3 beta ranks. Unyielding Faith fills the other 2 points of Holy row 1. Retribution and Protection open Holy row 2 with Improved Seals 3 and Unyielding Faith 2, then take Reverence. Iron Will (Warrior) is also in row 1.
 - **Shape.** Each row 1 has 10 points. Holy uses 5 + 3 + 2, as Fire (Mage). Protection and Retribution use 5 + 5. Holy has 43 points, Protection 47 and Retribution 41.
 - **Parity.** Convection (Shaman) gives −10% mana cost for 5 points in Elemental row 1. Benediction gives the same in Protection row 1.
 
@@ -173,6 +173,12 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 - In the beta, Swift Judgement requires Improved Seal of Fury. C10 removes Improved Seal of Fury. Thus, Swift Judgement has no requirement.
 - Row 3 has space after C9 and C10.
 
+## M11. Benediction: Retribution row 1 → Protection row 1
+
+- **Text.** "Reduces the Mana cost of all instant cast spells and abilities by 2/4/6/8/10%." 5 ranks, the same as the beta.
+- **Position.** Protection row 1, column 2. It takes the place of Toughness (C8).
+- **Why.** A tank casts many instant spells. Holy and Retribution open Protection row 2 with it. See C8 for the full reason.
+
 ## C22. Guardian's Favor: Lay on Hands drains less mana
 
 - **Proposed text.** "Reduces the cooldown of your Blessing of Protection by 1/2 min, increases the duration of your Blessing of Freedom by 3/6 sec, and your Lay on Hands drains only 75/50% of your remaining mana." 2 ranks, the same as the beta, in row 2.
@@ -216,7 +222,7 @@ At 900 healing power, Flash of Light and Holy Light give 5.75 healing for each m
 **Why Guardian's Favor**
 
 - **Theme.** It improves the saves that the Paladin casts on allies: Blessing of Protection and Blessing of Freedom. Lay on Hands is the third save of this type.
-- **Row 2.** Holy takes it with Benediction 5: 7 Protection points (C8, design rule 2).
+- **Row 2.** Holy takes it with Benediction 5: 7 Protection points (M11, design rule 2).
 - **Builds.** All Holy builds, two of the five Retribution builds (RB3, RB5) and two of the four Protection builds (PB3, PB4) take it (see Analysis, Builds). For these builds, C22 costs no points. The other builds keep the full drain.
 - **Precedent.** Sacred Duty gives two effects in one talent. Weaponmaster (Warrior) merges four weapon talents. Forever removes Improved Lay on Hands. Thus, C22 does not add a talent for one spell.
 - **Design rule 1.** Lay on Hands is not a buff. Thus, C22 does not break the rule.

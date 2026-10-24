@@ -14,7 +14,7 @@ These proposals connect the melee attacks of Retribution to its Holy spells. The
 | 6 (25) | Champion of the Light, Instrument of Law | 5 |
 | 7 (30) | Twist of Light (C17) | 1 |
 
-Retribution has 41 points (beta: 44). C8 moves Benediction to Protection row 1. Vindication goes to row 2, column 3, with 5 ranks (see Protection, C8).
+Retribution has 41 points (beta: 44). M11 moves Benediction to Protection row 1. Vindication goes to row 2, column 3, with 5 ranks (see Protection, C8).
 
 ## C15. Conviction: attacks and spells
 
@@ -58,7 +58,7 @@ Retribution has 41 points (beta: 44). C8 moves Benediction to Protection row 1. 
 
 ## M8. Conviction: row 2 → row 1
 
-- **Move.** Conviction goes to row 1, column 3. C8 moves Benediction from this place to Protection row 1. The text of Conviction does not change. Conviction keeps the C15 text.
+- **Move.** Conviction goes to row 1, column 3. M11 moves Benediction from this place to Protection row 1. The text of Conviction does not change. Conviction keeps the C15 text.
 - **Parity.** All other +5% critical hit talents are in row 1: Cruelty (Warrior), Malice (Rogue), Lethal Attacks (Hunter) and Thundering Strikes (Shaman).
 - **Holy.** A Holy Paladin receives +5% critical heal chance for 5 Retribution points, not 10. A Restoration Shaman also pays 5 points for Thundering Strikes. A Holy build can then also take the Protection dip: 35/11/5 (see Analysis, Tree balance).
 - **Retribution.** Retribution has the critical hit at a lower level.
