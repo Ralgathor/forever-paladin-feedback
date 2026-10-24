@@ -96,8 +96,7 @@ def gear(tier=0, flat=False, sd_fixed=False):
 
 # ---------------------------------------------------------------- Retribution (parts 1-4, 7, 8)
 # Build 12/7/32 (RB2). Conviction +5% critical hit. Precision +3% hit. Two-Handed Weapon Specialization x1.06.
-# Improved Seals x1.15 (Seals and Judgements). Vindication 5/5: the model keeps the value of Divine Strength 5/5 of
-# version 1 (+10% Strength, about +7 DPS), as Analysis, Builds, part 4 gives the same value for both.
+# Improved Seals x1.15 (Seals and Judgements). Vindication 5/5 (C8): +5% Attack Power, full uptime on a boss.
 THWS, IMP_SEALS = 1.06, 1.15
 NORM_2H = 3.3
 
@@ -114,10 +113,10 @@ RB5 = dict(RB2, is_=0, cg=0, ij=0, vind=0, cotl=0, iol=0, tol=0, sj=1)    # 0/26
 SHOCK_RET = dict(RB2, prec=0, vind=3, tol=0, di=5, hsk=1)                 # 21/0/30
 RET_BUILDS = (("RB1", RB1), ("RB2", RB2), ("RB3", RB3), ("RB4", RB4), ("RB5", RB5))
 
-def ret_stats(g, cotl=None, ap_pct=0.0, str_pct=None, tal=RB2):
+def ret_stats(g, cotl=None, ap_pct=None, str_pct=0.0, tal=RB2):
     t = lambda k: tal.get(k, 0)
     cotl = 0.20 * t("cotl") if cotl is None else cotl
-    str_pct = 0.02 * t("vind") if str_pct is None else str_pct
+    ap_pct = 0.01 * t("vind") if ap_pct is None else ap_pct     # Vindication: +1-5% Attack Power
     st = (g["str"] + MOTW) * KINGS * (1 + str_pct)
     ap = (st * 2 + g["ap_items"] + MIGHT + SHOUT) * (1 + ap_pct)
     intel = (g["int"] + MOTW) * KINGS * (1 + 0.02 * t("di"))
@@ -137,6 +136,8 @@ def retribution(g, version="c16", sa=None, crusader=False, ths=None, fight=FIGHT
     t = lambda k: tal.get(k, 0)
     if version == "c16" and not t("tol"):
         version = "c16_soc"
+    if version.startswith("beta"):
+        kw = dict(dict(str_pct=0.10, ap_pct=0.0), **kw)                 # beta: Divine Strength 5/5 (+10% Strength), no Vindication
     sa = (1 + 0.20 * t("sa")) if sa is None else sa
     ths = (1 + 0.02 * t("thws")) if ths is None else ths
     imp = 1 + 0.05 * t("is_")
@@ -165,7 +166,7 @@ def retribution(g, version="c16", sa=None, crusader=False, ths=None, fight=FIGHT
     hsk_rate = t("hsk") / 10                                             # Holy Shock: 10 sec cooldown
     # Vengeance: critical hits of auto attacks, Seals, Holy Strike, Judgement, Hammer of Wrath and Holy Shock.
     cps = (autos * crit_a + (hs_rate + how_rate) * crit_s + jud_rate * crit_j + (soc_rate + sor_rate) * c_seal
-           + hsk_rate * 0.85 * c_seal)
+           + hsk_rate * c_seal)
     V = vengeance(cps, per=0.01 * t("veng"), stacks=v_stacks, fight=fight)
     src = {}
     src["Auto attacks"] = wd * (1 - DR) * ths * V * f_auto * autos
@@ -176,8 +177,8 @@ def retribution(g, version="c16", sa=None, crusader=False, ths=None, fight=FIGHT
     src["Judgement"] = jud_rate * (178.2 + 0.429 * sd) * imp * ths * V * f_jud
     src["Seal of Righteousness"] = sor_rate * (67.5 + 0.12 * sd) * imp * ths * V * (1 + c_seal)
     src["Hammer of Wrath"] = how_rate * (498 + 0.429 * sd) * V * f_spec
-    if hsk_rate:   # rank 4: 334-362 Holy damage + 42.9%, spell (critical hit x1.5). Spell hit as Consecration
-        src["Holy Shock"] = hsk_rate * (348 + 0.429 * sd) * 0.85 * V * (1 + 0.5 * c_seal)
+    if hsk_rate:   # rank 4: 334-362 Holy damage + 42.9%, spell (critical hit x1.5). The build has 18% spell hit: no miss
+        src["Holy Shock"] = hsk_rate * (348 + 0.429 * sd) * V * (1 + 0.5 * c_seal)
     if extra == "exorcism":   # rank 6: 475-529 Holy damage, 15 sec cooldown, spell (critical hit x1.5)
         src["Exorcism"] = (502 + 0.429 * sd) * V * (1 + 0.5 * c_seal) / 15
     if extra == "consecration":   # Consecrated Ground: +5% Holy damage on the target for each point. 15% of the ticks miss.

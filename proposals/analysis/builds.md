@@ -56,31 +56,31 @@ This section examines the builds that are possible with the proposed trees. It g
 
 | Build | Points and code | Raid DPS (with Consecration) | PvP burst (one stun) | What it gives |
 | --- | --- | --- | --- | --- |
-| RB1. Raid | 10/7/34: v2p000320302-032000000000002-0325531201330321 | 375 (422) | About 1,830 | Vindication 5 (C8). The best build on one target |
-| RB2. Raid with Consecration | 12/7/32: v2p00032030200002-032000000000002-0325531001330321 | 375 (452) | About 1,830 | Consecrated Ground (see W16). Vindication 5 opens row 6. The build of Analysis, Damage |
+| RB1. Raid | 10/7/34: v2p000320302-032000000000002-0325531201330321 | 374 (421) | About 1,830 | Vindication 5 (C8). The best build on one target |
+| RB2. Raid with Consecration | 12/7/32: v2p00032030200002-032000000000002-0325531001330321 | 374 (451) | About 1,830 | Consecrated Ground (see W16). Vindication 5 opens row 6. The build of Analysis, Damage |
 | RB3. PvP, Hammer of Justice each 45 sec | 0/14/37: v2p-332000010300002-0325531221331321 | 358 (405) | About 2,240 | Swift Judgement, Repentance, Eye for an Eye and Guardian's Favor. Redoubt 3 opens Protection row 3 |
-| RB4. PvP, fear and heals | 7/7/37: v2p000320002-032000000000002-0325531221331321 | 375 (422) | About 1,830 | Unyielding Faith (Holy row 1, C8), Infusion of Light and Repentance |
+| RB4. PvP, fear and heals | 7/7/37: v2p000320002-032000000000002-0325531221331321 | 374 (421) | About 1,830 | Unyielding Faith (Holy row 1, C8), Infusion of Light and Repentance |
 | RB5. Reckoning (Protection and Retribution) | 0/26/25: v2p-532300210215002-5005031211331 | 278 (322) | About 3,020 | The build of PvP burst check (see W6) |
 
 - **Raid DPS values** come from the damage model script (models/damage/run_tables.py) with the gear of Analysis, Damage, part 1. The value in brackets uses Consecration on cooldown.
-- **DPS for each point:** Seal of Command 82 (1 point), Twist of Light 47 (1 point), Sacred Arbiter 9 (1 point), Two-Handed Weapon Specialization 6.6, Vengeance 5.3, Improved Judgement 5.2, Conviction 5.0, Precision 4.9, Improved Seals 4.7, Champion of the Light 4.4, Instrument of Law 1.9, Vindication 1.4 (5 ranks, C8).
+- **DPS for each point:** Seal of Command 82 (1 point), Twist of Light 47 (1 point), Sacred Arbiter 9 (1 point), Two-Handed Weapon Specialization 6.6, Vengeance 5.3, Improved Judgement 5.2, Conviction 5.0, Precision 4.9, Improved Seals 4.7, Champion of the Light 4.4, Instrument of Law 1.9, Vindication 1.3 (5 ranks, C8).
 - **About 6 points are free.** Each choice gives 1.5% DPS or less: Vindication, Consecrated Ground, Infusion of Light or Pursuit of Justice.
 - **The dips into Holy and Protection are strong:** Improved Seals +6%, Precision +4%. The Protection dip also gives Guardian's Favor and Holy Conduit (C8). Thus, rule 1 of Tree balance works for Retribution.
-- **C8 and Retribution.** Divine Strength gave about +7 DPS. Vindication 5 gives about +7 DPS with full uptime. RB2 does not change. RB1 had Vindication 3: it loses about 4 DPS (−1%).
+- **C8 and Retribution.** Divine Strength gave about +7 DPS. Vindication 5 gives about +6 DPS with full uptime. RB2 loses about 1 DPS. RB1 had Vindication 3: it loses about 4 DPS (−1%).
 - **Holy Power is not good for Retribution.** A 30/0/21 build loses Twist of Light and Vengeance: −23%.
 
 ## 5. Builds outside the main tree
 
 | Role | Build | Points and code | Result | Status |
 | --- | --- | --- | --- | --- |
-| Damage | Shock-Retribution | 21/0/30: v2p50232030201012--032533110133032 | 350 DPS (93% of RB2) for 2 min. Holy Shock replaces Twist of Light. After about 2 min, the mana is too low for Holy Shock: 303 DPS (81%) | Good for short fights and PvP. In PvP, one Holy Shock adds about 560 damage to the burst (about 2,340) |
+| Damage | Shock-Retribution | 21/0/30: v2p50232030201012--032533110133032 | 357 DPS (96% of RB2) for 2 min. Holy Shock replaces Twist of Light. After about 2 min, the mana is too low for Holy Shock: 303 DPS (81%) | Good for short fights and PvP. In PvP, one Holy Shock adds about 560 damage to the burst (about 2,340) |
 | Damage | Shockadin | 38/0/13: v2p5023213225131251--03251002 | 311 DPS. The mana is zero after 30–50 sec. 63–70% for 2 min | Not good in raids |
-| Tank | Retribution with Righteous Fury and a two-handed weapon | 12/7/32 (RB2) | 91% of the PB2 threat (512 against 560 threat per sec). With Consecration, 100% of PB2 with Consecration (655 against 652). About 1.65 times the damage taken | Possible in easy dungeons. The healer must do more work |
+| Tank | Retribution with Righteous Fury and a two-handed weapon | 12/7/32 (RB2) | 91% of the PB2 threat (510 against 560 threat per sec). With Consecration, 100% of PB2 with Consecration (653 against 652). About 1.65 times the damage taken | Possible in easy dungeons. The healer must do more work |
 | Tank | Holy Shock tank | 30/21/0: v2p502320312013125-53201321301 | 57% of the PB2 threat (79% with Consecration). The mana lasts about 2 min (35 sec with Consecration) | For leveling and solo play |
 | PvP | Holy Shock with Iron Creed | 21/30/0: v2p50232030201012-5320132130145 | Righteous Fury stays active in PvP. Iron Creed then gives −10% damage taken. The build also has Templar's Bulwark, Reckoning and Holy Shock | Strong survival. See W17 |
 | Tank | Healing tank | 29/22/0: v2p53202132251010002-5320131130110001 | See part 6 | Not good |
 
-- **Holy Shock (rank 4).** 334–362 damage or 307–333 healing, 325 mana, 10 sec cooldown, 42.9% spell damage coefficient. On cooldown, it costs 32.5 mana per sec.
+- **Holy Shock (rank 4).** 334–362 damage or 307–333 healing, 325 mana, 10 sec cooldown, 42.9% spell damage coefficient. On cooldown, it costs 32.5 mana per sec. Shock-Retribution has 18% spell hit: Holy Shock does not miss.
 - **Threat for each mana point:** Holy Shield 10.5, Judgement 8.5, Holy Shock 2.8, Consecration 1.4 (one target).
 - **Healing Light needs 28 Holy points.** A healer with fewer Holy points loses 23% healing. Thus, no healer build uses a different main tree.
 - **Retribution tank.** The values use attacks from the front (14% parry) and dungeon buffs (Blessing of Might only). From behind with raid buffs, the model gives 119%. That value is not correct for a tank.

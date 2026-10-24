@@ -64,7 +64,7 @@ The Protection proposals give:
 - **Retribution.** Precision 3 and Guardian's Favor 2 open Protection row 2. Retribution then takes Holy Conduit for Exorcism, Hammer of Wrath and Consecration. This dip is 7 points.
 - **Holy.** Guardian's Favor costs 2 Protection points. Redoubt is not necessary before it.
 - **Why Holy Conduit goes to Protection.** Tanks use Consecration more than the other specs. In Protection row 2, a tank has it with no Retribution dip. Consecration then costs about 84 mana per sec, not 112 (see Analysis, Mana). Retribution takes it in its usual Protection dip.
-- **Why Vindication goes to row 2.** It fills the place of Holy Conduit. With 5 ranks, Retribution keeps 42 points. +5% Attack Power gives about +7 DPS. A tank has the boss debuff with 10 Retribution points (beta: 13).
+- **Why Vindication goes to row 2.** It fills the place of Holy Conduit. With 5 ranks, Retribution keeps 42 points. +5% Attack Power gives about +6 DPS. A tank has the boss debuff with 10 Retribution points (beta: 13).
 - **Why Unyielding Faith goes to row 1.** Improved Seals (C5) keeps its 3 beta ranks. Unyielding Faith fills the other 2 points of Holy row 1. Retribution and Protection open Holy row 2 with Improved Seals 3 and Unyielding Faith 2, then take Reverence. Iron Will (Warrior) is also in row 1.
 - **Shape.** Each row 1 has 10 points. Holy and Protection use 5 + 3 + 2, as Fire (Mage). Retribution keeps 5 + 5. Holy has 43 points, Protection 44 and Retribution 42.
 - **Parity.** Elemental Precision, Shadow Focus and Arcane Focus give hit in row 1. Guardian's Favor is the first save talent in row 1 of all classes (see W19).
