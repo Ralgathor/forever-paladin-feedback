@@ -106,7 +106,7 @@ def paladin(g, tal=PB1, proposed=True, c14=2.0, crusader=True, consecration=Fals
     t = lambda k: tal.get(k, 0)
     hit = g.hit + 0.01 * t("prec")
     crit = g.crit + 0.01 * t("conv")
-    spell_crit = crit if proposed else 0.0           # C15: Conviction also for spells
+    spell_crit = crit if proposed else g.crit        # spells crit in the beta too. C15: Conviction also for spells
     sp = g.sp + (CRUSADER if crusader else 0)
     ap = g.ap * (1 + 0.01 * t("vind"))               # Vindication: +1-5% Attack Power (full uptime)
     w = g.but(ap=ap)
@@ -144,7 +144,7 @@ def paladin(g, tal=PB1, proposed=True, c14=2.0, crusader=True, consecration=Fals
     src["Seal of Fury"] = (35 + 0.10 * sp) * seals * ohws * cg * (1 + max(0.0, crit - CRIT_SUPP)) * RF * hits
     if consecration:
         # Rank 5: 8 ticks of 12 + 27 Holy damage (312) + 33.6% of spell power. 15% of the ticks miss. Not OHWS.
-        # Spell critical hit x1.5.
+        # Spell critical hit x1.5 (beta test).
         src["Consecration"] = (312 + 0.336 * sp) * 0.85 * (1 + 0.5 * spell_crit) * cg * RF / CONS_EVERY
     if holy_shock:
         # Rank 4: 334-362 + 42.9%, 10 sec cooldown. Holy Power +3% critical hit for each rank. Spell hit as Consecration.

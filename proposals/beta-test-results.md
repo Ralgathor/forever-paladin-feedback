@@ -66,7 +66,7 @@
 | Judgement of Fury, Righteousness and Command | 42.9% of spell power. Melee hit table. Critical hit: ×2 damage. Judgement of Command: ×2 damage against a stunned target | Player tests; patch note, 16 October |
 | Judgement of Fury | The damage hits before the taunt. The taunt copies the top threat. The threat from the damage is not added. The taunt does not remove Judgement of the Crusader | Player tests |
 | Judgement of the Crusader | The bonus uses the coefficient of each spell, as spell power does. Seal of Command gets the full 29% | Player tests |
-| Consecration | 0.042 of spell power for each tick (33.6% for each target). First 4 enemies only | Patch note, 16 October |
+| Consecration | 0.042 of spell power for each tick (33.6% for each target). First 4 enemies only. Ticks can be critical hits (×1.5) | Patch note, 16 October; player tests |
 | Retribution Aura | 6% of spell power | Patch note, 8 October |
 | Holy Shield | Spell power scaling is not known. Classic: 5% for each block | Classic data |
 | Mana return | Mana from Shield Specialization, Improved Seal of Fury and Sanctified Judgement gives no threat | Patch notes, 8 and 16 October |
