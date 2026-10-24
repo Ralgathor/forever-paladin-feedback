@@ -41,8 +41,8 @@
 
 | Talent | Result in the beta | Effect on the proposals |
 | --- | --- | --- |
-| Benediction | Its cost decrease multiplies with Purifying Power, Holy Conduit and Twist of Light | C21 changes the ranks to 3/6/9% |
-| Holy Conduit | With Benediction, Consecration costs ×0.60 × 0.90 | C8 moves it to Protection row 2 |
+| Benediction | Its cost decrease multiplies with Purifying Power, Holy Conduit and Twist of Light | C8 moves it to Protection row 1. It keeps 5 ranks |
+| Holy Conduit | With Benediction, Consecration costs ×0.60 × 0.90 | None |
 | Conviction | Also applies to damage Seals and Hammer of Wrath | C15 adds only Holy Shock, Exorcism, Consecration and heals |
 | Vindication | About 5 procs each minute. Ranks: −67/136/204 Attack Power on the target and +1/2/3% on you | C8: row 2, 5 ranks, +1/2/3/4/5% |
 | Sanctified Judgement | Returns 60% of the base cost of the Seal, before talent cost decreases: 126 mana for Seal of Command with Benediction and Twist of Light | The mana models use 126 |
@@ -53,7 +53,7 @@
 | Vengeance | Multiplies with other % damage. Critical hits from procs add stacks | None |
 | Repentance | Diminishing returns category not tested | None |
 | Instrument of Law | Rank 2 makes Hammer of Wrath instant. The threat decrease multiplies with Salvation | None |
-| Twist of Light | More tests are necessary. With Benediction, Seals cost ×0.72 (×0.73 with C21) | None |
+| Twist of Light | More tests are necessary. With Benediction, Seals cost ×0.72 | None |
 
 ## Spells
 
