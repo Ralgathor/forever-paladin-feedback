@@ -18,6 +18,7 @@ from scipy.optimize import linprog
 
 HPG = 715          # healing power from gear (DoubleZug profile)
 CRIT_BASE = 0.143  # 4% gear + 3% aura + 7.3% from 438 Intellect
+PAL_CRIT = 0.035   # Paladin base spell critical chance (game files, wowsims Forever)
 HOT_CRIT = True    # heals over time can be critical heals in Forever (each tick, x1.5). False: Classic 1.12 rule
 MP5 = 117          # 40 gear + 25 Mana Spring + 40 Wisdom + 12 mana oil
 POT = 1800         # one major mana potion, 2 min cooldown
@@ -73,8 +74,8 @@ def ll_end_pool(heal, c, ling, samples=4000, seed=1):
 def paladin(hp=HPG, tank=False, rev=0.30, illum=0.50, light=1.12, bol=True, ling=0.0, conv=0.0,
             bened=0.10, inf_all=False, hs_heal_mult=1.0, hs_cost_mult=1.0,
             lv=True, lv_cost_mult=1.0, lv_heal_mult=1.0, lv_coef=0.15, lv_per_crit=False):
-    c = CRIT_BASE + 0.05 + conv            # Holy Power +5% (all spells)
-    c_hs = CRIT_BASE + 0.15 + conv         # Holy Power +15% for Holy Shock
+    c = CRIT_BASE + PAL_CRIT + 0.05 + conv            # Holy Power +5% (all spells)
+    c_hs = CRIT_BASE + PAL_CRIT + 0.15 + conv         # Holy Power +15% for Holy Shock
     def heal(base, coef, blessing):        # Healing Light multiplies the full heal (beta test)
         return (base + (blessing if bol else 0) + coef * hp) * light
     fol = heal(308, 1.5/3.5, 115); hl = heal(1580, 2.5/3.5, 400)
@@ -155,9 +156,9 @@ def druid(hp=HPG, tank=False, ooc_wg=0, sm_consumes=False):
     # same ticks: 970 and coefficient 1.0.
     rej0 = (776*15/12 + 1.0*hp)*1.1*1.15*1.05
     rej = rej0*kh
-    # Regrowth rank 9: 965-1077 direct (coefficient 0.3), 994 over 21 sec (0.621), 525 mana.
+    # Regrowth rank 9: 965-1077 direct (coefficient 0.286), 994 over 21 sec (0.497), 525 mana (game files).
     # With Nature's Splendor: 27 sec, 1,278 and coefficient 0.798.
-    rg_dir = (1021 + 0.3*hp)*1.1; rg_hot0 = (994 + 0.621*hp)*27/21*1.1*1.05; rg_hot = rg_hot0*kh
+    rg_dir = (1021 + 0.286*hp)*1.1; rg_hot0 = (994 + 0.497*hp)*27/21*1.1*1.05; rg_hot = rg_hot0*kh
     rg_dir_c = rg_dir*(1 + 0.5*(c + 0.5))
     rg = rg_dir_c + rg_hot
     # Swiftmend (Forever text): heals for the full periodic value of the Rejuvenation or Regrowth on the target.
@@ -197,7 +198,7 @@ def shaman(hp=HPG, tank=False, T=180):
     # Riptide rank 3: direct 799-883 (coefficient 0.2), 805 over 15 sec (0.5). Purification x1.1.
     rt_dir = (841 + 0.2*hp)*1.1*k; rt_hot = (805 + 0.5*hp)*1.1*kh
     hw = (1371.5 + 3/3.5*hp)*1.1*1.25*k        # Purification +10%, Healing Way +25% (Forever text)
-    ch_j = (490 + 2.5/3.5*hp)*1.1
+    ch_j = (506.5 + 2.5/3.5*hp)*1.1             # Chain Heal rank 3: 506.5 average (game files)
     ch = 2431.2*ch_j/1089.0                     # 2.5 targets, 90% on a Riptide target (DoubleZug)
     n_hst = uses(T, 300, 0)
     hst = (11 + 0.02*hp)*(T/2)*5/n_hst*kh       # Healing Stream Totem: 5 min, 5 targets, each 2 sec

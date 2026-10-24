@@ -5,31 +5,37 @@
 #
 # Paladin threat comes from each damage source: damage x Righteous Fury (x1.9, Holy damage only).
 # Warrior and Druid threat comes from their attacks and from rage: each rage point gives 5 threat.
-# Their rage comes partly from damage taken. Thus, their threat increases when the boss hits harder.
+# RAGE_ALL decides which rage gives threat: all rage, or only rage from spells and talents (wowsims Forever).
 #
 # Warrior and Druid values come from the Forever spellbook and talents (wowforevertalents.com) and player data.
+# Spell values and combat rules checked against wowsims Forever (github.com/wowsims/forever, 23 October 2026).
 # No value is fitted to the first calculation.
 
 # ---------------------------------------------------------------- fight (part 6)
-MISS, DODGE, PARRY = 0.06, 0.065, 0.14   # attacks from the front against a level 63 boss
+MISS, DODGE, PARRY = 0.08, 0.065, 0.14   # attacks from the front against a level 63 boss. Each 1% of hit removes 1% miss
+CRIT_SUPP = 0.048                        # critical hit decrease against a level 63 boss: 3% + 1.8% (wowsims Forever)
 GLANCE, GLANCE_DMG = 0.40, 0.65          # auto attacks only
 BOSS_ARMOR = 976                         # 3,731 after 5 Sunder Armor and Faerie Fire
 SWING, HIT_FRAC = 2.0, 0.64              # the boss swings each 2 sec; 64% of the swings hit the tank
 CRUSADER = 161                           # Judgement of the Crusader: spell power against the boss (Holy damage)
 RAGE_THREAT = 5                          # each rage point gives 5 threat (before stance and form)
+RAGE_ALL = True                          # True: all rage gives threat. False: only rage from spells and talents
 GCD = 1.5
 
 def armor_dr(armor=BOSS_ARMOR, level=60):
     """Classic physical damage reduction."""
     return armor / (armor + 400 + 85 * level)
 
-def table(hit, crit, auto):
-    """Melee attack table. Returns (chance to land, expected damage factor)."""
+def table(hit, crit, auto, dodge=DODGE, parry=PARRY):
+    """Melee attack table. Returns (chance to land, expected damage factor).
+    Auto attacks: one roll. Special attacks: the critical hit is a separate roll on the hits that land."""
     miss = max(0.0, MISS - hit)
-    land = 1 - miss - DODGE - PARRY
-    glance = GLANCE if auto else 0.0
-    normal = land - glance - crit
-    return land, glance * GLANCE_DMG + crit * 2 + normal
+    land = 1 - miss - dodge - parry
+    crit = max(0.0, crit - CRIT_SUPP)
+    if auto:
+        crit = min(crit, land - GLANCE)
+        return land, GLANCE * GLANCE_DMG + crit * 2 + (land - GLANCE - crit)
+    return land, land * (1 + crit)
 
 # ---------------------------------------------------------------- gear (parts 1, 2 and 3)
 class Gear:
@@ -116,29 +122,33 @@ def paladin(g, tal=PB1, proposed=True, c14=2.0, crusader=True, consecration=Fals
     swings = (1 - casting) / g.wspeed                # a cast stops the auto attacks
     src = {}
     if t("hsh"):
-        # Holy Shield: 221 + 10.7% of spell power (+ c14 x block value) for each block. Not OHWS. No critical hits.
-        src["Holy Shield, base"] = (221 + 0.107 * sp) * cg * RF * HS_THREAT * hs_blocks
+        # Holy Shield: 221 + 8% of spell power (+ c14 x block value) for each block. Not OHWS. No critical hits.
+        src["Holy Shield, base"] = (221 + 0.08 * sp) * cg * RF * HS_THREAT * hs_blocks
         src["Holy Shield, block value"] = c14 * g.bv * cg * RF * HS_THREAT * hs_blocks
-    # Judgement of Fury: 153-167 + 42.9%. Melee hit table, critical hit x2. One each 10 sec, Swift Judgement each min.
-    jud = (160 + 0.429 * sp) * seals * ohws * cg * f_spec
+    # Judgement of Fury: 153-167 + 42.9%. Melee hit table with no dodge or parry, critical hit x2. One each 10 sec,
+    # Swift Judgement each min. The damage hits before the taunt (beta test).
+    _, f_jud = table(hit, crit, auto=False, dodge=0.0, parry=0.0)
+    jud = (160 + 0.429 * sp) * seals * ohws * cg * f_jud
     src["Judgement of Fury"] = jud * RF * (1 / 10 + t("sj") / 60)
-    # Holy Strike: 50% normalized weapon damage (armor) + 81-105 Holy + 21.45%. Its threat is x1.9 in full
-    # (beta test), and Iron Creed adds ic_rank for each rank.
-    hstr = (0.5 * w.weapon(NORM_1H) * (1 - dr) + (93 + 0.2145 * sp) * cg) * ohws * f_spec
+    # Holy Strike: 50% of (normalized weapon damage + 93 + 42.9%), all Holy damage: no armor. Holy Power: +3% critical
+    # hit for each rank. Its threat is x1.9 in full (beta test), and Iron Creed adds ic_rank for each rank.
+    _, f_hstr = table(hit, crit + 0.03 * t("hp"), auto=False)
+    hstr = 0.5 * (w.weapon(NORM_1H) + 93 + 0.429 * sp) * cg * ohws * f_hstr
     src["Holy Strike"] = hstr * RF * (1 + ic_rank * t("ic")) / 10
     # Auto attacks: physical. Reckoning extra attacks: in the beta, the next swing (glancing blows possible).
     # With C11, Holy Strike releases them: no glancing blows.
     src["Auto attacks"] = w.weapon() * (1 - dr) * ohws * f_auto * swings * phys_mult
     src["Reckoning attacks"] = w.weapon() * (1 - dr) * ohws * (f_spec if proposed else f_auto) * extra * phys_mult
-    # Seal of Fury: 10% of spell power for each melee hit. Cannot miss. Critical hit x2 with a separate roll.
+    # Seal of Fury (rank 7): 35 + 10% of spell power for each melee hit. Cannot miss. Critical hit x2 with a separate roll.
     hits = land_a * swings + (land_s if proposed else land_a) * extra + (land_s / 10 if c16 else 0)
-    src["Seal of Fury"] = 0.10 * sp * seals * ohws * cg * (1 + crit) * RF * hits
+    src["Seal of Fury"] = (35 + 0.10 * sp) * seals * ohws * cg * (1 + max(0.0, crit - CRIT_SUPP)) * RF * hits
     if consecration:
-        # Rank 5: 384 over 8 sec + 33.6% of spell power. 15% of the ticks miss. Not OHWS. Spell critical hit x1.5.
-        src["Consecration"] = (384 + 0.336 * sp) * 0.85 * (1 + 0.5 * spell_crit) * cg * RF / CONS_EVERY
+        # Rank 5: 8 ticks of 12 + 27 Holy damage (312) + 33.6% of spell power. 15% of the ticks miss. Not OHWS.
+        # Spell critical hit x1.5.
+        src["Consecration"] = (312 + 0.336 * sp) * 0.85 * (1 + 0.5 * spell_crit) * cg * RF / CONS_EVERY
     if holy_shock:
-        # Rank 4: 334-362 + 42.9%, 10 sec cooldown. Holy Power +1-5% critical hit. Spell hit as Consecration.
-        c = spell_crit + 0.01 * t("hp")
+        # Rank 4: 334-362 + 42.9%, 10 sec cooldown. Holy Power +3% critical hit for each rank. Spell hit as Consecration.
+        c = spell_crit + 0.03 * t("hp")
         src["Holy Shock"] = (348 + 0.429 * sp) * 0.85 * (1 + 0.5 * c) * cg * RF / 10
     if ret_aura:
         # 20 Holy damage + 6% of spell power for each boss hit that hits the tank.
@@ -171,8 +181,9 @@ WAR = dict(dmg=0.9 * 1.10,               # Defensive Stance -10% damage, Bastion
            revenge=153, revenge_ap=0.28, revenge_mult=1.6,  # rank 6: 138-168, 28% AP (player sheet), Improved Revenge +60%
            revenge_cd=5, revenge_cost=5 - 3,                # Focused Rage
            slam=655, slam_cd=6, slam_cost=20 - 3,           # rank 4: 640-670 + block value
-           sunder=35 + 41 * 4, sunder_ap=0.05, sunder_cost=15 - 3 - 3,   # player sheet: rank 1 35, rank 2 76 + 5% AP
-           hs_bonus=157, hs_threat=145, hs_cost=15 - 3 - 3, # rank 9: +157 damage. Threat bonus: not known (Classic)
+           sunder=206, sunder_ap=0.05, sunder_cost=15 - 3 - 3,   # rank 5: 206 + 5% AP (game files)
+           hs_bonus=157, hs_threat=152.4, hs_cost=15 - 3 - 3,   # rank 9: +157 damage, +152.4 threat (wowsims, measured)
+           bloodrage=20 / 60,            # Bloodrage: 10 rage + 10 over 10 sec, 1 min cooldown
            block_cost=10, block_cd=5,    # Shield Block on cooldown, not on the global cooldown
            event_rage=5,                 # Shield Specialization and Master of Defense: 5 rage for each block, dodge, parry
            blocked=0.86,                 # share of the hits that Shield Block (80% of the swings) and base block stop
@@ -185,9 +196,10 @@ def warrior(g, slam_mult=1.0, detail=False):
     land_a, f_auto = table(g.hit, g.crit, auto=True)
     land_s, f_spec = table(g.hit, g.crit, auto=False)
     rate = 1 / g.wspeed
-    swing_rage = RAGE_SWING * g.wspeed * (land_a + g.crit)
+    swing_rage = RAGE_SWING * g.wspeed * (land_a + max(0.0, g.crit - CRIT_SUPP))
     events = (1 - HIT_FRAC - BOSS_MISS) + HIT_FRAC * w["blocked"]       # dodges, parries and blocks for each swing
-    taken = rage_taken(g, w["crush"]) + w["event_rage"] * events / SWING
+    talent = w["event_rage"] * events / SWING + w["bloodrage"]        # rage from talents and spells
+    taken = rage_taken(g, w["crush"]) + talent
     spare = (taken + rate * swing_rage - w["slam_cost"] / w["slam_cd"] - w["revenge_cost"] / w["revenge_cd"]
              - w["block_cost"] / w["block_cd"])
     gcd_left = 1 / GCD - 1 / w["slam_cd"] - 1 / w["revenge_cd"]
@@ -202,7 +214,7 @@ def warrior(g, slam_mult=1.0, detail=False):
     src["Revenge"] = ((w["revenge"] + w["revenge_ap"] * g.ap) * w["revenge_mult"] * phys * f_spec * 2.25
                       / w["revenge_cd"])
     src["Sunder Armor"] = (w["sunder"] + w["sunder_ap"] * g.ap) * land_s * sunders
-    src["Rage"] = RAGE_THREAT * (taken + rate * swing_rage * (1 - hs))
+    src["Rage"] = RAGE_THREAT * ((taken + rate * swing_rage * (1 - hs)) if RAGE_ALL else talent)
     src = {k: v * WAR_STANCE for k, v in src.items()}
     total = sum(src.values())
     return (total, src) if detail else total
@@ -219,6 +231,7 @@ DRU = dict(crit=0.12,                    # 6% from gear + Sharpened Claws 6%
            ff=2 * 60, ff_cd=6,           # Faerie Fire in Bear Form: 2 x level threat, 6 sec cooldown, no rage
            crit_rage=5,                  # Blood Frenzy: 5 rage for each critical hit
            dodge_rage=5,                 # Natural Reaction: 5 rage for each dodge
+           enrage=30 / 60,               # Enrage: 10 rage + 20 over 10 sec, 1 min cooldown (-27% base armor: not in the model)
            crush=0.15)                   # no block: crushing blows at the full rate (Analysis, Crushing blows)
 
 def druid(g, detail=False):
@@ -232,9 +245,12 @@ def druid(g, detail=False):
     land_a, f_auto = table(g.hit, crit, auto=True)
     land_s, f_spec = table(g.hit, crit, auto=False)
     rate = 1 / speed
-    swing_rage = RAGE_SWING * speed * 1.3 * (land_a + crit)            # x1.3 in Bear Form
-    taken = (rage_taken(g, d["crush"]) + d["dodge_rage"] * (1 - HIT_FRAC - BOSS_MISS) / SWING
-             + d["crit_rage"] * crit * (rate + 1 / d["bite_cd"]))       # swings and Primal Bite
+    ec = max(0.0, crit - CRIT_SUPP)                                     # critical hits after the decrease
+    swing_rage = RAGE_SWING * speed * 1.3 * (land_a + ec)              # x1.3 in Bear Form
+    talent = (d["dodge_rage"] * (1 - HIT_FRAC - BOSS_MISS) / SWING
+              + d["crit_rage"] * ec * (rate + 1 / d["bite_cd"])       # swings and Primal Bite
+              + d["enrage"])
+    taken = rage_taken(g, d["crush"]) + talent
     spare = taken + rate * swing_rage - d["bite_cost"] / d["bite_cd"]
     maul = max(0.0, min(1.0, spare / (rate * (d["maul_cost"] + swing_rage))))   # Maul hits give no rage
     spare -= maul * rate * (d["maul_cost"] + swing_rage)
@@ -247,7 +263,7 @@ def druid(g, detail=False):
     src["Faerie Fire"] = d["ff"] / d["ff_cd"]
     src["Swipe"] = ((d["swipe"] + d["swipe_ap"] * ap) * d["savage"] * d["swipe_fi"] * phys * f_spec * d["swipe_mult"]
                     * swipes)
-    src["Rage"] = RAGE_THREAT * (taken + rate * swing_rage * (1 - maul))
+    src["Rage"] = RAGE_THREAT * ((taken + rate * swing_rage * (1 - maul)) if RAGE_ALL else talent)
     src = {k: v * BEAR for k, v in src.items()}
     total = sum(src.values())
     return (total, src) if detail else total

@@ -9,6 +9,34 @@ RET_BETA_SIM = 847
 def pct(a, b):
     return f"{a / b:.0%}"
 
+# Mana of Retribution with Consecration on cooldown (Analysis, Mana, parts 3 and 5). Costs from wowsims Forever.
+# Holy Conduit (C8): Consecration (565) x0.60. Twist of Light: Seal of Command (210) x0.80. Sanctified Judgement
+# returns 60% of the base cost x (2 - the cost multiplier): 210 x 1.2 x 0.6 = 151. Hammer of Wrath rank 3: 425 mana,
+# x0.60, in the execute phase. Income: Reverence 50% at 130 Spirit (10.3), Blessing of Wisdom (8), mp5.
+MANA = (2897, 3400, 3900, 4400, 4900)
+MP5 = (3, 5, 7, 9, 12)
+
+def consecration_mana(tier, fight, dt=0.1):
+    """Consecration on cooldown until the mana is zero, then only when the mana returns.
+    Returns (time of zero mana or None, average DPS)."""
+    g = gear(tier)
+    base, full = retribution(g), retribution(g, extra="consecration")
+    cons = 565 * 0.60 / 8
+    other = 210 * 0.80 / 10 + 91 / 8 - 210 * 1.2 * 0.6 / 8 + 20 / 10
+    how = 425 * 0.60 / 6
+    income = 10.3 + 8 + MP5[tier] / 5
+    mana, t, dmg, zero = MANA[tier], 0.0, 0.0, None
+    while t < fight:
+        rest = income - other - (how if t >= fight * (1 - M.EXECUTE) else 0)
+        c = min(cons, max(0.0, mana / dt + rest))       # at zero mana: Consecration only from the mana that returns
+        mana += (rest - c) * dt
+        if mana <= 0 and zero is None:
+            zero = t
+        mana = max(mana, 0.0)
+        dmg += (base + (full - base) * c / cons) * dt
+        t += dt
+    return zero, dmg / fight
+
 def growth(f, **kw):
     v = [f(gear(t, **kw)) for t in range(5)]
     return [x / v[0] for x in v]
@@ -120,7 +148,40 @@ if __name__ == "__main__":
     exo = retribution(g, extra="exorcism")
     print(f"Consecrated Ground with Consecration on cooldown: {cons:.0f} ({cons / P - 1:+.0%}). "
           f"Exorcism: {exo:.0f} ({exo / P - 1:+.0%})")
+    _, sc8, _ = retribution(g, extra="consecration", detail=True)
+    print(f"Consecration part of the increase: {sc8['Consecration'] / (cons - P):.0%}, "
+          f"Consecrated Ground {sc8['Consecrated Ground'] / (cons - P):.0%}")
+    for fight in (120, 180, 300):
+        row = []
+        for t in range(5):
+            zero, avg = consecration_mana(t, fight)
+            pure = (PURE["Warrior"] * F[t] + PURE["Rogue"] * C[t] + casters * (1 + 0.75 * shape[t])) / 5
+            z = "none" if zero is None else f"{int(zero // 60)}:{int(zero % 60):02d}"
+            row.append(f"zero {z}, {avg / retribution(gear(t)) - 1:+.0%}, {pct(r * avg / P, pure)}")
+        print(f"Consecration on cooldown until the mana is zero, {fight} sec (mana zero, DPS increase, % of the pure "
+              f"average with Hunter, Mage and Warlock x1.75): " + " | ".join(row))
     t3 = retribution(g, ths=1.03)
     print(f"Two-Handed Weapon Specialization: each 1% {(P - t3) / 3:.1f} DPS. At 3%: "
           f"{start * t3 / P:.0%} of Fury at fresh level 60, {start * t3 / P * growth(lambda h: retribution(h, ths=1.03))[4] / F[4]:.0%} in Naxxramas")
     print(f"Champion of the Light at 30%: {retribution(g, cotl=0.30) - P:+.0f}")
+
+    print("\n## Analysis, Builds, parts 4 and 5: Retribution builds (fresh level 60, 2 min)")
+    for name, tal in M.RET_BUILDS:
+        x, xc = retribution(g, tal=tal), retribution(g, tal=tal, extra="consecration")
+        print(f"{name} | {x:.0f} ({xc:.0f} with Consecration) | {pct(x, P)} of RB2")
+    sh, sh0 = retribution(g, tal=M.SHOCK_RET), retribution(g, tal=dict(M.SHOCK_RET, hsk=0))
+    print(f"Shock-Retribution: {sh:.0f} ({pct(sh, P)} of RB2). No mana for Holy Shock: {sh0:.0f} ({pct(sh0, P)})")
+
+    def ret_tank(front=True, dungeon=True, cons=False):
+        """RB2 with Righteous Fury (x1.9 on Holy damage), pre-raid gear (Threat, part 1). dungeon: Blessing of Might only."""
+        save = (M.KINGS, M.SHOUT, M.MOTW)
+        if dungeon:
+            M.KINGS, M.SHOUT, M.MOTW = 1.0, 0, 0
+        tot, src_t, _ = retribution(gear(1), detail=True, front=front, extra="consecration" if cons else None)
+        M.KINGS, M.SHOUT, M.MOTW = save
+        return src_t["Auto attacks"] + 1.9 * (tot - src_t["Auto attacks"])
+    PB2_TPS, PB2_CONS = 560, 652          # Analysis, Builds, part 3 (threat model)
+    a, c = ret_tank(), ret_tank(cons=True)
+    print(f"Retribution tank (front, dungeon buffs): {a:.0f} TPS ({pct(a, PB2_TPS)} of PB2), with Consecration "
+          f"{c:.0f} ({pct(c, PB2_CONS)} of PB2 with Consecration). From behind with raid buffs: "
+          f"{pct(ret_tank(False, False), PB2_TPS)}")

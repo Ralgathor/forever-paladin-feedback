@@ -23,7 +23,7 @@ The healer heals the tank before the hit (warm start):
 Run: python3 recovery.py"""
 import itertools, math, random
 import healing_model as H
-from healing_model import HPG, CRIT_BASE, ll_ticks
+from healing_model import HPG, CRIT_BASE, PAL_CRIT, ll_ticks
 
 GCD = 1.5
 
@@ -117,7 +117,7 @@ def best(case, W, long_cd=True):
 
 # ---------------------------------------------------------------- classes (715 healing power)
 def paladin_burst(hp=HPG, light=1.12, bol=True, ling=0.0, conv=0.0, inf_all=False):
-    c = CRIT_BASE + 0.05 + conv; c_hs = CRIT_BASE + 0.15 + conv
+    c = CRIT_BASE + PAL_CRIT + 0.05 + conv; c_hs = CRIT_BASE + PAL_CRIT + 0.15 + conv
     fol = (308 + (115 if bol else 0) + 1.5/3.5*hp) * light
     hl = (1580 + (400 if bol else 0) + 2.5/3.5*hp) * light
     hs = (320 + 1.5/3.5*hp) * light
@@ -146,7 +146,7 @@ def druid_burst(hp=HPG):
     # Nature's Splendor: Rejuvenation 15 sec, Regrowth 27 sec. Gift of the Earthmother: 1 sec global cooldown
     # for Rejuvenation and Swiftmend. Genesis: +5% periodic healing.
     rej0 = (776*15/12 + 1.0*hp)*1.1*1.15*1.05; rej = rej0*kh
-    rg_dir = (1021 + 0.3*hp)*1.1*(1 + 0.5*(c + 0.5)); rg_hot0 = (994 + 0.621*hp)*27/21*1.1*1.05; rg_hot = rg_hot0*kh
+    rg_dir = (1021 + 0.286*hp)*1.1*(1 + 0.5*(c + 0.5)); rg_hot0 = (994 + 0.497*hp)*27/21*1.1*1.05; rg_hot = rg_hot0*kh
     ht = (2934.8 + 1.1*(hp - 715))*k
     sm_rej = rej0*k                     # Swiftmend: the full Rejuvenation, a direct heal (can be critical)
     sm_rg = rg_hot0*k                   # or the full Regrowth heal over time
@@ -173,7 +173,7 @@ def shaman_burst(hp=HPG):
     sp = [B("Healing Wave", 2.5, hw),
           B("Lesser Healing Wave", 1.5, (820 + 1.5/3.5*hp)*1.1*k),
           B("Riptide", GCD, (841 + 0.2*hp)*1.1*k, rt_hot, 15, cd="short"),
-          B("Chain Heal (on the tank, after Riptide)", 2.5, (490 + 2.5/3.5*hp)*1.1*1.25*k),
+          B("Chain Heal (on the tank, after Riptide)", 2.5, (506.5 + 2.5/3.5*hp)*1.1*1.25*k),
           B("Nature's Swiftness + Healing Wave", 1.5, hw, cd="long")]
     pre = [("Riptide", rt_hot/15, 15), ("Healing Stream Totem", (11 + 0.02*hp)*kh/2, None)]
     return sp, None, pre, None
