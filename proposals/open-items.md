@@ -46,6 +46,9 @@ These are risks to check in tests. None of them needs a change now.
 - [ ] Does the Holy Shield damage increase with spell power? By how much for each block?
 - [ ] Does Shield Slam have a threat multiplier, as Revenge (×2.25) has? (Warrior testers)
 - [ ] Do Heroic Strike and Maul hits give rage? (Warrior and Druid testers)
+- [ ] Do Maul and Swipe have the ×1.75 threat multiplier in Forever? Our model uses ×1.75. The wowsims Forever data gives threat for the damage only. Without the multipliers of Maul, Swipe and Primal Bite, the Druid loses about half of its threat at the gear of Threat, part 1. (Druid testers)
+- [ ] Primal Bite: the tooltip gives "a high amount of threat", with no number. Our model uses ×3. The wowsims Forever data gives threat for the damage only. What is the multiplier? (Druid testers)
+- [ ] Judgement of Fury: the game files give a third effect of 1,691 + 18% of spell power. Is this bonus threat, the taunt or a server value? If it is bonus threat, it adds about 200 TPS to the Paladin. The model does not use it.
 - [ ] Champion of the Light: the patch note of 16 October gives 10/20/30% of Intellect. The client data of 18 October gives 20/40/60%. What is the live value?
 - [ ] How much block value do Forever shields and tank gear give at each tier? The 200% of C14 uses Classic values.
 - [ ] What is the healing power coefficient of the Light's Vigil party heal? Do Purification and Healing Way (Shaman) add or multiply?
@@ -71,3 +74,4 @@ These are risks to check in tests. None of them needs a change now.
 - [x] Light's Vigil has 3 ranks: 730, 1,000 and 1,340 mana.
 - [x] Can heals over time be critical heals in Forever? Yes, each tick ([Warcraft Tavern](https://www.warcrafttavern.com/forever/guides/restoration-druid/)). Analysis, Healing uses this rule.
 - [x] Does Swiftmend remove the Rejuvenation or Regrowth that it uses? No (player test).
+- [x] Paladin critical chance from Intellect: 59.9 Intellect for 1% (0.0167% for each point). Base spell critical chance 3.5%, base melee critical chance 0.7% (game files, wowsims Forever). Not 54 Intellect and 3.3%.
