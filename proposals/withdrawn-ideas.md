@@ -39,9 +39,9 @@ We examined these ideas and rejected them. They are not proposals.
 | Judgement of the Crusader goes into Retribution (Holy Strike applies it) | A raid without a Retribution Paladin loses the debuff |
 | Holy Shield does 3% of the damage of each blocked attack (not C14) | The same result as C14, but it uses damage taken, not a stat. It is difficult to read and to collect |
 | Righteous Fury threat ×2.2 or ×2.5 (not ×1.9) | Flat: too strong early or too weak late. It also increases Consecration on all targets. It changes a baseline spell that Blizzard changed on 16 October |
-| Holy Shield threat bonus +50% or +100% (not +20%) | Flat: the bonus does not increase with gear. +100% gives 125% of the Druid threat at fresh level 60, but 89% in Naxxramas. +50% is weaker |
+| Holy Shield threat bonus +50% or +100% (not +20%) | Flat: the bonus does not increase with gear. +100% gives 122% of the Druid threat at fresh level 60, but 89% in Naxxramas. +50% is weaker |
 | Iron Creed: +25% threat on all Holy damage | Flat. It works as an improved Righteous Fury. It does not increase with content |
-| Righteous Fury also increases physical damage threat (×1.5) with a shield | Too weak in late raids (82% of the Druid). It changes Righteous Fury for all specs |
+| Righteous Fury also increases physical damage threat (×1.5) with a shield | Too weak in late raids (81% of the Druid). It changes Righteous Fury for all specs |
 | Righteous Defense: area taunt (10 yards, 6 sec, 10 min cooldown, as Challenging Shout) | An area taunt with a 10 min cooldown gives little. Shoulder the Burden (C10) saves an ally without a taunt |
 | Righteous Defense: Blessing of Protection also makes up to 3 enemies attack you | Only 3 enemies, and only when Blessing of Protection is used. Shoulder the Burden (C10) works on all enemies |
 | A shield interrupt in Protection | Paladins have no interrupt by design |

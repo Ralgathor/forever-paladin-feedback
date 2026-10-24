@@ -11,7 +11,7 @@
 BOSS_ARMOR = 976                 # 3,731 after 5 Sunder Armor and Faerie Fire
 DODGE = 0.065                    # from behind: no parry, no block
 GLANCE, GLANCE_DMG = 0.40, 0.65  # auto attacks only
-CRIT_AUTO, CRIT_SPEC = 0.048, 0.03   # critical hit decrease against a level 63 boss (Classic 1.12 rule)
+CRIT_AUTO, CRIT_SPEC = 0.048, 0.048  # critical hit decrease against a level 63 boss: 3% + 1.8%, all melee attacks (wowsims Forever)
 MISS = 0.08                      # before hit; each 1% of hit removes 1% miss (wowsims Forever)
 DW_MISS = 0.27                   # auto attacks with two weapons: 8% + 19%
 FIGHT = 120.0

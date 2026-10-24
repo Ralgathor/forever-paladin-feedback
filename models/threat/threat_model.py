@@ -231,6 +231,7 @@ DRU = dict(crit=0.12,                    # 6% from gear + Sharpened Claws 6%
            ff=2 * 60, ff_cd=6,           # Faerie Fire in Bear Form: 2 x level threat, 6 sec cooldown, no rage
            crit_rage=5,                  # Blood Frenzy: 5 rage for each critical hit
            dodge_rage=5,                 # Natural Reaction: 5 rage for each dodge
+           enrage=30 / 60,               # Enrage: 10 rage + 20 over 10 sec, 1 min cooldown (-27% base armor: not in the model)
            crush=0.15)                   # no block: crushing blows at the full rate (Analysis, Crushing blows)
 
 def druid(g, detail=False):
@@ -247,7 +248,8 @@ def druid(g, detail=False):
     ec = max(0.0, crit - CRIT_SUPP)                                     # critical hits after the decrease
     swing_rage = RAGE_SWING * speed * 1.3 * (land_a + ec)              # x1.3 in Bear Form
     talent = (d["dodge_rage"] * (1 - HIT_FRAC - BOSS_MISS) / SWING
-              + d["crit_rage"] * ec * (rate + 1 / d["bite_cd"]))      # swings and Primal Bite
+              + d["crit_rage"] * ec * (rate + 1 / d["bite_cd"])       # swings and Primal Bite
+              + d["enrage"])
     taken = rage_taken(g, d["crush"]) + talent
     spare = taken + rate * swing_rage - d["bite_cost"] / d["bite_cd"]
     maul = max(0.0, min(1.0, spare / (rate * (d["maul_cost"] + swing_rage))))   # Maul hits give no rage

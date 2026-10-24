@@ -8,8 +8,8 @@ The script models/threat/run_tables.py calculates all values of this section fro
 
 ## Summary
 
-- With all proposals, the Paladin has 95–107% of the Druid threat and 86–93% of the Warrior threat.
-- With Consecration on cooldown, the Paladin has 108–128% of the Druid threat. But the mana then lasts about 1 min at fresh level 60 and 6.5 min in Naxxramas (see Analysis, Mana).
+- With all proposals, the Paladin has 94–105% of the Druid threat and 86–93% of the Warrior threat.
+- With Consecration on cooldown, the Paladin has 108–124% of the Druid threat. But the mana then lasts about 1 min at fresh level 60 and 6.5 min in Naxxramas (see Analysis, Mana).
 - Without the proposals, the Paladin has less threat than the other two tanks at all gear levels.
 - C14 (Holy Shield damage increases with block value) is necessary. Without C14, the Paladin falls further behind in raids (74% of the Druid threat in Naxxramas).
 - Judgement of the Crusader gives the Paladin tank about +55 TPS. Judgement of Fury does not remove it. C18 lets the tank keep it when the raid also needs the Judgement of the tank for Light or Wisdom.
@@ -26,8 +26,8 @@ Conditions:
 
 | Boss hit before armor | Warrior | Druid | Paladin, beta | Paladin, all proposals | Paladin, all proposals + Consecration |
 | --- | --- | --- | --- | --- | --- |
-| 3,000 | 595 | 525 | 410 | 555 | 645 |
-| 4,500 | 670 | 610 | 410 | 555 | 645 |
+| 3,000 | 595 | 540 | 410 | 555 | 645 |
+| 4,500 | 670 | 620 | 410 | 555 | 645 |
 | 6,000 | 695 | 645 | 410 | 555 | 645 |
 
 All values are approximate.
@@ -37,7 +37,7 @@ All values are approximate.
 - If Shield Slam has a ×2.25 threat multiplier (not tested), add 140 TPS to the Warrior.
 - Both Paladin columns include Judgement of the Crusader. Judgement of Fury does not remove it. In the beta, a raid can need the tank's only Judgement for Light or Wisdom. Then the beta Paladin has no Crusader and about 360 TPS. With C18, the tank keeps Crusader in all cases.
 - Without C14, the proposed Paladin has about 470 TPS (565 TPS with Consecration).
-- If the boss has no armor debuffs (4,500 hits): Warrior 540 TPS, Druid 460 TPS, Paladin 530 TPS. Most Paladin threat is Holy damage. Armor does not decrease Holy damage.
+- If the boss has no armor debuffs (4,500 hits): Warrior 540 TPS, Druid 470 TPS, Paladin 530 TPS. Most Paladin threat is Holy damage. Armor does not decrease Holy damage.
 - Retribution Aura gives the Paladin about +25 TPS. But the Paladin then does not have Devotion Aura (735 armor).
 
 **Threat sources of the proposed Paladin (200 spell power, 60 block value)**
@@ -94,16 +94,16 @@ TPS on one boss. The percentage is the Paladin TPS divided by the Druid TPS.
 
 | Tier | Warrior | Druid | Paladin, beta | Paladin, proposals without C14 | **Paladin, all proposals** | All proposals + Consecration |
 | --- | --- | --- | --- | --- | --- | --- |
-| Fresh level 60 | 565 | 455 | 395 (88%) | 450 (99%) | **485 (107%)** | 580 |
-| Pre-raid best in slot | 625 | 550 | 425 (78%) | 490 (89%) | **570 (104%)** | 665 |
-| Molten Core | 710 | 655 | 460 (70%) | 525 (80%) | **635 (97%)** | 735 |
-| Blackwing Lair | 770 | 745 | 495 (67%) | 570 (77%) | **705 (95%)** | 810 |
-| Naxxramas | 835 | 820 | 530 (64%) | 605 (74%) | **780 (95%)** | 885 |
+| Fresh level 60 | 565 | 465 | 395 (85%) | 450 (97%) | **485 (105%)** | 580 |
+| Pre-raid best in slot | 625 | 560 | 425 (76%) | 490 (87%) | **570 (102%)** | 665 |
+| Molten Core | 710 | 670 | 460 (69%) | 525 (79%) | **635 (95%)** | 735 |
+| Blackwing Lair | 770 | 745 | 495 (67%) | 570 (76%) | **705 (95%)** | 810 |
+| Naxxramas | 835 | 825 | 530 (64%) | 605 (74%) | **780 (94%)** | 885 |
 
 - All Paladin columns include Judgement of the Crusader. Without it (a raid that needs the beta tank's Judgement for Light or Wisdom), subtract about 50 TPS from the beta column.
-- With all proposals, the Paladin has 95–107% of the Druid threat at all tiers. With Consecration on cooldown, it has 108–128%. But Consecration costs 565 mana each 8 sec (see Analysis, Mana).
-- Without C14, the Paladin falls further behind the Druid: 99% at fresh level 60, 74% in Naxxramas. The Warrior and the Druid receive more Attack Power and more rage. The Paladin receives only spell power.
-- The beta Paladin is behind at all tiers: 88% of the Druid at fresh level 60, and 64% in Naxxramas.
+- With all proposals, the Paladin has 94–105% of the Druid threat at all tiers. With Consecration on cooldown, it has 108–124%. But Consecration costs 565 mana each 8 sec (see Analysis, Mana).
+- Without C14, the Paladin falls further behind the Druid: 97% at fresh level 60, 74% in Naxxramas. The Warrior and the Druid receive more Attack Power and more rage. The Paladin receives only spell power.
+- The beta Paladin is behind at all tiers: 85% of the Druid at fresh level 60, and 64% in Naxxramas.
 - Shield Specialization gives 4% of maximum mana. Thus, more mana gives more mana return. Tanking without Consecration gives about +4 mana per sec at fresh level 60 and about +30 mana per sec in Naxxramas (see Analysis, Mana).
 
 ## 3. Result with flatter gear
@@ -120,14 +120,14 @@ Paladin with all proposals. The first value is the percentage of the Druid TPS. 
 
 | Tier | Gear as in part 2 | Flatter gear, boss hits as in part 2 | Flatter gear, flatter boss hits |
 | --- | --- | --- | --- |
-| Fresh level 60 | 107% (86%) | 107% (86%) | 107% (86%) |
-| Pre-raid best in slot | 104% (91%) | 104% (91%) | 104% (91%) |
-| Molten Core | 97% (90%) | 96% (87%) | 100% (90%) |
-| Blackwing Lair | 95% (92%) | 93% (87%) | 96% (90%) |
-| Naxxramas | 95% (93%) | 90% (86%) | 95% (90%) |
-| Naxxramas, without C14 | 74% | 74% | 77% |
+| Fresh level 60 | 105% (86%) | 105% (86%) | 105% (86%) |
+| Pre-raid best in slot | 102% (91%) | 102% (91%) | 102% (91%) |
+| Molten Core | 95% (90%) | 94% (87%) | 98% (90%) |
+| Blackwing Lair | 95% (92%) | 92% (87%) | 95% (90%) |
+| Naxxramas | 94% (93%) | 90% (86%) | 95% (90%) |
+| Naxxramas, without C14 | 74% | 73% | 77% |
 
-- With C14 at 200%, the Paladin has 90–107% of the Druid threat in all three cases. At 300%, it has 99–105% of the Druid threat in Naxxramas. At 150%, it has 86–91%.
+- With C14 at 200%, the Paladin has 90–105% of the Druid threat in all three cases. At 300%, it has 98–105% of the Druid threat in Naxxramas. At 150%, it has 86–90%.
 - Without C14, the Paladin falls behind in all cases. Thus, C14 is more important with flatter gear.
 - The weakest case is flatter gear with boss hits that continue to increase. The Warrior and the Druid still receive more rage from larger hits. Monitor the block value of each gear tier.
 - Mana: if maximum mana increases more slowly (3,650, 3,900 and 4,150), tanking without Consecration gives +14, +17 and +20 mana per sec. C13 is more important.
@@ -211,6 +211,7 @@ Other options were examined and rejected. See Withdrawn ideas.
 - Swipe rank 5: 83 damage + 3% of Attack Power, +10% (Savage Fury), +30% (Feral Instinct), 15 rage.
 - Faerie Fire in Bear Form: 120 threat (2 × level), 6 sec cooldown.
 - Blood Frenzy: 5 rage for each critical hit. Natural Reaction: 5 rage for each dodge.
+- Enrage: 10 rage + 20 rage over 10 sec, 1 min cooldown. Its rage gives threat: 50 + 100. The −27% base armor of Enrage is not in the model.
 - No shield: 15% of the swings are crushing blows (see Crushing blows).
 - Primal Bite and Faerie Fire are used on cooldown. Maul uses the extra rage. Swipe fills the free global cooldowns.
 - Lacerate is not in the model. Its threat is not known.

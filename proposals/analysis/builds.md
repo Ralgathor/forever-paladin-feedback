@@ -56,12 +56,13 @@ This section examines the builds that are possible with the proposed trees. It g
 
 | Build | Points and code | Raid DPS (with Consecration) | PvP burst (one stun) | What it gives |
 | --- | --- | --- | --- | --- |
-| RB1. Raid | 10/7/34: v2p000320302-032000000000002-0325531201330321 | About 370 (420) | About 1,830 | Vindication 5 (C8). The best build on one target |
-| RB2. Raid with Consecration | 12/7/32: v2p00032030200002-032000000000002-0325531001330321 | 380 (460) | About 1,830 | Consecrated Ground (see W16). Vindication 5 opens row 6. The build of Analysis, Damage |
-| RB3. PvP, Hammer of Justice each 45 sec | 0/14/37: v2p-332000010300002-0325531221331321 | About 345 | About 2,240 | Swift Judgement, Repentance, Eye for an Eye and Guardian's Favor. Redoubt 3 opens Protection row 3 |
-| RB4. PvP, fear and heals | 7/7/37: v2p000320002-032000000000002-0325531221331321 | 370 | About 1,830 | Unyielding Faith (Holy row 1, C8), Infusion of Light and Repentance |
-| RB5. Reckoning (Protection and Retribution) | 0/26/25: v2p-532300210215002-5005031211331 | About 280 | About 3,020 | The build of PvP burst check (see W6) |
+| RB1. Raid | 10/7/34: v2p000320302-032000000000002-0325531201330321 | About 375 (425) | About 1,830 | Vindication 5 (C8). The best build on one target |
+| RB2. Raid with Consecration | 12/7/32: v2p00032030200002-032000000000002-0325531001330321 | 375 (452) | About 1,830 | Consecrated Ground (see W16). Vindication 5 opens row 6. The build of Analysis, Damage |
+| RB3. PvP, Hammer of Justice each 45 sec | 0/14/37: v2p-332000010300002-0325531221331321 | About 350 | About 2,240 | Swift Judgement, Repentance, Eye for an Eye and Guardian's Favor. Redoubt 3 opens Protection row 3 |
+| RB4. PvP, fear and heals | 7/7/37: v2p000320002-032000000000002-0325531221331321 | 375 | About 1,830 | Unyielding Faith (Holy row 1, C8), Infusion of Light and Repentance |
+| RB5. Reckoning (Protection and Retribution) | 0/26/25: v2p-532300210215002-5005031211331 | About 285 | About 3,020 | The build of PvP burst check (see W6) |
 
+- **RB1, RB3, RB4, RB5 and Shock-Retribution** use the RB2 change (×1.01). The model does not compute them again.
 - **DPS for each point:** Seal of Command 82 (1 point), Twist of Light 47 (1 point), Sacred Arbiter 9 (1 point), Two-Handed Weapon Specialization 6.6, Vengeance 5.3, Improved Judgement 5.2, Conviction 5.0, Precision 4.9, Improved Seals 4.7, Champion of the Light 4.4, Instrument of Law 1.9, Vindication 1.4 (5 ranks, C8).
 - **About 6 points are free.** Each choice gives 1.5% DPS or less: Vindication, Consecrated Ground, Infusion of Light or Pursuit of Justice.
 - **The dips into Holy and Protection are strong:** Improved Seals +6%, Precision +4%. The Protection dip also gives Guardian's Favor and Holy Conduit (C8). Thus, rule 1 of Tree balance works for Retribution.
@@ -72,7 +73,7 @@ This section examines the builds that are possible with the proposed trees. It g
 
 | Role | Build | Points and code | Result | Status |
 | --- | --- | --- | --- | --- |
-| Damage | Shock-Retribution | 21/0/30: v2p50232030201012--032533110133032 | 351 DPS (95% of RB2) for 2 min. Holy Shock replaces Twist of Light. After about 2 min, the mana is too low for Holy Shock: 305 DPS (82%) | Good for short fights and PvP. In PvP, one Holy Shock adds about 560 damage to the burst (about 2,340) |
+| Damage | Shock-Retribution | 21/0/30: v2p50232030201012--032533110133032 | 356 DPS (95% of RB2) for 2 min. Holy Shock replaces Twist of Light. After about 2 min, the mana is too low for Holy Shock: 309 DPS (82%) | Good for short fights and PvP. In PvP, one Holy Shock adds about 560 damage to the burst (about 2,340) |
 | Damage | Shockadin | 38/0/13: v2p5023213225131251--03251002 | 311 DPS. The mana is zero after 30–50 sec. 63–70% for 2 min | Not good in raids |
 | Tank | Retribution with Righteous Fury and a two-handed weapon | 12/7/32 (RB2) | 75–95% of the PB2 threat (560 threat per sec). About 1.65 times the damage taken | Possible in easy dungeons. The healer must do more work |
 | Tank | Holy Shock tank | 30/21/0: v2p502320312013125-53201321301 | 57% of the PB2 threat (79% with Consecration). The mana lasts about 2 min (35 sec with Consecration) | For leveling and solo play |
