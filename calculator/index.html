@@ -234,7 +234,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
     <div class="ptable"><table><thead><tr><th>Topic</th><th>Beta</th><th>Proposed</th><th>Other classes</th></tr></thead><tbody>
     <tr><td>Crushing blows (level 63 boss)</td><td class="today">Holy Shield gives +30% block. Redoubt is a 10% proc. You need about 72% avoidance from gear</td><td>Holy Shield also starts Redoubt (C6): 60% block. About 4.3% of the swings can crush (440 Defense, 100 Agility)</td><td>Warrior: about 3% (Shield Block). Druid: crushing blows always occur, with more armor and health</td></tr>
     <tr><td>Threat, as a % of the Druid</td><td class="today">85% at fresh level 60, 64% in Naxxramas</td><td>105% at fresh level 60, 94% in Naxxramas (C14)</td><td>With Consecration on cooldown: 108–124%. But the mana then lasts about 1 min at fresh level 60 and 6.5 min in Naxxramas</td></tr>
-    <tr><td>Consecration on cooldown, fresh level 60</td><td class="today">112 mana per sec: the mana lasts 43 sec. Holy Conduit needs a Retribution dip</td><td>76 mana per sec with Benediction in Protection Row 1 and Holy Conduit (7 Retribution points) (C8): 1 min 36 sec</td><td>—</td></tr>
+    <tr><td>Consecration on cooldown, fresh level 60</td><td class="today">112 mana per sec: the mana lasts 43 sec. Holy Conduit needs a Retribution dip</td><td>76 mana per sec with Benediction in Protection Row 1 (M11) and Holy Conduit (7 Retribution points): 1 min 36 sec</td><td>—</td></tr>
     <tr><td>Mana while tanking, no Consecration</td><td class="today">+1.5 mana per sec at fresh level 60, +16.7 in Naxxramas</td><td>+3.9 and +29.8 (C13, C1)</td><td>Warrior and Druid get rage from the hits that they take</td></tr>
     <tr><td>Damage reduction</td><td class="today">Iron Creed: about 6% (6 sec after Holy Strike), with Improved Righteous Fury</td><td>Iron Creed: 10% while Righteous Fury is active (C7, C9)</td><td>Warrior, Defensive Stance: 10%</td></tr>
     <tr><td>Reckoning on a boss</td><td class="today">About 1 extra attack each 10 sec. The critical hit trigger does not work at 440 Defense</td><td>About 2 extra attacks each 10 sec: block, dodge and parry give charges (C11)</td><td>—</td></tr>
@@ -257,7 +257,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
     <tr><td>Reckoning burst in one stun (0/26/25)</td><td class="today">About 2,130. About 3,700 with 4 stored attacks</td><td>About 3,020 (C11, C16). See watch list W6</td><td>—</td></tr>
     <tr><td>Fast heal for Retribution and Protection</td><td class="today">Infusion of Light only after a critical heal</td><td>A 1.5 sec Holy Light after each Holy Strike, with 7 Holy points (C3). See W12</td><td>—</td></tr>
     <tr><td>Hammer of Justice each 45 sec</td><td class="today">18 Protection points</td><td>13 Protection points (M4)</td><td>Druid: Brutal Impact in Feral row 2</td></tr>
-    <tr><td>Holy healer: critical heals and Blessing of Protection each 3 min</td><td class="today">17 points: it does not fit in a Holy build</td><td>12 points: Benediction 5 and Guardian's Favor 2 in Protection (C8), Conviction 5 in Retribution (M8). It fits, with 4 points free</td><td>—</td></tr>
+    <tr><td>Holy healer: critical heals and Blessing of Protection each 3 min</td><td class="today">17 points: it does not fit in a Holy build</td><td>12 points: Benediction 5 (M11) and Guardian's Favor 2 in Protection, Conviction 5 in Retribution (M8). It fits, with 4 points free</td><td>—</td></tr>
     <tr><td>Saves after Lay on Hands</td><td class="today">0 mana: no Divine Shield, Blessing of Protection or Hammer of Justice</td><td>Half of the mana stays (C22). See watch list W18</td><td>—</td></tr>
     <tr><td>Iron Creed with Righteous Fury always active</td><td class="today">About 6%</td><td>10% with 25 Protection points (C7). See W7 and W17</td><td>Iron Will (Warrior): −15% stun and fear for 5 points</td></tr>
     </tbody></table></div>
@@ -335,11 +335,9 @@ const PROPOSED={
  rev:{pid:"C1",tier:2,col:2,rt:["Allows 17% of your Mana regeneration to continue while casting.","Allows 33% of your Mana regeneration to continue while casting.","Allows 50% of your Mana regeneration to continue while casting."]},
  hp:{pid:null,tier:6,col:1},
  hl:{pid:"C4",tier:6,col:3,ranks:3,rt:["Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 10%.","Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 20%.","Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 30%."]},
- cg:{pid:null,tier:5,col:4},
  rec:{pid:"C11",rt:["Gives you a 20% chance to gain an extra attack after Blocking, Dodging, Parrying or being the victim of a non-periodic critical strike. Cannot occur from Blocks, Dodges or Parries more than once every 4 sec. Stores up to 4 extra attacks. Your Holy Strike releases up to 2 stored extra attacks.","Gives you a 40% chance to gain an extra attack after Blocking, Dodging, Parrying or being the victim of a non-periodic critical strike. Cannot occur from Blocks, Dodges or Parries more than once every 4 sec. Stores up to 4 extra attacks. Your Holy Strike releases up to 2 stored extra attacks.","Gives you a 60% chance to gain an extra attack after Blocking, Dodging, Parrying or being the victim of a non-periodic critical strike. Cannot occur from Blocks, Dodges or Parries more than once every 4 sec. Stores up to 4 extra attacks. Your Holy Strike releases up to 2 stored extra attacks.","Gives you a 80% chance to gain an extra attack after Blocking, Dodging, Parrying or being the victim of a non-periodic critical strike. Cannot occur from Blocks, Dodges or Parries more than once every 4 sec. Stores up to 4 extra attacks. Your Holy Strike releases up to 2 stored extra attacks.","Gives you a 100% chance to gain an extra attack after Blocking, Dodging, Parrying or being the victim of a non-periodic critical strike. Cannot occur from Blocks, Dodges or Parries more than once every 4 sec. Stores up to 4 extra attacks. Your Holy Strike releases up to 2 stored extra attacks."]},
  ds:{pid:"C8",removed:true},
- is:{pid:"C5",tier:1,col:1},
- di:{pid:null,tier:1,col:2},
+ is:{pid:"M9",tier:1,col:1},
  isf:{pid:"C10",replace:{key:"rdef",name:"Shoulder the Burden",tier:4,col:3,r1:"You shoulder the burden of a friendly party or raid member, transferring 50% of their threat against all enemies to you.",status:"N",info:"45 Mana · 30 yd range · Instant · 5 min cooldown"}},
  irf:{pid:"C9",removed:true},
  sd:{pid:"C10",r1:"Increases your total Stamina by 2% and reduces the cooldown of your Divine Shield, Divine Protection, Templar's Bulwark, and Shoulder the Burden spells by 30 sec.",rN:"Increases your total Stamina by 4% and reduces the cooldown of your Divine Shield, Divine Protection, Templar's Bulwark, and Shoulder the Burden spells by 60 sec."},
@@ -352,26 +350,25 @@ const PROPOSED={
  red:{pid:"C6",rt:["Damaging melee attacks against you have a 10% chance to increase your chance to block by 4%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 8%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 12%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 16%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 20%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect."]},
  ic:{pid:"C7",r1:"Increases the threat generated by your Holy Strike ability by 5%. While Righteous Fury is active, reduces your damage taken by 2%.",rN:"Increases the threat generated by your Holy Strike ability by 25%. While Righteous Fury is active, reduces your damage taken by 10%."},
  tou:{pid:"C8",removed:true},
- uf:{pid:"C8",tier:1,col:3},
+ uf:{pid:"M10",tier:1,col:2},
  vin:{pid:"C8",tier:2,col:3,ranks:5,rt:["Gives your damaging melee attacks a chance to reduce the target's Attack Power by 41, and increase your Attack Power by 1% for 30 sec.","Gives your damaging melee attacks a chance to reduce the target's Attack Power by 82, and increase your Attack Power by 2% for 30 sec.","Gives your damaging melee attacks a chance to reduce the target's Attack Power by 122, and increase your Attack Power by 3% for 30 sec.","Gives your damaging melee attacks a chance to reduce the target's Attack Power by 163, and increase your Attack Power by 4% for 30 sec.","Gives your damaging melee attacks a chance to reduce the target's Attack Power by 204, and increase your Attack Power by 5% for 30 sec."]},
  gf:{pid:"C22",rt:["Reduces the cooldown of your Blessing of Protection by 1 min, increases the duration of your Blessing of Freedom by 3 sec, and your Lay on Hands drains only 75% of your remaining Mana.","Reduces the cooldown of your Blessing of Protection by 2 min, increases the duration of your Blessing of Freedom by 6 sec, and your Lay on Hands drains only 50% of your remaining Mana."]},
- ben:{pid:"C8",tree:"prot",tier:1,col:2},
+ ben:{pid:"M11",tree:"prot",tier:1,col:2},
  con:{pid:"C15",tier:1,col:3,r1:"Improves your chance to get a critical strike with attacks and spells by 1%.",rN:"Improves your chance to get a critical strike with attacks and spells by 5%."},
  ths:{pid:"M6",tier:4,col:4},
  poj:{pid:null,tier:3,col:1},
  tol:{pid:"C17",r1:"Reduces the Mana cost of your Seal spells by 20%. When you replace your Seal of Command, Seal of Righteousness, Seal of Fury, or Seal of Justice with a different Seal, you gain an Echo of that Seal for 10 sec. While the Echo lasts, your melee attacks also apply the replaced Seal's effects."}
 };
-const PROPOSED_NEW=[{pid:"C2",tree:"holy",key:"sw",name:"Lingering Light",tier:5,col:3,ranks:2,rt:["Your non-periodic critical heals cause the target to be healed for an additional 10% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing.","Your non-periodic critical heals cause the target to be healed for an additional 20% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing."],req:null,status:"N",info:""},{pid:"C12",tree:"prot",key:"fj",name:"Fury's Reach",tier:4,col:1,ranks:2,rt:["Increases the range of your Judgement by 5 yards while Seal of Fury is active.","Increases the range of your Judgement by 10 yards while Seal of Fury is active."],req:"sj",status:"N",info:""}];
+const PROPOSED_NEW=[{pid:"C2",tree:"holy",key:"sw",name:"Lingering Light",tier:5,col:4,ranks:2,rt:["Your non-periodic critical heals cause the target to be healed for an additional 10% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing.","Your non-periodic critical heals cause the target to be healed for an additional 20% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing."],req:null,status:"N",info:""},{pid:"C12",tree:"prot",key:"fj",name:"Fury's Reach",tier:4,col:1,ranks:2,rt:["Increases the range of your Judgement by 5 yards while Seal of Fury is active.","Increases the range of your Judgement by 10 yards while Seal of Fury is active."],req:"sj",status:"N",info:""}];
 // Rows for the proposals table: [id, talent key in proposed trees, talent, tree, today, proposed]
 const PROPOSALS=[
  ["C1", "rev", "Reverence", "Holy, row 3 → row 2", "10/20/30% of mana regeneration while casting", "17/33/50%"],
  ["C2", "sw", "Lingering Light (new)", "Holy, row 5", "—", "2 ranks: a critical heal adds a heal over time of 10/20% of the heal"],
  ["C3", "iol", "Infusion of Light", "Holy, row 4 → row 2", "Holy Shock and Flash of Light critical hits make the next Holy Light faster", "All Holy Shock, Flash of Light and Holy Strike hits do this. No critical hit is necessary"],
  ["C4", "hl", "Healing Light", "Holy, row 2 → row 6", "3 ranks: 4/8/12%", "3 ranks: 10/20/30% (with C19)"],
- ["C5", "is", "Improved Seals", "Holy, row 2 → row 1", "3 ranks: 5/10/15%", "The same, in row 1 (with C8)"],
  ["C6", "red", "Redoubt", "Protection, row 1", "10% chance when you are hit: +4–20% block", "The same. Each Holy Shield cast also starts it"],
  ["C7", "ic", "Iron Creed", "Protection, row 6", "−2–10% damage taken for 6 sec after Holy Strike", "−2–10% damage taken while Righteous Fury is active"],
- ["C8", "ben", "Toughness and Divine Strength: removed", "Protection row 1, Retribution row 2, Holy row 1", "Toughness: +2–10% armor from items. Divine Strength: +2–10% Strength", "Both removed. Benediction goes from Retribution row 1 to Protection row 1, with its 5 beta ranks. Vindication goes to Retribution row 2 with 5 ranks (+1–5% Attack Power). Unyielding Faith goes to Holy row 1"],
+ ["C8", "vin", "Toughness and Divine Strength: removed", "Protection row 1, Retribution row 2, Holy row 1", "Toughness: +2–10% armor from items. Divine Strength: +2–10% Strength", "Both removed. Vindication goes to Retribution row 2 with 5 ranks (+1–5% Attack Power). Benediction (M11) and Unyielding Faith (M10) fill row 1 of Protection and Holy"],
  ["C9", "ic", "Improved Righteous Fury", "Protection, row 3", "−2–6% damage taken with Righteous Fury", "Removed"],
  ["C10", "rdef", "Shoulder the Burden (new) replaces Improved Seal of Fury", "Protection, row 3 → row 4", "Improved Seal of Fury: mana when the Seal of Fury shield absorbs a hit", "Shoulder the Burden: 50% of the threat of an ally moves to you, 5 min cooldown. Sacred Duty also decreases its cooldown by 30/60 sec"],
  ["C11", "rec", "Reckoning", "Protection, row 5", "Extra attack after a block (40%) or a critical hit taken (100%); hits with the next swing", "Charge after a block, dodge or parry (once each 4 sec) or a critical hit taken; Holy Strike releases up to 2"],
@@ -384,7 +381,10 @@ const PROPOSALS=[
  ["C15", "con", "Conviction", "Retribution, row 2 → row 1 (M8)", "+1–5% critical hit chance with melee attacks", "+1–5% critical hit chance with attacks and spells"],
  ["C17", "tol", "Twist of Light", "Retribution, row 7", "The Echo applies to the next melee attack only", "The Echo applies to all melee attacks for 10 sec"],
  ["M6", "ths", "Two-Handed Weapon Specialization", "Retribution, row 5 → row 4", "Row 5 (20 points)", "Row 4 (15 points) (move only)"],
- ["M8", "con", "Conviction", "Retribution", "Row 2", "Row 1 (move only)"]
+ ["M8", "con", "Conviction", "Retribution", "Row 2", "Row 1 (move only)"],
+ ["M9", "is", "Improved Seals", "Holy", "Row 2", "Row 1 (move only)"],
+ ["M10", "uf", "Unyielding Faith", "Holy", "Row 2", "Row 1 (move only)"],
+ ["M11", "ben", "Benediction", "Retribution → Protection", "Retribution row 1", "Protection row 1 (move only)"]
 ];
 const BASELINE=[
  ["C16", "Holy Strike", "Triggers Seal of Light, Justice and Wisdom only", "Triggers your active Seal and Echo the same as a melee attack. Seal of Command keeps its usual chance (7 procs each minute)"],
@@ -610,16 +610,16 @@ ${dn("Forever talents give a %, not a flat value. Blessing of Light gives +400 t
 <ul>
 <li>Divine Strength removed. ${g("C8")}
 ${dn("+10% Strength gave a tank less than 1 threat per second for each point. Retribution received about 7 DPS for 5 points. Now each point in Rows 1 and 2 has a use for its spec.")}</li>
-<li>${t("is","Improved Seals")} moved to Row 1 (was Row 2). Its effect does not change. ${g("C5")}
+<li>${t("is","Improved Seals")} moved to Row 1 (was Row 2). Its effect does not change. ${g("M9")}
 ${dn("Seals are the Paladin's own damage. With Improved Seals 3 and Unyielding Faith 2, Retribution and Protection receive +15% Seal and Judgement damage and open Row 2 for Reverence.")}</li>
-<li>${t("uf","Unyielding Faith")} moved to Row 1 (was Row 2). Its effect does not change. ${g("C8")}
+<li>${t("uf","Unyielding Faith")} moved to Row 1 (was Row 2). Its effect does not change. ${g("M10")}
 ${dn("It fills the 2 points that Divine Strength leaves in Row 1. Retribution and Protection receive it in their usual Holy dip. Iron Will is also in Row 1 of the Warrior tree.")}</li>
 <li>${t("rev","Reverence")} moved to Row 2 (was Row 3). Keeps 17/33/50% of your mana regeneration during casts (was 10/20/30%). ${g("C1")}
 ${dn("Meditation, Reflection and Mindfulness give 50%. The other healers also have a mana return in addition: Litany of Light, Water Shield and Mana Tide Totem. In Row 2, Reverence is also the mana talent for Protection and Retribution.")}</li>
 <li>${t("iol","Infusion of Light")} moved to Row 2 (was Row 4). Your Holy Shock and Flash of Light casts and your Holy Strike hits reduce the cast time of your next Holy Light by 0.5/1 sec. The effect lasts 15 sec. ${g("C3")}
 <ul><li>A critical hit is no longer necessary (was Holy Shock and Flash of Light critical hits only). Holy Strike is a new trigger.</li></ul>
 ${dn("No talent reduced the cast time of Holy Light. Divine Fury, Naturalist and Improved Healing Wave give −0.5 sec to the large heal of their class. Hybrids also have a fast emergency heal now: after each Holy Strike, Holy Light has a 1.5 sec cast.")}</li>
-<li>New Talent: ${t("sw","Lingering Light")} (Row 5, Column 3, 2 ranks): Your direct critical heals also heal the target for 10/20% of the amount over 6 sec. A new direct critical heal adds the healing that stays, and the total ticks over a new 6 sec. ${g("C2")}
+<li>New Talent: ${t("sw","Lingering Light")} (Row 5, Column 4, 2 ranks): Your direct critical heals also heal the target for 10/20% of the amount over 6 sec. A new direct critical heal adds the healing that stays, and the total ticks over a new 6 sec. ${g("C2")}
 <ul><li>Each tick can be a critical heal. A critical tick does not start the effect again.</li></ul>
 ${dn("Holy had no heal over time. Lingering Light works as Ignite and Blessed Recovery work in Forever. It also gives more value to the critical heal talents of the tree: Illumination, Divine Favor and Holy Power.")}</li>
 <li>${t("hl","Healing Light")} moved to Row 6 (was Row 2). Increases the healing of your Holy Light, Flash of Light and Holy Shock spells by 10/20/30% (was 4/8/12%). ${g("C4")}
@@ -630,7 +630,7 @@ ${dn("The extra 18% replaces Blessing of Light. The large healing bonus now need
 <ul>
 <li>Toughness removed. ${g("C8")}
 ${dn("Forever removed the flat armor talents of the other tanks. Toughness was the last one.")}</li>
-<li>${t("ben","Benediction")} moved to Protection Row 1, Column 2 (was Retribution Row 1). Its effect does not change: reduces the mana cost of all your instant spells and abilities by 2/4/6/8/10%. ${g("C8")}
+<li>${t("ben","Benediction")} moved to Protection Row 1, Column 2 (was Retribution Row 1). Its effect does not change: reduces the mana cost of all your instant spells and abilities by 2/4/6/8/10%. ${g("M11")}
 ${dn("It takes the place of Toughness. A tank casts many instant spells: Holy Shield, Judgement, Seals and Consecration. Now the tank has a mana talent in its own tree. Holy and Retribution open Protection Row 2 with it. Then Holy takes Guardian's Favor, and Retribution takes Precision.")}</li>
 <li>${t("red","Redoubt")}: Melee attacks that cause damage to you have a 10% chance to increase your chance to block by 4/8/12/16/20%. Lasts 10 sec or 5 blocks. Your Holy Shield casts now also trigger this effect. ${g("C6")}
 ${dn("This change removes most crushing blows. It keeps the block values of the patch of 1 October. Redoubt is only active for a longer time. Holy and Retribution do not have Holy Shield. Thus, their Redoubt does not change.")}</li>

@@ -6,18 +6,18 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 
 | Row (points necessary) | Talents | Points in the row |
 | --- | --- | --- |
-| 1 (0) | Improved Seals (C5), Divine Intellect, Unyielding Faith (C8) | 10 |
+| 1 (0) | Improved Seals (M9), Unyielding Faith (M10), Divine Intellect | 10 |
 | 2 (5) | Infusion of Light (C3), Reverence (C1), Spiritual Focus | 7 |
 | 3 (10) | Voice of Truth, Purifying Power | 3 |
 | 4 (15) | Illumination, Divine Favor | 6 |
-| 5 (20) | Divine Precision, Holy Shock, Lingering Light (C2), Consecrated Ground | 8 |
+| 5 (20) | Divine Precision, Holy Shock, Consecrated Ground, Lingering Light (C2) | 8 |
 | 6 (25) | Holy Power, Healing Light (C4) | 8 |
 | 7 (30) | Light's Vigil | 1 |
 
 - Holy has 43 points (beta: 46).
 - You can use each talent when its row opens.
 - Illumination still requires Reverence (straight arrow in column 2).
-- C8 removes Divine Strength. Unyielding Faith goes to row 1 (C8).
+- C8 removes Divine Strength. Unyielding Faith goes to row 1 (M10).
 
 ## C1. Reverence: 10/20/30% → 17/33/50%, row 3 → row 2
 
@@ -27,7 +27,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Row 2.** In row 2, Reverence is also the mana talent for Protection and Retribution. They get it with 8 Holy points (see Mana).
 - **If it is too strong:** use 13/27/40%.
 
-## C2. Lingering Light (new talent): row 5, column 3, 2 ranks
+## C2. Lingering Light (new talent): row 5, column 4, 2 ranks
 
 - **Proposed text.** "Your non-periodic critical heals cause the target to be healed for an additional 10/20% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing."
 - **Identity.** It is the only Holy heal over time. It is not the same as Divine Aegis (Priest), because Divine Aegis is a shield.
@@ -69,9 +69,15 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Deep Holy** keeps Healing Light, Holy Power, Lingering Light and Light's Vigil. Thus, a deep Holy build stays clearly better for healing.
 - **Cost.** A Holy Paladin who levels gets the full bonus at level 37, not at level 17. Blessing of Light rank 1 came at level 40.
 
-## C5. Improved Seals: row 2 → row 1
+## M9. Improved Seals: row 2 → row 1
 
 - **Text.** "Increases the damage done by your Seals and Judgements by 5/10/15%." 3 ranks, the same as the beta.
-- **Change.** Only the row changes. Row 1 has Divine Intellect 5, Improved Seals 3 and Unyielding Faith 2 (C8).
+- **Change.** Only the row changes. Row 1 has Divine Intellect 5, Improved Seals 3 and Unyielding Faith 2 (M10).
 - **Dip.** With Improved Seals 3 and Unyielding Faith 2, Retribution and Protection open Holy row 2. They receive +15% Seal and Judgement damage and −30% Fear and Disorient duration. Then they take Reverence (8 points).
 - **Why row 1.** Seals are the Paladin's own damage. Thus, this dip is specific to the Paladin.
+
+## M10. Unyielding Faith: row 2 → row 1
+
+- **Text.** "Reduces the duration of Fear and Disorient effects on you by 15/30%." 2 ranks, the same as the beta.
+- **Position.** Row 1, column 2. It fills the 2 points that Divine Strength leaves (C8).
+- **Why.** With Improved Seals 3 (M9), it opens Holy row 2 for Retribution and Protection. Iron Will (Warrior) is also in row 1.

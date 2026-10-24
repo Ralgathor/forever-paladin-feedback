@@ -28,7 +28,7 @@ This table uses the proposed trees with M8 and C8 (calculator version 4).
 
 | Tree | Rows 1–2 | Retribution gets | Protection gets | Holy gets |
 | --- | --- | --- | --- | --- |
-| Holy | Improved Seals, Divine Intellect, Unyielding Faith · Infusion of Light, Reverence, Spiritual Focus | Seal damage, −30% Fear, regeneration while casting, a fast Holy Light (7–10 points) | Seal damage, −30% Fear, regeneration (8 points) | — |
+| Holy | Improved Seals, Unyielding Faith, Divine Intellect · Infusion of Light, Reverence, Spiritual Focus | Seal damage, −30% Fear, regeneration while casting, a fast Holy Light (7–10 points) | Seal damage, −30% Fear, regeneration (8 points) | — |
 | Retribution | Deflection, Conviction · Improved Judgement, Holy Conduit, Vindication | — | Parry, critical hit, Judgement −2 sec, cheaper Consecration, a debuff on the boss (5–10 points) | +5% critical heal chance (5 points) |
 | Protection | Benediction, Redoubt · Precision, Guardian's Favor, Anticipation | Instant spells −10%, +3% hit (8 points) | — | Instant spells −10%: Holy Shock, Cleanse. Guardian's Favor: saves, and Lay on Hands drains only 50% of the mana (C22) (7 points). Redoubt for PvP |
 
@@ -68,12 +68,12 @@ Each row 3 has a 1-point signature talent, as in the other classes. Each also ha
 | Divine Intellect (+10% Intellect, row 1) | Ancestral Knowledge (row 1), Mental Strength (row 2) | Equal |
 | Deflection (+5% parry, row 1) | Deflection (Warrior, Hunter, row 1) | Equal |
 | Conviction (+5% critical hit, row 1 with M8) | Cruelty, Malice, Lethal Attacks, Thundering Strikes (all row 1) | Equal with M8. In the beta, it is one row deeper |
-| Benediction (instant spells −10%, 5 points, Protection row 1 with C8) | Convection (−10%, 5 points, row 1), Cataclysm (−10%, 3 points) | Equal: more spells, but Paladin instant spells cost less |
+| Benediction (instant spells −10%, 5 points, Protection row 1 with M11) | Convection (−10%, 5 points, row 1), Cataclysm (−10%, 3 points) | Equal: more spells, but Paladin instant spells cost less |
 | Precision (+3% hit, Protection row 2) | Elemental Precision, Shadow Focus, Arcane Focus (row 1), Precision (Rogue, row 2) | Equal |
 | Anticipation (+20 Defense, row 2) | Anticipation (Warrior, row 2) | Equal |
 | Reverence (50%, row 2, C1) | Mindfulness (row 2), Meditation and Reflection (row 3) | Equal |
 | Improved Seals (+15% Seals and Judgements, 3 points, row 1) | Concussion (+5%), Improved Eviscerate (+20%) | Parity. Strong for each point, but the beta value |
-| Unyielding Faith (−30% Fear and Disorient, 2 points, Holy row 1 with C8) | Iron Will (−15% stun and fear, 5 points, Warrior row 1), Silent Resolve (−15%, 3 points) | Stronger. Resistance to fear is a Paladin strength. If PvP shows a problem: −10/20% |
+| Unyielding Faith (−30% Fear and Disorient, 2 points, Holy row 1 with M10) | Iron Will (−15% stun and fear, 5 points, Warrior row 1), Silent Resolve (−15%, 3 points) | Stronger. Resistance to fear is a Paladin strength. If PvP shows a problem: −10/20% |
 | Holy Conduit (−40% on 4 spells, 2 points, Retribution row 2) | Moonglow (−25%, 3 points, row 2), Cataclysm (−10%, 3 points) | Stronger for each point, but on few spells (W4) |
 | Vindication (+5% Attack Power, 5 points, Retribution row 2 with C8) | Demoralizing Shout, Demoralizing Roar (baseline Attack Power debuffs) | Equal. The stack with these debuffs is not known (Open questions) |
 | Improved Judgement (−2 sec, 2 points) | Improved Mind Blast (−2.5 sec, 5 points), Reverberation (−1 sec, 5 points) | Stronger for each point. It is the Classic value |

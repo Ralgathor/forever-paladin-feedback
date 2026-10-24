@@ -58,7 +58,7 @@ We examined these ideas and rejected them. They are not proposals.
 | Sacred Arbiter at +10% (with C16) | Only about 1% less damage (4 DPS) at fresh level 60. From Molten Core, Retribution is already below Fury. The beta talent needs no change |
 | M7: Repentance to row 4 (15 points), Sacred Arbiter to row 5 | Not necessary. C16 does not change Sacred Arbiter, so it stays in row 4. Repentance stays a 20-point talent |
 | Spiritual Focus in row 4 | A Holy healer then needs 3 points of filler in rows 1–3. HB2 (34/12/5) is not possible. In row 2, the healer needs 2 points of filler (see Analysis, Builds, part 7) |
-| Unyielding Faith in row 2, column 3 (M3) | Spiritual Focus now uses row 2, column 3. C8 moves Unyielding Faith to row 1, column 3 |
+| Unyielding Faith in row 2, column 3 (M3) | Spiritual Focus now uses row 2, column 3. M10 moves Unyielding Faith to row 1, column 2 |
 | A new Improved Lay on Hands talent for the drain | Forever removes this talent. A talent only to remove a penalty is a tax. C22 uses Guardian's Favor |
 | Lay on Hands with no drain | This is the change of patch 3.0.2 (Wrath of the Lich King), a later expansion. A full heal with no cost each 20 min is too strong |
 | Lay on Hands with a fixed cost (for example 30% of maximum mana) | At low mana, you cannot cast it. A drain of a % of the remaining mana keeps this use |
@@ -67,14 +67,14 @@ We examined these ideas and rejected them. They are not proposals.
 | Light's Vigil heals ×1.25 or ×2 | With the proposals, the Paladin is then 1–38% above the Shaman in raids. Not necessary: the raid healing is already at the level of the Shaman (see Analysis, Healing, part 6) |
 | C20: Illumination returns 75% of the base cost (beta: 50%) | Not necessary in raids: with 50% and the other proposals, the Paladin is about equal to the Shaman (−2% to +5%). At 75%, the Paladin is first on one tank by 9–15%. See W14. If Illumination returns mana for each critical heal of Light's Vigil, 75% puts the Paladin 75–114% above the Shaman (see Analysis, Healing, part 6) |
 | Divine Strength in Protection row 1 (first version of C8) | A tank receives less than 1 threat per sec for each point. Retribution receives about 1.4 DPS for each point (see Analysis, Builds). C8 now removes the talent |
-| Improved Seals with 5 ranks, 3/6/9/12/15% (first version of C5) | With Unyielding Faith in Holy row 1 (C8), the 3 beta ranks fill the row |
+| Improved Seals with 5 ranks, 3/6/9/12/15% (first version of C5, now M9) | With Unyielding Faith in Holy row 1 (M10), the 3 beta ranks fill the row |
 | Divine Strength in Retribution row 3 | About 1.4 DPS for each point. A weak 5-point talent only to fill the tree |
 | Sacred Duty with Precision in Protection row 1 | Row 3 loses its save talent, and all PvP builds take Divine Shield −60 sec for 2 points |
-| Unyielding Faith with Precision in Protection row 1 | It works, but C8 uses Unyielding Faith in Holy row 1 |
+| Unyielding Faith with Precision in Protection row 1 | It works, but M10 puts Unyielding Faith in Holy row 1 |
 | Precision and Redoubt only in Protection row 1 (8 points) | Each row 1 of the other classes has 10 points or more. Holy and Retribution then pay for points that they do not use |
 | Vindication with 5 ranks and the same maximum (+3%) | More points with no more value. +1/2/3/4/5% makes the 5 points useful |
 | Precision and Guardian's Favor in Protection row 1, Holy Conduit in Protection row 2 (C8 of 23 October) | Too far from the beta tree. Now Benediction fills the place of Toughness. Precision, Guardian's Favor and Holy Conduit stay in their beta place. Tanks take Holy Conduit with Deflection 5 (7 Retribution points) |
-| C21: Benediction with 3 ranks, 3/6/9% | C8 moves Benediction to Protection row 1. There, Benediction 5 opens row 2 for Holy and Retribution. The 5 beta ranks stay |
-| Benediction in Retribution row 2 (second part of M8) | C8 moves Benediction to Protection row 1. M8 now moves only Conviction |
+| C21: Benediction with 3 ranks, 3/6/9% | M11 moves Benediction to Protection row 1. There, Benediction 5 opens row 2 for Holy and Retribution. The 5 beta ranks stay |
+| Benediction in Retribution row 2 (second part of M8) | M11 moves Benediction to Protection row 1. M8 now moves only Conviction |
 | Unyielding Faith in Protection row 2 | Resistance to fear fits a defensive tree. But Precision, Guardian's Favor and Anticipation fill Protection row 2, with the Redoubt arrow in column 3. Unyielding Faith stays in Holy row 1 |
 | Guardian's Favor in row 1 of a tree (W19) | Guardian's Favor stays in Protection row 2, as in the beta. No other class has a save talent in row 1 |

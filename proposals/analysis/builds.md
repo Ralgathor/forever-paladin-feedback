@@ -9,7 +9,7 @@ This section examines the builds that are possible with the proposed trees. It g
 - Each spec has a clear main build. Each role also has real choices: mana, threat, saves and PvP control.
 - Only one build outside the main tree is good: Shock-Retribution (23/0/28) for short fights and PvP. Tanks and healers outside their tree are weaker.
 - C8 removes Divine Strength and Toughness. Each point in rows 1 and 2 now has a use for its spec. A tank build can have area and single-target talents together (part 3).
-- C8 moves Benediction to Protection row 1. The tank, Retribution and Holy builds keep their damage, threat and healing values. Retribution raid builds lose Guardian's Favor. Holy builds receive Benediction 5/5 and 4 free points.
+- M11 moves Benediction to Protection row 1. The tank, Retribution and Holy builds keep their damage, threat and healing values. Retribution raid builds lose Guardian's Favor. Holy builds receive Benediction 5/5 and 4 free points.
 - Two hybrids need 52 points: Holy Shock with Twist of Light, and Holy Shock with Holy Shield. This 1-point gap stops the two strongest hybrids.
 
 ## 1. Method
@@ -51,7 +51,7 @@ This section examines the builds that are possible with the proposed trees. It g
 - **Area threat and mana together.** Holy Conduit is in Retribution row 2. PB3 and PB4 take it with Deflection 5 (7 Retribution points). They also have One-Handed Weapon Specialization 2/3 (+17 threat per sec on one target). They skip Sacred Duty. Reckoning (C11) has more value against groups: each block, dodge and parry can give a charge.
 - **More threat, less utility.** v4p000320302-53050321301551-502 (10/34/7) has Holy Conduit, One-Handed Weapon Specialization 3/3 and Sacred Duty 2/2, with Anticipation 5 and Deflection 5: 544 / 634 threat per sec. It skips Shoulder the Burden and Guardian's Favor. Thus, the tank choice is threat or utility.
 - **Threat per sec for each point:** Holy Shield 253 (1 point), Redoubt 17, Swift Judgement 13 (1 point), Reckoning 12, One-Handed Weapon Specialization 9, Improved Seals 7, Precision 4, Conviction 3, Iron Creed 2 (and −10% damage taken), Vindication about 0.5 (and about −1.5% boss melee damage, if no Demoralizing Shout or Roar is on the boss).
-- **Benediction (Protection row 1, C8).** It saves about 4 mana per sec without Consecration and 11 with Consecration. It gives no threat. Thus, the raid tanks take Conviction and Reverence first. PB2 takes Benediction 1. A tank who wants more mana takes Benediction in place of Conviction: −3 threat per sec for each point.
+- **Benediction (Protection row 1, M11).** It saves about 4 mana per sec without Consecration and 11 with Consecration. It gives no threat. Thus, the raid tanks take Conviction and Reverence first. PB2 takes Benediction 1. A tank who wants more mana takes Benediction in place of Conviction: −3 threat per sec for each point.
 - **Divine Strength (removed by C8).** +10% Strength gave a tank about +15 Strength with pre-raid gear: about +30 Attack Power and +1 block value. Thus, all tank builds skipped it. Retribution received about +7 DPS for 5 points.
 
 ## 4. Retribution
@@ -61,14 +61,14 @@ This section examines the builds that are possible with the proposed trees. It g
 | RB1. Raid | 10/8/33: v4p000320302-030000000000005-0225531201330321 | 374 (423) | About 1,830 | Vindication 5 (C8). Benediction 5 and Precision 3. The best build on one target |
 | RB2. Raid with Consecration | 12/8/31: v4p200320302-030000000000005-0225531001330321 | 374 (423) | About 1,830 | Divine Intellect 2/5: +4% Intellect, more mana for Consecration (see W16). Vindication 5 opens row 6. The build of Analysis, Damage |
 | RB3. PvP, Hammer of Justice each 45 sec | 0/15/36: v4p-032000110300005-0225531221331321 | 358 (406) | About 2,240 | Swift Judgement, Repentance, Eye for an Eye, Guardian's Favor and Sacred Duty 1/2. Benediction 5 opens Protection row 2 |
-| RB4. PvP, fear and heals | 7/8/36: v4p000320002-030000000000005-0225531221331321 | 374 (423) | About 1,830 | Unyielding Faith (Holy row 1, C8), Infusion of Light and Repentance. No Guardian's Favor |
+| RB4. PvP, fear and heals | 7/8/36: v4p000320002-030000000000005-0225531221331321 | 374 (423) | About 1,830 | Unyielding Faith (Holy row 1, M10), Infusion of Light and Repentance. No Guardian's Favor |
 | RB5. Reckoning (Protection and Retribution) | 0/26/25: v4p-532300210215002-5005031211331 | 278 (323) | About 3,020 | The build of PvP burst check (see W6) |
 
 - **Raid DPS values** come from the damage model script (models/damage/run_tables.py) with the gear of Analysis, Damage, part 1. The value in brackets uses Consecration on cooldown.
 - **DPS for each point:** Seal of Command 82 (1 point), Twist of Light 47 (1 point), Sacred Arbiter 9 (1 point), Two-Handed Weapon Specialization 6.6, Vengeance 5.3, Improved Judgement 5.2, Conviction 5.0, Precision 4.9, Improved Seals 4.7, Champion of the Light 4.4, Instrument of Law 1.9, Vindication 1.3 (5 ranks, C8).
 - **About 6 points are free.** Each choice gives 1.5% DPS or less: Vindication, Divine Intellect, Infusion of Light or Pursuit of Justice.
-- **The dips into Holy and Protection are strong:** Improved Seals +6%, Precision +4%. The Protection dip also gives Benediction 5/5 (C8). Holy Conduit is in the Retribution tree. Thus, rule 1 of Tree balance works for Retribution.
-- **C8 and the Protection dip.** Benediction 5 opens Protection row 2. Thus, the dip is 8 points (Benediction 5, Precision 3), and Guardian's Favor costs 2 more points. RB1, RB2 and RB4 skip it. RB3 and RB5 take it.
+- **The dips into Holy and Protection are strong:** Improved Seals +6%, Precision +4%. The Protection dip also gives Benediction 5/5 (M11). Holy Conduit is in the Retribution tree. Thus, rule 1 of Tree balance works for Retribution.
+- **M11 and the Protection dip.** Benediction 5 opens Protection row 2. Thus, the dip is 8 points (Benediction 5, Precision 3), and Guardian's Favor costs 2 more points. RB1, RB2 and RB4 skip it. RB3 and RB5 take it.
 - **C8 and Retribution.** Divine Strength gave about +7 DPS. Vindication 5 gives about +6 DPS with full uptime. RB2 loses about 1 DPS. RB1 had Vindication 3: it loses about 4 DPS (−1%).
 - **Holy Power is not good for Retribution.** A 30/0/21 build loses Twist of Light and Vengeance: −23%.
 
