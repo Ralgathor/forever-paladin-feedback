@@ -28,7 +28,7 @@ This table uses the proposed trees with M8 and C8 (calculator version 4).
 
 | Tree | Rows 1–2 | Retribution gets | Protection gets | Holy gets |
 | --- | --- | --- | --- | --- |
-| Holy | Improved Seals, Divine Intellect, Unyielding Faith · Infusion of Light, Reverence, Spiritual Focus | Seal damage, −30% Fear, regeneration while casting, a fast Holy Light (7–10 points) | Seal damage, −30% Fear, regeneration (8 points) | — |
+| Holy | Improved Seals, Unyielding Faith, Divine Intellect · Infusion of Light, Reverence, Spiritual Focus | Seal damage, −30% Fear, regeneration while casting, a fast Holy Light (7–10 points) | Seal damage, −30% Fear, regeneration (8 points) | — |
 | Retribution | Deflection, Conviction · Improved Judgement, Holy Conduit, Vindication | — | Parry, critical hit, Judgement −2 sec, cheaper Consecration, a debuff on the boss (5–10 points) | +5% critical heal chance (5 points) |
 | Protection | Benediction, Redoubt · Precision, Guardian's Favor, Anticipation | Instant spells −10%, +3% hit (8 points) | — | Instant spells −10%: Holy Shock, Cleanse. Guardian's Favor: saves, and Lay on Hands drains only 50% of the mana (C22) (7 points). Redoubt for PvP |
 

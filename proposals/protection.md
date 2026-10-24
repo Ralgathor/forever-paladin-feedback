@@ -52,7 +52,7 @@ The Protection proposals give:
 | --- | --- | --- | --- |
 | Benediction | Retribution row 1, column 3 | Protection row 1, column 2 | The same: 5 ranks, 2/4/6/8/10% |
 | Vindication | Retribution row 3, column 1 | Retribution row 2, column 3 | 5 ranks (see below) |
-| Unyielding Faith | Holy row 2, column 4 | Holy row 1, column 3 | The same |
+| Unyielding Faith | Holy row 2, column 4 | Holy row 1, column 2 | The same |
 
 - **The other talents stay in their beta place.** Precision, Guardian's Favor and Anticipation stay in Protection row 2. Holy Conduit stays in Retribution row 2. Only Conviction moves in Retribution (M8).
 - **Benediction text.** "Reduces the Mana cost of all instant cast spells and abilities by 2/4/6/8/10%." The same as the beta.

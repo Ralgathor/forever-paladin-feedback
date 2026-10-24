@@ -58,7 +58,7 @@ We examined these ideas and rejected them. They are not proposals.
 | Sacred Arbiter at +10% (with C16) | Only about 1% less damage (4 DPS) at fresh level 60. From Molten Core, Retribution is already below Fury. The beta talent needs no change |
 | M7: Repentance to row 4 (15 points), Sacred Arbiter to row 5 | Not necessary. C16 does not change Sacred Arbiter, so it stays in row 4. Repentance stays a 20-point talent |
 | Spiritual Focus in row 4 | A Holy healer then needs 3 points of filler in rows 1–3. HB2 (34/12/5) is not possible. In row 2, the healer needs 2 points of filler (see Analysis, Builds, part 7) |
-| Unyielding Faith in row 2, column 3 (M3) | Spiritual Focus now uses row 2, column 3. C8 moves Unyielding Faith to row 1, column 3 |
+| Unyielding Faith in row 2, column 3 (M3) | Spiritual Focus now uses row 2, column 3. C8 moves Unyielding Faith to row 1, column 2 |
 | A new Improved Lay on Hands talent for the drain | Forever removes this talent. A talent only to remove a penalty is a tax. C22 uses Guardian's Favor |
 | Lay on Hands with no drain | This is the change of patch 3.0.2 (Wrath of the Lich King), a later expansion. A full heal with no cost each 20 min is too strong |
 | Lay on Hands with a fixed cost (for example 30% of maximum mana) | At low mana, you cannot cast it. A drain of a % of the remaining mana keeps this use |

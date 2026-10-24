@@ -6,11 +6,11 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 
 | Row (points necessary) | Talents | Points in the row |
 | --- | --- | --- |
-| 1 (0) | Improved Seals (C5), Divine Intellect, Unyielding Faith (C8) | 10 |
+| 1 (0) | Improved Seals (C5), Unyielding Faith (C8), Divine Intellect | 10 |
 | 2 (5) | Infusion of Light (C3), Reverence (C1), Spiritual Focus | 7 |
 | 3 (10) | Voice of Truth, Purifying Power | 3 |
 | 4 (15) | Illumination, Divine Favor | 6 |
-| 5 (20) | Divine Precision, Holy Shock, Lingering Light (C2), Consecrated Ground | 8 |
+| 5 (20) | Divine Precision, Holy Shock, Consecrated Ground, Lingering Light (C2) | 8 |
 | 6 (25) | Holy Power, Healing Light (C4) | 8 |
 | 7 (30) | Light's Vigil | 1 |
 
@@ -27,7 +27,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Row 2.** In row 2, Reverence is also the mana talent for Protection and Retribution. They get it with 8 Holy points (see Mana).
 - **If it is too strong:** use 13/27/40%.
 
-## C2. Lingering Light (new talent): row 5, column 3, 2 ranks
+## C2. Lingering Light (new talent): row 5, column 4, 2 ranks
 
 - **Proposed text.** "Your non-periodic critical heals cause the target to be healed for an additional 10/20% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing."
 - **Identity.** It is the only Holy heal over time. It is not the same as Divine Aegis (Priest), because Divine Aegis is a shield.
