@@ -7,7 +7,7 @@ This section examines the builds that are possible with the proposed trees. It g
 - The proposed trees (calculator version 4) have about 6.5 × 10^14 legal builds of 51 points. A search examined the trees of version 3 for each role with the models of this document. The builds of version 4 keep the same talents where the rows permit it.
 - Each talent is in at least one good build. No talent is without a use.
 - Each spec has a clear main build. Each role also has real choices: mana, threat, saves and PvP control.
-- Only one build outside the main tree is good: Shock-Retribution (21/0/30) for short fights and PvP. Tanks and healers outside their tree are weaker.
+- Only one build outside the main tree is good: Shock-Retribution (23/0/28) for short fights and PvP. Tanks and healers outside their tree are weaker.
 - C8 removes Divine Strength and Toughness. Each point in rows 1 and 2 now has a use for its spec. A tank build can have area and single-target talents together (part 3).
 - C8 moves Benediction to Protection row 1. The tank, Retribution and Holy builds keep their damage, threat and healing values. Retribution raid builds lose Guardian's Favor. Holy builds receive Benediction 5/5 and 4 free points.
 - Two hybrids need 52 points: Holy Shock with Twist of Light, and Holy Shock with Holy Shield. This 1-point gap stops the two strongest hybrids.
@@ -78,7 +78,7 @@ This section examines the builds that are possible with the proposed trees. It g
 | --- | --- | --- | --- | --- |
 | Damage | Shock-Retribution | 23/0/28: v4p50232032201012--02253312013303 | 352 DPS (94% of RB2) for 2 min, 429 with Consecration (Consecrated Ground). Holy Shock replaces Twist of Light. After about 2 min, the mana is too low for Holy Shock: 297 DPS (79%) | Good for short fights and PvP. In PvP, one Holy Shock adds about 560 damage to the burst (about 2,340) |
 | Damage | Shockadin | 38/0/13: v4p5023213225131251--02252002 | 311 DPS. The mana is zero after 30–50 sec. 63–70% for 2 min | Not good in raids |
-| Tank | Retribution with Righteous Fury and a two-handed weapon | 12/7/32 (RB2) | 91% of the PB2 threat (511 against 560 threat per sec). With Consecration, 93% of PB2 with Consecration (607 against 652). About 1.65 times the damage taken | Possible in easy dungeons. The healer must do more work |
+| Tank | Retribution with Righteous Fury and a two-handed weapon | 12/8/31 (RB2) | 91% of the PB2 threat (511 against 560 threat per sec). With Consecration, 93% of PB2 with Consecration (607 against 652). About 1.65 times the damage taken | Possible in easy dungeons. The healer must do more work |
 | Tank | Holy Shock tank | 30/21/0: v4p502320322012125-53201321301 | 57% of the PB2 threat (79% with Consecration). The mana lasts about 2 min (35 sec with Consecration) | For leveling and solo play |
 | PvP | Holy Shock with Iron Creed | 21/30/0: v4p5023203220101-5320132130145 | Righteous Fury stays active in PvP. Iron Creed then gives −10% damage taken. The build also has Templar's Bulwark, Reckoning and Holy Shock | Strong survival. See W17 |
 | Tank | Healing tank | 29/22/0: v4p53202132251010002-5320131130110001 | See part 6 | Not good |
