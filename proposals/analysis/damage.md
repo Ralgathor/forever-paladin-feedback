@@ -58,7 +58,7 @@ All proposals (C16 as in this document), raid buffs, 2 min fight:
 
 - About 70% of the damage is Holy damage. Armor does not decrease it.
 - The global cooldown is active 52% of the time. Thus, you have time for Exorcism or Consecration.
-- Mana: −2.6 mana per sec with Blessing of Wisdom. The mana lasts about 18 min. A melee player gets Blessing of Wisdom only with 3 Paladins in the raid (see The problem with Blessings). Without it: −10.6 mana per sec, and the mana lasts about 4.5 min.
+- Mana: +11.3 mana per sec with Blessing of Wisdom, +3.3 without it. The mana does not decrease, except in the last 20% of the fight: there, Hammer of Wrath uses 38 mana per sec. A melee player gets Blessing of Wisdom only with 3 Paladins in the raid (see The problem with Blessings).
 
 ## 4. Proposals against the beta
 
@@ -220,7 +220,7 @@ Judgement of the Crusader gives about +10% DPS at fresh level 60. It adds 161 Ho
 
 - **Stat values (raid buffs, 5 min fight).** 1 spell damage: 0.22 DPS. 1 Attack Power: 0.12 DPS. 1 Strength: 0.25 DPS. 1% critical hit: 5.6 DPS. 1% hit: 5.1 DPS, up to the cap. Thus, 1 spell damage is worth about 2 Attack Power. Plate items with spell damage are good for Retribution, and Warriors do not want them.
 - **Hit cap.** The build has 8% hit (Precision 3% + 5% from gear). The cap is 8%.
-- **Consecrated Ground with Consecration on cooldown.** About +21% on one target (374 → 453 DPS). The +10% applies to all your Holy damage on the target. Seals and Judgements also do Holy damage, thus this is the tooltip effect. Consecration gives 68% of the increase, Consecrated Ground 32%. Consecration ticks can be critical hits (×1.5). With Holy Conduit (C8), the mana is zero after 1 min 23 sec at fresh level 60 and 1 min 58 sec in Naxxramas. The average increase is +15% to +18% in a 2 min fight and +11% to +15% in a 3 min fight. Retribution is then 109–119% of the pure average. Consecration damage and the mana costs come from wowsims Forever. Mana is the balance: the 95% target is for the rotation without Consecration (see Watch list, W16).
+- **Consecrated Ground with Consecration on cooldown.** About +21% on one target (374 → 453 DPS). The +10% applies to all your Holy damage on the target. Seals and Judgements also do Holy damage, thus this is the tooltip effect. Consecration gives 68% of the increase, Consecrated Ground 32%. Consecration ticks can be critical hits (×1.5). The mana pool comes from the Retribution gear: 2,866 at fresh level 60 to 4,166 in Naxxramas, with no mp5. With Holy Conduit (C8) and Benediction, the mana is zero after 1 min 46 sec at fresh level 60 and 2 min 28 sec in Naxxramas (3 min fight). The average increase is +18% in a 2 min fight and +14% to +15% in a 3 min fight. Retribution is then 109–122% of the pure average. Consecration damage and the mana costs come from wowsims Forever. Mana is the balance: the 95% target is for the rotation without Consecration (see Watch list, W16).
 - **Exorcism against Undead and Demons.** About +12% (420 DPS). If you use it on cooldown, the mana is zero after about 2 min.
 - **Two-Handed Weapon Specialization.** The Paladin talent gives 6%. The Warrior talent in Forever gives 3%. Each 1% gives Retribution about 3.3 DPS (0.9%). At 6%, Retribution is 101% of Fury at fresh level 60 and 93% in Naxxramas. At 3%, it is 98% and 90%. The 6% stays: it is an intentional Paladin strength (see Tree balance, Paladin strengths).
 

@@ -9,25 +9,34 @@ RET_BETA_SIM = 847
 def pct(a, b):
     return f"{a / b:.0%}"
 
-# Mana of Retribution with Consecration on cooldown (Analysis, Mana, parts 3 and 5). Costs from wowsims Forever.
-# Holy Conduit (C8): Consecration (565) x0.60. Twist of Light: Seal of Command (210) x0.80. Sanctified Judgement
-# returns 60% of the base cost x (2 - the cost multiplier): 210 x 1.2 x 0.6 = 151. Hammer of Wrath rank 3: 425 mana,
-# x0.60, in the execute phase. Income: Reverence 50% at 130 Spirit (10.3), Blessing of Wisdom (8), mp5.
-MANA = (2897, 3400, 3900, 4400, 4900)
-MP5 = (3, 5, 7, 9, 12)
+# Mana of Retribution, build RB2 (Analysis, Mana, parts 3 and 5). Costs from wowsims Forever.
+# Mana pool: 1,232 + 15 x Intellect (Classic formula: base 1,512, the first 20 Intellect give 1 mana each), with Mark
+# of the Wild and Kings, from the Retribution gear of each tier (fresh level 60: 87 Intellect, 2,866 mana with buffs).
+# Retribution gear has no mp5. Benediction 3/3 (C21): instant spells x0.90. Twist of Light: Seals x0.80.
+# Holy Conduit (C8): Consecration (565) x0.60. Sanctified Judgement returns 60% of the base Seal cost x (2 - the cost
+# multiplier): 210 x (2 - 0.72) x 0.6 = 161 (wowsims Forever). Judgement: 6% of base mana (91). Holy Strike: 20.
+# Hammer of Wrath rank 3: 425 x0.60, in the execute phase. Income: Reverence 50% (C1) at 130 Spirit (10.3) and
+# Blessing of Wisdom (8).
+BEN, TOL = 0.90, 0.80
+
+def ret_mana(tier, wisdom=True):
+    """(mana pool, income, rotation cost, Hammer of Wrath cost, Consecration cost), all per sec except the pool."""
+    intel = (gear(tier)["int"] + M.MOTW) * M.KINGS
+    pool = 1232 + 15 * intel
+    income = 10.3 + (8 if wisdom else 0)
+    seal = 210 * BEN * TOL
+    rotation = seal / 10 + 91 * BEN / 8 - 210 * (2 - BEN * TOL) * 0.6 / 8 + 20 * BEN / 10
+    return pool, income, rotation, 425 * 0.60 * BEN / 6, 565 * 0.60 * BEN / 8
 
 def consecration_mana(tier, fight, dt=0.1):
     """Consecration on cooldown until the mana is zero, then only when the mana returns.
     Returns (time of zero mana or None, average DPS)."""
     g = gear(tier)
     base, full = retribution(g), retribution(g, extra="consecration")
-    cons = 565 * 0.60 / 8
-    other = 210 * 0.80 / 10 + 91 / 8 - 210 * 1.2 * 0.6 / 8 + 20 / 10
-    how = 425 * 0.60 / 6
-    income = 10.3 + 8 + MP5[tier] / 5
-    mana, t, dmg, zero = MANA[tier], 0.0, 0.0, None
+    mana, income, rotation, how, cons = ret_mana(tier)
+    t, dmg, zero = 0.0, 0.0, None
     while t < fight:
-        rest = income - other - (how if t >= fight * (1 - M.EXECUTE) else 0)
+        rest = income - rotation - (how if t >= fight * (1 - M.EXECUTE) else 0)
         c = min(cons, max(0.0, mana / dt + rest))       # at zero mana: Consecration only from the mana that returns
         mana += (rest - c) * dt
         if mana <= 0 and zero is None:
@@ -58,6 +67,9 @@ if __name__ == "__main__":
     gcd = (1 / 10 + 1 / 8 + 1 / 10) * M.GCD + M.EXECUTE / 6 * 1.0
     print(f"Global cooldown active: {gcd:.0%} (Holy Strike, Judgement, one Seal each 10 sec, Hammer of Wrath)")
     print(f"5 min fight: {retribution(g, fight=300) / P - 1:+.1%}")
+    pool, inc, rot, how, _ = ret_mana(0)
+    print(f"Mana: pool {pool:.0f}. Rotation {rot:.1f} per sec (Hammer of Wrath +{how:.1f} in the execute phase), income "
+          f"{inc:.1f} with Blessing of Wisdom, {inc - 8:.1f} without")
 
     print("\n## Part 4: proposals against the beta")
     swap = retribution(g, "beta_swap")
