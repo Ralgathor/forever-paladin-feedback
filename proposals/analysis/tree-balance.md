@@ -56,7 +56,7 @@ Without M8, Holy must choose between +5% critical heal chance and Guardian's Fav
 
 | Tree | Row 3 | Who puts 10 points or more |
 | --- | --- | --- |
-| Holy | Voice of Truth (1-point signature), Purifying Power, Consecrated Ground | Protection: Consecrated Ground (area threat). Retribution: Exorcism and Holy Wrath cooldowns. All specs in PvP: Voice of Truth |
+| Holy | Voice of Truth (1-point signature), Purifying Power | Retribution: Exorcism and Holy Wrath cooldowns. Holy Shock builds: the 20 points for row 5 (Holy Shock, Consecrated Ground). All specs in PvP: Voice of Truth |
 | Protection | Swift Judgement (1-point signature), Improved Hammer of Justice, Shield Specialization, Sacred Duty | All specs in PvP: Hammer of Justice each 45 sec, Divine Shield −60 sec. Retribution: a Judgement reset |
 | Retribution | Seal of Command (1-point signature), Sanctified Judgement, Pursuit of Justice | Holy: Pursuit of Justice. Protection: Sanctified Judgement (mana) |
 

@@ -71,7 +71,7 @@ if __name__ == "__main__":
         print(f"{name}: {paladin(g, tal):.0f} / {paladin(g, tal, consecration=True):.0f}")
     p2 = paladin(g, PB2)
     print(f"PB2 against PB1: {p2 / P - 1:+.1%}")
-    print(f"One-Handed Weapon Specialization in PB3: {paladin(g, dict(PB3, ohws=3)) - paladin(g, PB3):+.0f}")
+    print(f"One-Handed Weapon Specialization 2 in PB3: {paladin(g, PB3) - paladin(g, dict(PB3, ohws=0)):+.0f}")
     per = {"Holy Shield": ("hsh", 1), "Redoubt": ("red", 5), "Reckoning": ("reck", 5), "Swift Judgement": ("sj", 1),
            "One-Handed Weapon Specialization": ("ohws", 3), "Improved Seals": ("is", 3), "Precision": ("prec", 3),
            "Conviction": ("conv", 3), "Iron Creed": ("ic", 5)}

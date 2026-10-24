@@ -12,6 +12,7 @@ We examined these ideas and rejected them. They are not proposals.
 | Champion of the Light adds healing | At 60% of Intellect, it gives the same healing as deep Holy. Holy Paladins then go into Retribution. Possible at 10/20/30%, because C4 puts Healing Light too deep for a Retribution hybrid |
 | Sacred Ward (critical heals add a shield) | The same talent as Divine Aegis (Priest). Lingering Light (C2) replaces it |
 | Other ideas for the new Holy talent (heal splash, aura bonus, Cleanse, Lay on Hands) | Too modern, or utility and not healing |
+| M1: Consecrated Ground in Holy row 3 (beta: row 5) | In row 3, Retribution takes it with 12 Holy points. With Consecration on cooldown, Retribution is then 109–118% of the pure average in a 3 min fight (W16). In row 5, only Holy Shock builds reach it, as in the beta design. Tanks lose 8–9% threat with Consecration. On each add, they still have about 1.4–1.8 times the threat of the Warrior and the Druid (estimate, 4 mobs) |
 | Steadfast Faith (stun duration) in Protection row 1 | Two talents against crowd control. Other classes have one |
 | Toughness that also gives Stamina | C8 removes Toughness. Sacred Duty already gives Stamina |
 | Hallowed Ground or Shield Specialization in Protection row 1 | Talents only for tanks. Rows 1 and 2 must give something to the other specs (design rule 2) |
