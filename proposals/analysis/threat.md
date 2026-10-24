@@ -227,4 +227,4 @@ Other options were examined and rejected. See Withdrawn ideas.
 - Holy Strike: 50% of (normalized weapon damage (2.4 sec) + 93 + 42.9% of spell power). All of it is Holy damage: armor does not decrease it. Righteous Fury multiplies all of its threat (beta test). Holy Power gives Holy Strike +3% critical hit for each rank.
 - Judgement of Fury: 153–167 Holy damage. It uses the melee hit table with no dodge or parry. The damage hits before the taunt (beta test). Holy Strike uses the melee hit table.
 - Seal of Fury (rank 7): 35 Holy damage + 10% of spell power for each hit. It cannot miss. Its critical hit uses a separate roll.
-- Consecration rank 5: 312 damage in 8 sec (8 ticks of 12 + 27), one cast each 8 sec. Critical hit ×1.5 with C15.
+- Consecration rank 5: 312 damage in 8 sec (8 ticks of 12 + 27), one cast each 8 sec. Critical hit ×1.5 (beta test). C15 adds Conviction to its critical hit chance.
