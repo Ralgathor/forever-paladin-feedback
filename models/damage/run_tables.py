@@ -164,3 +164,24 @@ if __name__ == "__main__":
     print(f"Two-Handed Weapon Specialization: each 1% {(P - t3) / 3:.1f} DPS. At 3%: "
           f"{start * t3 / P:.0%} of Fury at fresh level 60, {start * t3 / P * growth(lambda h: retribution(h, ths=1.03))[4] / F[4]:.0%} in Naxxramas")
     print(f"Champion of the Light at 30%: {retribution(g, cotl=0.30) - P:+.0f}")
+
+    print("\n## Analysis, Builds, parts 4 and 5: Retribution builds (fresh level 60, 2 min)")
+    for name, tal in M.RET_BUILDS:
+        x, xc = retribution(g, tal=tal), retribution(g, tal=tal, extra="consecration")
+        print(f"{name} | {x:.0f} ({xc:.0f} with Consecration) | {pct(x, P)} of RB2")
+    sh, sh0 = retribution(g, tal=M.SHOCK_RET), retribution(g, tal=dict(M.SHOCK_RET, hsk=0))
+    print(f"Shock-Retribution: {sh:.0f} ({pct(sh, P)} of RB2). No mana for Holy Shock: {sh0:.0f} ({pct(sh0, P)})")
+
+    def ret_tank(front=True, dungeon=True, cons=False):
+        """RB2 with Righteous Fury (x1.9 on Holy damage), pre-raid gear (Threat, part 1). dungeon: Blessing of Might only."""
+        save = (M.KINGS, M.SHOUT, M.MOTW)
+        if dungeon:
+            M.KINGS, M.SHOUT, M.MOTW = 1.0, 0, 0
+        tot, src_t, _ = retribution(gear(1), detail=True, front=front, extra="consecration" if cons else None)
+        M.KINGS, M.SHOUT, M.MOTW = save
+        return src_t["Auto attacks"] + 1.9 * (tot - src_t["Auto attacks"])
+    PB2_TPS, PB2_CONS = 560, 652          # Analysis, Builds, part 3 (threat model)
+    a, c = ret_tank(), ret_tank(cons=True)
+    print(f"Retribution tank (front, dungeon buffs): {a:.0f} TPS ({pct(a, PB2_TPS)} of PB2), with Consecration "
+          f"{c:.0f} ({pct(c, PB2_CONS)} of PB2 with Consecration). From behind with raid buffs: "
+          f"{pct(ret_tank(False, False), PB2_TPS)}")
