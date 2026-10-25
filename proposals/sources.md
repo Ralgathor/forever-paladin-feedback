@@ -46,3 +46,4 @@
 - [WoW Forever Talents – Priest spellbook](https://wowforevertalents.com/abilities/priest/)
 - [WoW Forever Talents – Druid spellbook](https://wowforevertalents.com/abilities/druid/)
 - [WoW Forever Talents – Shaman spellbook](https://wowforevertalents.com/abilities/shaman/)
+- [wowsims/forever – talent trees of all classes](https://github.com/wowsims/forever/tree/master/ui/sim/talents/trees)
