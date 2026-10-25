@@ -26,7 +26,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 19 chan
 | ID | Talent | Tree and row | Beta | Proposed |
 | --- | --- | --- | --- | --- |
 | C1 | Reverence | Holy, row 3 → row 2 | 10/20/30% of mana regeneration while casting | 17/33/50% |
-| C2 | Lingering Light (new) | Holy, row 5 | — | 2 ranks: a critical heal adds a heal over time of 10/20% of the heal |
+| C2 | Lingering Light (new) | Holy, row 3 | — | 2 ranks: a critical heal adds a heal over time of 10/20% of the heal |
 | C3 | Infusion of Light | Holy, row 4 → row 2 | Holy Shock and Flash of Light critical hits make the next Holy Light faster | All Holy Shock, Flash of Light and Holy Strike hits do this. No critical hit is necessary |
 | C4 | Healing Light | Holy, row 2 → row 6 | 3 ranks: 4/8/12% | 3 ranks: 10/20/30% (with C19) |
 | C6 | Redoubt | Protection, row 1 | 10% chance when you are hit: +4–20% block | The same. Each Holy Shield cast also starts it |
@@ -56,6 +56,8 @@ This document gives talent proposals for the WoW Forever Paladin. It has 19 chan
 | M9 | Improved Seals | Holy | Row 2 | Row 1 |
 | M10 | Unyielding Faith | Holy | Row 2 | Row 1 |
 | M11 | Benediction | Retribution → Protection | Retribution row 1 | Protection row 1 |
+| M12 | Holy Power | Holy | Row 6 | Row 5 |
+| M13 | Consecrated Ground | Holy | Row 5 | Row 6 |
 
 ## Design rules
 

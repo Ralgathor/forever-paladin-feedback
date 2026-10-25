@@ -55,7 +55,7 @@ Without M8, Holy must choose between +5% critical heal chance and Guardian's Fav
 
 | Tree | Row 3 | Who puts 10 points or more |
 | --- | --- | --- |
-| Holy | Voice of Truth (1-point signature), Purifying Power | Retribution: Exorcism and Holy Wrath cooldowns. Holy Shock builds: the 20 points for row 5 (Holy Shock, Consecrated Ground). All specs in PvP: Voice of Truth |
+| Holy | Voice of Truth (1-point signature), Purifying Power, Lingering Light (C2) | Retribution: Exorcism and Holy Wrath cooldowns. Holy Shock builds: the 20 points for row 5 (Holy Shock, Holy Power). All specs in PvP: Voice of Truth |
 | Protection | Swift Judgement (1-point signature), Improved Hammer of Justice, Shield Specialization, Sacred Duty | All specs in PvP: Hammer of Justice each 45 sec, Divine Shield −60 sec. Retribution: a Judgement reset |
 | Retribution | Seal of Command (1-point signature), Sanctified Judgement, Pursuit of Justice | Holy: Pursuit of Justice. Protection: Sanctified Judgement (mana) |
 
@@ -124,22 +124,25 @@ Source: the talent data of wowsims/forever (25 October 2026) for all nine classe
 
 | Tree | Rows 1–7 | Rows 1–3 | Rows 4–6 |
 | --- | --- | --- | --- |
-| Holy, proposed | 10 / 7 / 3 / 6 / 8 / 8 / 1 | **20** (other trees: 23–35) | 22 |
+| Holy, calculator version 4 | 10 / 7 / 3 / 6 / 8 / 8 / 1 | **20** (other trees: 23–35) | 22 |
+| Holy, with C2 in row 3, M12 and M13 | 10 / 7 / 5 / 6 / 9 / 5 / 1 | 22 | 20 |
 | Protection, proposed | 10 / 10 / 9 / 6 / 6 / 5 / 1 | 29 | 17 |
 | Retribution, proposed | 10 / 9 / 6 / 6 / 4 / 5 / 1 | 25 | **15** (other trees: 15–25) |
 | Mean of the other 24 trees | — | 28.6 | 19.1 |
 
-- Holy row 3 has 3 points. Each other tree has 4 points or more in row 3. Holy rows 1–3 (20 points) are the lowest of the 27 trees.
-- This causes the 2 points of filler of the Holy healer (Builds, part 7). Row 4 needs 15 points in rows 1–3. Only about 14 of the 20 points help a healer.
+- In version 4, Holy row 3 has 3 points. Each other tree has 4 points or more in row 3. Holy rows 1–3 (20 points) are the lowest of the 27 trees.
+- This causes 2 points of filler for the Holy healer. Row 4 needs 15 points in rows 1–3, and only 14 of these points help a healer. Row 6 needs 25 points in rows 1–5, and only 23 help a healer.
+- **The fix: three moves in Holy.** Lingering Light goes to row 3 (C2). Holy Power goes to row 5 (M12). Consecrated Ground goes to row 6 (M13). Rows 1–3 then hold 16 healer points, and rows 1–5 hold 28. The Holy healer has no filler.
+- After the moves, each Holy row is in the range of the other trees. Rows 1–3 (22) are 1 point below the lowest other tree.
 - Retribution rows 4–6 (15 points) are equal to the lowest other tree (Discipline). A deep Retribution build takes almost all of them.
 
 **What the smaller trees change.**
 
 | Effect | Result |
 | --- | --- |
-| Choices in the main tree | A small decrease. A deep build leaves 8 points of Holy or Retribution, and 12 points of Protection. In a tree of 49 points, the same build leaves 14 |
-| Forced filler | It comes from thin rows, not from the total. Holy healer: 2 points. Main Protection and Retribution builds: none |
-| Points for the other trees | Smaller trees free more points: 16 for Holy (HB1, 35/11/5) and 18 for Retribution (RB1, 10/8/33). Rule 1 needs these dips |
+| Choices in the main tree | A small decrease. A deep build leaves 8 points of Retribution, 11 points of Holy (healer: 32 points) and 12 points of Protection. In a tree of 49 points, the same build leaves 14–17 |
+| Forced filler | It comes from thin rows, not from the total. Holy healer: 2 points in version 4, none with the three moves. Main Protection and Retribution builds: none |
+| Points for the other trees | Smaller trees free more points: up to 19 for Holy (HB1, 35/11/5, uses 16) and 18 for Retribution (RB1, 10/8/33). Rule 1 needs these dips |
 | The 52-point hybrids | The tree size does not cause them. Holy Shock with Twist of Light or Holy Shield needs 52 of the 51 points |
 
-**Result.** Do not add ranks to reach the totals of the other classes. New ranks become stat filler again, as the talents that C8 removes. The talent count is already in the range of the other classes. Holy row 3 is the one weak point. A new healer talent there can remove the 2 points of filler. This analysis does not propose it now.
+**Result.** Do not add ranks to reach the totals of the other classes. New ranks become stat filler again, as the talents that C8 removes. The talent count is already in the range of the other classes. Holy rows were the one weak point. Three moves fix them with no new talent: C2 in row 3, M12 and M13. All build codes of version 4 stay valid. Shock-Retribution changes to 26/0/25 (see Builds, part 5).

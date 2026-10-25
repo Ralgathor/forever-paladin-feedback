@@ -8,16 +8,17 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 | --- | --- | --- |
 | 1 (0) | Improved Seals (M9), Unyielding Faith (M10), Divine Intellect | 10 |
 | 2 (5) | Infusion of Light (C3), Reverence (C1), Spiritual Focus | 7 |
-| 3 (10) | Voice of Truth, Purifying Power | 3 |
+| 3 (10) | Voice of Truth, Purifying Power, Lingering Light (C2) | 5 |
 | 4 (15) | Illumination, Divine Favor | 6 |
-| 5 (20) | Divine Precision, Holy Shock, Consecrated Ground, Lingering Light (C2) | 8 |
-| 6 (25) | Holy Power, Healing Light (C4) | 8 |
+| 5 (20) | Divine Precision, Holy Shock, Holy Power (M12) | 9 |
+| 6 (25) | Consecrated Ground (M13), Healing Light (C4) | 5 |
 | 7 (30) | Light's Vigil | 1 |
 
 - Holy has 43 points (beta: 46).
 - You can use each talent when its row opens.
 - Illumination still requires Reverence (straight arrow in column 2).
 - C8 removes Divine Strength. Unyielding Faith goes to row 1 (M10).
+- A Holy healer needs no filler. Rows 1–3 hold 16 healer points (row 4 needs 15). Rows 1–5 hold 28 (row 6 needs 25). See Analysis, Tree balance.
 
 ## C1. Reverence: 10/20/30% → 17/33/50%, row 3 → row 2
 
@@ -27,13 +28,14 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Row 2.** In row 2, Reverence is also the mana talent for Protection and Retribution. They get it with 8 Holy points (see Mana).
 - **If it is too strong:** use 13/27/40%.
 
-## C2. Lingering Light (new talent): row 5, column 4, 2 ranks
+## C2. Lingering Light (new talent): row 3, column 4, 2 ranks
 
 - **Proposed text.** "Your non-periodic critical heals cause the target to be healed for an additional 10/20% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing."
 - **Identity.** It is the only Holy heal over time. It is not the same as Divine Aegis (Priest), because Divine Aegis is a shield.
 - **Text model.** "Non-periodic critical heals" comes from Divine Aegis and Inspiration (Priest). "Refreshing this effect carries over any remaining healing" comes from Blessed Recovery (Priest). Blessed Recovery already works this way in Forever.
 - **Why critical heals.** Healing Light already gives a flat healing bonus. The Holy tree has many critical hit talents (Illumination, Divine Favor, Holy Power). This talent gives them more value.
 - **Value.** At 22% critical heal chance: 22% × 1.5 (critical heal) × 20% = about +6.6% of a normal heal. Critical ticks add about 11% to this: about +7.3%. Some of it is overhealing on targets with full health.
+- **Why row 3.** Holy row 3 had only 3 points, the smallest row 3 of all classes. With Lingering Light, it has 5. A Holy healer then needs no filler for row 4. Retribution and Protection can take it with 10 Holy points. They have few critical heals, thus its value for them is small (see W12 for PvP).
 - **Why 10/20%.** Healing Light (C4) gives the main healing bonus. Lingering Light gives a smaller bonus, and only on critical heals. At 20%, it gives about 3.6% for each point, as Spiritual Healing (Priest) does. Lingering Light gives about 5% on one tank in fights of 10 min (see Analysis, Healing, part 5). At 30%, the lead on one tank and the overhealing risk were larger.
 
 **How the heal over time works.** It works as Ignite and Blessed Recovery do in Forever, not as Deep Wounds.
@@ -66,7 +68,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Proposed text.** "Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 10/20/30%."
 - **Change.** 3 ranks: 10/20/30% (beta: 4/8/12%). The maximum increases from 12% to 30%, because C19 removes Blessing of Light. The 18% difference replaces the Blessing of Light bonus (see C19).
 - **Why row 6.** The healing bonus is now at 25 points, as Spiritual Healing (Priest) and Purification (Shaman) are. A Holy Paladin with 28 points in Retribution has only 23 points for Holy. This Paladin cannot get Healing Light.
-- **Deep Holy** keeps Healing Light, Holy Power, Lingering Light and Light's Vigil. Thus, a deep Holy build stays clearly better for healing.
+- **Deep Holy** keeps Healing Light, Holy Power and Light's Vigil. Thus, a deep Holy build stays clearly better for healing. Lingering Light is in row 3 (C2), but its value comes from critical heals.
 - **Cost.** A Holy Paladin who levels gets the full bonus at level 37, not at level 17. Blessing of Light rank 1 came at level 40.
 
 ## M9. Improved Seals: row 2 → row 1
@@ -81,3 +83,18 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Text.** "Reduces the duration of Fear and Disorient effects on you by 15/30%." 2 ranks, the same as the beta.
 - **Position.** Row 1, column 2. It fills the 2 points that Divine Strength leaves (C8).
 - **Why.** With Improved Seals 3 (M9), it opens Holy row 2 for Retribution and Protection. Iron Will (Warrior) is also in row 1.
+
+## M12. Holy Power: row 6 → row 5
+
+- **Text.** "Increases the critical strike chance of your Holy Shock and Holy Strike spells by 3/6/9/12/15%, and all other spells by 1/2/3/4/5%." 5 ranks, the same as the beta.
+- **Position.** Row 5, column 3.
+- **Why.** In row 6, a Holy healer needed 2 points of filler: rows 1–5 held only 23 healer points. With Holy Power in row 5, they hold 28. Holy healing is then complete at 32 points.
+- **Retribution and Protection cannot take it.** Twist of Light and Holy Shield need 31 points. Holy Power needs 25 Holy points. 25/0/26 with Holy Power loses Twist of Light and Champion of the Light: −19% (see Builds, part 4).
+- **Shock-Retribution** takes Holy Power in place of Consecrated Ground (M13): 26/0/25. See Builds, part 5.
+
+## M13. Consecrated Ground: row 5 → row 6
+
+- **Text.** "Gives your Holy spells 5/10% increased damage against the first 4 enemies that enter your Consecration." 2 ranks, the same as the beta.
+- **Position.** Row 6, column 1. Healing Light stays in column 3. The Light's Vigil arrow uses column 2.
+- **Why.** Row 5 has Holy Power now (M12). Consecrated Ground goes down one row, thus row 5 has 9 points and row 6 has 5.
+- **Who takes it.** Only deep Holy builds with Holy Shock (Shockadin, 38/0/13). Shock-Retribution needs 27 Holy points for it and takes Holy Power. With Consecration on cooldown, Shock-Retribution is then 96% of RB2 (with Consecrated Ground in row 5: 101%).

@@ -160,9 +160,8 @@ if __name__ == "__main__":
     exo = retribution(g, extra="exorcism")
     print(f"Consecration on cooldown: {cons:.0f} ({cons / P - 1:+.0%}). Exorcism: {exo:.0f} ({exo / P - 1:+.0%})")
     sh, shc = retribution(g, tal=M.SHOCK_RET), retribution(g, tal=M.SHOCK_RET, extra="consecration")
-    _, sc8, _ = retribution(g, tal=M.SHOCK_RET, extra="consecration", detail=True)
-    print(f"Shock-Retribution (Consecrated Ground, Holy row 5) with Consecration: {sh:.0f} -> {shc:.0f} "
-          f"({shc / sh - 1:+.0%}). Consecrated Ground part of the increase: {sc8['Consecrated Ground'] / (shc - sh):.0%}")
+    print(f"Shock-Retribution (Holy Power, Holy row 5) with Consecration: {sh:.0f} -> {shc:.0f} "
+          f"({shc / sh - 1:+.0%}, {pct(shc, cons)} of RB2 with Consecration)")
     for fight in (120, 180, 300):
         row = []
         for t in range(5):

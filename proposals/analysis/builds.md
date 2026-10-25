@@ -7,7 +7,7 @@ This section examines the builds that are possible with the proposed trees. It g
 - The proposed trees (calculator version 4) have about 6.5 × 10^14 legal builds of 51 points. A search examined the trees of version 3 for each role with the models of this document. The builds of version 4 keep the same talents where the rows permit it.
 - Each talent is in at least one good build. No talent is without a use.
 - Each spec has a clear main build. Each role also has real choices: mana, threat, saves and PvP control.
-- Only one build outside the main tree is good: Shock-Retribution (23/0/28) for short fights and PvP. Tanks and healers outside their tree are weaker.
+- Only one build outside the main tree is good: Shock-Retribution (26/0/25) for short fights and PvP. Tanks and healers outside their tree are weaker.
 - C8 removes Divine Strength and Toughness. Each point in rows 1 and 2 now has a use for its spec. A tank build can have area and single-target talents together (part 3).
 - M11 moves Benediction to Protection row 1. The tank, Retribution and Holy builds keep their damage, threat and healing values. Retribution raid builds lose Guardian's Favor. Holy builds receive Benediction 5/5 and 4 free points.
 - Two hybrids need 52 points: Holy Shock with Twist of Light, and Holy Shock with Holy Shield. This 1-point gap stops the two strongest hybrids.
@@ -29,7 +29,7 @@ This section examines the builds that are possible with the proposed trees. It g
 | HB2. Healer with more saves | 34/12/5: v4p53201132251010512-302000200000005-0005 | The same as HB1 | Sacred Duty 2/2 (Divine Shield −60 sec, +4% Stamina), Guardian's Favor and Benediction 5. Redoubt 3. Possible only with Spiritual Focus in row 2 (M2) |
 | HB3. PvP, Hammer of Justice each 45 sec | 30/16/5: v4p53202132251010102-502000100300005-0005 | −3% maximum, −6% for the full fight | Improved Hammer of Justice 3/3, Redoubt 5, Sacred Duty 1/2. No Light's Vigil. Holy Power 1/5 |
 
-- **Holy is complete at 34–35 points.** These points give all healing talents and the useful utility talents.
+- **Holy healing is complete at 32 points** (C2 in row 3, M12). HB1 adds Unyielding Faith and Voice of Truth (3 points) for fear bosses and PvP. These are choices, not filler (part 7).
 - **Conviction is the best next talent.** It gives +8% healing for the full fight: more critical heals and more mana from Illumination.
 - **The other points give only utility:** Blessing of Protection, Divine Shield or run speed (Pursuit of Justice). The 51st point has no healing value.
 - **Value of each Holy talent for the full fight:** Reverence 38%, Illumination 28%, Healing Light 23%, Divine Favor 13%, Conviction 8%, Holy Power 8%, Lingering Light 6%. For the maximum healing per second: Infusion of Light 25%, Healing Light 23%.
@@ -46,7 +46,7 @@ This section examines the builds that are possible with the proposed trees. It g
 
 - **Holy Shield needs 31 Protection points.** A tank build with only useful points uses 33–35.
 - **Bosses and dungeons.** Only enemies that are 3 or more levels above you can hit with crushing blows. Dungeon enemies are level 62 or lower. Thus, a dungeon tank does not need the full Anticipation. PB3 uses 2 of these points for Fury's Reach. PB3 and PB4 have only these 2 points of difference.
-- **Threat values** come from the threat model script (models/threat/run_tables.py) with the gear of Threat, part 1. The mana values come from Analysis, Mana. Consecrated Ground is in Holy row 5 (22 Holy points). A tank with Holy Shield cannot take it.
+- **Threat values** come from the threat model script (models/threat/run_tables.py) with the gear of Threat, part 1. The mana values come from Analysis, Mana. Consecrated Ground is in Holy row 6 (27 Holy points, M13). A tank with Holy Shield cannot take it.
 - **Raid tank: PB1 is better.** PB2 gives only +1% threat and loses 9 mana per sec.
 - **Area threat and mana together.** Holy Conduit is in Retribution row 2. PB3 and PB4 take it with Deflection 5 (7 Retribution points). They also have One-Handed Weapon Specialization 2/3 (+17 threat per sec on one target). They skip Sacred Duty. Reckoning (C11) has more value against groups: each block, dodge and parry can give a charge.
 - **More threat, less utility.** v4p000320302-53050321301551-502 (10/34/7) has Holy Conduit, One-Handed Weapon Specialization 3/3 and Sacred Duty 2/2, with Anticipation 5 and Deflection 5: 544 / 634 threat per sec. It skips Shoulder the Burden and Guardian's Favor. Thus, the tank choice is threat or utility.
@@ -70,13 +70,13 @@ This section examines the builds that are possible with the proposed trees. It g
 - **The dips into Holy and Protection are strong:** Improved Seals +6%, Precision +4%. The Protection dip also gives Benediction 5/5 (M11). Holy Conduit is in the Retribution tree. Thus, rule 1 of Tree balance works for Retribution.
 - **M11 and the Protection dip.** Benediction 5 opens Protection row 2. Thus, the dip is 8 points (Benediction 5, Precision 3), and Guardian's Favor costs 2 more points. RB1, RB2 and RB4 skip it. RB3 and RB5 take it.
 - **C8 and Retribution.** Divine Strength gave about +7 DPS. Vindication 5 gives about +6 DPS with full uptime. RB2 loses about 1 DPS. RB1 had Vindication 3: it loses about 4 DPS (−1%).
-- **Holy Power is not good for Retribution.** A 30/0/21 build loses Twist of Light and Vengeance: −23%.
+- **Holy Power is not good for Retribution.** It is in Holy row 5 (M12). A 25/0/26 build with Holy Power loses Twist of Light and Champion of the Light: −19%.
 
 ## 5. Builds outside the main tree
 
 | Role | Build | Points and code | Result | Status |
 | --- | --- | --- | --- | --- |
-| Damage | Shock-Retribution | 23/0/28: v4p50232032201012--02253312013303 | 352 DPS (94% of RB2) for 2 min, 429 with Consecration (Consecrated Ground). Holy Shock replaces Twist of Light. After about 2 min, the mana is too low for Holy Shock: 297 DPS (79%) | Good for short fights and PvP. In PvP, one Holy Shock adds about 560 damage to the burst (about 2,340) |
+| Damage | Shock-Retribution | 26/0/25: v4p502320322010105--022533120133 | 357 DPS (95% of RB2) for 2 min, 405 with Consecration (96% of RB2). Holy Shock and Holy Power (M12) replace Twist of Light and Champion of the Light. After about 2 min, the mana is too low for Holy Shock: 300 DPS (80%) | Good for short fights and PvP. In PvP, one Holy Shock adds about 560 damage to the burst (about 2,340). Holy Power gives Holy Shock and Holy Strike +15% critical hit |
 | Damage | Shockadin | 38/0/13: v4p5023213225131251--02252002 | 311 DPS. The mana is zero after 30–50 sec. 63–70% for 2 min | Not good in raids |
 | Tank | Retribution with Righteous Fury and a two-handed weapon | 12/8/31 (RB2) | 91% of the PB2 threat (511 against 560 threat per sec). With Consecration, 93% of PB2 with Consecration (607 against 652). About 1.65 times the damage taken | Possible in easy dungeons. The healer must do more work |
 | Tank | Holy Shock tank | 30/21/0: v4p502320322012125-53201321301 | 57% of the PB2 threat (79% with Consecration). The mana lasts about 2 min (35 sec with Consecration) | For leveling and solo play |
@@ -87,7 +87,7 @@ This section examines the builds that are possible with the proposed trees. It g
 - **Threat for each mana point:** Holy Shield 10.5, Judgement 8.5, Holy Shock 2.8, Consecration 1.4 (one target).
 - **Healing Light needs 28 Holy points.** A healer with fewer Holy points loses 23% healing. Thus, no healer build uses a different main tree.
 - **Retribution tank.** The values use attacks from the front (14% parry) and dungeon buffs (Blessing of Might only). From behind with raid buffs, the model gives 119%. That value is not correct for a tank.
-- **Consecrated Ground (Holy row 5).** Holy Shock builds reach it: Shock-Retribution takes 2 Holy points for it and drops Instrument of Law. Shock-Retribution and Shockadin have Holy Conduit, but no Benediction. Retribution with Twist of Light (31 points) and tanks with Holy Shield (31 points) cannot take it.
+- **Consecrated Ground (Holy row 6, M13).** It needs 27 Holy points. Only deep Holy Shock builds (Shockadin) take it. Shock-Retribution takes Holy Power (row 5) in its place: with Consecrated Ground in row 5, it had 429 DPS with Consecration (101% of RB2). Shock-Retribution and Shockadin have Holy Conduit, but no Benediction. Retribution with Twist of Light (31 points) and tanks with Holy Shield (31 points) cannot take it.
 - **The 52-point gaps.** Holy Shock needs 21 Holy points. Twist of Light and Holy Shield each need 31 points in their tree. Do not move Holy Shock up, or Twist of Light or Holy Shield down, without a new check of these two hybrids.
 
 ## 6. Healing threat
@@ -117,11 +117,12 @@ The row rules make some builds take talents that do not help their role (filler)
 
 | Build | Filler | Cause |
 | --- | --- | --- |
-| Holy healer | 2 points (Unyielding Faith or Voice of Truth) | Row 4 needs 15 points in rows 1–3. Row 6 needs 25 points in rows 1–5 |
+| Holy healer | None (C2 in row 3, M12). Before: 2 points (Unyielding Faith or Voice of Truth) | Row 4 needs 15 points in rows 1–3: they hold 16 healer points. Row 6 needs 25 points in rows 1–5: they hold 28 |
 | Holy PvP with Improved Hammer of Justice | Redoubt 3–5 (a small PvP defense) | Row 3 needs 10 points in rows 1–2. Benediction and Guardian's Favor give 7 |
 | Main builds of Protection and Retribution | None | Useful talents fill all rows |
 
 - **Spiritual Focus in row 2 decreases the filler for Holy.** With Spiritual Focus in row 4 (a withdrawn idea), a Holy healer needed 3 points of filler. HB2 was not possible.
+- **Lingering Light in row 3 (C2) and Holy Power in row 5 (M12) remove the last filler.** See Analysis, Tree balance.
 - Purifying Power counts as a useful talent here (Cleanse costs 20% less).
 
 ## 8. Limits

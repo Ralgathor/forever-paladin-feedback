@@ -19,11 +19,13 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 **Holy**
 
 - **C1 Reverence:** 17/33/50% mana regeneration while casting (beta: 10/20/30%). It moves from row 3 to row 2. Protection and Retribution can get it with 8 Holy points.
-- **C2 Lingering Light (new):** a critical heal adds a heal over time of 10/20% of the heal.
+- **C2 Lingering Light (new, row 3):** a critical heal adds a heal over time of 10/20% of the heal.
 - **C3 Infusion of Light:** all Holy Shock, Flash of Light and Holy Strike hits make the next Holy Light faster (beta: critical hits only). It moves from row 4 to row 2.
 - **C4 Healing Light:** 3 ranks, 10/20/30% (beta: 4/8/12%), with C19. It moves from row 2 to row 6.
 - **M9 Improved Seals:** row 2 → row 1. It keeps 3 ranks, 5/10/15%.
 - **M10 Unyielding Faith:** row 2 → row 1, to fill the place of Divine Strength (C8).
+- **M12 Holy Power:** row 6 → row 5. With C2 in row 3, a Holy healer needs no filler.
+- **M13 Consecrated Ground:** row 5 → row 6. Only deep Holy Shock builds take it.
 
 **Protection**
 
