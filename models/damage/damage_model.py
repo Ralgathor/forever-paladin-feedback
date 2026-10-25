@@ -104,13 +104,13 @@ NORM_2H = 3.3
 # "is" Improved Seals, "cg" Consecrated Ground, "di" Divine Intellect, "hsk" Holy Shock, "prec" Precision,
 # "sj" Swift Judgement, "conv" Conviction, "ij" Improved Judgement, "vind" Vindication, "soc" Seal of Command,
 # "sa" Sacred Arbiter, "thws" Two-Handed Weapon Specialization, "veng" Vengeance, "cotl" Champion of the Light,
-# "iol" Instrument of Law, "tol" Twist of Light.
+# "iol" Instrument of Law, "tol" Twist of Light, "hp" Holy Power.
 RB2 = dict(is_=3, di=2, prec=3, conv=5, ij=2, vind=5, soc=1, sa=1, thws=3, veng=3, cotl=3, iol=2, tol=1)
 RB1 = dict(RB2, di=0)                                                     # Pursuit of Justice
 RB3 = dict(RB2, is_=0, di=0, sj=1)                                        # 0/15/36: no Holy points
 RB4 = dict(RB2, di=0)                                                     # Repentance, Eye for an Eye
 RB5 = dict(RB2, is_=0, di=0, ij=0, vind=0, cotl=0, iol=0, tol=0, sj=1)    # 0/26/25
-SHOCK_RET = dict(RB2, prec=0, vind=3, iol=0, tol=0, di=5, cg=2, hsk=1)    # 23/0/28: Consecrated Ground (Holy row 5)
+SHOCK_RET = dict(RB2, prec=0, vind=3, iol=0, tol=0, cotl=0, di=5, hsk=1, hp=5)   # 26/0/25: Holy Power (Holy row 5, M12)
 RET_BUILDS = (("RB1", RB1), ("RB2", RB2), ("RB3", RB3), ("RB4", RB4), ("RB5", RB5))
 
 def ret_stats(g, cotl=None, ap_pct=None, str_pct=0.0, tal=RB2):
@@ -149,8 +149,14 @@ def retribution(g, version="c16", sa=None, crusader=False, ths=None, fight=FIGHT
     dodge = DODGE + (0.14 if front else 0.0)
     land_a, crit_a, f_auto = auto_table(s["hit"], s["crit"], dodge=dodge)
     land, crit_s, f_spec = spec_table(s["hit"], s["crit"], dodge=dodge)
-    _, crit_j, f_jud = spec_table(s["hit"], s["crit"], dodge=0.0)        # Judgement: no dodge
+    # Holy Power (Holy row 5, M12): +3% critical hit for each rank on Holy Strike and Holy Shock, +1% on the other
+    # spells (Judgement, Hammer of Wrath, Exorcism, Consecration). Not on Seals.
+    hp = t("hp")
+    _, crit_j, f_jud = spec_table(s["hit"], s["crit"] + 0.01 * hp, dodge=0.0)   # Judgement: no dodge
+    _, crit_hs, f_hs = spec_table(s["hit"], s["crit"] + 0.03 * hp, dodge=dodge)
+    _, crit_how, f_how = spec_table(s["hit"], s["crit"] + 0.01 * hp, dodge=dodge)
     c_seal = max(0.0, s["crit"] - CRIT_SPEC)                             # Seals: a separate roll, cannot miss
+    c_spell, c_hsk = c_seal + 0.01 * hp, c_seal + 0.03 * hp              # spell critical hits (x1.5)
     how_rate = EXECUTE / 6
     how_cast = 1.0 - 0.5 * t("iol")                                      # Instrument of Law: -1 sec cast time
     autos = (1 - how_rate * how_cast) / s["speed"]                       # a cast stops the auto attacks
@@ -165,29 +171,29 @@ def retribution(g, version="c16", sa=None, crusader=False, ths=None, fight=FIGHT
         sor_rate = 0.0                                                   # no Echo: only Seal of Command is active
     hsk_rate = t("hsk") / 10                                             # Holy Shock: 10 sec cooldown
     # Vengeance: critical hits of auto attacks, Seals, Holy Strike, Judgement, Hammer of Wrath and Holy Shock.
-    cps = (autos * crit_a + (hs_rate + how_rate) * crit_s + jud_rate * crit_j + (soc_rate + sor_rate) * c_seal
-           + hsk_rate * c_seal)
+    cps = (autos * crit_a + hs_rate * crit_hs + how_rate * crit_how + jud_rate * crit_j + (soc_rate + sor_rate) * c_seal
+           + hsk_rate * c_hsk)
     V = vengeance(cps, per=0.01 * t("veng"), stacks=v_stacks, fight=fight)
     src = {}
     src["Auto attacks"] = wd * (1 - DR) * ths * V * f_auto * autos
     src["Seal of Command"] = soc_rate * (soc_w * imp * wd + sd_soc) * ths * V * (1 + c_seal)
     # Holy Strike: hs_w x (normalized weapon damage + 93 + 42.9%). Judgement of Righteousness rank 8: 170-187 + 42.9%.
     # Seal of Righteousness rank 8: 67.5 + 12% with a two-handed weapon, critical hit x2 with a separate roll.
-    src["Holy Strike"] = hs_rate * hs_w * (wn + 93 + 0.429 * sd) * sa * ths * V * f_spec
+    src["Holy Strike"] = hs_rate * hs_w * (wn + 93 + 0.429 * sd) * sa * ths * V * f_hs
     src["Judgement"] = jud_rate * (178.2 + 0.429 * sd) * imp * ths * V * f_jud
     src["Seal of Righteousness"] = sor_rate * (67.5 + 0.12 * sd) * imp * ths * V * (1 + c_seal)
-    src["Hammer of Wrath"] = how_rate * (498 + 0.429 * sd) * V * f_spec
+    src["Hammer of Wrath"] = how_rate * (498 + 0.429 * sd) * V * f_how
     if hsk_rate:   # rank 4: 334-362 Holy damage + 42.9%, spell (critical hit x1.5). The build has 18% spell hit: no miss
-        src["Holy Shock"] = hsk_rate * (348 + 0.429 * sd) * V * (1 + 0.5 * c_seal)
+        src["Holy Shock"] = hsk_rate * (348 + 0.429 * sd) * V * (1 + 0.5 * c_hsk)
     if extra == "exorcism":   # rank 6: 475-529 Holy damage, 15 sec cooldown, spell (critical hit x1.5)
-        src["Exorcism"] = (502 + 0.429 * sd) * V * (1 + 0.5 * c_seal) / 15
+        src["Exorcism"] = (502 + 0.429 * sd) * V * (1 + 0.5 * c_spell) / 15
     if extra == "consecration":   # Consecrated Ground: +5% Holy damage on the target for each point. 15% of the ticks miss.
         # Forever rank 5 (wowsims Forever, spell 1280349): 8 ticks of 12 + 27 Holy damage (the 27 on the first
         # 4 enemies), 4.2% of spell damage for each tick. Ticks can be critical hits (x1.5, beta test). They are
         # periodic: no Vengeance stack.
         cg = 0.05 * t("cg")
         holy = sum(v for k, v in src.items() if k != "Auto attacks")
-        src["Consecration"] = (312 + 0.336 * sd) * 0.85 * V * (1 + 0.5 * c_seal) * (1 + cg) / 8
+        src["Consecration"] = (312 + 0.336 * sd) * 0.85 * V * (1 + 0.5 * c_spell) * (1 + cg) / 8
         if cg:
             src["Consecrated Ground"] = holy * cg
     total = sum(src.values())
