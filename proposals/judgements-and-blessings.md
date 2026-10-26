@@ -154,4 +154,4 @@ Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 | Use | Effect |
 | --- | --- |
 | Raid, Hand of Protection | The target keeps Kings or Might. The Paladin does not cast the buff again after the save |
-| PvP, Hand of Freedom | A Warrior keeps Might. The Paladin does not cast it again |
+| PvP, Hand of Freedom | A Warrior keeps Might. The Paladin does not cast Might again |
