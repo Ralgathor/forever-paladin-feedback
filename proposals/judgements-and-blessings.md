@@ -83,3 +83,78 @@ Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 | Blessing to cast | Yes | No | Yes | No |
 | Hybrid burst heal in PvP (3 sec) | 2,231 | 2,231 | 2,746 | 2,746 |
 | Spell removed | No | Yes | No | Yes |
+
+## C23. Hand of Sacrifice: a damage pool
+
+- **Change.** Hand of Sacrifice moves up to 825 damage to the Paladin, with a 30 sec cooldown. Guardian's Favor (C22) reduces the cooldown by 5/10 sec: 25/20 sec. With C24, Blessing of Sacrifice is Hand of Sacrifice and uses no Blessing slot.
+- **Proposed text (rank 2).** "Places a Hand on the party member, transferring up to 825 damage taken to the caster. Lasts 30 sec." 100 mana, 30 yards, instant, 30 sec cooldown.
+- **Rank 1 (level 46).** Up to 675 damage, 80 mana. 15 hits of the beta value: 15 × 45.
+- **Beta text (rank 2).** "Places a Blessing on the party member, transfering 55 damage taken per hit to the caster. Lasts 30 sec. Players may only have one Blessing on them per Paladin at any one time." No cooldown.
+- **The Hand ends** after 30 sec or when 825 damage moves to the caster.
+
+### The problem
+
+- **55 for each hit is too small.** A Naxxramas boss hits a tank for about 8,000 before armor (see Analysis, Threat). After armor, 55 is about 2% of one hit.
+- **It uses the Blessing slot.** In the beta, it replaces Kings or Might from the same Paladin. Thus, Paladins do not cast it. C24 removes this cost.
+
+### The change
+
+- **The same budget.** 825 is 15 hits of 55. The value does not change. It moves into one pool. Thus, all hits use the pool, also large hits.
+- **Classic text.** The tooltip keeps the form of the beta spell. Only the numbers change. C24 changes the word "Blessing" to "Hand".
+- **A flat value.** Hand of Sacrifice is a spell, not a talent. Spells use flat values, as Power Word: Shield does.
+- **Why 30 sec.** With no Blessing slot, a Paladin can put a pool on each ally. The base cooldown is the same as the duration. Thus, each Paladin has one pool active at a time: 825 damage.
+- **Guardian's Favor.** It reduces the cooldown by 5/10 sec. At 2/2, the cooldown is 20 sec. Thus, the Paladin has two pools active at most: 1,650 damage.
+- **Why Guardian's Favor.** It already improves Hand of Protection and Hand of Freedom. All Holy builds and two of the four Protection builds take it (see Analysis, Builds). Thus, the healers and tanks that protect allies receive the shorter cooldown. The bonus is in seconds, as for Improved Hammer of Justice and the Hand of Protection part of Guardian's Favor.
+- **Devoted Sacrifice (C25).** This Protection talent reduces the damage that the Paladin takes from the pool by 10/20%. The target is still protected from up to 825 damage.
+- **The cost.** The damage does not disappear. It moves to the Paladin, and the Paladin must survive it and heal it. Thus, the health of the Paladin limits the number of pools.
+
+### Divine Shield and the classic trick
+
+- **The rule stays.** If the Paladin is immune, the damage that moves to the Paladin has no effect. This is the Classic rule.
+- **The trick stays.** A Paladin in Divine Shield can save an ally from 825 damage. The ally takes no damage, and the Paladin takes no damage.
+- **The cooldown limits it.** Divine Shield lasts 12 sec. Thus, one pool is active in one Divine Shield: 825 damage. With Guardian's Favor 2/2, two pools are active: 1,650 damage on two allies. The Paladin cannot protect the full raid. See W20.
+- **Damage on the Paladin.** The damage that moves to the Paladin can stop a Polymorph or a Sap on the Paladin. This is also a Classic rule.
+
+### Use
+
+| Use | Effect |
+| --- | --- |
+| Raid, other tank | 825 is about one third of a Naxxramas boss hit after armor (estimate). A short save for a tank swap or a crushing blow |
+| Raid, area damage | The pool takes the area damage on one ally until it is empty. The Paladin takes this damage as well as its own |
+| PvP | A shield against a Rogue or a Warrior burst on a healer. The Paladin takes the damage and heals it |
+
+### Against the other classes
+
+| Spell | Class | Value | Cooldown | Where the damage goes |
+| --- | --- | --- | --- | --- |
+| Hand of Sacrifice (C23) | Paladin | 825 | 30 sec (20 sec with Guardian's Favor 2/2) | To the Paladin |
+| Power Word: Shield | Priest | About 1,100 with healing power (see Analysis, Healing) | 4 sec, 15 sec on the same target | Removed |
+| Blessing of Sacrifice (beta) | Paladin | 55 for each hit | None | To the Paladin |
+
+- Power Word: Shield removes the damage. Hand of Sacrifice moves it to the Paladin. Thus, the Paladin must still heal it.
+- The value does not increase with gear. The Paladin health increases with gear, and this limits the value.
+
+## C24. Hands: Sacrifice, Protection and Freedom
+
+- **Change.** Blessing of Sacrifice, Blessing of Protection and Blessing of Freedom become Hand of Sacrifice, Hand of Protection and Hand of Freedom. Hands do not use a Blessing slot. Each Paladin can have one Hand on a target. A new Hand replaces the old one.
+- **Precedent.** Forever moved Curse of Agony and Curse of Doom into a new group: Bane of Agony and Bane of Doom. Each Warlock can have one Curse and one Bane on a target. Since the patch of 15 October, Salvation also does not use a Blessing slot.
+- **A modern name.** "Hand" comes from a later version of the game. Banes also come from a later version, and Forever uses them. Thus, this is an accepted exception to design rule 2.
+- **Other text.** The proposals use the new names. For example, Guardian's Favor (C22) names Hand of Protection and Hand of Freedom.
+- **Salvation does not change.** It already uses no Blessing slot. It is a long threat buff, not a save.
+
+### The problem
+
+- **A save removes a buff.** In the beta, Blessing of Protection, Blessing of Freedom and Blessing of Sacrifice use the Blessing slot. On the target, they replace Kings or Might from the same Paladin. After the save, the Paladin must cast the buff again. In combat, this costs a global cooldown and mana.
+
+### One Hand for each Paladin
+
+- **A choice.** One Paladin cannot put Hand of Protection and Hand of Sacrifice on the same target. Two Paladins can.
+- **Why a limit.** Without it, one Paladin can put the three saves on one ally. The limit keeps one save from each Paladin, as the Bane limit keeps one Bane from each Warlock.
+- **No change to the saves.** Hand of Protection and Hand of Freedom keep their effects, durations and cooldowns. Forbearance does not change.
+
+### Use
+
+| Use | Effect |
+| --- | --- |
+| Raid, Hand of Protection | The target keeps Kings or Might. The Paladin does not cast the buff again after the save |
+| PvP, Hand of Freedom | A Warrior keeps Might. The Paladin does not cast Might again |

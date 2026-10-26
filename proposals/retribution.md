@@ -60,6 +60,6 @@ Retribution has 41 points (beta: 44). M11 moves Benediction to Protection row 1.
 
 - **Move.** Conviction goes to row 1, column 3. M11 moves Benediction from this place to Protection row 1. The text of Conviction does not change. Conviction keeps the C15 text.
 - **Parity.** All other +5% critical hit talents are in row 1: Cruelty (Warrior), Malice (Rogue), Lethal Attacks (Hunter) and Thundering Strikes (Shaman).
-- **Holy.** A Holy Paladin receives +5% critical heal chance for 5 Retribution points, not 10. A Restoration Shaman also pays 5 points for Thundering Strikes. A Holy build can then also take the Protection dip: 35/11/5 (see Analysis, Tree balance).
+- **Holy.** A Holy Paladin receives +5% critical heal chance for 5 Retribution points, not 10. A Restoration Shaman also pays 5 points for Thundering Strikes. A Holy build can then also take the Protection dip: 34/12/5 (see Analysis, Tree balance).
 - **Retribution.** Retribution has the critical hit at a lower level.
 - **Risk.** All specs get +5% critical hit for 5 points. The other classes have the same.

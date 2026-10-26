@@ -15,7 +15,7 @@ The script models/damage/run_tables.py calculates all values of this section. Fu
 
 ## 1. Build and gear
 
-- **Build.** 12/8/31: v4p200320302-030000000000005-0225531001330321 in the calculator (RB2).
+- **Build.** 12/8/31: v5p200320302-030000000000005-0225531001330321 in the calculator (RB2).
   - Holy 12: Divine Intellect 2/5, Improved Seals 3/3, Unyielding Faith 2/2, Reverence 3/3, Infusion of Light 2/2.
   - Protection 8: Benediction 5/5 (M11), Precision 3/3.
   - Retribution 31: Conviction 5/5, Improved Judgement 2/2, Holy Conduit 2/2, Vindication 5/5 (C8), Sanctified Judgement 3/3, Seal of Command, Two-Handed Weapon Specialization 3/3, Sacred Arbiter, Vengeance 3/3, Champion of the Light 3/3, Instrument of Law 2/2, Twist of Light.
