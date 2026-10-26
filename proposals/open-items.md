@@ -31,6 +31,7 @@ These are risks to check in tests. None of them needs a change now.
 | W16 | Consecration on cooldown on one boss gives Retribution 102–114% of the pure average (normal rotation: 95–103%). Consecrated Ground is in Holy row 6 (M13): Retribution with Twist of Light cannot take it. With Holy Conduit and Benediction, the mana is zero after 1 min 33 sec at fresh level 60 and 2 min 17 sec in Naxxramas. In a 3 min fight, Retribution is 102–111% of the pure average (see Analysis, Damage, part 8) | Mana is the balance. The 95% target is for the normal rotation, without Consecration. If raids use Consecration on all bosses, compare the 3 min average with the pure average. Shock-Retribution (23/0/28) has Consecrated Ground: monitor it with Consecration in short fights |
 | W17 | Holy Shock with Iron Creed (21/30/0): Righteous Fury stays active in PvP. The build then has −10% damage taken, Templar's Bulwark, Reckoning and Holy Shock (see Analysis, Builds, part 5) | Monitor in PvP with W7 and W9 |
 | W18 | Lay on Hands with C22 on yourself gives up to +550 mana below 1,100 mana (beta: below 550). Paladins can use it for mana one time for each boss | If all Holy Paladins use it for mana, Lay on Hands does not restore mana when you are the target |
+| W20 | Blessing of Sacrifice (C23) with Divine Shield: the ally takes no damage and the Paladin takes no damage. In PvP, a Paladin can protect one or two allies for 825 each in one Divine Shield | Monitor in PvP. If it is too strong, Divine Shield removes Blessing of Sacrifice |
 
 ## Open questions
 
@@ -54,6 +55,7 @@ These are risks to check in tests. None of them needs a change now.
 - [ ] Does MythicSim include Judgement of the Crusader in its raid debuffs? It changes the Retribution comparison by about 10% (see Analysis, Damage, part 7).
 - [ ] What is the Slam cooldown in Forever? The Arms check in Analysis, Damage, uses one Slam each 3 sec at most.
 - [ ] Does Righteous Fury increase the threat of heals in Forever? The text says "Holy attacks". If yes, a tank can use Flash of Light or Holy Light for threat (see Analysis, Builds, part 6).
+- [ ] C23: does damage that moves to a Paladin in Divine Shield have no effect in Forever, as in Classic? Does it stop a Polymorph on the Paladin?
 - [ ] C22: when you cast Lay on Hands on yourself, does the drain occur before the 550 mana? If not, Lay on Hands gives you no mana.
 - [ ] Light's Vigil: the Illumination text names it. Does Illumination return mana one time for each cast, or one time for each critical heal (up to 5)? With Illumination at 50%, it gives +13% to +19% raid healing against the Shaman (W13).
 - [ ] Does the Light's Vigil heal use the +15% critical chance of Holy Power for Holy Shock? Does Healing Light increase it? Both make Light's Vigil stronger (see Analysis, Healing, part 6).
