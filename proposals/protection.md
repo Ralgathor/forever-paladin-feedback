@@ -95,7 +95,7 @@ The Protection proposals give:
   - Holy: Voice of Truth and Divine Favor.
   - Retribution: Seal of Command and Sacred Arbiter.
   - Protection: Shoulder the Burden and Swift Judgement.
-- **Other specs.** Holy and Retribution can get it with 10 points, but they have no use for it. The threat goes to them, not to a tank. Hand of Protection and Hammer of Justice save an ally without this threat. Thus, only Protection takes Shoulder the Burden.
+- **Other specs.** Holy and Retribution can take it with 10 points, but they have no use for it. The threat goes to them, not to a tank. Hand of Protection and Hammer of Justice save an ally without this threat. Thus, only Protection takes Shoulder the Burden.
 - **No change.** Righteous Fury, Seal of Fury and its absorb shield stay baseline spells.
 
 ## C11. Reckoning: charges from block, dodge and parry, released by Holy Strike
@@ -234,4 +234,4 @@ At 900 healing power, Flash of Light and Holy Light give 5.75 healing for each m
 
 | ID | Option | How it works | Precedent | Tradeoff |
 | --- | --- | --- | --- | --- |
-| C25a | Change the base spell (use this if Blizzard does not want the talent) | Lay on Hands drains 50% of the remaining mana for all Paladins. Devoted Sacrifice keeps only the Hand of Sacrifice part | Forever moves the cooldown of Improved Lay on Hands into the spell | All specs get it with no points. There is no talent choice. Retribution raid builds also get it |
+| C25a | Change the base spell (use this if Blizzard does not want the talent) | Lay on Hands drains 50% of the remaining mana for all Paladins. Devoted Sacrifice keeps only the Hand of Sacrifice part | Forever moves the cooldown of Improved Lay on Hands into the spell | All specs get it with no points. There is no talent choice. Retribution raid builds also receive it |
