@@ -88,7 +88,7 @@ Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 
 - **Change.** Hand of Sacrifice moves up to 825 damage to the Paladin, with a 15 sec cooldown. With C24, Blessing of Sacrifice is Hand of Sacrifice and uses no Blessing slot.
 - **Proposed text (rank 2).** "Places a Hand on the party member, transferring up to 825 damage taken to the caster. Lasts 30 sec." 100 mana, 30 yards, instant, 15 sec cooldown.
-- **Rank 1 (level 46).** Up to 450 damage. 15 hits of the beta value: 15 × 30.
+- **Rank 1 (level 46).** Up to 675 damage, 80 mana. 15 hits of the beta value: 15 × 45.
 - **Beta text (rank 2).** "Places a Blessing on the party member, transfering 55 damage taken per hit to the caster. Lasts 30 sec. Players may only have one Blessing on them per Paladin at any one time." No cooldown.
 - **The Hand ends** after 30 sec or when 825 damage moves to the caster.
 
