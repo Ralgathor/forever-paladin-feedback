@@ -85,13 +85,13 @@ The Protection proposals give:
 - **Raw threat.** The threat that moves does not change. Righteous Fury does not multiply it.
 - **Tank swaps.** First use Judgement of Fury to take the boss. Then use Shoulder the Burden on the other tank. You then have 1.5 times their threat, and they keep 0.5 times. Do not use it before the taunt: the threat of the other tank decreases, and a damage dealer can then pull the boss.
 - **PvP.** Players do not use threat. Thus, the talent has no effect in PvP.
-- **Why 5 min.** It works on all enemies that the ally has threat on, at any range, and the threat stays moved. Thus, it is near an area taunt. Challenging Shout (Warrior) has 10 min. Mocking Blow (Warrior) has 2 min, but it works on one target for 6 sec. 5 min is the cooldown of the other Paladin protection spells: Blessing of Protection, Divine Shield and Divine Protection.
+- **Why 5 min.** It works on all enemies that the ally has threat on, at any range, and the threat stays moved. Thus, it is near an area taunt. Challenging Shout (Warrior) has 10 min. Mocking Blow (Warrior) has 2 min, but it works on one target for 6 sec. 5 min is the cooldown of the other Paladin protection spells: Hand of Protection, Divine Shield and Divine Protection.
 - **Sacred Duty.** Sacred Duty also decreases the cooldown of Shoulder the Burden by 30/60 sec. At 2/2, the cooldown is 4 min. New Sacred Duty text: "Increases your total Stamina by 2/4% and reduces the cooldown of your Divine Shield, Divine Protection, Templar's Bulwark, and Shoulder the Burden spells by 30/60 sec."
 - **Signature talents.** Each tree keeps a 1-point signature talent in rows 3 and 4:
   - Holy: Voice of Truth and Divine Favor.
   - Retribution: Seal of Command and Sacred Arbiter.
   - Protection: Swift Judgement and Shoulder the Burden.
-- **Other specs.** Holy and Retribution can get it with 15 points, but they have no use for it. The threat goes to them, not to a tank. Blessing of Protection and Hammer of Justice save an ally without this threat. Thus, only Protection takes Shoulder the Burden.
+- **Other specs.** Holy and Retribution can get it with 15 points, but they have no use for it. The threat goes to them, not to a tank. Hand of Protection and Hammer of Justice save an ally without this threat. Thus, only Protection takes Shoulder the Burden.
 - **No change.** Righteous Fury, Seal of Fury and its absorb shield stay baseline spells.
 
 ## C11. Reckoning: charges from block, dodge and parry, released by Holy Strike
@@ -181,11 +181,11 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 
 ## C22. Guardian's Favor: Lay on Hands drains less mana
 
-- **Proposed text.** "Reduces the cooldown of your Blessing of Protection by 1/2 min, increases the duration of your Blessing of Freedom by 3/6 sec, and your Lay on Hands drains only 75/50% of your remaining mana." 2 ranks, the same as the beta, in row 2.
+- **Proposed text.** "Reduces the cooldown of your Hand of Protection by 1/2 min, increases the duration of your Hand of Freedom by 3/6 sec, and your Lay on Hands drains only 75/50% of your remaining mana." 2 ranks, the same as the beta, in row 2.
 - **Change.** Only the Lay on Hands part is new. Lay on Hands keeps its heal, its 20 min cooldown and its mana for the target.
 - **Problem.** Lay on Hands drains all the remaining mana of the Paladin (Forever spellbook, all ranks). Forever decreases the cooldown from 1 hour to 20 min. Thus, the Paladin can use it about one time for each boss. But the drain is largest when the mana is full, early in a fight. Thus, Paladins use it only when their mana is already low.
 - **Keep mana for the role.** With C22, the Paladin can use Lay on Hands at any time and always keeps half of the mana. The healer continues to heal, the tank keeps its threat, and Retribution keeps its damage. The time until the mana is back is also half (see the table).
-- **Other saves.** At 0 mana, the Paladin cannot cast Divine Shield (110 mana), Blessing of Protection (7% of base mana) or Hammer of Justice (100 mana). With C22, these saves stay available.
+- **Other saves.** At 0 mana, the Paladin cannot cast Divine Shield (110 mana), Hand of Protection (7% of base mana) or Hammer of Justice (100 mana). With C22, these saves stay available.
 
 **Cast at full mana**
 
@@ -221,7 +221,7 @@ At 900 healing power, Flash of Light and Holy Light give 5.75 healing for each m
 
 **Why Guardian's Favor**
 
-- **Theme.** It improves the saves that the Paladin casts on allies: Blessing of Protection and Blessing of Freedom. Lay on Hands is the third save of this type.
+- **Theme.** It improves the saves that the Paladin casts on allies: Hand of Protection and Hand of Freedom. Lay on Hands is the third save of this type.
 - **Row 2.** Holy takes it with Benediction 5: 7 Protection points (M11, design rule 2).
 - **Builds.** All Holy builds, two of the five Retribution builds (RB3, RB5) and two of the four Protection builds (PB3, PB4) take it (see Analysis, Builds). For these builds, C22 costs no points. The other builds keep the full drain.
 - **Precedent.** Sacred Duty gives two effects in one talent. Weaponmaster (Warrior) merges four weapon talents. Forever removes Improved Lay on Hands. Thus, C22 does not add a talent for one spell.

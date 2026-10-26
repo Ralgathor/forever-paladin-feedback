@@ -26,13 +26,13 @@ This section examines the builds that are possible with the proposed trees. It g
 
 | Build | Points and code | Healing | What it gives |
 | --- | --- | --- | --- |
-| HB1. Raid and PvP healer | 35/11/5: v4p53202132251010512-402000000000005-0005 | Reference. 22% critical heal chance | All useful Holy talents (35 points). Conviction 5. Benediction 5 and Guardian's Favor (Blessing of Protection each 3 min). Redoubt 4 |
+| HB1. Raid and PvP healer | 35/11/5: v4p53202132251010512-402000000000005-0005 | Reference. 22% critical heal chance | All useful Holy talents (35 points). Conviction 5. Benediction 5 and Guardian's Favor (Hand of Protection each 3 min). Redoubt 4 |
 | HB2. Healer with more saves | 34/12/5: v4p53201132251010512-302000200000005-0005 | The same as HB1 | Sacred Duty 2/2 (Divine Shield −60 sec, +4% Stamina), Guardian's Favor and Benediction 5. Redoubt 3. Possible only with Spiritual Focus in row 2 (M2) |
 | HB3. PvP, Hammer of Justice each 45 sec | 30/16/5: v4p53202132251010102-502000100300005-0005 | −3% maximum, −6% for the full fight | Improved Hammer of Justice 3/3, Redoubt 5, Sacred Duty 1/2. No Light's Vigil. Holy Power 1/5 |
 
 - **Holy healing is complete at 32 points** (C2 in row 3, M12). HB1 adds Unyielding Faith and Voice of Truth (3 points) for fear bosses and PvP. These are choices, not filler (part 7).
 - **Conviction is the best next talent.** It gives +8% healing for the full fight: more critical heals and more mana from Illumination.
-- **The other points give only utility:** Blessing of Protection, Divine Shield or run speed (Pursuit of Justice). The 51st point has no healing value.
+- **The other points give only utility:** Hand of Protection, Divine Shield or run speed (Pursuit of Justice). The 51st point has no healing value.
 - **Value of each Holy talent for the full fight:** Reverence 38%, Illumination 28%, Healing Light 23%, Divine Favor 13%, Conviction 8%, Holy Power 8%, Lingering Light 6%. For the maximum healing per second: Infusion of Light 25%, Healing Light 23%.
 - **Without the Retribution dip** (45/6/0): −4% maximum, −8% for the full fight. The extra Holy points have no healing value.
 

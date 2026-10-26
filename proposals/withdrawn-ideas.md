@@ -44,7 +44,7 @@ We examined these ideas and rejected them. They are not proposals.
 | Iron Creed: +25% threat on all Holy damage | Flat. It works as an improved Righteous Fury. It does not increase with content |
 | Righteous Fury also increases physical damage threat (×1.5) with a shield | Too weak in late raids (81% of the Druid). It changes Righteous Fury for all specs |
 | Righteous Defense: area taunt (10 yards, 6 sec, 10 min cooldown, as Challenging Shout) | An area taunt with a 10 min cooldown gives little. Shoulder the Burden (C10) saves an ally without a taunt |
-| Righteous Defense: Blessing of Protection also makes up to 3 enemies attack you | Only 3 enemies, and only when Blessing of Protection is used. Shoulder the Burden (C10) works on all enemies |
+| Righteous Defense: Hand of Protection also makes up to 3 enemies attack you | Only 3 enemies, and only when Hand of Protection is used. Shoulder the Burden (C10) works on all enemies |
 | A shield interrupt in Protection | Paladins have no interrupt by design |
 | A passive share of the threat of an ally (as Vigilance, Warrior, a later expansion) | Not a new design. Shoulder the Burden is an active spell with a cooldown |
 | Healing Light adds a flat +200/400 to Holy Light and +58/115 to Flash of Light | Talents give a % bonus, not a flat value. C19 uses a % |

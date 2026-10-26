@@ -90,7 +90,7 @@ Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 - **Hand of Sacrifice** also changes: it moves up to 825 damage to the Paladin, with a 15 sec cooldown (see below).
 - **Precedent.** Forever moved Curse of Agony and Curse of Doom into a new group: Bane of Agony and Bane of Doom. Each Warlock can have one Curse and one Bane on a target. Since the patch of 15 October, Salvation also does not use a Blessing slot.
 - **A modern name.** "Hand" comes from a later version of the game. Banes also come from a later version, and Forever uses them. Thus, this is an accepted exception to design rule 2.
-- **Other text.** With C23, Guardian's Favor and the other spell texts name Hand of Protection and Hand of Freedom.
+- **Other text.** The proposals use the new names. For example, Guardian's Favor (C22) names Hand of Protection and Hand of Freedom.
 - **Salvation does not change.** It already uses no Blessing slot. It is a long threat buff, not a save.
 
 ### The problem
