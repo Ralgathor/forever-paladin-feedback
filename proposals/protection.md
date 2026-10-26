@@ -181,8 +181,8 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 
 ## C22. Guardian's Favor: Lay on Hands drains less mana
 
-- **Proposed text.** "Reduces the cooldown of your Hand of Protection by 1/2 min, increases the duration of your Hand of Freedom by 3/6 sec, and your Lay on Hands drains only 75/50% of your remaining mana." 2 ranks, the same as the beta, in row 2.
-- **Change.** Only the Lay on Hands part is new. Lay on Hands keeps its heal, its 20 min cooldown and its mana for the target.
+- **Proposed text.** "Reduces the cooldown of your Hand of Protection by 1/2 min and of your Hand of Sacrifice by 5/10 sec, increases the duration of your Hand of Freedom by 3/6 sec, and your Lay on Hands drains only 75/50% of your remaining mana." 2 ranks, the same as the beta, in row 2.
+- **Change.** The Lay on Hands part is new. The Hand of Sacrifice part comes from C23. Lay on Hands keeps its heal, its 20 min cooldown and its mana for the target.
 - **Problem.** Lay on Hands drains all the remaining mana of the Paladin (Forever spellbook, all ranks). Forever decreases the cooldown from 1 hour to 20 min. Thus, the Paladin can use it about one time for each boss. But the drain is largest when the mana is full, early in a fight. Thus, Paladins use it only when their mana is already low.
 - **Keep mana for the role.** With C22, the Paladin can use Lay on Hands at any time and always keeps half of the mana. The healer continues to heal, the tank keeps its threat, and Retribution keeps its damage. The time until the mana is back is also half (see the table).
 - **Other saves.** At 0 mana, the Paladin cannot cast Divine Shield (110 mana), Hand of Protection (7% of base mana) or Hammer of Justice (100 mana). With C22, these saves stay available.

@@ -86,8 +86,8 @@ Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 
 ## C23. Hand of Sacrifice: a damage pool
 
-- **Change.** Hand of Sacrifice moves up to 825 damage to the Paladin, with a 15 sec cooldown. With C24, Blessing of Sacrifice is Hand of Sacrifice and uses no Blessing slot.
-- **Proposed text (rank 2).** "Places a Hand on the party member, transferring up to 825 damage taken to the caster. Lasts 30 sec." 100 mana, 30 yards, instant, 15 sec cooldown.
+- **Change.** Hand of Sacrifice moves up to 825 damage to the Paladin, with a 30 sec cooldown. Guardian's Favor (C22) reduces the cooldown by 5/10 sec: 25/20 sec. With C24, Blessing of Sacrifice is Hand of Sacrifice and uses no Blessing slot.
+- **Proposed text (rank 2).** "Places a Hand on the party member, transferring up to 825 damage taken to the caster. Lasts 30 sec." 100 mana, 30 yards, instant, 30 sec cooldown.
 - **Rank 1 (level 46).** Up to 675 damage, 80 mana. 15 hits of the beta value: 15 × 45.
 - **Beta text (rank 2).** "Places a Blessing on the party member, transfering 55 damage taken per hit to the caster. Lasts 30 sec. Players may only have one Blessing on them per Paladin at any one time." No cooldown.
 - **The Hand ends** after 30 sec or when 825 damage moves to the caster.
@@ -102,14 +102,16 @@ Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 - **The same budget.** 825 is 15 hits of 55. The value does not change. It moves into one pool. Thus, all hits use the pool, also large hits.
 - **Classic text.** The tooltip keeps the form of the beta spell. Only the numbers change. C24 changes the word "Blessing" to "Hand".
 - **A flat value.** Hand of Sacrifice is a spell, not a talent. Spells use flat values, as Power Word: Shield does.
-- **Why 15 sec.** With no Blessing slot, a Paladin can put a pool on each ally. The cooldown is half of the duration. Thus, each Paladin has two pools active at most: 1,650 damage.
+- **Why 30 sec.** With no Blessing slot, a Paladin can put a pool on each ally. The base cooldown is the same as the duration. Thus, each Paladin has one pool active at a time: 825 damage.
+- **Guardian's Favor.** It reduces the cooldown by 5/10 sec. At 2/2, the cooldown is 20 sec. Thus, the Paladin has two pools active at most: 1,650 damage.
+- **Why Guardian's Favor.** It already improves Hand of Protection and Hand of Freedom. All Holy builds and two of the four Protection builds take it (see Analysis, Builds). Thus, the healers and tanks that protect allies receive the shorter cooldown. The bonus is in seconds, as for Improved Hammer of Justice and the Hand of Protection part of Guardian's Favor.
 - **The cost.** The damage does not disappear. It moves to the Paladin, and the Paladin must survive it and heal it. Thus, the health of the Paladin limits the number of pools.
 
 ### Divine Shield and the classic trick
 
 - **The rule stays.** If the Paladin is immune, the damage that moves to the Paladin has no effect. This is the Classic rule.
 - **The trick stays.** A Paladin in Divine Shield can save an ally from 825 damage. The ally takes no damage, and the Paladin takes no damage.
-- **The cooldown limits it.** Divine Shield lasts 12 sec. Thus, two pools at most are active in one Divine Shield: 1,650 damage on two allies. The Paladin cannot protect the full raid. See W20.
+- **The cooldown limits it.** Divine Shield lasts 12 sec. Thus, one pool is active in one Divine Shield: 825 damage. With Guardian's Favor 2/2, two pools are active: 1,650 damage on two allies. The Paladin cannot protect the full raid. See W20.
 - **Damage on the Paladin.** The damage that moves to the Paladin can stop a Polymorph or a Sap on the Paladin. This is also a Classic rule.
 
 ### Use
@@ -124,7 +126,7 @@ Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 
 | Spell | Class | Value | Cooldown | Where the damage goes |
 | --- | --- | --- | --- | --- |
-| Hand of Sacrifice (C23) | Paladin | 825 | 15 sec | To the Paladin |
+| Hand of Sacrifice (C23) | Paladin | 825 | 30 sec (20 sec with Guardian's Favor 2/2) | To the Paladin |
 | Power Word: Shield | Priest | About 1,100 with healing power (see Analysis, Healing) | 4 sec, 15 sec on the same target | Removed |
 | Blessing of Sacrifice (beta) | Paladin | 55 for each hit | None | To the Paladin |
 
