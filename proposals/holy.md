@@ -25,7 +25,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Proposed text.** "Allows 17/33/50% of your Mana regeneration to continue while casting."
 - **Model.** Meditation (Priest), Reflection (Druid) and Mindfulness (Shaman) give 50% with 3 ranks.
 - **Illumination is not sufficient.** Other healers have a mana return in addition to their 50% (Litany of Light, Water Shield, Mana Tide Totem). Forever also decreased Illumination to 50% of the base cost.
-- **Row 2.** In row 2, Reverence is also the mana talent for Protection and Retribution. They get it with 8 Holy points (see Mana).
+- **Row 2.** In row 2, Reverence is also a mana talent for Retribution. Retribution takes it with 8 Holy points. Tanks receive more mana from Sanctified Judgement (see Mana).
 - **If it is too strong:** use 13/27/40%.
 
 ## C2. Lingering Light (new talent): row 3, column 4, 2 ranks
@@ -75,7 +75,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 
 - **Text.** "Increases the damage done by your Seals and Judgements by 5/10/15%." 3 ranks, the same as the beta.
 - **Change.** Only the row changes. Row 1 has Divine Intellect 5, Improved Seals 3 and Unyielding Faith 2 (M10).
-- **Dip.** With Improved Seals 3 and Unyielding Faith 2, Retribution and Protection open Holy row 2. They receive +15% Seal and Judgement damage and −30% Fear and Disorient duration. Then they take Reverence (8 points).
+- **Dip.** With Improved Seals 3 and Unyielding Faith 2, Retribution and Protection open Holy row 2. They receive +15% Seal and Judgement damage and −30% Fear and Disorient duration. Retribution then takes Reverence (8 points).
 - **Why row 1.** Seals are the Paladin's own damage. Thus, this dip is specific to the Paladin.
 
 ## M10. Unyielding Faith: row 2 → row 1

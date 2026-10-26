@@ -83,18 +83,20 @@ CONS_EVERY = 8              # Consecration on cooldown, as in Analysis, Mana
 
 # Talents. Holy: "is" Improved Seals, "cg" Consecrated Ground, "hp" Holy Power. Protection: "prec" Precision,
 # "red" Redoubt, "sj" Swift Judgement, "ohws" One-Handed Weapon Specialization, "reck" Reckoning, "ic" Iron Creed,
-# "hsh" Holy Shield. Retribution: "conv" Conviction, "vind" Vindication. Talents with no threat effect are left out.
-PB1 = {"is": 3, "prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 5, "ic": 5, "hsh": 1, "conv": 3}
-PB2 = dict(PB1, conv=5)
-PB3 = {"is": 3, "prec": 3, "red": 5, "sj": 1, "ohws": 2, "reck": 5, "ic": 5, "hsh": 1}
-PB4 = dict(PB3)             # PB4 differs from PB3 only in Anticipation and Fury's Reach
-PB_BOTH = dict(PB3, ohws=3) # "One build can have both" (Analysis, Builds, part 3)
-BUILDS = (("PB1", PB1), ("PB2", PB2), ("PB3", PB3), ("PB4", PB4), ("PB3 + One-Handed Weapon Specialization", PB_BOTH))
+# "hsh" Holy Shield. Retribution: "conv" Conviction, "ij" Improved Judgement, "vind" Vindication. Talents with no threat effect are left out.
+# TANK_REF: the 8/35/8 tank of Analysis, Threat (Conviction 3, Reverence; first PB1). All threat tables use it.
+TANK_REF = {"is": 3, "prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 5, "ic": 5, "hsh": 1, "conv": 3}
+# Analysis, Builds, part 3: 3/35/13 tanks with Sanctified Judgement (no threat effect) and Improved Judgement.
+PB1 = {"is": 3, "prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 5, "ic": 5, "hsh": 1, "ij": 2, "conv": 1}
+PB2 = dict(PB1, conv=3)     # no Holy Conduit
+PB3 = dict(PB1, ic=3)       # PB3 and PB4 differ only in Anticipation and Fury's Reach
+PB4 = dict(PB3)
+BUILDS = (("PB1", PB1), ("PB2", PB2), ("PB3", PB3), ("PB4", PB4), ("8/35/8 tank of Analysis, Threat", TANK_REF))
 # Analysis, Builds, parts 5 and 6: tanks with no Holy Shield
 HOLY_SHOCK_TANK = {"is": 3, "cg": 2, "hp": 5, "prec": 3, "red": 5, "sj": 1, "ohws": 3}             # 30/21/0
 HEALING_TANK = {"prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 1}                                # 29/22/0
 
-def paladin(g, tal=PB1, proposed=True, c14=2.0, crusader=True, consecration=False, c16=False, ic_rank=0.05,
+def paladin(g, tal=TANK_REF, proposed=True, c14=2.0, crusader=True, consecration=False, c16=False, ic_rank=0.05,
             phys_mult=1.0, holy_shock=False, ret_aura=False, shield_attack=False, casting=0.0, heal=0.0,
             rf_heals=False, detail=False):
     """TPS of a Protection Paladin on one boss.
@@ -126,10 +128,11 @@ def paladin(g, tal=PB1, proposed=True, c14=2.0, crusader=True, consecration=Fals
         src["Holy Shield, base"] = (221 + 0.08 * sp) * cg * RF * HS_THREAT * hs_blocks
         src["Holy Shield, block value"] = c14 * g.bv * cg * RF * HS_THREAT * hs_blocks
     # Judgement of Fury: 153-167 + 42.9%. Melee hit table with no dodge or parry, critical hit x2. One each 10 sec,
-    # Swift Judgement each min. The damage hits before the taunt (beta test).
+    # Swift Judgement each min. Improved Judgement: -1 sec cooldown for each rank. The damage hits before the taunt
+    # (beta test).
     _, f_jud = table(hit, crit, auto=False, dodge=0.0, parry=0.0)
     jud = (160 + 0.429 * sp) * seals * ohws * cg * f_jud
-    src["Judgement of Fury"] = jud * RF * (1 / 10 + t("sj") / 60)
+    src["Judgement of Fury"] = jud * RF * (1 / (10 - t("ij")) + t("sj") / 60)
     # Holy Strike: 50% of (normalized weapon damage + 93 + 42.9%), all Holy damage: no armor. Holy Power: +3% critical
     # hit for each rank. Its threat is x1.9 in full (beta test), and Iron Creed adds ic_rank for each rank.
     _, f_hstr = table(hit, crit + 0.03 * t("hp"), auto=False)

@@ -21,7 +21,7 @@ The script models/threat/run_tables.py calculates all values of this section fro
 Conditions:
 
 - All tanks have pre-raid gear.
-- The Paladin has 200 spell power and 60 block value. The Paladin uses the talents of PB1 (see Analysis, Builds).
+- The Paladin has 200 spell power and 60 block value. The Paladin uses the talents of the 8/35/8 tank (see Analysis, Builds, part 3). PB1 has 2% more threat.
 - The boss has 5 Sunder Armor and Faerie Fire.
 
 | Boss hit before armor | Warrior | Druid | Paladin, beta | Paladin, all proposals | Paladin, all proposals + Consecration |

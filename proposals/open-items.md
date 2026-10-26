@@ -17,7 +17,7 @@ These are risks to check in tests. None of them needs a change now.
 | W2 | Sacred Duty gives Divine Shield −60 sec at 10 Protection points. This is a PvP dip | Decrease it to −30 sec if all players take it |
 | W3 | Retribution receives 3% hit and Benediction 5/5 with one 8-point Protection dip (M11) | Monitor |
 | W4 | Benediction is in Protection row 1 (M11). With Consecration on cooldown, a tank uses about 101 mana per sec with Benediction 5/5 and no dip (beta: 112). Holy Conduit from a 7-point Retribution dip decreases it to about 76 | Monitor: the Retribution dip for Holy Conduit saves about 25 mana per sec |
-| W5 | Holy is the main dip for the two other trees (Seal damage, Infusion of Light, Reverence) | Monitor: Retribution and Protection still give parry, critical hit, mana costs, hit and saves |
+| W5 | Holy is the main dip for Retribution (Seal damage, Infusion of Light, Reverence). Tanks take only Improved Seals from Holy. They dip Retribution for Sanctified Judgement and Improved Judgement | Monitor: Retribution and Protection still give parry, critical hit, mana costs, hit and saves |
 | W6 | Reckoning (C11): a 0/26/25 two-handed build bursts for about 3,020 in one Hammer of Justice stun | Monitor: this is below the best beta case (about 3,700). Swift Judgement gives about 18% of it |
 | W7 | Iron Creed (C7) gives −10% damage taken to all specs with Righteous Fury and 25 Protection points | Monitor in PvP. This is the one exception to the rule on talents that improve a buff |
 | W8 | Fury's Reach (C12): a 15-point Protection dip with Swift Judgement gives a 20 yard Judgement | Monitor: the range works only with Seal of Fury |
