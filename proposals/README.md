@@ -1,6 +1,6 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 20 changes and 9 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 21 changes and 9 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
 
 **Contents**
 
@@ -11,7 +11,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 20 chan
 
 ## How to read this document
 
-- **C (change).** C1 to C19, C22 and C23 change what a talent does, add a talent or remove a talent. C16, C18, C19 and C23 change baseline spells. A change can also move the talent. The text then gives the new row.
+- **C (change).** C1 to C19 and C22 to C24 change what a talent does, add a talent or remove a talent. C16, C18, C19, C23 and C24 change baseline spells. A change can also move the talent. The text then gives the new row.
 - **M (move).** M4 to M6 and M8 move a talent to a different row. The talent text does not change.
 - **C18a and C18b** are the two alternatives to C18.
 - **Withdrawn ideas** have no ID. They are in [Withdrawn ideas](withdrawn-ideas.md) only.
@@ -44,7 +44,8 @@ This document gives talent proposals for the WoW Forever Paladin. It has 20 chan
 | C18 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
 | C19 | Blessing of Light | Baseline spell, and Healing Light (C4) | +400 Holy Light, +115 Flash of Light. Uses a Blessing slot | Removed. Healing Light gives 10/20/30% |
 | C22 | Guardian's Favor | Protection, row 2 | Blessing of Protection −1/2 min, Blessing of Freedom +3/6 sec. Lay on Hands drains all your remaining mana | The same, and Lay on Hands drains only 75/50% of your remaining mana. Alternative C22a: the spell drains 50% for all Paladins |
-| C23 | Blessing of Sacrifice, Protection and Freedom become Hands | Baseline spells | The three use a Blessing slot. Sacrifice: 55 damage for each hit moves to you, no cooldown | No Blessing slot. One Hand from each Paladin on a target. Hand of Sacrifice: up to 825 damage moves to you, 15 sec cooldown |
+| C23 | Hand of Sacrifice | Baseline spell | Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown | Up to 825 damage moves to you. 15 sec cooldown |
+| C24 | Hands: Sacrifice, Protection and Freedom | Baseline spells | Blessings of Sacrifice, Protection and Freedom use a Blessing slot | Renamed to Hand of. No Blessing slot. One Hand from each Paladin on a target |
 
 **Moves**
 
