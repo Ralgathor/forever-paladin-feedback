@@ -4,7 +4,7 @@ This section examines the builds that are possible with the proposed trees. It g
 
 ## Summary
 
-- The proposed trees (calculator version 4) have about 6.5 × 10^14 legal builds of 51 points. A search examined the trees of version 3 for each role with the models of this document. The builds of version 4 keep the same talents where the rows permit it.
+- The proposed trees (calculator version 4) have about 6.5 × 10^14 legal builds of 51 points. A search examined the trees of version 3 for each role with the models of this document. The builds of versions 4 and 5 keep the same talents where the rows permit it.
 - Each talent is in at least one good build. No talent is without a use.
 - The tank builds dip 13 points into Retribution for Sanctified Judgement and Improved Judgement (3/35/13). This dip gives more threat and mana than the Holy dip with Reverence (8/35/8): +12 threat per sec and +4.4 mana per sec.
 - Each spec has a clear main build. Each role also has real choices: mana, threat, saves and PvP control.
