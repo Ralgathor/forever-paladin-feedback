@@ -397,7 +397,7 @@ const BASELINE=[
  ["C19", "Blessing of Light", "+400 Holy Light, +115 Flash of Light. Uses a Blessing slot", "Removed. Healing Light (C4) gives 10/20/30% (recommended)"],
  ["C19a", "Blessing of Light", "Uses a Blessing slot", "Use if Blizzard keeps the spell: no Blessing slot, as Salvation"],
  ["C19b", "Holy Light and Flash of Light", "Base heal 1,580 and 308 (top ranks)", "Alternative: remove the Blessing and add its bonus to the base heals (1,980 and 423)"],
- ["C23", "Blessing of Sacrifice", "55 damage for each hit moves to you. Uses a Blessing slot. No cooldown", "Up to 825 damage moves to you. No Blessing slot. 30 sec cooldown"],
+ ["C23", "Blessing of Sacrifice", "55 damage for each hit moves to you. Uses a Blessing slot. No cooldown", "Up to 825 damage moves to you. No Blessing slot. 15 sec cooldown"],
  ["C22a", "Lay on Hands", "Drains all your remaining mana", "Alternative to C22: the spell drains 50% of your remaining mana for all Paladins. Guardian's Favor stays as in the beta"]
 ];
 let mode="prop",T=[],BY={};
@@ -600,9 +600,9 @@ ${dn("Holy Strike triggered only some Seals. Now one rule is true for all melee 
 ${dn("Since the patch of 15 October, Salvation does not use a Blessing slot. Two Paladins now give all Blessings to a raid. But each Paladin keeps only one Judgement on a target. Raids use Light and Wisdom and remove Crusader. Thus, Retribution loses damage and Protection loses threat. With this change, each Paladin keeps Crusader for their own Holy damage. The tank keeps about 55 threat per second.")}</li>
 <li>Blessing of Light and Greater Blessing of Light removed. ${g("C19")}
 ${dn("Forever talents give a %, not a flat value. Blessing of Light gives +400 to Holy Light and +115 to Flash of Light, and its value decreases with gear. At 700–900 healing power, it is about +18%. Healing Light now gives this bonus (see Holy). Forever also removed Blessing of Sanctuary.")}</li>
-<li>Blessing of Sacrifice: Places a Blessing on the party member, transferring up to 825 damage taken to the caster. Lasts 30 sec (was 55 damage taken per hit). It now has a 30 sec cooldown and no longer uses a Blessing slot, the same as Salvation. ${g("C23")}
+<li>Blessing of Sacrifice: Places a Blessing on the party member, transferring up to 825 damage taken to the caster. Lasts 30 sec (was 55 damage taken per hit). It now has a 15 sec cooldown and no longer uses a Blessing slot, the same as Salvation. ${g("C23")}
 <ul><li>Rank 1 now transfers up to 450 damage (was 30 damage per hit).</li></ul>
-${dn("55 damage for each hit was about 2% of a raid boss hit, and the spell replaced Kings or Might on the target. The pool keeps the budget of 15 hits. Now all hits use it, also large hits. The cooldown keeps one pool active for each Paladin. A Paladin in Divine Shield still takes no damage from the pool, as in Classic.")}</li>
+${dn("55 damage for each hit was about 2% of a raid boss hit, and the spell replaced Kings or Might on the target. The pool keeps the budget of 15 hits. Now all hits use it, also large hits. The cooldown keeps two pools active at most for each Paladin. The damage does not disappear: the Paladin takes it and must heal it. A Paladin in Divine Shield still takes no damage from the pool, as in Classic.")}</li>
 <li>Alternatives, if the recommended changes are not possible:
 <ul>
 <li>Judgement of Light and Judgement of Wisdom become one Judgement of Grace. It heals and restores mana. ${g("C18a")}</li>

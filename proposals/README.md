@@ -44,7 +44,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 20 chan
 | C18 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
 | C19 | Blessing of Light | Baseline spell, and Healing Light (C4) | +400 Holy Light, +115 Flash of Light. Uses a Blessing slot | Removed. Healing Light gives 10/20/30% |
 | C22 | Guardian's Favor | Protection, row 2 | Blessing of Protection −1/2 min, Blessing of Freedom +3/6 sec. Lay on Hands drains all your remaining mana | The same, and Lay on Hands drains only 75/50% of your remaining mana. Alternative C22a: the spell drains 50% for all Paladins |
-| C23 | Blessing of Sacrifice | Baseline spell | 55 damage for each hit moves to you. Uses a Blessing slot. No cooldown | Up to 825 damage moves to you. No Blessing slot. 30 sec cooldown |
+| C23 | Blessing of Sacrifice | Baseline spell | 55 damage for each hit moves to you. Uses a Blessing slot. No cooldown | Up to 825 damage moves to you. No Blessing slot. 15 sec cooldown |
 
 **Moves**
 
