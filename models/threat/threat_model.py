@@ -89,7 +89,7 @@ TANK_REF = {"is": 3, "prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 5, "ic": 5
 # Analysis, Builds, part 3: 3/35/13 tanks with Sanctified Judgement (no threat effect) and Improved Judgement.
 PB1 = {"is": 3, "prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 5, "ic": 5, "hsh": 1, "ij": 2, "conv": 1}
 PB2 = dict(PB1, conv=3)     # no Holy Conduit
-PB3 = dict(PB1, ic=3)       # PB3 and PB4 differ only in Anticipation and Fury's Reach
+PB3 = dict(PB1, ic=3)       # PB3 and PB4 differ only in Anticipation and Reach of Law
 PB4 = dict(PB3)
 BUILDS = (("PB1", PB1), ("PB2", PB2), ("PB3", PB3), ("PB4", PB4), ("8/35/8 tank of Analysis, Threat", TANK_REF))
 # Analysis, Builds, parts 5 and 6: tanks with no Holy Shield

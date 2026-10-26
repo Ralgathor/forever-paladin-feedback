@@ -20,7 +20,7 @@ These are risks to check in tests. None of them needs a change now.
 | W5 | Holy is the main dip for Retribution (Seal damage, Infusion of Light, Reverence). Tanks take only Improved Seals from Holy. They dip Retribution for Sanctified Judgement and Improved Judgement | Monitor: Retribution and Protection still give parry, critical hit, mana costs, hit and saves |
 | W6 | Reckoning (C11): a 0/26/25 two-handed build bursts for about 3,020 in one Hammer of Justice stun | Monitor: this is below the best beta case (about 3,700). Swift Judgement gives about 18% of it |
 | W7 | Iron Creed (C7) gives −10% damage taken to all specs with Righteous Fury and 25 Protection points | Monitor in PvP. This is the one exception to the rule on talents that improve a buff |
-| W8 | Fury's Reach (C12): a 20-point Protection dip with Swift Judgement gives a 20 yard Judgement | Monitor: the range works only with Seal of Fury |
+| W8 | Reach of Law (C12): a 20-point Protection dip with Swift Judgement gives a 20 yard Judgement | Monitor: the range works only with Seal of Fury |
 | W9 | Templar's Bulwark (an absorb of 100% of health, three times Last Stand) is a strong PvP dip | Monitor |
 | W10 | Shield Specialization (C13) can make Consecration too cheap against groups that hit fast (up to 58–98 mana per sec, related to maximum mana) | Go back to 3 sec, or decrease the return from 4% to 3% |
 | W11 | Protection threat in late raids depends on C14 and on the block value of Forever gear (see Threat, part 2) | Change the 200% of C14. Then Iron Creed +100% Holy Strike threat. A shield attack only as the last step |

@@ -20,7 +20,7 @@ The Protection proposals give:
 | 2 (5) | Precision, Guardian's Favor (C22), Anticipation | 10 |
 | 3 (10) | Shoulder the Burden (C10), Devoted Sacrifice (C25), Shield Specialization (C13), Sacred Duty | 8 |
 | 4 (15) | Swift Judgement, One-Handed Weapon Specialization, Improved Hammer of Justice | 7 |
-| 5 (20) | Fury's Reach (C12), Templar's Bulwark, Reckoning (C11) | 8 |
+| 5 (20) | Reach of Law (C12), Templar's Bulwark, Reckoning (C11) | 8 |
 | 6 (25) | Iron Creed (C7) | 5 |
 | 7 (30) | Holy Shield (C14) | 1 |
 
@@ -134,7 +134,7 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 - **On groups of enemies,** the 4 sec limit keeps the same value as on a boss. The beta gives more attacks on groups (2.2 and 2.0 each 10 sec), because its block trigger has a 1.5 sec limit. But its attacks can be glancing blows. Thus, the damage is almost the same (+30 and +33 per sec).
 - **PvP burst.** See Analysis, PvP burst check.
 
-## C12. Fury's Reach (new talent): a ranged pull for Protection
+## C12. Reach of Law (new talent): a ranged pull for Protection
 
 - **Proposed text.** "Increases the range of your Judgement by 5/10 yards while Seal of Fury is active."
 - **Position.** Row 5, column 1, 2 ranks. It requires Swift Judgement (straight arrow from row 4).

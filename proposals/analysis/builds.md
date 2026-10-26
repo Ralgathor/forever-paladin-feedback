@@ -42,11 +42,11 @@ This section examines the builds that are possible with the proposed trees. It g
 | --- | --- | --- | --- | --- |
 | PB1. Raid tank | 3/35/13: v5p0003-53051321301551-522103 | 566 / 657 | +8.3 / −34.1 | Improved Seals 3. Sacred Duty 2/2 and Iron Creed 5/5. Deflection 5, Improved Judgement 2, Holy Conduit 2, Conviction 1 and Sanctified Judgement 3. Anticipation 5 and Deflection 5 for the stat targets against a boss (see Crushing blows) |
 | PB2. Raid tank, more critical hit | 3/35/13: v5p0003-53051321301551-520303 | 573 / 665 | +8.3 / −62.3 | As PB1, with Conviction 3 in place of Holy Conduit. For one boss with no Consecration |
-| PB3. Dungeon tank | 3/35/13: v5p0003-5323132130153102-522103 | 563 / 653 | +8.3 / −34.1 | As PB4, with Anticipation 3 and Fury's Reach 2 |
+| PB3. Dungeon tank | 3/35/13: v5p0003-5323132130153102-522103 | 563 / 653 | +8.3 / −34.1 | As PB4, with Anticipation 3 and Reach of Law 2 |
 | PB4. Raid tank, utility | 3/35/13: v5p0003-53251321301531-522103 | 563 / 653 | +8.3 / −34.1 | As PB1, with Guardian's Favor 2 and Iron Creed 3/5. Iron Creed then gives −6% damage taken, not −10% |
 
 - **Holy Shield needs 31 Protection points.** A tank build with only useful points uses 33–35.
-- **Bosses and dungeons.** Only enemies that are 3 or more levels above you can hit with crushing blows. Dungeon enemies are level 62 or lower. Thus, a dungeon tank does not need the full Anticipation. PB3 uses 2 of these points for Fury's Reach. PB3 and PB4 have only these 2 points of difference.
+- **Bosses and dungeons.** Only enemies that are 3 or more levels above you can hit with crushing blows. Dungeon enemies are level 62 or lower. Thus, a dungeon tank does not need the full Anticipation. PB3 uses 2 of these points for Reach of Law. PB3 and PB4 have only these 2 points of difference.
 - **Threat values** come from the threat model script (models/threat/run_tables.py) with the gear of Threat, part 1. The mana values come from the mana model script (models/mana/mana_model.py), as in Analysis, Mana. They do not include Blessing of Wisdom. Consecrated Ground is in Holy row 6 (27 Holy points, M13). A tank with Holy Shield cannot take it.
 - **Raid tank: PB1 is better.** PB2 gives only +1% threat. With Consecration on cooldown, its mana lasts 46 sec at fresh level 60. The mana of PB1 lasts 1 min 25 sec.
 - **Retribution dip (13 points).** Deflection 5, Improved Judgement 2 and 3 more points open Retribution row 3 for Sanctified Judgement. Improved Judgement gives +19 threat per sec and +0.7 mana per sec. Sanctified Judgement gives 14–17 mana per sec, more than Reverence (10.3). Holy Conduit saves 28 mana per sec with Consecration (see Mana).

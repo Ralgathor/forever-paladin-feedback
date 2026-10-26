@@ -118,7 +118,7 @@ Source: the talent data of wowsims/forever (25 October 2026) for all nine classe
 **Cause: ranks, not talents.**
 
 - The Paladin has 49–50 talents. The other classes have 50–54. Thus, the difference is in the ranks.
-- C8 removes Divine Strength (5) and Toughness (5). C9 removes Improved Righteous Fury (3). Vindication, Lingering Light, Fury's Reach and Devoted Sacrifice (C25) add 8. The net change is −5 (138 to 133).
+- C8 removes Divine Strength (5) and Toughness (5). C9 removes Improved Righteous Fury (3). Vindication, Lingering Light, Reach of Law and Devoted Sacrifice (C25) add 8. The net change is −5 (138 to 133).
 - All tank builds skipped Toughness and Divine Strength (see Analysis, Builds, part 3).
 
 **Thin rows.**

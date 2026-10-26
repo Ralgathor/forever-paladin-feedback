@@ -33,7 +33,7 @@ We examined these ideas and rejected them. They are not proposals.
 | Reckoning at 100% chance, once each 1.5 sec | The charges stay at the maximum of 4. More than half of the procs are lost. You cannot choose when to keep charges |
 | Exchange Reckoning (row 5) and Iron Creed (row 6) | Reckoning then costs 25 points, but this does not stop a 0/30/21 hybrid. The 2-charge limit does the job without a move |
 | Iron Creed without the Holy Strike threat bonus | Simpler text, but about 10 TPS less |
-| Aura Mastery or another talent that improves an aura | A talent that improves a buff, with low value (about −4% damage taken at 3 points). Fury's Reach (C12) gives the utility |
+| Aura Mastery or another talent that improves an aura | A talent that improves a buff, with low value (about −4% damage taken at 3 points). Reach of Law (C12) gives the utility |
 | Sacred Arbiter with +30% Holy Strike damage | About +8 damage per sec: too small for a 15-point talent |
 | Two Seals active at the same time (not C17) | Fewer global cooldowns, but no Seal swaps. The talent is about Seal swaps |
 | Two Judgements for each Paladin | More global cooldowns. This is against C17 |
@@ -61,7 +61,7 @@ We examined these ideas and rejected them. They are not proposals.
 | Unyielding Faith in row 2, column 3 (M3) | Spiritual Focus now uses row 2, column 3. M10 moves Unyielding Faith to row 1, column 2 |
 | A new Improved Lay on Hands talent for the drain | Forever removes this talent. A talent only to remove a penalty is a tax. Devoted Sacrifice (C25) also improves Hand of Sacrifice |
 | Improved Hammer of Justice in row 3 (M4) | Withdrawn on 26 October 2026. The talent stays in its beta place (row 4). Devoted Sacrifice (C25) uses row 3. Hammer of Justice each 45 sec needs 18 Protection points, as in the beta |
-| Swift Judgement in row 3 (M5) | Withdrawn on 26 October 2026. The talent stays in its beta place (row 4) with no requirement (C10). Shoulder the Burden (C10) takes the row 3 place, and Fury's Reach (C12) goes to row 5 |
+| Swift Judgement in row 3 (M5) | Withdrawn on 26 October 2026. The talent stays in its beta place (row 4) with no requirement (C10). Shoulder the Burden (C10) takes the row 3 place, and Reach of Law (C12) goes to row 5 |
 | Lay on Hands with no drain | This is the change of patch 3.0.2 (Wrath of the Lich King), a later expansion. A full heal with no cost each 20 min is too strong |
 | Lay on Hands with a fixed cost (for example 30% of maximum mana) | At low mana, you cannot cast it. A drain of a % of the remaining mana keeps this use |
 | Holy Shock heals ×2 or ×2.5 | With the proposals, the raid healing is already at the level of the Shaman. On one tank, the Paladin is then first by 7–25% (see Analysis, Healing, part 6) |

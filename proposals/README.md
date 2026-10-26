@@ -35,7 +35,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 22 chan
 | C9 | Improved Righteous Fury | Protection, row 3 | −2–6% damage taken with Righteous Fury | Removed |
 | C10 | Shoulder the Burden (new) replaces Improved Seal of Fury | Protection, row 3 | Improved Seal of Fury: mana when the Seal of Fury shield absorbs a hit | Shoulder the Burden: 50% of the threat of an ally moves to you, 5 min cooldown. Sacred Duty decreases the cooldown. Swift Judgement keeps its row 4 place with no requirement |
 | C11 | Reckoning | Protection, row 5 | Extra attack after a block (40%) or a critical hit taken (100%). It hits with the next swing | Charge after a block, dodge or parry (once each 4 sec) or a critical hit taken. Holy Strike releases up to 2 charges |
-| C12 | Fury's Reach (new) | Protection, row 5 | — | 2 ranks: Judgement range +5/10 yards while Seal of Fury is active |
+| C12 | Reach of Law (new) | Protection, row 5 | — | 2 ranks: Judgement range +5/10 yards while Seal of Fury is active |
 | C13 | Shield Specialization | Protection, row 3 | Mana return once each 3 sec | Mana return once each 2 sec |
 | C14 | Holy Shield | Protection, row 7 | 221 Holy damage for each block (rank 3) | 221 Holy damage plus 200% of your block value for each block |
 | C15 | Conviction | Retribution, row 2 → row 1 (M8) | +1–5% critical hit chance with melee attacks | +1–5% critical hit chance with attacks and spells |
@@ -43,7 +43,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 22 chan
 | C17 | Twist of Light | Retribution, row 7 | The Echo applies to the next melee attack only | The Echo applies to all melee attacks for 10 sec |
 | C18 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
 | C19 | Blessing of Light | Baseline spell, and Healing Light (C4) | +400 Holy Light, +115 Flash of Light. Uses a Blessing slot | Removed. Healing Light gives 10/20/30% |
-| C22 | Guardian's Favor | Protection, row 2 | Blessing of Protection −1/2 min, Blessing of Freedom +3/6 sec. Lay on Hands drains all your remaining mana | The same, and Hand of Sacrifice cooldown −5/10 sec (C23) |
+| C22 | Guardian's Favor | Protection, row 2 | Blessing of Protection −1/2 min, Blessing of Freedom +3/6 sec. | The same, and Hand of Sacrifice cooldown −5/10 sec (C23) |
 | C23 | Hand of Sacrifice | Baseline spell | Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown | Up to 825 damage moves to you. 30 sec cooldown, 20 sec with Guardian's Favor 2/2 |
 | C24 | Hands: Sacrifice, Protection and Freedom | Baseline spells | Blessings of Sacrifice, Protection and Freedom use a Blessing slot | The spells take the name Hand of. No Blessing slot. One Hand from each Paladin on a target |
 | C25 | Devoted Sacrifice (new) | Protection, row 3 | — | 2 ranks: Lay on Hands drains only 75/50% of your remaining mana, and you take 10/20% less damage from your Hand of Sacrifice. Alternative C25a: the spell drains 50% for all Paladins |
