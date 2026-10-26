@@ -84,21 +84,31 @@ Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 | Hybrid burst heal in PvP (3 sec) | 2,231 | 2,231 | 2,746 | 2,746 |
 | Spell removed | No | Yes | No | Yes |
 
-## C23. Blessing of Sacrifice: a damage pool
+## C23. Guardian Blessings: Sacrifice, Protection and Freedom
+
+- **Change.** Blessing of Sacrifice, Blessing of Protection and Blessing of Freedom become Guardian Blessings. They do not use a Blessing slot. Each Paladin can have one Guardian Blessing on a target. A new Guardian Blessing replaces the old one.
+- **Blessing of Sacrifice** also changes: it moves up to 825 damage to the Paladin, with a 15 sec cooldown (see below).
+- **Precedent.** Forever moved Curse of Agony and Curse of Doom into a new group: Bane of Agony and Bane of Doom. Each Warlock can have one Curse and one Bane on a target. Since the patch of 15 October, Salvation also does not use a Blessing slot.
+- **The name.** Guardian's Favor already improves Blessing of Protection and Blessing of Freedom. The group uses its name.
+- **Salvation does not change.** It already uses no Blessing slot. It is a long threat buff, not a save.
+
+### The problem
+
+- **A save removes a buff.** Blessing of Protection and Blessing of Freedom use the Blessing slot. On the target, they replace Kings or Might from the same Paladin. After the save, the Paladin must cast the buff again. In combat, this costs a global cooldown and mana.
+- **Blessing of Sacrifice: 55 for each hit is too small.** A Naxxramas boss hits a tank for about 8,000 before armor (see Analysis, Threat). After armor, 55 is about 2% of one hit. It also replaces Kings or Might. Thus, Paladins do not cast it.
+
+### One Guardian Blessing for each Paladin
+
+- **A choice.** One Paladin cannot put Blessing of Protection and Blessing of Sacrifice on the same target. Two Paladins can.
+- **Why a limit.** Without it, one Paladin can put the three saves on one ally. The limit keeps one save from each Paladin, as the Bane limit keeps one Bane from each Warlock.
+- **No change to the saves.** Blessing of Protection and Blessing of Freedom keep their effects, durations and cooldowns. Forbearance does not change.
+
+### Blessing of Sacrifice
 
 - **Proposed text (rank 2).** "Places a Blessing on the party member, transferring up to 825 damage taken to the caster. Lasts 30 sec." 100 mana, 30 yards, instant, 15 sec cooldown.
 - **Rank 1 (level 46).** Up to 450 damage. 15 hits of the beta value: 15 × 30.
 - **Beta text (rank 2).** "Places a Blessing on the party member, transfering 55 damage taken per hit to the caster. Lasts 30 sec. Players may only have one Blessing on them per Paladin at any one time." No cooldown.
-- **No Blessing slot.** Blessing of Sacrifice does not use a Blessing slot, the same as Salvation since the patch of 15 October.
 - **The Blessing ends** after 30 sec or when 825 damage moves to the caster.
-
-### The problem
-
-- **55 for each hit is too small.** A Naxxramas boss hits a tank for about 8,000 before armor (see Analysis, Threat). After armor, 55 is about 2% of one hit.
-- **It uses the Blessing slot.** On the target, it replaces Kings or Might from the same Paladin. Thus, Paladins do not cast it.
-
-### The change
-
 - **The same budget.** 825 is 15 hits of 55. The value does not change. It moves into one pool. Thus, all hits use the pool, also large hits.
 - **Classic text.** The tooltip keeps the form of the beta spell. Only the numbers change.
 - **A flat value.** Blessing of Sacrifice is a spell, not a talent. Spells use flat values, as Power Word: Shield does.
@@ -118,7 +128,8 @@ Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 | --- | --- |
 | Raid, other tank | 825 is about one third of a Naxxramas boss hit after armor (estimate). A short save for a tank swap or a crushing blow |
 | Raid, area damage | The pool takes the area damage on one ally until it is empty. The Paladin takes this damage as well as its own |
-| PvP | A shield against a Rogue or a Warrior burst on a healer. The Paladin takes the damage and heals it |
+| Raid, Blessing of Protection | The target keeps Kings or Might. The Paladin does not cast the buff again after the save |
+| PvP | Blessing of Freedom on a Warrior keeps Might. Blessing of Sacrifice is a shield against a Rogue or a Warrior burst on a healer. The Paladin takes the damage and heals it |
 
 ### Against the other classes
 
