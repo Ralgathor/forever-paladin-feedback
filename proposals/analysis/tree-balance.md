@@ -32,7 +32,7 @@ This table uses the proposed trees with M8 and C8 (calculator version 4).
 | Retribution | Deflection, Conviction · Improved Judgement, Holy Conduit, Vindication | — | Parry, critical hit, Judgement −2 sec, cheaper Consecration, a debuff on the boss (5–10 points) | +5% critical heal chance (5 points) |
 | Protection | Benediction, Redoubt · Precision, Guardian's Favor, Anticipation | Instant spells −10%, +3% hit (8 points) | — | Instant spells −10%: Holy Shock, Cleanse. Guardian's Favor: saves, and Lay on Hands drains only 50% of the mana (C22) (7 points). Redoubt for PvP |
 
-**Protection for Holy is a mana and saves dip.** Benediction makes Holy Shock and Cleanse 10% cheaper. Guardian's Favor gives more saves: Hand of Protection each 3 min, Hand of Freedom +6 sec, and a Lay on Hands that drains only 50% of the mana (C22). Thus, Holy healers in raids also take it. Redoubt gives Holy only a small defense in PvP. Other classes also use a defensive tree for PvP: Iron Will (Warrior), Frost Warding (Mage), Deflection (Hunter).
+**Protection for Holy is a mana and saves dip.** Benediction makes Holy Shock and Cleanse 10% cheaper. Guardian's Favor gives more saves: Hand of Protection each 3 min, Hand of Freedom +6 sec and Hand of Sacrifice each 20 sec (C23). Lay on Hands also drains only 50% of the mana (C22). Thus, Holy healers in raids also take it. Redoubt gives Holy only a small defense in PvP. Other classes also use a defensive tree for PvP: Iron Will (Warrior), Frost Warding (Mage), Deflection (Hunter).
 
 Redoubt in PvP (block value 44, from the gear profile):
 

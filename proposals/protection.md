@@ -221,7 +221,7 @@ At 900 healing power, Flash of Light and Holy Light give 5.75 healing for each m
 
 **Why Guardian's Favor**
 
-- **Theme.** It improves the saves that the Paladin casts on allies: Hand of Protection and Hand of Freedom. Lay on Hands is the third save of this type.
+- **Theme.** It improves the saves that the Paladin casts on allies: Hand of Protection, Hand of Freedom and Hand of Sacrifice (C23). Lay on Hands is the fourth save of this type.
 - **Row 2.** Holy takes it with Benediction 5: 7 Protection points (M11, design rule 2).
 - **Builds.** All Holy builds, two of the five Retribution builds (RB3, RB5) and two of the four Protection builds (PB3, PB4) take it (see Analysis, Builds). For these builds, C22 costs no points. The other builds keep the full drain.
 - **Precedent.** Sacred Duty gives two effects in one talent. Weaponmaster (Warrior) merges four weapon talents. Forever removes Improved Lay on Hands. Thus, C22 does not add a talent for one spell.
