@@ -24,15 +24,15 @@ Healer dips of other classes:
 
 ## Rule 1: rows 1 and 2 give something to the other specs
 
-This table uses the proposed trees with M8 and C8 (calculator version 4).
+This table uses the proposed trees with M8 and C8 (calculator version 5).
 
 | Tree | Rows 1–2 | Retribution gets | Protection gets | Holy gets |
 | --- | --- | --- | --- | --- |
 | Holy | Improved Seals, Unyielding Faith, Divine Intellect · Infusion of Light, Reverence, Spiritual Focus | Seal damage, −30% Fear, regeneration while casting, a fast Holy Light (7–10 points) | Seal damage, −30% Fear, regeneration (8 points) | — |
 | Retribution | Deflection, Conviction · Improved Judgement, Holy Conduit, Vindication | — | Parry, critical hit, Judgement −2 sec, cheaper Consecration, a debuff on the boss (5–10 points) | +5% critical heal chance (5 points) |
-| Protection | Benediction, Redoubt · Precision, Guardian's Favor, Anticipation | Instant spells −10%, +3% hit (8 points) | — | Instant spells −10%: Holy Shock, Cleanse. Guardian's Favor: saves, and Lay on Hands drains only 50% of the mana (C22) (7 points). Redoubt for PvP |
+| Protection | Benediction, Redoubt · Precision, Guardian's Favor, Anticipation | Instant spells −10%, +3% hit (8 points) | — | Instant spells −10%: Holy Shock, Cleanse. Guardian's Favor: saves (7 points). Redoubt for PvP, and to open row 3 |
 
-**Protection for Holy is a mana and saves dip.** Benediction makes Holy Shock and Cleanse 10% cheaper. Guardian's Favor gives more saves: Hand of Protection each 3 min, Hand of Freedom +6 sec and Hand of Sacrifice each 20 sec (C23). Lay on Hands also drains only 50% of the mana (C22). Thus, Holy healers in raids also take it. Redoubt gives Holy only a small defense in PvP. Other classes also use a defensive tree for PvP: Iron Will (Warrior), Frost Warding (Mage), Deflection (Hunter).
+**Protection for Holy is a mana and saves dip.** Benediction makes Holy Shock and Cleanse 10% cheaper. Guardian's Favor gives more saves: Hand of Protection each 3 min, Hand of Freedom +6 sec and Hand of Sacrifice each 20 sec (C22, C23). With Redoubt 3, Holy opens row 3 and takes Devoted Sacrifice: Lay on Hands drains only 50% of the mana (C25). Thus, Holy healers in raids also take 12 Protection points. Redoubt gives Holy only a small defense in PvP. Other classes also use a defensive tree for PvP: Iron Will (Warrior), Frost Warding (Mage), Deflection (Hunter).
 
 Redoubt in PvP (block value 44, from the gear profile):
 
@@ -48,6 +48,7 @@ Redoubt in PvP (block value 44, from the gear profile):
 | --- | --- | --- | --- |
 | Beta layout | Benediction 5 + Conviction 5 = 10 | Redoubt 5 + Guardian's Favor 2 = 7 | 17 points: does not fit |
 | With M8 and C8 | Conviction 5 | Benediction 5 + Guardian's Favor 2 = 7 | 12 points: fits, with 4 more points (35/11/5 with Redoubt 4) |
+| With C25 | Conviction 5 | Benediction 5 + Guardian's Favor 2 + Redoubt 3 + Devoted Sacrifice 2 = 12 | 17 points: fits with 34 Holy points (HB1, 34/12/5) |
 
 Without M8, Holy must choose between +5% critical heal chance and Guardian's Favor. Thus, M8 is necessary for rule 1.
 
@@ -56,7 +57,7 @@ Without M8, Holy must choose between +5% critical heal chance and Guardian's Fav
 | Tree | Row 3 | Who puts 10 points or more |
 | --- | --- | --- |
 | Holy | Voice of Truth (1-point signature), Purifying Power, Lingering Light (C2) | Retribution: Exorcism and Holy Wrath cooldowns. Holy Shock builds: the 20 points for row 5 (Holy Shock, Holy Power). All specs in PvP: Voice of Truth |
-| Protection | Swift Judgement (1-point signature), Improved Hammer of Justice, Shield Specialization, Sacred Duty | All specs in PvP: Hammer of Justice each 45 sec, Divine Shield −60 sec. Retribution: a Judgement reset |
+| Protection | Shoulder the Burden (1-point signature, C10), Devoted Sacrifice (C25), Shield Specialization, Sacred Duty | Holy healers: Lay on Hands drains only 50% (12 points). All specs in PvP: Divine Shield −60 sec, and the way to Hammer of Justice each 45 sec and Swift Judgement in row 4 |
 | Retribution | Seal of Command (1-point signature), Sanctified Judgement, Pursuit of Justice | Holy: Pursuit of Justice. Protection: Sanctified Judgement (mana) |
 
 Each row 3 has a 1-point signature talent, as in the other classes. Each also has a reason for another spec to invest. The strong PvP dips are on the watch list (W1, W2, W9).
@@ -94,7 +95,7 @@ These talents are stronger than, or different from, the talents of other classes
 
 ## Points in each tree
 
-Source: the talent data of wowsims/forever (25 October 2026) for all nine classes. The proposed values use calculator version 4.
+Source: the talent data of wowsims/forever (25 October 2026) for all nine classes. The proposed values use calculator version 5.
 
 | Class | Tree 1 | Tree 2 | Tree 3 | Total | Talents |
 | --- | --- | --- | --- | --- | --- |
@@ -107,17 +108,17 @@ Source: the talent data of wowsims/forever (25 October 2026) for all nine classe
 | Mage | Arcane 49 | Fire 46 | Frost 48 | 143 | 54 |
 | Rogue | Assassination 48 | Combat 44 | Subtlety 47 | 139 | 53 |
 | **Paladin, beta** | Holy 46 | Protection 48 | Retribution 44 | **138** | 50 |
-| **Paladin, proposed** | Holy 43 | Protection 47 | Retribution 41 | **131** | 49 |
+| **Paladin, proposed** | Holy 43 | Protection 49 | Retribution 41 | **133** | 50 |
 
 - The other classes have 139–150 points (mean 146, or 48.75 for each tree). Their smallest trees are Beast Mastery and Combat (44).
 - In the beta, the Paladin is the smallest class, 1 point below the Rogue. Retribution (44) is equal to Beast Mastery and Combat.
-- With the proposals, the Paladin is 8 points below the Rogue and 15 points below the mean. Retribution (41) and Holy (43) are the two smallest of the 27 trees.
+- With the proposals, the Paladin is 6 points below the Rogue and 13 points below the mean. Retribution (41) and Holy (43) are the two smallest of the 27 trees.
 - wowforevertalents.com gives Frost 53 points. wowsims gives 48. The table uses the wowsims value.
 
 **Cause: ranks, not talents.**
 
 - The Paladin has 49–50 talents. The other classes have 50–54. Thus, the difference is in the ranks.
-- C8 removes Divine Strength (5) and Toughness (5). C9 removes Improved Righteous Fury (3). Vindication, Lingering Light and Fury's Reach add 6. The net change is −7 (138 to 131).
+- C8 removes Divine Strength (5) and Toughness (5). C9 removes Improved Righteous Fury (3). Vindication, Lingering Light, Fury's Reach and Devoted Sacrifice (C25) add 8. The net change is −5 (138 to 133).
 - All tank builds skipped Toughness and Divine Strength (see Analysis, Builds, part 3).
 
 **Thin rows.**
@@ -126,7 +127,7 @@ Source: the talent data of wowsims/forever (25 October 2026) for all nine classe
 | --- | --- | --- | --- |
 | Holy, calculator version 4 | 10 / 7 / 3 / 6 / 8 / 8 / 1 | **20** (other trees: 23–35) | 22 |
 | Holy, with C2 in row 3, M12 and M13 | 10 / 7 / 5 / 6 / 9 / 5 / 1 | 22 | 20 |
-| Protection, proposed | 10 / 10 / 9 / 6 / 6 / 5 / 1 | 29 | 17 |
+| Protection, proposed | 10 / 10 / 8 / 7 / 8 / 5 / 1 | 28 | 20 |
 | Retribution, proposed | 10 / 9 / 6 / 6 / 4 / 5 / 1 | 25 | **15** (other trees: 15–25) |
 | Mean of the other 24 trees | — | 28.6 | 19.1 |
 
@@ -140,9 +141,9 @@ Source: the talent data of wowsims/forever (25 October 2026) for all nine classe
 
 | Effect | Result |
 | --- | --- |
-| Choices in the main tree | A small decrease. A deep build leaves 8 points of Retribution, 11 points of Holy (healer: 32 points) and 12 points of Protection. In a tree of 49 points, the same build leaves 14–17 |
+| Choices in the main tree | A small decrease. A deep build leaves 8 points of Retribution, 11 points of Holy (healer: 32 points) and 14 points of Protection. In a tree of 49 points, the same build leaves 14–17 |
 | Forced filler | It comes from thin rows, not from the total. Holy healer: 2 points in version 4, none with the three moves. Main Protection and Retribution builds: none |
-| Points for the other trees | Smaller trees free more points: up to 19 for Holy (HB1, 35/11/5, uses 16) and 18 for Retribution (RB1, 10/8/33). Rule 1 needs these dips |
+| Points for the other trees | Smaller trees free more points: up to 19 for Holy (HB1, 34/12/5, uses 17) and 18 for Retribution (RB1, 10/8/33). Rule 1 needs these dips |
 | The 52-point hybrids | The tree size does not cause them. Holy Shock with Twist of Light or Holy Shield needs 52 of the 51 points |
 
-**Result.** Do not add ranks to reach the totals of the other classes. New ranks become stat filler again, as the talents that C8 removes. The talent count is already in the range of the other classes. Holy rows were the one weak point. Three moves fix them with no new talent: C2 in row 3, M12 and M13. All build codes of version 4 stay valid. Shock-Retribution changes to 26/0/25 (see Builds, part 5).
+**Result.** Do not add ranks to reach the totals of the other classes. New ranks become stat filler again, as the talents that C8 removes. C25 adds 2 ranks to Protection, but for an effect, not for stats. The talent count is already in the range of the other classes. Holy rows were the one weak point. Three moves fix them with no new talent: C2 in row 3, M12 and M13. These three moves keep all build codes valid. Shock-Retribution changes to 26/0/25 (see Builds, part 5).

@@ -107,7 +107,7 @@ NORM_2H = 3.3
 # "iol" Instrument of Law, "tol" Twist of Light, "hp" Holy Power.
 RB2 = dict(is_=3, di=2, prec=3, conv=5, ij=2, vind=5, soc=1, sa=1, thws=3, veng=3, cotl=3, iol=2, tol=1)
 RB1 = dict(RB2, di=0)                                                     # Pursuit of Justice
-RB3 = dict(RB2, is_=0, di=0, sj=1)                                        # 0/15/36: no Holy points
+RB3 = dict(RB2, is_=0, di=0, sj=1)                                        # 0/19/32: no Holy points
 RB4 = dict(RB2, di=0)                                                     # Repentance, Eye for an Eye
 RB5 = dict(RB2, is_=0, di=0, ij=0, vind=0, cotl=0, iol=0, tol=0, sj=1)    # 0/26/25
 SHOCK_RET = dict(RB2, prec=0, vind=3, iol=0, tol=0, cotl=0, di=5, hsk=1, hp=5)   # 26/0/25: Holy Power (Holy row 5, M12)

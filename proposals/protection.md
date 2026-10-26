@@ -3,13 +3,14 @@
 The Protection proposals give:
 
 - A fix for crushing blows (C6). This is the largest difference between the Paladin and the Warrior.
-- A simpler tree (C7, C8, C9, C10, M4, M5).
+- A simpler tree (C7, C8, C9, C10).
 - Rows 1 and 2 with a use for each point (C8, M11).
 - A Reckoning that works at level 60 (C11).
 - A ranged pull (C12).
 - More stable mana for tanks (C13).
 - Threat that increases with gear (C14).
-- A Lay on Hands that does not drain all the mana (C22).
+- More saves for allies (C22).
+- A Lay on Hands that does not drain all the mana, and a Hand of Sacrifice that costs less health (C25).
 
 ## Protection layout
 
@@ -17,14 +18,15 @@ The Protection proposals give:
 | --- | --- | --- |
 | 1 (0) | Benediction (M11), Redoubt (C6) | 10 |
 | 2 (5) | Precision, Guardian's Favor (C22), Anticipation | 10 |
-| 3 (10) | Swift Judgement (M5), Improved Hammer of Justice (M4), Shield Specialization (C13), Sacred Duty | 9 |
-| 4 (15) | Fury's Reach (C12), One-Handed Weapon Specialization, Shoulder the Burden (C10) | 6 |
-| 5 (20) | Templar's Bulwark, Reckoning (C11) | 6 |
+| 3 (10) | Shoulder the Burden (C10), Devoted Sacrifice (C25), Shield Specialization (C13), Sacred Duty | 8 |
+| 4 (15) | Swift Judgement, One-Handed Weapon Specialization, Improved Hammer of Justice | 7 |
+| 5 (20) | Fury's Reach (C12), Templar's Bulwark, Reckoning (C11) | 8 |
 | 6 (25) | Iron Creed (C7) | 5 |
 | 7 (30) | Holy Shield (C14) | 1 |
 
-- Protection has 47 points (beta: 48).
+- Protection has 49 points (beta: 48).
 - Rows 1–4 have 35 points. Row 5 opens at 20 points.
+- Swift Judgement and Improved Hammer of Justice are in their beta places (row 4).
 
 ## C6. Redoubt: Holy Shield also starts it
 
@@ -75,7 +77,7 @@ The Protection proposals give:
 - With Iron Creed always active (C7), the two talents gave about 15% damage reduction.
 - Iron Creed alone gives 10%, the same as the Warrior.
 
-## C10. Shoulder the Burden (new talent) replaces Improved Seal of Fury: row 4, column 3
+## C10. Shoulder the Burden (new talent) replaces Improved Seal of Fury: row 3, column 1
 
 - **Proposed text.** "You shoulder the burden of a friendly party or raid member, transferring 50% of their threat against all enemies to you." Instant, 30 yards, 5 min cooldown, 45 mana (3% of base mana).
 - **Why remove Improved Seal of Fury.** It was a second "mana when you are hit" talent. Its mana return does not change with the rank of the Seal. Sanctified Judgement (Retribution row 3) and Reverence (C1) are the other mana talents now (see Mana).
@@ -87,11 +89,13 @@ The Protection proposals give:
 - **PvP.** Players do not use threat. Thus, the talent has no effect in PvP.
 - **Why 5 min.** It works on all enemies that the ally has threat on, at any range, and the threat stays moved. Thus, it is near an area taunt. Challenging Shout (Warrior) has 10 min. Mocking Blow (Warrior) has 2 min, but it works on one target for 6 sec. 5 min is the cooldown of the other Paladin protection spells: Hand of Protection, Divine Shield and Divine Protection.
 - **Sacred Duty.** Sacred Duty also decreases the cooldown of Shoulder the Burden by 30/60 sec. At 2/2, the cooldown is 4 min. New Sacred Duty text: "Increases your total Stamina by 2/4% and reduces the cooldown of your Divine Shield, Divine Protection, Templar's Bulwark, and Shoulder the Burden spells by 30/60 sec."
+- **Position.** Row 3, column 1, the beta place of Improved Seal of Fury.
+- **Swift Judgement.** In the beta, it requires Improved Seal of Fury. C10 removes Improved Seal of Fury. Thus, Swift Judgement stays in row 4 with no requirement.
 - **Signature talents.** Each tree keeps a 1-point signature talent in rows 3 and 4:
   - Holy: Voice of Truth and Divine Favor.
   - Retribution: Seal of Command and Sacred Arbiter.
-  - Protection: Swift Judgement and Shoulder the Burden.
-- **Other specs.** Holy and Retribution can get it with 15 points, but they have no use for it. The threat goes to them, not to a tank. Hand of Protection and Hammer of Justice save an ally without this threat. Thus, only Protection takes Shoulder the Burden.
+  - Protection: Shoulder the Burden and Swift Judgement.
+- **Other specs.** Holy and Retribution can get it with 10 points, but they have no use for it. The threat goes to them, not to a tank. Hand of Protection and Hammer of Justice save an ally without this threat. Thus, only Protection takes Shoulder the Burden.
 - **No change.** Righteous Fury, Seal of Fury and its absorb shield stay baseline spells.
 
 ## C11. Reckoning: charges from block, dodge and parry, released by Holy Strike
@@ -133,10 +137,10 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 ## C12. Fury's Reach (new talent): a ranged pull for Protection
 
 - **Proposed text.** "Increases the range of your Judgement by 5/10 yards while Seal of Fury is active."
-- **Position.** Row 4, column 1, 2 ranks. It requires Swift Judgement (straight arrow from row 3).
+- **Position.** Row 5, column 1, 2 ranks. It requires Swift Judgement (straight arrow from row 4).
 - **Why.** Protection has no ranged pull and no ranged taunt. The Seal of Fury Judgement does 153–167 Holy damage and taunts for 4 sec. But its range is only 10 yards. At 2/2, the range is 20 yards: two times the base range.
 - **Model.** Vanguard (Warrior): Charge in Defensive Stance, row 4, 1 point. Feral Charge (Druid, row 3) and a ranged pull in Feral.
-- **Why 2 ranks.** Row 4 already has a 1-point talent (Shoulder the Burden). Thus, this talent has ranks, as the other talents in the row.
+- **Why 2 ranks.** Row 5 already has a 1-point talent (Templar's Bulwark). Thus, this talent has ranks.
 - **Why only with Seal of Fury.** Judgement of Command does 388–422 damage to a stunned target. Without the Seal of Fury condition, a 20 yard range gives more burst to hybrids in PvP. With the condition, Holy and Retribution get almost nothing from the dip.
 - **Threat and mana.** No change while you tank. Judgement still costs 91 mana and has a 10 sec cooldown. Only the first pull changes. The full path costs 3 points (Swift Judgement and 2 ranks).
 
@@ -161,35 +165,42 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 - **No new button.** You already use Holy Shield on cooldown. C6 keeps about 3 blocks each 10 sec.
 - **PvP.** At about 125 block value, each block does about 250 more Holy damage. The maximum is 4 blocks each 10 sec, against melee attacks only. Only Protection has Holy Shield.
 
-## M4. Improved Hammer of Justice: row 4 → row 3
-
-- **Text.** "Decreases the cooldown of your Hammer of Justice spell by 5/10/15 sec." 3 ranks, the same as the beta.
-- **Model.** Brutal Impact (Druid) on Bash. Bash also has a 60 sec base cooldown.
-- **Why.** It is one of the Paladin talents that players take least. C10 makes space in row 3.
-- **PvP.** Holy or Retribution get the full −15 sec (a 45 sec Hammer of Justice) with 13 Protection points (beta: 18). Brutal Impact is in Feral row 2 (−30 sec on Bash). Thus, this stays in line with the Druid.
-
-## M5. Swift Judgement: row 4 → row 3, no requirement
-
-- In the beta, Swift Judgement requires Improved Seal of Fury. C10 removes Improved Seal of Fury. Thus, Swift Judgement has no requirement.
-- Row 3 has space after C9 and C10.
-
 ## M11. Benediction: Retribution row 1 → Protection row 1
 
 - **Text.** "Reduces the Mana cost of all instant cast spells and abilities by 2/4/6/8/10%." 5 ranks, the same as the beta.
 - **Position.** Protection row 1, column 2. It takes the place of Toughness (C8).
 - **Why.** A tank casts many instant spells. Holy and Retribution open Protection row 2 with it. See C8 for the full reason.
 
-## C22. Guardian's Favor: Lay on Hands drains less mana
+## C22. Guardian's Favor: Hand of Sacrifice cooldown
 
-- **Proposed text.** "Reduces the cooldown of your Hand of Protection by 1/2 min and of your Hand of Sacrifice by 5/10 sec, increases the duration of your Hand of Freedom by 3/6 sec, and your Lay on Hands drains only 75/50% of your remaining mana." 2 ranks, the same as the beta, in row 2.
-- **Change.** The Lay on Hands part is new. The Hand of Sacrifice part comes from C23. Lay on Hands keeps its heal, its 20 min cooldown and its mana for the target.
+- **Proposed text.** "Reduces the cooldown of your Hand of Protection by 1/2 min and of your Hand of Sacrifice by 5/10 sec, and increases the duration of your Hand of Freedom by 3/6 sec." 2 ranks, the same as the beta, in row 2.
+- **Change.** The Hand of Sacrifice part is new. It comes from C23. Devoted Sacrifice (C25) has the Lay on Hands part of the first version of C22.
+- **Theme.** It improves the saves that the Paladin casts on allies: Hand of Protection, Hand of Freedom and Hand of Sacrifice (C23).
+- **Row 2.** Holy takes it with Benediction 5: 7 Protection points (M11, design rule 2).
+- **Builds.** All Holy builds, two of the five Retribution builds (RB3, RB5) and two of the four Protection builds (PB3, PB4) take it (see Analysis, Builds).
+- **Design rule 1.** Hands are not buffs (C24). Thus, C22 does not break the rule.
+
+## C25. Devoted Sacrifice (new talent): row 3, column 2
+
+- **Proposed text.** "Your Lay on Hands drains only 75/50% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 10/20%." 2 ranks.
+- **Position.** Row 3, column 2, the beta place of Improved Righteous Fury (C9).
+- **Theme.** The Paladin gives its own resources to save others. Lay on Hands costs mana, and Hand of Sacrifice costs health. Devoted Sacrifice makes the two spells cost less.
+- **Lay on Hands.** The spell keeps its heal, its 20 min cooldown and its mana for the target.
 - **Problem.** Lay on Hands drains all the remaining mana of the Paladin (Forever spellbook, all ranks). Forever decreases the cooldown from 1 hour to 20 min. Thus, the Paladin can use it about one time for each boss. But the drain is largest when the mana is full, early in a fight. Thus, Paladins use it only when their mana is already low.
-- **Keep mana for the role.** With C22, the Paladin can use Lay on Hands at any time and always keeps half of the mana. The healer continues to heal, the tank keeps its threat, and Retribution keeps its damage. The time until the mana is back is also half (see the table).
-- **Other saves.** At 0 mana, the Paladin cannot cast Divine Shield (110 mana), Hand of Protection (7% of base mana) or Hammer of Justice (100 mana). With C22, these saves stay available.
+- **Keep mana for the role.** With C25, the Paladin can use Lay on Hands at any time and always keeps half of the mana. The healer continues to heal, the tank keeps its threat, and Retribution keeps its damage. The time until the mana is back is also half (see the table).
+- **Other saves.** At 0 mana, the Paladin cannot cast Divine Shield (110 mana), Hand of Protection (7% of base mana) or Hammer of Justice (100 mana). With C25, these saves stay available.
+- **Hand of Sacrifice.** The pool does not change. The target is still protected from up to 825 damage (C23). Only the damage that the Paladin takes decreases: about 743 at 1/2 and 660 at 2/2. A tank takes the damage of an ally on top of the boss damage. Thus, without C25, a tank uses Hand of Sacrifice only when its health is high.
+- **Why row 3.** Lay on Hands comes at level 10. Thus, the talent has a use when row 3 opens (level 20). The Hand of Sacrifice part has a use from level 46. Improved Reincarnation (Shaman, Restoration row 2) is the same: it gives +2% health from level 15, and Reincarnation comes at level 30.
+- **Model.** Improved Health Funnel (Warlock) and Improved Mend Pet (Hunter) are 2-rank talents for save spells. Sacred Duty also gives two effects in one talent.
+- **Cost for Holy.** Holy takes it with Benediction 5, Guardian's Favor 2 and Redoubt 3: 12 Protection points. The first version of C22 cost 7 points.
+- **Builds.** HB1, HB2, HB3 and RB3 take it (see Analysis, Builds).
+- **PvP.** Divine Shield already stops all the damage that moves (W20). Thus, the Hand of Sacrifice part does not change the Divine Shield risk.
+- **Design rule 1.** Lay on Hands and Hand of Sacrifice are not buffs (C24). Thus, C25 does not break the rule.
+- **Tree size.** Protection goes from 47 to 49 points. The Warrior Protection tree has 50 (see Analysis, Tree balance).
 
 **Cast at full mana**
 
-| Spec (maximum mana, mana income) | Heal (maximum health, estimate) | Beta: time until the mana is back | C22 2/2: drain, time until the mana is back |
+| Spec (maximum mana, mana income) | Heal (maximum health, estimate) | Beta: time until the mana is back | C25 2/2: drain, time until the mana is back |
 | --- | --- | --- | --- |
 | Holy (4,416, +22.6 per sec) | About 4,000 | 3 min 15 sec | 2,208: 1 min 38 sec |
 | Protection, fresh level 60 (2,897, +3.9 per sec while tanking) | About 5,500 | 12 min 23 sec | 1,449: 6 min 11 sec |
@@ -205,8 +216,8 @@ At 900 healing power, Flash of Light and Holy Light give 5.75 healing for each m
 | --- | --- | --- | --- |
 | 25% | 1,104 | 63% mana | 994 |
 | 40% | 1,766 | 39% mana | 795 |
-| 50% (C22, rank 2) | 2,208 | 31% mana | 662 |
-| 75% (C22, rank 1) | 3,312 | 21% mana | 331 |
+| 50% (C25, rank 2) | 2,208 | 31% mana | 662 |
+| 75% (C25, rank 1) | 3,312 | 21% mana | 331 |
 | 100% (beta) | 4,416 | 16% mana | 0 |
 
 - Below 50%, a healer can use Lay on Hands for mana at half mana. Then it is not an emergency heal.
@@ -219,16 +230,8 @@ At 900 healing power, Flash of Light and Holy Light give 5.75 healing for each m
 - If the Paladin casts it on itself, the Paladin gets mana below 1,100 mana (beta: below 550). The maximum is +550 in the two cases, at 0 mana.
 - This is about one time for each boss: about 5% of the mana of a Holy Paladin in a 5 min fight. A Major Mana Potion gives 1,350–2,250 each 2 min. See W18.
 
-**Why Guardian's Favor**
-
-- **Theme.** It improves the saves that the Paladin casts on allies: Hand of Protection, Hand of Freedom and Hand of Sacrifice (C23). Lay on Hands is the fourth save of this type.
-- **Row 2.** Holy takes it with Benediction 5: 7 Protection points (M11, design rule 2).
-- **Builds.** All Holy builds, two of the five Retribution builds (RB3, RB5) and two of the four Protection builds (PB3, PB4) take it (see Analysis, Builds). For these builds, C22 costs no points. The other builds keep the full drain.
-- **Precedent.** Sacred Duty gives two effects in one talent. Weaponmaster (Warrior) merges four weapon talents. Forever removes Improved Lay on Hands. Thus, C22 does not add a talent for one spell.
-- **Design rule 1.** Lay on Hands is not a buff. Thus, C22 does not break the rule.
-
-**Alternative to C22**
+**Alternative to the Lay on Hands part**
 
 | ID | Option | How it works | Precedent | Tradeoff |
 | --- | --- | --- | --- | --- |
-| C22a | Change the base spell (use this if Blizzard does not want the talent) | Lay on Hands drains 50% of the remaining mana for all Paladins. Guardian's Favor stays as in the beta | Forever moves the cooldown of Improved Lay on Hands into the spell | All specs get it with no points. There is no talent choice. Retribution raid builds also get it |
+| C25a | Change the base spell (use this if Blizzard does not want the talent) | Lay on Hands drains 50% of the remaining mana for all Paladins. Devoted Sacrifice keeps only the Hand of Sacrifice part | Forever moves the cooldown of Improved Lay on Hands into the spell | All specs get it with no points. There is no talent choice. Retribution raid builds also get it |

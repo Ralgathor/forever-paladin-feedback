@@ -105,6 +105,7 @@ Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 - **Why 30 sec.** With no Blessing slot, a Paladin can put a pool on each ally. The base cooldown is the same as the duration. Thus, each Paladin has one pool active at a time: 825 damage.
 - **Guardian's Favor.** It reduces the cooldown by 5/10 sec. At 2/2, the cooldown is 20 sec. Thus, the Paladin has two pools active at most: 1,650 damage.
 - **Why Guardian's Favor.** It already improves Hand of Protection and Hand of Freedom. All Holy builds and two of the four Protection builds take it (see Analysis, Builds). Thus, the healers and tanks that protect allies receive the shorter cooldown. The bonus is in seconds, as for Improved Hammer of Justice and the Hand of Protection part of Guardian's Favor.
+- **Devoted Sacrifice (C25).** This Protection talent reduces the damage that the Paladin takes from the pool by 10/20%. The target is still protected from up to 825 damage.
 - **The cost.** The damage does not disappear. It moves to the Paladin, and the Paladin must survive it and heal it. Thus, the health of the Paladin limits the number of pools.
 
 ### Divine Shield and the classic trick

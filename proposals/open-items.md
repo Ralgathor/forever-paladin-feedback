@@ -20,7 +20,7 @@ These are risks to check in tests. None of them needs a change now.
 | W5 | Holy is the main dip for Retribution (Seal damage, Infusion of Light, Reverence). Tanks take only Improved Seals from Holy. They dip Retribution for Sanctified Judgement and Improved Judgement | Monitor: Retribution and Protection still give parry, critical hit, mana costs, hit and saves |
 | W6 | Reckoning (C11): a 0/26/25 two-handed build bursts for about 3,020 in one Hammer of Justice stun | Monitor: this is below the best beta case (about 3,700). Swift Judgement gives about 18% of it |
 | W7 | Iron Creed (C7) gives −10% damage taken to all specs with Righteous Fury and 25 Protection points | Monitor in PvP. This is the one exception to the rule on talents that improve a buff |
-| W8 | Fury's Reach (C12): a 15-point Protection dip with Swift Judgement gives a 20 yard Judgement | Monitor: the range works only with Seal of Fury |
+| W8 | Fury's Reach (C12): a 20-point Protection dip with Swift Judgement gives a 20 yard Judgement | Monitor: the range works only with Seal of Fury |
 | W9 | Templar's Bulwark (an absorb of 100% of health, three times Last Stand) is a strong PvP dip | Monitor |
 | W10 | Shield Specialization (C13) can make Consecration too cheap against groups that hit fast (up to 58–98 mana per sec, related to maximum mana) | Go back to 3 sec, or decrease the return from 4% to 3% |
 | W11 | Protection threat in late raids depends on C14 and on the block value of Forever gear (see Threat, part 2) | Change the 200% of C14. Then Iron Creed +100% Holy Strike threat. A shield attack only as the last step |
@@ -30,7 +30,7 @@ These are risks to check in tests. None of them needs a change now.
 | W15 | Retribution with C16 is 103% of the pure average at fresh level 60 (101% of Fury). In Naxxramas, it is about 95% of the pure average and 92% of Fury. The hybrid target is 95% of the pure average (see Analysis, Damage, part 6) | Compare Retribution with the pure average at each gear tier, not only with Fury. If Retribution is above the pure average at the raid release, decrease the Sacred Arbiter bonus first (+20% → +10%). Ask for spell damage on Paladin plate items at each tier |
 | W16 | Consecration on cooldown on one boss gives Retribution 102–114% of the pure average (normal rotation: 95–103%). Consecrated Ground is in Holy row 6 (M13): Retribution with Twist of Light cannot take it. With Holy Conduit and Benediction, the mana is zero after 1 min 33 sec at fresh level 60 and 2 min 17 sec in Naxxramas. In a 3 min fight, Retribution is 102–111% of the pure average (see Analysis, Damage, part 8) | Mana is the balance. The 95% target is for the normal rotation, without Consecration. If raids use Consecration on all bosses, compare the 3 min average with the pure average. Shock-Retribution (23/0/28) has Consecrated Ground: monitor it with Consecration in short fights |
 | W17 | Holy Shock with Iron Creed (21/30/0): Righteous Fury stays active in PvP. The build then has −10% damage taken, Templar's Bulwark, Reckoning and Holy Shock (see Analysis, Builds, part 5) | Monitor in PvP with W7 and W9 |
-| W18 | Lay on Hands with C22 on yourself gives up to +550 mana below 1,100 mana (beta: below 550). Paladins can use it for mana one time for each boss | If all Holy Paladins use it for mana, Lay on Hands does not restore mana when you are the target |
+| W18 | Lay on Hands with C25 on yourself gives up to +550 mana below 1,100 mana (beta: below 550). Paladins can use it for mana one time for each boss | If all Holy Paladins use it for mana, Lay on Hands does not restore mana when you are the target |
 | W20 | Hand of Sacrifice (C23) with Divine Shield: the ally takes no damage and the Paladin takes no damage. In PvP, a Paladin can protect one ally for 825 in one Divine Shield, or two allies with Guardian's Favor 2/2 | Monitor in PvP. If it is too strong, Divine Shield removes Hand of Sacrifice |
 
 ## Open questions
@@ -56,7 +56,7 @@ These are risks to check in tests. None of them needs a change now.
 - [ ] What is the Slam cooldown in Forever? The Arms check in Analysis, Damage, uses one Slam each 3 sec at most.
 - [ ] Does Righteous Fury increase the threat of heals in Forever? The text says "Holy attacks". If yes, a tank can use Flash of Light or Holy Light for threat (see Analysis, Builds, part 6).
 - [ ] C23: does damage that moves to a Paladin in Divine Shield have no effect in Forever, as in Classic? Does it stop a Polymorph on the Paladin?
-- [ ] C22: when you cast Lay on Hands on yourself, does the drain occur before the 550 mana? If not, Lay on Hands gives you no mana.
+- [ ] C25: when you cast Lay on Hands on yourself, does the drain occur before the 550 mana? If not, Lay on Hands gives you no mana.
 - [ ] Light's Vigil: the Illumination text names it. Does Illumination return mana one time for each cast, or one time for each critical heal (up to 5)? With Illumination at 50%, it gives +13% to +19% raid healing against the Shaman (W13).
 - [ ] Does the Light's Vigil heal use the +15% critical chance of Holy Power for Holy Shock? Does Healing Light increase it? Both make Light's Vigil stronger (see Analysis, Healing, part 6).
 - [ ] What is the Spirit regeneration formula in Forever? Does Intellect change it? The DoubleZug tests agree with neither the Classic nor the TBC formula.

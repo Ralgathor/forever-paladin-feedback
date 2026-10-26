@@ -1,6 +1,6 @@
 # PvP burst check
 
-This check is for C11 (Reckoning). The build is 0/26/25 with a two-handed weapon. It is the build v4p-532300210215002-5005031211331 in the calculator (RB5):
+This check is for C11 (Reckoning). The build is 0/26/25 with a two-handed weapon. It is the build v5p-532300210215002-5005031211331 in the calculator (RB5):
 
 - Protection 26: Reckoning 5/5, Swift Judgement, Improved Hammer of Justice 2/3.
 - Retribution 25: Seal of Command, Sacred Arbiter, Two-Handed Weapon Specialization 3/3, Vengeance 3/3, Conviction 5/5.
