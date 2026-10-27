@@ -356,6 +356,7 @@ const PROPOSED={
  con:{pid:"C15",tier:1,col:3,r1:"Improves your chance to get a critical strike with attacks and spells by 1%.",rN:"Improves your chance to get a critical strike with attacks and spells by 5%."},
  ths:{pid:"M6",tier:4,col:4},
  poj:{pid:null,tier:3,col:1},
+ sanj:{pid:"C26",rt:["Your Judgement ability returns 20% of the Mana cost of the judged seal.","Your Judgement ability returns 40% of the Mana cost of the judged seal.","Your Judgement ability returns 60% of the Mana cost of the judged seal."]},
  tol:{pid:"C17",r1:"Reduces the Mana cost of your Seal spells by 20%. When you replace your Seal of Command, Seal of Righteousness, Seal of Fury, or Seal of Justice with a different Seal, you gain an Echo of that Seal for 10 sec. While the Echo lasts, your melee attacks also apply the replaced Seal's effects."}
 };
 const PROPOSED_NEW=[{pid:"C2",tree:"holy",key:"sw",name:"Lingering Light",tier:3,col:4,ranks:2,rt:["Your non-periodic critical heals cause the target to be healed for an additional 10% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing.","Your non-periodic critical heals cause the target to be healed for an additional 20% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing."],req:null,status:"N",info:""},{pid:"C12",tree:"prot",key:"fj",name:"Reach of Law",tier:5,col:1,ranks:2,rt:["Increases the range of your Judgement by 5 yards while Seal of Fury is active.","Increases the range of your Judgement by 10 yards while Seal of Fury is active."],req:"sj",status:"N",info:""},{pid:"C25",tree:"prot",key:"dsac",name:"Devoted Sacrifice",tier:3,col:2,ranks:2,rt:["Your Lay on Hands drains only 75% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 10%.","Your Lay on Hands drains only 50% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 20%."],req:null,status:"N",info:""}];
@@ -378,6 +379,7 @@ const PROPOSALS=[
  ["C25", "dsac", "Devoted Sacrifice (new)", "Protection, row 3", "—", "2 ranks: Lay on Hands drains only 75/50% of your remaining mana, and you take 10/20% less damage from your Hand of Sacrifice"],
  ["C15", "con", "Conviction", "Retribution, row 2 → row 1 (M8)", "+1–5% critical hit chance with melee attacks", "+1–5% critical hit chance with attacks and spells"],
  ["C17", "tol", "Twist of Light", "Retribution, row 7", "The Echo applies to the next melee attack only", "The Echo applies to all melee attacks for 10 sec"],
+ ["C26", "sanj", "Sanctified Judgement", "Retribution, row 3", "33/66/100% chance to return 20/40/60% of the Seal cost", "100% chance at all ranks. The return is 20/40/60% of the Seal cost"],
  ["M6", "ths", "Two-Handed Weapon Specialization", "Retribution, row 5 → row 4", "Row 5 (20 points)", "Row 4 (15 points) (move only)"],
  ["M8", "con", "Conviction", "Retribution", "Row 2", "Row 1 (move only)"],
  ["M9", "is", "Improved Seals", "Holy", "Row 2", "Row 1 (move only)"],
@@ -465,7 +467,7 @@ function rankText(t,k){
   if(t.ranks===1||k<=1)return t.r1; if(k>=t.ranks)return t.rN;
   const re=/\d+(?:\.\d+)?/g,a=t.r1.match(re)||[],b=t.rN.match(re)||[];
   if(a.length!==b.length)return t.r1;
-  let i=0;return t.r1.replace(re,m=>{const x=+a[i],y=+b[i];i++;if(x===y)return m;const v=x+(y-x)*(k-1)/(t.ranks-1);const dec=(String(x)+String(y)).includes(".");return dec?String(Math.round(v*10)/10):String(Math.round(v));});
+  let i=0;return t.r1.replace(re,m=>{const x=+a[i],y=+b[i];i++;if(x===y)return m;const v=x+(y-x)*(k-1)/(t.ranks-1);if(x===33&&y===100)return String(Math.floor(v));/* 33/66/100% chance */const dec=(String(x)+String(y)).includes(".");return dec?String(Math.round(v*10)/10):String(Math.round(v));});
 }
 const available=()=>Math.max(0,Math.min(MAXPTS,level-9));
 const spent=()=>T.reduce((s,t)=>s+t.pts,0);
@@ -678,6 +680,8 @@ ${dn("All other +5% critical strike talents are in Row 1: Cruelty, Malice, Letha
 ${dn("It takes the Row 2 place of Conviction (M8). With 5 ranks, Retribution keeps 41 points, and +5% Attack Power gives about the same damage as Divine Strength. A tank reaches the boss debuff with 10 Retribution points (was 13).")}</li>
 <li>${t("ths","Two-Handed Weapon Specialization")} moved to Row 4 (was Row 5). Its effect does not change. ${g("M6")}
 ${dn("The Warrior version also opens at 15 points.")}</li>
+<li>${t("sanj","Sanctified Judgement")}: Your Judgement returns 20/40/60% of the mana cost of the judged Seal. This now occurs on each Judgement (was a 33/66/100% chance). ${g("C26")}
+${dn("Each rank increased the chance and the return. Thus, ranks 1 and 2 gave almost no mana. Master of Elements also increases only the return. At 3/3, the return does not change.")}</li>
 <li>${t("tol","Twist of Light")}: Reduces the mana cost of your Seal spells by 20%. When you replace your Seal of Command, Righteousness, Fury or Justice with a different Seal, you gain an Echo of that Seal for 10 sec. While the Echo lasts, all your melee attacks also apply the effects of the replaced Seal (was the next melee attack only). ${g("C17")}
 ${dn("In the beta, you changed Seals before almost each swing. Rotations must stay at about four buttons. Now you change Seals one time each 10 sec, together with Holy Strike and Judgement.")}</li>
 </ul>`;
