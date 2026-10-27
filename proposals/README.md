@@ -28,7 +28,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 23 chan
 | C1 | Reverence | Holy, row 3 → row 2 | 10/20/30% of mana regeneration during casts | 17/33/50% |
 | C2 | Lingering Light (new) | Holy, row 3 | — | 2 ranks: a critical heal adds a heal over time of 10/20% of the heal |
 | C3 | Infusion of Light | Holy, row 4 → row 2 | Holy Shock and Flash of Light critical hits make the next Holy Light faster | All Holy Shock, Flash of Light and Holy Strike hits do this. No critical hit is necessary |
-| C4 | Healing Light | Holy, row 2 → row 6 | 3 ranks: 4/8/12% | 3 ranks: 10/20/30% (with C19) |
+| C4 | Healing Light | Holy, row 2 → row 6 | 3 ranks: 4/8/12% | 3 ranks: 10/20/30% (with Blessing of Light removal, C19) |
 | C6 | Redoubt | Protection, row 1 | 10% chance when you are hit: +4–20% block | The same. Each Holy Shield cast also starts it |
 | C7 | Iron Creed | Protection, row 6 | −2–10% damage taken for 6 sec after Holy Strike | −2–10% damage taken while Righteous Fury is active |
 | C8 | Toughness and Divine Strength: removed | Protection row 1, Retribution row 2, Holy row 1 | Toughness: +2–10% armor from items. Divine Strength: +2–10% Strength | Both removed. Vindication goes to Retribution row 2 with 5 ranks (+1–5% Attack Power). Benediction (M11) and Unyielding Faith (M10) fill row 1 of Protection and Holy |
@@ -38,7 +38,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 23 chan
 | C12 | Reach of Law (new) | Protection, row 5 | — | 2 ranks: Judgement range +5/10 yards while Seal of Fury is active |
 | C13 | Shield Specialization | Protection, row 3 | Mana return once each 3 sec | Mana return once each 2 sec |
 | C14 | Holy Shield | Protection, row 7 | 221 Holy damage for each block (rank 3) | 221 Holy damage plus 200% of your block value for each block |
-| C15 | Conviction | Retribution, row 2 → row 1 (M8) | +1–5% critical hit chance with melee attacks | +1–5% critical hit chance with attacks and spells |
+| C15 | Conviction | Retribution, row 2 → row 1 (Conviction, M8) | +1–5% critical hit chance with melee attacks | +1–5% critical hit chance with attacks and spells |
 | C16 | Holy Strike | Baseline spell | Triggers only Seal of Light, Justice and Wisdom | Triggers your active Seal and Echo the same as a melee attack |
 | C17 | Twist of Light | Retribution, row 7 | The Echo applies to the next melee attack only | The Echo applies to all melee attacks for 10 sec |
 | C18 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
@@ -65,7 +65,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 23 chan
 
 Forever uses five rules for its talent trees. All proposals follow these rules.
 
-1. **No talents that improve a buff.** Buffs such as Blessing of Kings come from the trainer. Iron Creed (C7) is the one exception. The text of C7 gives the reason.
+1. **No talents that improve a buff.** Buffs such as Blessing of Kings come from the trainer. Iron Creed (C7) is the one exception. The text of Iron Creed (C7) gives the reason.
 2. **Rows 1 and 2 are for all specs.** The first talents must give the other two specs a reason to put points in the tree.
 3. **Shared stats are for melee and spells.** Precision gives hit for both. Thundering Strikes (Shaman) gives critical hit for both.
 4. **Each tree has 1-point signature talents** in rows 3 and 4. Each tree ends with a 1-point talent at 30 points.

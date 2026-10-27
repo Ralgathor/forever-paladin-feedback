@@ -9,8 +9,8 @@ This section examines the builds that are possible with the proposed trees. It g
 - The tank builds dip 13 points into Retribution for Sanctified Judgement and Improved Judgement (3/35/13). This dip gives more threat and mana than the Holy dip with Reverence (8/35/8): +12 threat per sec and +4.4 mana per sec.
 - Each spec has a clear main build. Each role also has real choices: mana, threat, saves and PvP control.
 - Only one build outside the main tree is good: Shock-Retribution (26/0/25) for short fights and PvP. Tanks and healers outside their tree are weaker.
-- C8 removes Divine Strength and Toughness. Each point in rows 1 and 2 now has a use for its spec. A tank build can have area and single-target talents together (part 3).
-- M11 moves Benediction to Protection row 1. The tank, Retribution and Holy builds keep their damage, threat and healing values. Retribution raid builds lose Guardian's Favor. Holy builds receive Benediction 5/5 and 4 free points.
+- Toughness and Divine Strength removal (C8) deletes both talents. Each point in rows 1 and 2 now has a use for its spec. A tank build can have area and single-target talents together (part 3).
+- Benediction (M11) moves to Protection row 1. The tank, Retribution and Holy builds keep their damage, threat and healing values. Retribution raid builds lose Guardian's Favor. Holy builds receive Benediction 5/5 and 4 free points.
 - Two hybrids need 52 points: Holy Shock with Twist of Light, and Holy Shock with Holy Shield. This 1-point gap stops the two strongest hybrids.
 
 ## 1. Method
@@ -30,7 +30,7 @@ This section examines the builds that are possible with the proposed trees. It g
 | HB2. Healer with more saves | 32/14/5: v5p53200032251010512-30200020000000502-0005 | The same as HB1 | Sacred Duty 2/2 (Divine Shield −60 sec, +4% Stamina), Guardian's Favor, Devoted Sacrifice and Benediction 5. Redoubt 3. No Unyielding Faith or Voice of Truth. Possible only with Spiritual Focus in row 2 |
 | HB3. PvP, Hammer of Justice each 45 sec | 28/18/5: v5p53201132251010002-50200010030000502-0005 | About −4% maximum, −8% for the full fight (estimate: as the 30/16/5 build of version 4, without Holy Power 1/5) | Improved Hammer of Justice 3/3 (row 4, 18 Protection points as in the beta), Redoubt 5, Sacred Duty 1/2, Devoted Sacrifice 2/2. Unyielding Faith 1/2. No Light's Vigil and no Holy Power |
 
-- **Holy healing is complete at 32 points** (C2 in row 3, M12). HB1 adds Unyielding Faith 1/2 and Voice of Truth (2 points) for fear bosses and PvP. These are choices, not filler (part 7).
+- **Holy healing is complete at 32 points** (Lingering Light in row 3, C2; Holy Power in row 5, M12). HB1 adds Unyielding Faith 1/2 and Voice of Truth (2 points) for fear bosses and PvP. These are choices, not filler (part 7).
 - **Conviction is the best next talent.** It gives +8% healing for the full fight: more critical heals and more mana from Illumination.
 - **The other points give only utility:** Hand of Protection, Divine Shield or run speed (Pursuit of Justice). The 51st point has no healing value.
 - **Value of each Holy talent for the full fight:** Reverence 38%, Illumination 28%, Healing Light 23%, Divine Favor 13%, Conviction 8%, Holy Power 8%, Lingering Light 6%. For the maximum healing per second: Infusion of Light 25%, Healing Light 23%.
@@ -70,8 +70,8 @@ This section examines the builds that are possible with the proposed trees. It g
 - **DPS for each point:** Seal of Command 82 (1 point), Twist of Light 47 (1 point), Sacred Arbiter 9 (1 point), Two-Handed Weapon Specialization 6.6, Vengeance 5.3, Improved Judgement 5.2, Conviction 5.0, Precision 4.9, Improved Seals 4.7, Champion of the Light 4.4, Instrument of Law 1.9, Vindication 1.3 (5 ranks, C8).
 - **About 6 points are free.** Each choice gives 1.5% DPS or less: Vindication, Divine Intellect, Infusion of Light or Pursuit of Justice.
 - **The dips into Holy and Protection are strong:** Improved Seals +6%, Precision +4%. The Protection dip also gives Benediction 5/5 (M11). Holy Conduit is in the Retribution tree. Thus, rule 1 of Tree balance works for Retribution.
-- **M11 and the Protection dip.** Benediction 5 opens Protection row 2. Thus, the dip is 8 points (Benediction 5, Precision 3), and Guardian's Favor costs 2 more points. RB1, RB2 and RB4 skip Guardian's Favor. RB3 and RB5 take it.
-- **C8 and Retribution.** Divine Strength gave about +7 DPS. Vindication 5 gives about +6 DPS with full uptime. RB2 loses about 1 DPS. RB1 had Vindication 3: it loses about 4 DPS (−1%).
+- **Benediction (M11) and the Protection dip.** Benediction 5 opens Protection row 2. Thus, the dip is 8 points (Benediction 5, Precision 3), and Guardian's Favor costs 2 more points. RB1, RB2 and RB4 skip Guardian's Favor. RB3 and RB5 take it.
+- **Toughness and Divine Strength removal (C8) and Retribution.** Divine Strength gave about +7 DPS. Vindication 5 gives about +6 DPS with full uptime. RB2 loses about 1 DPS. RB1 had Vindication 3: it loses about 4 DPS (−1%).
 - **Holy Power is not good for Retribution.** It is in Holy row 5 (M12). A 25/0/26 build with Holy Power loses Twist of Light and Champion of the Light: −19%.
 
 ## 5. Builds outside the main tree
@@ -98,7 +98,7 @@ A tank can heal itself for threat.
 
 - **Rules (Classic).** Each point of effective healing gives 0.5 threat. Overhealing gives no threat. The threat is divided between all enemies in the fight.
 - **Righteous Fury.** Its Forever text says "Holy attacks". No test on heals exists (see Open questions). The table gives the two cases.
-- **Base build.** The table uses the dungeon tank of version 1 (8/33/10: Conviction, Holy Conduit and Benediction). It has the threat talents of the 8/35/8 tank with Conviction 5: 560 threat per sec. The healing threat does not change with C8.
+- **Base build.** The table uses the dungeon tank of version 1 (8/33/10: Conviction, Holy Conduit and Benediction). It has the threat talents of the 8/35/8 tank with Conviction 5: 560 threat per sec. The healing threat does not change with Toughness and Divine Strength removal (C8).
 
 | Plan, one target | Healing on yourself per sec | Threat per sec (Righteous Fury ×1 / ×1.9 on heals) | Mana per sec | The mana lasts |
 | --- | --- | --- | --- | --- |
@@ -119,7 +119,7 @@ The row rules make some builds take talents that do not help their role (filler)
 
 | Build | Filler | Cause |
 | --- | --- | --- |
-| Holy healer | None (C2 in row 3, M12). Before: 2 points (Unyielding Faith or Voice of Truth) | Row 4 needs 15 points in rows 1–3: they hold 16 healer points. Row 6 needs 25 points in rows 1–5: they hold 28 |
+| Holy healer | None (Lingering Light in row 3, C2; Holy Power in row 5, M12). Before: 2 points (Unyielding Faith or Voice of Truth) | Row 4 needs 15 points in rows 1–3: they hold 16 healer points. Row 6 needs 25 points in rows 1–5: they hold 28 |
 | Holy PvP with Improved Hammer of Justice | Redoubt 5 and Sacred Duty 1 (a small PvP defense) | Row 4 needs 15 points in rows 1–3. Benediction, Guardian's Favor and Devoted Sacrifice give 9 |
 | Main builds of Protection and Retribution | None | Useful talents fill all rows |
 

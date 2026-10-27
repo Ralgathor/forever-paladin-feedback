@@ -8,10 +8,10 @@ The script models/damage/run_tables.py calculates all values of this section. Fu
 
 - With all proposals, Retribution is about equal to Fury Warrior at fresh level 60. It is 101% of Fury and 103% of the average of the pure damage classes.
 - The hybrid target is 95% of the pure damage classes. Players report it from developer comments: hybrids do about 5% less damage than pure damage classes. In the beta, Retribution is 93%.
-- C16 gives almost all of the increase. C17 gives the same damage as the beta Seal swap, but the mana lasts for the full fight.
+- Holy Strike Seal trigger (C16) gives almost all of the increase. Twist of Light (C17) gives the same damage as the beta Seal swap, but the mana lasts for the full fight.
 - Retribution increases less with gear than Fury. In Naxxramas, it is about 92% of Fury (93% with flatter gear). No talent change closes this gap (part 6).
 - Fury increases more with gear than the other classes. Against the pure average, Retribution goes from 103% at fresh level 60 to about 95% in Naxxramas. The hybrid target is 95%.
-- Judgement of the Crusader gives Retribution about +10% DPS at fresh level 60. C18 makes this possible for each Paladin.
+- Judgement of the Crusader gives Retribution about +10% DPS at fresh level 60. Personal Judgement of the Crusader (C18) makes this possible for each Paladin.
 
 ## 1. Build and gear
 
@@ -19,7 +19,7 @@ The script models/damage/run_tables.py calculates all values of this section. Fu
   - Holy 12: Divine Intellect 2/5, Improved Seals 3/3, Unyielding Faith 2/2, Reverence 3/3, Infusion of Light 2/2.
   - Protection 8: Benediction 5/5 (M11), Precision 3/3.
   - Retribution 31: Conviction 5/5, Improved Judgement 2/2, Holy Conduit 2/2, Vindication 5/5 (C8), Sanctified Judgement 3/3, Seal of Command, Two-Handed Weapon Specialization 3/3, Sacred Arbiter, Vengeance 3/3, Champion of the Light 3/3, Instrument of Law 2/2, Twist of Light.
-- **C8 and the values.** The tables use Vindication 5/5 (C8): +5% Attack Power with full uptime, about +6 DPS. The beta rows use Divine Strength 5/5 (+10% Strength, about +7 DPS) and no Vindication.
+- **Toughness and Divine Strength removal (C8) and the values.** The tables use Vindication 5/5 (C8): +5% Attack Power with full uptime, about +6 DPS. The beta rows use Divine Strength 5/5 (+10% Strength, about +7 DPS) and no Vindication.
 - **Gear.** A real fresh level 60 profile: crafted items, dungeon items and quest rewards. Without talents and buffs: 283 Strength, 74 Agility, 770 Attack Power, 5.9% critical hit, 5% hit, 254 spell damage, 87 Intellect and 2,537 mana.
 - **Weapon.** Stormcarver (Blacksmithing, item level 63): 155–233 damage, 3.6 sec, +32 spell damage.
 - **With talents and raid buffs.** 1,238 Attack Power, 322 spell damage (Champion of the Light gives 68), 8% hit and 2,931 mana.
@@ -44,7 +44,7 @@ The script models/damage/run_tables.py calculates all values of this section. Fu
 
 ## 3. Damage sources
 
-All proposals (C16 as in this document), raid buffs, 2 min fight:
+All proposals (Holy Strike Seal trigger, C16, as in this document), raid buffs, 2 min fight:
 
 | Source | DPS | Share |
 | --- | --- | --- |
@@ -68,15 +68,15 @@ Same build and gear, raid buffs, 2 min fight. The beta build has the same damage
 | --- | --- | --- | --- |
 | Beta: a Seal change before each swing | 338 | — | −39.6 per sec: zero after 72 sec |
 | Beta: Seal of Command only, no Seal changes | 297 | −12% | Lasts |
-| C16, first version: Holy Strike always triggers Seal of Command, no damage bonus | 382 | +13% | Lasts |
-| **C16: Holy Strike triggers your Seal and Echo, Sacred Arbiter as in the beta (+20%)** | **374** | **+11%** | **Lasts** |
-| C16: Holy Strike triggers your Seal and Echo, Sacred Arbiter +10% | 370 | +9% | Lasts |
-| C16: Holy Strike triggers your Seal and Echo, Sacred Arbiter +0% | 366 | +8% | Lasts |
-| C16: only Seal of Command, by chance, Sacred Arbiter +0% | 352 | +4% | Lasts |
+| Holy Strike Seal trigger (C16), first version: Holy Strike always triggers Seal of Command, no damage bonus | 382 | +13% | Lasts |
+| **Holy Strike Seal trigger (C16), Seal and Echo, Sacred Arbiter as in the beta (+20%)** | **374** | **+11%** | **Lasts** |
+| Holy Strike Seal trigger (C16), Seal and Echo, Sacred Arbiter +10% | 370 | +9% | Lasts |
+| Holy Strike Seal trigger (C16), Seal and Echo, Sacred Arbiter +0% | 366 | +8% | Lasts |
+| Holy Strike Seal trigger (C16): only Seal of Command, by chance, Sacred Arbiter +0% | 352 | +4% | Lasts |
 
-- **C16 gives the increase.** Holy Strike gives about 36 DPS more than in the beta. Seal of Command triggers on 42% of Holy Strikes, and Seal of Righteousness triggers on all Holy Strikes.
-- **C17 does not add damage.** It gives the damage of the beta Seal swap for the full fight. In the beta, the mana is zero after 72 sec. Then the Paladin can use only Seal of Command (297 DPS).
-- **The C16 value is a choice.** The first version (+13%) puts Retribution above Fury Warrior (see part 5). The version in this document has one rule for all melee attacks and keeps Sacred Arbiter as in the beta. It is 2% less.
+- **Holy Strike Seal trigger (C16) gives the increase.** Holy Strike gives about 36 DPS more than in the beta. Seal of Command triggers on 42% of Holy Strikes, and Seal of Righteousness triggers on all Holy Strikes.
+- **Twist of Light (C17) does not add damage.** It gives the damage of the beta Seal swap for the full fight. In the beta, the mana is zero after 72 sec. Then the Paladin can use only Seal of Command (297 DPS).
+- **The Holy Strike Seal trigger (C16) value is a choice.** The first version (+13%) puts Retribution above Fury Warrior (see part 5). The version in this document has one rule for all melee attacks and keeps Sacred Arbiter as in the beta. It is 2% less.
 - **Sacred Arbiter at +10% changes little.** It gives only 4 DPS (1%) less. From Molten Core, Retribution is already below Fury (part 6).
 
 ## 5. Comparison with the other damage classes
@@ -88,7 +88,7 @@ The pure average is the best spec of each pure damage class: Warrior 929, Rogue 
 | Spec | DPS | Against the pure average (909) |
 | --- | --- | --- |
 | Survival Hunter (melee attacks between shots) | 1,175 | 129% |
-| Retribution, C16 first version | About 956 | 105% |
+| Retribution, Holy Strike Seal trigger (C16) first version | About 956 | 105% |
 | **Retribution, all proposals** | **About 937** | **103%** |
 | Fury Warrior | 929 | 102% |
 | Demonology Warlock | 879 | 97% |
@@ -193,7 +193,7 @@ The hybrid target is 95% of the pure average (part 5), not 100% of Fury. Fury an
 **Result**
 
 - **Retribution at the level of Fury at fresh level 60 is not too strong for a full content phase.** It is at or above the hybrid target at all tiers (95% in Naxxramas). From Molten Core, it is 4–8% below Fury, also with flatter gear.
-- **Recommendation: keep C16, with Sacred Arbiter as in the beta (+20%).** Do not change talents to correct the increase with gear.
+- **Recommendation: keep Holy Strike Seal trigger (C16), with Sacred Arbiter as in the beta (+20%).** Do not change talents to correct the increase with gear.
 - **Compare Retribution with the pure average at each gear tier,** not only with Fury (see Watch list, W15).
 - **Request to Blizzard:** put spell damage on Paladin plate items at each tier.
 - **The tier that Blizzard uses for balance is important.** If Blizzard balances at the raid release (9 December 2026), the proposals are correct for the first weeks. After that, Retribution is below Fury.
@@ -211,10 +211,10 @@ Judgement of the Crusader gives about +10% DPS at fresh level 60. It adds 161 Ho
 | Hammer of Wrath (42.9%, last 20% of the fight) | 69 | About 0.03 | +2 |
 | **Total** |  |  | **About +37 (+10%)** |
 
-- The bonus is about the same % for the beta and for all versions of C16. Thus, the comparisons in part 4 do not change.
+- The bonus is about the same % for the beta and for all versions of Holy Strike Seal trigger (C16). Thus, the comparisons in part 4 do not change.
 - If MythicSim includes Judgement of the Crusader in its raid debuffs, part 5 is correct. If not, Retribution with a Crusader Paladin in the raid is about 10% higher.
 - The +161 does not increase with gear. It is about 10% at fresh level 60 and about 7% in Naxxramas.
-- With C18, each Retribution Paladin keeps its own Judgement of the Crusader. Holy Strike refreshes it (Sacred Arbiter). This is a strong reason for C18.
+- With Personal Judgement of the Crusader (C18), each Retribution Paladin keeps its own Judgement of the Crusader. Holy Strike refreshes it (Sacred Arbiter). This is a strong reason for Personal Judgement of the Crusader (C18).
 
 ## 8. Other results
 

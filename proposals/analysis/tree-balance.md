@@ -24,7 +24,7 @@ Healer dips of other classes:
 
 ## Rule 1: rows 1 and 2 give something to the other specs
 
-This table uses the proposed trees with M8 and C8 (calculator version 5).
+This table uses the proposed trees with Conviction (M8) and Toughness and Divine Strength removal (C8), in calculator version 5.
 
 | Tree | Rows 1–2 | Retribution receives | Protection receives | Holy receives |
 | --- | --- | --- | --- | --- |
@@ -32,7 +32,7 @@ This table uses the proposed trees with M8 and C8 (calculator version 5).
 | Retribution | Deflection, Conviction · Improved Judgement, Holy Conduit, Vindication | — | Parry, critical hit, Judgement −2 sec, cheaper Consecration, a debuff on the boss (5–10 points) | +5% critical heal chance (5 points) |
 | Protection | Benediction, Redoubt · Precision, Guardian's Favor, Anticipation | Instant spells −10%, +3% hit (8 points) | — | Instant spells −10%: Holy Shock, Cleanse. Guardian's Favor: saves (7 points). Redoubt for PvP, and to open row 3 |
 
-**Protection for Holy is a mana and saves dip.** Benediction makes Holy Shock and Cleanse 10% cheaper. Guardian's Favor gives more saves: Hand of Protection each 3 min, Hand of Freedom +6 sec and Hand of Sacrifice each 20 sec (C22, C23). With Redoubt 3, Holy opens row 3 and takes Devoted Sacrifice: Lay on Hands drains only 50% of the mana (C25). Thus, Holy healers in raids also take 12 Protection points. Redoubt gives Holy only a small defense in PvP. Other classes also use a defensive tree for PvP: Iron Will (Warrior), Frost Warding (Mage), Deflection (Hunter).
+**Protection for Holy is a mana and saves dip.** Benediction makes Holy Shock and Cleanse 10% cheaper. Guardian's Favor (C22) gives more saves: Hand of Protection each 3 min, Hand of Freedom +6 sec and Hand of Sacrifice (C23) each 20 sec. With Redoubt 3, Holy opens row 3 and takes Devoted Sacrifice (C25): Lay on Hands drains only 50% of the mana. Thus, Holy healers in raids also take 12 Protection points. Redoubt gives Holy only a small defense in PvP. Other classes also use a defensive tree for PvP: Iron Will (Warrior), Frost Warding (Mage), Deflection (Hunter).
 
 Redoubt in PvP (block value 44, from the gear profile):
 
@@ -47,10 +47,10 @@ Redoubt in PvP (block value 44, from the gear profile):
 | Build | Retribution | Protection | Result |
 | --- | --- | --- | --- |
 | Beta layout | Benediction 5 + Conviction 5 = 10 | Redoubt 5 + Guardian's Favor 2 = 7 | 17 points: does not fit |
-| With M8 and C8 | Conviction 5 | Benediction 5 + Guardian's Favor 2 = 7 | 12 points: fits, with 4 more points (35/11/5 with Redoubt 4) |
-| With C25 | Conviction 5 | Benediction 5 + Guardian's Favor 2 + Redoubt 3 + Devoted Sacrifice 2 = 12 | 17 points: fits with 34 Holy points (HB1, 34/12/5) |
+| With Conviction (M8) and Toughness and Divine Strength removal (C8) | Conviction 5 | Benediction 5 + Guardian's Favor 2 = 7 | 12 points: fits, with 4 more points (35/11/5 with Redoubt 4) |
+| With Devoted Sacrifice (C25) | Conviction 5 | Benediction 5 + Guardian's Favor 2 + Redoubt 3 + Devoted Sacrifice 2 = 12 | 17 points: fits with 34 Holy points (HB1, 34/12/5) |
 
-Without M8, Holy must choose between +5% critical heal chance and Guardian's Favor. Thus, M8 is necessary for rule 1.
+Without Conviction (M8), Holy must choose between +5% critical heal chance and Guardian's Favor. Thus, Conviction (M8) is necessary for rule 1.
 
 ## Rule 2: row 3 is an investment
 
@@ -68,7 +68,7 @@ Each row 3 has a 1-point signature talent, as in the other classes. Each also ha
 | --- | --- | --- |
 | Divine Intellect (+10% Intellect, row 1) | Ancestral Knowledge (row 1), Mental Strength (row 2) | Equal |
 | Deflection (+5% parry, row 1) | Deflection (Warrior, Hunter, row 1) | Equal |
-| Conviction (+5% critical hit, row 1 with M8) | Cruelty, Malice, Lethal Attacks, Thundering Strikes (all row 1) | Equal with M8. In the beta, it is one row deeper |
+| Conviction (+5% critical hit, row 1 with M8) | Cruelty, Malice, Lethal Attacks, Thundering Strikes (all row 1) | Equal with Conviction (M8). In the beta, it is one row deeper |
 | Benediction (instant spells −10%, 5 points, Protection row 1 with M11) | Convection (−10%, 5 points, row 1), Cataclysm (−10%, 3 points) | Equal: more spells, but Paladin instant spells cost less |
 | Precision (+3% hit, Protection row 2) | Elemental Precision, Shadow Focus, Arcane Focus (row 1), Precision (Rogue, row 2) | Equal |
 | Anticipation (+20 Defense, row 2) | Anticipation (Warrior, row 2) | Equal |
@@ -91,7 +91,7 @@ These talents are stronger than, or different from, the talents of other classes
 - Seal and Judgement damage as a dip from Holy (Improved Seals).
 - Two-handed weapon damage (Two-Handed Weapon Specialization 6%, Warrior 3%). It also increases Seal and Judgement damage. Retribution judges with a two-handed weapon and Seals (design rule 5). The Warrior has other damage multipliers: Impale, Weaponmaster, Deep Wounds and Death Wish.
 
-**Row 1 of the other classes.** Each row 1 has 10 points or more. 17 of the 24 trees have two 5-point talents in row 1. Fire, Frost (Mage) and the three Rogue trees have 5 + 3 + 2, the same as Holy with C8. Arms (Warrior) and Holy (Priest) have 5 + 3 + 3. Row 2 has 7–15 points (Affliction 7, Survival 15).
+**Row 1 of the other classes.** Each row 1 has 10 points or more. 17 of the 24 trees have two 5-point talents in row 1. Fire, Frost (Mage) and the three Rogue trees have 5 + 3 + 2. The proposed Holy row 1 has the same (Toughness and Divine Strength removal, C8). Arms (Warrior) and Holy (Priest) have 5 + 3 + 3. Row 2 has 7–15 points (Affliction 7, Survival 15).
 
 ## Points in each tree
 
@@ -118,7 +118,7 @@ Source: the talent data of wowsims/forever (25 October 2026) for all nine classe
 **Cause: ranks, not talents.**
 
 - The Paladin has 49–50 talents. The other classes have 50–54. Thus, the difference is in the ranks.
-- C8 removes Divine Strength (5) and Toughness (5). C9 removes Improved Righteous Fury (3). Vindication, Lingering Light, Reach of Law and Devoted Sacrifice (C25) add 8. The net change is −5 (138 to 133).
+- Toughness and Divine Strength removal (C8) deletes Divine Strength (5) and Toughness (5). Improved Righteous Fury removal (C9) deletes its 3 ranks. Vindication, Lingering Light, Reach of Law and Devoted Sacrifice (C25) add 8. The net change is −5 (138 to 133).
 - All tank builds skipped Toughness and Divine Strength (see Analysis, Builds, part 3).
 
 **Thin rows.**
@@ -126,7 +126,7 @@ Source: the talent data of wowsims/forever (25 October 2026) for all nine classe
 | Tree | Rows 1–7 | Rows 1–3 | Rows 4–6 |
 | --- | --- | --- | --- |
 | Holy, calculator version 4 | 10 / 7 / 3 / 6 / 8 / 8 / 1 | **20** (other trees: 23–35) | 22 |
-| Holy, with C2 in row 3, M12 and M13 | 10 / 7 / 5 / 6 / 9 / 5 / 1 | 22 | 20 |
+| Holy, with Lingering Light (C2) in row 3, Holy Power (M12) and Consecrated Ground (M13) | 10 / 7 / 5 / 6 / 9 / 5 / 1 | 22 | 20 |
 | Protection, proposed | 10 / 10 / 8 / 7 / 8 / 5 / 1 | 28 | 20 |
 | Retribution, proposed | 10 / 9 / 6 / 6 / 4 / 5 / 1 | 25 | **15** (other trees: 15–25) |
 | Mean of the other 24 trees | — | 28.6 | 19.1 |
@@ -146,4 +146,4 @@ Source: the talent data of wowsims/forever (25 October 2026) for all nine classe
 | Points for the other trees | Smaller trees free more points: up to 19 for Holy (HB1, 34/12/5, uses 17) and 18 for Retribution (RB1, 10/8/33). Rule 1 needs these dips |
 | The 52-point hybrids | The tree size does not cause them. Holy Shock with Twist of Light or Holy Shield needs 52 of the 51 points |
 
-**Result.** Do not add ranks to reach the totals of the other classes. New ranks become stat filler again, as the talents that C8 removes. C25 adds 2 ranks to Protection, but for an effect, not for stats. The talent count is already in the range of the other classes. Holy rows were the one weak point. Three moves fix them with no new talent: C2 in row 3, M12 and M13. These three moves keep all build codes valid. Shock-Retribution changes to 26/0/25 (see Builds, part 5).
+**Result.** Do not add ranks to reach the totals of the other classes. New ranks become stat filler again, as Toughness and Divine Strength were (Toughness and Divine Strength removal, C8). Devoted Sacrifice (C25) adds 2 ranks to Protection, but for an effect, not for stats. The talent count is already in the range of the other classes. Holy rows were the one weak point. Three moves fix them with no new talent: Lingering Light (C2) in row 3, Holy Power (M12) and Consecrated Ground (M13). These three moves keep all build codes valid. Shock-Retribution changes to 26/0/25 (see Builds, part 5).

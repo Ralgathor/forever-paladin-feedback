@@ -4,7 +4,7 @@ This part gives the calculations that support the proposals. Each sub-tab gives 
 
 | Sub-tab | What it gives |
 | --- | --- |
-| [Crushing blows](crushing-blows.md) | The crushing blow problem, how C6 fixes it, and the stat targets of the tank |
+| [Crushing blows](crushing-blows.md) | The crushing blow problem, how Redoubt (C6) fixes it, and the stat targets of the tank |
 | [Threat](threat.md) | Threat of the Paladin, the Warrior and the Druid at each gear tier |
 | [PvP burst check](pvp-burst-check.md) | The PvP burst of the Reckoning build (C11) |
 | [Mana](mana.md) | Mana of Protection and Retribution, in the beta and with the proposals |

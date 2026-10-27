@@ -2,15 +2,15 @@
 
 The Protection proposals give:
 
-- A fix for crushing blows (C6). This is the largest difference between the Paladin and the Warrior.
-- A simpler tree (C7, C8, C9, C10).
-- Rows 1 and 2 with a use for each point (C8, M11).
+- A fix for crushing blows (Redoubt, C6). This is the largest difference between the Paladin and the Warrior.
+- A simpler tree (Iron Creed, C7; Toughness and Divine Strength removal, C8; Improved Righteous Fury removal, C9; Shoulder the Burden, C10).
+- Rows 1 and 2 with a use for each point (Toughness and Divine Strength removal, C8; Benediction, M11).
 - A Reckoning that works at level 60 (C11).
-- A ranged pull (C12).
-- More stable mana for tanks (C13).
-- Threat that increases with gear (C14).
-- More saves for allies (C22).
-- A Lay on Hands that does not drain all the mana, and a Hand of Sacrifice that costs less health (C25).
+- A ranged pull (Reach of Law, C12).
+- More stable mana for tanks (Shield Specialization, C13).
+- Threat that increases with gear (Holy Shield, C14).
+- More saves for allies (Guardian's Favor, C22).
+- A Lay on Hands that does not drain all the mana, and a Hand of Sacrifice that costs less health (Devoted Sacrifice, C25).
 
 ## Protection layout
 
@@ -33,7 +33,7 @@ The Protection proposals give:
 - **Proposed text.** "Damaging melee attacks against you have a 10% chance to increase your chance to block by 4/8/12/16/20%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect."
 - **Change.** Only the Holy Shield trigger is new. If Redoubt is active, a new trigger sets it again to 10 sec and 5 blocks.
 - **Why.** It removes most crushing blows (see Analysis, Crushing blows).
-- **Blizzard's direction.** The patch of 1 October moved block from Redoubt (6–30% → 4–20%) to Holy Shield (20% → 30%). C6 keeps these values. Redoubt is only active for a longer time.
+- **Blizzard's direction.** The patch of 1 October moved block from Redoubt (6–30% → 4–20%) to Holy Shield (20% → 30%). Redoubt (C6) keeps these values. Redoubt is only active for a longer time.
 - **Other specs.** Holy and Retribution do not have Holy Shield. Thus, their Redoubt does not change.
 - **Side effects.** Block from talents increases from about 40% (30% Holy Shield + about 10% Redoubt) to 50%. Reckoning, Shield Specialization and Holy Shield receive a little more value.
 
@@ -43,12 +43,12 @@ The Protection proposals give:
 - **Problem.** In the beta, the reduction lasts 6 sec after a Holy Strike. Holy Strike has a 10 sec cooldown. At 5/5, the average is 6 sec ÷ 10 sec × 10% = 6%.
 - **Change.** The reduction is active while Righteous Fury is active. It has no timer and no Holy Strike condition. Thus, Holy Strike has only one more mechanic (Reckoning, C11).
 - **Threat bonus.** The +25% Holy Strike threat stays. It gives about 10 threat per second (TPS) at 5/5 and 200 spell power (see Analysis, Threat).
-- **Total.** −10% damage taken. This is the same as Defensive Stance (Warrior). Improved Righteous Fury added to this (about 15% total). C9 removes it.
+- **Total.** −10% damage taken. This is the same as Defensive Stance (Warrior). Improved Righteous Fury added to this (about 15% total). Improved Righteous Fury removal (C9) deletes it.
 - **Rule exception.** Iron Creed works as an improved Righteous Fury. But the full 10% needs 30 Protection points. Monitor it in PvP, because all specs can use Righteous Fury.
 
 ## C8. Toughness and Divine Strength: removed, Vindication with 5 ranks
 
-- **Change.** C8 removes Toughness (Protection row 1) and Divine Strength (Holy row 1). Three talents move to fill rows 1 and 2. Benediction (M11) and Unyielding Faith (M10) only move. Vindication also has 5 ranks (C8):
+- **Change.** Toughness (Protection row 1) and Divine Strength (Holy row 1) leave the trees. Three talents move to fill rows 1 and 2. Benediction (M11) and Unyielding Faith (M10) only move. Vindication also has 5 ranks (C8):
 
 | Talent | Beta | Proposed | Text |
 | --- | --- | --- | --- |
@@ -68,7 +68,7 @@ The Protection proposals give:
 - **Holy.** Benediction 5 opens Protection row 2. Holy then takes Guardian's Favor 2. Holy Shock and Cleanse cost 10% less. This dip is 7 points.
 - **Holy Conduit.** It stays in Retribution row 2, as in the beta. A tank takes it with Deflection 5 and Holy Conduit 2 (7 points). Deflection is also a tank talent. With Benediction and Holy Conduit, Consecration on cooldown costs 76 mana per sec, not 112 (see Analysis, Mana).
 - **Why Vindication goes to row 2.** It takes the row 2 place of Conviction (M8). With 5 ranks, Retribution keeps 41 points. +5% Attack Power gives about +6 DPS. A tank has the boss debuff with 10 Retribution points (beta: 13).
-- **Why Unyielding Faith goes to row 1 (M10).** Improved Seals (M9) keeps its 3 beta ranks. Unyielding Faith fills the other 2 points of Holy row 1. Retribution and Protection open Holy row 2 with Improved Seals 3 and Unyielding Faith 2. Retribution then takes Infusion of Light, or Reverence without raid buffs (M9). Iron Will (Warrior) is also in row 1.
+- **Why Unyielding Faith goes to row 1 (M10).** Improved Seals (M9) keeps its 3 beta ranks. Unyielding Faith fills the other 2 points of Holy row 1. Retribution and Protection open Holy row 2 with Improved Seals 3 and Unyielding Faith 2. Retribution then takes Infusion of Light, or Reverence without raid buffs (Improved Seals, M9). Iron Will (Warrior) is also in row 1.
 - **Shape.** Each row 1 has 10 points. Holy uses 5 + 3 + 2, as Fire (Mage). Protection and Retribution use 5 + 5. Holy has 43 points, Protection 49 and Retribution 41.
 - **Parity.** Convection (Shaman) gives −10% mana cost for 5 points in Elemental row 1. Benediction gives the same in Protection row 1.
 
@@ -90,7 +90,7 @@ The Protection proposals give:
 - **Why 5 min.** It works on all enemies that the ally has threat on, at any range, and the threat stays moved. Thus, it is near an area taunt. Challenging Shout (Warrior) has 10 min. Mocking Blow (Warrior) has 2 min, but it works on one target for 6 sec. 5 min is the cooldown of the other Paladin protection spells: Hand of Protection, Divine Shield and Divine Protection.
 - **Sacred Duty.** Sacred Duty also decreases the cooldown of Shoulder the Burden by 30/60 sec. At 2/2, the cooldown is 4 min. New Sacred Duty text: "Increases your total Stamina by 2/4% and reduces the cooldown of your Divine Shield, Divine Protection, Templar's Bulwark, and Shoulder the Burden spells by 30/60 sec."
 - **Position.** Row 3, column 1, the beta place of Improved Seal of Fury.
-- **Swift Judgement.** In the beta, it requires Improved Seal of Fury. C10 removes Improved Seal of Fury. Thus, Swift Judgement stays in row 4 with no requirement.
+- **Swift Judgement.** In the beta, it requires Improved Seal of Fury. Shoulder the Burden (C10) removes Improved Seal of Fury. Thus, Swift Judgement stays in row 4 with no requirement.
 - **Signature talents.** Each tree keeps a 1-point signature talent in rows 3 and 4:
   - Holy: Voice of Truth and Divine Favor.
   - Retribution: Seal of Command and Sacred Arbiter.
@@ -120,7 +120,7 @@ The Protection proposals give:
 
 **Value for a tank at 5/5**
 
-Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parry. No critical hits. Holy Strike each 10 sec. With C11, each extra attack does about 165 damage and about 240 threat (threat model). In the beta, the extra attacks can be glancing blows: about 140 damage and 210 threat. The beta values use 50% block.
+Simulation: the boss swings each 2 sec. 60% block with Redoubt (C6), 10.7% dodge, 15% parry. No critical hits. Holy Strike each 10 sec. With Reckoning (C11), each extra attack does about 165 damage and about 240 threat (threat model). In the beta, the extra attacks can be glancing blows: about 140 damage and 210 threat. The beta values use 50% block.
 
 | Case | Charges each 10 sec | Extra attacks each 10 sec | Extra damage per sec | Extra TPS |
 | --- | --- | --- | --- | --- |
@@ -148,59 +148,59 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 
 - **Proposed text (rank 3).** "Increases the amount of damage absorbed by your shield by 30%, and gives your blocks a 100% chance to restore 4% of your maximum Mana. May only occur once every 2 sec."
 - **Change.** Only the limit changes: once each 2 sec, not once each 3 sec. The ranks, the chance and the 4% return do not change.
-- **Why.** C10 removes Improved Seal of Fury (about 23 mana per sec while you tank). Sanctified Judgement 3/3 returns about 17 for the tank builds PB1–PB4. Holy Shield rank 3 costs 24 mana per sec. Without C13, a fresh level 60 PB1 tank (2,897 mana) loses about 7 mana per sec without Consecration.
+- **Why.** Shoulder the Burden (C10) removes Improved Seal of Fury (about 23 mana per sec while you tank). Sanctified Judgement 3/3 returns about 17 for the tank builds PB1–PB4. Holy Shield rank 3 costs 24 mana per sec. Without Shield Specialization (C13), a fresh level 60 PB1 tank (2,897 mana) loses about 7 mana per sec without Consecration.
 - **Value.** A boss that swings each 2 sec can trigger it with each block: 4% of maximum mana × 60% block ÷ 2 sec. This is 35 mana per sec at fresh level 60 and 59 in Naxxramas (beta: 19 and 33). Without Consecration, PB1 receives +8 to +34 mana per sec while it tanks (see Analysis, Mana).
 - **Model.** Warriors and Druids receive rage when they are hit. Water Shield (Shaman) gives mana when the Shaman is hit. Shield Specialization is already the Paladin version. Thus, no new talent is necessary.
-- **Synergy.** More block gives more mana. Thus, the crushing blow fix (C6) and the mana fix help each other.
+- **Synergy.** More block gives more mana. Thus, the crushing blow fix (Redoubt, C6) and the mana fix help each other.
 - **Limits.** Against groups of enemies, it gives a maximum of 2% of maximum mana each sec: 58 at fresh level 60, 98 in Naxxramas (beta: 39 and 65). It gives nothing to a Paladin who is not hit. Sanctified Judgement is for that case.
 
 ## C14. Holy Shield: damage increases with block value
 
 - **Proposed text (rank 3).** "Increases chance to block by 30% for 10 sec, and deals 221 Holy damage plus 200% of your block value for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."
 - **Change.** Each block adds 200% of your block value to the Holy Shield damage. The block chance, the charges, the cooldown and the threat bonus do not change.
-- **Problem.** Warrior and Druid threat increases with gear and with boss damage, because their rage comes from the hits they take. Paladin threat increases only with spell power: about +33 TPS for each +100 spell power. Without C14, the Paladin falls from 97% of the Druid threat at fresh level 60 to 74% in Naxxramas (see Analysis, Threat).
+- **Problem.** Warrior and Druid threat increases with gear and with boss damage, because their rage comes from the hits they take. Paladin threat increases only with spell power: about +33 TPS for each +100 spell power. Without Holy Shield (C14), the Paladin has 97% of the Druid threat at fresh level 60, but 74% in Naxxramas (see Analysis, Threat).
 - **Why block value.** It is a gear stat on the character sheet. It is easy to read and easy to collect. It increases about 5 times from fresh level 60 to Naxxramas, much faster than spell power. It connects the tank stats of the Paladin: the shield, Strength and Shield Specialization (+30% block value). Shield Slam (Warrior) already adds block value to its damage.
 - **Result.** The Paladin has 105% of the Druid threat at fresh level 60 and 94% in Naxxramas. With flatter gear progression, it has 90–95% in Naxxramas (see Threat, part 3).
 - **Why 200%.** At 100%, the Paladin has only 84% of the Druid threat in Naxxramas. At 300%, it has 105%. The Warrior and Druid values have some unknown threat values (see Threat, part 6).
-- **No new button.** You already use Holy Shield on cooldown. C6 keeps about 3 blocks each 10 sec.
+- **No new button.** You already use Holy Shield on cooldown. Redoubt (C6) keeps about 3 blocks each 10 sec.
 - **PvP.** At about 125 block value, each block does about 250 more Holy damage. The maximum is 4 blocks each 10 sec, against melee attacks only. Only Protection has Holy Shield.
 
 ## M11. Benediction: Retribution row 1 → Protection row 1
 
 - **Text.** "Reduces the Mana cost of all instant cast spells and abilities by 2/4/6/8/10%." 5 ranks, the same as the beta.
 - **Position.** Protection row 1, column 2. It takes the place of Toughness (C8).
-- **Why.** A tank casts many instant spells. Holy and Retribution open Protection row 2 with it. See C8 for the full reason.
+- **Why.** A tank casts many instant spells. Holy and Retribution open Protection row 2 with it. See Toughness and Divine Strength removal (C8) for the full reason.
 
 ## C22. Guardian's Favor: Hand of Sacrifice cooldown
 
 - **Proposed text.** "Reduces the cooldown of your Hand of Protection by 1/2 min and of your Hand of Sacrifice by 5/10 sec, and increases the duration of your Hand of Freedom by 3/6 sec." 2 ranks, the same as the beta, in row 2.
-- **Change.** The Hand of Sacrifice part is new. It comes from C23.
+- **Change.** The Hand of Sacrifice part is new. It comes from Hand of Sacrifice (C23).
 - **Theme.** It improves the saves that the Paladin casts on allies: Hand of Protection, Hand of Freedom and Hand of Sacrifice (C23).
 - **Row 2.** Holy takes it with Benediction 5: 7 Protection points (M11, design rule 2).
 - **Builds.** All Holy builds, two of the five Retribution builds (RB3, RB5) and two of the four Protection builds (PB3, PB4) take it (see Analysis, Builds).
-- **Design rule 1.** Hands are not buffs (C24). Thus, C22 does not break the rule.
+- **Design rule 1.** Hands (C24) are not buffs. Thus, Guardian's Favor (C22) does not break the rule.
 
 ## C25. Devoted Sacrifice (new talent): row 3, column 2
 
 - **Proposed text.** "Your Lay on Hands drains only 75/50% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 10/20%." 2 ranks.
-- **Position.** Row 3, column 2, the beta place of Improved Righteous Fury (C9).
+- **Position.** Row 3, column 2, the beta place of Improved Righteous Fury. Improved Righteous Fury removal (C9) frees this place.
 - **Theme.** The Paladin gives its own resources to save others. Lay on Hands costs mana, and Hand of Sacrifice costs health. Devoted Sacrifice makes the two spells cost less.
 - **Lay on Hands.** The spell keeps its heal, its 20 min cooldown and its mana for the target.
 - **Problem.** Lay on Hands drains all the mana of the Paladin (Forever spellbook, all ranks). Forever decreases the cooldown from 1 hour to 20 min. Thus, the Paladin can use it about one time for each boss. But the drain is largest when the mana is full, early in a fight. Thus, Paladins use it only when their mana is already low.
-- **Keep mana for the role.** With C25, the Paladin can use Lay on Hands at any time and always keeps half of the mana. The healer continues to heal, the tank keeps its threat, and Retribution keeps its damage. The time until the mana is back is also half (see the table).
-- **Other saves.** At 0 mana, the Paladin cannot cast Divine Shield (110 mana), Hand of Protection (7% of base mana) or Hammer of Justice (100 mana). With C25, these saves stay available.
-- **Hand of Sacrifice.** The pool does not change. The target is still protected from up to 825 damage (C23). Only the damage that the Paladin takes decreases: about 743 at 1/2 and 660 at 2/2. A tank takes the damage of an ally in addition to the boss damage. Thus, without C25, a tank uses Hand of Sacrifice only when its health is high.
+- **Keep mana for the role.** With Devoted Sacrifice (C25), the Paladin can use Lay on Hands at any time and always keeps half of the mana. The healer continues to heal, the tank keeps its threat, and Retribution keeps its damage. The time until the mana is back is also half (see the table).
+- **Other saves.** At 0 mana, the Paladin cannot cast Divine Shield (110 mana), Hand of Protection (7% of base mana) or Hammer of Justice (100 mana). With Devoted Sacrifice (C25), these saves stay available.
+- **Hand of Sacrifice.** The pool does not change. The target is still protected from up to 825 damage (Hand of Sacrifice, C23). Only the damage that the Paladin takes decreases: about 743 at 1/2 and 660 at 2/2. A tank takes the damage of an ally in addition to the boss damage. Thus, without Devoted Sacrifice (C25), a tank uses Hand of Sacrifice only when its health is high.
 - **Why row 3.** Lay on Hands comes at level 10. Thus, the talent has a use when row 3 opens (level 20). The Hand of Sacrifice part has a use from level 46. Improved Reincarnation (Shaman, Restoration row 2) is the same: it gives +2% health from level 15, and Reincarnation comes at level 30.
 - **Model.** Improved Health Funnel (Warlock) and Improved Mend Pet (Hunter) are 2-rank talents for save spells. Sacred Duty also gives two effects in one talent.
 - **Cost for Holy.** Holy takes it with Benediction 5, Guardian's Favor 2 and Redoubt 3: 12 Protection points.
 - **Builds.** HB1, HB2, HB3 and RB3 take it (see Analysis, Builds).
 - **PvP.** Divine Shield already stops all the damage that moves (W20). Thus, the Hand of Sacrifice part does not change the Divine Shield risk.
-- **Design rule 1.** Lay on Hands and Hand of Sacrifice are not buffs (C24). Thus, C25 does not break the rule.
+- **Design rule 1.** Lay on Hands and Hand of Sacrifice are not buffs (Hands, C24). Thus, Devoted Sacrifice (C25) does not break the rule.
 - **Tree size.** Protection goes from 47 to 49 points. The Warrior Protection tree has 50 (see Analysis, Tree balance).
 
 **Cast at full mana**
 
-| Spec (maximum mana, mana income) | Heal (maximum health, estimate) | Beta: time until the mana is back | C25 2/2: drain, time until the mana is back |
+| Spec (maximum mana, mana income) | Heal (maximum health, estimate) | Beta: time until the mana is back | Devoted Sacrifice (C25) 2/2: drain, time until the mana is back |
 | --- | --- | --- | --- |
 | Holy (4,416, +22.6 per sec) | About 4,000 | 3 min 15 sec | 2,208: 1 min 38 sec |
 | Protection PB1, fresh level 60 (2,897, +8.3 per sec while it tanks) | About 5,500 | 5 min 49 sec | 1,449: 2 min 54 sec |
@@ -210,14 +210,14 @@ The mana values use a fresh level 60 Holy profile with no raid buffs and no cons
 
 **Why 50%**
 
-At 900 healing power, Flash of Light and Holy Light give 5.75 healing for each mana point (C19, 19% critical heals). Thus, 4,000 healing costs about 695 mana. If the drain is less than 695 mana, Lay on Hands is more efficient than the usual heals.
+At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 5.75 healing for each mana point. This value includes Blessing of Light removal (C19). Thus, 4,000 healing costs about 695 mana. If the drain is less than 695 mana, Lay on Hands is more efficient than the usual heals.
 
 | Drain (% of the current mana) | Drain at full mana (Holy) | More efficient than the usual heals below | Mana that stays after a cast at 30% mana |
 | --- | --- | --- | --- |
 | 25% | 1,104 | 63% mana | 994 |
 | 40% | 1,766 | 39% mana | 795 |
-| 50% (C25, rank 2) | 2,208 | 31% mana | 662 |
-| 75% (C25, rank 1) | 3,312 | 21% mana | 331 |
+| 50% (Devoted Sacrifice, C25, rank 2) | 2,208 | 31% mana | 662 |
+| 75% (Devoted Sacrifice, C25, rank 1) | 3,312 | 21% mana | 331 |
 | 100% (beta) | 4,416 | 16% mana | 0 |
 
 - Below 50%, a healer can use Lay on Hands for mana at half mana. Then it is not an emergency heal.

@@ -12,14 +12,14 @@
 - **Change.** Judgement of the Crusader does not count against the one-Judgement limit. But it increases only the Holy damage of the Paladin who applies it.
 - **Precedent.** Salvation does not use a Blessing slot now. Improved Seal of the Crusader is now baseline.
 - **Tradeoff.** Other players who do Holy damage do not receive the bonus.
-- **For Protection.** A raid can need the one Judgement of the tank for Light or Wisdom. In the beta, the tank then loses Judgement of the Crusader. With C18, the tank keeps it and can also apply Light or Wisdom. Judgement of the Crusader gives a Protection Paladin about +55 TPS (see Analysis, Threat).
+- **For Protection.** A raid can need the one Judgement of the tank for Light or Wisdom. In the beta, the tank then loses Judgement of the Crusader. With Personal Judgement of the Crusader (C18), the tank keeps it and can also apply Light or Wisdom. Judgement of the Crusader gives a Protection Paladin about +55 TPS (see Analysis, Threat).
 
 ## Alternatives to C18
 
 | ID | Option | How it works | Precedent | Tradeoff |
 | --- | --- | --- | --- | --- |
-| C18a | Merge Light and Wisdom (use this if C18 is rejected) | A Judgement of Seal of Light or Seal of Wisdom applies one Judgement of Grace. Attacks can heal the attacker for 61 and restore 59 mana | Weaponmaster merged four weapon talents | One Paladin must still choose |
-| C18b | Judgement Echo (optional, with C18) | When your next Judgement replaces your Judgement of Light, Wisdom or Justice, the replaced Judgement stays on the target as an Echo for 40 sec | The Seal Echo of Twist of Light | It needs a Retribution Paladin with 30 points |
+| C18a | Merge Light and Wisdom (use this if Personal Judgement of the Crusader, C18, is rejected) | A Judgement of Seal of Light or Seal of Wisdom applies one Judgement of Grace. Attacks can heal the attacker for 61 and restore 59 mana | Weaponmaster merged four weapon talents | One Paladin must still choose |
+| C18b | Judgement Echo (optional, with Personal Judgement of the Crusader, C18) | When your next Judgement replaces your Judgement of Light, Wisdom or Justice, the replaced Judgement stays on the target as an Echo for 40 sec | The Seal Echo of Twist of Light | It needs a Retribution Paladin with 30 points |
 
 | Raid with two Paladins | Beta | C18 | C18a | C18b alone |
 | --- | --- | --- | --- | --- |
@@ -40,8 +40,8 @@
 | 2 | Kings + Might | Kings + Wisdom | Kings + Might, or Kings + Light |
 | 3 or more | Kings + Might + Light | Kings + Wisdom + Light | Kings + Might + Light |
 
-- **Effect on Holy.** In raids with 1 or 2 Paladins, most targets do not receive Blessing of Light. At 900 healing power, Flash of Light + Holy Light (C3) then gives 1,194 healing per sec and 4.96 healing per mana (19% critical heals). With Blessing of Light, it gives 1,405 and 5.83.
-- **The same problem as C18.** The healing of the class changes with the number of Paladins in the raid.
+- **Effect on Holy.** In raids with 1 or 2 Paladins, most targets do not receive Blessing of Light. At 900 healing power, Flash of Light + Holy Light (Infusion of Light, C3) then gives 1,194 healing per sec and 4.96 healing per mana. This uses 19% critical heals. With Blessing of Light, it gives 1,405 and 5.83.
+- **The same problem as Personal Judgement of the Crusader (C18).** The healing of the class changes with the number of Paladins in the raid.
 
 ## C19. Blessing of Light: removed, Healing Light gives 10/20/30% (recommended)
 
@@ -50,11 +50,11 @@
 - **Precedent.** Forever removed Blessing of Sanctuary.
 - **Why a %.** Forever talents give a % bonus, not a flat value. A % bonus also increases with gear, as Forever wants. Blessing of Light gives a flat +400 to Holy Light and +115 to Flash of Light. Its value decreases with gear. At 700–900 healing power, it gives about +17–19% to these two heals. Thus, 12% + 18% = 30%.
 - **Why Holy only.** Retribution and Protection lose almost nothing. In raids with 1 or 2 Paladins, they did not receive Blessing of Light. In PvP, a Paladin alone puts Kings on itself, not Light. Thus, the hybrid burst heal in PvP stays at 2,231 (see W12).
-- **One or the other.** If Blessing of Light stays, raids with 3 or more Paladins receive the two bonuses. Thus, C19 removes the spell.
+- **One or the other.** If Blessing of Light stays, raids with 3 or more Paladins receive the two bonuses. Thus, Blessing of Light removal (C19) removes the spell.
 - **Holy Shock** also receives +30% (beta: +12%). It heals about 920 at 900 healing power. It stays an emergency heal.
 - **While you level.** Healing Light 3/3 comes at level 37. Blessing of Light rank 1 came at level 40.
 
-Flash of Light + Holy Light (C3), healing per sec with no critical heals:
+Flash of Light + Holy Light (Infusion of Light, C3), healing per sec with no critical heals:
 
 | Healing power | Beta, Light on the target | Beta, no Light (1 or 2 Paladins) | C19 |
 | --- | --- | --- | --- |
@@ -63,8 +63,8 @@ Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 | 900 | 1,281 | 1,089 | 1,264 (−1%) |
 | 1,100 | 1,366 | 1,174 | 1,363 (0%) |
 
-- The % compares C19 with the beta when the target has Light.
-- Raids with 3 or more Paladins lose 1–9%, mostly with little gear. C19 is equal at about 1,150 healing power.
+- The % compares Blessing of Light removal (C19) with the beta when the target has Light.
+- Raids with 3 or more Paladins lose 1–9%, mostly with little gear. Blessing of Light removal (C19) is equal at about 1,150 healing power.
 - Raids with 1 or 2 Paladins receive 16–17% more healing.
 - The healing of the Paladin does not change with the number of Paladins.
 - For the comparison with the other healers, see Analysis, Healing, parts 4 and 5.
@@ -86,7 +86,7 @@ Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 
 ## C23. Hand of Sacrifice: a damage pool
 
-- **Change.** Hand of Sacrifice moves up to 825 damage to the Paladin, with a 30 sec cooldown. Guardian's Favor (C22) reduces the cooldown by 5/10 sec: 25/20 sec. With C24, Blessing of Sacrifice is Hand of Sacrifice and uses no Blessing slot.
+- **Change.** Hand of Sacrifice moves up to 825 damage to the Paladin, with a 30 sec cooldown. Guardian's Favor (C22) reduces the cooldown by 5/10 sec: 25/20 sec. With Hands (C24), Blessing of Sacrifice is Hand of Sacrifice and uses no Blessing slot.
 - **Proposed text (rank 2).** "Places a Hand on the party member, transferring up to 825 damage taken to the caster. Lasts 30 sec." 100 mana, 30 yards, instant, 30 sec cooldown.
 - **Rank 1 (level 46).** Up to 675 damage, 80 mana. 15 hits of the beta value: 15 × 45.
 - **Beta text (rank 2).** "Places a Blessing on the party member, transfering 55 damage taken per hit to the caster. Lasts 30 sec. Players may only have one Blessing on them per Paladin at any one time." No cooldown.
@@ -95,12 +95,12 @@ Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 ### The problem
 
 - **55 for each hit is too small.** A Naxxramas boss hits a tank for about 8,000 before armor (see Analysis, Threat). After armor, 55 is about 2% of one hit.
-- **It uses the Blessing slot.** In the beta, it replaces Kings or Might from the same Paladin. Thus, Paladins do not cast it. C24 removes this cost.
+- **It uses the Blessing slot.** In the beta, it replaces Kings or Might from the same Paladin. Thus, Paladins do not cast it. Hands (C24) removes this cost.
 
 ### The change
 
 - **The same budget.** 825 is 15 hits of 55. The value does not change. It moves into one pool. Thus, all hits use the pool, also large hits.
-- **Classic text.** The tooltip keeps the form of the beta spell. Only the numbers change. C24 changes the word "Blessing" to "Hand".
+- **Classic text.** The tooltip keeps the form of the beta spell. Only the numbers change. Hands (C24) changes the word "Blessing" to "Hand".
 - **A flat value.** Hand of Sacrifice is a spell, not a talent. Spells use flat values, as Power Word: Shield does.
 - **Why 30 sec.** With no Blessing slot, a Paladin can put a pool on each ally. The base cooldown is the same as the duration. Thus, each Paladin has one pool active at a time: 825 damage.
 - **Guardian's Favor.** It reduces the cooldown by 5/10 sec. At 2/2, the cooldown is 20 sec. Thus, the Paladin has two pools active at most: 1,650 damage.
