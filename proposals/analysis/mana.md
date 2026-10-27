@@ -129,7 +129,7 @@ The script models/mana/mana_model.py gives these values. Each cell gives the MPS
 
 - **Sanctified Judgement** gives 14.0 MPS with 7 Judgements each min. Improved Judgement 2/2 adds 1.5 Judgements each min: +3.0 MPS of return and 2.3 MPS of cost. It also gives +19 threat per sec (see Builds).
 - **Thus, the 3/35/13 tank has 4.4 MPS more** than the 8/35/8 tank, with or without Consecration.
-- **Sanctified Judgement by rank (C26).** With C26, the return occurs on each Judgement. Each rank gives 40 mana for each Judgement with Seal of Fury: 5.7/11.3/17.0 MPS. The beta gives 1.9/7.6/17.0 MPS. At 3/3, the two are the same. Thus, the tables of this part do not change.
+- **Sanctified Judgement by rank (C26).** With C26, the return occurs on each Judgement. Each rank gives 40 mana for each Judgement with Seal of Fury: 5.7/11.3/17.0 MPS. The beta gives 1.9/7.5/17.0 MPS. At 3/3, the two are the same. Thus, the tables of this part do not change.
 - **When the boss does not hit the tank** (no Consecration), PB1 loses 26.4 MPS. Its mana lasts 1 min 49 sec at fresh level 60 and 3 min 18 sec in Naxxramas. The 8/35/8 tank loses 30.9 MPS: 1 min 33 sec and 2 min 48 sec. Sanctified Judgement is better than Reverence in this case also.
 - Blessing of Wisdom (8 MPS) is not in the other tables of this part.
 

@@ -47,7 +47,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 22 chan
 | C23 | Hand of Sacrifice | Baseline spell | Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown | Up to 825 damage moves to you. 30 sec cooldown, 20 sec with Guardian's Favor 2/2 |
 | C24 | Hands: Sacrifice, Protection and Freedom | Baseline spells | Blessings of Sacrifice, Protection and Freedom use a Blessing slot | The spells take the name Hand of. No Blessing slot. One Hand from each Paladin on a target |
 | C25 | Devoted Sacrifice (new) | Protection, row 3 | — | 2 ranks: Lay on Hands drains only 75/50% of your remaining mana, and you take 10/20% less damage from your Hand of Sacrifice. Alternative C25a: the spell drains 50% for all Paladins |
-| C26 | Sanctified Judgement | Retribution, row 3 | 33/67/100% chance to return 20/40/60% of the Seal cost | 100% chance at all ranks. The return is 20/40/60% of the Seal cost |
+| C26 | Sanctified Judgement | Retribution, row 3 | 33/66/100% chance to return 20/40/60% of the Seal cost | 100% chance at all ranks. The return is 20/40/60% of the Seal cost |
 
 **Moves**
 
