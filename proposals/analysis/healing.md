@@ -12,7 +12,7 @@ This section compares the Holy Paladin with the three other healers of Forever: 
 - **On one tank, the proposed Paladin is first by a small margin.** It is 1–9% above the Druid, and 14–32% above the Shaman and the Priest. Thus, the proposals make the Paladin the best single-target healer, as the design goal says. In the beta, the Paladin is 5–13% below the Druid (part 5).
 - **After a large hit on one tank, the Druid is first.** The proposed Paladin is 14–18% below it after 3 sec, and 3–4% below after 6 sec. It is 9% or more above the Shaman and the Priest. In the beta, the Paladin is 18–22% below the Druid (part 5).
 - **Heals over time can be critical heals in Forever.** This helps the Priest, the Druid and the Shaman. The Paladin has almost no heals over time. With the Classic rule, the proposed Paladin is 1–4% higher against each healer (part 8).
-- **We withdrew C20.** With C20, the Paladin is first on one tank by 9–15%, and 10–14% above the Shaman in raids. Healing Light at 35% gives +5% to +13% on one tank (part 6, W14).
+- **We withdrew Illumination at 75%.** With it, the Paladin is first on one tank by 9–15%, and 10–14% above the Shaman in raids. Healing Light at 35% gives +5% to +13% on one tank (part 6, W14).
 - **A stronger Holy Shock or Light's Vigil is not necessary in raids.** The raid healing is already at the level of the Shaman (part 6).
 
 ## 1. Model
@@ -25,7 +25,7 @@ This section compares the Holy Paladin with the three other healers of Forever: 
 - **Spirit regeneration.** The model uses the Classic 1.12 formula of each class. Forever did not publish a formula. The DoubleZug tests do not agree with the Classic formula or the TBC formula.
 - **Talents.** Each class uses the healer build of its DoubleZug sheet. The Paladin has a base spell critical chance of 3.5% (game files). The beta Paladin has Divine Intellect, Healing Light 3/3, Reverence 3/3, Illumination 5/5 and Infusion of Light 2/2. It also has Divine Favor, Holy Shock, Holy Power 5/5, Light's Vigil and Benediction 5/5. Blessing of Light is on the target.
 - **Talents of the other healers.** Druid: Gift of Nature, Improved Rejuvenation, Genesis (+5% periodic healing), Improved Regrowth. The Druid also has Gift of the Earthmother and Nature's Splendor (Rejuvenation 15 sec, Regrowth 27 sec). Priest: Prayer of Mending and Binding Heal, no Penance (the build has no points for it). Shaman: Purification, Healing Way (25%) and Tidal Mastery.
-- **Proposed Paladin.** C1, C2, C3, C19, Benediction 5/5 (M11) and Conviction (C15, M8), as in build HB1. Illumination stays at 50% (we withdrew C20).
+- **Proposed Paladin.** C1, C2, C3, C19, Benediction 5/5 (M11) and Conviction (C15, M8), as in build HB1. Illumination stays at 50% (we withdrew the 75% version).
 - **Cast plan.** A linear program finds the best mix of casts for the mana and the time of the fight. The mix can use all heals of the class. After 5 sec with no cast, the full Spirit regeneration starts. The model counts 2/3 of the time with no cast as full regeneration. Instant spells use a global cooldown of 1.5 sec. Gift of the Earthmother gives 1 sec to Rejuvenation, Swiftmend and Wild Growth.
 - **Critical heals.** Direct heals can be critical heals. In Forever, each tick of a heal over time can also be a critical heal ([Warcraft Tavern](https://www.warcrafttavern.com/forever/guides/restoration-druid/)). The model gives each tick the critical chance of the class (×1.5). The ticks of Lingering Light (C2) can also be critical heals, but a critical tick does not start Lingering Light again. Lingering Light follows its text: a direct critical heal adds to the healing that stays, and the total ticks over a new 6 sec. The model removes the healing that stays at the end of the fight.
 - **Raid and one tank.** "Raid" counts all heals on all targets. "One tank" counts only the heals on the tank: one target of Prayer of Mending, Tranquility, Healing Stream Totem and Light's Vigil. Only one Rejuvenation and one Renew can be active at a time. A Riptide or a Regrowth stays for its full duration, or the healer casts it again before the end.
@@ -107,7 +107,7 @@ Healing per sec after overhealing, on one tank. "Maximum" is the raw healing per
 - In the beta, the Paladin is 5–13% below the Druid, and 1–13% above the Shaman and the Priest. Its maximum is about equal to the Shaman.
 - With the proposals, the Paladin is 1–9% above the Druid, and 14–32% above the Shaman and the Priest. Its maximum is 16% above the Druid and 20% above the Shaman.
 - The proposals give more mana (C1) and larger heals (C2, C19, Conviction). The lead over the Shaman and the Priest increases with the fight length.
-- The design goal of Holy is the best single-target healer. The proposals reach it by 1–9%. With C20 (withdrawn), the lead is 9–15%. With Healing Light at 35%, it is 5–13% (part 6, W14).
+- The design goal of Holy is the best single-target healer. The proposals reach it by 1–9%. With Illumination at 75% (withdrawn), the lead is 9–15%. With Healing Light at 35%, it is 5–13% (part 6, W14).
 
 **Holy Light in the model.** The values above count all healing on the tank as equal. Thus, the model casts Holy Light only after Infusion of Light or with Divine Favor. Holy Light gives about 30% of the healing in fights of 3 min and 6% in fights of 10 min. The other heals are Flash of Light, because it gives more healing for each mana point (8.2 against 5.9). In a real fight, a Paladin casts more Holy Light after a large hit. The table below shows this value.
 
@@ -149,11 +149,12 @@ The rules of the recovery model:
 | Healing Light 35% (withdrawn) | +2% to +9% | −4% to −16% | −24% to −29% | +5% to +13% |
 | Healing Light 25% | −6% to +1% | −11% to −22% | −30% to −34% | −2% to +5% |
 | Healing Light 20% | −9% to −3% | −14% to −25% | −32% to −37% | −6% to +1% |
-| C20: Illumination 75% (withdrawn) | +10% to +14% | −7% to +1% | −17% to −26% | +9% to +15% |
+| Illumination 75% (withdrawn) | +10% to +14% | −7% to +1% | −17% to −26% | +9% to +15% |
 
 - In raids, the proposals put the Paladin at the level of the Shaman, and 7–19% below the Druid. On one tank, it is first by 1–9%.
-- C20 adds 8–14% in raids and 6–8% on one tank. With C20, the Paladin is first on one tank by 9–15%.
+- Illumination at 75% adds 8–14% in raids and 6–8% on one tank. With it, the Paladin is first on one tank by 9–15%.
 - Healing Light at 35% gives +5% to +13% on one tank. At 25% or 20%, the Paladin is about level with the Druid on one tank (−6% to +5%).
+- Lingering Light (C2) at 20% adds about 5% in all cases. At 10%, it adds about 3%. At 30%, it adds about 8%, and the Paladin is first on one tank by 4–12%.
 
 **Changes to Holy Shock and Light's Vigil.** With the proposals.
 
@@ -167,7 +168,7 @@ The rules of the recovery model:
 | Light's Vigil heals ×2 | +27% to +38% | −16% to +3% | +1% to +9% |
 | Light's Vigil costs 50% less | +51% to +72% | +11% to +16% | +1% to +9% |
 | Illumination returns mana for each critical heal of Light's Vigil (up to 5 for each cast) | +13% to +19% | −11% to −26% | +1% to +9% |
-| The same, with Illumination at 75% (C20) | +75% to +114% | +29% to +44% | +15% to +20% |
+| The same, with Illumination at 75% (withdrawn) | +75% to +114% | +29% to +44% | +15% to +20% |
 | Light's Vigil coefficient 0% or 30% | −2% to +5% | −26% to −32% | +1% to +9% |
 
 - A change to Holy Shock or Light's Vigil is not necessary in raids: the raid healing is already at the level of the Shaman.

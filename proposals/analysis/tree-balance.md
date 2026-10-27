@@ -91,7 +91,7 @@ These talents are stronger than, or different from, the talents of other classes
 - Seal and Judgement damage as a dip from Holy (Improved Seals).
 - Two-handed weapon damage (Two-Handed Weapon Specialization 6%, Warrior 3%). It also increases Seal and Judgement damage. Retribution judges with a two-handed weapon and Seals (design rule 5). The Warrior has other damage multipliers: Impale, Weaponmaster, Deep Wounds and Death Wish.
 
-**Row 1 of the other classes.** Each row 1 has 10 points or more. 15 of 18 rows have two 5-point talents. Fire (Mage) has 5 + 3 + 2, the same as Holy with C8. Row 2 has 7–10 points (Balance 7, Fire 10).
+**Row 1 of the other classes.** Each row 1 has 10 points or more. 17 of the 24 trees have two 5-point talents in row 1. Fire, Frost (Mage) and the three Rogue trees have 5 + 3 + 2, the same as Holy with C8. Arms (Warrior) and Holy (Priest) have 5 + 3 + 3. Row 2 has 7–15 points (Affliction 7, Survival 15).
 
 ## Points in each tree
 

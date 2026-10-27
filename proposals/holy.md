@@ -36,7 +36,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Why critical heals.** Healing Light already gives a bonus to each heal. The Holy tree has many critical hit talents (Illumination, Divine Favor, Holy Power). This talent gives them more value.
 - **Value.** At 22% critical heal chance: 22% × 1.5 (critical heal) × 20% = about +6.6% of a normal heal. Critical ticks add about 11% to this: about +7.3%. Some of it is overhealing on targets with full health.
 - **Why row 3.** Holy row 3 had only 3 points, the smallest row 3 of all classes. With Lingering Light, it has 5. A Holy healer then needs no filler for row 4. Retribution and Protection can take it with 10 Holy points. They have few critical heals, thus its value for them is small (see W12 for PvP).
-- **Why 10/20%.** Healing Light (C4) gives the main healing bonus. Lingering Light gives a smaller bonus, and only on critical heals. At 20%, it gives about 3.6% for each point, as Spiritual Healing (Priest) does. Lingering Light gives about 5% on one tank in fights of 10 min (see Analysis, Healing, part 5). At 30%, the lead on one tank and the overhealing risk were larger.
+- **Why 10/20%.** Healing Light (C4) gives the main healing bonus. Lingering Light gives a smaller bonus, and only on critical heals. At 20%, it gives about 3.6% for each point, as Spiritual Healing (Priest) does. After overhealing, it adds about 5% healing in raids and on one tank, in all fight lengths (see Analysis, Healing, part 6). At 30%, it adds about 8%, and the Paladin is first on one tank by 4–12%, not 1–9%.
 
 **How the heal over time works.** It works as Ignite and Blessed Recovery do in Forever, not as Deep Wounds.
 
