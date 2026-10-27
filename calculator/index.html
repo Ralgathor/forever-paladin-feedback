@@ -234,8 +234,8 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
     <div class="ptable"><table><thead><tr><th>Topic</th><th>Beta</th><th>Proposed</th><th>Other classes</th></tr></thead><tbody>
     <tr><td>Crushing blows (level 63 boss)</td><td class="today">Holy Shield gives +30% block. Redoubt is a 10% proc. You need about 72% avoidance from gear</td><td>Holy Shield also starts Redoubt (C6): 60% block. About 4.3% of the swings can crush (440 Defense, 100 Agility)</td><td>Warrior: about 3% (Shield Block). Druid: crushing blows always occur, with more armor and health</td></tr>
     <tr><td>Threat, as a % of the Druid</td><td class="today">85% at fresh level 60, 64% in Naxxramas</td><td>105% at fresh level 60, 94% in Naxxramas (C14)</td><td>With Consecration on cooldown: 108–124%. But the mana then lasts about 1 min at fresh level 60 and 6.5 min in Naxxramas</td></tr>
-    <tr><td>Consecration on cooldown, fresh level 60</td><td class="today">112 mana per sec: the mana lasts 43 sec. Holy Conduit needs a Retribution dip</td><td>76 mana per sec with Benediction in Protection Row 1 (M11) and Holy Conduit (7 Retribution points): 1 min 36 sec</td><td>—</td></tr>
-    <tr><td>Mana while tanking, no Consecration</td><td class="today">+1.5 mana per sec at fresh level 60, +16.7 in Naxxramas</td><td>+3.9 and +29.8 (C13, C1)</td><td>Warrior and Druid get rage from the hits that they take</td></tr>
+    <tr><td>Consecration on cooldown, fresh level 60</td><td class="today">PB1 talents (Holy Conduit, Sanctified Judgement): the mana lasts 1 min 50 sec</td><td>PB1: 1 min 25 sec. With Benediction in Protection Row 1 (M11) also: 2 min 2 sec</td><td>—</td></tr>
+    <tr><td>Mana while tanking, no Consecration</td><td class="today">PB1 talents: +16.2 mana per sec at fresh level 60, +31.3 in Naxxramas</td><td>PB1: +8.3 and +34.2. C10 removes Improved Seal of Fury. C6 and C13 give more mana with more maximum mana (C13, C6)</td><td>Warrior and Druid get rage from the hits that they take</td></tr>
     <tr><td>Damage reduction</td><td class="today">Iron Creed: about 6% (6 sec after Holy Strike), with Improved Righteous Fury</td><td>Iron Creed: 10% while Righteous Fury is active (C7, C9)</td><td>Warrior, Defensive Stance: 10%</td></tr>
     <tr><td>Reckoning on a boss</td><td class="today">About 1 extra attack each 10 sec. The critical hit trigger does not work at 440 Defense</td><td>About 2 extra attacks each 10 sec: block, dodge and parry give charges (C11)</td><td>—</td></tr>
     <tr><td>Pull and group tools</td><td class="today">Judgement of Fury at 10 yards</td><td>Judgement of Fury at 20 yards (C12). Shoulder the Burden (C10)</td><td>Warrior: Charge in Defensive Stance. Druid: Feral Charge</td></tr>
@@ -621,11 +621,11 @@ ${dn("A save replaced Kings or Might from the same Paladin, and you had to cast 
 <li>Divine Strength removed. ${g("C8")}
 ${dn("+10% Strength gave a tank less than 1 threat per second for each point. Retribution received about 7 DPS for 5 points. Now each point in Rows 1 and 2 has a use for its spec.")}</li>
 <li>${t("is","Improved Seals")} moved to Row 1 (was Row 2). Its effect does not change. ${g("M9")}
-${dn("Seals are the Paladin's own damage. With Improved Seals 3 and Unyielding Faith 2, Retribution and Protection receive +15% Seal and Judgement damage and open Row 2 for Reverence.")}</li>
+${dn("Seals are the Paladin's own damage. With Improved Seals 3 and Unyielding Faith 2, Retribution and Protection receive +15% Seal and Judgement damage and open Row 2.")}</li>
 <li>${t("uf","Unyielding Faith")} moved to Row 1 (was Row 2). Its effect does not change. ${g("M10")}
 ${dn("It fills the 2 points that Divine Strength leaves in Row 1. Retribution receives it in its usual Holy dip. Iron Will is also in Row 1 of the Warrior tree.")}</li>
 <li>${t("rev","Reverence")} moved to Row 2 (was Row 3). Keeps 17/33/50% of your mana regeneration during casts (was 10/20/30%). ${g("C1")}
-${dn("Meditation, Reflection and Mindfulness give 50%. The other healers also have a mana return in addition: Litany of Light, Water Shield and Mana Tide Totem. In Row 2, Reverence is also a mana talent for Retribution. Tanks receive more mana from Sanctified Judgement.")}</li>
+${dn("Meditation, Reflection and Mindfulness give 50%. The other healers also have a mana return in addition: Litany of Light, Water Shield and Mana Tide Totem. Retribution takes it without raid buffs: +4% DPS at fresh level 60. In a raid, C17 and Sanctified Judgement give the mana of Retribution. Tanks receive more mana from Sanctified Judgement.")}</li>
 <li>${t("iol","Infusion of Light")} moved to Row 2 (was Row 4). Your Holy Shock and Flash of Light casts and your Holy Strike hits reduce the cast time of your next Holy Light by 0.5/1 sec. The effect lasts 15 sec. ${g("C3")}
 <ul><li>A critical hit is no longer necessary (was Holy Shock and Flash of Light critical hits only). Holy Strike is a new trigger.</li></ul>
 ${dn("No talent reduced the cast time of Holy Light. Divine Fury, Naturalist and Improved Healing Wave give −0.5 sec to the large heal of their class. Hybrids also have a fast emergency heal now: after each Holy Strike, Holy Light has a 1.5 sec cast.")}</li>
@@ -654,9 +654,9 @@ ${dn("Lay on Hands now has a 20 min cooldown, thus about one cast for each boss.
 <li>Improved Righteous Fury removed. ${g("C9")}
 ${dn("Iron Creed now gives 10% damage reduction while Righteous Fury is active, the same as Defensive Stance. With Improved Righteous Fury, the total was about 15%.")}</li>
 <li>Improved Seal of Fury removed. ${g("C10")}
-${dn("It was a second mana talent for hits taken. Shield Specialization already has this role. Sanctified Judgement and Reverence give mana to the other specs.")}</li>
+${dn("It was a second mana talent for hits taken. Shield Specialization already has this role. Sanctified Judgement gives mana to tanks and Retribution.")}</li>
 <li>${t("ss","Shield Specialization")}: Increases the damage that your shield absorbs by 10/20/30%. Your blocks have a 33/66/100% chance to restore 4% of your maximum mana. This now occurs once each 2 sec at most (was once each 3 sec). ${g("C13")}
-${dn("Without Improved Seal of Fury, the tank loses about 23 mana per sec. Reverence and the extra blocks from Redoubt return about 13. This change pays for the rest.")}</li>
+${dn("Without Improved Seal of Fury, the tank loses about 23 mana per sec. Sanctified Judgement 3/3 returns about 17. This change pays for the rest.")}</li>
 <li>${t("sd","Sacred Duty")}: Increases your total Stamina by 2/4% and reduces the cooldown of your Divine Shield, Divine Protection and Templar's Bulwark by 30/60 sec. It now also reduces the cooldown of Shoulder the Burden by 30/60 sec. ${g("C10")}</li>
 <li>${t("sj","Swift Judgement")} no longer requires Improved Seal of Fury. It stays in Row 4. ${g("C10")}</li>
 <li>New Talent: ${t("rdef","Shoulder the Burden")} (Row 3, Column 1, 1 point): Moves 50% of the threat of a party or raid member to you, on all enemies. Instant, 30 yards, 5 min cooldown. ${g("C10")}

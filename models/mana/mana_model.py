@@ -12,18 +12,22 @@ SEAL_TIME, CONS_EVERY = 30, 8
 BLOCK, SWING = 0.60, 2.0          # C6 block chance; the boss swings each 2 sec
 REVERENCE = 10.3                  # Reverence 3/3 (C1, 50%): half of 41 mana each 2 sec at 130 Spirit
 WISDOM = 40 / 5                   # Blessing of Wisdom rank 6: 40 mana each 5 sec
+ISOF = 23.3                       # beta Improved Seal of Fury: 87 mana for each shield that a boss hit uses
 
-def mps(mana, mp5, rev=False, sanj=0, ij=0, swift=1, ben=0, hc=0, cons=False, wisdom=False, hit=True):
+def mps(mana, mp5, rev=False, sanj=0, ij=0, swift=1, ben=0, hc=0, cons=False, wisdom=False, hit=True, beta=False):
     """rev: Reverence 3/3. sanj: Sanctified Judgement ranks. ij: Improved Judgement ranks (-1 sec cooldown each).
     swift: Swift Judgement (a free Judgement each min). ben: Benediction ranks (-2% instant costs each).
-    hc: Holy Conduit ranks (-20% Consecration cost each). hit: the boss hits the Paladin."""
+    hc: Holy Conduit ranks (-20% Consecration cost each). hit: the boss hits the Paladin.
+    beta: beta Shield Specialization (once each 3 sec, 50% block) and Improved Seal of Fury, not C13."""
     b = 1 - 0.02 * ben
     judgements = 1 / (10 - ij)                                       # paid Judgements per sec
     cost = (HOLY_SHIELD / 10 + HOLY_STRIKE / 10 + JUDGEMENT * judgements + SEAL_OF_FURY / SEAL_TIME) * b
     if cons:
         cost += CONSECRATION * b * (1 - 0.2 * hc) / CONS_EVERY
     income = mp5 / 5 + (REVERENCE if rev else 0) + (WISDOM if wisdom else 0)
-    if hit:
+    if hit and beta:
+        income += mana * 0.04 / 6 + ISOF                             # the 3 sec limit skips the next swing
+    elif hit:
         income += mana * 0.04 * BLOCK / SWING                        # Shield Specialization 3/3 (C13)
     # Sanctified Judgement (C26): 20% of the seal base cost for each rank, on each Judgement (also the free one).
     # Beta: only a 33/66/100% chance; the model uses rank 3, where the two are the same.
@@ -74,6 +78,20 @@ if __name__ == "__main__":
                     v = mps(m, p, cons=cons, wisdom=wisdom, **kw)
                     cols.append(f"{v:+.1f}" + ("" if v >= 0 else f": {lasts(m, v)}"))
             print(name + " | " + " | ".join(cols))
+    pb1 = BUILDS[0][1]
+    print("\n## PB1, tanking, no Consecration: beta and proposed MPS")
+    for name, m, p in TIERS:
+        print(f"{name} ({m:,}): {mps(m, p, beta=True, **pb1):+.1f} | {mps(m, p, **pb1):+.1f}")
+    print("\n## PB1, other cases: beta | proposed (time until zero)")
+    for name, kw in (("Consecration, no Holy Conduit", dict(cons=True, hc=0)),
+                     ("Consecration, Benediction, no Holy Conduit", dict(cons=True, ben=5, hc=0)),
+                     ("Consecration, Holy Conduit", dict(cons=True)),
+                     ("Consecration, Benediction and Holy Conduit", dict(cons=True, ben=5)),
+                     ("Not hit, no Consecration", dict(hit=False)),
+                     ("Not hit, Consecration, Holy Conduit", dict(hit=False, cons=True))):
+        k = dict(pb1, **kw)
+        cols = [f"{v:+.1f}: {lasts(m, v)}" for _, m, p in (TIERS[0], TIERS[-1]) for v in (mps(m, p, beta=True, **k), mps(m, p, **k))]
+        print(name + " | " + " | ".join(cols))
     print("\n## Not hit, no Consecration, no Blessing of Wisdom")
     for name, kw in BUILDS[:1] + BUILDS[3:4]:
         print(name + ": " + ", ".join(f"{t[0]} {mps(t[1], t[2], hit=False, **kw):+.1f} ({lasts(t[1], mps(t[1], t[2], hit=False, **kw))})"
