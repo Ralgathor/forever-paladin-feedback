@@ -146,7 +146,7 @@ Simulation: the boss swings each 2 sec. 60% block with Redoubt (C-P1), 10.7% dod
 
 ## C-P8. Shield Specialization: mana return on each block
 
-- **Proposed text (rank 3).** "Increases the amount of damage absorbed by your shield by 30%, and gives your blocks a 100% chance to restore 6% of your maximum Mana. May only occur once every 2 sec." Ranks: 2/4/6%.
+- **Proposed text (rank 3).** "Increases the amount of damage absorbed by your shield by 30%, and your blocks restore 6% of your maximum Mana. May only occur once every 2 sec." Ranks: 2/4/6%.
 - **Change.** The return occurs on each block at all ranks: 2/4/6% of maximum mana (beta: a 33/66/100% chance to restore 4%). The limit is once each 2 sec (beta: 3 sec). The absorb (10/20/30%) does not change.
 - **Why.** Shoulder the Burden (C-P5) removes Improved Seal of Fury (about 23 mana per sec while you tank). Sanctified Judgement 3/3 returns about 17 for the tank builds PB1–PB4. Holy Shield rank 3 costs 24 mana per sec. Without Shield Specialization (C-P8), a fresh level 60 PB1 tank (2,897 mana) loses about 7 mana per sec without Consecration.
 - **Value.** A boss that swings each 2 sec can trigger it with each block: 6% of maximum mana × 60% block ÷ 2 sec. This is 52 mana per sec at fresh level 60 and 88 in Naxxramas (beta: 19 and 33). Without Consecration, PB1 receives +26 to +64 mana per sec while it tanks (see Analysis, Mana).
