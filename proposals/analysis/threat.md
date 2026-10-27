@@ -242,7 +242,8 @@ Conditions: wowsims Forever commit 69e0e5b with the proposals patch (models/wows
 | Proposed Paladin as a % of the Warrior | 83% | 114% | +38% |
 
 - **The increase agrees.** Thus, the model value of each proposal is correct.
-- **The level does not agree.** Julien's gear has 435 spell power with consumables, a fast weapon with an extra attack, Windfury and Consecration. Part 1 uses 200 spell power and no Consecration. With the inputs of the sim, the model gives 877 TPS for the same sources, and the sim gives 913 (−4%).
+- **The level does not agree.** Julien's gear gives 468 spell power with consumables and 42.6% melee critical hit chance. It also has a fast weapon with an extra attack, Windfury and Consecration. Part 1 uses 200 spell power, 6% critical hit chance and no Consecration. Curse of the Elements in the sim raid adds 10% to Holy damage taken.
+- **The model with the sim inputs.** With these inputs, the model gives 1,001 TPS for the same sources, and wowsims gives 894 (−11%). wowsims has fewer Holy Shield blocks (−26%), fewer boss hits for Retribution Aura (−24%) and less auto attack threat (−28%). Seal of Fury is 6% higher in wowsims. check.py gives this table for each source.
 - **The Warrior is also different.** The model Warrior and the wowsims Warrior do not use the same gear and talents. The cause of the Warrior difference is not confirmed. Thus, part 1 compares the tanks with the same model inputs.
 
 **wowsims result of each tank** (Julien's gear for the Paladin)

@@ -1,6 +1,6 @@
 """Model against wowsims: the same quantity from the Python models and from the sim, and the difference.
 A difference above 5% is marked "check": the Analysis tabs explain each one. Run: python3 check.py"""
-import importlib.util, os, sys
+import importlib.util, os, re, sys
 from concurrent.futures import ThreadPoolExecutor
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 for d in ("damage", "threat", "healing"):
@@ -49,6 +49,35 @@ def sim_values():
                 ret_fury=r[("Retribution, proposed (RB1)", "raid")]["dps"] / r[("Fury Warrior (prebis gear)", "raid")]["dps"],
                 tps_gain=prop - beta, beta_war=beta / war, prop_war=prop / war, heal=h)
 
+# Threat with the same inputs: the model gets the stats of Julien's sim (beta talents, Consecration, Retribution
+# Aura). Spell power and Attack Power come from the first Judgement of Fury in the sim debug log, the critical hit chance from the auto attacks
+# of the sim (after the boss decrease). Weapon (35.3 DPS, 1.5 sec), block value (36 x 1.3) and hit (6%): the
+# wowsims stat sheet of the same request. Curse of the Elements (+10% Holy damage taken, in the raid debuffs of
+# the sim) is not in the model: the table shows it apart.
+JULIEN_TAL = {"is": 3, "prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 5, "ic": 5, "hsh": 1, "ij": 2}
+SIM_SOURCES = {"Seal of Fury": [20418], "Judgement of Fury": [20414], "Consecration": [20924], "Holy Shield": [20928],
+               "Holy Strike": [10333], "Auto attacks and Reckoning": ["attack1"], "Retribution Aura": [10301]}
+
+def threat_same_inputs():
+    rq = request(julien(), "raid", tank=True, iters=1, dur=60); rq["simOptions"]["debug"] = True
+    log = sim(rq)["logs"]
+    ap, sp = (float(x) for x in re.search(r"\{SpellID: 20414\} \[DEBUG\] MAP: ([\d.]+), RAP: [\d.]+, SP: ([\d.]+)", log).groups())
+    m = player_metrics(sim(request(julien(), "raid", tank=True)))
+    def S(key, k):
+        a = [x for x in m["actions"] if (x["id"].get("spellId") == key or
+             (key == "attack1" and x["id"].get("otherId") == "OtherActionAttack" and x["id"].get("tag") == 1))]
+        return sum(t.get(k, 0) for x in a for t in x["targets"])
+    crit = S("attack1", "crits") / (S("attack1", "hits") + S("attack1", "crits")) + TM.CRIT_SUPP
+    g = TM.PART1.but(sp=sp, ap=ap, wdps=35.3, wspeed=1.5, bv=36 * 1.3, hit=0.06, crit=crit)
+    _, src = TM.paladin(g, JULIEN_TAL, proposed=False, c14=0, consecration=True, ret_aura=True, detail=True)
+    model = {"Seal of Fury": src["Seal of Fury"], "Judgement of Fury": src["Judgement of Fury"],
+             "Consecration": src["Consecration"], "Holy Shield": src["Holy Shield, base"] + src["Holy Shield, block value"],
+             "Holy Strike": src["Holy Strike"], "Auto attacks and Reckoning": src["Auto attacks"] + src["Reckoning attacks"],
+             "Retribution Aura": src["Retribution Aura"]}
+    simv = {k: sum(S(i, "threat") for i in ids) / 3000 / 180 for k, ids in SIM_SOURCES.items()}
+    coe = {k: 1.0 if k == "Auto attacks and Reckoning" else 1.1 for k in model}
+    return [(k, model[k], model[k] * coe[k], simv[k]) for k in model], dict(sp=sp, ap=ap, crit=crit)
+
 HEAL_ROWS = [  # (label, model key, wowsims key)
     ("Beta, Holy Light, Blessing of Light", ("beta, Blessing of Light", "Holy Light"), ("Paladin beta, Blessing of Light", "Holy Light")),
     ("Beta, Flash of Light, Blessing of Light", ("beta, Blessing of Light", "Flash of Light"), ("Paladin beta, Blessing of Light", "Flash of Light")),
@@ -85,3 +114,9 @@ if __name__ == "__main__":
     for tab, label, a, b, kind in rows(m, s):
         d = b / a - 1
         print(f"| {tab} | {label} | {fmt(a, kind)} | {fmt(b, kind)} | {d:+.1%} | {'check' if abs(d) > LIMIT else 'OK'} |")
+    rows_t, inp = threat_same_inputs()
+    print(f"\nThreat with the same inputs (spell power {inp['sp']:.0f}, Attack Power {inp['ap']:.0f}, "
+          f"critical hit {inp['crit']:.1%} before the boss decrease)")
+    print("| Source | Model | Model, Curse of the Elements | wowsims | Difference |\n| --- | --- | --- | --- | --- |")
+    for k, a, a2, b in rows_t + [("Total", *(sum(r[i] for r in rows_t) for i in (1, 2, 3)))]:
+        print(f"| {k} | {a:.0f} | {a2:.0f} | {b:.0f} | {b / a2 - 1:+.1%} |")

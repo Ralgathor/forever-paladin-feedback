@@ -1,6 +1,6 @@
 """One check for each proposal in the sim patch: the sim result must show the effect of the proposal text.
 Run: python3 tests.py (about 1 min). Each line shows PASS or FAIL, the value and the limits."""
-import sys
+import re, sys
 from wowsims import *
 from builds import *
 import run_healing as RH
@@ -58,9 +58,16 @@ if __name__ == "__main__":
     # C-P9 Holy Shield: base damage + n% of block value. The damage must be linear in n.
     d = [S(action(tank(f"C6,C14,HSBV{n}"), HOLY_SHIELD), "damage") for n in (0, 100, 200)]
     check("Holy Shield block value (C-P9): (200% - 100%) / (100% - 0%)", (d[2] - d[1]) / (d[1] - d[0]), 0.97, 1.03)
-    # C-P8 Shield Specialization: mana on block, once each 2 sec. The block mana must increase.
-    mana = lambda o: sum(r["gain"] for r in player_metrics(o)["resources"] if r["id"].get("spellId") == 1310925)
-    check("Shield Specialization (C-P8): block mana, proposed / beta", mana(tank("C6,C13")) / mana(tank("C6")), 1.2, 10.0)
+    # C-P8 Shield Specialization: each block restores 6% of maximum mana (3/3), one time each 2 sec.
+    # The debug log of one fight gives each mana gain and the maximum mana.
+    rq = request(p, "raid", tank=True, iters=1, dur=120); rq["simOptions"]["debug"] = True
+    gains = [(float(t), float(g) / float(m)) for t, g, m in re.findall(
+        r"\[([\d.]+)\] \[Player \(#1\)\] Gained ([\d.]+) mana from \{SpellID: 1310925[^}]*\} .* of ([\d.]+) total",
+        sim(rq, "C6,C13")["logs"])]
+    check("Shield Specialization (C-P8): mana of each block / maximum mana", min(g for _, g in gains), 0.0599, 0.0601)
+    check("Shield Specialization (C-P8): largest mana of each block / maximum mana", max(g for _, g in gains), 0.0599, 0.0601)
+    check("Shield Specialization (C-P8): shortest time between two mana gains, sec",
+          min(b[0] - a[0] for a, b in zip(gains, gains[1:])), 2.0, 60.0)
 
     print(f"\n{sum(results)} of {len(results)} checks pass")
     sys.exit(0 if all(results) else 1)
