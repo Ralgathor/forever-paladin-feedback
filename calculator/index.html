@@ -467,7 +467,7 @@ function rankText(t,k){
   if(t.ranks===1||k<=1)return t.r1; if(k>=t.ranks)return t.rN;
   const re=/\d+(?:\.\d+)?/g,a=t.r1.match(re)||[],b=t.rN.match(re)||[];
   if(a.length!==b.length)return t.r1;
-  let i=0;return t.r1.replace(re,m=>{const x=+a[i],y=+b[i];i++;if(x===y)return m;const v=x+(y-x)*(k-1)/(t.ranks-1);const dec=(String(x)+String(y)).includes(".");return dec?String(Math.round(v*10)/10):String(Math.round(v));});
+  let i=0;return t.r1.replace(re,m=>{const x=+a[i],y=+b[i];i++;if(x===y)return m;const v=x+(y-x)*(k-1)/(t.ranks-1);if(x===33&&y===100)return String(Math.floor(v));/* 33/66/100% chance */const dec=(String(x)+String(y)).includes(".");return dec?String(Math.round(v*10)/10):String(Math.round(v));});
 }
 const available=()=>Math.max(0,Math.min(MAXPTS,level-9));
 const spent=()=>T.reduce((s,t)=>s+t.pts,0);
