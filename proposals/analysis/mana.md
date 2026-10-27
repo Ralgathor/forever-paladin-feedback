@@ -129,6 +129,7 @@ The script models/mana/mana_model.py gives these values. Each cell gives the MPS
 
 - **Sanctified Judgement** gives 14.0 MPS with 7 Judgements each min. Improved Judgement 2/2 adds 1.5 Judgements each min: +3.0 MPS of return and 2.3 MPS of cost. It also gives +19 threat per sec (see Builds).
 - **Thus, the 3/35/13 tank has 4.4 MPS more** than the 8/35/8 tank, with or without Consecration.
+- **Sanctified Judgement by rank (C26).** With C26, the return occurs on each Judgement. Each rank gives 40 mana for each Judgement with Seal of Fury: 5.7/11.3/17.0 MPS. The beta gives 1.9/7.6/17.0 MPS. At 3/3, the two are the same. Thus, the tables of this part do not change.
 - **When the boss does not hit the tank** (no Consecration), PB1 loses 26.4 MPS. Its mana lasts 1 min 49 sec at fresh level 60 and 3 min 18 sec in Naxxramas. The 8/35/8 tank loses 30.9 MPS: 1 min 33 sec and 2 min 48 sec. Sanctified Judgement is better than Reverence in this case also.
 - Blessing of Wisdom (8 MPS) is not in the other tables of this part.
 
@@ -149,6 +150,7 @@ One target. Sanctified Judgement returns 126 mana (60% of the base cost of the S
 - **Consecration on cooldown uses all mana quickly:** in 43 sec at fresh level 60, in about 2 min in Naxxramas. With Benediction in Protection (M11), it lasts 52 sec to 2 min 45 sec. With Holy Conduit from a 7-point Retribution dip also, it lasts 1 min 36 sec to 19 min.
 - **Holy Conduit gives the large decrease with Consecration.** With Benediction, it saves about 25 mana per sec (W4).
 - **Sanctified Judgement is the best mana talent for a tank.** It gives 14–17 MPS, also when the boss does not hit the tank. Reverence gives 10.3 MPS. It stays the mana talent for Holy and Retribution.
+- **C26 does not change the total return.** It changes only ranks 1 and 2. Each point now gives the same mana.
 - **The 3/35/13 tank can use Consecration on cooldown for a long time.** With Holy Conduit, its mana lasts 1 min 25 sec at fresh level 60 and almost 10 min in Naxxramas.
 - **Flatter gear gives less mana.** In late raids, the tank gets +14 to +20 MPS. C13 is then more important.
 - **Intellect is a tank stat for the Paladin.** It gives more mana. It also increases the Shield Specialization return.

@@ -25,7 +25,8 @@ def mps(mana, mp5, rev=False, sanj=0, ij=0, swift=1, ben=0, hc=0, cons=False, wi
     income = mp5 / 5 + (REVERENCE if rev else 0) + (WISDOM if wisdom else 0)
     if hit:
         income += mana * 0.04 * BLOCK / SWING                        # Shield Specialization 3/3 (C13)
-    # Sanctified Judgement: 20% of the seal base cost for each rank, on each Judgement (also the free one).
+    # Sanctified Judgement (C26): 20% of the seal base cost for each rank, on each Judgement (also the free one).
+    # Beta: only a 33/67/100% chance; the model uses rank 3, where the two are the same.
     # A seal cost decrease goes on top of the return (wowsims Forever, measured in game).
     income += SEAL_OF_FURY * (2 - b) * 0.2 * sanj * (judgements + swift / 60)
     return income - cost
@@ -51,6 +52,11 @@ if __name__ == "__main__":
         j = 1 / (10 - ij) + 1 / 60
         print(f"Improved Judgement {ij}: {j * 60:.1f} Judgements each min, return {SEAL_OF_FURY * 0.6 * j:.1f} MPS, "
               f"Judgement cost {JUDGEMENT / (10 - ij):.1f} MPS")
+    print("\n## Sanctified Judgement by rank (C26), Seal of Fury, Improved Judgement 2/2 and Swift Judgement")
+    j = 1 / 8 + 1 / 60
+    for r, chance in ((1, 0.33), (2, 0.67), (3, 1.0)):
+        beta, c26 = SEAL_OF_FURY * 0.2 * r * chance, SEAL_OF_FURY * 0.2 * r
+        print(f"{r}/3: beta {beta:.0f} mana ({beta * j:.1f} MPS), C26 {c26:.0f} mana ({c26 * j:.1f} MPS)")
     print("\n## Mana used (MPS)")
     for name, kw in (("no Consecration", {}), ("Consecration", dict(cons=True)),
                      ("Consecration, Holy Conduit", dict(cons=True, hc=2)),

@@ -8,7 +8,7 @@ These proposals connect the melee attacks of Retribution to its Holy spells. The
 | --- | --- | --- |
 | 1 (0) | Deflection, Conviction (C15, M8) | 10 |
 | 2 (5) | Improved Judgement, Holy Conduit, Vindication (C8) | 9 |
-| 3 (10) | Pursuit of Justice, Sanctified Judgement, Seal of Command | 6 |
+| 3 (10) | Pursuit of Justice, Sanctified Judgement (C26), Seal of Command | 6 |
 | 4 (15) | Eye for an Eye, Sacred Arbiter, Two-Handed Weapon Specialization (M6) | 6 |
 | 5 (20) | Vengeance, Repentance | 4 |
 | 6 (25) | Champion of the Light, Instrument of Law | 5 |
@@ -49,6 +49,24 @@ Retribution has 41 points (beta: 44). M11 moves Benediction to Protection row 1.
 | Mana used, one target | About 41.6 per sec | About 11.4 per sec |
 
 - **Mana.** With one Seal change each 10 sec, the Sanctified Judgement refund pays for most of the cost. Thus, C17 is also the main mana fix for Retribution (see Analysis, Mana).
+
+## C26. Sanctified Judgement: the return always occurs
+
+- **Problem.** In the beta, each rank increases two values: the chance (33/67/100%) and the return (20/40/60% of the Seal cost). The average return for each Judgement is 7/27/60%. Thus, the first two ranks give almost no mana. The talent has value only at 3/3.
+- **Proposed text.** "Your Judgement ability returns 20/40/60% of the Mana cost of the judged seal."
+- **Change.** The return occurs on each Judgement at all ranks. Only the % of the Seal cost increases with each rank.
+- **Model.** Master of Elements (Mage) returns 10/20/30% of the base mana cost of a spell. Only the % increases with each rank.
+- **Total return.** At 3/3, the return does not change: 60% of the base Seal cost. This is 120 mana for Seal of Fury and 126 mana for Seal of Command. The tank and Retribution builds use 3/3. Thus, their mana values do not change (see Analysis, Mana).
+
+| Rank | Beta: average return, Seal of Fury | C26: return, Seal of Fury | Beta MPS | C26 MPS |
+| --- | --- | --- | --- | --- |
+| 1/3 | 13 mana (33% × 20%) | 40 mana | 1.9 | 5.7 |
+| 2/3 | 54 mana (67% × 40%) | 80 mana | 7.6 | 11.3 |
+| 3/3 | 120 mana | 120 mana | 17.0 | 17.0 |
+
+- **MPS.** Mana per sec with 8.5 Judgements each min: Improved Judgement 2/2 and Swift Judgement.
+- **Each point has the same value.** Each rank adds 40 mana for each Judgement. In the beta, rank 1 adds 13 and rank 3 adds 66.
+- **Risk.** Row 3 needs 10 Retribution points. A 10-point dip with 1 point in Sanctified Judgement gives 5.7 MPS (beta: 1.9). Reverence gives 10.3 MPS for 3 points. Thus, the 1-point rank is not too strong.
 
 ## M6. Two-Handed Weapon Specialization: row 5 → row 4 (20 → 15 points)
 
