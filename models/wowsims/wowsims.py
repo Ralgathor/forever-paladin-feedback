@@ -57,8 +57,10 @@ def sim(req, flags=""):
     fi, fo = os.path.join(CACHE, key + ".in.json"), os.path.join(CACHE, key + ".out.json")
     if not os.path.exists(fo):
         json.dump(req, open(fi, "w"))
-        subprocess.run([CLI, "sim", "--infile", fi, "--outfile", fo],
-                       env=dict(os.environ, PROPOSE=flags), capture_output=True)
+        r = subprocess.run([CLI, "sim", "--infile", fi, "--outfile", fo],
+                           env=dict(os.environ, PROPOSE=flags), capture_output=True, text=True)
+        if not os.path.exists(fo):
+            raise RuntimeError(f"wowsimcli gave no result (run setup.sh first?): {r.stderr[-400:]}")
     o = json.load(open(fo))
     if o.get("error"):
         raise RuntimeError(o["error"].get("message", "")[:400])

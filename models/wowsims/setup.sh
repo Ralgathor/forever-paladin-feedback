@@ -15,7 +15,7 @@ git clean -qfd sim
 git apply "$HERE/proposals.patch"
 
 # Go code for the protobuf files (the repository does not keep it).
-go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.36.10   # the protobuf version of go.mod
 PATH="$PATH:$(go env GOPATH)/bin"
 GRPC_PROTO="$(python3 -c 'import grpc_tools, os; print(os.path.join(os.path.dirname(grpc_tools.__file__), "_proto"))')"
 python3 -m grpc_tools.protoc -I=./proto -I="$GRPC_PROTO" \

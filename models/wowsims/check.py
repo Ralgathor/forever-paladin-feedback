@@ -9,6 +9,8 @@ import damage_model as DM, threat_model as TM, healing_model as HM
 _spec = importlib.util.spec_from_file_location("heal_tables", os.path.join(ROOT, "healing", "run_tables.py"))
 _ht = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(_ht)
 HEAL_PROP, mk = _ht.PROP, _ht.mk
+_spec = importlib.util.spec_from_file_location("dmg_tables", os.path.join(ROOT, "damage", "run_tables.py"))
+_dt = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(_dt)
 import run_damage as RD, run_threat as RT, run_healing as RH
 from wowsims import *
 from builds import *
@@ -25,7 +27,7 @@ def model_values():
         for s in mk(f, 382, 180, False, **kw)["spells"]:
             if s.cost > 0: heal[(who, s.name)] = s.raw / s.cost
             if who == "Priest": heal[(who, s.name, "cast")], heal[(who, s.name, "cost")] = s.raw, s.cost
-    return dict(ret_gain=P / swap, ret_arms=swap / DM.arms(g), ret_fury=P / DM.fury(g),
+    return dict(ret_gain=P / swap, ret_arms=swap / DM.arms(g), ret_fury=_dt.RET_BETA_SIM * P / swap / _dt.PURE["Warrior"],
                 tps_gain=tp - tb, beta_war=tb / w, prop_war=tp / w, heal=heal)
 
 def sim_values():
@@ -64,7 +66,7 @@ HEAL_ROWS = [  # (label, model key, wowsims key)
 def rows(m, s):
     out = [("Damage", "Retribution, all proposals against the beta (same talents)", m["ret_gain"], s["ret_gain"], "ratio"),
            ("Damage", "Beta Retribution against Arms, same gear", m["ret_arms"], s["ret_arms"], "ratio"),
-           ("Damage", "Retribution, all proposals, as a % of Fury (model: same gear)", m["ret_fury"], s["ret_fury"], "ratio"),
+           ("Damage", "Retribution, all proposals, as a % of Fury (model: MythicSim ratio, part 5)", m["ret_fury"], s["ret_fury"], "ratio"),
            ("Threat", "Proposals, TPS added to the beta Paladin", m["tps_gain"], s["tps_gain"], "tps"),
            ("Threat", "Beta Paladin as a % of the Warrior", m["beta_war"], s["beta_war"], "ratio"),
            ("Threat", "Proposed Paladin as a % of the Warrior", m["prop_war"], s["prop_war"], "ratio")]

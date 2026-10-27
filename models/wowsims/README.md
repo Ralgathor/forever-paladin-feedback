@@ -4,7 +4,7 @@ These scripts run the [wowsims Forever](https://github.com/wowsims/forever) simu
 
 ## Setup
 
-Requirements: git, Go 1.24 or later, Python 3, and grpcio-tools (`pip install grpcio-tools`).
+Requirements: git, Go 1.25 or later, Python 3, and grpcio-tools (`pip install grpcio-tools`).
 
 ```
 ./setup.sh

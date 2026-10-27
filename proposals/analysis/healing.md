@@ -223,7 +223,7 @@ The values in brackets are for a raid fight of 3 min at 715 healing power.
 
 ## 9. Check with wowsims
 
-wowsims Forever and the model agree for the Paladin: the healing for each point of mana is within −4% to +5%. For the Priest, wowsims gives a higher Greater Heal cost, because a plan with one spell has no Litany of Light return.
+wowsims Forever and the model agree for the Paladin: the healing for each point of mana is within −4.3% to +5.3%. For the Priest, wowsims gives a higher Greater Heal cost, because a plan with one spell has no Litany of Light return.
 
 Conditions: wowsims Forever commit 69e0e5b with the proposals patch (models/wowsims). The Holy Paladin gear of wowsims (382 healing power with raid buffs) for both classes. Raid buffs, no consumables, a 3 min fight, 1,000 iterations. One heal plan on one target. The sim has no overhealing. Thus, the values are raw healing for each point of mana, with the Illumination return.
 
