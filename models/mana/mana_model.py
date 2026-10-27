@@ -9,8 +9,8 @@ TIERS = (("Fresh level 60", 2897, 3), ("Pre-raid best in slot", 3400, 5), ("Molt
 # Costs (Forever spellbook). Judgement: 6% of base mana 1,512. Holy Strike and Holy Shield each 10 sec.
 HOLY_SHIELD, HOLY_STRIKE, JUDGEMENT, SEAL_OF_FURY, CONSECRATION = 240, 20, 91, 200, 565
 SEAL_TIME, CONS_EVERY = 30, 8
-BLOCK, SWING = 0.60, 2.0          # C6 block chance; the boss swings each 2 sec
-REVERENCE = 10.3                  # Reverence 3/3 (C1, 50%): half of 41 mana each 2 sec at 130 Spirit
+BLOCK, SWING = 0.60, 2.0          # C-P1 block chance; the boss swings each 2 sec
+REVERENCE = 10.3                  # Reverence 3/3 (C-H1, 50%): half of 41 mana each 2 sec at 130 Spirit
 WISDOM = 40 / 5                   # Blessing of Wisdom rank 6: 40 mana each 5 sec
 ISOF = 23.3                       # beta Improved Seal of Fury: 87 mana for each shield that a boss hit uses
 
@@ -18,7 +18,7 @@ def mps(mana, mp5, rev=False, sanj=0, ij=0, swift=1, ben=0, hc=0, cons=False, wi
     """rev: Reverence 3/3. sanj: Sanctified Judgement ranks. ij: Improved Judgement ranks (-1 sec cooldown each).
     swift: Swift Judgement (a free Judgement each min). ben: Benediction ranks (-2% instant costs each).
     hc: Holy Conduit ranks (-20% Consecration cost each). hit: the boss hits the Paladin.
-    beta: beta Shield Specialization (once each 3 sec, 50% block) and Improved Seal of Fury, not C13."""
+    beta: beta Shield Specialization (once each 3 sec, 50% block) and Improved Seal of Fury, not C-P8."""
     b = 1 - 0.02 * ben
     judgements = 1 / (10 - ij)                                       # paid Judgements per sec
     cost = (HOLY_SHIELD / 10 + HOLY_STRIKE / 10 + JUDGEMENT * judgements + SEAL_OF_FURY / SEAL_TIME) * b
@@ -28,8 +28,8 @@ def mps(mana, mp5, rev=False, sanj=0, ij=0, swift=1, ben=0, hc=0, cons=False, wi
     if hit and beta:
         income += mana * 0.04 / 6 + ISOF                             # the 3 sec limit skips the next swing
     elif hit:
-        income += mana * 0.04 * BLOCK / SWING                        # Shield Specialization 3/3 (C13)
-    # Sanctified Judgement (C26): 20% of the seal base cost for each rank, on each Judgement (also the free one).
+        income += mana * 0.04 * BLOCK / SWING                        # Shield Specialization 3/3 (C-P8)
+    # Sanctified Judgement (C-R3): 20% of the seal base cost for each rank, on each Judgement (also the free one).
     # Beta: only a 33/66/100% chance; the model uses rank 3, where the two are the same.
     # A seal cost decrease goes on top of the return (wowsims Forever, measured in game).
     income += SEAL_OF_FURY * (2 - b) * 0.2 * sanj * (judgements + swift / 60)
@@ -56,11 +56,11 @@ if __name__ == "__main__":
         j = 1 / (10 - ij) + 1 / 60
         print(f"Improved Judgement {ij}: {j * 60:.1f} Judgements each min, return {SEAL_OF_FURY * 0.6 * j:.1f} MPS, "
               f"Judgement cost {JUDGEMENT / (10 - ij):.1f} MPS")
-    print("\n## Sanctified Judgement by rank (C26), Seal of Fury, Improved Judgement 2/2 and Swift Judgement")
+    print("\n## Sanctified Judgement by rank (C-R3), Seal of Fury, Improved Judgement 2/2 and Swift Judgement")
     j = 1 / 8 + 1 / 60
     for r, chance in ((1, 0.33), (2, 0.66), (3, 1.0)):
         beta, c26 = SEAL_OF_FURY * 0.2 * r * chance, SEAL_OF_FURY * 0.2 * r
-        print(f"{r}/3: beta {beta:.0f} mana ({beta * j:.1f} MPS), C26 {c26:.0f} mana ({c26 * j:.1f} MPS)")
+        print(f"{r}/3: beta {beta:.0f} mana ({beta * j:.1f} MPS), C-R3 {c26:.0f} mana ({c26 * j:.1f} MPS)")
     print("\n## Mana used (MPS)")
     for name, kw in (("no Consecration", {}), ("Consecration", dict(cons=True)),
                      ("Consecration, Holy Conduit", dict(cons=True, hc=2)),

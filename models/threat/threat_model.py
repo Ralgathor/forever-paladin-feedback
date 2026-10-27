@@ -100,7 +100,7 @@ def paladin(g, tal=TANK_REF, proposed=True, c14=2.0, crusader=True, consecration
             phys_mult=1.0, holy_shock=False, ret_aura=False, shield_attack=False, casting=0.0, heal=0.0,
             rf_heals=False, detail=False):
     """TPS of a Protection Paladin on one boss.
-    proposed: C6, C11 and C15. c14: block value multiplier of C14 (0 = no C14, the beta).
+    proposed: C-P1, C-P6 and C-R1. c14: block value multiplier of C-P9 (0 = no C-P9, the beta).
     consecration: Consecration on cooldown. c16: Holy Strike triggers Seal of Fury (not in the tables).
     ic_rank: Holy Strike threat for each Iron Creed rank. phys_mult: threat of physical damage (withdrawn idea).
     holy_shock: Holy Shock each 10 sec. ret_aura: Retribution Aura. shield_attack: the shield attack of
@@ -108,7 +108,7 @@ def paladin(g, tal=TANK_REF, proposed=True, c14=2.0, crusader=True, consecration
     t = lambda k: tal.get(k, 0)
     hit = g.hit + 0.01 * t("prec")
     crit = g.crit + 0.01 * t("conv")
-    spell_crit = crit if proposed else g.crit        # spells crit in the beta too. C15: Conviction also for spells
+    spell_crit = crit if proposed else g.crit        # spells crit in the beta too. C-R1: Conviction also for spells
     sp = g.sp + (CRUSADER if crusader else 0)
     ap = g.ap * (1 + 0.01 * t("vind"))               # Vindication: +1-5% Attack Power (full uptime)
     w = g.but(ap=ap)
@@ -116,9 +116,9 @@ def paladin(g, tal=TANK_REF, proposed=True, c14=2.0, crusader=True, consecration
     ohws = 1 + OHWS[t("ohws")]                       # melee, Seals, Judgements, Holy Strike (beta test)
     seals = 1 + 0.05 * t("is")                       # Seals and Judgements
     cg = 1 + 0.05 * t("cg") if consecration else 1.0 # all Holy damage on targets in Consecration (beta test)
-    # Holy Shield blocks each 10 sec: 3 with C6 and Redoubt 5/5 (beta: 2.5). Redoubt 5/5 gives about 1 of them.
+    # Holy Shield blocks each 10 sec: 3 with C-P1 and Redoubt 5/5 (beta: 2.5). Redoubt 5/5 gives about 1 of them.
     hs_blocks = ((2.0 if proposed else 1.5) + t("red") / 5) / 10
-    extra = (2.0 if proposed else 1.0) / 10 * t("reck") / 5   # Reckoning extra attacks per sec (C11)
+    extra = (2.0 if proposed else 1.0) / 10 * t("reck") / 5   # Reckoning extra attacks per sec (C-P6)
     land_a, f_auto = table(hit, crit, auto=True)
     land_s, f_spec = table(hit, crit, auto=False)
     swings = (1 - casting) / g.wspeed                # a cast stops the auto attacks
@@ -139,7 +139,7 @@ def paladin(g, tal=TANK_REF, proposed=True, c14=2.0, crusader=True, consecration
     hstr = 0.5 * (w.weapon(NORM_1H) + 93 + 0.429 * sp) * cg * ohws * f_hstr
     src["Holy Strike"] = hstr * RF * (1 + ic_rank * t("ic")) / 10
     # Auto attacks: physical. Reckoning extra attacks: in the beta, the next swing (glancing blows possible).
-    # With C11, Holy Strike releases them: no glancing blows.
+    # With C-P6, Holy Strike releases them: no glancing blows.
     src["Auto attacks"] = w.weapon() * (1 - dr) * ohws * f_auto * swings * phys_mult
     src["Reckoning attacks"] = w.weapon() * (1 - dr) * ohws * (f_spec if proposed else f_auto) * extra * phys_mult
     # Seal of Fury (rank 7): 35 + 10% of spell power for each melee hit. Cannot miss. Critical hit x2 with a separate roll.

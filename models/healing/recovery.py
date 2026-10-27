@@ -9,10 +9,10 @@ The healer heals the tank before the hit (warm start):
   (uniform). Their ticks after the hit count. A new cast of the same spell replaces the old one.
 - Heals over time cast after the hit land in ticks of 3 sec (Lingering Light: 2 sec).
 - The Paladin has cast Flash of Light on the tank (one each 1.5 sec). Infusion of Light can be active at the
-  hit, and with C2 the Lingering Light pool is on the tank. Lingering Light follows its text: a non-periodic
+  hit, and with C-H2 the Lingering Light pool is on the tank. Lingering Light follows its text: a non-periodic
   critical heal adds 20% of the heal to the remaining healing, and the total is spread over a new 6 sec (one
   tick each 2 sec). A critical tick does not start it again.
-- Infusion of Light: a Flash of Light or Holy Shock makes the next Holy Light 1 sec faster (C3: each cast;
+- Infusion of Light: a Flash of Light or Holy Shock makes the next Holy Light 1 sec faster (C-H3: each cast;
   beta: a critical heal only). It stays active until a Holy Light uses it.
 - The Paladin values come from a simulation (Monte Carlo) of the critical heals, Infusion of Light and the
   Lingering Light pool, before and after the hit. The same random numbers are used for each sequence.

@@ -96,7 +96,7 @@ def gear(tier=0, flat=False, sd_fixed=False):
 
 # ---------------------------------------------------------------- Retribution (parts 1-4, 7, 8)
 # Build 12/8/31 (RB2). Conviction +5% critical hit. Precision +3% hit. Two-Handed Weapon Specialization x1.06.
-# Improved Seals x1.15 (Seals and Judgements). Vindication 5/5 (C8): +5% Attack Power, full uptime on a boss.
+# Improved Seals x1.15 (Seals and Judgements). Vindication 5/5 (C-P3): +5% Attack Power, full uptime on a boss.
 THWS, IMP_SEALS = 1.06, 1.15
 NORM_2H = 3.3
 
@@ -110,7 +110,7 @@ RB1 = dict(RB2, di=0)                                                     # Purs
 RB3 = dict(RB2, is_=0, di=0, sj=1)                                        # 0/19/32: no Holy points
 RB4 = dict(RB2, di=0)                                                     # Repentance, Eye for an Eye
 RB5 = dict(RB2, is_=0, di=0, ij=0, vind=0, cotl=0, iol=0, tol=0, sj=1)    # 0/26/25
-SHOCK_RET = dict(RB2, prec=0, vind=3, iol=0, tol=0, cotl=0, di=5, hsk=1, hp=5)   # 26/0/25: Holy Power (Holy row 5, M12)
+SHOCK_RET = dict(RB2, prec=0, vind=3, iol=0, tol=0, cotl=0, di=5, hsk=1, hp=5)   # 26/0/25: Holy Power (Holy row 5, M-H3)
 RET_BUILDS = (("RB1", RB1), ("RB2", RB2), ("RB3", RB3), ("RB4", RB4), ("RB5", RB5))
 
 def ret_stats(g, cotl=None, ap_pct=None, str_pct=0.0, tal=RB2):
@@ -126,7 +126,7 @@ def ret_stats(g, cotl=None, ap_pct=None, str_pct=0.0, tal=RB2):
 
 def retribution(g, version="c16", sa=None, crusader=False, ths=None, fight=FIGHT, detail=False, extra=None,
                  soc_w=0.70, hs_w=0.5, v_stacks=3, tal=RB2, front=False, **kw):
-    """version: "c16" (Holy Strike triggers your Seal and Echo, C17 keeps both Seals active), "c16_first" (Holy Strike
+    """version: "c16" (Holy Strike triggers your Seal and Echo, C-R2 keeps both Seals active), "c16_first" (Holy Strike
     always triggers Seal of Command), "c16_soc" (Holy Strike triggers Seal of Command by chance only),
     "beta_swap" (a Seal change before each swing), "beta_soc" (Seal of Command only).
     A build with no Twist of Light has no Echo: "c16" then works as "c16_soc".
@@ -149,7 +149,7 @@ def retribution(g, version="c16", sa=None, crusader=False, ths=None, fight=FIGHT
     dodge = DODGE + (0.14 if front else 0.0)
     land_a, crit_a, f_auto = auto_table(s["hit"], s["crit"], dodge=dodge)
     land, crit_s, f_spec = spec_table(s["hit"], s["crit"], dodge=dodge)
-    # Holy Power (Holy row 5, M12): +3% critical hit for each rank on Holy Strike and Holy Shock, +1% on the other
+    # Holy Power (Holy row 5, M-H3): +3% critical hit for each rank on Holy Strike and Holy Shock, +1% on the other
     # spells (Judgement, Hammer of Wrath, Exorcism, Consecration). Not on Seals.
     hp = t("hp")
     _, crit_j, f_jud = spec_table(s["hit"], s["crit"] + 0.01 * hp, dodge=0.0)   # Judgement: no dodge

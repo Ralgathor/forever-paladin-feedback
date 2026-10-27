@@ -5,7 +5,7 @@
 # Version 2 (review of 22 October 2026):
 # - The cast plan is a linear program: the best mix of all spells for the mana and the time.
 # - Cooldowns and consumables count only uses that start early enough to end in the fight.
-# - Heals over time can be critical heals in Forever: each tick (HOT_CRIT). Lingering Light (C2) too, but a
+# - Heals over time can be critical heals in Forever: each tick (HOT_CRIT). Lingering Light (C-H2) too, but a
 #   critical tick does not start it again (only non-periodic critical heals do).
 # - One tank: a Riptide or a Regrowth can be kept for its full duration, or recast.
 # - Talent review (22 October 2026): Druid: Gift of the Earthmother (global cooldown 1 sec for Rejuvenation,
@@ -42,7 +42,7 @@ class Spell:
 def cd_limit(cd, time):
     return lambda T: uses(T, cd, time)
 
-# ---------------------------------------------------------------- Lingering Light (C2) pool
+# ---------------------------------------------------------------- Lingering Light (C-H2) pool
 def ll_ticks(events):
     """Lingering Light on one target, as its text says. events: (time, amount added) for each non-periodic
     critical heal. The new amount and the healing that remains are added together and spread over a new
@@ -80,7 +80,7 @@ def paladin(hp=HPG, tank=False, rev=0.30, illum=0.50, light=1.12, bol=True, ling
         return (base + (blessing if bol else 0) + coef * hp) * light
     fol = heal(308, 1.5/3.5, 115); hl = heal(1580, 2.5/3.5, 400)
     hs = (320 + 1.5/3.5 * hp) * light * hs_heal_mult
-    # direct heal with critical heals; Lingering Light (C2): 20% of a critical heal as a heal over time.
+    # direct heal with critical heals; Lingering Light (C-H2): 20% of a critical heal as a heal over time.
     # Its ticks can be critical heals (chance c). A critical tick does not start Lingering Light again.
     kt = (1 + 0.5*c) if HOT_CRIT else 1.0
     def direct(h, cc, oh):

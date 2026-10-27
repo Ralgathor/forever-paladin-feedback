@@ -12,10 +12,10 @@ def pct(a, b):
 # Mana of Retribution, build RB2 (Analysis, Mana, parts 3 and 5). Costs from wowsims Forever.
 # Mana pool: 1,232 + 15 x Intellect (Classic formula: base 1,512, the first 20 Intellect give 1 mana each), with Mark
 # of the Wild and Kings, from the Retribution gear of each tier (fresh level 60: 87 Intellect, 2,931 mana with buffs and Divine Intellect 2).
-# Retribution gear has no mp5. Benediction 5/5 (Protection row 1, M11): instant spells x0.90. Twist of Light: Seals x0.80.
+# Retribution gear has no mp5. Benediction 5/5 (Protection row 1, M-P1): instant spells x0.90. Twist of Light: Seals x0.80.
 # Holy Conduit (Retribution row 2): Consecration (565) x0.60. Sanctified Judgement returns 60% of the base Seal cost, before the
 # talent cost decreases: 210 x 0.6 = 126 (beta test). Judgement: 6% of base mana (91). Holy Strike: 20.
-# Hammer of Wrath rank 3: 425 x0.60, in the execute phase. Income: Reverence 50% (C1) at 130 Spirit (10.3) and
+# Hammer of Wrath rank 3: 425 x0.60, in the execute phase. Income: Reverence 50% (C-H1) at 130 Spirit (10.3) and
 # Blessing of Wisdom (8).
 BEN, TOL = 0.90, 0.80
 
@@ -75,16 +75,16 @@ if __name__ == "__main__":
     swap = retribution(g, "beta_swap")
     rows = (("Beta: a Seal change before each swing", "beta_swap", 1.2),
             ("Beta: Seal of Command only", "beta_soc", 1.2),
-            ("C16, first version", "c16_first", 1.0),
-            ("C16: your Seal and Echo, Sacred Arbiter +20%", "c16", 1.2),
-            ("C16: your Seal and Echo, Sacred Arbiter +10%", "c16", 1.1),
-            ("C16: your Seal and Echo, Sacred Arbiter +0%", "c16", 1.0),
-            ("C16: only Seal of Command by chance, Sacred Arbiter +0%", "c16_soc", 1.0))
+            ("C1, first version", "c16_first", 1.0),
+            ("C1: your Seal and Echo, Sacred Arbiter +20%", "c16", 1.2),
+            ("C1: your Seal and Echo, Sacred Arbiter +10%", "c16", 1.1),
+            ("C1: your Seal and Echo, Sacred Arbiter +0%", "c16", 1.0),
+            ("C1: only Seal of Command by chance, Sacred Arbiter +0%", "c16_soc", 1.0))
     for name, v, sa in rows:
         x = retribution(g, v, sa)
         print(f"{name} | {x:.0f} | {x / swap - 1:+.0%}")
     _, sb, _ = retribution(g, "beta_swap", detail=True)
-    print(f"Holy Strike with C16 against the beta (Holy Strike, Seal of Command and Seal of Righteousness from it): "
+    print(f"Holy Strike with C1 against the beta (Holy Strike, Seal of Command and Seal of Righteousness from it): "
           f"{(src['Seal of Command'] - sb['Seal of Command']) + (src['Seal of Righteousness'] - sb['Seal of Righteousness']):+.0f}")
 
     print("\n## Part 5: against MythicSim")
@@ -93,7 +93,7 @@ if __name__ == "__main__":
     r = RET_BETA_SIM * gain
     first = RET_BETA_SIM * retribution(g, "c16_first", 1.0) / swap
     print(f"Retribution, all proposals: {r:.0f} ({pct(r, avg)} of the pure average {avg:.0f}, {pct(r, PURE['Warrior'])} "
-          f"of Fury). C16 first version {first:.0f} ({pct(first, avg)}). Beta {pct(RET_BETA_SIM, avg)}")
+          f"of Fury). C1 first version {first:.0f} ({pct(first, avg)}). Beta {pct(RET_BETA_SIM, avg)}")
     no_rogue = (avg * 5 - PURE["Rogue"]) / 4
     print(f"Without Combat Rogue: pure average {no_rogue:.0f}, Retribution {pct(r, no_rogue)}")
     print(f"Same gear: beta Retribution {swap:.0f}, Arms {arms(g):.0f}, Fury {fury(g):.0f}, Combat Rogue {rogue(g):.0f}. "
