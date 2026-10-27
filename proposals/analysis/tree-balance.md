@@ -133,7 +133,7 @@ Source: the talent data of wowsims/forever (25 October 2026) for all nine classe
 
 - In version 4, Holy row 3 has 3 points. Each other tree has 4 points or more in row 3. Holy rows 1–3 (20 points) are the lowest of the 27 trees.
 - This causes 2 points of filler for the Holy healer. Row 4 needs 15 points in rows 1–3, and only 14 of these points help a healer. Row 6 needs 25 points in rows 1–5, and only 23 help a healer.
-- **The fix: three moves in Holy.** Lingering Light goes to row 3 (C-H2). Holy Power goes to row 5 (M-H3). Consecrated Ground goes to row 6 (M-H4). Rows 1–3 then hold 16 healer points, and rows 1–5 hold 28. The Holy healer has no filler.
+- **The fix: one new talent and two moves in Holy.** Lingering Light (C-H2) is a new talent in row 3. Holy Power goes to row 5 (M-H3). Consecrated Ground goes to row 6 (M-H4). Rows 1–3 then hold 16 healer points, and rows 1–5 hold 28. The Holy healer has no filler.
 - After the moves, each Holy row is in the range of the other trees. Rows 1–3 (22) are 1 point below the lowest other tree.
 - Retribution rows 4–6 (15 points) are equal to the lowest other tree (Discipline). A deep Retribution build takes almost all of them.
 
@@ -146,4 +146,4 @@ Source: the talent data of wowsims/forever (25 October 2026) for all nine classe
 | Points for the other trees | Smaller trees free more points: up to 19 for Holy (HB1, 34/12/5, uses 17) and 18 for Retribution (RB1, 10/8/33). Rule 1 needs these dips |
 | The 52-point hybrids | The tree size does not cause them. Holy Shock with Twist of Light or Holy Shield needs 52 of the 51 points |
 
-**Result.** Do not add ranks to reach the totals of the other classes. New ranks become stat filler again, as Toughness and Divine Strength were (Toughness and Divine Strength removal, C-P3). Devoted Sacrifice (C-P11) adds 2 ranks to Protection, but for an effect, not for stats. The talent count is already in the range of the other classes. Holy rows were the one weak point. Three moves fix them with no new talent: Lingering Light (C-H2) in row 3, Holy Power (M-H3) and Consecrated Ground (M-H4). These three moves keep all build codes valid. Shock-Retribution changes to 26/0/25 (see Builds, part 5).
+**Result.** Do not add ranks to reach the totals of the other classes. New ranks become stat filler again, as Toughness and Divine Strength were (Toughness and Divine Strength removal, C-P3). Devoted Sacrifice (C-P11) adds 2 ranks to Protection, but for an effect, not for stats. The talent count is already in the range of the other classes. Holy rows were the one weak point. One new talent and two moves fix them: Lingering Light (C-H2) in row 3, Holy Power (M-H3) and Consecrated Ground (M-H4). These three changes keep all build codes valid. Shock-Retribution changes to 26/0/25 (see Builds, part 5).
