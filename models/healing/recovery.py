@@ -132,7 +132,7 @@ def paladin_burst(hp=HPG, light=1.12, bol=True, ling=0.0, conv=0.0, inf_all=Fals
 
 def priest_burst(hp=HPG):
     hp = hp + 84; d = hp - 799; c = 0.1903; k = 1 + 0.5*c; k_if = 1 + 0.5*(c + 0.25)
-    gh = 2909.2 + 0.943*d
+    gh = 2909.2 + 0.943*d   # rank 5 from the game files, as in healing_model.py
     kh = k if H.HOT_CRIT else 1.0
     renew = (1941.2 + 1.316*d)*kh
     sp = [B("Flash Heal", 1.5, (1272.4 + 0.467*d)*k),

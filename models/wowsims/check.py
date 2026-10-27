@@ -52,7 +52,7 @@ def sim_values():
 # Threat with the same inputs: the model gets the stats of Julien's sim (beta talents, Consecration, Retribution
 # Aura). Spell power and Attack Power come from the first Judgement of Fury in the sim debug log, the critical hit chance from the auto attacks
 # of the sim (after the boss decrease). Weapon (35.3 DPS, 1.5 sec), block value (36 x 1.3) and hit (6%): the
-# wowsims stat sheet of the same request. Curse of the Elements (+10% Holy damage taken, in the raid debuffs of
+# wowsims stat sheet of the same request (ComputeStats, read one time). Curse of the Elements (+10% Holy damage taken, in the raid debuffs of
 # the sim) is not in the model: the table shows it apart.
 JULIEN_TAL = {"is": 3, "prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 5, "ic": 5, "hsh": 1, "ij": 2}
 SIM_SOURCES = {"Seal of Fury": [20418], "Judgement of Fury": [20414], "Consecration": [20924], "Holy Shield": [20928],
@@ -62,7 +62,8 @@ def threat_same_inputs():
     rq = request(julien(), "raid", tank=True, iters=1, dur=60); rq["simOptions"]["debug"] = True
     log = sim(rq)["logs"]
     ap, sp = (float(x) for x in re.search(r"\{SpellID: 20414\} \[DEBUG\] MAP: ([\d.]+), RAP: [\d.]+, SP: ([\d.]+)", log).groups())
-    m = player_metrics(sim(request(julien(), "raid", tank=True)))
+    iters, dur = 3000, 180
+    m = player_metrics(sim(request(julien(), "raid", tank=True, iters=iters, dur=dur)))
     def S(key, k):
         a = [x for x in m["actions"] if (x["id"].get("spellId") == key or
              (key == "attack1" and x["id"].get("otherId") == "OtherActionAttack" and x["id"].get("tag") == 1))]
@@ -74,7 +75,7 @@ def threat_same_inputs():
              "Consecration": src["Consecration"], "Holy Shield": src["Holy Shield, base"] + src["Holy Shield, block value"],
              "Holy Strike": src["Holy Strike"], "Auto attacks and Reckoning": src["Auto attacks"] + src["Reckoning attacks"],
              "Retribution Aura": src["Retribution Aura"]}
-    simv = {k: sum(S(i, "threat") for i in ids) / 3000 / 180 for k, ids in SIM_SOURCES.items()}
+    simv = {k: sum(S(i, "threat") for i in ids) / iters / dur for k, ids in SIM_SOURCES.items()}
     coe = {k: 1.0 if k == "Auto attacks and Reckoning" else 1.1 for k in model}
     return [(k, model[k], model[k] * coe[k], simv[k]) for k in model], dict(sp=sp, ap=ap, crit=crit)
 
