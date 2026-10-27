@@ -28,7 +28,7 @@
 | Anticipation | A raid boss stops critical hits at 440 Defense. Anticipation gives 20 | The stat targets use this cap |
 | Improved Seal of Fury | The mana return does not change with the rank of the Seal. The mana gives no threat | Removed by Shoulder the Burden (C-P5) |
 | Improved Righteous Fury | Applies after armor. Multiplies with Iron Creed (×0.94 × 0.90) | Removed (Improved Righteous Fury removal, C-P4) |
-| Shield Specialization | Multiplies Shield Block Value. Mana return is 4%. The mana gives no threat | Stays the main mana source. Shield Specialization (C-P8) changes the limit to 2 sec |
+| Shield Specialization | Multiplies Shield Block Value. Mana return is 4%. The mana gives no threat | Stays the main mana source. Shield Specialization (C-P8): each block restores 2/4/6%, once each 2 sec |
 | Sacred Duty | % of total Stamina, multiplies with Kings. Decreases the cooldowns of Forbearance spells | None |
 | Swift Judgement | Not on the global cooldown | None |
 | One-Handed Weapon Specialization | Melee attacks, Seals, Judgements, Holy Strike and the Twist of Light Echo | None |

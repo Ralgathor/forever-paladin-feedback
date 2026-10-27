@@ -28,7 +28,7 @@ def mps(mana, mp5, rev=False, sanj=0, ij=0, swift=1, ben=0, hc=0, cons=False, wi
     if hit and beta:
         income += mana * 0.04 / 6 + ISOF                             # the 3 sec limit skips the next swing
     elif hit:
-        income += mana * 0.04 * BLOCK / SWING                        # Shield Specialization 3/3 (C-P8)
+        income += mana * 0.06 * BLOCK / SWING                        # Shield Specialization 3/3 (C-P8): 6% on each block
     # Sanctified Judgement (C-R3): 20% of the seal base cost for each rank, on each Judgement (also the free one).
     # Beta: only a 33/66/100% chance; the model uses rank 3, where the two are the same.
     # A seal cost decrease goes on top of the return (wowsims Forever, measured in game).
