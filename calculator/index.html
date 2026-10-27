@@ -362,7 +362,7 @@ const PROPOSED={
 const PROPOSED_NEW=[{pid:"C-H2",tree:"holy",key:"sw",name:"Lingering Light",tier:3,col:4,ranks:2,rt:["Your non-periodic critical heals cause the target to be healed for an additional 10% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing.","Your non-periodic critical heals cause the target to be healed for an additional 20% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing."],req:null,status:"N",info:""},{pid:"C-P7",tree:"prot",key:"fj",name:"Reach of Law",tier:5,col:1,ranks:2,rt:["Increases the range of your Judgement by 5 yards while Seal of Fury is active.","Increases the range of your Judgement by 10 yards while Seal of Fury is active."],req:"sj",status:"N",info:""},{pid:"C-P11",tree:"prot",key:"dsac",name:"Devoted Sacrifice",tier:3,col:2,ranks:2,rt:["Your Lay on Hands drains only 75% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 10%.","Your Lay on Hands drains only 50% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 20%."],req:null,status:"N",info:""}];
 // Rows for the proposals table: [id, talent key in proposed trees, talent, tree, today, proposed]
 const PROPOSALS=[
- ["C-H1", "rev", "Reverence", "Holy, row 3 → row 2", "10/20/30% of mana regeneration while casting", "17/33/50%"],
+ ["C-H1", "rev", "Reverence", "Holy, row 3 → row 2", "10/20/30% of mana regeneration during casts", "17/33/50%"],
  ["C-H2", "sw", "Lingering Light (new)", "Holy, row 3", "—", "2 ranks: a critical heal adds a heal over time of 10/20% of the heal"],
  ["C-H3", "iol", "Infusion of Light", "Holy, row 4 → row 2", "Holy Shock and Flash of Light critical hits make the next Holy Light faster", "All Holy Shock, Flash of Light and Holy Strike hits do this. No critical hit is necessary"],
  ["C-H4", "hl", "Healing Light", "Holy, row 2 → row 6", "3 ranks: 4/8/12%", "3 ranks: 10/20/30% (with Blessing of Light removal, C3)"],
@@ -371,13 +371,13 @@ const PROPOSALS=[
  ["C-P3", "vin", "Toughness and Divine Strength: removed", "Protection row 1, Retribution row 2, Holy row 1", "Toughness: +2–10% armor from items. Divine Strength: +2–10% Strength", "Both removed. Vindication goes to Retribution row 2 with 5 ranks (+1–5% Attack Power). Benediction (M-P1) and Unyielding Faith (M-H2) fill row 1 of Protection and Holy"],
  ["C-P4", "ic", "Improved Righteous Fury", "Protection, row 3", "−2–6% damage taken with Righteous Fury", "Removed"],
  ["C-P5", "rdef", "Shoulder the Burden (new) replaces Improved Seal of Fury", "Protection, row 3", "Improved Seal of Fury: mana when the Seal of Fury shield absorbs a hit", "Shoulder the Burden: 50% of the threat of an ally moves to you, 5 min cooldown. Sacred Duty also decreases its cooldown by 30/60 sec"],
- ["C-P6", "rec", "Reckoning", "Protection, row 5", "Extra attack after a block (40%) or a critical hit taken (100%); hits with the next swing", "Charge after a block, dodge or parry (once each 4 sec) or a critical hit taken; Holy Strike releases up to 2"],
+ ["C-P6", "rec", "Reckoning", "Protection, row 5", "Extra attack after a block (40%) or a critical hit taken (100%). It hits with the next swing", "Charge after a block, dodge or parry (once each 4 sec) or a critical hit taken. Holy Strike releases up to 2 charges"],
  ["C-P7", "fj", "Reach of Law (new)", "Protection, row 5", "—", "2 ranks: Judgement range +5/10 yards while Seal of Fury is active"],
  ["C-P8", "ss", "Shield Specialization", "Protection, row 3", "Mana return once each 3 sec", "Mana return once each 2 sec"],
  ["C-P9", "hsh", "Holy Shield", "Protection, row 7", "221 Holy damage for each block (rank 3)", "221 Holy damage plus 200% of your block value for each block"],
- ["C-P10", "gf", "Guardian's Favor", "Protection, row 2", "Blessing of Protection −1/2 min, Blessing of Freedom +3/6 sec.", "The same, and Hand of Sacrifice cooldown −5/10 sec (C4)"],
- ["C-P11", "dsac", "Devoted Sacrifice (new)", "Protection, row 3", "—", "2 ranks: Lay on Hands drains only 75/50% of your remaining mana, and you take 10/20% less damage from your Hand of Sacrifice"],
- ["C-R1", "con", "Conviction", "Retribution, row 2 → row 1 (M-R2)", "+1–5% critical hit chance with melee attacks", "+1–5% critical hit chance with attacks and spells"],
+ ["C-P10", "gf", "Guardian's Favor", "Protection, row 2", "Blessing of Protection −1/2 min, Blessing of Freedom +3/6 sec", "The same, and Hand of Sacrifice cooldown −5/10 sec (C4)"],
+ ["C-P11", "dsac", "Devoted Sacrifice (new)", "Protection, row 3", "—", "2 ranks: Lay on Hands drains only 75/50% of your current mana, and you take 10/20% less damage from your Hand of Sacrifice"],
+ ["C-R1", "con", "Conviction", "Retribution, row 2 → row 1 (Conviction, M-R2)", "+1–5% critical hit chance with melee attacks", "+1–5% critical hit chance with attacks and spells"],
  ["C-R2", "tol", "Twist of Light", "Retribution, row 7", "The Echo applies to the next melee attack only", "The Echo applies to all melee attacks for 10 sec"],
  ["C-R3", "sanj", "Sanctified Judgement", "Retribution, row 3", "33/66/100% chance to return 20/40/60% of the Seal cost", "100% chance at all ranks. The return is 20/40/60% of the Seal cost"],
  ["M-H1", "is", "Improved Seals", "Holy", "Row 2", "Row 1 (move only)"],
@@ -385,7 +385,7 @@ const PROPOSALS=[
  ["M-H3", "hp", "Holy Power", "Holy", "Row 6", "Row 5 (move only)"],
  ["M-H4", "cg", "Consecrated Ground", "Holy", "Row 5", "Row 6 (move only)"],
  ["M-P1", "ben", "Benediction", "Retribution → Protection", "Retribution row 1", "Protection row 1 (move only)"],
- ["M-R1", "ths", "Two-Handed Weapon Specialization", "Retribution, row 5 → row 4", "Row 5 (20 points)", "Row 4 (15 points) (move only)"],
+ ["M-R1", "ths", "Two-Handed Weapon Specialization", "Retribution", "Row 5 (20 points)", "Row 4 (15 points) (move only)"],
  ["M-R2", "con", "Conviction", "Retribution", "Row 2", "Row 1 (move only)"]
 ];
 const BASELINE=[
@@ -398,7 +398,7 @@ const BASELINE=[
  ["C3b", "Holy Light and Flash of Light", "Base heal 1,580 and 308 (top ranks)", "Alternative: remove the Blessing and add its bonus to the base heals (1,980 and 423)"],
  ["C4", "Hand of Sacrifice", "Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown", "Up to 825 damage moves to you. 30 sec cooldown, 20 sec with Guardian's Favor 2/2"],
  ["C5", "Hands: Sacrifice, Protection and Freedom", "Blessings that use a Blessing slot", "The spells take the name Hand of. No Blessing slot. One Hand from each Paladin on a target"],
- ["C-P11a", "Lay on Hands", "Drains all your remaining mana", "Alternative to the Lay on Hands part of Devoted Sacrifice (C-P11): the spell drains 50% of your remaining mana for all Paladins. Devoted Sacrifice keeps only the Hand of Sacrifice part"]
+ ["C-P11a", "Lay on Hands", "Drains all your current mana", "Alternative to the Lay on Hands part of Devoted Sacrifice (C-P11): the spell drains 50% of your current mana for all Paladins. Devoted Sacrifice keeps only the Hand of Sacrifice part"]
 ];
 let mode="prop",T=[],BY={};
 function makeTalents(m){

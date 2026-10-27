@@ -54,7 +54,7 @@ This section examines the builds that are possible with the proposed trees. It g
 - **Why the first search missed the Retribution dip.** The threat model had no Improved Judgement, and the mana model had no Sanctified Judgement for the tank. Both models now have them.
 - **Threat per sec for each point (8/35/8 tank):** Holy Shield 253 (1 point), Redoubt 17, Swift Judgement 13 (1 point), Reckoning 12, Improved Judgement 9.5 (in PB1), One-Handed Weapon Specialization 9, Improved Seals 7, Precision 4, Conviction 3, Iron Creed 2 (and −10% damage taken), Vindication about 0.5 (and about −1.5% boss melee damage, if no Demoralizing Shout or Roar is on the boss).
 - **Benediction (Protection row 1, M-P1).** It saves about 4 mana per sec without Consecration and 11 with Consecration. It gives no threat. Thus, the tank builds take the Retribution dip first: Sanctified Judgement and Improved Judgement give more mana and threat for their points.
-- **Divine Strength (removed by C-P3).** +10% Strength gave a tank about +15 Strength with pre-raid gear: about +30 Attack Power and +1 block value. Thus, all tank builds skipped it. Retribution received about +7 DPS for 5 points.
+- **Divine Strength (Toughness and Divine Strength removal, C-P3).** +10% Strength gave a tank about +15 Strength with pre-raid gear: about +30 Attack Power and +1 block value. Thus, all tank builds skipped it. Retribution received about +7 DPS for 5 points.
 
 ## 4. Retribution
 

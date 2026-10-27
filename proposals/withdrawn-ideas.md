@@ -52,7 +52,7 @@ We examined these ideas and rejected them. They are not proposals.
 | A Holy aura that gives the Blessing of Light bonus | Aura slots have the same limit as Blessing slots. It competes with Devotion Aura and Concentration Aura |
 | A second Holy talent: +6/12/18% to Holy Light and Flash of Light | The same value as Blessing of Light removal (C3), but two talents for one bonus |
 | Healing Light at 35% (not 30%) | Not proposed now. At 35%, the Paladin is first on one tank by 5–13%. At 30%, it is first by 1–9% (see Analysis, Healing, part 6, and W14) |
-| Sacred Arbiter: Holy Strike always triggers Seal of Command (first version of C1) | +13% Retribution damage against the beta. Retribution is then above Fury Warrior at fresh level 60 (see Analysis, Damage) |
+| Sacred Arbiter: Holy Strike always triggers Seal of Command (first version of Holy Strike Seal trigger, C1) | +13% Retribution damage against the beta. Retribution is then above Fury Warrior at fresh level 60 (see Analysis, Damage) |
 | Sacred Arbiter: Holy Strike triggers Seal of Command by chance | A talent that gives only a chance to trigger is weak design. Holy Strike Seal trigger (C1) puts the usual Seal rule in the spell |
 | Holy Strike triggers the active Seal, but not the Twist of Light Echo | One more rule to learn. Holy Strike is a melee attack, and the Echo applies to melee attacks |
 | Sacred Arbiter at +10% (with the Holy Strike Seal trigger, C1) | Only about 1% less damage (4 DPS) at fresh level 60. From Molten Core, Retribution is already below Fury. The beta talent needs no change |
@@ -68,8 +68,8 @@ We examined these ideas and rejected them. They are not proposals.
 | Holy Shock costs 50% less (now) | The Paladin is then 3–10% above the Shaman in raids, and first on one tank by 5–12% (see Analysis, Healing, part 6) |
 | Light's Vigil heals ×1.25 or ×2 | With the proposals, the Paladin is then 1–38% above the Shaman in raids. Not necessary: the raid healing is already at the level of the Shaman (see Analysis, Healing, part 6) |
 | Illumination returns 75% of the base cost (beta: 50%) | Not necessary in raids: with 50% and the other proposals, the Paladin is about equal to the Shaman (−2% to +5%). At 75%, the Paladin is first on one tank by 9–15%. See W14. If Illumination returns mana for each critical heal of Light's Vigil, 75% puts the Paladin 75–114% above the Shaman (see Analysis, Healing, part 6) |
-| Divine Strength in Protection row 1 (first version of C-P3) | A tank receives less than 1 threat per sec for each point. Retribution receives about 1.4 DPS for each point (see Analysis, Builds). Toughness and Divine Strength removal (C-P3) now deletes the talent |
-| Improved Seals with 5 ranks, 3/6/9/12/15% (first version of M-H1) | With Unyielding Faith in Holy row 1 (M-H2), the 3 beta ranks fill the row |
+| Divine Strength in Protection row 1 (first version of Toughness and Divine Strength removal, C-P3) | A tank receives less than 1 threat per sec for each point. Retribution receives about 1.4 DPS for each point (see Analysis, Builds). Toughness and Divine Strength removal (C-P3) now deletes the talent |
+| Improved Seals with 5 ranks, 3/6/9/12/15% (first version of Improved Seals, M-H1) | With Unyielding Faith in Holy row 1 (M-H2), the 3 beta ranks fill the row |
 | Divine Strength in Retribution row 3 | About 1.4 DPS for each point. A weak 5-point talent only to fill the tree |
 | Sacred Duty with Precision in Protection row 1 | Row 3 loses its save talent, and all PvP builds take Divine Shield −60 sec for 2 points |
 | Unyielding Faith with Precision in Protection row 1 | It works, but Unyielding Faith (M-H2) moves to Holy row 1 |

@@ -160,7 +160,7 @@ One target. Sanctified Judgement returns 126 mana (60% of the base cost of the S
 - **The tank receives more mana with gear.** Shield Specialization returns 4% of maximum mana for each block. More mana gives a larger return.
 - **At fresh level 60, PB1 receives +8.3 MPS** with the proposals. Without Shield Specialization (C-P8), it loses about 7 MPS.
 - **In raids, the tank does not lose mana without Consecration.** PB1 receives +15 to +34 MPS (beta: +20 to +31).
-- **The proposals give PB1 less mana than the beta up to Molten Core** (−7.9 MPS at fresh level 60, −2.5 in Molten Core) and more from Blackwing Lair (+2.9 in Naxxramas). The cause is Shoulder the Burden (C-P5): Improved Seal of Fury gave 23.3 MPS at all gear levels. Redoubt (C-P1) and Shield Specialization (C-P8) give more with more maximum mana.
+- **The proposals give PB1 less mana than the beta up to Molten Core** (−7.9 MPS at fresh level 60, −2.5 in Molten Core). From Blackwing Lair, they give more (+2.9 in Naxxramas). The cause is Shoulder the Burden (C-P5): Improved Seal of Fury gave 23.3 MPS at all gear levels. Redoubt (C-P1) and Shield Specialization (C-P8) give more with more maximum mana.
 - **Consecration on cooldown uses all mana quickly** without Holy Conduit: PB2 has mana for 46 sec at fresh level 60 and 2 min 14 sec in Naxxramas.
 - **Holy Conduit gives the large decrease with Consecration.** With Benediction, it saves about 25 mana per sec (W4).
 - **Sanctified Judgement is the best mana talent for a tank.** It gives 14–17 MPS, also when the boss does not hit the tank. Reverence gives 10.3 MPS. It stays the mana talent for Holy, and for Retribution without raid buffs.

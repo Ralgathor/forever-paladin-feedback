@@ -68,18 +68,18 @@ Each row 3 has a 1-point signature talent, as in the other classes. Each also ha
 | --- | --- | --- |
 | Divine Intellect (+10% Intellect, row 1) | Ancestral Knowledge (row 1), Mental Strength (row 2) | Equal |
 | Deflection (+5% parry, row 1) | Deflection (Warrior, Hunter, row 1) | Equal |
-| Conviction (+5% critical hit, row 1 with M-R2) | Cruelty, Malice, Lethal Attacks, Thundering Strikes (all row 1) | Equal with Conviction (M-R2). In the beta, it is one row deeper |
-| Benediction (instant spells −10%, 5 points, Protection row 1 with M-P1) | Convection (−10%, 5 points, row 1), Cataclysm (−10%, 3 points) | Equal: more spells, but Paladin instant spells cost less |
+| Conviction (+5% critical hit, row 1 with the Conviction move, M-R2) | Cruelty, Malice, Lethal Attacks, Thundering Strikes (all row 1) | Equal with Conviction (M-R2). In the beta, it is one row deeper |
+| Benediction (instant spells −10%, 5 points, Protection row 1 with the Benediction move, M-P1) | Convection (−10%, 5 points, row 1), Cataclysm (−10%, 3 points) | Equal: more spells, but Paladin instant spells cost less |
 | Precision (+3% hit, Protection row 2) | Elemental Precision, Shadow Focus, Arcane Focus (row 1), Precision (Rogue, row 2) | Equal |
 | Anticipation (+20 Defense, row 2) | Anticipation (Warrior, row 2) | Equal |
 | Reverence (50%, row 2, C-H1) | Mindfulness (row 2), Meditation and Reflection (row 3) | Equal |
 | Improved Seals (+15% Seals and Judgements, 3 points, row 1) | Concussion (+5%), Improved Eviscerate (+20%) | Parity. Strong for each point, but the beta value |
-| Unyielding Faith (−30% Fear and Disorient, 2 points, Holy row 1 with M-H2) | Iron Will (−15% stun and fear, 5 points, Warrior row 1), Silent Resolve (−15%, 3 points) | Stronger. Resistance to fear is a Paladin strength. If PvP shows a problem: −10/20% |
+| Unyielding Faith (−30% Fear and Disorient, 2 points, Holy row 1 with the Unyielding Faith move, M-H2) | Iron Will (−15% stun and fear, 5 points, Warrior row 1), Silent Resolve (−15%, 3 points) | Stronger. Resistance to fear is a Paladin strength. If PvP shows a problem: −10/20% |
 | Holy Conduit (−40% on 4 spells, 2 points, Retribution row 2) | Moonglow (−25%, 3 points, row 2), Cataclysm (−10%, 3 points) | Stronger for each point, but on few spells (W4) |
-| Vindication (+5% Attack Power, 5 points, Retribution row 2 with C-P3) | Demoralizing Shout, Demoralizing Roar (baseline Attack Power debuffs) | Equal. The stack with these debuffs is not known (Open questions) |
+| Vindication (+5% Attack Power, 5 points, Retribution row 2 with Toughness and Divine Strength removal, C-P3) | Demoralizing Shout, Demoralizing Roar (baseline Attack Power debuffs) | Equal. The stack with these debuffs is not known (Open questions) |
 | Improved Judgement (−2 sec, 2 points) | Improved Mind Blast (−2.5 sec, 5 points), Reverberation (−1 sec, 5 points) | Stronger for each point. It is the Classic value |
 | Guardian's Favor (Protection row 2), Sacred Duty, Improved Hammer of Justice | Endurance, Elusiveness, Brutal Impact (row 2). Frost Warding, Earth's Grasp (row 1 utility) | Stronger on saves |
-| Two-Handed Weapon Specialization (+6%, row 4 with M-R1) | Two-Handed Weapon Specialization (Warrior, +3%, row 4) | Stronger, intentional. Retribution is the two-handed spec of the class. The 3% difference gives Retribution about +10 DPS (+3%). See Analysis, Damage, part 8 |
+| Two-Handed Weapon Specialization (+6%, row 4 with the Two-Handed Weapon Specialization move, M-R1) | Two-Handed Weapon Specialization (Warrior, +3%, row 4) | Stronger, intentional. Retribution is the two-handed spec of the class. The 3% difference gives Retribution about +10 DPS (+3%). See Analysis, Damage, part 8 |
 
 ## Paladin strengths
 
