@@ -149,7 +149,7 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 - **Proposed text (rank 3).** "Increases the amount of damage absorbed by your shield by 30%, and gives your blocks a 100% chance to restore 4% of your maximum Mana. May only occur once every 2 sec."
 - **Change.** Only the limit changes: once each 2 sec, not once each 3 sec. The ranks, the chance and the 4% return do not change.
 - **Why.** C10 removes Improved Seal of Fury (about 23 mana per sec while you tank). Sanctified Judgement 3/3 gives back about 17 for the tank builds PB1–PB4. Holy Shield rank 3 costs 24 mana per sec. Without C13, a fresh level 60 PB1 tank (2,897 mana) loses about 7 mana per sec without Consecration.
-- **Value.** A boss that swings each 2 sec can trigger it with each block: 4% of maximum mana × 60% block ÷ 2 sec. This is 35 mana per sec at fresh level 60 and 59 in Naxxramas (beta: 19 and 33). Tanking without Consecration gives +4 to +30 mana per sec (see Analysis, Mana).
+- **Value.** A boss that swings each 2 sec can trigger it with each block: 4% of maximum mana × 60% block ÷ 2 sec. This is 35 mana per sec at fresh level 60 and 59 in Naxxramas (beta: 19 and 33). PB1 tanking without Consecration gets +8 to +34 mana per sec (see Analysis, Mana).
 - **Model.** Warriors and Druids get rage when they are hit. Water Shield (Shaman) gives mana when the Shaman is hit. Shield Specialization is already the Paladin version. Thus, no new talent is necessary.
 - **Synergy.** More block gives more mana. Thus, the crushing blow fix (C6) and the mana fix help each other.
 - **Limits.** Against groups of enemies, it gives a maximum of 2% of maximum mana each sec: 58 at fresh level 60, 98 in Naxxramas (beta: 39 and 65). It gives nothing to a Paladin who is not hit. Sanctified Judgement is for that case.
@@ -203,8 +203,8 @@ Simulation: the boss swings each 2 sec. 60% block with C6, 10.7% dodge, 15% parr
 | Spec (maximum mana, mana income) | Heal (maximum health, estimate) | Beta: time until the mana is back | C25 2/2: drain, time until the mana is back |
 | --- | --- | --- | --- |
 | Holy (4,416, +22.6 per sec) | About 4,000 | 3 min 15 sec | 2,208: 1 min 38 sec |
-| Protection, fresh level 60 (2,897, +3.9 per sec while tanking) | About 5,500 | 12 min 23 sec | 1,449: 6 min 11 sec |
-| Protection, Naxxramas (4,900, +29.8 per sec) | About 8,500 | 2 min 44 sec | 2,450: 1 min 22 sec |
+| Protection PB1, fresh level 60 (2,897, +8.3 per sec while tanking) | About 5,500 | 5 min 49 sec | 1,449: 2 min 54 sec |
+| Protection PB1, Naxxramas (4,900, +34.2 per sec) | About 8,500 | 2 min 23 sec | 2,450: 1 min 11 sec |
 
 The mana values use a fresh level 60 Holy profile with no raid buffs and no consumables: 4,416 mana and 22.6 mana per sec.
 
