@@ -177,7 +177,7 @@ The rules of the recovery model:
 - The cost of Light's Vigil has a large effect: at 50% less, the Paladin is 51–72% above the Shaman.
 - Two other values with no test can make Light's Vigil stronger. They are the Holy Power bonus (+15% critical chance for Holy Shock) and the Healing Light bonus.
 
-## 7. C-H3 in PvP
+## 7. Infusion of Light (C-H3) in PvP
 
 Assumptions:
 

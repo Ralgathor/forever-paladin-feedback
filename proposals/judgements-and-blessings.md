@@ -14,7 +14,7 @@
 - **Tradeoff.** Other players who do Holy damage do not receive the bonus.
 - **For Protection.** A raid can need the one Judgement of the tank for Light or Wisdom. In the beta, the tank then loses Judgement of the Crusader. With Personal Judgement of the Crusader (C2), the tank keeps it and can also apply Light or Wisdom. Judgement of the Crusader gives a Protection Paladin about +55 TPS (see Analysis, Threat).
 
-## Alternatives to C2
+## Alternatives to Personal Judgement of the Crusader (C2)
 
 | ID | Option | How it works | Precedent | Tradeoff |
 | --- | --- | --- | --- | --- |
@@ -69,7 +69,7 @@ Flash of Light + Holy Light (Infusion of Light, C-H3), healing per sec with no c
 - The healing of the Paladin does not change with the number of Paladins.
 - For the comparison with the other healers, see Analysis, Healing, parts 4 and 5.
 
-## Alternatives to C3
+## Alternatives to Blessing of Light removal (C3)
 
 | ID | Option | How it works | Precedent | Tradeoff |
 | --- | --- | --- | --- | --- |

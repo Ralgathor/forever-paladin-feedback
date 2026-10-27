@@ -15,7 +15,7 @@
 
 Redoubt (C-P1) uses the Warrior method: it removes crushing blows with block. The Protection tree already gives block.
 
-## How C-P1 fixes the problem
+## How Redoubt (C-P1) fixes the problem
 
 - **Redoubt in the beta** gives +4–20% block for 10 sec or 5 blocks. Only 10% of melee hits start it. Thus, it is active about half of the time.
 - **With Redoubt (C-P1),** each Holy Shield cast (each 10 sec) starts Redoubt again. Thus, the two buffs are always active together.
