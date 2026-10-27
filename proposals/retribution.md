@@ -16,13 +16,6 @@ These proposals connect the melee attacks of Retribution to its Holy spells. The
 
 Retribution has 41 points (beta: 44). Benediction (M-P1) moves to Protection row 1. Vindication goes to row 2, column 3, with 5 ranks (see Protection, C-P3).
 
-## C-R1. Conviction: attacks and spells
-
-- **Proposed text.** "Improves your chance to get a critical strike with attacks and spells by 1/2/3/4/5%."
-- **Model.** Thundering Strikes (Shaman) has the same change.
-- **Real change.** In the beta, Conviction already applies to damage Seals and Hammer of Wrath. The change adds only Holy Shock, Exorcism, Consecration and heals.
-- **Cost for healers.** Conviction (M-R2) is in row 1. Thus, a Holy Paladin needs only 5 Retribution points.
-
 ## C1. Holy Strike triggers your Seal and Echo (spell change)
 
 - **Proposed Holy Strike text (spell, all specs).** "An instant strike that causes 50% weapon damage plus an additional 81 to 105 as Holy damage. Triggers your active Seal and Echo the same as a melee attack."
@@ -33,6 +26,13 @@ Retribution has 41 points (beta: 44). Benediction (M-P1) moves to Protection row
 - **Protection.** Seal of Fury on each Holy Strike gives about +14 TPS. The Threat tables do not include it.
 - **Seal of Justice.** In the beta, Holy Strike already triggers Seal of Justice and its stun chance. Holy Strike Seal trigger (C1) does not change this.
 - **Balance.** If Retribution does more damage than the pure damage classes in raids, decrease the Sacred Arbiter bonus first: +20% → +10% (see Watch list, W15).
+
+## C-R1. Conviction: attacks and spells
+
+- **Proposed text.** "Improves your chance to get a critical strike with attacks and spells by 1/2/3/4/5%."
+- **Model.** Thundering Strikes (Shaman) has the same change.
+- **Real change.** In the beta, Conviction already applies to damage Seals and Hammer of Wrath. The change adds only Holy Shock, Exorcism, Consecration and heals.
+- **Cost for healers.** Conviction (M-R2) is in row 1. Thus, a Holy Paladin needs only 5 Retribution points.
 
 ## C-R2. Twist of Light: the Echo lasts 10 sec
 

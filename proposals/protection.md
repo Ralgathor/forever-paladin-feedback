@@ -165,12 +165,6 @@ Simulation: the boss swings each 2 sec. 60% block with Redoubt (C-P1), 10.7% dod
 - **No new button.** You already use Holy Shield on cooldown. Redoubt (C-P1) keeps about 3 blocks each 10 sec.
 - **PvP.** At about 125 block value, each block does about 250 more Holy damage. The maximum is 4 blocks each 10 sec, against melee attacks only. Only Protection has Holy Shield.
 
-## M-P1. Benediction: Retribution row 1 → Protection row 1
-
-- **Text.** "Reduces the Mana cost of all instant cast spells and abilities by 2/4/6/8/10%." 5 ranks, the same as the beta.
-- **Position.** Protection row 1, column 2. It takes the place of Toughness (C-P3).
-- **Why.** A tank casts many instant spells. Holy and Retribution open Protection row 2 with it. See Toughness and Divine Strength removal (C-P3) for the full reason.
-
 ## C-P10. Guardian's Favor: Hand of Sacrifice cooldown
 
 - **Proposed text.** "Reduces the cooldown of your Hand of Protection by 1/2 min and of your Hand of Sacrifice by 5/10 sec, and increases the duration of your Hand of Freedom by 3/6 sec." 2 ranks, the same as the beta, in row 2.
@@ -235,3 +229,9 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 | ID | Option | How it works | Precedent | Tradeoff |
 | --- | --- | --- | --- | --- |
 | C-P11a | Change the base spell (use this if Blizzard does not want the talent) | Lay on Hands drains 50% of the current mana for all Paladins. Devoted Sacrifice keeps only the Hand of Sacrifice part | Forever moves the cooldown of Improved Lay on Hands into the spell | All specs receive it with no points. There is no talent choice. Retribution raid builds also receive it |
+
+## M-P1. Benediction: Retribution row 1 → Protection row 1
+
+- **Text.** "Reduces the Mana cost of all instant cast spells and abilities by 2/4/6/8/10%." 5 ranks, the same as the beta.
+- **Position.** Protection row 1, column 2. It takes the place of Toughness (C-P3).
+- **Why.** A tank casts many instant spells. Holy and Retribution open Protection row 2 with it. See Toughness and Divine Strength removal (C-P3) for the full reason.
