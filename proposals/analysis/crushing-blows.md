@@ -13,12 +13,12 @@
 | Druid | No shield. Thick Hide armor increases with Defense. Bear Form gives up to +20% Stamina | Crushing blows always occur. The Druid has the armor and health to survive them |
 | Paladin (beta) | Holy Shield: +30% block, 4 charges, 10 sec, 10 sec cooldown. Redoubt is a 10% proc | Needs about 72% avoidance from gear. Crushing blows occur, as for the Druid, but without the Druid armor and health |
 
-Redoubt (C6) uses the Warrior method: it removes crushing blows with block. The Protection tree already gives block.
+Redoubt (C-P1) uses the Warrior method: it removes crushing blows with block. The Protection tree already gives block.
 
-## How C6 fixes the problem
+## How C-P1 fixes the problem
 
 - **Redoubt in the beta** gives +4–20% block for 10 sec or 5 blocks. Only 10% of melee hits start it. Thus, it is active about half of the time.
-- **With Redoubt (C6),** each Holy Shield cast (each 10 sec) starts Redoubt again. Thus, the two buffs are always active together.
+- **With Redoubt (C-P1),** each Holy Shield cast (each 10 sec) starts Redoubt again. Thus, the two buffs are always active together.
 - **The charges are sufficient.** A boss that swings each 2 sec swings 5 times in 10 sec. About 3 of these swings are blocked. Redoubt has 5 blocks and Holy Shield has 4 charges.
 - **First hit.** Cast Holy Shield before the pull. Then it covers the first swing of the boss.
 - **Holy Shield stays at +30%.** With the Redoubt trigger, +30% already gives the same result as the Warrior.
@@ -51,6 +51,6 @@ Both tanks have 440 Defense and about 100 Agility. The boss swings each 2 sec. S
 |  | Swings covered | Crushing blow chance on other swings | Swings that can be crushing blows |
 | --- | --- | --- | --- |
 | Warrior | About 80% (2 of 2.5 swings each 5 sec) | 15% | About 3% |
-| Paladin with Redoubt (C6) | About 100% | About 4.3% | About 4.3% |
+| Paladin with Redoubt (C-P1) | About 100% | About 4.3% | About 4.3% |
 
 The two tanks are equal. Gear closes the Paladin gap. The Warrior gaps change with the swing speed of the boss.

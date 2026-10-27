@@ -1,10 +1,10 @@
 # PvP burst check
 
-This check is for Reckoning (C11). The build is 0/26/25 with a two-handed weapon. It is the build v5p-532300210215002-5005031211331 in the calculator (RB5):
+This check is for Reckoning (C-P6). The build is 0/26/25 with a two-handed weapon. It is the build v5p-532300210215002-5005031211331 in the calculator (RB5):
 
 - Protection 26: Reckoning 5/5, Swift Judgement, Improved Hammer of Justice 2/3.
 - Retribution 25: Seal of Command, Sacred Arbiter, Two-Handed Weapon Specialization 3/3, Vengeance 3/3, Conviction 5/5.
-- Toughness and Divine Strength removal (C8) deletes Divine Strength from this build. The model uses a fixed 300 damage for each swing. Thus, the values do not change. Without +10% Strength, the real burst is about 2% lower.
+- Toughness and Divine Strength removal (C-P3) deletes Divine Strength from this build. The model uses a fixed 300 damage for each swing. Thus, the values do not change. Without +10% Strength, the real burst is about 2% lower.
 
 The values are estimates, not a simulation.
 
@@ -21,7 +21,7 @@ The values are estimates, not a simulation.
 
 | Part of the burst | Proposed | Beta, no stored attacks | Beta, 4 stored attacks |
 | --- | --- | --- | --- |
-| Holy Strike | 500 (+20%, and Seal of Command on 41% of Holy Strikes, Holy Strike Seal trigger, C16) | 390 (+20% damage, no Seal effect) | 390 |
+| Holy Strike | 500 (+20%, and Seal of Command on 41% of Holy Strikes, Holy Strike Seal trigger, C1) | 390 (+20% damage, no Seal effect) | 390 |
 | Extra attacks (about 390 each) | 2: 780 | 0 | 4: 1,570 |
 | Auto attacks (about 1.7) | 670 | 670 | 670 |
 | Two Judgements on a stunned target (about 535 each) | 1,070 | 1,070 | 1,070 |
