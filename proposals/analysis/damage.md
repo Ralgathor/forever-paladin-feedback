@@ -236,3 +236,45 @@ Judgement of the Crusader gives about +10% DPS at fresh level 60. It adds 161 Ho
 - The Fury and Rogue values with the same gear are less certain than their increase with gear. Thus, part 6 uses only the increase.
 - Boss armor is the same at all tiers, as in Classic.
 - Consumables are not in the model.
+
+## 10. Check with wowsims
+
+wowsims Forever with the proposals gives the same Retribution increase as the model, within 5%. The Retribution level against the Warrior is lower in wowsims than in the model.
+
+Conditions: wowsims Forever commit 69e0e5b with the proposals patch (models/wowsims). Presets of wowsims for gear, talents, rotation and consumables. The same raid buffs for all specs, a 3 min fight against one level 63 boss, 3,000 iterations. Beta: the wowsims Retribution preset. Proposed: RB1 with Reverence (C-H1), Conviction (C-R1), Holy Strike Seal trigger (C1), Twist of Light (C-R2) and Sanctified Judgement (C-R3).
+
+| Value | Model | wowsims | Difference |
+| --- | --- | --- | --- |
+| Retribution, all proposals against the beta (same talents) | +11% | +6% | −4.5% |
+| Beta Retribution against Arms, same gear | 115% | 108% | −5.7% |
+| Retribution, all proposals, as a % of Fury | 101% (part 5) | 100% | −1% |
+
+- **Proposals against the beta.** The two results agree. In wowsims, Twist of Light (C-R2) gives +3.1% and the Holy Strike Seal trigger (C1) gives +2.3%. Conviction (C-R1), Reverence (C-H1) and Sanctified Judgement (C-R3) each give +0.2% or less in a raid.
+- **Beta against Arms (−5.7%).** The model uses the gear of part 1 for both specs. wowsims uses the Arms pre-raid gear for both specs, with consumables. Both results put the beta Retribution above Arms.
+- **Against Fury.** Part 5 uses the MythicSim ratio for Fury. With this ratio, the model gives 101% and wowsims gives 100%. The model Fury with the gear of part 1 gives a different result (119%). Thus, part 5 does not use the model Fury.
+
+**wowsims result of each spec** (DPS, raid buffs)
+
+| Spec | Raid | Raid, no consumables | Alone (no buffs) |
+| --- | --- | --- | --- |
+| Hunter (Marksmanship) | 907 | 807 | 259 |
+| Mage (Fire) | 852 | 678 | 485 |
+| Fury Warrior (pre-raid gear) | 817 | 734 | 358 |
+| **Retribution, all proposals** | **816** | **661** | **318** |
+| Retribution, beta | 790 | 640 | 270 |
+| Shadow Priest | 774 | 680 | 302 |
+| Balance Druid (pre-raid gear) | 742 | 559 | 311 |
+| Arms Warrior (pre-raid gear) | 721 | 650 | 268 |
+| Warlock (Destruction) | 707 | 530 | 438 |
+| Enhancement Shaman | 658 | 544 | 240 |
+| Rogue (Combat gear) | 649 | 603 | 297 |
+| Feral Druid | 620 | 620 | 310 |
+| Elemental Shaman | 575 | 416 | 181 |
+| Pure average (Fury, Rogue, Hunter, Mage, Warlock) | 787 | 671 | 367 |
+
+- In a raid, the beta Retribution is 100% of the pure average. With all proposals, it is 104%, and 100% of Fury.
+- Without consumables, Retribution is 95% (beta) and 99% (proposed) of the pure average.
+- Alone, Retribution is 74% (beta) and 87% (proposed) of the pure average. Retribution has more raid buffs in its damage than the pure classes.
+- Sacred Arbiter at +10% removes 0.9% of the raid damage. An Echo of 6 sec removes 0.6%.
+
+The scripts are run_damage.py and check.py in models/wowsims. See its README for the setup and the proposal flags.

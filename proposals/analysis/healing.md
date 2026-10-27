@@ -220,3 +220,45 @@ The values in brackets are for a raid fight of 3 min at 715 healing power.
 - **Overhealing.** The values are estimates. They change with the raid, the damage and the healer assignments.
 - **Light's Vigil.** Only one Light's Vigil for each party can be active. The model gives the Paladin a full party of 5. With fewer players near the target, the heal is less.
 - **Builds.** Analysis, Builds uses the first version of this model (with the Classic big heals of the other classes). Its values compare Paladin builds only. Thus, this comparison with the other healers does not change them.
+
+## 9. Check with wowsims
+
+wowsims Forever and the model agree for the Paladin: the healing for each point of mana is within −4% to +5%. For the Priest, wowsims gives a higher Greater Heal cost, because a plan with one spell has no Litany of Light return.
+
+Conditions: wowsims Forever commit 69e0e5b with the proposals patch (models/wowsims). The Holy Paladin gear of wowsims (382 healing power with raid buffs) for both classes. Raid buffs, no consumables, a 3 min fight, 1,000 iterations. One heal plan on one target. The sim has no overhealing. Thus, the values are raw healing for each point of mana, with the Illumination return.
+
+- Beta: Healing Light 3/3, Reverence, Infusion of Light, Illumination, Divine Favor, Holy Shock, Holy Power, Light's Vigil, Benediction 5.
+- Proposed: the same with Conviction 5, Reverence (C-H1), Lingering Light 20% (C-H2), Infusion of Light (C-H3), Healing Light 30% (C-H4), Conviction on heals (C-R1). No Blessing of Light (C3).
+- Priest: Improved Healing 3/3, Litany of Light 2/2, Spiritual Guidance 5/5, Spiritual Healing 3/3, Inspiration 3/3, Holy Specialization 5/5, Divine Fury 5/5.
+
+| Plan | Model | wowsims | Difference |
+| --- | --- | --- | --- |
+| Beta, Holy Light, Blessing of Light | 4.81 | 5.04 | +4.8% |
+| Beta, Flash of Light, Blessing of Light | 5.90 | 5.77 | −2.3% |
+| Beta, Holy Light, no Blessing of Light | 3.95 | 4.16 | +5.3% |
+| Beta, Flash of Light, no Blessing of Light | 4.74 | 4.65 | −2.1% |
+| Beta, Flash of Light and Holy Light on Infusion, no Blessing of Light | 4.33 | 4.44 | +2.5% |
+| **Proposed, Holy Light** | **5.23** | **5.41** | **+3.4%** |
+| **Proposed, Flash of Light** | **6.28** | **6.01** | **−4.3%** |
+| **Proposed, Flash of Light then Holy Light** | **5.41** | **5.51** | **+1.8%** |
+| Priest, Greater Heal | 5.30 | 4.67 | −12% |
+| Priest, Flash Heal | 3.58 | 3.27 | −8.6% |
+
+- **Paladin.** The model gives Holy Light 3–5% less and Flash of Light 2–4% more than wowsims. The largest difference is +5.3%. The cause is not confirmed: wowsims gives 19.9% critical heals, and the model uses 22.8%.
+- **The proposals.** Against the beta with no Blessing of Light, the proposals give +24% to +30% healing for each point of mana. Lingering Light (C-H2) gives 6.5% of the Paladin healing.
+- **Priest mana.** wowsims gives 604 mana for each Greater Heal and 380 for each Flash Heal. Improved Healing 3/3 is in the two values. The model uses 491 and 342: Litany of Light returns 20% of the base cost on about 80% of the casts. A plan with one spell has no return.
+- **Priest healing.** wowsims gives 8% more healing for each Greater Heal (2,818 against 2,604). Flash Heal agrees (+1.5%). The cause of the Greater Heal difference is not confirmed.
+
+**Total healing in 3 min, one heal plan** (wowsims, Paladin gear for both classes)
+
+| Healer | Healing | Against the Priest (Greater Heal) |
+| --- | --- | --- |
+| Paladin beta, Holy Light, no Blessing of Light | 56,500 | −17% |
+| Paladin beta, Holy Light, Blessing of Light | 68,600 | +1% |
+| **Paladin proposed, Holy Light** | **76,000** | **+12%** |
+| **Paladin proposed, Flash of Light then Holy Light** | **76,500** | **+12%** |
+| Priest, Greater Heal | 68,000 | — |
+
+The Druid has no heal spells in wowsims, and the Shaman heal file is not part of the build. Thus, this check has only the Paladin and the Priest. The plans do not use Holy Shock, Divine Favor or Light's Vigil.
+
+The scripts are run_healing.py and check.py in models/wowsims. See its README for the setup and the proposal flags.

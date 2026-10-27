@@ -1,0 +1,556 @@
+diff --git a/sim/core/test_generators.go b/sim/core/test_generators.go
+index 4262aa28b2..58e3ac7704 100644
+--- a/sim/core/test_generators.go
++++ b/sim/core/test_generators.go
+@@ -1,6 +1,7 @@
+ package core
+ 
+ import (
++	"os"
+ 	"fmt"
+ 	"maps"
+ 	"math"
+@@ -555,6 +556,10 @@ func (config CharacterSuiteConfig) defaultPlayerAndRaid() (*proto.Player, *proto
+ // Also accepts JSON build config, Example:
+ // core.GetTestBuildFromJSON(proto.Class_ClassWarrior, "../../../ui/specs/warrior/arms/builds", "default", ItemFilter, proto.Stat_StatStrength, nil)
+ func FullCharacterTestSuiteGenerator(configs []CharacterSuiteConfig) []TestGenerator {
++	if dir := os.Getenv("ZZDUMP"); dir != "" {
++		zzDumpConfigs(dir, configs)
++		return nil
++	}
+ 	testIndex := 0
+ 	return MapSlice(configs, func(config CharacterSuiteConfig) TestGenerator {
+ 		allRaces := append(config.OtherRaces, config.Race)
+diff --git a/sim/core/zz_dump.go b/sim/core/zz_dump.go
+new file mode 100644
+index 0000000000..7e8f8ee4b5
+--- /dev/null
++++ b/sim/core/zz_dump.go
+@@ -0,0 +1,40 @@
++package core
++
++import (
++	"fmt"
++	"os"
++	"strings"
++
++	"github.com/wowsims/forever/sim/core/proto"
++	"google.golang.org/protobuf/encoding/protojson"
++)
++
++func zzDumpConfigs(dir string, configs []CharacterSuiteConfig) {
++	os.MkdirAll(dir, 0o755)
++	for _, config := range configs {
++		gears := append([]GearSetCombo{config.GearSet}, config.OtherGearSets...)
++		tals := append([]TalentsCombo{{Label: "default", Talents: config.Talents}}, config.OtherTalentSets...)
++		rots := append([]RotationCombo{config.Rotation}, config.OtherRotations...)
++		specs := append([]SpecOptionsCombo{config.SpecOptions}, config.OtherSpecOptions...)
++		for _, g := range gears {
++			for _, t := range tals {
++				for _, r := range rots {
++					for si, so := range specs {
++						if si > 0 && len(specs) > 3 {
++							continue
++						}
++						c := config
++						c.GearSet, c.Talents, c.Rotation, c.SpecOptions = g, t.Talents, r, so
++						p, raid := c.defaultPlayerAndRaid()
++						name := fmt.Sprintf("%s__%s__%s__%s__%s", proto.Class_name[int32(config.Class)], g.Label, t.Label, r.Label, so.Label)
++						name = strings.ReplaceAll(name, "/", "_")
++						b, _ := protojson.Marshal(p)
++						os.WriteFile(dir+"/"+name+".player.json", b, 0o644)
++						rb, _ := protojson.Marshal(raid)
++						os.WriteFile(dir+"/"+name+".raid.json", rb, 0o644)
++					}
++				}
++			}
++		}
++	}
++}
+diff --git a/sim/paladin/flash_of_light.go b/sim/paladin/flash_of_light.go
+index 40a8eb79b6..eeacf70ce7 100644
+--- a/sim/paladin/flash_of_light.go
++++ b/sim/paladin/flash_of_light.go
+@@ -22,7 +22,7 @@ func (paladin *Paladin) registerFlashOfLight(_ int32, rank *spelldata.Spell) {
+ 
+ 	config.ApplyEffects = func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
+ 		amount := heal.Average() + paladin.flashOfLightBonusHealing
+-		if target.HasActiveAuraWithTag(buffs.GreaterBlessingOfLightCategory) {
++		if target.HasActiveAuraWithTag(buffs.GreaterBlessingOfLightCategory) || prop("BOL") {
+ 			amount += blessingOfLightFlashOfLightBonus
+ 		}
+ 		spell.CalcAndDealHealing(sim, target, amount, spell.OutcomeHealingCrit)
+diff --git a/sim/paladin/holy_light.go b/sim/paladin/holy_light.go
+index 737917eee9..b84444f3c8 100644
+--- a/sim/paladin/holy_light.go
++++ b/sim/paladin/holy_light.go
+@@ -28,7 +28,7 @@ func (paladin *Paladin) registerHolyLight(_ int32, rank *spelldata.Spell) {
+ 
+ 	config.ApplyEffects = func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
+ 		amount := heal.Average()
+-		if target.HasActiveAuraWithTag(buffs.GreaterBlessingOfLightCategory) {
++		if target.HasActiveAuraWithTag(buffs.GreaterBlessingOfLightCategory) || prop("BOL") {
+ 			amount += blessingOfLightHolyLightBonus
+ 		}
+ 		spell.CalcAndDealHealing(sim, target, amount, spell.OutcomeHealingCrit)
+diff --git a/sim/paladin/holy_shield.go b/sim/paladin/holy_shield.go
+index bba09b1fbd..2cf6eeca44 100644
+--- a/sim/paladin/holy_shield.go
++++ b/sim/paladin/holy_shield.go
+@@ -29,7 +29,11 @@ func (paladin *Paladin) registerHolyShield(_ int32, rank *spelldata.Spell) {
+ 	procConfig.BonusCoefficient = damageEffect.Coeff()
+ 	procConfig.ThreatMultiplier = 1.2 // The tooltip's 20% additional threat.
+ 	procConfig.ApplyEffects = func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
+-		spell.CalcAndDealDamage(sim, target, damage, spell.OutcomeMagicHit)
++		d := damage
++		if prop("C14") {
++			d += zzNum("HSBV", 200) / 100 * paladin.BlockDamageReduction()
++		}
++		spell.CalcAndDealDamage(sim, target, d, spell.OutcomeMagicHit)
+ 	}
+ 	procSpell := paladin.RegisterSpell(procConfig)
+ 
+diff --git a/sim/paladin/seal_of_command.go b/sim/paladin/seal_of_command.go
+index 19f65d8c6a..6879afedc6 100644
+--- a/sim/paladin/seal_of_command.go
++++ b/sim/paladin/seal_of_command.go
+@@ -89,6 +89,14 @@ func (paladin *Paladin) registerSealOfCommand(_ int32, rank *spelldata.Spell) {
+ 		Label:    rank.RankedLabel(&paladin.Unit),
+ 		ActionID: core.ActionID{SpellID: rank.ID},
+ 		Duration: sealDuration,
++	}).AttachProcTrigger(core.ProcTrigger{
++		Callback:       core.CallbackOnSpellHitDealt,
++		ClassSpellMask: SpellMaskHolyStrike,
++		Outcome:        core.OutcomeLanded,
++		ExtraCondition: func(_ *core.Simulation, _ *core.Spell, _ *core.SpellResult) bool { return prop("C16") },
++		Handler: func(sim *core.Simulation, _ *core.Spell, result *core.SpellResult) {
++			tryProc(sim, result.Target)
++		},
+ 	}).AttachProcTrigger(core.ProcTrigger{
+ 		Callback: core.CallbackOnSpellHitDealt,
+ 		ProcMask: core.ProcMaskMeleeWhiteHit,
+diff --git a/sim/paladin/seal_of_righteousness.go b/sim/paladin/seal_of_righteousness.go
+index 3fd44c28f6..ba2359431c 100644
+--- a/sim/paladin/seal_of_righteousness.go
++++ b/sim/paladin/seal_of_righteousness.go
+@@ -100,6 +100,14 @@ func (paladin *Paladin) registerSealOfRighteousness(_ int32, rank *spelldata.Spe
+ 		Handler: func(sim *core.Simulation, _ *core.Spell, result *core.SpellResult) {
+ 			procSpell.Cast(sim, result.Target)
+ 		},
++	}).AttachProcTrigger(core.ProcTrigger{
++		Callback:       core.CallbackOnSpellHitDealt,
++		ClassSpellMask: SpellMaskHolyStrike,
++		Outcome:        core.OutcomeLanded,
++		ExtraCondition: func(_ *core.Simulation, _ *core.Spell, _ *core.SpellResult) bool { return prop("C16") },
++		Handler: func(sim *core.Simulation, _ *core.Spell, result *core.SpellResult) {
++			procSpell.Cast(sim, result.Target)
++		},
+ 	}))
+ 
+ 	paladin.registerSealSpell(&sealConfig{
+diff --git a/sim/paladin/talents_holy.go b/sim/paladin/talents_holy.go
+index 7fa09675ff..97e06725ac 100644
+--- a/sim/paladin/talents_holy.go
++++ b/sim/paladin/talents_holy.go
+@@ -14,6 +14,7 @@ func (paladin *Paladin) registerHolyTalents() {
+ 
+ 	// Tier 2
+ 	paladin.applyHealingLight()
++	paladin.zzApplyHolyProposals()
+ 	paladin.applySpiritualFocus()
+ 	paladin.applyImprovedSeals()
+ 	// Unyielding Faith shortens Fear and Disorient effects, which the sim never suffers.
+@@ -65,6 +66,15 @@ func (paladin *Paladin) applyHealingLight() {
+ 		return
+ 	}
+ 
++	if prop("HL30") {
++		bonus := 0.10 * float64(paladin.Talents.HealingLight)
++		paladin.OnSpellRegistered(func(spell *core.Spell) {
++			if spell.Matches(SpellMaskHolyLight | SpellMaskFlashOfLight | SpellMaskHolyShockHeal) {
++				spell.DamageMultiplierAdditive += bonus
++			}
++		})
++		return
++	}
+ 	spelldata.ParseStatic(&paladin.Character, spellData.HealingLight.Rank(paladin.Talents.HealingLight))
+ }
+ 
+@@ -100,6 +110,10 @@ func (paladin *Paladin) applyReverence() {
+ 		return
+ 	}
+ 
++	if prop("C1") {
++		paladin.PseudoStats.SpiritRegenRateCasting += []float64{0, 0.17, 0.33, 0.50}[paladin.Talents.Reverence]
++		return
++	}
+ 	spelldata.ParseStatic(&paladin.Character, spellData.Reverence.Rank(paladin.Talents.Reverence))
+ }
+ 
+@@ -147,6 +161,27 @@ func (paladin *Paladin) applyInfusionOfLight() {
+ 	})
+ 	trigger.Name = "Infusion of Light - Trigger" + paladin.Label
+ 	trigger.ClassSpellMask = SpellMaskHolyShock | SpellMaskHolyShockHeal | SpellMaskFlashOfLight
++	if prop("IOL") {
++		paladin.MakeProcTriggerAura(core.ProcTrigger{
++			Name:               "Infusion of Light - Cast" + paladin.Label,
++			Callback:           core.CallbackOnCastComplete,
++			ClassSpellMask:     SpellMaskHolyShock | SpellMaskHolyShockHeal | SpellMaskFlashOfLight,
++			TriggerImmediately: true,
++			Handler: func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
++				infusion.Activate(sim)
++			},
++		})
++		paladin.MakeProcTriggerAura(core.ProcTrigger{
++			Name:           "Infusion of Light - Holy Strike" + paladin.Label,
++			Callback:       core.CallbackOnSpellHitDealt,
++			ClassSpellMask: SpellMaskHolyStrike,
++			Outcome:        core.OutcomeLanded,
++			Handler: func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
++				infusion.Activate(sim)
++			},
++		})
++		return
++	}
+ 	paladin.MakeProcTriggerAura(trigger)
+ }
+ 
+diff --git a/sim/paladin/talents_protection.go b/sim/paladin/talents_protection.go
+index a91bb2e473..ceac820821 100644
+--- a/sim/paladin/talents_protection.go
++++ b/sim/paladin/talents_protection.go
+@@ -1,6 +1,7 @@
+ package paladin
+ 
+ import (
++	"time"
+ 	"github.com/wowsims/forever/sim/core"
+ 	"github.com/wowsims/forever/sim/core/dbcenums"
+ 	"github.com/wowsims/forever/sim/core/spelldata"
+@@ -80,6 +81,17 @@ func (paladin *Paladin) applyRedoubt() {
+ 	})
+ 	trigger.Name = "Redoubt - Trigger" + paladin.Label
+ 	paladin.MakeProcTriggerAura(trigger)
++
++	if prop("C6") {
++		paladin.OnSpellRegistered(func(spell *core.Spell) {
++			if spell.Matches(SpellMaskHolyShield) && spell.RelatedSelfBuff != nil {
++				spell.RelatedSelfBuff.ApplyOnGain(func(_ *core.Aura, sim *core.Simulation) {
++					redoubt.Activate(sim)
++					redoubt.SetStacks(sim, redoubt.MaxStacks)
++				})
++			}
++		})
++	}
+ }
+ 
+ // Precision - Improves your chance to hit by 1/2/3%.
+@@ -155,6 +167,10 @@ func (paladin *Paladin) applyShieldSpecialization() {
+ 
+ 	rank := spellData.ShieldSpecializationTriggered.Highest()
+ 	manaShare := rank.EffectN(1).Percent()
++	if prop("C13") {
++		// Shield Specialization (C-P8): each block restores 2/4/6% of maximum mana, once each 2 sec.
++		manaShare = 0.02 * float64(paladin.Talents.ShieldSpecialization)
++	}
+ 	manaMetrics := paladin.NewManaMetrics(core.ActionID{SpellID: rank.ID})
+ 	manaMetrics.NoThreat = rank.GeneratesNoThreat()
+ 
+@@ -162,6 +178,10 @@ func (paladin *Paladin) applyShieldSpecialization() {
+ 		paladin.AddMana(sim, paladin.MaxMana()*manaShare, manaMetrics)
+ 	})
+ 	trigger.Name = "Shield Specialization" + paladin.Label
++	if prop("C13") {
++		trigger.ICD = 2 * time.Second
++		trigger.ProcChance = 1
++	}
+ 	trigger.Outcome = core.OutcomeBlock
+ 	// The tooltip's "your blocks" counts a block that stops the whole hit.
+ 	trigger.RequireDamageDealt = false
+@@ -209,6 +229,60 @@ func (paladin *Paladin) applyReckoning() {
+ 		stored.AddStack(sim)
+ 	}
+ 
++	if prop("C11") {
++		paladin.MakeProcTriggerAura(core.ProcTrigger{
++			Name:       "Reckoning - Avoid" + paladin.Label,
++			Callback:   core.CallbackOnSpellHitTaken,
++			Outcome:    core.OutcomeBlock | core.OutcomeDodge | core.OutcomeParry,
++			ProcChance: critChance,
++			ICD:        4 * time.Second,
++			Handler:    gain,
++		})
++		paladin.MakeProcTriggerAura(core.ProcTrigger{
++			Name:       "Reckoning - Crit" + paladin.Label,
++			Callback:   core.CallbackOnSpellHitTaken,
++			Outcome:    core.OutcomeCrit,
++			ProcChance: critChance,
++			Handler:    gain,
++		})
++		var extra *core.Spell
++		paladin.MakeProcTriggerAura(core.ProcTrigger{
++			Name:               "Reckoning - Release" + paladin.Label,
++			Callback:           core.CallbackOnCastComplete,
++			ClassSpellMask:     SpellMaskHolyStrike,
++			TriggerImmediately: true,
++			ExtraCondition: func(_ *core.Simulation, _ *core.Spell, _ *core.SpellResult) bool {
++				return extra != nil && stored.IsActive()
++			},
++			Handler: func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
++				n := min(2, stored.GetStacks())
++				if n >= stored.GetStacks() {
++					stored.Deactivate(sim)
++				} else {
++					stored.SetStacks(sim, stored.GetStacks()-n)
++				}
++				target := paladin.CurrentTarget
++				sim.RunAfterCurrentEvent(func(sim *core.Simulation) {
++					for range n {
++						extra.Cast(sim, target)
++					}
++				})
++			},
++		}).ApplyOnInit(func(_ *core.Aura, _ *core.Simulation) {
++			if paladin.AutoAttacks.MHAuto() == nil {
++				return
++			}
++			swing := *paladin.AutoAttacks.MHConfig()
++			swing.ActionID = swing.ActionID.WithTag(rank.ID)
++			swing.ApplyEffects = func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
++				base := spell.Unit.MHWeaponDamage(sim, spell.MeleeAttackPower(target))
++				spell.CalcAndDealDamage(sim, target, base, spell.OutcomeMeleeWeaponSpecialHitAndCrit)
++			}
++			extra = paladin.GetOrRegisterSpell(swing)
++		})
++		return
++	}
++
+ 	paladin.MakeProcTriggerAura(core.ProcTrigger{
+ 		Name:       "Reckoning - Block" + paladin.Label,
+ 		Callback:   core.CallbackOnSpellHitTaken,
+@@ -270,6 +344,17 @@ func (paladin *Paladin) applyIronCreed() {
+ 
+ 	rank := spellData.IronCreedTriggered.Highest()
+ 	reduction := spellData.IronCreed.Effect(dbcenums.A_PROC_TRIGGER_SPELL_WITH_VALUE, 0).FractionAt(paladin.Talents.IronCreed)
++	if prop("C7") {
++		if v := zzNum("IC", -1); v >= 0 {
++			reduction = v / 100
++		}
++		paladin.OnSpellRegistered(func(spell *core.Spell) {
++			if spell.Matches(SpellMaskRighteousFury) {
++				spell.RelatedSelfBuff.AttachMultiplicativePseudoStatBuff(&paladin.PseudoStats.DamageTakenMultiplier, 1-reduction)
++			}
++		})
++		return
++	}
+ 
+ 	ironCreed := paladin.RegisterAura(core.Aura{
+ 		Label:    "Iron Creed" + paladin.Label,
+diff --git a/sim/paladin/talents_retribution.go b/sim/paladin/talents_retribution.go
+index d350ba33e8..8d70aafcd1 100644
+--- a/sim/paladin/talents_retribution.go
++++ b/sim/paladin/talents_retribution.go
+@@ -2,6 +2,7 @@ package paladin
+ 
+ import (
+ 	"fmt"
++	_ "time"
+ 
+ 	"github.com/wowsims/forever/sim/core"
+ 	"github.com/wowsims/forever/sim/core/buffs"
+@@ -87,6 +88,15 @@ func (paladin *Paladin) applyConviction() {
+ 	}
+ 
+ 	spelldata.ParseStatic(&paladin.Character, spellData.Conviction.Rank(paladin.Talents.Conviction))
++	if prop("C15") {
++		pts := float64(paladin.Talents.Conviction)
++		paladin.OnSpellRegistered(func(spell *core.Spell) {
++			if spell.Matches(SpellMaskHolyShock|SpellMaskExorcism|SpellMaskConsecration|SpellMaskHolyWrath) ||
++				(prop("C15H") && spell.Matches(SpellMaskHolyLight|SpellMaskFlashOfLight|SpellMaskHolyShockHeal)) {
++				spell.BonusCritPercent += pts
++			}
++		})
++	}
+ }
+ 
+ // Vindication - Gives your damaging melee attacks a chance to reduce the target's Attack Power by
+@@ -163,7 +173,7 @@ func (paladin *Paladin) applySanctifiedJudgement() {
+ 		Name:               "Sanctified Judgement" + paladin.Label,
+ 		Callback:           core.CallbackOnSpellHitDealt,
+ 		ClassSpellMask:     SpellMaskAllJudgements,
+-		ProcChance:         spellData.SanctifiedJudgement.EffectAt(1).FractionAt(paladin.Talents.SanctifiedJudgement),
++		ProcChance:         core.Ternary(prop("C26"), 1.0, spellData.SanctifiedJudgement.EffectAt(1).FractionAt(paladin.Talents.SanctifiedJudgement)),
+ 		TriggerImmediately: true,
+ 		Handler: func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
+ 			if seal := paladin.activeSeal(); seal != nil {
+@@ -225,7 +235,15 @@ func (paladin *Paladin) applySacredArbiter() {
+ 		return
+ 	}
+ 
+-	spelldata.ParseStatic(&paladin.Character, spellData.SacredArbiter.Rank(1))
++	if prop("SA10") {
++		paladin.OnSpellRegistered(func(spell *core.Spell) {
++			if spell.Matches(SpellMaskHolyStrike) {
++				spell.DamageMultiplier *= 1.10
++			}
++		})
++	} else {
++		spelldata.ParseStatic(&paladin.Character, spellData.SacredArbiter.Rank(1))
++	}
+ 
+ 	paladin.MakeProcTriggerAura(core.ProcTrigger{
+ 		Name:               "Sacred Arbiter" + paladin.Label,
+@@ -353,9 +371,21 @@ func (paladin *Paladin) applyTwistOfLight() {
+ 		echo.aura = paladin.RegisterAura(core.Aura{
+ 			Label:    fmt.Sprintf("Echo (%d)%s", id, paladin.Label),
+ 			ActionID: core.ActionID{SpellID: id},
+-			Duration: core.NeverExpires,
++			Duration: core.Ternary(prop("C17"), zzEcho(), core.NeverExpires),
+ 		})
+ 		echo.aura.NewExclusiveEffect(EchoCategory, true, core.ExclusiveEffect{})
++		echo.aura.AttachProcTrigger(core.ProcTrigger{
++			Callback:       core.CallbackOnSpellHitDealt,
++			ClassSpellMask: SpellMaskHolyStrike,
++			Outcome:        core.OutcomeLanded,
++			ExtraCondition: func(_ *core.Simulation, _ *core.Spell, _ *core.SpellResult) bool { return prop("C16") && prop("C17") },
++			Handler: func(sim *core.Simulation, _ *core.Spell, result *core.SpellResult) {
++				if seal := echo.seal; seal != nil && seal.echo != nil {
++					target := result.Target
++					afterBatch(sim, core.ActionPriorityDOT, func(sim *core.Simulation) { seal.echo(sim, target) })
++				}
++			},
++		})
+ 		echo.aura.AttachProcTrigger(core.ProcTrigger{
+ 			Callback:           core.CallbackOnSpellHitDealt,
+ 			ProcMask:           core.ProcMaskMeleeWhiteHit,
+@@ -370,6 +400,9 @@ func (paladin *Paladin) applyTwistOfLight() {
+ 						seal.echo(sim, target)
+ 					})
+ 				}
++				if prop("C17") {
++					return
++				}
+ 				echo.seal = nil
+ 				echo.aura.Deactivate(sim)
+ 			},
+diff --git a/sim/paladin/zz_holy_proposals.go b/sim/paladin/zz_holy_proposals.go
+new file mode 100644
+index 0000000000..72f49a0ec5
+--- /dev/null
++++ b/sim/paladin/zz_holy_proposals.go
+@@ -0,0 +1,71 @@
++package paladin
++
++import (
++	"time"
++
++	"github.com/wowsims/forever/sim/core"
++)
++
++// Test values for the Holy proposals (PROPOSE flags):
++// HL30: Healing Light 10/20/30% (C-H4). IOL: Infusion of Light without the critical hit and with Holy
++// Strike (C-H3). LL<n>: Lingering Light at n% (C-H2), the rank is not in the beta tree string.
++// HLR<n>: Healing Light ranks to use with HL30 when the beta string has fewer points.
++
++func (paladin *Paladin) zzApplyHolyProposals() {
++	if pct := zzNum("LL", 0); pct > 0 {
++		paladin.zzLingeringLight(pct / 100)
++	}
++}
++
++type zzLLState struct {
++	pool  float64
++	ticks int
++	pa    *core.PendingAction
++}
++
++func (paladin *Paladin) zzLingeringLight(frac float64) {
++	hot := paladin.RegisterSpell(core.SpellConfig{
++		ActionID:         core.ActionID{SpellID: 1999001},
++		SpellSchool:      core.SpellSchoolHoly,
++		DefenseType:      core.DefenseTypeMagic,
++		ProcMask:         core.ProcMaskSpellHealing,
++		Flags:            core.SpellFlagHelpful | core.SpellFlagPassiveSpell | core.SpellFlagIgnoreAttackerModifiers | core.SpellFlagNoOnCastComplete,
++		DamageMultiplier: 1,
++		ThreatMultiplier: 0.5,
++	})
++	states := map[*core.Unit]*zzLLState{}
++	paladin.RegisterResetEffect(func(_ *core.Simulation) { states = map[*core.Unit]*zzLLState{} })
++	paladin.MakeProcTriggerAura(core.ProcTrigger{
++		Name:           "Lingering Light" + paladin.Label,
++		Callback:       core.CallbackOnHealDealt,
++		ClassSpellMask: SpellMaskHolyLight | SpellMaskFlashOfLight | SpellMaskHolyShockHeal,
++		Outcome:        core.OutcomeCrit,
++		Handler: func(sim *core.Simulation, _ *core.Spell, result *core.SpellResult) {
++			target := result.Target
++			st := states[target]
++			if st == nil {
++				st = &zzLLState{}
++				states[target] = st
++			}
++			if st.pa != nil {
++				st.pa.Cancel(sim)
++			}
++			st.pool += frac * result.Damage
++			st.ticks = 3
++			st.pa = core.StartPeriodicAction(sim, core.PeriodicActionOptions{
++				Period:   2 * time.Second,
++				NumTicks: 3,
++				OnAction: func(sim *core.Simulation) {
++					amount := st.pool / float64(st.ticks)
++					st.pool -= amount
++					st.ticks--
++					r := hot.CalcHealing(sim, target, amount, hot.OutcomeHealingCrit)
++					hot.DealPeriodicHealing(sim, r)
++					if st.ticks == 0 {
++						st.pa = nil
++					}
++				},
++			})
++		},
++	})
++}
+diff --git a/sim/paladin/zz_proposals.go b/sim/paladin/zz_proposals.go
+new file mode 100644
+index 0000000000..1198722178
+--- /dev/null
++++ b/sim/paladin/zz_proposals.go
+@@ -0,0 +1,38 @@
++package paladin
++
++import (
++	"os"
++	"strings"
++	"time"
++	"strconv"
++)
++
++func prop(id string) bool {
++	for _, f := range strings.Split(os.Getenv("PROPOSE"), ",") {
++		if f == id {
++			return true
++		}
++	}
++	return false
++}
++
++func zzEcho() time.Duration {
++	for _, f := range strings.Split(os.Getenv("PROPOSE"), ",") {
++		if strings.HasPrefix(f, "ECHO") {
++			n, _ := strconv.Atoi(f[4:])
++			return time.Duration(n) * time.Second
++		}
++	}
++	return 10 * time.Second
++}
++
++func zzNum(prefix string, def float64) float64 {
++	for _, f := range strings.Split(os.Getenv("PROPOSE"), ",") {
++		if strings.HasPrefix(f, prefix) {
++			if n, err := strconv.ParseFloat(f[len(prefix):], 64); err == nil {
++				return n
++			}
++		}
++	}
++	return def
++}
