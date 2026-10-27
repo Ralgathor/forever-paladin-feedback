@@ -20,15 +20,15 @@ Healer dips of other classes:
 
 - **Restoration Shaman** puts 10 points in Enhancement row 1: Ancestral Knowledge (+10% Intellect) and Thundering Strikes (+5% critical hit).
 - **Restoration Druid** puts 5 points in Feral row 1: Heart of the Wild.
-- **Holy Priest** gets Twin Disciplines (row 1), Mental Strength (row 2) and Meditation (row 3) from Discipline.
+- **Holy Priest** receives Twin Disciplines (row 1), Mental Strength (row 2) and Meditation (row 3) from Discipline.
 
 ## Rule 1: rows 1 and 2 give something to the other specs
 
 This table uses the proposed trees with M8 and C8 (calculator version 5).
 
-| Tree | Rows 1–2 | Retribution gets | Protection gets | Holy gets |
+| Tree | Rows 1–2 | Retribution receives | Protection receives | Holy receives |
 | --- | --- | --- | --- | --- |
-| Holy | Improved Seals, Unyielding Faith, Divine Intellect · Infusion of Light, Reverence, Spiritual Focus | Seal damage, −30% Fear, regeneration while casting, a fast Holy Light (7–10 points) | Seal damage, −30% Fear, regeneration (8 points) | — |
+| Holy | Improved Seals, Unyielding Faith, Divine Intellect · Infusion of Light, Reverence, Spiritual Focus | Seal damage, −30% Fear, regeneration during casts, a fast Holy Light (7–10 points) | Seal damage, −30% Fear, regeneration (8 points) | — |
 | Retribution | Deflection, Conviction · Improved Judgement, Holy Conduit, Vindication | — | Parry, critical hit, Judgement −2 sec, cheaper Consecration, a debuff on the boss (5–10 points) | +5% critical heal chance (5 points) |
 | Protection | Benediction, Redoubt · Precision, Guardian's Favor, Anticipation | Instant spells −10%, +3% hit (8 points) | — | Instant spells −10%: Holy Shock, Cleanse. Guardian's Favor: saves (7 points). Redoubt for PvP, and to open row 3 |
 

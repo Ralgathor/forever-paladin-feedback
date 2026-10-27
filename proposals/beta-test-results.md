@@ -9,7 +9,7 @@
 | Spiritual Focus | Adds to other pushback resistance (Concentration Aura 35% + 70% = immune) | None |
 | Improved Seals | Increases the full damage, not only the base. No effect on Seal of the Crusader | None |
 | Unyielding Faith | Diminishing returns not tested | C8 moves it to Holy row 1 |
-| Reverence | Keeps a % of Spirit regeneration while casting. The 5-second rule starts again when a cast ends | Supports C1 |
+| Reverence | Keeps a % of Spirit regeneration during casts. The 5-second rule starts again when a cast ends | Supports C1 |
 | Purifying Power | Multiplies with Benediction (×0.80 × 0.90) | None |
 | Illumination | Returns 50% of the base cost. Cost decreases do not decrease the return | None |
 | Divine Favor | Not on the global cooldown | None |
@@ -65,10 +65,10 @@
 | Seal of Command | 29% × 70% weapon damage = 20.3% of spell power. 7 procs each minute. Uses the melee hit table | Player tests |
 | Judgement of Fury, Righteousness and Command | 42.9% of spell power. Melee hit table. Critical hit: ×2 damage. Judgement of Command: ×2 damage against a stunned target | Player tests; patch note, 16 October |
 | Judgement of Fury | The damage hits before the taunt. The taunt copies the top threat. The threat from the damage is not added. The taunt does not remove Judgement of the Crusader | Player tests |
-| Judgement of the Crusader | The bonus uses the coefficient of each spell, as spell power does. Seal of Command gets the full 29% | Player tests |
+| Judgement of the Crusader | The bonus uses the coefficient of each spell, as spell power does. Seal of Command receives the full 29% | Player tests |
 | Consecration | 0.042 of spell power for each tick (33.6% for each target). First 4 enemies only. Ticks can be critical hits (×1.5) | Patch note, 16 October; player tests |
 | Retribution Aura | 6% of spell power | Patch note, 8 October |
-| Holy Shield | Spell power scaling is not known. Classic: 5% for each block | Classic data |
+| Holy Shield | The spell power coefficient is not known. Classic: 5% for each block | Classic data |
 | Mana return | Mana from Shield Specialization, Improved Seal of Fury and Sanctified Judgement gives no threat | Patch notes, 8 and 16 October |
 | Rage | Rage from damage taken was repaired on 8 October. It uses 20–40% armor, related to level. Critical hits give ×2 rage. Bear Form: ×1.5 threat | Patch note, 8 October |
-| Lay on Hands | Heals for your maximum health. Drains all your remaining mana. The drain does not stop mana regeneration. 20 min cooldown (Classic: 1 hour). Ranks 2 and 3 restore 250 and 550 mana to the target | Forever spellbook (client data); player tests |
+| Lay on Hands | Heals for your maximum health. Drains all your current mana. The drain does not stop mana regeneration. 20 min cooldown (Classic: 1 hour). Ranks 2 and 3 restore 250 and 550 mana to the target | Forever spellbook (client data); player tests |

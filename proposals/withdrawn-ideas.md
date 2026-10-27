@@ -18,10 +18,10 @@ We examined these ideas and rejected them. They are not proposals.
 | Hallowed Ground or Shield Specialization in Protection row 1 | Talents only for tanks. Rows 1 and 2 must give something to the other specs (design rule 2) |
 | A mana talent in each tree (Iron Creed, Righteous Fury, Seal of Fury) | Reverence in row 2 does the same with one talent. Holy can then use the Righteous Fury and Seal of Fury versions |
 | Survive crushing blows with more armor, health and a stronger Seal of Fury absorb | Healers still receive the damage spikes. C6 removes the crushing blows |
-| Holy Shield or Seal of Fury changes crushing blows into normal hits | It goes around the attack table |
+| Holy Shield or Seal of Fury changes crushing blows into normal hits | It ignores the attack table |
 | Redoubt charges that each add a % of block | Block buffs with charges give one fixed bonus |
 | Redoubt on each hit with a 6 sec cooldown | The Holy Shield trigger gives the same uptime with no new rule |
-| Bring back Improved Blessing of Wisdom or Improved Lay on Hands | Forever removes talents that improve a buff |
+| Restore Improved Blessing of Wisdom or Improved Lay on Hands | Forever removes talents that improve a buff |
 | Move Precision into Retribution | The Protection dip for hit is intentional |
 | Exchange Light's Vigil and Holy Power | Each tree ends with a 1-point talent |
 | Divine Precision below 18% | Holy Precision (Priest) is the same, and the spell hit cap is 18% |
@@ -31,7 +31,7 @@ We examined these ideas and rejected them. They are not proposals.
 | Holy Strike releases all 4 Reckoning charges | The 0/26/25 burst is then about 3,800, not 3,020 (+26%) |
 | Reckoning at 40% chance, once each 1.5 sec | Not sufficient charges on a boss (about 1.6 extra attacks each 10 sec) |
 | Reckoning at 100% chance, once each 1.5 sec | The charges stay at the maximum of 4. More than half of the procs are lost. You cannot choose when to keep charges |
-| Exchange Reckoning (row 5) and Iron Creed (row 6) | Reckoning then costs 25 points, but this does not stop a 0/30/21 hybrid. The 2-charge limit does the job without a move |
+| Exchange Reckoning (row 5) and Iron Creed (row 6) | Reckoning then costs 25 points, but this does not stop a 0/30/21 hybrid. The 2-charge limit stops it without a move |
 | Iron Creed without the Holy Strike threat bonus | Simpler text, but about 10 TPS less |
 | Aura Mastery or another talent that improves an aura | A talent that improves a buff, with low value (about −4% damage taken at 3 points). Reach of Law (C12) gives the utility |
 | Sacred Arbiter with +30% Holy Strike damage | About +8 damage per sec: too small for a 15-point talent |
@@ -45,7 +45,7 @@ We examined these ideas and rejected them. They are not proposals.
 | Righteous Fury also increases physical damage threat (×1.5) with a shield | Too weak in late raids (81% of the Druid). It changes Righteous Fury for all specs |
 | Righteous Defense: area taunt (10 yards, 6 sec, 10 min cooldown, as Challenging Shout) | An area taunt with a 10 min cooldown gives little. Shoulder the Burden (C10) saves an ally without a taunt |
 | Righteous Defense: Hand of Protection also makes up to 3 enemies attack you | Only 3 enemies, and only when Hand of Protection is used. Shoulder the Burden (C10) works on all enemies |
-| A shield interrupt in Protection | Paladins have no interrupt by design |
+| A shield interrupt in Protection | Paladins have no interrupt. This is a class design choice |
 | A passive share of the threat of an ally (as Vigilance, Warrior, a later expansion) | Not a new design. Shoulder the Burden is an active spell with a cooldown |
 | Healing Light adds a flat +200/400 to Holy Light and +58/115 to Flash of Light | Talents give a % bonus, not a flat value. C19 uses a % |
 | Merge Blessing of Light and Blessing of Wisdom (Blessing of Grace) | Tanks must then choose between Might and Grace. It does not help melee |
@@ -63,7 +63,7 @@ We examined these ideas and rejected them. They are not proposals.
 | Improved Hammer of Justice in row 3 (M4) | Withdrawn on 26 October 2026. The talent stays in its beta place (row 4). Devoted Sacrifice (C25) uses row 3. Hammer of Justice each 45 sec needs 18 Protection points, as in the beta |
 | Swift Judgement in row 3 (M5) | Withdrawn on 26 October 2026. The talent stays in its beta place (row 4) with no requirement (C10). Shoulder the Burden (C10) takes the row 3 place, and Reach of Law (C12) goes to row 5 |
 | Lay on Hands with no drain | This is the change of patch 3.0.2 (Wrath of the Lich King), a later expansion. A full heal with no cost each 20 min is too strong |
-| Lay on Hands with a fixed cost (for example 30% of maximum mana) | At low mana, you cannot cast it. A drain of a % of the remaining mana keeps this use |
+| Lay on Hands with a fixed cost (for example 30% of maximum mana) | At low mana, you cannot cast it. A drain of a % of the current mana keeps this use |
 | Holy Shock heals ×2 or ×2.5 | With the proposals, the raid healing is already at the level of the Shaman. On one tank, the Paladin is then first by 7–25% (see Analysis, Healing, part 6) |
 | Holy Shock costs 50% less (now) | The Paladin is then 3–10% above the Shaman in raids, and first on one tank by 5–12% (see Analysis, Healing, part 6) |
 | Light's Vigil heals ×1.25 or ×2 | With the proposals, the Paladin is then 1–38% above the Shaman in raids. Not necessary: the raid healing is already at the level of the Shaman (see Analysis, Healing, part 6) |

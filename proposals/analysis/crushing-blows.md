@@ -40,7 +40,7 @@ With Deflection 5/5, Holy Shield and Redoubt active:
 | Block | 5% base + 5% Defense + 30% Holy Shield + 20% Redoubt | 60% |
 | Total |  | 90.7% + Agility ÷ 20 |
 
-- **Difference after the critical hit cap: 9.3%.** This is about 186 Agility or 58 Defense above 440. Until the tank closes this difference, the missing % is the crushing blow chance. With about 100 Agility, about 4.3% of the swings can be crushing blows. This is close to a Warrior between Shield Blocks.
+- **Difference after the critical hit cap: 9.3%.** This is about 186 Agility or 58 Defense above 440. Until the tank closes this difference, this difference is the crushing blow chance. With about 100 Agility, about 4.3% of the swings can be crushing blows. This is close to a Warrior between Shield Blocks.
 - **Holy Shield is the full mechanism.** Without it, crushing blows occur at the full rate.
 - **Gaps.** A late Holy Shield gives a short gap. Fast bosses or bosses with two weapons can use all charges early.
 

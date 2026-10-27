@@ -27,7 +27,7 @@ This section examines the builds that are possible with the proposed trees. It g
 | Build | Points and code | Healing | What it gives |
 | --- | --- | --- | --- |
 | HB1. Raid and PvP healer | 34/12/5: v5p53201132251010512-30200000000000502-0005 | Reference. 22% critical heal chance | All useful Holy talents (34 points). Conviction 5. Benediction 5, Guardian's Favor (Hand of Protection each 3 min) and Devoted Sacrifice (Lay on Hands drains 50%, C25). Redoubt 3 opens row 3 |
-| HB2. Healer with more saves | 32/14/5: v5p53200032251010512-30200020000000502-0005 | The same as HB1 | Sacred Duty 2/2 (Divine Shield −60 sec, +4% Stamina), Guardian's Favor, Devoted Sacrifice and Benediction 5. Redoubt 3. No Unyielding Faith or Voice of Truth. Possible only with Spiritual Focus in row 2 (M2) |
+| HB2. Healer with more saves | 32/14/5: v5p53200032251010512-30200020000000502-0005 | The same as HB1 | Sacred Duty 2/2 (Divine Shield −60 sec, +4% Stamina), Guardian's Favor, Devoted Sacrifice and Benediction 5. Redoubt 3. No Unyielding Faith or Voice of Truth. Possible only with Spiritual Focus in row 2 |
 | HB3. PvP, Hammer of Justice each 45 sec | 28/18/5: v5p53201132251010002-50200010030000502-0005 | About −4% maximum, −8% for the full fight (estimate: as the 30/16/5 build of version 4, without Holy Power 1/5) | Improved Hammer of Justice 3/3 (row 4, 18 Protection points as in the beta), Redoubt 5, Sacred Duty 1/2, Devoted Sacrifice 2/2. Unyielding Faith 1/2. No Light's Vigil and no Holy Power |
 
 - **Holy healing is complete at 32 points** (C2 in row 3, M12). HB1 adds Unyielding Faith 1/2 and Voice of Truth (2 points) for fear bosses and PvP. These are choices, not filler (part 7).
@@ -70,7 +70,7 @@ This section examines the builds that are possible with the proposed trees. It g
 - **DPS for each point:** Seal of Command 82 (1 point), Twist of Light 47 (1 point), Sacred Arbiter 9 (1 point), Two-Handed Weapon Specialization 6.6, Vengeance 5.3, Improved Judgement 5.2, Conviction 5.0, Precision 4.9, Improved Seals 4.7, Champion of the Light 4.4, Instrument of Law 1.9, Vindication 1.3 (5 ranks, C8).
 - **About 6 points are free.** Each choice gives 1.5% DPS or less: Vindication, Divine Intellect, Infusion of Light or Pursuit of Justice.
 - **The dips into Holy and Protection are strong:** Improved Seals +6%, Precision +4%. The Protection dip also gives Benediction 5/5 (M11). Holy Conduit is in the Retribution tree. Thus, rule 1 of Tree balance works for Retribution.
-- **M11 and the Protection dip.** Benediction 5 opens Protection row 2. Thus, the dip is 8 points (Benediction 5, Precision 3), and Guardian's Favor costs 2 more points. RB1, RB2 and RB4 skip it. RB3 and RB5 take it.
+- **M11 and the Protection dip.** Benediction 5 opens Protection row 2. Thus, the dip is 8 points (Benediction 5, Precision 3), and Guardian's Favor costs 2 more points. RB1, RB2 and RB4 skip Guardian's Favor. RB3 and RB5 take it.
 - **C8 and Retribution.** Divine Strength gave about +7 DPS. Vindication 5 gives about +6 DPS with full uptime. RB2 loses about 1 DPS. RB1 had Vindication 3: it loses about 4 DPS (−1%).
 - **Holy Power is not good for Retribution.** It is in Holy row 5 (M12). A 25/0/26 build with Holy Power loses Twist of Light and Champion of the Light: −19%.
 
@@ -81,7 +81,7 @@ This section examines the builds that are possible with the proposed trees. It g
 | Damage | Shock-Retribution | 26/0/25: v5p502320322010105--022533120133 | 357 DPS (95% of RB2) for 2 min, 405 with Consecration (96% of RB2). Holy Shock and Holy Power (M12) replace Twist of Light and Champion of the Light. After about 2 min, the mana is too low for Holy Shock: 300 DPS (80%) | Good for short fights and PvP. In PvP, one Holy Shock adds about 560 damage to the burst (about 2,340). Holy Power gives Holy Shock and Holy Strike +15% critical hit |
 | Damage | Shockadin | 38/0/13: v5p5023213225131251--02252002 | 311 DPS. The mana is zero after 30–50 sec. 63–70% for 2 min | Not good in raids |
 | Tank | Retribution with Righteous Fury and a two-handed weapon | 12/8/31 (RB2) | 89% of the PB2 threat (511 against 573 threat per sec). With Consecration, 91% of PB2 with Consecration (607 against 665). About 1.65 times the damage taken | Possible in easy dungeons. The healer must do more work |
-| Tank | Holy Shock tank | 30/21/0: v5p502320322012125-53201321301 | 56% of the PB2 threat (78% with Consecration). The mana lasts about 2 min (35 sec with Consecration) | For leveling and solo play |
+| Tank | Holy Shock tank | 30/21/0: v5p502320322012125-53201321301 | 56% of the PB2 threat (78% with Consecration). The mana lasts about 2 min (35 sec with Consecration) | For solo play while you level |
 | PvP | Holy Shock with Iron Creed | 21/30/0: v5p5023203220101-5320132130145 | Righteous Fury stays active in PvP. Iron Creed then gives −10% damage taken. The build also has Templar's Bulwark, Reckoning and Holy Shock | Strong survival. See W17 |
 | Tank | Healing tank | 29/22/0: v5p53202132251010002-53201311301100001 | See part 6 | Not good |
 
@@ -94,7 +94,7 @@ This section examines the builds that are possible with the proposed trees. It g
 
 ## 6. Healing threat
 
-A tank can heal itself to get threat.
+A tank can heal itself for threat.
 
 - **Rules (Classic).** Each point of effective healing gives 0.5 threat. Overhealing gives no threat. The threat is divided between all enemies in the fight.
 - **Righteous Fury.** Its Forever text says "Holy attacks". No test on heals exists (see Open questions). The table gives the two cases.
@@ -109,8 +109,8 @@ A tank can heal itself to get threat.
 | Healing tank (29/22/0), 2 Holy Light and 2 Flash of Light each 10 sec | 586 | 445 / 709 | −143 | 24 sec |
 
 - **A healing tank is not a good build.** The mana lasts 24–50 sec. It has no Holy Shield and no Iron Creed.
-- **Self-healing is a good tool.** If Righteous Fury multiplies healing threat, one Flash of Light each 10 sec gives +4% threat at no mana cost. One Holy Light each 10 sec gives +26% threat for about 1 min. With Infusion of Light (PB3, PB4), Holy Light has a 1.5 sec cast after Holy Strike.
-- **With 4 enemies,** each enemy gets 25% of the healing threat in this table.
+- **A heal on yourself is a good tool.** If Righteous Fury multiplies healing threat, one Flash of Light each 10 sec gives +4% threat at no mana cost. One Holy Light each 10 sec gives +26% threat for about 1 min. With Infusion of Light (PB3, PB4), Holy Light has a 1.5 sec cast after Holy Strike.
+- **With 4 enemies,** each enemy receives 25% of the healing threat in this table.
 - The values include the melee swings that stop during a cast. Healing threat is only possible when you have lost that much health.
 
 ## 7. Points that the rows force

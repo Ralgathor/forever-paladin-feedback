@@ -32,11 +32,11 @@ Retribution has 41 points (beta: 44). M11 moves Benediction to Protection row 1.
 - **Model.** Stormstrike (Shaman) makes the weapon strike the core of Enhancement. Holy Strike with your Seals does the same for Retribution.
 - **Protection.** Seal of Fury on each Holy Strike gives about +14 TPS. The Threat tables do not include it.
 - **Seal of Justice.** In the beta, Holy Strike already triggers Seal of Justice and its stun chance. C16 does not change this.
-- **Tuning.** If Retribution does more damage than the pure damage classes in raids, decrease the Sacred Arbiter bonus first: +20% → +10% (see Watch list, W15).
+- **Balance.** If Retribution does more damage than the pure damage classes in raids, decrease the Sacred Arbiter bonus first: +20% → +10% (see Watch list, W15).
 
 ## C17. Twist of Light: the Echo lasts 10 sec
 
-- **Problem.** Each Echo lasts for one melee attack. For full value, you must change Seals before almost each swing. With a 3.5 sec two-handed weapon, the global cooldown is active about 80% of the time. Players on the beta forums give a developer statement: rotations must stay at about four buttons.
+- **Problem.** Each Echo lasts for one melee attack. For full value, you must change Seals before almost each swing. With a 3.5 sec two-handed weapon, the global cooldown is active about 79% of the time. Players on the beta forums give a developer statement: rotations must stay at about four buttons.
 - **Proposed text.** "Reduces the Mana cost of your Seal spells by 20%. When you replace your Seal of Command, Seal of Righteousness, Seal of Fury, or Seal of Justice with a different Seal, you gain an Echo of that Seal for 10 sec. While the Echo lasts, your melee attacks also apply the replaced Seal's effects."
 - **Same action, slower rhythm.** You still change Seals, but one time each 10 sec, together with Holy Strike and Judgement.
 
@@ -80,4 +80,4 @@ Retribution has 41 points (beta: 44). M11 moves Benediction to Protection row 1.
 - **Parity.** All other +5% critical hit talents are in row 1: Cruelty (Warrior), Malice (Rogue), Lethal Attacks (Hunter) and Thundering Strikes (Shaman).
 - **Holy.** A Holy Paladin receives +5% critical heal chance for 5 Retribution points, not 10. A Restoration Shaman also pays 5 points for Thundering Strikes. A Holy build can then also take the Protection dip: 34/12/5 (see Analysis, Tree balance).
 - **Retribution.** Retribution has the critical hit at a lower level.
-- **Risk.** All specs get +5% critical hit for 5 points. The other classes have the same.
+- **Risk.** All specs can take +5% critical hit for 5 points. The other classes have the same.

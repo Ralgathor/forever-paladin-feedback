@@ -11,7 +11,7 @@
 
 - **Change.** Judgement of the Crusader does not count against the one-Judgement limit. But it increases only the Holy damage of the Paladin who applies it.
 - **Precedent.** Salvation does not use a Blessing slot now. Improved Seal of the Crusader is now baseline.
-- **Tradeoff.** Other players who do Holy damage do not get the bonus.
+- **Tradeoff.** Other players who do Holy damage do not receive the bonus.
 - **For Protection.** A raid can need the one Judgement of the tank for Light or Wisdom. In the beta, the tank then loses Judgement of the Crusader. With C18, the tank keeps it and can also apply Light or Wisdom. Judgement of the Crusader gives a Protection Paladin about +55 TPS (see Analysis, Threat).
 
 ## Alternatives to C18
@@ -45,14 +45,14 @@
 
 ## C19. Blessing of Light: removed, Healing Light gives 10/20/30% (recommended)
 
-- **Change.** Remove Blessing of Light and Greater Blessing of Light. Healing Light (C4) gets 3 ranks: 10/20/30% (beta: 4/8/12%).
+- **Change.** Remove Blessing of Light and Greater Blessing of Light. Healing Light (C4) has 3 ranks: 10/20/30% (beta: 4/8/12%).
 - **Proposed text (Healing Light).** "Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 10/20/30%."
 - **Precedent.** Forever removed Blessing of Sanctuary.
 - **Why a %.** Forever talents give a % bonus, not a flat value. A % bonus also increases with gear, as Forever wants. Blessing of Light gives a flat +400 to Holy Light and +115 to Flash of Light. Its value decreases with gear. At 700–900 healing power, it gives about +17–19% to these two heals. Thus, 12% + 18% = 30%.
-- **Why Holy only.** Retribution and Protection lose almost nothing. In raids with 1 or 2 Paladins, they did not get Blessing of Light. In PvP, a Paladin alone puts Kings on himself, not Light. Thus, the hybrid burst heal in PvP stays at 2,231 (see W12).
-- **One or the other.** If Blessing of Light stays, raids with 3 or more Paladins get the two bonuses. Thus, C19 removes the spell.
-- **Holy Shock** also gets +30% (beta: +12%). It heals about 920 at 900 healing power. It stays an emergency heal.
-- **Leveling.** Healing Light 3/3 comes at level 37. Blessing of Light rank 1 came at level 40.
+- **Why Holy only.** Retribution and Protection lose almost nothing. In raids with 1 or 2 Paladins, they did not receive Blessing of Light. In PvP, a Paladin alone puts Kings on itself, not Light. Thus, the hybrid burst heal in PvP stays at 2,231 (see W12).
+- **One or the other.** If Blessing of Light stays, raids with 3 or more Paladins receive the two bonuses. Thus, C19 removes the spell.
+- **Holy Shock** also receives +30% (beta: +12%). It heals about 920 at 900 healing power. It stays an emergency heal.
+- **While you level.** Healing Light 3/3 comes at level 37. Blessing of Light rank 1 came at level 40.
 
 Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 
@@ -65,7 +65,7 @@ Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 
 - The % compares C19 with the beta when the target has Light.
 - Raids with 3 or more Paladins lose 1–9%, mostly with little gear. C19 is equal at about 1,150 healing power.
-- Raids with 1 or 2 Paladins get 16–17% more healing.
+- Raids with 1 or 2 Paladins receive 16–17% more healing.
 - The healing of the Paladin does not change with the number of Paladins.
 - For the comparison with the other healers, see Analysis, Healing, parts 4 and 5.
 
@@ -73,8 +73,8 @@ Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 
 | ID | Option | How it works | Precedent | Tradeoff |
 | --- | --- | --- | --- | --- |
-| C19a | Blessing of Light uses no Blessing slot (use this if Blizzard keeps the spell) | Blessing of Light is a fourth Blessing outside the limit, as Salvation is | Salvation, patch of 15 October | Raids must still cast it. The bonus stays flat. A Retribution Paladin in PvP gets Kings and Light |
-| C19b | The Blessing of Light bonus goes into the base values | Remove the Blessing. Holy Light rank 9 heals 1,980 (beta: 1,580). Flash of Light rank 6 heals 423 (beta: 308). Each rank from level 40 gets the bonus of the Blessing rank of its level | Forever removed Blessing of Sanctuary | Base values go up. This is against the Forever direction. All specs get the bonus |
+| C19a | Blessing of Light uses no Blessing slot (use this if Blizzard keeps the spell) | Blessing of Light is a fourth Blessing outside the limit, as Salvation is | Salvation, patch of 15 October | Raids must still cast it. The bonus stays flat. A Retribution Paladin in PvP has Kings and Light |
+| C19b | The Blessing of Light bonus goes into the base values | Remove the Blessing. Holy Light rank 9 heals 1,980 (beta: 1,580). Flash of Light rank 6 heals 423 (beta: 308). Each rank from level 40 receives the bonus of the Blessing rank of its level | Forever removed Blessing of Sanctuary | Base values increase. This is against the Forever direction. All specs receive the bonus |
 
 |  | Beta | C19 | C19a | C19b |
 | --- | --- | --- | --- | --- |
@@ -108,7 +108,7 @@ Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 - **Devoted Sacrifice (C25).** This Protection talent reduces the damage that the Paladin takes from the pool by 10/20%. The target is still protected from up to 825 damage.
 - **The cost.** The damage does not disappear. It moves to the Paladin, and the Paladin must survive it and heal it. Thus, the health of the Paladin limits the number of pools.
 
-### Divine Shield and the classic trick
+### Divine Shield and the Classic trick
 
 - **The rule stays.** If the Paladin is immune, the damage that moves to the Paladin has no effect. This is the Classic rule.
 - **The trick stays.** A Paladin in Divine Shield can save an ally from 825 damage. The ally takes no damage, and the Paladin takes no damage.
@@ -138,7 +138,7 @@ Flash of Light + Holy Light (C3), healing per sec with no critical heals:
 
 - **Change.** Blessing of Sacrifice, Blessing of Protection and Blessing of Freedom become Hand of Sacrifice, Hand of Protection and Hand of Freedom. Hands do not use a Blessing slot. Each Paladin can have one Hand on a target. A new Hand replaces the old one.
 - **Precedent.** Forever moved Curse of Agony and Curse of Doom into a new group: Bane of Agony and Bane of Doom. Each Warlock can have one Curse and one Bane on a target. Since the patch of 15 October, Salvation also does not use a Blessing slot.
-- **A modern name.** "Hand" comes from a later version of the game. Banes also come from a later version, and Forever uses them. Thus, this is an accepted exception to design rule 2.
+- **A modern name.** "Hand" comes from a later version of the game. Banes also come from a later version, and Forever uses them. Thus, this name is an accepted exception to the rule against ideas from later versions.
 - **Other text.** The proposals use the new names. For example, Guardian's Favor (C22) names Hand of Protection and Hand of Freedom.
 - **Salvation does not change.** It already uses no Blessing slot. It is a long threat buff, not a save.
 

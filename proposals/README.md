@@ -11,7 +11,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 23 chan
 
 ## How to read this document
 
-- **C (change).** C1 to C19 and C22 to C26 change what a talent does, add a talent or remove a talent. C16, C18, C19, C23 and C24 change baseline spells. A change can also move the talent. The text then gives the new row.
+- **C (change).** C1 to C4, C6 to C19 and C22 to C26 change what a talent does, add a talent or remove a talent. C16, C18, C19, C23 and C24 change baseline spells. A change can also move the talent. The text then gives the new row.
 - **M (move).** M6 and M8 to M13 move a talent to a different row. The talent text does not change.
 - **C18a and C18b** are the two alternatives to C18.
 - **Withdrawn ideas** have no ID. They are in [Withdrawn ideas](withdrawn-ideas.md) only.
@@ -25,7 +25,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 23 chan
 
 | ID | Talent | Tree and row | Beta | Proposed |
 | --- | --- | --- | --- | --- |
-| C1 | Reverence | Holy, row 3 → row 2 | 10/20/30% of mana regeneration while casting | 17/33/50% |
+| C1 | Reverence | Holy, row 3 → row 2 | 10/20/30% of mana regeneration during casts | 17/33/50% |
 | C2 | Lingering Light (new) | Holy, row 3 | — | 2 ranks: a critical heal adds a heal over time of 10/20% of the heal |
 | C3 | Infusion of Light | Holy, row 4 → row 2 | Holy Shock and Flash of Light critical hits make the next Holy Light faster | All Holy Shock, Flash of Light and Holy Strike hits do this. No critical hit is necessary |
 | C4 | Healing Light | Holy, row 2 → row 6 | 3 ranks: 4/8/12% | 3 ranks: 10/20/30% (with C19) |
@@ -39,14 +39,14 @@ This document gives talent proposals for the WoW Forever Paladin. It has 23 chan
 | C13 | Shield Specialization | Protection, row 3 | Mana return once each 3 sec | Mana return once each 2 sec |
 | C14 | Holy Shield | Protection, row 7 | 221 Holy damage for each block (rank 3) | 221 Holy damage plus 200% of your block value for each block |
 | C15 | Conviction | Retribution, row 2 → row 1 (M8) | +1–5% critical hit chance with melee attacks | +1–5% critical hit chance with attacks and spells |
-| C16 | Holy Strike | Spell, all specs | Triggers only Seal of Light, Justice and Wisdom | Triggers your active Seal and Echo the same as a melee attack |
+| C16 | Holy Strike | Baseline spell | Triggers only Seal of Light, Justice and Wisdom | Triggers your active Seal and Echo the same as a melee attack |
 | C17 | Twist of Light | Retribution, row 7 | The Echo applies to the next melee attack only | The Echo applies to all melee attacks for 10 sec |
 | C18 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
 | C19 | Blessing of Light | Baseline spell, and Healing Light (C4) | +400 Holy Light, +115 Flash of Light. Uses a Blessing slot | Removed. Healing Light gives 10/20/30% |
-| C22 | Guardian's Favor | Protection, row 2 | Blessing of Protection −1/2 min, Blessing of Freedom +3/6 sec. | The same, and Hand of Sacrifice cooldown −5/10 sec (C23) |
+| C22 | Guardian's Favor | Protection, row 2 | Blessing of Protection −1/2 min, Blessing of Freedom +3/6 sec | The same, and Hand of Sacrifice cooldown −5/10 sec (C23) |
 | C23 | Hand of Sacrifice | Baseline spell | Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown | Up to 825 damage moves to you. 30 sec cooldown, 20 sec with Guardian's Favor 2/2 |
 | C24 | Hands: Sacrifice, Protection and Freedom | Baseline spells | Blessings of Sacrifice, Protection and Freedom use a Blessing slot | The spells take the name Hand of. No Blessing slot. One Hand from each Paladin on a target |
-| C25 | Devoted Sacrifice (new) | Protection, row 3 | — | 2 ranks: Lay on Hands drains only 75/50% of your remaining mana, and you take 10/20% less damage from your Hand of Sacrifice. Alternative C25a: the spell drains 50% for all Paladins |
+| C25 | Devoted Sacrifice (new) | Protection, row 3 | — | 2 ranks: Lay on Hands drains only 75/50% of your current mana, and you take 10/20% less damage from your Hand of Sacrifice. Alternative C25a: the spell drains 50% for all Paladins |
 | C26 | Sanctified Judgement | Retribution, row 3 | 33/66/100% chance to return 20/40/60% of the Seal cost | 100% chance at all ranks. The return is 20/40/60% of the Seal cost |
 
 **Moves**
@@ -75,8 +75,8 @@ Forever uses five rules for its talent trees. All proposals follow these rules.
 
 | Pattern | Other classes | Paladin beta |
 | --- | --- | --- |
-| Mana regeneration while casting (healers) | Meditation (Priest), Reflection (Druid), Mindfulness (Shaman): 50% | Reverence: 30% |
-| Mana regeneration while casting (damage and hybrid specs) | 50% at about 20 points: Bestial Discipline, Resourcefulness (Hunter), Improved Stormstrike (Shaman), Spirit Tap (Priest) | None for Protection or Retribution |
+| Mana regeneration during casts (healers) | Meditation (Priest), Reflection (Druid), Mindfulness (Shaman): 50% | Reverence: 30% |
+| Mana regeneration during casts (damage and hybrid specs) | 50% at about 20 points: Bestial Discipline, Resourcefulness (Hunter), Improved Stormstrike (Shaman), Spirit Tap (Priest) | None for Protection or Retribution |
 | Healing bonus deep in the tree | Spiritual Healing (Priest, 25 points), Purification (Shaman, 25 points) | Healing Light (+12%) at 5 points |
 | Shared critical hit | Thundering Strikes (Shaman, row 1): all spells and attacks | Conviction: melee only |
 | Two-handed weapon talent | Warrior: 15 points | 20 points |

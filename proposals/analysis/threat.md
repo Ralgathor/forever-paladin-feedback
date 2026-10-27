@@ -11,8 +11,8 @@ The script models/threat/run_tables.py calculates all values of this section fro
 - With all proposals, the Paladin has 94–105% of the Druid threat and 86–93% of the Warrior threat.
 - With Consecration on cooldown, the Paladin has 108–124% of the Druid threat. But the mana then lasts about 1 min at fresh level 60 and 6.5 min in Naxxramas (see Analysis, Mana).
 - Without the proposals, the Paladin has less threat than the other two tanks at all gear levels.
-- C14 (Holy Shield damage increases with block value) is necessary. Without C14, the Paladin falls further behind in raids (74% of the Druid threat in Naxxramas).
-- Judgement of the Crusader gives the Paladin tank about +55 TPS. Judgement of Fury does not remove it. C18 lets the tank keep it when the raid also needs the Judgement of the tank for Light or Wisdom.
+- C14 (Holy Shield damage increases with block value) is necessary. Without C14, the Paladin is further below the other tanks in raids (74% of the Druid threat in Naxxramas).
+- Judgement of the Crusader gives the Paladin tank about +55 TPS. Judgement of Fury does not remove it. With C18, the tank keeps it when the raid also needs the Judgement of the tank for Light or Wisdom.
 - If the gear progression is flatter, the Paladin has 90–95% of the Druid threat in Naxxramas.
 - C16 (Holy Strike triggers Seal of Fury) gives about +14 TPS more. The tables do not include it.
 
@@ -102,9 +102,9 @@ TPS on one boss. The percentage is the Paladin TPS divided by the Druid TPS.
 
 - All Paladin columns include Judgement of the Crusader. Without it (a raid that needs the beta tank's Judgement for Light or Wisdom), subtract about 50 TPS from the beta column.
 - With all proposals, the Paladin has 94–105% of the Druid threat at all tiers. With Consecration on cooldown, it has 108–124%. But Consecration costs 565 mana each 8 sec (see Analysis, Mana).
-- Without C14, the Paladin falls further behind the Druid: 97% at fresh level 60, 74% in Naxxramas. The Warrior and the Druid receive more Attack Power and more rage. The Paladin receives only spell power.
+- Without C14, the Paladin is further below the Druid: 97% at fresh level 60, 74% in Naxxramas. The Warrior and the Druid receive more Attack Power and more rage. The Paladin receives only spell power.
 - The beta Paladin is behind at all tiers: 85% of the Druid at fresh level 60, and 64% in Naxxramas.
-- Shield Specialization gives 4% of maximum mana. Thus, more mana gives more mana return. Tanking without Consecration gives about +4 mana per sec at fresh level 60 and about +30 mana per sec in Naxxramas (see Analysis, Mana).
+- Shield Specialization gives 4% of maximum mana. Thus, more mana gives more mana return. Without Consecration, the tank receives about +4 mana per sec at fresh level 60 and about +30 mana per sec in Naxxramas (see Analysis, Mana).
 
 ## 3. Result with flatter gear
 
@@ -128,16 +128,16 @@ Paladin with all proposals. The first value is the percentage of the Druid TPS. 
 | Naxxramas, without C14 | 74% | 73% | 77% |
 
 - With C14 at 200%, the Paladin has 90–105% of the Druid threat in all three cases. At 300%, it has 98–105% of the Druid threat in Naxxramas. At 150%, it has 86–90%.
-- Without C14, the Paladin falls behind in all cases. Thus, C14 is more important with flatter gear.
+- Without C14, the Paladin is behind in all cases. Thus, C14 is more important with flatter gear.
 - The weakest case is flatter gear with boss hits that continue to increase. The Warrior and the Druid still receive more rage from larger hits. Monitor the block value of each gear tier.
-- Mana: if maximum mana increases more slowly (3,650, 3,900 and 4,150), tanking without Consecration gives +14, +17 and +20 mana per sec. C13 is more important.
+- Mana: if maximum mana increases more slowly (3,650, 3,900 and 4,150), the tank receives +14, +17 and +20 mana per sec without Consecration. C13 is more important.
 - Defense: if gear gives Defense more slowly, tanks reach 440 Defense later. The boss can then make critical hits for a longer time. C6 and the Reckoning critical-hit trigger stay useful for a longer time.
 - C18: the +161 bonus from Judgement of the Crusader is more important when gear gives less spell power.
 - The PvP burst check (C11) uses fresh and pre-raid stats. It stays correct for a longer time.
 
 ## 4. Why the Paladin is different
 
-- **No stance or form multiplier.** Righteous Fury (×1.9) is for Holy damage only. Paladin auto attacks and Reckoning attacks get ×1.0. Defensive Stance gives ×1.495 to all Warrior damage. Bear Form gives ×1.5 to all Druid damage.
+- **No stance or form multiplier.** Righteous Fury (×1.9) is for Holy damage only. Paladin auto attacks and Reckoning attacks have ×1.0. Defensive Stance gives ×1.495 to all Warrior damage. Bear Form gives ×1.5 to all Druid damage.
 - **No strong attack with a short cooldown.**
 
 | Attack | Total threat multiplier | Cooldown |
