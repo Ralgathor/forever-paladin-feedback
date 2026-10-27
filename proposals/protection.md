@@ -79,7 +79,7 @@ The Protection proposals give:
 
 ## C-P5. Shoulder the Burden (new talent) replaces Improved Seal of Fury: row 3, column 1
 
-- **Proposed text.** "You shoulder the burden of a friendly party or raid member, transferring 50% of their threat against all enemies to you." Instant, 30 yards, 5 min cooldown, 45 mana (3% of base mana).
+- **Proposed text.** "You shoulder the burden of a friendly party or raid member, transferring 50% of their threat against all enemies to you." Instant, 30 yards, 3 min cooldown, 45 mana (3% of base mana).
 - **Why remove Improved Seal of Fury.** It was a second "mana when you are hit" talent. Its mana return does not change with the rank of the Seal. Sanctified Judgement (Retribution row 3) is the other mana talent for a tank now (see Mana).
 - **Problem.** The Paladin tank has no area taunt and no threat transfer. Judgement of Fury taunts only one enemy, at 10 yards. Thus, tank swaps and threat on a group of enemies are difficult.
 - **Change.** Shoulder the Burden moves half of the threat of the ally to the Paladin, on each enemy. The ally keeps the other half. Thus, the ally must still control their threat.
@@ -87,8 +87,8 @@ The Protection proposals give:
 - **Raw threat.** The threat that moves does not change. Righteous Fury does not multiply it.
 - **Tank swaps.** First use Judgement of Fury to take the boss. Then use Shoulder the Burden on the other tank. You then have 1.5 times their threat, and they keep 0.5 times. Do not use it before the taunt: the threat of the other tank decreases, and a damage dealer can then pull the boss.
 - **PvP.** Players do not use threat. Thus, the talent has no effect in PvP.
-- **Why 5 min.** It works on all enemies that the ally has threat on, at any range, and the threat stays moved. Thus, it is near an area taunt. Challenging Shout (Warrior) has 10 min. Mocking Blow (Warrior) has 2 min, but it works on one target for 6 sec. 5 min is the cooldown of the other Paladin protection spells: Hand of Protection, Divine Shield and Divine Protection.
-- **Sacred Duty.** Sacred Duty also decreases the cooldown of Shoulder the Burden by 30/60 sec. At 2/2, the cooldown is 4 min. New Sacred Duty text: "Increases your total Stamina by 2/4% and reduces the cooldown of your Divine Shield, Divine Protection, Templar's Bulwark, and Shoulder the Burden spells by 30/60 sec."
+- **Why 3 min.** It works on all enemies that the ally has threat on, at any range, and the threat stays moved. Thus, it is near an area taunt. Challenging Shout (Warrior) has 10 min. Mocking Blow (Warrior) has 2 min, but it works on one target for 6 sec. At 5 min, a dungeon tank uses it on about one pull in five, and a raid tank one time for each boss. At 3 min, a raid tank uses it 2–3 times in each boss fight.
+- **Sacred Duty.** Sacred Duty does not decrease the cooldown of Shoulder the Burden. The 3 min cooldown is the final value. Sacred Duty keeps its beta text.
 - **Position.** Row 3, column 1, the beta place of Improved Seal of Fury.
 - **Swift Judgement.** In the beta, it requires Improved Seal of Fury. Shoulder the Burden (C-P5) removes Improved Seal of Fury. Thus, Swift Judgement stays in row 4 with no requirement.
 - **Signature talents.** Each tree keeps a 1-point signature talent in rows 3 and 4:
@@ -176,15 +176,16 @@ Simulation: the boss swings each 2 sec. 60% block with Redoubt (C-P1), 10.7% dod
 
 ## C-P11. Devoted Sacrifice (new talent): row 3, column 2
 
-- **Proposed text.** "Your Lay on Hands drains only 75/50% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 10/20%." 2 ranks.
+- **Proposed text.** "Your Lay on Hands drains only 75/50% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 20/40%." 2 ranks.
 - **Position.** Row 3, column 2, the beta place of Improved Righteous Fury. Improved Righteous Fury removal (C-P4) frees this place.
 - **Theme.** The Paladin gives its own resources to save others. Lay on Hands costs mana, and Hand of Sacrifice costs health. Devoted Sacrifice makes the two spells cost less.
 - **Lay on Hands.** The spell keeps its heal, its 20 min cooldown and its mana for the target.
 - **Problem.** Lay on Hands drains all the mana of the Paladin (Forever spellbook, all ranks). Forever decreases the cooldown from 1 hour to 20 min. Thus, the Paladin can use it about one time for each boss. But the drain is largest when the mana is full, early in a fight. Thus, Paladins use it only when their mana is already low.
 - **Keep mana for the role.** With Devoted Sacrifice (C-P11), the Paladin can use Lay on Hands at any time and always keeps half of the mana. The healer continues to heal, the tank keeps its threat, and Retribution keeps its damage. The time until the mana is back is also half (see the table).
 - **Other saves.** At 0 mana, the Paladin cannot cast Divine Shield (110 mana), Hand of Protection (7% of base mana) or Hammer of Justice (100 mana). With Devoted Sacrifice (C-P11), these saves stay available.
-- **Hand of Sacrifice.** The pool does not change. The target is still protected from up to 825 damage (Hand of Sacrifice, C4). Only the damage that the Paladin takes decreases: about 743 at 1/2 and 660 at 2/2. A tank takes the damage of an ally in addition to the boss damage. Thus, without Devoted Sacrifice (C-P11), a tank uses Hand of Sacrifice only when its health is high.
+- **Hand of Sacrifice.** The pool does not change. The target is still protected from up to 825 damage (Hand of Sacrifice, C4). Only the damage that the Paladin takes decreases: about 660 at 1/2 and 495 at 2/2. A tank takes the damage of an ally in addition to the boss damage. Thus, without Devoted Sacrifice (C-P11), a tank uses Hand of Sacrifice only when its health is high.
 - **Why row 3.** Lay on Hands comes at level 10. Thus, the talent has a use when row 3 opens (level 20). The Hand of Sacrifice part has a use from level 46. Improved Reincarnation (Shaman, Restoration row 2) is the same: it gives +2% health from level 15, and Reincarnation comes at level 30.
+- **Why 20/40%.** At rank 1, the drain is 75%. Lay on Hands is then more efficient than the usual heals only below 21% mana. Thus, the Hand of Sacrifice part gives the value of rank 1. At 40%, the Paladin still takes more than half of the damage. With Guardian's Favor 2/2 (Hand of Sacrifice each 20 sec), 2/2 removes about 16 damage per sec from the raid.
 - **Model.** Improved Health Funnel (Warlock) and Improved Mend Pet (Hunter) are 2-rank talents for save spells. Sacred Duty also gives two effects in one talent.
 - **Cost for Holy.** Holy takes it with Benediction 5, Guardian's Favor 2 and Redoubt 3: 12 Protection points.
 - **Builds.** HB1, HB2, HB3 and RB3 take it (see Analysis, Builds).

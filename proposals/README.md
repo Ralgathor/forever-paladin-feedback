@@ -41,13 +41,13 @@ This document gives talent proposals for the WoW Forever Paladin. It has 23 chan
 | C-P2 | Iron Creed | Protection, row 6 | −2–10% damage taken for 6 sec after Holy Strike | −2–10% damage taken while Righteous Fury is active |
 | C-P3 | Toughness and Divine Strength: removed | Protection row 1, Retribution row 2, Holy row 1 | Toughness: +2–10% armor from items. Divine Strength: +2–10% Strength | Both removed. Vindication goes to Retribution row 2 with 5 ranks (+1–5% Attack Power). Benediction (M-P1) and Unyielding Faith (M-H2) fill row 1 of Protection and Holy |
 | C-P4 | Improved Righteous Fury | Protection, row 3 | −2–6% damage taken with Righteous Fury | Removed |
-| C-P5 | Shoulder the Burden (new) replaces Improved Seal of Fury | Protection, row 3 | Improved Seal of Fury: mana when the Seal of Fury shield absorbs a hit | Shoulder the Burden: 50% of the threat of an ally moves to you, 5 min cooldown. Sacred Duty decreases the cooldown. Swift Judgement keeps its row 4 place with no requirement |
+| C-P5 | Shoulder the Burden (new) replaces Improved Seal of Fury | Protection, row 3 | Improved Seal of Fury: mana when the Seal of Fury shield absorbs a hit | Shoulder the Burden: 50% of the threat of an ally moves to you, 3 min cooldown. Swift Judgement keeps its row 4 place with no requirement |
 | C-P6 | Reckoning | Protection, row 5 | Extra attack after a block (40%) or a critical hit taken (100%). It hits with the next swing | Charge after a block, dodge or parry (once each 4 sec) or a critical hit taken. Holy Strike releases up to 2 charges |
 | C-P7 | Reach of Law (new) | Protection, row 5 | — | 2 ranks: Judgement range +5/10 yards while Seal of Fury is active |
 | C-P8 | Shield Specialization | Protection, row 3 | Mana return once each 3 sec | Mana return once each 2 sec |
 | C-P9 | Holy Shield | Protection, row 7 | 221 Holy damage for each block (rank 3) | 221 Holy damage plus 200% of your block value for each block |
 | C-P10 | Guardian's Favor | Protection, row 2 | Blessing of Protection −1/2 min, Blessing of Freedom +3/6 sec | The same, and Hand of Sacrifice cooldown −5/10 sec (C4) |
-| C-P11 | Devoted Sacrifice (new) | Protection, row 3 | — | 2 ranks: Lay on Hands drains only 75/50% of your current mana, and you take 10/20% less damage from your Hand of Sacrifice. Alternative C-P11a: the spell drains 50% for all Paladins |
+| C-P11 | Devoted Sacrifice (new) | Protection, row 3 | — | 2 ranks: Lay on Hands drains only 75/50% of your current mana, and you take 20/40% less damage from your Hand of Sacrifice. Alternative C-P11a: the spell drains 50% for all Paladins |
 | C-R1 | Conviction | Retribution, row 2 → row 1 (Conviction, M-R2) | +1–5% critical hit chance with melee attacks | +1–5% critical hit chance with attacks and spells |
 | C-R2 | Twist of Light | Retribution, row 7 | The Echo applies to the next melee attack only | The Echo applies to all melee attacks for 10 sec |
 | C-R3 | Sanctified Judgement | Retribution, row 3 | 33/66/100% chance to return 20/40/60% of the Seal cost | 100% chance at all ranks. The return is 20/40/60% of the Seal cost |
