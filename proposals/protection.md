@@ -144,15 +144,17 @@ Simulation: the boss swings each 2 sec. 60% block with Redoubt (C-P1), 10.7% dod
 - **Why only with Seal of Fury.** Judgement of Command does 388–422 damage to a stunned target. Without the Seal of Fury condition, a 20 yard range gives more burst to hybrids in PvP. With the condition, Holy and Retribution receive almost nothing from the dip.
 - **Threat and mana.** No change while you tank. Judgement still costs 91 mana and has a 10 sec cooldown. Only the first pull changes. The full path costs 3 points (Swift Judgement and 2 ranks).
 
-## C-P8. Shield Specialization: mana return once each 2 sec
+## C-P8. Shield Specialization: mana return on each block
 
-- **Proposed text (rank 3).** "Increases the amount of damage absorbed by your shield by 30%, and gives your blocks a 100% chance to restore 4% of your maximum Mana. May only occur once every 2 sec."
-- **Change.** Only the limit changes: once each 2 sec, not once each 3 sec. The ranks, the chance and the 4% return do not change.
+- **Proposed text (rank 3).** "Increases the amount of damage absorbed by your shield by 30%, and your blocks restore 6% of your maximum Mana. May only occur once every 2 sec." Ranks: 2/4/6%.
+- **Change.** The return occurs on each block at all ranks: 2/4/6% of maximum mana (beta: a 33/66/100% chance to restore 4%). The limit is once each 2 sec (beta: 3 sec). The absorb (10/20/30%) does not change.
 - **Why.** Shoulder the Burden (C-P5) removes Improved Seal of Fury (about 23 mana per sec while you tank). Sanctified Judgement 3/3 returns about 17 for the tank builds PB1–PB4. Holy Shield rank 3 costs 24 mana per sec. Without Shield Specialization (C-P8), a fresh level 60 PB1 tank (2,897 mana) loses about 7 mana per sec without Consecration.
-- **Value.** A boss that swings each 2 sec can trigger it with each block: 4% of maximum mana × 60% block ÷ 2 sec. This is 35 mana per sec at fresh level 60 and 59 in Naxxramas (beta: 19 and 33). Without Consecration, PB1 receives +8 to +34 mana per sec while it tanks (see Analysis, Mana).
+- **Value.** A boss that swings each 2 sec can trigger it with each block: 6% of maximum mana × 60% block ÷ 2 sec. This is 52 mana per sec at fresh level 60 and 88 in Naxxramas (beta: 19 and 33). Without Consecration, PB1 receives +26 to +64 mana per sec while it tanks (see Analysis, Mana).
 - **Model.** Warriors and Druids receive rage when they are hit. Water Shield (Shaman) gives mana when the Shaman is hit. Shield Specialization is already the Paladin version. Thus, no new talent is necessary.
+- **Why 6% and 2 sec.** Improved Seal of Fury gave 23.3 mana per sec at all gear levels. With 6%, PB1 has more mana than in the beta at fresh level 60 (+26 against +16). Ranks increase in equal steps. A 3 sec limit skips the next boss swing: the tank then has less mana than with 4% each 2 sec.
+- **Side effect.** From Molten Core, PB1 can use Consecration on cooldown with no mana loss. Consecration then adds threat (W10).
 - **Synergy.** More block gives more mana. Thus, the crushing blow fix (Redoubt, C-P1) and the mana fix help each other.
-- **Limits.** Against groups of enemies, it gives a maximum of 2% of maximum mana each sec: 58 at fresh level 60, 98 in Naxxramas (beta: 39 and 65). It gives nothing to a Paladin who is not hit. Sanctified Judgement is for that case.
+- **Limits.** Against groups of enemies, it gives a maximum of 3% of maximum mana each sec: 87 at fresh level 60, 147 in Naxxramas (beta: 39 and 65). It gives nothing to a Paladin who is not hit. Sanctified Judgement is for that case.
 
 ## C-P9. Holy Shield: damage increases with block value
 
@@ -198,8 +200,8 @@ Simulation: the boss swings each 2 sec. 60% block with Redoubt (C-P1), 10.7% dod
 | Spec (maximum mana, mana income) | Heal (maximum health, estimate) | Beta: time until the mana is back | Devoted Sacrifice (C-P11) 2/2: drain, time until the mana is back |
 | --- | --- | --- | --- |
 | Holy (4,416, +22.6 per sec) | About 4,000 | 3 min 15 sec | 2,208: 1 min 38 sec |
-| Protection PB1, fresh level 60 (2,897, +8.3 per sec while it tanks) | About 5,500 | 5 min 49 sec | 1,449: 2 min 54 sec |
-| Protection PB1, Naxxramas (4,900, +34.2 per sec) | About 8,500 | 2 min 23 sec | 2,450: 1 min 11 sec |
+| Protection PB1, fresh level 60 (2,897, +25.7 per sec while it tanks) | About 5,500 | 1 min 52 sec | 1,449: 56 sec |
+| Protection PB1, Naxxramas (4,900, +63.6 per sec) | About 8,500 | 1 min 17 sec | 2,450: 38 sec |
 
 The mana values use a fresh level 60 Holy profile with no raid buffs and no consumables: 4,416 mana and 22.6 mana per sec.
 

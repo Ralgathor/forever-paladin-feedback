@@ -5,13 +5,13 @@ This section compares the mana of the Paladin in the beta and with the proposals
 ## Summary
 
 - Sanctified Judgement (Retribution row 3) is the best mana talent for a tank. It returns 120 mana for each Judgement: 14 MPS, or 17 MPS with Improved Judgement 2/2. Reverence gives 10.3 MPS.
-- The tank builds PB1, PB3 and PB4 (3/35/13, see Builds) have Sanctified Judgement, Improved Judgement and Holy Conduit. PB2 has no Holy Conduit. With Consecration on cooldown, the mana lasts 1 min 25 sec at fresh level 60 and 9 min 56 sec in Naxxramas. With Blessing of Wisdom, the Naxxramas tank almost does not lose mana.
+- The tank builds PB1, PB3 and PB4 (3/35/13, see Builds) have Sanctified Judgement, Improved Judgement and Holy Conduit. PB2 has no Holy Conduit. With Consecration on cooldown, the mana lasts 2 min 53 sec at fresh level 60. From Molten Core, the mana lasts all the fight.
 - Reverence (C-H1) stays the main mana talent for Holy. Retribution takes it without raid buffs (+4% DPS at fresh level 60). In a raid, Twist of Light (C-R2) and Sanctified Judgement give the mana of Retribution. Tanks receive their mana from Sanctified Judgement.
-- PB1 receives +8.3 MPS while it tanks at fresh level 60 without Consecration, and +34.2 MPS in Naxxramas.
-- **Below Blackwing Lair, PB1 has less mana than in the beta** (fresh level 60: +8.3 MPS, beta +16.2). Shoulder the Burden (C-P5) removes Improved Seal of Fury (23.3 MPS). Redoubt (C-P1) and Shield Specialization (C-P8) return only a part of it at low maximum mana. With the 8/35/8 tank, Reverence (10.3 MPS) hid this loss.
-- Shield Specialization (C-P8, once each 2 sec) is necessary. Without Shield Specialization (C-P8), a fresh level 60 PB1 tank loses about 7 MPS.
+- PB1 receives +25.7 MPS while it tanks at fresh level 60 without Consecration, and +63.6 MPS in Naxxramas.
+- **PB1 has more mana than in the beta at all gear levels** (fresh level 60: +25.7 MPS, beta +16.2). Shoulder the Burden (C-P5) removes Improved Seal of Fury (23.3 MPS). Shield Specialization (C-P8, 6% on each block) and Redoubt (C-P1) return more than this loss.
+- Shield Specialization (C-P8, 2/4/6% on each block, once each 2 sec) is necessary. Without Shield Specialization (C-P8), a fresh level 60 PB1 tank loses about 7 MPS.
 - Consecration uses much mana. Use it against groups of enemies, not all the time.
-- Benediction (M-P1) moves to Protection row 1. PB1 with Benediction and Consecration on cooldown has mana for 2 min 2 sec at fresh level 60. In Naxxramas, its mana lasts all the fight (part 4).
+- Benediction (M-P1) moves to Protection row 1. PB1 with Benediction and Consecration on cooldown has mana for 7 min 37 sec at fresh level 60. In Naxxramas, its mana lasts all the fight (part 4).
 - Twist of Light (C-R2) fixes the mana of Retribution.
 
 ## 1. Problems in the beta
@@ -26,7 +26,7 @@ This section compares the mana of the Paladin in the beta and with the proposals
 | Fix | Effect |
 | --- | --- |
 | Reverence in row 2 at 50% (C-H1) | Holy has 50%, as the other healers. Retribution takes it without raid buffs: +4% DPS at fresh level 60 (part 5). In a raid, Twist of Light (C-R2) and Sanctified Judgement give its mana. For a tank, Sanctified Judgement gives more (part 4) |
-| Shield Specialization once each 2 sec (C-P8) | It stays the main mana source of the tank. Water Shield (Shaman) is the Forever precedent |
+| Shield Specialization: 2/4/6% on each block, once each 2 sec (C-P8) | It stays the main mana source of the tank. Water Shield (Shaman) is the Forever precedent |
 | Improved Seal of Fury removed (C-P5) | One talent for "mana when you are hit" is sufficient |
 | Echo of 10 sec (Twist of Light, C-R2) | Retribution changes Seals one time each 10 sec, not before each swing |
 
@@ -70,7 +70,7 @@ The tables use the raid tank PB1 (3/35/13, see Builds, part 3): Sanctified Judge
 
 | Source | Beta | Proposed | Calculation |
 | --- | --- | --- | --- |
-| Shield Specialization | Maximum mana × 4% ÷ 6 sec | Maximum mana × 4% × 60% ÷ 2 sec | Beta: the 3 sec limit skips the next swing. 50% block. Proposed: each block counts (Shield Specialization, C-P8). 60% block (Redoubt, C-P1) |
+| Shield Specialization | Maximum mana × 4% ÷ 6 sec | Maximum mana × 6% × 60% ÷ 2 sec | Beta: the 3 sec limit skips the next swing. 50% block. Proposed: each block counts (Shield Specialization, C-P8). 60% block (Redoubt, C-P1) |
 | Improved Seal of Fury | 23.3 | 0 (Shoulder the Burden, C-P5) | 87 mana for each shield that a boss hit uses |
 | Sanctified Judgement 3/3 | 17.0 | 17.0 | 120 mana for each Judgement, 8.5 Judgements each min (Improved Judgement 2/2 and Swift Judgement) |
 | mp5 from gear | 0.6–2.4 | 0.6–2.4 | 3–12 mp5 |
@@ -95,11 +95,11 @@ The costs do not change with gear.
 
 | Tier (maximum mana) | Income, beta | Income, proposed | Result, beta | Result, proposed | Result, proposed, flatter gear |
 | --- | --- | --- | --- | --- | --- |
-| Fresh level 60 (2,897) | 60.2 | 52.4 | +16.2 | +8.3 | +8.3 |
-| Pre-raid best in slot (3,400) | 64.0 | 58.8 | +19.9 | +14.8 | +14.8 |
-| Molten Core (3,900) | 67.9 | 65.4 | +23.9 | +21.4 | +18.2 |
-| Blackwing Lair (4,400) | 71.6 | 71.8 | +27.6 | +27.8 | +21.4 |
-| Naxxramas (4,900) | 75.4 | 78.2 | +31.3 | +34.2 | +24.5 |
+| Fresh level 60 (2,897) | 60.2 | 69.7 | +16.2 | +25.7 | +25.7 |
+| Pre-raid best in slot (3,400) | 64.0 | 79.2 | +19.9 | +35.2 | +35.2 |
+| Molten Core (3,900) | 67.9 | 88.8 | +23.9 | +44.8 | +40.1 |
+| Blackwing Lair (4,400) | 71.6 | 98.2 | +27.6 | +54.2 | +44.8 |
+| Naxxramas (4,900) | 75.4 | 107.6 | +31.3 | +63.6 | +49.4 |
 
 "Flatter gear" uses the model of Threat, part 3.
 
@@ -107,9 +107,9 @@ The costs do not change with gear.
 
 | Case | Fresh level 60, beta | Fresh level 60, proposed | Naxxramas, beta | Naxxramas, proposed |
 | --- | --- | --- | --- | --- |
-| Tank, Consecration on cooldown, no Holy Conduit | −54.5: 53 sec | −62.3: 46 sec | −39.3: 2 min 4 sec | −36.5: 2 min 14 sec |
-| Tank, Consecration on cooldown, Holy Conduit | −26.2: 1 min 50 sec | −34.1: 1 min 25 sec | −11.0: 7 min 23 sec | −8.2: 9 min 56 sec |
-| Tank, Consecration on cooldown, Holy Conduit, Benediction (M-P1) | −15.9: 3 min 2 sec | −23.7: 2 min 2 sec | −0.7: more than 1 hour | +2.1: all the fight |
+| Tank, Consecration on cooldown, no Holy Conduit | −54.5: 53 sec | −44.9: 1 min 4 sec | −39.3: 2 min 4 sec | −7.1: 11 min 33 sec |
+| Tank, Consecration on cooldown, Holy Conduit | −26.2: 1 min 50 sec | −16.7: 2 min 53 sec | −11.0: 7 min 23 sec | +21.2: all the fight |
+| Tank, Consecration on cooldown, Holy Conduit, Benediction (M-P1) | −15.9: 3 min 2 sec | −6.3: 7 min 37 sec | −0.7: more than 1 hour | +31.5: all the fight |
 | Not hit, no Consecration | −26.4: 1 min 49 sec | −26.4: 1 min 49 sec | −24.6: 3 min 18 sec | −24.6: 3 min 18 sec |
 | Not hit, Consecration on cooldown, Holy Conduit | −68.8: 42 sec | −68.8: 42 sec | −67.0: 1 min 13 sec | −67.0: 1 min 13 sec |
 
@@ -121,12 +121,12 @@ Each cell gives the MPS and the time until the mana is zero.
 
 | Build | Fresh level 60, no Consecration | Fresh level 60, Consecration on cooldown | Naxxramas, no Consecration | Naxxramas, Consecration on cooldown |
 | --- | --- | --- | --- | --- |
-| PB1, PB3, PB4 (3/35/13: Sanctified Judgement, Improved Judgement, Holy Conduit) | +8.3 | −34.1: 1 min 25 sec | +34.2 | −8.2: 9 min 56 sec |
-| PB1, PB3, PB4, Blessing of Wisdom | +16.3 | −26.1: 1 min 51 sec | +42.2 | −0.2: more than 1 hour |
-| PB2 (3/35/13, no Holy Conduit) | +8.3 | −62.3: 46 sec | +34.2 | −36.5: 2 min 14 sec |
-| 8/35/8 tank with Reverence | +3.9 | −66.8: 43 sec | +29.8 | −41.0: 1 min 59 sec |
-| 8/35/8 tank with Reverence and Holy Conduit | +3.9 | −38.5: 1 min 15 sec | +29.8 | −12.6: 6 min 29 sec |
-| 8/35/8 tank with Reverence and Holy Conduit, Blessing of Wisdom | +11.9 | −30.5: 1 min 35 sec | +37.8 | −4.6: 17 min 35 sec |
+| PB1, PB3, PB4 (3/35/13: Sanctified Judgement, Improved Judgement, Holy Conduit) | +25.7 | −16.7: 2 min 53 sec | +63.6 | +21.2 |
+| PB1, PB3, PB4, Blessing of Wisdom | +33.7 | −8.7: 5 min 34 sec | +71.6 | +29.2 |
+| PB2 (3/35/13, no Holy Conduit) | +25.7 | −44.9: 1 min 4 sec | +63.6 | −7.1: 11 min 33 sec |
+| 8/35/8 tank with Reverence | +21.3 | −49.3: 58 sec | +59.1 | −11.5: 7 min 6 sec |
+| 8/35/8 tank with Reverence and Holy Conduit | +21.3 | −21.1: 2 min 17 sec | +59.1 | +16.8 |
+| 8/35/8 tank with Reverence and Holy Conduit, Blessing of Wisdom | +29.3 | −13.1: 3 min 41 sec | +67.1 | +24.8 |
 
 - **Sanctified Judgement** gives 14.0 MPS with 7 Judgements each min. Improved Judgement 2/2 adds 1.5 Judgements each min: +3.0 MPS of return and 2.3 MPS of cost. It also gives +19 threat per sec (see Builds).
 - **Thus, the 3/35/13 tank has 4.4 MPS more** than the 8/35/8 tank, with or without Consecration.
@@ -157,15 +157,15 @@ One target. Sanctified Judgement returns 126 mana (60% of the base cost of the S
 
 ## 6. What the results mean
 
-- **The tank receives more mana with gear.** Shield Specialization returns 4% of maximum mana for each block. More mana gives a larger return.
-- **At fresh level 60, PB1 receives +8.3 MPS** with the proposals. Without Shield Specialization (C-P8), it loses about 7 MPS.
-- **In raids, the tank does not lose mana without Consecration.** PB1 receives +15 to +34 MPS (beta: +20 to +31).
-- **The proposals give PB1 less mana than the beta up to Molten Core** (−7.9 MPS at fresh level 60, −2.5 in Molten Core). From Blackwing Lair, they give more (+2.9 in Naxxramas). The cause is Shoulder the Burden (C-P5): Improved Seal of Fury gave 23.3 MPS at all gear levels. Redoubt (C-P1) and Shield Specialization (C-P8) give more with more maximum mana.
-- **Consecration on cooldown uses all mana quickly** without Holy Conduit: PB2 has mana for 46 sec at fresh level 60 and 2 min 14 sec in Naxxramas.
+- **The tank receives more mana with gear.** Shield Specialization returns 6% of maximum mana for each block. More mana gives a larger return.
+- **At fresh level 60, PB1 receives +25.7 MPS** with the proposals. Without Shield Specialization (C-P8), it loses about 7 MPS.
+- **In raids, the tank does not lose mana without Consecration.** PB1 receives +35 to +64 MPS (beta: +20 to +31).
+- **The proposals give PB1 more mana than the beta at all gear levels** (+9.5 MPS at fresh level 60, +20.9 in Molten Core, +32.3 in Naxxramas). Shoulder the Burden (C-P5) removes Improved Seal of Fury (23.3 MPS at all gear levels). Shield Specialization (C-P8, 6%) returns more, and its return increases with maximum mana.
+- **Consecration on cooldown uses all mana quickly** without Holy Conduit: PB2 has mana for 1 min 4 sec at fresh level 60 and 11 min 33 sec in Naxxramas.
 - **Holy Conduit gives the large decrease with Consecration.** With Benediction, it saves about 25 mana per sec (W4).
 - **Sanctified Judgement is the best mana talent for a tank.** It gives 14–17 MPS, also when the boss does not hit the tank. Reverence gives 10.3 MPS. It stays the mana talent for Holy, and for Retribution without raid buffs.
 - **Sanctified Judgement (C-R3) does not change the total return.** It changes only ranks 1 and 2. Each point now gives the same mana.
-- **The 3/35/13 tank can use Consecration on cooldown for a long time.** With Holy Conduit, its mana lasts 1 min 25 sec at fresh level 60 and almost 10 min in Naxxramas.
-- **Flatter gear gives less mana.** In late raids, PB1 receives +18 to +25 MPS. Shield Specialization (C-P8) is then more important.
+- **The 3/35/13 tank can use Consecration on cooldown for a long time.** With Holy Conduit, its mana lasts 2 min 53 sec at fresh level 60. From Molten Core, it lasts all the fight (W10).
+- **Flatter gear gives less mana.** In late raids, PB1 receives +40 to +49 MPS. Shield Specialization (C-P8) is then more important.
 - **Intellect is a tank stat for the Paladin.** It gives more mana. It also increases the Shield Specialization return.
 - **Retribution with Twist of Light (C-R2) almost does not lose mana.** Sanctified Judgement pays for most of the Seal cost. Reverence adds no damage in a raid. It adds about 4% at fresh level 60. Thus, Retribution takes it without raid buffs (wowsims check, 27 October 2026).

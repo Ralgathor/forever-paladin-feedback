@@ -104,7 +104,7 @@ TPS on one boss. The percentage is the Paladin TPS divided by the Druid TPS.
 - With all proposals, the Paladin has 94–105% of the Druid threat at all tiers. With Consecration on cooldown, it has 108–124%. But Consecration costs 565 mana each 8 sec (see Analysis, Mana).
 - Without Holy Shield (C-P9), the Paladin is further below the Druid: 97% at fresh level 60, 74% in Naxxramas. The Warrior and the Druid receive more Attack Power and more rage. The Paladin receives only spell power.
 - The beta Paladin is behind at all tiers: 85% of the Druid at fresh level 60, and 64% in Naxxramas.
-- Shield Specialization gives 4% of maximum mana. Thus, more mana gives more mana return. Without Consecration, the tank receives about +4 mana per sec at fresh level 60 and about +30 mana per sec in Naxxramas (see Analysis, Mana).
+- Shield Specialization gives 6% of maximum mana. Thus, more mana gives more mana return. Without Consecration, the tank receives about +21 mana per sec at fresh level 60 and about +59 mana per sec in Naxxramas (see Analysis, Mana).
 
 ## 3. Result with flatter gear
 
@@ -130,7 +130,7 @@ Paladin with all proposals. The first value is the percentage of the Druid TPS. 
 - With Holy Shield (C-P9) at 200%, the Paladin has 90–105% of the Druid threat in all three cases. At 300%, it has 98–105% of the Druid threat in Naxxramas. At 150%, it has 86–90%.
 - Without Holy Shield (C-P9), the Paladin is behind in all cases. Thus, Holy Shield (C-P9) is more important with flatter gear.
 - The weakest case is flatter gear with boss hits that continue to increase. The Warrior and the Druid still receive more rage from larger hits. Monitor the block value of each gear tier.
-- Mana: if maximum mana increases more slowly (3,650, 3,900 and 4,150), the tank receives +14, +17 and +20 mana per sec without Consecration. Shield Specialization (C-P8) is more important.
+- Mana: if maximum mana increases more slowly (3,650, 3,900 and 4,150), the tank receives +36, +40 and +45 mana per sec without Consecration. Shield Specialization (C-P8) is more important.
 - Defense: if gear gives Defense more slowly, tanks reach 440 Defense later. The boss can then make critical hits for a longer time. Redoubt (C-P1) and the Reckoning critical-hit trigger stay useful for a longer time.
 - Personal Judgement of the Crusader (C2): the +161 bonus from Judgement of the Crusader is more important when gear gives less spell power.
 - The PvP burst check (Reckoning, C-P6) uses fresh and pre-raid stats. It stays correct for a longer time.
