@@ -9,7 +9,7 @@ This section compares the Holy Paladin with the three other healers of Forever: 
 - **The Paladin also has the least mana.** Reverence keeps 30% of the Spirit regeneration during casts. Meditation, Reflection and Mindfulness keep 50% (part 2).
 - **The Druid talents make the Druid strong.** Nature's Splendor makes Rejuvenation and Regrowth last longer. Swiftmend heals for the full heal over time and does not remove it (player test). Gift of the Earthmother gives a global cooldown of 1 sec.
 - **With the proposals, the Paladin is about equal to the Shaman in raids** (−2% to +5%). It is 7–19% below the Druid and 27–32% below the Priest. Reverence (C-H1) gives the mana. Lingering Light (C-H2), Blessing of Light removal (C3) and Conviction give larger heals (part 4).
-- **On one tank, the proposed Paladin is first by a small margin.** It is 1–9% above the Druid, and 14–32% above the Shaman and the Priest. Thus, the proposals make the Paladin the best single-target healer, as the design goal says. In the beta, the Paladin is 5–13% below the Druid (part 5).
+- **On one tank, the proposed Paladin is first by a small margin.** It is 1–9% above the Druid, and 14–26% above the Shaman and the Priest. Thus, the proposals make the Paladin the best single-target healer, as the design goal says. In the beta, the Paladin is 5–13% below the Druid (part 5).
 - **After a large hit on one tank, the Druid is first.** The proposed Paladin is 14–18% below it after 3 sec, and 3–4% below after 6 sec. It is 9% or more above the Shaman and the Priest. In the beta, the Paladin is 18–22% below the Druid (part 5).
 - **Heals over time can be critical heals in Forever.** This helps the Priest, the Druid and the Shaman. The Paladin has almost no heals over time. With the Classic rule, the proposed Paladin is 1–4% higher against each healer (part 8).
 - **We withdrew Illumination at 75%.** With it, the Paladin is first on one tank by 9–15%, and 10–14% above the Shaman in raids. Healing Light at 35% gives +5% to +13% on one tank (part 6, W14).
@@ -38,6 +38,7 @@ This section compares the Holy Paladin with the three other healers of Forever: 
   - Priest: Prayer of Mending can also be a critical heal. Druid: Swiftmend can also be a critical heal.
   - Shaman: one Mana Tide Totem (sheet: two) and 715 healing power (sheet: 700). Chain Heal rank 3 heals 506.5 at level 60 (game files; sheet: 490).
   - Paladin: Holy Light 1,580 and Flash of Light 308 (sheet: 1,609 and 316).
+  - Priest: Greater Heal rank 5 heals 1,960 + 85.7% of healing power, ×1.10 from talents (game files, wowsims Forever). The sheet value is about 9% less.
 - **Not in the model.** Power Word: Shield and Divine Aegis absorbs, the armor from Inspiration and Ancestral Healing, Lay on Hands and Nature's Swiftness.
 
 ## 2. Mana for each healer
@@ -63,7 +64,7 @@ Mana for the full fight: mana pool, mana each 5 sec, Spirit regeneration during 
 
 | Healer | Cooldown heals | Other heals |
 | --- | --- | --- |
-| Priest | Prayer of Mending (5 targets, 10 sec): 18.5 · 15.7 | Binding Heal 8.2 · 6.1. Renew 7.2 · 5.4. Greater Heal 6.0 · 4.5. Prayer of Healing 5.2 · 3.4. Flash Heal 4.1 · 3.1 |
+| Priest | Prayer of Mending (5 targets, 10 sec): 18.5 · 15.7 | Binding Heal 8.2 · 6.1. Renew 7.2 · 5.4. Greater Heal 6.5 · 4.9. Prayer of Healing 5.2 · 3.4. Flash Heal 4.1 · 3.1 |
 | Druid | Tranquility (2 min): 11.9 · 7.2. Swiftmend (15 sec, full Regrowth): 8.8 · 7.0. Wild Growth (6 sec): 5.1 · 2.5 | Regrowth 7.6 · 5.7. Rejuvenation 6.8 · 5.1. Healing Touch 4.7 · 3.8 |
 | Shaman | Healing Stream Totem: 160 · 80. Riptide (6 sec): 7.8 · 5.8 | Chain Heal (2.5 targets, on a Riptide target) 7.5 · 5.6. Healing Wave 6.0 · 4.8. Lesser Healing Wave 4.1 · 3.5 |
 | Paladin, beta | Divine Favor and Holy Light (2 min): 10.7 · 8.6. Light's Vigil and Holy Shock (6 sec): 4.9 · 3.7. Holy Shock (10 sec): 3.4 · 2.9 | Flash of Light 7.3 · 6.2. Holy Light 5.3 · 4.3 |
@@ -98,14 +99,14 @@ Healing per sec after overhealing, on one tank. "Maximum" is the raw healing per
 
 | Healer | 715: 3 min | 715: 5 min | 715: 10 min | 900: 3 min | 900: 5 min | 900: 10 min | Maximum, 715 | Maximum, 900 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Priest | 568 | 481 | 416 | 611 | 518 | 450 | 1,202 | 1,288 |
+| Priest | 606 | 511 | 441 | 649 | 549 | 475 | 1,289 | 1,375 |
 | Druid | 681 | 573 | 518 | 737 | 622 | 563 | 1,320 | 1,423 |
 | Shaman | 607 | 509 | 437 | 654 | 548 | 470 | 1,278 | 1,377 |
 | Paladin, beta | 616 | 532 | 449 | 674 | 588 | 496 | 1,279 | 1,347 |
 | Paladin, proposed | 694 | 605 | 526 | 769 | 677 | 592 | 1,531 | 1,647 |
 
-- In the beta, the Paladin is 5–13% below the Druid, and 1–13% above the Shaman and the Priest. Its maximum is about equal to the Shaman.
-- With the proposals, the Paladin is 1–9% above the Druid, and 14–32% above the Shaman and the Priest. Its maximum is 16% above the Druid and 20% above the Shaman.
+- In the beta, the Paladin is 5–13% below the Druid, and 1–7% above the Shaman and the Priest. Its maximum is about equal to the Shaman.
+- With the proposals, the Paladin is 1–9% above the Druid, and 14–26% above the Shaman and the Priest. Its maximum is 16% above the Druid and 20% above the Shaman.
 - The proposals give more mana (Reverence, C-H1) and larger heals (Lingering Light, C-H2; Blessing of Light removal, C3; Conviction, C-R1). The lead over the Shaman and the Priest increases with the fight length.
 - The design goal of Holy is the best single-target healer. The proposals reach it by 1–9%. With Illumination at 75% (withdrawn), the lead is 9–15%. With Healing Light at 35%, it is 5–13% (part 6, W14).
 
@@ -123,7 +124,7 @@ The rules of the recovery model:
 
 | Healer | 3 sec | 6 sec | 3 sec, no long cooldown | 6 sec, no long cooldown | Best casts (6 sec, no long cooldown) |
 | --- | --- | --- | --- | --- | --- |
-| Priest | 3,663 | 6,906 | 3,327 | 6,570 | Greater Heal, Greater Heal |
+| Priest | 3,932 | 7,416 | 3,569 | 7,052 | Greater Heal, Greater Heal |
 | Druid | 6,293 | 10,041 | 4,898 | 8,686 | Swiftmend, Regrowth, Healing Touch |
 | Shaman | 4,750 | 8,054 | 3,361 | 6,664 | Healing Wave, Healing Wave |
 | Paladin, beta | 5,024 | 8,232 | 3,947 | 7,155 | Holy Light (Infusion of Light), Holy Shock, Holy Light, Flash of Light |
@@ -220,3 +221,45 @@ The values in brackets are for a raid fight of 3 min at 715 healing power.
 - **Overhealing.** The values are estimates. They change with the raid, the damage and the healer assignments.
 - **Light's Vigil.** Only one Light's Vigil for each party can be active. The model gives the Paladin a full party of 5. With fewer players near the target, the heal is less.
 - **Builds.** Analysis, Builds uses the first version of this model (with the Classic big heals of the other classes). Its values compare Paladin builds only. Thus, this comparison with the other healers does not change them.
+
+## 9. Check with wowsims
+
+wowsims Forever and the model agree for the Paladin: the healing for each point of mana is within −4.3% to +5.3%. For the Priest, wowsims gives a higher Greater Heal cost, because a plan with one spell has no Litany of Light return.
+
+Conditions: wowsims Forever commit 69e0e5b with the proposals patch (models/wowsims). The Holy Paladin gear of wowsims (382 healing power with raid buffs) for both classes. Raid buffs, no consumables, a 3 min fight, 1,000 iterations. One heal plan on one target. The sim has no overhealing. Thus, the values are raw healing for each point of mana, with the Illumination return.
+
+- Beta: Healing Light 3/3, Reverence, Infusion of Light, Illumination, Divine Favor, Holy Shock, Holy Power, Light's Vigil, Benediction 5.
+- Proposed: the same with Conviction 5, Reverence (C-H1), Lingering Light 20% (C-H2), Infusion of Light (C-H3), Healing Light 30% (C-H4), Conviction on heals (C-R1). No Blessing of Light (C3).
+- Priest: Improved Healing 3/3, Litany of Light 2/2, Spiritual Guidance 5/5, Spiritual Healing 3/3, Inspiration 3/3, Holy Specialization 5/5, Divine Fury 5/5.
+
+| Plan | Model | wowsims | Difference |
+| --- | --- | --- | --- |
+| Beta, Holy Light, Blessing of Light | 4.81 | 5.04 | +4.8% |
+| Beta, Flash of Light, Blessing of Light | 5.90 | 5.77 | −2.3% |
+| Beta, Holy Light, no Blessing of Light | 3.95 | 4.16 | +5.3% |
+| Beta, Flash of Light, no Blessing of Light | 4.74 | 4.65 | −2.1% |
+| Beta, Flash of Light and Holy Light on Infusion, no Blessing of Light | 4.33 | 4.44 | +2.5% |
+| **Proposed, Holy Light** | **5.23** | **5.41** | **+3.4%** |
+| **Proposed, Flash of Light** | **6.28** | **6.01** | **−4.3%** |
+| **Proposed, Flash of Light then Holy Light** | **5.41** | **5.51** | **+1.8%** |
+| Priest, Greater Heal | 5.79 | 4.67 | −19% |
+| Priest, Flash Heal | 3.58 | 3.27 | −8.6% |
+
+- **Paladin.** The model gives Holy Light 3–5% less and Flash of Light 2–4% more than wowsims. The largest difference is +5.3%. The cause is not confirmed: wowsims gives 19.9% critical heals, and the model uses 22.8%.
+- **The proposals.** Against the beta with no Blessing of Light, the proposals give +24% to +30% healing for each point of mana. Lingering Light (C-H2) gives 6.5% of the Paladin healing.
+- **Priest mana.** wowsims gives 604 mana for each Greater Heal and 380 for each Flash Heal. Improved Healing 3/3 is in the two values. The model uses 491 and 342: Litany of Light returns 20% of the base cost on about 80% of the casts. A plan with one spell has no return.
+- **Priest healing.** The healing for each cast agrees: Greater Heal −0.9% (2,818 against 2,842), Flash Heal +1.5%. This check found an error in the model Greater Heal: the DoubleZug value was about 9% less than the game files. Part 1 gives the correction. It changes only the one-tank values of the Priest (part 5).
+
+**Total healing in 3 min, one heal plan** (wowsims, Paladin gear for both classes)
+
+| Healer | Healing | Against the Priest (Greater Heal) |
+| --- | --- | --- |
+| Paladin beta, Holy Light, no Blessing of Light | 56,500 | −17% |
+| Paladin beta, Holy Light, Blessing of Light | 68,600 | +1% |
+| **Paladin proposed, Holy Light** | **76,000** | **+12%** |
+| **Paladin proposed, Flash of Light then Holy Light** | **76,500** | **+12%** |
+| Priest, Greater Heal | 68,000 | — |
+
+The Druid has no heal spells in wowsims, and the Shaman heal file is not part of the build. Thus, this check has only the Paladin and the Priest. The plans do not use Holy Shock, Divine Favor or Light's Vigil.
+
+The scripts are run_healing.py and check.py in models/wowsims. See its README for the setup and the proposal flags.

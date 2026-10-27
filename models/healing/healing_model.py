@@ -134,7 +134,8 @@ def priest(hp_gear=HPG, tank=False):
       S("Binding Heal", 2544.9, 0.934, True, 342, 1.5, 0.25, maxn=lambda T: round(2*T/60), tank=0.5),
       # Inner Focus: no cost, +25% critical chance. Both the base heal and the coefficient use this multiplier.
       S("Inner Focus + Prayer of Healing", 5*886.9*k_if/k, 5*0.315*k_if/k, True, 0, 3.0, 0.35, maxn=cd_limit(180, 3.0), tank=0.2),
-      S("Greater Heal", 2688.8, 0.934, True, 491, 2.5, 0.25),
+      # Greater Heal rank 5: (1,960 + 85.7% of healing power) x1.10 from talents (game files; the DoubleZug value is 9% less).
+      S("Greater Heal", 2909.2, 0.943, True, 491, 2.5, 0.25),
       S("Flash Heal", 1272.4, 0.467, True, 342, 1.5, 0.25),
     ]
     renew = S("Renew", 1941.2, 1.316, HOT_CRIT, 296, 1.5, 0.25)       # heal over time: critical ticks in Forever

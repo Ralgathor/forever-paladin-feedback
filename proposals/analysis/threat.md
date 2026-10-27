@@ -228,3 +228,41 @@ Other options were examined and rejected. See Withdrawn ideas.
 - Judgement of Fury: 153–167 Holy damage. It uses the melee hit table with no dodge or parry. The damage hits before the taunt (beta test). Holy Strike uses the melee hit table.
 - Seal of Fury (rank 7): 35 Holy damage + 10% of spell power for each hit. It cannot miss. Its critical hit uses a separate roll.
 - Consecration rank 5: 312 damage in 8 sec (8 ticks of 12 + 27), one cast each 8 sec. Critical hit ×1.5 (beta test). Conviction (C-R1) adds to its critical hit chance.
+
+## 7. Check with wowsims
+
+wowsims Forever and the model give the same TPS increase from the proposals: +142 and +143. The TPS level against the Warrior is not the same. wowsims puts the beta Paladin at 99% of the Warrior, and the model at 61%.
+
+Conditions: wowsims Forever commit 69e0e5b with the proposals patch (models/wowsims). Julien's gear, talents and rotation (Consecration on cooldown). Proposed: PB1 with Redoubt (C-P1), Iron Creed (C-P2), Reckoning (C-P6), Shield Specialization (C-P8) and Holy Shield (C-P9). Warrior and Druid: the wowsims pre-raid presets. A 3 min fight against one level 63 boss, 3,000 iterations.
+
+| Value | Model | wowsims | Difference |
+| --- | --- | --- | --- |
+| Proposals, TPS added to the beta Paladin | +143 | +142 | −0.8% |
+| Beta Paladin as a % of the Warrior | 61% | 99% | +62% |
+| Proposed Paladin as a % of the Warrior | 83% | 114% | +38% |
+
+- **The increase agrees.** Thus, the model value of each proposal is correct.
+- **The level does not agree.** Julien's gear gives 468 spell power with consumables and 42.6% melee critical hit chance. It also has a fast weapon with an extra attack, Windfury and Consecration. Part 1 uses 200 spell power, 6% critical hit chance and no Consecration. Curse of the Elements in the sim raid adds 10% to Holy damage taken.
+- **The model with the sim inputs.** With these inputs, the model gives 1,001 TPS for the same sources, and wowsims gives 894 (−11%). wowsims has fewer Holy Shield blocks (−26%), fewer boss hits for Retribution Aura (−24%) and less auto attack threat (−28%). Seal of Fury is 6% higher in wowsims. check.py gives this table for each source.
+- **The Warrior is also different.** The model Warrior and the wowsims Warrior do not use the same gear and talents. The cause of the Warrior difference is not confirmed. Thus, part 1 compares the tanks with the same model inputs.
+
+**wowsims result of each tank** (Julien's gear for the Paladin)
+
+| Tank | TPS (% of the Warrior) | TMI (% of the Warrior) | Crushing blows | TPS, no consumables (% of the Warrior) |
+| --- | --- | --- | --- | --- |
+| Warrior | 996 (100%) | 43.6 (100%) | 0.9% | 904 (100%) |
+| Druid | 711 (71%) | 34.0 (78%) | 15.0% | 673 (74%) |
+| Paladin, beta | 988 (99%) | 38.7 (89%) | 10.8% | 789 (87%) |
+| Paladin, Redoubt (C-P1) only | 1,021 (103%) | 33.6 (77%) | 0.6% | 824 (91%) |
+| **Paladin, all proposals** | **1,130 (114%)** | **31.2 (72%)** | **0.6%** | **925 (102%)** |
+| Paladin, all proposals, Holy Shield 150% of block value | 1,114 (112%) | 31.2 (72%) | 0.6% | 909 (101%) |
+| Paladin, all proposals, Holy Shield 100% of block value | 1,098 (110%) | 31.2 (72%) | 0.6% | 892 (99%) |
+| Paladin, all proposals, Iron Creed 6% | 1,131 (114%) | 33.3 (76%) | 0.6% | 925 (102%) |
+
+TMI is the damage intake value of wowsims: less is better.
+
+- Redoubt (C-P1) removes the crushing blows: 10.8% to 0.6%.
+- With all proposals, the Paladin has 114% of the Warrior TPS, and 102% without consumables.
+- Holy Shield at 150% of block value removes 16 TPS. Iron Creed at 6% increases TMI by 2.1.
+
+The scripts are run_threat.py and check.py in models/wowsims. See its README for the setup and the proposal flags.
