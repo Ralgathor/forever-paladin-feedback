@@ -142,7 +142,7 @@ One target. Sanctified Judgement returns 126 mana (60% of the base cost of the S
 | Beta: about 3 Seals each 10 sec | 41.6 MPS | 1 min 10 sec → 1 min 58 sec | 1 min 31 sec → 2 min 34 sec |
 | C17: one Seal each 10 sec | 11.4 MPS | 4 min 14 sec → 7 min 10 sec | 29 min → 49 min |
 
-**wowsims check (27 October 2026).** RB1 with C1, C17 and C26, in a 3 min fight. Divine Intellect 3 replaces Reverence 3 in the second column.
+**wowsims check (27 October 2026).** RB1 with C1, C17 and C26, in a 3 min fight. Divine Intellect 3 replaces Reverence 3 in the second column. wowsims has only 3 ranks of Vindication, thus RB1 has Vindication 3.
 
 | Case | RB1 with Reverence | RB1 without Reverence |
 | --- | --- | --- |
