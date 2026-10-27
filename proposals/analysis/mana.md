@@ -6,7 +6,7 @@ This section compares the mana of the Paladin in the beta and with the proposals
 
 - Sanctified Judgement (Retribution row 3) is the best mana talent for a tank. It returns 120 mana for each Judgement: 14 MPS, or 17 MPS with Improved Judgement 2/2. Reverence gives 10.3 MPS.
 - The tank builds PB1–PB4 (3/35/13, see Builds) have Sanctified Judgement, Improved Judgement and Holy Conduit. With Consecration on cooldown, the mana lasts 1 min 25 sec at fresh level 60 and 9 min 56 sec in Naxxramas. With Blessing of Wisdom, the Naxxramas tank almost does not lose mana.
-- Reverence (C1) stays the main mana talent for Holy. Retribution receives most of its mana from C17 and Sanctified Judgement. Tanks receive it from Sanctified Judgement.
+- Reverence (C1) stays the main mana talent for Holy. Retribution takes it without raid buffs (+4% DPS at fresh level 60). In a raid, C17 and Sanctified Judgement give the mana of Retribution. Tanks receive their mana from Sanctified Judgement.
 - An 8/35/8 tank with Reverence at fresh level 60 has almost no extra mana while it tanks: +3.9 MPS with the proposals, +1.5 MPS in the beta.
 - The tank gets more mana with better gear. In Naxxramas, the tank gets +29.8 MPS with the proposals.
 - C13 (Shield Specialization once each 2 sec) is necessary. Without C13, a fresh level 60 tank loses about 9 MPS.
@@ -25,7 +25,7 @@ This section compares the mana of the Paladin in the beta and with the proposals
 
 | Fix | Effect |
 | --- | --- |
-| Reverence in row 2 at 50% (C1) | Holy has 50%, as the other healers. For Retribution and for a tank, Sanctified Judgement gives more (part 4). With C17, Retribution does not need Reverence (part 5) |
+| Reverence in row 2 at 50% (C1) | Holy has 50%, as the other healers. Retribution takes it without raid buffs: +4% DPS at fresh level 60 (part 5). In a raid, C17 and Sanctified Judgement give its mana. For a tank, Sanctified Judgement gives more (part 4) |
 | Shield Specialization once each 2 sec (C13) | It stays the main mana source of the tank. Water Shield (Shaman) is the Forever precedent |
 | Improved Seal of Fury removed (C10) | One talent for "mana when you are hit" is sufficient |
 | Echo of 10 sec (C17) | Retribution changes Seals one time each 10 sec, not before each swing |
@@ -152,7 +152,7 @@ One target. Sanctified Judgement returns 126 mana (60% of the base cost of the S
 | Without C17, raid buffs, no Judgement of Wisdom, no mana consumables | 775 DPS | 739 DPS (−5%) |
 
 - With C17, Retribution does not need Reverence in a raid. C17 and Sanctified Judgement give the mana.
-- Without C17, Reverence gives Retribution about 12 MPS.
+- Without raid buffs, Reverence gives Retribution +4% DPS. Thus, it stays a Retribution talent while it levels and at fresh level 60. Without C17, Reverence gives Retribution about 12 MPS.
 
 ## 6. What the results mean
 
@@ -161,9 +161,9 @@ One target. Sanctified Judgement returns 126 mana (60% of the base cost of the S
 - **In raids, the tank does not lose mana without Consecration.** It gets +10 to +30 MPS (beta: +5 to +17).
 - **Consecration on cooldown uses all mana quickly:** in 43 sec at fresh level 60, in about 2 min in Naxxramas. With Benediction in Protection (M11), it lasts 52 sec to 2 min 45 sec. With Holy Conduit from a 7-point Retribution dip also, it lasts 1 min 36 sec to 19 min.
 - **Holy Conduit gives the large decrease with Consecration.** With Benediction, it saves about 25 mana per sec (W4).
-- **Sanctified Judgement is the best mana talent for a tank.** It gives 14–17 MPS, also when the boss does not hit the tank. Reverence gives 10.3 MPS. It stays the mana talent for Holy.
+- **Sanctified Judgement is the best mana talent for a tank.** It gives 14–17 MPS, also when the boss does not hit the tank. Reverence gives 10.3 MPS. It stays the mana talent for Holy, and for Retribution without raid buffs.
 - **C26 does not change the total return.** It changes only ranks 1 and 2. Each point now gives the same mana.
 - **The 3/35/13 tank can use Consecration on cooldown for a long time.** With Holy Conduit, its mana lasts 1 min 25 sec at fresh level 60 and almost 10 min in Naxxramas.
 - **Flatter gear gives less mana.** In late raids, the tank gets +14 to +20 MPS. C13 is then more important.
 - **Intellect is a tank stat for the Paladin.** It gives more mana. It also increases the Shield Specialization return.
-- **Retribution with C17 almost does not lose mana.** Sanctified Judgement pays for most of the Seal cost. Reverence adds no damage in a raid and about 4% at fresh level 60 (wowsims check, 27 October 2026).
+- **Retribution with C17 almost does not lose mana.** Sanctified Judgement pays for most of the Seal cost. Reverence adds no damage in a raid. It adds about 4% at fresh level 60. Thus, Retribution takes it without raid buffs (wowsims check, 27 October 2026).
