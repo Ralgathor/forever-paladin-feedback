@@ -136,9 +136,38 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
 .ptable tr[data-key]:hover td{background:color-mix(in srgb,var(--gold-glow) 10%,transparent)}
 .ptable td.id{font-family:var(--f-mono);color:var(--gold);white-space:nowrap}
 .ptable td.today{color:var(--muted)}
-#compare .ptable table{table-layout:fixed}
-#compare .ptable th:first-child{width:19%}
-#compare .ptable th:not(:first-child){width:27%}
+.rtabs{display:flex;flex-wrap:wrap;gap:6px}
+.rtabs button{font-family:var(--f-display);letter-spacing:.03em;padding:6px 16px}
+.rtabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.mc-legend{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:12.5px;color:var(--muted)}
+.mc-legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{display:inline-block;width:14px;height:10px;border-radius:2px}
+.sw.b,.bar i.b{background:repeating-linear-gradient(135deg,var(--muted) 0 3px,color-mix(in srgb,var(--muted) 45%,transparent) 3px 6px)}
+.sw.p,.bar i.p{background:var(--gold-glow)}
+.sw.o,.bar i.o{background:color-mix(in srgb,var(--ink) 28%,transparent)}
+.mc-grid{display:grid;align-items:start;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:12px}
+.mc{border:1px solid var(--line);border-radius:6px;padding:12px 14px;background:var(--bg);display:flex;flex-direction:column;gap:8px;min-width:0}
+.mc h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:16px}
+.mc .cond{font-size:12px;color:var(--muted)}
+.mc-v{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:stretch}
+.mc-v>div{display:flex;flex-direction:column;gap:1px;min-width:0}
+.mc-v small{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.mc-v .vb{color:var(--muted);font-size:14px;line-height:1.3}
+.mc-v .vp{color:var(--ink);font-weight:700;font-size:15px;line-height:1.3}
+.mc-v .ar{align-self:center;color:var(--gold);font-size:18px}
+.mc-v .big{font-family:var(--f-mono);font-size:20px;font-weight:500}
+.bars{display:grid;grid-template-columns:minmax(0,max-content) 1fr auto;gap:3px 8px;align-items:center;font-size:12.5px}
+.bars .lb{color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bars .lb.me{color:var(--ink);font-weight:500}
+.bar{height:10px;border-radius:2px;background:color-mix(in srgb,var(--line) 55%,transparent);position:relative;overflow:hidden}
+.bar i{position:absolute;inset:0 auto 0 0;border-radius:2px}
+.bars .vl{font-size:12.5px;white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right}
+.mc .sum{margin:0;font-size:13.5px;color:var(--ink);max-width:none}
+.mc .ids{display:flex;flex-wrap:wrap;gap:4px}
+.mc .ids .pid{margin:0}
+.mc details{font-size:13px;color:var(--muted)}
+.mc details summary{cursor:pointer;color:var(--muted);font-size:12.5px}
+.mc details p{margin:4px 0 0;font-size:13px}
 .devnotes{font-size:14px;line-height:1.55;max-width:80ch}
 .devnotes p.cat{color:var(--ink);font-size:16px;margin-top:10px}
 .devnotes ul{margin:4px 0 6px;padding-left:1.3em}
@@ -214,52 +243,12 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
 
   <section class="props" id="compare" aria-labelledby="cmpTitle">
     <h2 id="cmpTitle">Beta and proposals compared, by role</h2>
-    <p>This is an overview. The values come from the models of the proposals document, not from combat logs. Level 60, one level 63 boss, unless the row gives a different condition. The proposals document gives the details and the limits of each value.</p>
-
-    <h3>Healer (Holy)</h3>
-    <div class="ptable"><table><thead><tr><th>Topic</th><th>Beta</th><th>Proposed</th><th>Other classes</th></tr></thead><tbody>
-    <tr><td>Mana in a fight of 3 min (raid buffs, 2 potions)</td><td class="today">18,993. The least of the four healers. Reverence keeps 30%</td><td>20,473: Reverence keeps 50% (C-H1)</td><td>Priest 20,823, Shaman 20,571, Druid 24,804 (Innervate on itself)</td></tr>
-    <tr><td>Raid healing per sec (715 healing power, 3 min)</td><td class="today">616: 13% below the lowest other healer</td><td>694: about equal to the Shaman (−2%), 19% below the Druid, 27% below the Priest</td><td>Priest 948, Druid 855, Shaman 709. Their heals over time can be critical heals</td></tr>
-    <tr><td>Cooldown heals (raw healing per mana)</td><td class="today">Holy Shock 3.4, Light's Vigil 4.9: the least efficient Paladin heals</td><td>Holy Shock 4.6, Light's Vigil 5.9: still not cast. Flash of Light (8.2) is the main heal</td><td>Prayer of Mending 18.5, Tranquility 11.9, Swiftmend 8.8, Riptide 7.8: the most efficient heals of their class</td></tr>
-    <tr><td>Big heal</td><td class="today">No talent decreases the Holy Light cast. Infusion of Light works only after a critical heal</td><td>Flash of Light, then a 1.5 sec Holy Light (Infusion of Light, C-H3)</td><td>Each other healer has a talent for −0.5 sec on the big heal</td></tr>
-    <tr><td>One tank (715 healing power)</td><td class="today">5–13% below the Druid. 1–7% above the Shaman and the Priest. Maximum 1,279 per sec (raw)</td><td>First: 1–9% above the Druid, 14–26% above the Shaman and the Priest. Maximum 1,531 per sec (raw). See W14</td><td>3 min: Druid 681, Shaman 607, Priest 606. Maximum 1,278–1,320 per sec (raw)</td></tr>
-    <tr><td>Recovery after a large hit (first 3–6 sec)</td><td class="today">18–22% below the Druid after 3 and 6 sec. Only a critical heal makes the next Holy Light fast</td><td>14–18% below the Druid after 3 sec, 3–4% below after 6 sec. Above the Shaman and the Priest. Holy Light (1.5 sec) opens, then Holy Shock or Flash of Light makes the next Holy Light fast (Infusion of Light, C-H3)</td><td>The Druid is the best: its heals over time are on the tank, and Swiftmend heals for a full Rejuvenation</td></tr>
-    <tr><td>Critical heal chance (raid buffs)</td><td class="today">23% (3.5% Paladin base)</td><td>28%: Conviction for spells (C-R1), 5 Retribution points (M-R2)</td><td>Priest 19%, Druid 18%, Shaman 24% (Thundering Strikes for 5 points)</td></tr>
-    <tr><td>Blessing of Light</td><td class="today">Uses a Blessing slot. The healing changes with the number of Paladins in the raid</td><td>Removed. Healing Light (C-H4) gives +30% (Blessing of Light removal, C3)</td><td>—</td></tr>
-    <tr><td>Lay on Hands at full mana</td><td class="today">Drains all 4,416 mana. The mana is back after 3 min 15 sec</td><td>Drains 2,208 (50%) with Devoted Sacrifice 2/2 (C-P11). The mana is back after 1 min 38 sec</td><td>Druid and Shaman: Nature's Swiftness gives an instant big heal with no mana penalty</td></tr>
-    <tr><td>Deep Holy talents</td><td class="today">Most saved builds stop at about 20 Holy points</td><td>32 Holy points give all healing talents, with no filler (Lingering Light, C-H2; Holy Power, M-H3). Conviction and saves with the other points</td><td>—</td></tr>
-    </tbody></table></div>
-
-    <h3>Tank (Protection)</h3>
-    <div class="ptable"><table><thead><tr><th>Topic</th><th>Beta</th><th>Proposed</th><th>Other classes</th></tr></thead><tbody>
-    <tr><td>Crushing blows (level 63 boss)</td><td class="today">Holy Shield gives +30% block. Redoubt is a 10% proc. You need about 72% avoidance from gear</td><td>Holy Shield also starts Redoubt (C-P1): 60% block. About 4.3% of the swings can crush (440 Defense, 100 Agility)</td><td>Warrior: about 3% (Shield Block). Druid: crushing blows always occur, with more armor and health</td></tr>
-    <tr><td>Threat, as a % of the Druid</td><td class="today">85% at fresh level 60, 64% in Naxxramas</td><td>105% at fresh level 60, 94% in Naxxramas (Holy Shield, C-P9). With Consecration on cooldown: 108–124%, but the mana then lasts about 1 min at fresh level 60 and 6.5 min in Naxxramas</td><td>—</td></tr>
-    <tr><td>Consecration on cooldown, fresh level 60</td><td class="today">PB1 talents (Holy Conduit, Sanctified Judgement): the mana lasts 1 min 50 sec</td><td>PB1: 2 min 53 sec. With Benediction in Protection Row 1 (M-P1) also: 7 min 37 sec</td><td>—</td></tr>
-    <tr><td>Mana of the tank, no Consecration</td><td class="today">PB1 talents: +16.2 mana per sec at fresh level 60, +31.3 in Naxxramas</td><td>PB1: +25.7 and +63.6. Shoulder the Burden (C-P5) removes Improved Seal of Fury. Shield Specialization (C-P8) returns 6% on each block. Its return increases with maximum mana</td><td>Warrior and Druid receive rage from the hits that they take</td></tr>
-    <tr><td>Damage reduction</td><td class="today">Iron Creed: about 6% (6 sec after Holy Strike), with Improved Righteous Fury</td><td>Iron Creed (C-P2): 10% while Righteous Fury is active (Improved Righteous Fury removal, C-P4)</td><td>Warrior, Defensive Stance: 10%</td></tr>
-    <tr><td>Reckoning on a boss</td><td class="today">About 1 extra attack each 10 sec. The critical hit trigger does not work at 440 Defense</td><td>About 2 extra attacks each 10 sec: block, dodge and parry give charges (Reckoning, C-P6)</td><td>—</td></tr>
-    <tr><td>Pull and group tools</td><td class="today">Judgement of Fury at 10 yards</td><td>Judgement of Fury at 20 yards (Reach of Law, C-P7). Shoulder the Burden (C-P5)</td><td>Warrior: Charge in Defensive Stance. Druid: Feral Charge</td></tr>
-    <tr><td>Dungeons</td><td class="today">—</td><td>No crushing blows below level 63. A tank build has Holy Conduit (7 Retribution points with Deflection) and full threat on one target. Consecrated Ground (Holy row 6) is for deep Holy Shock builds</td><td>—</td></tr>
-    </tbody></table></div>
-
-    <h3>Damage (Retribution)</h3>
-    <div class="ptable"><table><thead><tr><th>Topic</th><th>Beta</th><th>Proposed</th><th>Other classes</th></tr></thead><tbody>
-    <tr><td>DPS on one boss, fresh level 60</td><td class="today">847 (MythicSim): 93% of the pure average</td><td>About 937: 103% of the pure average, 101% of Fury (Holy Strike Seal trigger, C1)</td><td>Pure average 909. Fury Warrior 929. Survival Hunter 1,175. Enhancement Shaman 741</td></tr>
-    <tr><td>DPS with better gear</td><td class="today">—</td><td>About 95% of the pure average in Naxxramas (target 95%), 92% of Fury. See watch list W15</td><td>Fury increases more with gear than all other classes</td></tr>
-    <tr><td>Seal changes</td><td class="today">About 3 Seal casts each 10 sec. The global cooldown is active 79% of the time</td><td>1 Seal cast each 10 sec. 49% of the time (Twist of Light, C-R2)</td><td>—</td></tr>
-    <tr><td>Mana</td><td class="today">Zero after 72 sec of Seal changes. Then Seal of Command only (−12%)</td><td>Increases by about 7 per sec with Blessing of Wisdom. Only Hammer of Wrath, in the last 20% of the fight, uses more (Twist of Light, C-R2)</td><td>—</td></tr>
-    <tr><td>Holy Strike</td><td class="today">Does not trigger Seal of Command or Seal of Righteousness</td><td>Triggers your active Seal and the Echo (Holy Strike Seal trigger, C1)</td><td>Stormstrike (Shaman) is the core attack of Enhancement</td></tr>
-    <tr><td>Two-Handed Weapon Specialization</td><td class="today">6% at 20 points</td><td>6% at 15 points (Two-Handed Weapon Specialization, M-R1)</td><td>Warrior: 3%</td></tr>
-    </tbody></table></div>
-
-    <h3>PvP (all specs)</h3>
-    <div class="ptable"><table><thead><tr><th>Topic</th><th>Beta</th><th>Proposed</th><th>Other classes</th></tr></thead><tbody>
-    <tr><td>Reckoning burst in one stun (0/26/25)</td><td class="today">About 2,130. About 3,700 with 4 stored attacks</td><td>About 3,020 (Reckoning, C-P6; Holy Strike Seal trigger, C1). See watch list W6</td><td>—</td></tr>
-    <tr><td>Fast heal for Retribution and Protection</td><td class="today">Infusion of Light only after a critical heal</td><td>A 1.5 sec Holy Light after each Holy Strike, with 7 Holy points (Infusion of Light, C-H3). See W12</td><td>—</td></tr>
-    <tr><td>Holy healer: critical heals and Hand of Protection each 3 min</td><td class="today">17 points: it does not fit in a Holy build</td><td>12 points: Benediction 5 (M-P1) and Guardian's Favor 2 in Protection, Conviction 5 in Retribution (M-R2). It fits, with 4 points free</td><td>—</td></tr>
-    <tr><td>Saves after Lay on Hands</td><td class="today">0 mana: no Divine Shield, Hand of Protection or Hammer of Justice</td><td>Half of the mana stays (Devoted Sacrifice, C-P11). See watch list W18</td><td>—</td></tr>
-    <tr><td>Iron Creed with Righteous Fury always active</td><td class="today">About 6%</td><td>10% with 30 Protection points (Iron Creed, C-P2). See W7 and W17</td><td>Iron Will (Warrior): −15% stun and fear for 5 points</td></tr>
-    </tbody></table></div>
+    <p>This is an overview. The values come from the models of the proposals document, not from combat logs. Level 60, one level 63 boss, unless a card gives a different condition. The proposals document gives the details and the limits of each value.</p>
+    <div class="rtabs" role="tablist" aria-label="Role">
+      <button type="button" role="tab" data-role="heal" aria-selected="true">Healer</button><button type="button" role="tab" data-role="tank" aria-selected="false">Tank</button><button type="button" role="tab" data-role="dps" aria-selected="false">Damage</button><button type="button" role="tab" data-role="pvp" aria-selected="false">PvP</button>
+    </div>
+    <div class="mc-legend"><span><i class="sw b"></i>Paladin, beta</span><span><i class="sw p"></i>Paladin, proposed</span><span><i class="sw o"></i>Other classes</span></div>
+    <div id="cmpBody" class="mc-grid" role="tabpanel"></div>
   </section>
 
   <footer class="foot">
@@ -697,6 +686,58 @@ document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{activeTab=b.
 function tabs(){document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.t===activeTab));TREES.forEach(tr=>document.getElementById("tree-"+tr.id).classList.toggle("show",tr.id===activeTab));}
 window.addEventListener("scroll",hideTip,{passive:true});
 
+// Beta and proposals compared: one card per topic. bars: [label, value, kind b|p|o, shown text?]
+const CMP={
+heal:[
+ {t:"Raid healing per sec",c:"715 healing power, 3 min",b:"616",p:"694",big:1,bars:[["Priest",948,"o"],["Druid",855,"o"],["Shaman",709,"o"],["Paladin, proposed",694,"p"],["Paladin, beta",616,"b"]],s:"About equal to the Shaman (−2%). Still 19% below the Druid and 27% below the Priest.",d:"Beta: 13% below the lowest other healer. The heals over time of the other healers can be critical heals."},
+ {t:"One tank, healing per sec",c:"715 healing power, 3 min",b:"616",p:"694",big:1,bars:[["Paladin, proposed",694,"p"],["Druid",681,"o"],["Paladin, beta",616,"b"],["Shaman",607,"o"],["Priest",606,"o"]],s:"First of the four healers: 1–9% above the Druid, 14–26% above the Shaman and the Priest. See W14.",d:"Maximum raw healing per sec: beta 1,279, proposed 1,531, other healers 1,278–1,320."},
+ {t:"Mana in a 3 min fight",c:"Raid buffs, 2 potions",b:"18,993",p:"20,473",big:1,ids:["C-H1"],bars:[["Druid",24804,"o"],["Priest",20823,"o"],["Shaman",20571,"o"],["Paladin, proposed",20473,"p"],["Paladin, beta",18993,"b"]],s:"Reverence keeps 50% of the mana regeneration (was 30%). The Paladin is now close to the Priest and the Shaman.",d:"The Druid casts Innervate on itself."},
+ {t:"Recovery after a large hit",c:"First 3–6 sec, against the Druid",b:"18–22% below the Druid",p:"14–18% below after 3 sec, 3–4% below after 6 sec",ids:["C-H3"],s:"Above the Shaman and the Priest. Holy Light (1.5 sec) opens, then Holy Shock or Flash of Light makes the next Holy Light fast.",d:"Beta: only a critical heal makes the next Holy Light fast. The Druid is first: its heals over time are on the tank, and Swiftmend heals for a full Rejuvenation."},
+ {t:"Critical heal chance",c:"Raid buffs",b:"23%",p:"28%",big:1,ids:["C-R1","M-R2"],bars:[["Paladin, proposed",28,"p","28%"],["Shaman",24,"o","24%"],["Paladin, beta",23,"b","23%"],["Priest",19,"o","19%"],["Druid",18,"o","18%"]],s:"Conviction now counts for spells, with 5 Retribution points.",d:"Paladin base: 3.5%. Shaman: Thundering Strikes for 5 points."},
+ {t:"Large heal",b:"No talent makes Holy Light faster",p:"Flash of Light, then a 1.5 sec Holy Light",ids:["C-H3"],s:"Each other healer has a talent for −0.5 sec on its large heal.",d:"Beta: Infusion of Light works only after a critical heal."},
+ {t:"Cooldown heals",c:"Raw healing per mana",b:"Holy Shock 3.4, Light's Vigil 4.9",p:"Holy Shock 4.6, Light's Vigil 5.9",s:"Still not cast. Flash of Light (8.2) stays the main heal.",d:"Other classes: Prayer of Mending 18.5, Tranquility 11.9, Swiftmend 8.8, Riptide 7.8. These are the most efficient heals of their class."},
+ {t:"Lay on Hands at full mana",b:"Drains all 4,416 mana",p:"Drains 2,208 (50%)",ids:["C-P11"],s:"With Devoted Sacrifice 2/2, the mana is back after 1 min 38 sec (was 3 min 15 sec).",d:"Druid and Shaman: Nature's Swiftness gives an instant large heal with no mana penalty."},
+ {t:"Blessing of Light",b:"Uses a Blessing slot",p:"Removed. Healing Light gives +30%",ids:["C3","C-H4"],s:"The healing no longer changes with the number of Paladins in the raid."},
+ {t:"Deep Holy talents",b:"Most builds stop at about 20 Holy points",p:"32 Holy points give all healing talents",ids:["C-H2","M-H3"],s:"No filler talents. The other points go to Conviction and saves."}
+],
+tank:[
+ {t:"Crushing blows",c:"Level 63 boss, 440 Defense, 100 Agility",b:"About 72% avoidance from gear is necessary",p:"About 4.3% of the swings can crush",ids:["C-P1"],s:"Holy Shield also starts Redoubt: 60% block. Warrior: about 3% (Shield Block).",d:"Beta: Holy Shield gives +30% block, and Redoubt is a 10% proc. Druid: crushing blows always occur, with more armor and health."},
+ {t:"Threat, as a % of the Druid",c:"Druid = 100%",b:"85% fresh level 60, 64% Naxxramas",p:"105% fresh level 60, 94% Naxxramas",ids:["C-P9"],bars:[["Druid",100,"o","100%"],["Fresh 60, proposed",105,"p","105%"],["Fresh 60, beta",85,"b","85%"],["Naxxramas, proposed",94,"p","94%"],["Naxxramas, beta",64,"b","64%"]],s:"Holy Shield damage now increases with block value, thus with gear.",d:"With Consecration on cooldown: 108–124%. But the mana then lasts about 1 min at fresh level 60 and 6.5 min in Naxxramas."},
+ {t:"Mana of the tank",c:"Mana per sec, no Consecration, PB1 talents",b:"+16.2 fresh level 60, +31.3 Naxxramas",p:"+25.7 fresh level 60, +63.6 Naxxramas",ids:["C-P5","C-P8"],bars:[["Fresh 60, proposed",25.7,"p","+25.7"],["Fresh 60, beta",16.2,"b","+16.2"],["Naxxramas, proposed",63.6,"p","+63.6"],["Naxxramas, beta",31.3,"b","+31.3"]],s:"Shield Specialization returns 6% on each block. Its return increases with maximum mana.",d:"Shoulder the Burden removes Improved Seal of Fury. Warrior and Druid receive rage from the hits that they take."},
+ {t:"Consecration on cooldown",c:"Time until the mana is zero, fresh level 60, PB1 talents",b:"1 min 50 sec",p:"2 min 53 sec",ids:["M-P1"],bars:[["Proposed, with Benediction",457,"p","7 min 37 sec"],["Proposed",173,"p","2 min 53 sec"],["Beta",110,"b","1 min 50 sec"]],s:"With Benediction in Protection row 1 also: 7 min 37 sec.",d:"PB1 talents: Holy Conduit and Sanctified Judgement."},
+ {t:"Damage reduction",b:"About 6%",p:"10%",ids:["C-P2","C-P4"],s:"Iron Creed now gives it while Righteous Fury is active. Warrior, Defensive Stance: 10%.",d:"Beta: 6 sec after Holy Strike, with Improved Righteous Fury."},
+ {t:"Reckoning on a boss",b:"About 1 extra attack each 10 sec",p:"About 2 extra attacks each 10 sec",ids:["C-P6"],s:"Block, dodge and parry now give charges.",d:"Beta: the critical hit trigger does not work at 440 Defense."},
+ {t:"Pull and group tools",b:"Judgement of Fury at 10 yards",p:"Judgement of Fury at 20 yards, and Shoulder the Burden",ids:["C-P7","C-P5"],s:"Warrior: Charge in Defensive Stance. Druid: Feral Charge."},
+ {t:"Dungeons",b:"—",p:"No crushing blows below level 63",s:"A tank build has Holy Conduit (7 Retribution points with Deflection) and full threat on one target.",d:"Consecrated Ground (Holy row 6) is for deep Holy Shock builds."}
+],
+dps:[
+ {t:"DPS on one boss",c:"Fresh level 60",b:"847",p:"About 937",ids:["C1"],bars:[["Survival Hunter",1175,"o","1,175"],["Paladin, proposed",937,"p","937"],["Fury Warrior",929,"o","929"],["Pure average",909,"o","909"],["Paladin, beta",847,"b","847"],["Enhancement Shaman",741,"o","741"]],s:"103% of the pure average and 101% of Fury (was 93% of the pure average).",d:"Beta value from MythicSim."},
+ {t:"DPS with better gear",c:"Naxxramas",b:"—",p:"About 95% of the pure average",s:"The target is 95%. 92% of Fury. See W15.",d:"Fury increases more with gear than all other classes."},
+ {t:"Seal changes",b:"About 3 Seal casts each 10 sec",p:"1 Seal cast each 10 sec",ids:["C-R2"],bars:[["Global cooldown active, beta",79,"b","79%"],["Global cooldown active, proposed",49,"p","49%"]],s:"The global cooldown is active 49% of the time (was 79%)."},
+ {t:"Mana",b:"Zero after 72 sec",p:"About +7 mana per sec",ids:["C-R2"],s:"With Blessing of Wisdom. Only Hammer of Wrath, in the last 20% of the fight, uses more.",d:"Beta: after 72 sec of Seal changes, Seal of Command only (−12%)."},
+ {t:"Holy Strike",b:"No Seal of Command or Seal of Righteousness",p:"Triggers your active Seal and the Echo",ids:["C1"],d:"Stormstrike (Shaman) is the core attack of Enhancement."},
+ {t:"Two-Handed Weapon Specialization",b:"6% at 20 points",p:"6% at 15 points",ids:["M-R1"],s:"Warrior: 3%."}
+],
+pvp:[
+ {t:"Reckoning burst in one stun",c:"Build 0/26/25",b:"About 2,130",p:"About 3,020",ids:["C-P6","C1"],bars:[["Beta, 4 stored attacks",3700,"b","3,700"],["Proposed",3020,"p","3,020"],["Beta",2130,"b","2,130"]],s:"Your Holy Strike now releases up to 2 stored attacks. See W6."},
+ {t:"Fast heal for Retribution and Protection",b:"Only after a critical heal",p:"A 1.5 sec Holy Light after each Holy Strike",ids:["C-H3"],s:"It needs 7 Holy points. See W12."},
+ {t:"Holy healer: critical heals and Hand of Protection each 3 min",b:"17 points: it does not fit",p:"12 points: it fits",ids:["M-P1","M-R2"],s:"Benediction 5 and Guardian's Favor 2 in Protection, Conviction 5 in Retribution. 4 points stay free."},
+ {t:"Saves after Lay on Hands",b:"0 mana: no saves",p:"Half of the mana stays",ids:["C-P11"],s:"Divine Shield, Hand of Protection and Hammer of Justice stay available. See W18."},
+ {t:"Iron Creed with Righteous Fury always active",b:"About 6%",p:"10%",ids:["C-P2"],s:"It needs 30 Protection points. See W7 and W17.",d:"Iron Will (Warrior): −15% stun and fear for 5 points."}
+]};
+function renderCompare(role){
+  const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+  const card=x=>{
+    const mx=x.bars?Math.max(...x.bars.map(b=>b[1])):0;
+    const bars=x.bars?`<div class="bars">${x.bars.map(b=>`<span class="lb${b[2]!=="o"?" me":""}">${esc(b[0])}</span><span class="bar"><i class="${b[2]}" style="width:${(b[1]/mx*100).toFixed(1)}%"></i></span><span class="vl">${esc(b[3]||b[1].toLocaleString("en-US"))}</span>`).join("")}</div>`:"";
+    return `<article class="mc"><div><h4>${esc(x.t)}</h4>${x.c?`<div class="cond">${esc(x.c)}</div>`:""}</div>
+<div class="mc-v"><div><small>Beta</small><span class="vb${x.big?" big":""}">${esc(x.b)}</span></div><span class="ar" aria-hidden="true">→</span><div><small>Proposed</small><span class="vp${x.big?" big":""}">${esc(x.p)}</span></div></div>
+${bars}${x.s?`<p class="sum">${esc(x.s)}</p>`:""}${x.d?`<details><summary>More</summary><p>${esc(x.d)}</p></details>`:""}${x.ids?`<div class="ids">${x.ids.map(i=>`<span class="pid">${i}</span>`).join("")}</div>`:""}</article>`;};
+  document.getElementById("cmpBody").innerHTML=CMP[role].map(card).join("");
+  document.querySelectorAll(".rtabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.role===role));
+}
+document.querySelectorAll(".rtabs button").forEach(b=>b.addEventListener("click",()=>renderCompare(b.dataset.role)));
+renderCompare("heal");
 setTalents("prop");build();renderProps();syncMode();
 const h=(location.hash||"").slice(1);
 if(h&&h!=="x"&&decode(h)===true){
