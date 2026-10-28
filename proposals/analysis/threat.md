@@ -332,6 +332,21 @@ This part compares the tanks against 3 and 5 enemies. The script is models/threa
 - Without Consecration, the proposed Paladin has 109–112% of the best of Warrior and Druid on 3 targets, and 89–99% on 5 targets.
 - With the wowsims Druid multipliers (Bear Form ×1.5 only), the Druid has about one third less threat on all targets.
 
+**Where the lead comes from**
+
+3 targets: Paladin as a % of the best of Warrior and Druid.
+
+| Tier | Paladin beta | Paladin proposed | TPS added by the proposals |
+| --- | --- | --- | --- |
+| Fresh level 60 | 145% | 159% | +70 |
+| Naxxramas | 116% | 151% | +268 |
+
+- **Most of the lead is there on 1 trash target.** At fresh level 60, the proposed Paladin has 574 TPS, the Warrior 326 and the Druid 268. Each extra target adds about the same threat to the three tanks.
+- **Low rage.** Each mob hits for 1/3 of a boss hit. Thus, the Warrior and the Druid receive little rage. If each mob hits as a boss, the lead is about half.
+- **Armor.** Trash has no Sunder Armor or Faerie Fire. This decreases Warrior and Druid physical damage. Armor does not decrease Holy damage.
+- **Consecration.** The Paladin uses it on cooldown here: +91 to +107 TPS on the main target. Parts 1 to 3 do not include it.
+- **The proposals.** At fresh level 60, they add little. In Naxxramas, they give about half of the lead, mostly with Holy Shield (C-P9 and C-P1). On each extra target, they add 16 TPS at fresh level 60 and 77 TPS in Naxxramas.
+
 **Check with wowsims Forever** (28 October 2026)
 
 Setup: wowsims Forever (commit 05ce531) with the proposals patch (models/wowsims). Default gear of each spec in wowsims: Paladin default, Warrior pre-raid, Druid default. Thus, the gear is not equal. Each level 63 target hits for 1/3 of the boss. Raid buffs and debuffs, 3 min, 2,000 iterations.
@@ -346,6 +361,7 @@ Threat per sec on each target (main target first):
 | Druid | 614 | 614 / 213 / 206 | 646 / 217 / 209 / 31 / 31 |
 
 - **wowsims agrees on the extra targets.** On the lowest of 3 targets, the Paladin has about 3.6 times the Warrior threat and 1.2 times the Druid threat. On 5 targets, it has about 4–5 times both.
+- **The proposals give the lead on extra targets.** On the lowest of 3 targets, the beta Paladin is about equal to the Druid (203 against 206 TPS). With the proposals, it has 255.
 - **Holy Shield.** In wowsims, Holy Shield does damage only on a block. With 3 or 5 attackers, it does damage 3.7–3.9 times each 10 sec. The model uses 4. With the proposals, Holy Shield gives about 120 TPS on each extra target against 3 targets (beta: about 66).
 - **Total threat does not agree.** In wowsims, the Paladin has about the same total threat as the Warrior (3 targets: 1,269 against 1,261; 5 targets: 1,478 against 1,545). The model gives about 1.5 times. The Warrior puts its threat on the main target (Revenge) and on the Cleave target.
 - **Thunder Clap** gives only about 41 TPS on each target in wowsims.
@@ -354,7 +370,7 @@ Threat per sec on each target (main target first):
 **Conclusion**
 
 - Against 3 or more enemies, the Paladin has the most threat on the extra targets. The model and wowsims agree on this.
-- On total threat, wowsims gives the Paladin about the same value as the Warrior.
+- On total threat, wowsims gives the Paladin about the same value as the Warrior. The large total lead of the model comes from low rage, trash armor and Consecration, not from the extra targets.
 - Consecration is the main source. It gives its full damage to 4 enemies only.
 - The proposals increase the lead: Holy Shield (C-P9) and Redoubt (C-P1) add Holy Shield damage, and Shield Specialization (C-P8) pays for Consecration.
 - No proposal is necessary for threat against groups.
