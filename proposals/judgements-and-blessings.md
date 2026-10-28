@@ -89,7 +89,7 @@ Flash of Light + Holy Light (Infusion of Light, C-H3), healing per sec with no c
 - **Change.** Hand of Sacrifice moves up to 825 damage to the Paladin, with a 30 sec cooldown. Guardian's Favor (C-P10) reduces the cooldown by 5/10 sec: 25/20 sec. With Hands (C5), Blessing of Sacrifice is Hand of Sacrifice and uses no Blessing slot.
 - **Proposed text (rank 2).** "Places a Hand on the party member, transferring up to 825 damage taken to the caster. Lasts 30 sec." 100 mana, 30 yards, instant, 30 sec cooldown.
 - **Rank 1 (level 46).** Up to 675 damage, 80 mana. 15 hits of the beta value: 15 × 45.
-- **Beta text (rank 2).** "Places a Blessing on the party member, transfering 55 damage taken per hit to the caster. Lasts 30 sec. Players may only have one Blessing on them per Paladin at any one time." No cooldown.
+- **Beta text (rank 2).** "Places a Blessing on the party member, transferring 55 damage taken per hit to the caster. Lasts 30 sec. Players may only have one Blessing on them per Paladin at any one time." No cooldown.
 - **The Hand ends** after 30 sec or when 825 damage moves to the caster.
 
 ### The problem

@@ -1,6 +1,6 @@
 # Withdrawn ideas
 
-We examined these ideas and rejected them. They are not proposals.
+The analysis examined these ideas and rejected them. They are not proposals.
 
 | Idea | Why it was rejected |
 | --- | --- |
