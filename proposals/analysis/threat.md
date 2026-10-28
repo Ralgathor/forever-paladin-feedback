@@ -1,6 +1,6 @@
 # Threat
 
-This section compares the threat of the three tanks: Warrior, Druid and Paladin. The unit is threat per second (TPS) on one boss. The tanks are level 60. The boss is level 63.
+This section compares the threat of the three tanks: Warrior, Druid and Paladin. The unit is threat per second (TPS) on one boss. Part 8 compares the tanks against groups of enemies. The tanks are level 60. The boss is level 63.
 
 The values come from a model. The model uses beta tests and developer notes. It is not a combat log. The inputs are in part 6. The spell data from beta tests is in Beta test results. The values that are not known are in Open questions.
 
@@ -15,6 +15,7 @@ The script models/threat/run_tables.py calculates all values of this section fro
 - Judgement of the Crusader gives the Paladin tank about +55 TPS. Judgement of Fury does not remove it. With Personal Judgement of the Crusader (C2), the tank keeps it. This is also true when the raid needs the Judgement of the tank for Light or Wisdom.
 - If the gear progression is flatter, the Paladin has 92–97% of the Druid threat in Naxxramas.
 - The Druid threat multipliers are not known. The model uses the player data (Maul ×1.75, Primal Bite ×3). wowsims Forever uses Bear Form ×1.5 only. With the wowsims values, the Druid loses about one third of its threat (part 2).
+- Against 3 or more enemies, the Paladin has the most threat on the extra targets (part 8). Total threat is about equal to the Warrior in wowsims.
 - Holy Strike Seal trigger (C1: Holy Strike triggers Seal of Fury) gives about +14 TPS more. The tables do not include it.
 
 ## 1. Result with the same gear
@@ -281,3 +282,79 @@ TMI is the damage intake value of wowsims: less is better.
 - Holy Shield at 150% of block value removes 16 TPS. Iron Creed at 6% increases TMI by 2.1.
 
 The scripts are run_threat.py and check.py in models/wowsims. See its README for the setup and the proposal flags.
+
+## 8. Several targets
+
+This part compares the tanks against 3 and 5 enemies. The script is models/threat/multi_target.py. It uses the builds and rotations of part 6.
+
+**Area spells** (wowsims Forever spell data)
+
+| Class | Area spell | Value |
+| --- | --- | --- |
+| Warrior | Thunder Clap rank 6 | 103 + 7% of Attack Power, 4 targets, 6 sec cooldown, 20 rage, spell hit table, armor applies. Threat ×1 (wowsims: not verified) |
+| Warrior | Cleave rank 5 | Weapon + 50, 2 targets, 20 rage, 91.8 flat threat shared between the targets |
+| Druid | Swipe rank 5 | 83 + 3% of Attack Power, 3 targets, 20 rage (15 with Ferocity), ×1.75 threat (player data) |
+| Paladin | Consecration rank 5 | 96 Holy damage to all enemies. The first 4 enemies also take 216 + 33.6% of spell power. 565 mana each 8 sec |
+| Paladin | Holy Shield rank 3 | Damage only on a block, to the blocked attacker. 4 charges. With 2 or more attackers, all 4 charges are used each 10 sec |
+
+**Assumptions**
+
+- Each trash mob hits for 1/3 of the boss hit of the tier and swings each 2 sec. Rage from hits increases with the number of mobs.
+- Trash has no Sunder Armor or Faerie Fire (armor 3,731).
+- Paladin: PB1 with Consecration on cooldown. Seal, Judgement, Holy Strike and auto attacks hit the main target. Judgement of the Crusader is on the main target only.
+- Warrior: Shield Slam, Revenge (10 casts each min), Shield Block and Rend on the main target. Then Thunder Clap, then Sunder Armor. Cleave uses the rage that stays.
+- Druid: Primal Bite and Faerie Fire, then Swipe, then Maul with the rage that stays. On 1 target, Lacerate replaces Swipe.
+- Rage threat is shared between all targets.
+- Not in the model: Demoralizing Shout and Demoralizing Roar (about 43 threat for each target), tab targets.
+
+**Result: threat per sec on all targets (threat per sec on one extra target)**
+
+3 targets:
+
+| Tier | Warrior | Druid | Paladin beta | Paladin proposed | Proposed: % of the best of Warrior and Druid |
+| --- | --- | --- | --- | --- | --- |
+| Fresh level 60 | 488 (76) | 500 (85) | 725 (152) | 795 (168) | 159% (extra target 197%) |
+| Pre-raid best in slot | 548 (88) | 572 (88) | 763 (157) | 901 (193) | 157% (219%) |
+| Molten Core | 620 (107) | 640 (94) | 803 (161) | 982 (210) | 154% (197%) |
+| Blackwing Lair | 681 (120) | 704 (104) | 855 (168) | 1,074 (229) | 153% (191%) |
+| Naxxramas | 746 (136) | 772 (117) | 900 (173) | 1,167 (250) | 151% (184%) |
+
+5 targets (Consecration: the fifth enemy takes only the 96 base damage):
+
+| Tier | Warrior | Druid | Paladin beta | Paladin proposed | Proposed: % of the best of Warrior and Druid |
+| --- | --- | --- | --- | --- | --- |
+| Fresh level 60 | 611 (69) | 567 (53) | 823 (108) | 893 (118) | 146% (extra target 170%) |
+| Pre-raid best in slot | 656 (74) | 633 (56) | 864 (111) | 1,003 (134) | 153% (180%) |
+| Molten Core | 718 (83) | 701 (63) | 908 (115) | 1,087 (144) | 152% (174%) |
+| Blackwing Lair | 794 (94) | 782 (72) | 965 (119) | 1,184 (156) | 149% (167%) |
+| Naxxramas | 881 (107) | 872 (84) | 1,014 (123) | 1,282 (169) | 146% (158%) |
+
+- Without Consecration, the proposed Paladin has 109–112% of the best of Warrior and Druid on 3 targets, and 89–99% on 5 targets.
+- With the wowsims Druid multipliers (Bear Form ×1.5 only), the Druid has about one third less threat on all targets.
+
+**Check with wowsims Forever** (28 October 2026)
+
+Setup: wowsims Forever (commit 05ce531) with the proposals patch (models/wowsims). Default gear of each spec in wowsims: Paladin default, Warrior pre-raid, Druid default. Thus, the gear is not equal. Each level 63 target hits for 1/3 of the boss. Raid buffs and debuffs, 3 min, 2,000 iterations.
+
+Threat per sec on each target (main target first):
+
+| Tank | 1 target | 3 targets | 5 targets |
+| --- | --- | --- | --- |
+| Paladin beta | 687 | 692 / 203 / 203 | 692 / 178 / 178 / 178 / 106 |
+| Paladin PB1 proposed | 862 | 758 / 255 / 255 | 715 / 208 / 209 / 209 / 137 |
+| Warrior | 929 | 948 / 242 / 71 | 1,005 / 372 / 70 / 70 / 28 |
+| Druid | 614 | 614 / 213 / 206 | 646 / 217 / 209 / 31 / 31 |
+
+- **wowsims agrees on the extra targets.** On the lowest of 3 targets, the Paladin has about 3.6 times the Warrior threat and 1.2 times the Druid threat. On 5 targets, it has about 4–5 times both.
+- **Holy Shield.** In wowsims, Holy Shield does damage only on a block. With 3 or 5 attackers, it does damage 3.7–3.9 times each 10 sec. The model uses 4. With the proposals, Holy Shield gives about 120 TPS on each extra target against 3 targets (beta: about 66).
+- **Total threat does not agree.** In wowsims, the Paladin has about the same total threat as the Warrior (3 targets: 1,269 against 1,261; 5 targets: 1,478 against 1,545). The model gives about 1.5 times. The Warrior puts its threat on the main target (Revenge) and on the Cleave target.
+- **Thunder Clap** gives only about 41 TPS on each target in wowsims.
+- **Druid.** In wowsims, Maul and Primal Bite also hit a second and third target for a part of their damage. The Druid multipliers are not verified (see part 6).
+
+**Conclusion**
+
+- Against 3 or more enemies, the Paladin has the most threat on the extra targets. The model and wowsims agree on this.
+- On total threat, wowsims gives the Paladin about the same value as the Warrior.
+- Consecration is the main source. It gives its full damage to 4 enemies only.
+- The proposals increase the lead: Holy Shield (C-P9) and Redoubt (C-P1) add Holy Shield damage, and Shield Specialization (C-P8) pays for Consecration.
+- No proposal is necessary for threat against groups.

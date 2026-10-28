@@ -1,6 +1,6 @@
 """All threat values of the document: Analysis, Threat (proposals/analysis/threat.md), Analysis, Builds (parts 3,
 5 and 6), Protection (C-P2, C-P6, C-P9), Judgements and Blessings (C2), Retribution (C1) and Withdrawn ideas.
-Run: python3 run_tables.py"""
+Run: python3 run_tables.py. Part 8 (several targets): multi_target.py"""
 from threat_model import (DRU_WOWSIMS, PART1, TIERS, BUILDS, TANK_REF, PB1, PB2, HOLY_SHOCK_TANK, HEALING_TANK, flatter, paladin,
                           warrior, druid, armor_dr, table, OHWS)
 
