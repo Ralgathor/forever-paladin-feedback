@@ -162,7 +162,7 @@ Paladin with all proposals. The first value is the percentage of the Druid TPS. 
 | Holy Strike with Iron Creed 5/5 (Paladin) | ×2.4 (Righteous Fury ×1.9, Iron Creed ×1.25) | 10 sec |
 | Paladin auto attacks and Reckoning attacks | ×1.0 | — |
 
-- **Paladin advantages.** Boss armor and rage do not change Paladin threat. Consecration and Holy Shield hit all attackers. Thus, the Paladin is strongest against groups of enemies.
+- **Paladin advantages.** Boss armor and rage do not change Paladin threat. Consecration hits all enemies near the Paladin, but its bonus damage hits only 4 of them. Holy Shield does damage only when the Paladin blocks, to the blocked attacker, with 4 charges each 10 sec. Thus, the Paladin spreads threat well on 2 to 4 enemies.
 
 ## 5. Next steps if threat is too low
 
