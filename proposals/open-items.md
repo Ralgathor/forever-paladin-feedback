@@ -45,7 +45,8 @@ These are risks to check in tests. None of them needs a change now.
 - [ ] Does the Holy Shield damage increase with spell power? By how much for each block?
 - [ ] Does Shield Slam have a threat multiplier, as Revenge (×2.25) has? (Warrior testers)
 - [ ] Do Heroic Strike and Maul hits give rage? (Warrior and Druid testers)
-- [ ] Do Maul and Swipe have the ×1.75 threat multiplier in Forever? The model uses ×1.75. The wowsims Forever data gives threat for the damage only. Without the multipliers of Maul, Swipe and Primal Bite, the Druid loses about half of its threat at the gear of Threat, part 1. (Druid testers)
+- [ ] Do Maul and Swipe have the ×1.75 threat multiplier in Forever? The model uses ×1.75. The wowsims Forever data gives threat for the damage only. Without the multipliers of Maul, Swipe and Primal Bite, the Druid loses about one third of its threat at the gear of Threat, part 1 (600 to 384 TPS). (Druid testers)
+- [ ] Faerie Fire in Bear Form: the model uses 120 threat (2 × level) for each cast. The wowsims Forever data gives no threat. What is the value? (Druid testers)
 - [ ] Primal Bite: the tooltip gives "a high amount of threat", with no number. The model uses ×3. The wowsims Forever data gives threat for the damage only. What is the multiplier? (Druid testers)
 - [ ] Judgement of Fury: the game files give a third effect of 1,691 + 18% of spell power. Is this bonus threat, the taunt or a server value? If it is bonus threat, it adds about 200 TPS to the Paladin. The model does not use it.
 - [ ] Champion of the Light: the patch note of 16 October gives 10/20/30% of Intellect. The client data of 18 October gives 20/40/60%. What is the live value?

@@ -9,6 +9,8 @@
 #
 # Warrior and Druid values come from the Forever spellbook and talents (wowforevertalents.com) and player data.
 # Spell values and combat rules checked against wowsims Forever (github.com/wowsims/forever, 23 October 2026).
+# Rotations checked against the wowsims Forever default rotations (28 October 2026): Revenge 10 casts each min,
+# Rend kept up (Warrior), Lacerate as the filler (Druid).
 # No value is fitted to the first calculation.
 
 # ---------------------------------------------------------------- fight (part 6)
@@ -183,6 +185,8 @@ WAR_STANCE = 1.3 * 1.15                  # Defensive Stance x Defiance 3/3 (+15%
 WAR = dict(dmg=0.9 * 1.10,               # Defensive Stance -10% damage, Bastion +10% damage with a shield
            revenge=153, revenge_ap=0.28, revenge_mult=1.6,  # rank 6: 138-168, 28% AP (player sheet), Improved Revenge +60%
            revenge_cd=5, revenge_cost=5 - 3,                # Focused Rage
+           revenge_rate=10 / 60,         # Revenge needs a block, dodge or parry: 10 casts each min (wowsims Forever)
+           rend=21, rend_ap=0.02, rend_ticks=7, rend_dur=21, rend_cost=10 - 3,   # rank 7: 7 ticks of 21 + 2% AP, bleed
            slam=655, slam_cd=6, slam_cost=20 - 3,           # rank 4: 640-670 + block value
            sunder=206, sunder_ap=0.05, sunder_cost=15 - 3 - 3,   # rank 5: 206 + 5% AP (game files)
            hs_bonus=157, hs_threat=152.4, hs_cost=15 - 3 - 3,   # rank 9: +157 damage, +152.4 threat (wowsims, measured)
@@ -193,8 +197,8 @@ WAR = dict(dmg=0.9 * 1.10,               # Defensive Stance -10% damage, Bastion
            crush=0.03)                   # crushing blows between Shield Blocks (Analysis, Crushing blows)
 
 def warrior(g, slam_mult=1.0, detail=False):
-    """Shield Slam, Revenge and Shield Block on cooldown, Sunder Armor in the other global cooldowns, then Heroic Strike
-    with the spare rage. slam_mult: Shield Slam threat multiplier (not known: "a very high amount of threat")."""
+    """Shield Slam and Shield Block on cooldown, Revenge after a block, dodge or parry, Rend kept up, Sunder Armor in the
+    other global cooldowns, then Heroic Strike with the spare rage. slam_mult: Shield Slam threat multiplier (not known: "a very high amount of threat")."""
     w = WAR; dr = armor_dr(g.armor)
     land_a, f_auto = table(g.hit, g.crit, auto=True)
     land_s, f_spec = table(g.hit, g.crit, auto=False)
@@ -203,9 +207,9 @@ def warrior(g, slam_mult=1.0, detail=False):
     events = (1 - HIT_FRAC - BOSS_MISS) + HIT_FRAC * w["blocked"]       # dodges, parries and blocks for each swing
     talent = w["event_rage"] * events / SWING + w["bloodrage"]        # rage from talents and spells
     taken = rage_taken(g, w["crush"]) + talent
-    spare = (taken + rate * swing_rage - w["slam_cost"] / w["slam_cd"] - w["revenge_cost"] / w["revenge_cd"]
-             - w["block_cost"] / w["block_cd"])
-    gcd_left = 1 / GCD - 1 / w["slam_cd"] - 1 / w["revenge_cd"]
+    spare = (taken + rate * swing_rage - w["slam_cost"] / w["slam_cd"] - w["revenge_cost"] * w["revenge_rate"]
+             - w["block_cost"] / w["block_cd"] - w["rend_cost"] / w["rend_dur"])
+    gcd_left = 1 / GCD - 1 / w["slam_cd"] - w["revenge_rate"] - 1 / w["rend_dur"]
     sunders = max(0.0, min(gcd_left, spare / w["sunder_cost"]))
     spare -= sunders * w["sunder_cost"]
     hs = max(0.0, min(1.0, spare / (rate * (w["hs_cost"] + swing_rage))))   # Heroic Strike hits give no rage
@@ -215,7 +219,9 @@ def warrior(g, slam_mult=1.0, detail=False):
     src["Heroic Strike"] = ((g.weapon() + w["hs_bonus"]) * phys * f_spec + w["hs_threat"] * land_s) * rate * hs
     src["Shield Slam"] = (w["slam"] + g.bv) * phys * f_spec * slam_mult / w["slam_cd"]
     src["Revenge"] = ((w["revenge"] + w["revenge_ap"] * g.ap) * w["revenge_mult"] * phys * f_spec * 2.25
-                      / w["revenge_cd"])
+                      * w["revenge_rate"])
+    # Rend: a bleed, no armor. Threat = damage (wowsims Forever).
+    src["Rend"] = (w["rend"] + w["rend_ap"] * g.ap) * w["rend_ticks"] * w["dmg"] * land_s / w["rend_dur"]
     src["Sunder Armor"] = (w["sunder"] + w["sunder_ap"] * g.ap) * land_s * sunders
     src["Rage"] = RAGE_THREAT * ((taken + rate * swing_rage * (1 - hs)) if RAGE_ALL else talent)
     src = {k: v * WAR_STANCE for k, v in src.items()}
@@ -231,17 +237,23 @@ DRU = dict(crit=0.12,                    # 6% from gear + Sharpened Claws 6%
            savage=1.1,                   # Savage Fury: Maul and Swipe damage +10%
            bite=77, bite_mult=3.0, bite_cd=6, bite_cost=20 - 5,      # rank 4: 100% normal damage + 77
            swipe=83, swipe_ap=0.03, swipe_fi=1.3, swipe_mult=1.75, swipe_cost=20 - 5,   # Feral Instinct +30% damage
-           ff=2 * 60, ff_cd=6,           # Faerie Fire in Bear Form: 2 x level threat, 6 sec cooldown, no rage
+           ff=2 * 60, ff_cd=6,           # Faerie Fire in Bear Form: 2 x level threat, 6 sec cooldown, no rage (not verified;
+                                         # wowsims Forever gives it no threat)
+           lac_tick=15, lac_ticks=5, lac_dur=15, lac_hit=0.10, lac_stacks=5, lac_cost=15,
+                                         # Lacerate rank 3: 15 bleed damage each 3 sec for each stack, 5 stacks,
+                                         # the hit: 10% weapon damage for each stack. Threat = damage (wowsims Forever)
            crit_rage=5,                  # Blood Frenzy: 5 rage for each critical hit
            dodge_rage=5,                 # Natural Reaction: 5 rage for each dodge
            enrage=30 / 60,               # Enrage: 10 rage + 20 over 10 sec, 1 min cooldown (-27% base armor: not in the model)
            crush=0.15)                   # no block: crushing blows at the full rate (Analysis, Crushing blows)
 
-def druid(g, detail=False):
-    """Primal Bite and Faerie Fire on cooldown, Maul with the spare rage, then Swipe in the other global cooldowns.
-    Bear Form damage: weapon damage per sec + Attack Power / 14, 2.5 sec swing (player data). Lacerate is not in
-    the model: its threat is not known."""
-    d = DRU; dr = armor_dr(g.armor); crit = d["crit"]
+DRU_WOWSIMS = dict(maul_mult=1.0, bite_mult=1.0, swipe_mult=1.0)   # wowsims Forever: Bear Form x1.5 only
+
+def druid(g, detail=False, mults=None):
+    """Primal Bite and Faerie Fire on cooldown, Maul with the spare rage, then Lacerate in the other global cooldowns
+    (wowsims Forever rotation). Bear Form damage: weapon damage per sec + Attack Power / 14, 2.5 sec swing (player data).
+    mults: threat multipliers of Maul, Primal Bite and Swipe (default: player data; DRU_WOWSIMS: wowsims Forever)."""
+    d = dict(DRU, **(mults or {})); dr = armor_dr(g.armor); crit = d["crit"]
     speed = 2.5
     ap = g.ap + d["ap"]
     sw = (g.wdps + ap / 14) * speed
@@ -257,15 +269,16 @@ def druid(g, detail=False):
     spare = taken + rate * swing_rage - d["bite_cost"] / d["bite_cd"]
     maul = max(0.0, min(1.0, spare / (rate * (d["maul_cost"] + swing_rage))))   # Maul hits give no rage
     spare -= maul * rate * (d["maul_cost"] + swing_rage)
-    swipes = max(0.0, min(1 / GCD - 1 / d["bite_cd"] - 1 / d["ff_cd"], spare / d["swipe_cost"]))
+    lacs = max(0.0, min(1 / GCD - 1 / d["bite_cd"] - 1 / d["ff_cd"], spare / d["lac_cost"]))
+    stacks = d["lac_stacks"] * min(1.0, lacs * d["lac_dur"])        # 1 cast each 15 sec keeps the 5 stacks
     phys = 1 - dr
     src = {}
     src["Auto attacks"] = sw * phys * f_auto * rate * (1 - maul)
     src["Maul"] = (sw + d["maul_bonus"]) * d["savage"] * phys * f_spec * d["maul_mult"] * rate * maul
     src["Primal Bite"] = (sw + d["bite"]) * phys * f_spec * d["bite_mult"] / d["bite_cd"]
     src["Faerie Fire"] = d["ff"] / d["ff_cd"]
-    src["Swipe"] = ((d["swipe"] + d["swipe_ap"] * ap) * d["savage"] * d["swipe_fi"] * phys * f_spec * d["swipe_mult"]
-                    * swipes)
+    src["Lacerate"] = (sw * d["lac_hit"] * stacks * phys * f_spec * lacs
+                       + d["lac_tick"] * stacks * d["lac_ticks"] / d["lac_dur"] * land_s)
     src["Rage"] = RAGE_THREAT * ((taken + rate * swing_rage * (1 - maul)) if RAGE_ALL else talent)
     src = {k: v * BEAR for k, v in src.items()}
     total = sum(src.values())
