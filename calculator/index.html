@@ -142,9 +142,9 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
 .mc-legend{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:12.5px;color:var(--muted)}
 .mc-legend span{display:inline-flex;align-items:center;gap:6px}
 .sw{display:inline-block;width:14px;height:10px;border-radius:2px}
-.sw.b,.bar i.b{background:repeating-linear-gradient(135deg,var(--muted) 0 3px,color-mix(in srgb,var(--muted) 45%,transparent) 3px 6px)}
-.sw.p,.bar i.p{background:var(--gold-glow)}
-.sw.o,.bar i.o{background:color-mix(in srgb,var(--ink) 28%,transparent)}
+.sw.b,.cbar i.b{background:repeating-linear-gradient(135deg,var(--muted) 0 3px,color-mix(in srgb,var(--muted) 45%,transparent) 3px 6px)}
+.sw.p,.cbar i.p{background:var(--gold-glow)}
+.sw.o,.cbar i.o{background:color-mix(in srgb,var(--ink) 28%,transparent)}
 .mc-grid{display:grid;align-items:start;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:12px}
 .mc{border:1px solid var(--line);border-radius:6px;padding:12px 14px;background:var(--bg);display:flex;flex-direction:column;gap:8px;min-width:0}
 .mc h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:16px}
@@ -159,8 +159,8 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
 .bars{display:grid;grid-template-columns:minmax(0,max-content) 1fr auto;gap:3px 8px;align-items:center;font-size:12.5px}
 .bars .lb{color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .bars .lb.me{color:var(--ink);font-weight:500}
-.bar{height:10px;border-radius:2px;background:color-mix(in srgb,var(--line) 55%,transparent);position:relative;overflow:hidden}
-.bar i{position:absolute;inset:0 auto 0 0;border-radius:2px}
+.cbar{height:10px;border-radius:2px;background:color-mix(in srgb,var(--line) 55%,transparent);position:relative;overflow:hidden}
+.cbar i{position:absolute;inset:0 auto 0 0;border-radius:2px}
 .bars .vl{font-size:12.5px;white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right}
 .mc .sum{margin:0;font-size:13.5px;color:var(--ink);max-width:none}
 .mc .ids{display:flex;flex-wrap:wrap;gap:4px}
@@ -715,7 +715,7 @@ dps:[
  {t:"DPS with better gear",c:"Naxxramas",b:"—",p:"About 95% of the pure average",s:"The target is 95%. 92% of Fury. See W15.",d:"Fury increases more with gear than all other classes."},
  {t:"Seal changes",b:"About 3 Seal casts each 10 sec",p:"1 Seal cast each 10 sec",ids:["C-R2"],bars:[["Global cooldown active, beta",79,"b","79%"],["Global cooldown active, proposed",49,"p","49%"]],s:"The global cooldown is active 49% of the time (was 79%)."},
  {t:"Mana",b:"Zero after 72 sec",p:"About +7 mana per sec",ids:["C-R2"],s:"With Blessing of Wisdom. Only Hammer of Wrath, in the last 20% of the fight, uses more.",d:"Beta: after 72 sec of Seal changes, Seal of Command only (−12%)."},
- {t:"Holy Strike",b:"No Seal of Command or Seal of Righteousness",p:"Triggers your active Seal and the Echo",ids:["C1"],d:"Stormstrike (Shaman) is the core attack of Enhancement."},
+ {t:"Holy Strike",b:"No Seal of Command or Seal of Righteousness",p:"Triggers your active Seal and the Echo",ids:["C1"]},
  {t:"Two-Handed Weapon Specialization",b:"6% at 20 points",p:"6% at 15 points",ids:["M-R1"],s:"Warrior: 3%."}
 ],
 pvp:[
@@ -723,13 +723,13 @@ pvp:[
  {t:"Fast heal for Retribution and Protection",b:"Only after a critical heal",p:"A 1.5 sec Holy Light after each Holy Strike",ids:["C-H3"],s:"It needs 7 Holy points. See W12."},
  {t:"Holy healer: critical heals and Hand of Protection each 3 min",b:"17 points: it does not fit",p:"12 points: it fits",ids:["M-P1","M-R2"],s:"Benediction 5 and Guardian's Favor 2 in Protection, Conviction 5 in Retribution. 4 points stay free."},
  {t:"Saves after Lay on Hands",b:"0 mana: no saves",p:"Half of the mana stays",ids:["C-P11"],s:"Divine Shield, Hand of Protection and Hammer of Justice stay available. See W18."},
- {t:"Iron Creed with Righteous Fury always active",b:"About 6%",p:"10%",ids:["C-P2"],s:"It needs 30 Protection points. See W7 and W17.",d:"Iron Will (Warrior): −15% stun and fear for 5 points."}
+ {t:"Iron Creed with Righteous Fury always active",b:"About 6%",p:"10%",ids:["C-P2"],s:"It needs 30 Protection points. See W7 and W17."}
 ]};
 function renderCompare(role){
   const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
   const card=x=>{
     const mx=x.bars?Math.max(...x.bars.map(b=>b[1])):0;
-    const bars=x.bars?`<div class="bars">${x.bars.map(b=>`<span class="lb${b[2]!=="o"?" me":""}">${esc(b[0])}</span><span class="bar"><i class="${b[2]}" style="width:${(b[1]/mx*100).toFixed(1)}%"></i></span><span class="vl">${esc(b[3]||b[1].toLocaleString("en-US"))}</span>`).join("")}</div>`:"";
+    const bars=x.bars?`<div class="bars">${x.bars.map(b=>`<span class="lb${b[2]!=="o"?" me":""}">${esc(b[0])}</span><span class="cbar"><i class="${b[2]}" style="width:${(b[1]/mx*100).toFixed(1)}%"></i></span><span class="vl">${esc(b[3]||b[1].toLocaleString("en-US"))}</span>`).join("")}</div>`:"";
     return `<article class="mc"><div><h4>${esc(x.t)}</h4>${x.c?`<div class="cond">${esc(x.c)}</div>`:""}</div>
 <div class="mc-v"><div><small>Beta</small><span class="vb${x.big?" big":""}">${esc(x.b)}</span></div><span class="ar" aria-hidden="true">→</span><div><small>Proposed</small><span class="vp${x.big?" big":""}">${esc(x.p)}</span></div></div>
 ${bars}${x.s?`<p class="sum">${esc(x.s)}</p>`:""}${x.d?`<details><summary>More</summary><p>${esc(x.d)}</p></details>`:""}${x.ids?`<div class="ids">${x.ids.map(i=>`<span class="pid">${i}</span>`).join("")}</div>`:""}</article>`;};

@@ -43,7 +43,7 @@ The Protection proposals give:
 - **Problem.** In the beta, the reduction lasts 6 sec after a Holy Strike. Holy Strike has a 10 sec cooldown. At 5/5, the average is 6 sec ÷ 10 sec × 10% = 6%.
 - **Change.** The reduction is active while Righteous Fury is active. It has no timer and no Holy Strike condition. Thus, Holy Strike has only one more mechanic (Reckoning, C-P6).
 - **Threat bonus.** The +25% Holy Strike threat stays. It gives about 10 threat per second (TPS) at 5/5 and 200 spell power (see Analysis, Threat).
-- **Total.** −10% damage taken. This is the same as Defensive Stance (Warrior). Improved Righteous Fury added to this (about 15% total). Improved Righteous Fury removal (C-P4) deletes it.
+- **Total.** −10% damage taken. This is the same as Defensive Stance (Warrior).
 - **Rule exception.** Iron Creed works as an improved Righteous Fury. But the full 10% needs 30 Protection points. Monitor it in PvP, because all specs can use Righteous Fury.
 
 ## C-P3. Toughness and Divine Strength: removed, Vindication with 5 ranks
@@ -67,14 +67,13 @@ The Protection proposals give:
 - **Retribution.** Benediction 5 opens Protection row 2. Retribution then takes Precision 3 (+3% hit). This dip is 8 points. Benediction also decreases the cost of Judgement, Holy Strike, Seals and Consecration.
 - **Holy.** Benediction 5 opens Protection row 2. Holy then takes Guardian's Favor 2. Holy Shock and Cleanse cost 10% less. This dip is 7 points.
 - **Holy Conduit.** It stays in Retribution row 2, as in the beta. A tank takes it with Deflection 5 and Holy Conduit 2 (7 points). Deflection is also a tank talent. With Benediction and Holy Conduit, Consecration on cooldown costs 76 mana per sec, not 112 (see Analysis, Mana).
-- **Why Vindication goes to row 2.** It takes the row 2 place of Conviction (M-R2). With 5 ranks, Retribution keeps 41 points. +5% Attack Power gives about +6 DPS. A tank has the boss debuff with 10 Retribution points (beta: 13).
-- **Why Unyielding Faith goes to row 1 (M-H2).** Improved Seals (M-H1) keeps its 3 beta ranks. Unyielding Faith fills the other 2 points of Holy row 1. Retribution and Protection open Holy row 2 with Improved Seals 3 and Unyielding Faith 2. Retribution then takes Infusion of Light, or Reverence without raid buffs (Improved Seals, M-H1). Iron Will (Warrior) is also in row 1.
+- **Why Vindication goes to row 2.** It takes the row 2 place of Conviction (M-R2). With 5 ranks, Retribution keeps 41 points. +5% Attack Power gives about +6 DPS.
+- **Why Unyielding Faith goes to row 1 (M-H2).** Improved Seals (M-H1) keeps its 3 beta ranks. Unyielding Faith fills the other 2 points of Holy row 1. Retribution and Protection open Holy row 2 with Improved Seals 3 and Unyielding Faith 2. Retribution then takes Infusion of Light. Iron Will (Warrior) is also in row 1.
 - **Shape.** Each row 1 has 10 points. Holy uses 5 + 3 + 2, as Fire (Mage). Protection and Retribution use 5 + 5. Holy has 43 points, Protection 49 and Retribution 41.
 - **Parity.** Convection (Shaman) gives −10% mana cost for 5 points in Elemental row 1. Benediction gives the same in Protection row 1.
 
 ## C-P4. Improved Righteous Fury: removed
 
-- With Iron Creed always active (C-P2), the two talents gave about 15% damage reduction.
 - Iron Creed alone gives 10%, the same as the Warrior.
 
 ## C-P5. Shoulder the Burden (new talent) replaces Improved Seal of Fury: row 3, column 1
@@ -237,4 +236,4 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 
 - **Text.** "Reduces the Mana cost of all instant cast spells and abilities by 2/4/6/8/10%." 5 ranks, the same as the beta.
 - **Position.** Protection row 1, column 2. It takes the place of Toughness (C-P3).
-- **Why.** A tank casts many instant spells. Holy and Retribution open Protection row 2 with it. See Toughness and Divine Strength removal (C-P3) for the full reason.
+- **Why.** Holy and Retribution open Protection row 2 with it. Tank builds take the Retribution dip first, because Benediction gives no threat. See Toughness and Divine Strength removal (C-P3) for the full reason.

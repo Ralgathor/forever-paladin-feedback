@@ -22,7 +22,6 @@ Retribution has 41 points (beta: 44). Benediction (M-P1) moves to Protection row
 - **Change.** In the beta, Holy Strike triggers Seal of Light, Justice and Wisdom. It does not trigger Seal of Command, Righteousness or Fury. With Holy Strike Seal trigger (C1), Holy Strike triggers all Seals, as all melee attacks do. Seal of Command keeps its usual chance: 7 procs each minute (42% with a 3.6 sec weapon). Holy Strike also triggers a Twist of Light Echo, because the Echo applies to melee attacks.
 - **Why the trigger is in the spell.** Holy Strike uses the usual Seal rule. Thus, one rule is true for all melee attacks, with no exceptions.
 - **Value.** Retribution has +11% DPS against the beta (see Analysis, Damage).
-- **Model.** Stormstrike (Shaman) makes the weapon strike the core of Enhancement. Holy Strike with your Seals does the same for Retribution.
 - **Protection.** Seal of Fury on each Holy Strike gives about +14 TPS. The Threat tables do not include it.
 - **Seal of Justice.** In the beta, Holy Strike already triggers Seal of Justice and its stun chance. Holy Strike Seal trigger (C1) does not change this.
 - **Balance.** If Retribution does more damage than the pure damage classes in raids, decrease the Sacred Arbiter bonus first: +20% → +10% (see Watch list, W15).
