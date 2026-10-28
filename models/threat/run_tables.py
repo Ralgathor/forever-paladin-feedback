@@ -1,7 +1,7 @@
 """All threat values of the document: Analysis, Threat (proposals/analysis/threat.md), Analysis, Builds (parts 3,
 5 and 6), Protection (C-P2, C-P6, C-P9), Judgements and Blessings (C2), Retribution (C1) and Withdrawn ideas.
-Run: python3 run_tables.py"""
-from threat_model import (PART1, TIERS, BUILDS, TANK_REF, PB1, PB2, HOLY_SHOCK_TANK, HEALING_TANK, flatter, paladin,
+Run: python3 run_tables.py. Part 8 (several targets): multi_target.py"""
+from threat_model import (DRU_WOWSIMS, PART1, TIERS, BUILDS, TANK_REF, PB1, PB2, HOLY_SHOCK_TANK, HEALING_TANK, flatter, paladin,
                           warrior, druid, armor_dr, table, OHWS)
 
 def beta(g, **kw):
@@ -31,6 +31,12 @@ if __name__ == "__main__":
     na = g.but(armor=3731)
     print(f"No armor debuffs (4,500 hits): Warrior {warrior(na):.0f}, Druid {druid(na):.0f}, Paladin {paladin(na):.0f}")
     print(f"Shield Slam x2.25: Warrior {warrior(g, slam_mult=2.25) - warrior(g):+.0f}")
+    print("Druid with the wowsims multipliers (Maul, Primal Bite, Swipe x1): " + ", ".join(
+        f"{H:,} {druid(g.but(boss_hit=H), mults=DRU_WOWSIMS):.0f}" for H in (3000, 4500, 6000)))
+    for f, kw in ((warrior, {}), (druid, {}), (druid, {"mults": DRU_WOWSIMS})):
+        total, src = f(g, detail=True, **kw)
+        print(f"{f.__name__} sources{' (wowsims multipliers)' if kw else ''}: " + ", ".join(f"{k} {v:.0f}" for k, v in src.items())
+              + f". Total {total:.0f}")
     print(f"Retribution Aura: {paladin(g, ret_aura=True) - P:+.0f}")
     print(f"C1 (Holy Strike triggers Seal of Fury): {paladin(g, c16=True) - P:+.0f}")
     total, src = paladin(g, detail=True)
@@ -49,6 +55,8 @@ if __name__ == "__main__":
         cols = (beta(t), paladin(t, c14=0), paladin(t))
         print(f"{t.name} | {w:.0f} | {d:.0f} | " + " | ".join(f"{x:.0f} ({pct(x, d)})" for x in cols)
               + f" | {paladin(t, consecration=True):.0f}")
+    print("Druid with the wowsims multipliers (Paladin, all proposals, % of it): " + ", ".join(
+        f"{druid(t, mults=DRU_WOWSIMS):.0f} ({pct(paladin(t), druid(t, mults=DRU_WOWSIMS))})" for t in TIERS))
     print("Judgement of the Crusader, beta: " + ", ".join(f"{beta(t) - beta(t, crusader=False):+.0f}" for t in TIERS))
 
     print("\n## Threat, part 3: % of the Druid (% of the Warrior)")
