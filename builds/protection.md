@@ -11,7 +11,7 @@ This file gives the best tank build for the beta trees and for the proposed tree
 
 - Values: raid with consumables, path gear with reputation items (part 3), 3 min fight, level 63 boss, 3,000 iterations.
 - The proposed tank has 40% more threat than the beta tank, with lower TMI. Redoubt (C-P1) and Holy Shield (C-P9) push crushing blows off the combat table.
-- The beta tank keeps about 6–8% crushing blows with all gear. No beta build in the search removes them.
+- The beta tank keeps 6–11% crushing blows with all gear sets of this file. No beta build in the search removes them.
 
 ## 1. Method
 
