@@ -8,6 +8,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **Talent calculator:** you can try the proposals and compare them with the beta trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
 - **Builds:** the best builds for each spec and role (raid, dungeon, PvP), with calculator codes. Also the builds that use a different tree for a role.
+- **Best builds, gear and stat weights:** the best build, pre-raid gear and stat weights of each spec in wowsims Forever, for the beta and the proposed trees ([builds](builds/README.md)).
 
 ## IDs
 
