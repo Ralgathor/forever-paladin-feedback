@@ -19,8 +19,8 @@ LIMIT = 0.05
 
 def model_values():
     g = DM.gear(0); swap = DM.retribution(g, "beta_swap"); P = DM.retribution(g)
-    t = TM.PART1.but(boss_hit=4500)
-    tb = TM.paladin(t, TM.TANK_REF, proposed=False, c14=0); tp = TM.paladin(t); w = TM.warrior(t)
+    t = TM.PART1.but(boss_hit=4500, bv=60)    # first check (27 October): block value 60, Holy Shield (C-P9) at 200%
+    tb = TM.paladin(t, TM.TANK_REF, proposed=False, c14=0); tp = TM.paladin(t, c14=2.0); w = TM.warrior(t)
     heal = {}
     for who, f, kw in (("beta, Blessing of Light", HM.paladin, {}), ("beta, no Blessing of Light", HM.paladin, {"bol": False}),
                        ("proposed", HM.paladin, HEAL_PROP), ("Priest", HM.priest, {})):

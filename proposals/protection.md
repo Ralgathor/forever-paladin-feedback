@@ -157,14 +157,14 @@ Simulation: the boss swings each 2 sec. 60% block with Redoubt (C-P1), 10.7% dod
 
 ## C-P9. Holy Shield: damage increases with block value
 
-- **Proposed text (rank 3).** "Increases chance to block by 30% for 10 sec, and deals 221 Holy damage plus 200% of your block value for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."
-- **Change.** Each block adds 200% of your block value to the Holy Shield damage. The block chance, the charges, the cooldown and the threat bonus do not change.
+- **Proposed text (rank 3).** "Increases chance to block by 30% for 10 sec, and deals 221 Holy damage, increased by your Block Value, for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."
+- **Change.** Each block adds 100% of your block value to the Holy Shield damage. The text uses the words of Shield Slam (Warrior): "increased by your Block Value". The block chance, the charges, the cooldown and the threat bonus do not change.
 - **Problem.** Warrior and Druid threat increases with gear and with boss damage, because their rage comes from the hits they take. Paladin threat increases only with spell power: about +33 TPS for each +100 spell power. Without Holy Shield (C-P9), the Paladin has 95% of the Druid threat at fresh level 60, but 75% in Naxxramas (see Analysis, Threat).
-- **Why block value.** It is a gear stat on the character sheet. It is easy to read and easy to collect. It increases about 5 times from fresh level 60 to Naxxramas, much faster than spell power. It connects the tank stats of the Paladin: the shield, Strength and Shield Specialization (+30% block value). Shield Slam (Warrior) already adds block value to its damage.
-- **Result.** The Paladin has 102% of the Druid threat at fresh level 60 and 96% in Naxxramas. With flatter gear progression, it has 92–97% in Naxxramas (see Threat, part 3).
-- **Why 200%.** At 100%, the Paladin has only 85% of the Druid threat in Naxxramas. At 300%, it has 106%. The Warrior and Druid values have some unknown threat values (see Threat, part 6).
+- **Why block value.** It is a gear stat on the character sheet. It is easy to read and easy to collect. It increases from 26 at fresh level 60 to 108 at pre-raid and about 230 in Naxxramas, much faster than spell power. It connects the tank stats of the Paladin: the shield, Strength and Shield Specialization (+30% block value). Shield Slam (Warrior) already adds 100% of block value to its damage.
+- **Result.** The Paladin has 99% of the Druid threat at fresh level 60 and 94% in Naxxramas. With flatter gear progression, it has 91–95% in Naxxramas (see Threat, part 3). In wowsims, the PT3 tank with the pre-raid gear of builds/protection.md has 116% of the Warrior threat (see Threat, part 7).
+- **Why 100%.** It is the value of Shield Slam. Forever pre-raid gear already gives 108 block value (Wowhead Forever values). At 200%, wowsims gives PT3 123% of the Warrior threat at pre-raid, and the model gives 113% of the Druid threat in Naxxramas. The Warrior and Druid values have some unknown threat values (see Threat, part 6).
 - **No new button.** You already use Holy Shield on cooldown. Redoubt (C-P1) keeps about 3 blocks each 10 sec.
-- **PvP.** At about 125 block value, each block does about 250 more Holy damage. The maximum is 4 blocks each 10 sec, against melee attacks only. Only Protection has Holy Shield.
+- **PvP.** At about 108 block value, each block does about 108 more Holy damage. The maximum is 4 blocks each 10 sec, against melee attacks only. Only Protection has Holy Shield.
 
 ## C-P10. Guardian's Favor: Hand of Sacrifice cooldown
 

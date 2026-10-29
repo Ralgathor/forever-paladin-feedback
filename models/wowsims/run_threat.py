@@ -7,8 +7,9 @@ from builds import *
 PROP_GEAR = json.load(open(os.path.join(HERE, "data", "prebis_proposed_gear.json")))
 PATH = json.load(open(os.path.join(HERE, "data", "tank_path_gear.json")))
 GEARS = {"Julien gear": julien()["equipment"], "Proposed pre-raid gear": PROP_GEAR}
-VARIANTS = [("All proposals", PROT_PROP), ("Holy Shield 150%", PROT_PROP + ",HSBV150"),
-            ("Holy Shield 100%", PROT_PROP + ",HSBV100"), ("Iron Creed 6%", PROT_PROP + ",IC6"),
+# First check (27 October): Holy Shield (C-P9) was at 200% of block value then.
+VARIANTS = [("All proposals", PROT_PROP + ",HSBV200"), ("Holy Shield 150%", PROT_PROP + ",HSBV150"),
+            ("Holy Shield 100%", PROT_PROP + ",HSBV100"), ("Iron Creed 6%", PROT_PROP + ",HSBV200,IC6"),
             ("Crushing blow fix only (C-P1)", "C6")]
 SCENS = ("raid", "raid_nocons")
 
@@ -19,8 +20,8 @@ def path_player(talents, gear):
 PATH_RUNS = [("Beta BT4b", BT4b, "beta", ""), ("Proposed PT3", PT3, "proposed", PROT_ALL),
              ("Beta BT4b, proposed gear", BT4b, "proposed", ""), ("Proposed PT3, beta gear", PT3, "beta", PROT_ALL),
              ("PT3, no proposals", PT3, "proposed", ""),
+             ("PT3, Holy Shield 200%", PT3, "proposed", PROT_ALL + ",HSBV200"),
              ("PT3, Holy Shield 150%", PT3, "proposed", PROT_ALL + ",HSBV150"),
-             ("PT3, Holy Shield 100%", PT3, "proposed", PROT_ALL + ",HSBV100"),
              ("PT3, Iron Creed 6%", PT3, "proposed", PROT_ALL + ",IC6")]
 PATH_RUNS += [(f"PT3 without {f}", PT3, "proposed", ",".join(x for x in PROT_ALL.split(",") if x != f))
               for f in ("C6", "C7", "C11", "C13", "C14", "C15", "C16")]

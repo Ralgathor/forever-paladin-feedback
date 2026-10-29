@@ -49,7 +49,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C-P6 Reckoning:** block, dodge and parry also give charges (once each 4 sec). Holy Strike releases up to 2 charges.
 - **C-P7 Reach of Law (new, row 5):** Judgement range +5/10 yards while Seal of Fury is active.
 - **C-P8 Shield Specialization:** mana return once each 2 sec (beta: 3 sec).
-- **C-P9 Holy Shield:** each block also does 200% of your block value as Holy damage. Paladin threat then increases with gear, as Warrior and Druid threat does.
+- **C-P9 Holy Shield:** each block also does 100% of your block value as Holy damage, as Shield Slam does. Paladin threat then increases with gear, as Warrior and Druid threat does.
 - **C-P10 Guardian's Favor:** it also reduces the cooldown of Hand of Sacrifice (C4) by 5/10 sec. The talent keeps its Hand of Protection and Hand of Freedom effects.
 - **C-P11 Devoted Sacrifice (new, row 3):** Lay on Hands drains only 75/50% of your current mana (beta: all of it). You also take 10/20% less damage from your Hand of Sacrifice. Alternative C-P11a (Devoted Sacrifice): the spell drains 50% for all Paladins.
 - **M-P1 Benediction:** Retribution row 1 → Protection row 1, with its 5 beta ranks (2–10%). It takes the place of Toughness (Toughness and Divine Strength removal, C-P3).

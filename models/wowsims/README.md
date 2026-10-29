@@ -46,7 +46,7 @@ Set the flags in the `PROPOSE` environment variable, with commas: `PROPOSE=C6,C1
 | `C11` | Reckoning (C-P6) | Reckoning charges also from blocks, dodges and parries (one time each 4 sec), and from critical hits |
 | `C13` | Shield Specialization (C-P8) | Each block restores 2/4/6% of maximum mana, one time each 2 sec |
 | `C14` | Holy Shield (C-P9) | Holy Shield damage adds a part of block value |
-| `HSBV<n>` | Holy Shield (C-P9) | With `C14`: n% of block value (default 200) |
+| `HSBV<n>` | Holy Shield (C-P9) | With `C14`: n% of block value (default 100) |
 | `C15` | Conviction (C-R1) | Conviction critical chance on melee and spell damage |
 | `C15H` | Conviction (C-R1) | With `C15`: Conviction also on Holy Light, Flash of Light and Holy Shock heals |
 | `C16` | Holy Strike Seal trigger (C1) | Holy Strike triggers the active Seal (Seal of Fury, Seal of Command, Seal of Righteousness) |

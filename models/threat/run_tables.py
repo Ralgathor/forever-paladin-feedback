@@ -17,7 +17,7 @@ def diff(f, base, **kw):
 if __name__ == "__main__":
     g = PART1
     P = paladin(g)
-    print("## Threat, part 1: pre-raid gear, 200 spell power, 60 block value (8/35/8 tank talents)")
+    print("## Threat, part 1: pre-raid gear, 200 spell power, 108 block value (8/35/8 tank talents)")
     print("Boss hit | Warrior | Druid | Paladin, beta | Paladin, all proposals | + Consecration")
     for H in (3000, 4500, 6000):
         h = g.but(boss_hit=H)
@@ -60,11 +60,11 @@ if __name__ == "__main__":
     print("Judgement of the Crusader, beta: " + ", ".join(f"{beta(t) - beta(t, crusader=False):+.0f}" for t in TIERS))
 
     print("\n## Threat, part 2: pre-raid path gear of builds/protection.md (PT3 and BT4b talents)")
-    print("Gear | Warrior | Druid | Druid, wowsims multipliers | Beta BT4b | PT3 without C-P9 | PT3 | PT3, C-P9 150% | PT3, C-P9 100%")
+    print("Gear | Warrior | Druid | Druid, wowsims multipliers | Beta BT4b | PT3 without C-P9 | PT3 | PT3, C-P9 200% | PT3, C-P9 150%")
     for t in (TIERS[1], PATH_PROP, PATH_BETA):
         w, d = warrior(t), druid(t)
         cols = (paladin(t, BT4b, proposed=False, c14=0), paladin(t, PT3, c14=0), paladin(t, PT3),
-                paladin(t, PT3, c14=1.5), paladin(t, PT3, c14=1))
+                paladin(t, PT3, c14=2), paladin(t, PT3, c14=1.5))
         print(f"{t.name} | {w:.0f} | {d:.0f} | {druid(t, mults=DRU_WOWSIMS):.0f} | "
               + " | ".join(f"{x:.0f} ({pct(x, d)}, {pct(x, w)})" for x in cols))
     _, src = paladin(PATH_PROP, PT3, detail=True)
@@ -77,7 +77,7 @@ if __name__ == "__main__":
         n = tiers[-1]
         print(name + ": " + ", ".join(f"{pct(paladin(t), druid(t))} ({pct(paladin(t), warrior(t))})" for t in tiers)
               + f". Naxxramas without C-P9 {pct(paladin(n, c14=0), druid(n))}"
-              + f", C-P9 at 100% {pct(paladin(n, c14=1), druid(n))}, 150% {pct(paladin(n, c14=1.5), druid(n))}"
+              + f", C-P9 at 200% {pct(paladin(n, c14=2), druid(n))}, 150% {pct(paladin(n, c14=1.5), druid(n))}"
               + f", 300% {pct(paladin(n, c14=3), druid(n))} ({pct(paladin(n, c14=3), warrior(n))} of the Warrior)")
     print("C-P9 at 300%, % of the Warrior: " + ", ".join(pct(paladin(t, c14=3), warrior(t)) for t in TIERS))
 

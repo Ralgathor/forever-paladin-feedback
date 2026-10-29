@@ -52,16 +52,18 @@ class Gear:
         g.__dict__.update(kw); return g
 
 # Part 1: pre-raid gear, 200 spell power, 60 block value. Part 6: 500 Attack Power, 45 DPS 2.7 sec weapon.
-PART1 = Gear("Part 1", sp=200, ap=500, wdps=45, wspeed=2.7, bv=60, mana=3400, boss_hit=4500)
+PART1 = Gear("Part 1", sp=200, ap=500, wdps=45, wspeed=2.7, bv=108, mana=3400, boss_hit=4500)
 
 # Part 2: the fresh level 60 tier is a real gear profile. The other tiers are estimates (+15-20% each).
+# Block value with Shield Specialization: pre-raid from the gear search of builds/protection.md (Wowhead Forever
+# values). Raid tiers: estimates from the Wowhead Forever tank items (Forever has no raid shields yet).
 # The Warrior and the Druid have the same Attack Power and weapon as the Paladin.
 TIERS = [
     Gear("Fresh level 60",        sp=208, ap=428, wdps=27.5, wspeed=2.2, bv=26,  mana=2897, boss_hit=3000),
-    Gear("Pre-raid best in slot", sp=260, ap=520, wdps=42,   wspeed=2.7, bv=60,  mana=3400, boss_hit=3500),
-    Gear("Molten Core",           sp=310, ap=600, wdps=52,   wspeed=2.7, bv=80,  mana=3900, boss_hit=4500),
-    Gear("Blackwing Lair",        sp=380, ap=700, wdps=60,   wspeed=2.7, bv=100, mana=4400, boss_hit=6000),
-    Gear("Naxxramas",             sp=440, ap=800, wdps=66,   wspeed=2.7, bv=125, mana=4900, boss_hit=8000),
+    Gear("Pre-raid best in slot", sp=260, ap=520, wdps=42,   wspeed=2.7, bv=108, mana=3400, boss_hit=3500),
+    Gear("Molten Core",           sp=310, ap=600, wdps=52,   wspeed=2.7, bv=140, mana=3900, boss_hit=4500),
+    Gear("Blackwing Lair",        sp=380, ap=700, wdps=60,   wspeed=2.7, bv=180, mana=4400, boss_hit=6000),
+    Gear("Naxxramas",             sp=440, ap=800, wdps=66,   wspeed=2.7, bv=230, mana=4900, boss_hit=8000),
 ]
 
 # Pre-raid gear of the tank build search (builds/protection.md), wowsims stat sheet with no buffs and no consumables.
@@ -80,7 +82,7 @@ def flatter(boss_flat):
     for g in TIERS[2:]:
         half = lambda k: getattr(pre, k) + (getattr(g, k) - getattr(pre, k)) / 2
         kw = {k: half(k) for k in ("sp", "ap", "wdps", "bv", "mana")}
-        kw["bv"] = int(kw["bv"])                    # 70, 80, 92
+        kw["bv"] = int(kw["bv"])                    # 124, 144, 169
         if boss_flat: kw["boss_hit"] = half("boss_hit")
         out.append(g.but(**kw))
     return out
@@ -110,7 +112,7 @@ BUILDS = (("PB1", PB1), ("PB2", PB2), ("PB3", PB3), ("PB4", PB4), ("8/35/8 tank 
 HOLY_SHOCK_TANK = {"is": 3, "cg": 2, "hp": 5, "prec": 3, "red": 5, "sj": 1, "ohws": 3}             # 30/21/0
 HEALING_TANK = {"prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 1}                                # 29/22/0
 
-def paladin(g, tal=TANK_REF, proposed=True, c14=2.0, crusader=True, consecration=False, c16=False, ic_rank=0.05,
+def paladin(g, tal=TANK_REF, proposed=True, c14=1.0, crusader=True, consecration=False, c16=False, ic_rank=0.05,
             phys_mult=1.0, holy_shock=False, ret_aura=False, shield_attack=False, casting=0.0, heal=0.0,
             rf_heals=False, detail=False):
     """TPS of a Protection Paladin on one boss.

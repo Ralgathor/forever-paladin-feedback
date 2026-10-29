@@ -104,7 +104,7 @@ index bba09b1fbd..2cf6eeca44 100644
 -		spell.CalcAndDealDamage(sim, target, damage, spell.OutcomeMagicHit)
 +		d := damage
 +		if prop("C14") {
-+			d += zzNum("HSBV", 200) / 100 * paladin.BlockDamageReduction()
++			d += zzNum("HSBV", 100) / 100 * paladin.BlockDamageReduction()
 +		}
 +		spell.CalcAndDealDamage(sim, target, d, spell.OutcomeMagicHit)
  	}
