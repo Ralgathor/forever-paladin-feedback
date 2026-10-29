@@ -127,8 +127,8 @@ Source: the talent data of wowsims/forever (25 October 2026) for all nine classe
 | --- | --- | --- | --- |
 | Holy, calculator version 4 | 10 / 7 / 3 / 6 / 8 / 8 / 1 | **20** (other trees: 23–35) | 22 |
 | Holy, with Lingering Light (C-H2) in row 3, Holy Power (M-H3) and Consecrated Ground (M-H4) | 10 / 7 / 5 / 6 / 9 / 5 / 1 | 22 | 20 |
-| Protection, proposed | 10 / 10 / 8 / 7 / 8 / 5 / 1 | 28 | 20 |
 | Holy, with Merciful Light (C-H5), Divine Grace (C-H6) and Divine Precision in row 4 (M-H5) | 10 / 7 / 5 / 11 / 8 / 5 / 1 | 22 | 24 |
+| Protection, proposed | 10 / 10 / 8 / 7 / 8 / 5 / 1 | 28 | 20 |
 | Retribution, calculator version 5 | 10 / 9 / 6 / 6 / 4 / 5 / 1 | 25 | **15** (other trees: 15–25) |
 | Retribution, with Burning Zeal (C-R4) and Measure for Measure (C-R5) | 10 / 9 / 6 / 6 / 10 / 5 / 1 | 25 | 21 |
 | Mean of the other 24 trees | — | 28.6 | 19.1 |
