@@ -24,7 +24,7 @@ A new wowsims commit can change the results. Change the commit in `setup.sh` onl
 | Script | What it gives | Analysis tab |
 | --- | --- | --- |
 | `run_damage.py` | Retribution against the other damage specs, and the value of each Retribution proposal | Damage, part 10 |
-| `run_threat.py` | Protection against the Warrior and the Druid, with tuned values of Holy Shield and Iron Creed | Threat, part 7 |
+| `run_threat.py` | Protection against the Warrior and the Druid, with tuned values of Holy Shield and Iron Creed. The best tank builds with their pre-raid gear (`data/tank_path_gear.json`), and groups of 3 and 5 enemies | Threat, parts 7 and 8 |
 | `run_healing.py` | Holy Paladin and Holy Priest, one heal plan each: healing for each point of mana | Healing, part 9 |
 | `tests.py` | One check for each proposal in the patch. The result must show the proposal text | — |
 | `check.py` | The same values from the Python models and from wowsims, and the difference | Damage, Threat, Healing |
@@ -49,7 +49,7 @@ Set the flags in the `PROPOSE` environment variable, with commas: `PROPOSE=C6,C1
 | `HSBV<n>` | Holy Shield (C-P9) | With `C14`: n% of block value (default 200) |
 | `C15` | Conviction (C-R1) | Conviction critical chance on melee and spell damage |
 | `C15H` | Conviction (C-R1) | With `C15`: Conviction also on Holy Light, Flash of Light and Holy Shock heals |
-| `C16` | Holy Strike Seal trigger (C1) | Holy Strike triggers the active Seal |
+| `C16` | Holy Strike Seal trigger (C1) | Holy Strike triggers the active Seal (Seal of Fury, Seal of Command, Seal of Righteousness) |
 | `C17` | Twist of Light (C-R2) | The Seal Echo has a duration, and Holy Strike refreshes it |
 | `ECHO<n>` | Twist of Light (C-R2) | With `C17`: Echo duration of n sec |
 | `C26` | Sanctified Judgement (C-R3) | The mana return occurs on each Judgement |
@@ -58,6 +58,7 @@ Set the flags in the `PROPOSE` environment variable, with commas: `PROPOSE=C6,C1
 | `IOL` | Infusion of Light (C-H3) | Each Flash of Light, Holy Shock and Holy Strike hit gives Infusion of Light, with no critical hit necessary |
 | `LL<n>` | Lingering Light (C-H2) | Each critical heal heals n% more in 3 ticks of 2 sec. Ticks can be critical heals |
 | `BOL` | Blessing of Light (C3) | The Blessing of Light heal bonus on the target. The wowsims buff does not add the bonus |
+| `VIN5` | Vindication (C-P3) | Vindication has 5 ranks: +1% Attack Power for each rank |
 
 `builds.py` gives the talent strings and the flag lists of each spec. A talent string uses the tree order of the sim, not the order of the game client.
 

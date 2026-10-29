@@ -129,6 +129,27 @@ index 19f65d8c6a..6879afedc6 100644
  	}).AttachProcTrigger(core.ProcTrigger{
  		Callback: core.CallbackOnSpellHitDealt,
  		ProcMask: core.ProcMaskMeleeWhiteHit,
+diff --git a/sim/paladin/seal_of_fury.go b/sim/paladin/seal_of_fury.go
+index 3e9b1ceba5..f8e15fb45e 100644
+--- a/sim/paladin/seal_of_fury.go
++++ b/sim/paladin/seal_of_fury.go
+@@ -102,6 +102,16 @@ func (paladin *Paladin) registerSealOfFury(_ int32, rank *spelldata.Spell) {
+ 			procSpell.Cast(sim, result.Target)
+ 		},
+ 	}))
++	aura.MakeDependentProcTriggerAura(&paladin.Unit, core.ProcTrigger{
++		Name:           "Seal of Fury - Holy Strike" + paladin.Label,
++		Callback:       core.CallbackOnSpellHitDealt,
++		ClassSpellMask: SpellMaskHolyStrike,
++		Outcome:        core.OutcomeLanded,
++		ExtraCondition: func(_ *core.Simulation, _ *core.Spell, _ *core.SpellResult) bool { return prop("C16") },
++		Handler: func(sim *core.Simulation, _ *core.Spell, result *core.SpellResult) {
++			procSpell.Cast(sim, result.Target)
++		},
++	})
+ 
+ 	paladin.registerSealSpell(&sealConfig{
+ 		rank:      rank,
 diff --git a/sim/paladin/seal_of_righteousness.go b/sim/paladin/seal_of_righteousness.go
 index 3fd44c28f6..ba2359431c 100644
 --- a/sim/paladin/seal_of_righteousness.go
@@ -347,7 +368,7 @@ index a91bb2e473..ceac820821 100644
  	ironCreed := paladin.RegisterAura(core.Aura{
  		Label:    "Iron Creed" + paladin.Label,
 diff --git a/sim/paladin/talents_retribution.go b/sim/paladin/talents_retribution.go
-index d350ba33e8..8d70aafcd1 100644
+index d350ba33e8..61af9cb478 100644
 --- a/sim/paladin/talents_retribution.go
 +++ b/sim/paladin/talents_retribution.go
 @@ -2,6 +2,7 @@ package paladin
@@ -374,7 +395,35 @@ index d350ba33e8..8d70aafcd1 100644
  }
  
  // Vindication - Gives your damaging melee attacks a chance to reduce the target's Attack Power by
-@@ -163,7 +173,7 @@ func (paladin *Paladin) applySanctifiedJudgement() {
+@@ -105,12 +115,16 @@ func (paladin *Paladin) applyVindication() {
+ 	}
+ 
+ 	rank := spellData.VindicationTriggered.Highest()
+-	points := spellData.Vindication.EffectAt(1).ValueAt(paladin.Talents.Vindication)
++	vinRanks := min(paladin.Talents.Vindication, 3)
++	points := spellData.Vindication.EffectAt(1).ValueAt(vinRanks)
++	if prop("VIN5") {
++		points = float64(paladin.Talents.Vindication)
++	}
+ 
+ 	// The raid's Vindication row, priced at the paladin's ranks, so it bids against the raid's
+ 	// attack power reductions rather than stacking with them.
+ 	targetAuras := paladin.NewEnemyAuraArray(func(target *core.Unit) *core.Aura {
+-		return buffs.NewSpellDataVindicationAura(target, true, paladin.Talents.Vindication)
++		return buffs.NewSpellDataVindicationAura(target, true, vinRanks)
+ 	})
+ 
+ 	attackPowerDep := paladin.NewDynamicMultiplyStat(stats.AttackPower, core.MultiplierFromPercent(points))
+@@ -132,7 +146,7 @@ func (paladin *Paladin) applyVindication() {
+ 	debuffConfig.RelatedAuraArrays = targetAuras.ToMap()
+ 	debuff := paladin.RegisterSpell(debuffConfig)
+ 
+-	trigger := spelldata.ProcTrigger(&paladin.Character, spellData.Vindication.Rank(paladin.Talents.Vindication), func(sim *core.Simulation, _ *core.Spell, result *core.SpellResult) {
++	trigger := spelldata.ProcTrigger(&paladin.Character, spellData.Vindication.Rank(vinRanks), func(sim *core.Simulation, _ *core.Spell, result *core.SpellResult) {
+ 		debuff.Cast(sim, result.Target)
+ 		selfAura.Activate(sim)
+ 	}, spelldata.WeaponSpeedPPM(vindicationPPM))
+@@ -163,7 +177,7 @@ func (paladin *Paladin) applySanctifiedJudgement() {
  		Name:               "Sanctified Judgement" + paladin.Label,
  		Callback:           core.CallbackOnSpellHitDealt,
  		ClassSpellMask:     SpellMaskAllJudgements,
@@ -383,7 +432,7 @@ index d350ba33e8..8d70aafcd1 100644
  		TriggerImmediately: true,
  		Handler: func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
  			if seal := paladin.activeSeal(); seal != nil {
-@@ -225,7 +235,15 @@ func (paladin *Paladin) applySacredArbiter() {
+@@ -225,7 +239,15 @@ func (paladin *Paladin) applySacredArbiter() {
  		return
  	}
  
@@ -400,7 +449,7 @@ index d350ba33e8..8d70aafcd1 100644
  
  	paladin.MakeProcTriggerAura(core.ProcTrigger{
  		Name:               "Sacred Arbiter" + paladin.Label,
-@@ -353,9 +371,21 @@ func (paladin *Paladin) applyTwistOfLight() {
+@@ -353,9 +375,21 @@ func (paladin *Paladin) applyTwistOfLight() {
  		echo.aura = paladin.RegisterAura(core.Aura{
  			Label:    fmt.Sprintf("Echo (%d)%s", id, paladin.Label),
  			ActionID: core.ActionID{SpellID: id},
@@ -423,7 +472,7 @@ index d350ba33e8..8d70aafcd1 100644
  		echo.aura.AttachProcTrigger(core.ProcTrigger{
  			Callback:           core.CallbackOnSpellHitDealt,
  			ProcMask:           core.ProcMaskMeleeWhiteHit,
-@@ -370,6 +400,9 @@ func (paladin *Paladin) applyTwistOfLight() {
+@@ -370,6 +404,9 @@ func (paladin *Paladin) applyTwistOfLight() {
  						seal.echo(sim, target)
  					})
  				}

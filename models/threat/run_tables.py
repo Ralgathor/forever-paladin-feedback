@@ -1,7 +1,7 @@
 """All threat values of the document: Analysis, Threat (proposals/analysis/threat.md), Analysis, Builds (parts 3,
 5 and 6), Protection (C-P2, C-P6, C-P9), Judgements and Blessings (C2), Retribution (C1) and Withdrawn ideas.
 Run: python3 run_tables.py. Part 8 (several targets): multi_target.py"""
-from threat_model import (DRU_WOWSIMS, PART1, TIERS, BUILDS, TANK_REF, PB1, PB2, HOLY_SHOCK_TANK, HEALING_TANK, flatter, paladin,
+from threat_model import (DRU_WOWSIMS, PART1, TIERS, BUILDS, TANK_REF, PB1, PB2, PT3, BT4b, PATH_PROP, PATH_BETA, HOLY_SHOCK_TANK, HEALING_TANK, flatter, paladin,
                           warrior, druid, armor_dr, table, OHWS)
 
 def beta(g, **kw):
@@ -58,6 +58,17 @@ if __name__ == "__main__":
     print("Druid with the wowsims multipliers (Paladin, all proposals, % of it): " + ", ".join(
         f"{druid(t, mults=DRU_WOWSIMS):.0f} ({pct(paladin(t), druid(t, mults=DRU_WOWSIMS))})" for t in TIERS))
     print("Judgement of the Crusader, beta: " + ", ".join(f"{beta(t) - beta(t, crusader=False):+.0f}" for t in TIERS))
+
+    print("\n## Threat, part 2: pre-raid path gear of builds/protection.md (PT3 and BT4b talents)")
+    print("Gear | Warrior | Druid | Druid, wowsims multipliers | Beta BT4b | PT3 without C-P9 | PT3 | PT3, C-P9 150% | PT3, C-P9 100%")
+    for t in (TIERS[1], PATH_PROP, PATH_BETA):
+        w, d = warrior(t), druid(t)
+        cols = (paladin(t, BT4b, proposed=False, c14=0), paladin(t, PT3, c14=0), paladin(t, PT3),
+                paladin(t, PT3, c14=1.5), paladin(t, PT3, c14=1))
+        print(f"{t.name} | {w:.0f} | {d:.0f} | {druid(t, mults=DRU_WOWSIMS):.0f} | "
+              + " | ".join(f"{x:.0f} ({pct(x, d)}, {pct(x, w)})" for x in cols))
+    _, src = paladin(PATH_PROP, PT3, detail=True)
+    print("PT3 sources, proposed path gear: " + ", ".join(f"{k} {v:.0f}" for k, v in src.items()))
 
     print("\n## Threat, part 3: % of the Druid (% of the Warrior)")
     cases = (("Gear as in part 2", TIERS), ("Flatter gear, boss hits as in part 2", flatter(False)),

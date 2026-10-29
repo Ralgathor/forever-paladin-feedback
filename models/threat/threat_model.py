@@ -64,6 +64,14 @@ TIERS = [
     Gear("Naxxramas",             sp=440, ap=800, wdps=66,   wspeed=2.7, bv=125, mana=4900, boss_hit=8000),
 ]
 
+# Pre-raid gear of the tank build search (builds/protection.md), wowsims stat sheet with no buffs and no consumables.
+# Greenhammer: 47.3 damage per sec, 2.3 sec. Proposed (PT3 gear): block value 96 x 1.3 (Shield Specialization 3).
+# Beta (BT4b gear): block value 58, no Shield Specialization. Hit from gear: 5.0% and 4.3%.
+PATH_PROP = TIERS[1].but(name="Pre-raid path gear, proposed", sp=111, ap=616, wdps=47.3, wspeed=2.3, bv=96 * 1.3,
+                         mana=2282, hit=0.05)
+PATH_BETA = TIERS[1].but(name="Pre-raid path gear, beta", sp=125, ap=476, wdps=47.3, wspeed=2.3, bv=58, mana=2282,
+                         hit=0.043)
+
 def flatter(boss_flat):
     """Part 3: from Molten Core, the gear increases at half the rate of part 2.
     boss_flat: the boss hits also increase at half the rate (4,000, 4,750 and 5,750)."""
@@ -85,7 +93,7 @@ CONS_EVERY = 8              # Consecration on cooldown, as in Analysis, Mana
 
 # Talents. Holy: "is" Improved Seals, "cg" Consecrated Ground, "hp" Holy Power. Protection: "prec" Precision,
 # "red" Redoubt, "sj" Swift Judgement, "ohws" One-Handed Weapon Specialization, "reck" Reckoning, "ic" Iron Creed,
-# "hsh" Holy Shield. Retribution: "conv" Conviction, "ij" Improved Judgement, "vind" Vindication. Talents with no threat effect are left out.
+# "hsh" Holy Shield. Retribution: "conv" Conviction, "ij" Improved Judgement, "vind" Vindication, "sa" Sacred Arbiter. Talents with no threat effect are left out.
 # TANK_REF: the 8/35/8 tank of Analysis, Threat (Conviction 3, Reverence; first PB1). All threat tables use it.
 TANK_REF = {"is": 3, "prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 5, "ic": 5, "hsh": 1, "conv": 3}
 # Analysis, Builds, part 3: 3/35/13 tanks with Sanctified Judgement (no threat effect) and Improved Judgement.
@@ -93,6 +101,9 @@ PB1 = {"is": 3, "prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 5, "ic": 5, "hs
 PB2 = dict(PB1, conv=3)     # no Holy Conduit
 PB3 = dict(PB1, ic=3)       # PB3 and PB4 differ only in Anticipation and Reach of Law
 PB4 = dict(PB3)
+# builds/protection.md: the best tanks of the wowsims build search. Talents with no threat effect are left out.
+PT3 = {"is": 3, "prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 5, "ic": 5, "hsh": 1, "ij": 2, "conv": 5, "vind": 2, "sa": 1}
+BT4b = {"is": 3, "prec": 3, "red": 2, "sj": 1, "ohws": 3, "reck": 3, "ic": 5, "hsh": 1, "ij": 2, "conv": 1}
 BUILDS = (("PB1", PB1), ("PB2", PB2), ("PB3", PB3), ("PB4", PB4), ("8/35/8 tank of Analysis, Threat", TANK_REF))
 # Analysis, Builds, parts 5 and 6: tanks with no Holy Shield
 HOLY_SHOCK_TANK = {"is": 3, "cg": 2, "hp": 5, "prec": 3, "red": 5, "sj": 1, "ohws": 3}             # 30/21/0
@@ -139,7 +150,7 @@ def paladin(g, tal=TANK_REF, proposed=True, c14=2.0, crusader=True, consecration
     # hit for each rank. Its threat is x1.9 in full (beta test), and Iron Creed adds ic_rank for each rank.
     _, f_hstr = table(hit, crit + 0.03 * t("hp"), auto=False)
     hstr = 0.5 * (w.weapon(NORM_1H) + 93 + 0.429 * sp) * cg * ohws * f_hstr
-    src["Holy Strike"] = hstr * RF * (1 + ic_rank * t("ic")) / 10
+    src["Holy Strike"] = hstr * RF * (1 + ic_rank * t("ic")) * (1 + 0.20 * t("sa")) / 10   # Sacred Arbiter: +20%
     # Auto attacks: physical. Reckoning extra attacks: in the beta, the next swing (glancing blows possible).
     # With C-P6, Holy Strike releases them: no glancing blows.
     src["Auto attacks"] = w.weapon() * (1 - dr) * ohws * f_auto * swings * phys_mult
