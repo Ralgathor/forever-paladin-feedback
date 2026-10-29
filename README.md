@@ -25,7 +25,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C1 Holy Strike:** Holy Strike triggers your active Seal and Echo the same as a melee attack, for all specs (beta: only Seal of Light, Justice and Wisdom).
 - **C2 Judgement of the Crusader:** a personal debuff. It does not count against the one-Judgement limit. C2a and C2b are alternatives.
 - **C3 Blessing of Light:** removed. Healing Light (C-H4) gives 10/20/30%. Thus, Holy healing does not change with the number of Paladins in the raid. C3a and C3b are alternatives.
-- **C4 Hand of Sacrifice:** up to 825 damage moves to you (beta: 55 for each hit). 15 sec cooldown.
+- **C4 Hand of Sacrifice:** up to 825 damage moves to you (beta: 55 for each hit). Lasts 30 sec, 15 sec cooldown.
 - **C5 Hands:** Blessing of Sacrifice, Protection and Freedom become Hand of Sacrifice, Protection and Freedom. They use no Blessing slot. Each Paladin can have one Hand on a target.
 
 **Holy**
