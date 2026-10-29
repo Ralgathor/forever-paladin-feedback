@@ -24,7 +24,7 @@ A new wowsims commit can change the results. Change the commit in `setup.sh` onl
 | Script | What it gives | Analysis tab |
 | --- | --- | --- |
 | `run_damage.py` | Retribution against the other damage specs, and the value of each Retribution proposal | Damage, part 10 |
-| `run_threat.py` | Protection against the Warrior and the Druid, with tuned values of Holy Shield and Iron Creed. The best tank builds with their pre-raid gear (`data/tank_path_gear.json`), and groups of 3 and 5 enemies | Threat, parts 7 and 8 |
+| `run_threat.py` | Protection against the Warrior and the Druid, with tuned values of Holy Shield and Iron Creed. The best tank builds with their pre-raid gear (`data/tank_path_gear.json`), and groups of 3 and 5 enemies. Epic shields use the Wowhead Forever block value (`WOWHEAD_BV` in `wowsims.py`). `WOWHEAD_BV=0` gives the wowsims values | Threat, parts 7 and 8 |
 | `run_healing.py` | Holy Paladin and Holy Priest, one heal plan each: healing for each point of mana | Healing, part 9 |
 | `tests.py` | One check for each proposal in the patch. The result must show the proposal text | — |
 | `check.py` | The same values from the Python models and from wowsims, and the difference | Damage, Threat, Healing |

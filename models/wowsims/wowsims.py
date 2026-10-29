@@ -22,15 +22,41 @@ def gear(path):
     """A wowsims gear set, for example "warrior/dps/gear_sets/prebis_fury"."""
     return json.load(open(os.path.join(SPECS, path + ".gear.json")))
 
+# Epic shields: wowsims takes shield block from a game table by item level, and that table is about 32% too
+# high for Forever. These are the Wowhead Forever values (block + block value). Other items already match.
+WOWHEAD_BV = {21269: 70, 19321: 66, 21610: 57, 18825: 55, 18826: 55, 22198: 48, 18168: 44,
+              272591: 44, 272838: 44, 278468: 44, 278469: 44, 279262: 44}
+FAKE_ID = 9000000
+_DB = None
+
+def wowhead_shields(p):
+    """Swaps each epic shield for a copy with the Wowhead block value. The sim does not replace an item
+    it already has, so the copy takes a new id. These shields have no item effects to lose."""
+    global _DB
+    items = p.get("equipment", {}).get("items", [])
+    new = []
+    for e in items:
+        if e.get("id") in WOWHEAD_BV:
+            if _DB is None:
+                _DB = {i["id"]: i for i in json.load(open(os.path.join(WORK, "forever", "assets", "database", "db.json")))["items"]}
+            it = copy.deepcopy(_DB[e["id"]]); it["id"] = FAKE_ID + e["id"]
+            for so in it["scalingOptions"].values():
+                so["stats"]["24"] = WOWHEAD_BV[e["id"]]
+            new.append(it); e["id"] = it["id"]
+    if new:
+        p["database"] = {"items": new}
+
 def julien():
     return copy.deepcopy(PROT["raid"]["parties"][0]["players"][0])
 
-def request(player, scen="raid", tank=False, iters=3000, dur=180, keep_buffs=False):
+def request(player, scen="raid", tank=False, iters=3000, dur=180, keep_buffs=False, wowhead=False):
     """scen: "raid" (same raid buffs for all, preset consumables), "raid_nocons" (weapon oils and
-    poisons only) or "solo" (no buffs, no debuffs, no consumables)."""
+    poisons only) or "solo" (no buffs, no debuffs, no consumables). wowhead: Wowhead shield values."""
     ref_raid = json.load(open(os.path.join(DUMP, REF + ".raid.json")))
     ref_ind = load(REF)["buffs"]
     p = copy.deepcopy(player); p["name"] = "Player"
+    if wowhead:
+        wowhead_shields(p)
     raid = {"parties": [{"players": [p]}], "numActiveParties": 1}
     if scen in ("raid", "raid_nocons"):
         raid["buffs"] = ref_raid["buffs"]; raid["debuffs"] = ref_raid["debuffs"]

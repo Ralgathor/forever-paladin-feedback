@@ -65,11 +65,12 @@ TIERS = [
 ]
 
 # Pre-raid gear of the tank build search (builds/protection.md), wowsims stat sheet with no buffs and no consumables.
-# Greenhammer: 47.3 damage per sec, 2.3 sec. Proposed (PT3 gear): block value 96 x 1.3 (Shield Specialization 3).
-# Beta (BT4b gear): block value 58, no Shield Specialization. Hit from gear: 5.0% and 4.3%.
-PATH_PROP = TIERS[1].but(name="Pre-raid path gear, proposed", sp=111, ap=616, wdps=47.3, wspeed=2.3, bv=96 * 1.3,
+# Greenhammer: 47.3 damage per sec, 2.3 sec. Block value from the Wowhead Forever tooltips (wowsims gives epic shields
+# about 32% more). Proposed (PT3 gear): 83 x 1.3 (Shield Specialization 3). Beta (BT4b gear): 44, no Shield
+# Specialization. Both leave out the Strength part. Hit from gear: 5.0% and 4.3%.
+PATH_PROP = TIERS[1].but(name="Pre-raid path gear, proposed", sp=111, ap=616, wdps=47.3, wspeed=2.3, bv=83 * 1.3,
                          mana=2282, hit=0.05)
-PATH_BETA = TIERS[1].but(name="Pre-raid path gear, beta", sp=125, ap=476, wdps=47.3, wspeed=2.3, bv=58, mana=2282,
+PATH_BETA = TIERS[1].but(name="Pre-raid path gear, beta", sp=125, ap=476, wdps=47.3, wspeed=2.3, bv=44, mana=2282,
                          hit=0.043)
 
 def flatter(boss_flat):

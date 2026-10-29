@@ -25,8 +25,10 @@ PATH_RUNS = [("Beta BT4b", BT4b, "beta", ""), ("Proposed PT3", PT3, "proposed", 
 PATH_RUNS += [(f"PT3 without {f}", PT3, "proposed", ",".join(x for x in PROT_ALL.split(",") if x != f))
               for f in ("C6", "C7", "C11", "C13", "C14", "C15", "C16")]
 
+WOWHEAD = os.environ.get("WOWHEAD_BV", "1") == "1"   # Wowhead shield values (wowsims.WOWHEAD_BV); WOWHEAD_BV=0 for the wowsims values
+
 def tank(p, s, f=""):
-    o = sim(request(p, s, tank=True), f)
+    o = sim(request(p, s, tank=True, wowhead=WOWHEAD), f)
     return dict(metrics(o), crush=boss_swings(o)["crushes"])
 
 def run():
@@ -60,7 +62,7 @@ GROUP_TANKS = {"Paladin beta (BT4b)": (path_player(BT4b, "beta"), ""),
                "Warrior": (load(WARRIOR_TANK), ""), "Druid": (druid_multi(load(BEAR)), "")}
 
 def group(p, f, n, share=1 / 3, iters=2000):
-    rq = request(p, "raid", tank=True, iters=iters)
+    rq = request(p, "raid", tank=True, iters=iters, wowhead=WOWHEAD)
     t0 = rq["encounter"]["targets"][0]; t0["minBaseDamage"] *= share
     rq["encounter"]["targets"] = [dict(copy.deepcopy(t0), name=f"Mob {i + 1}") for i in range(n)]
     pl = player_metrics(sim(rq, f)); per = [0.0] * n
