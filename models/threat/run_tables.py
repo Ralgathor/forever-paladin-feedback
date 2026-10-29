@@ -48,12 +48,12 @@ if __name__ == "__main__":
     print("Spell power: " + ", ".join(f"{sp} {x:.0f}" for sp, x in zip(sps, v))
           + f". Each +100: {(v[-1] - v[0]) / 2.5:+.0f}")
 
-    print("\n## Threat, part 2: gear tiers. Paladin columns: % of the Druid")
+    print("\n## Threat, part 2: gear tiers. Paladin columns: % of the Druid, % of the Warrior")
     print("Tier | Warrior | Druid | Paladin, beta | Without C-P9 | All proposals | + Consecration")
     for t in TIERS:
         w, d = warrior(t), druid(t)
         cols = (beta(t), paladin(t, c14=0), paladin(t))
-        print(f"{t.name} | {w:.0f} | {d:.0f} | " + " | ".join(f"{x:.0f} ({pct(x, d)})" for x in cols)
+        print(f"{t.name} | {w:.0f} | {d:.0f} | " + " | ".join(f"{x:.0f} ({pct(x, d)}, {pct(x, w)})" for x in cols)
               + f" | {paladin(t, consecration=True):.0f}")
     print("Druid with the wowsims multipliers (Paladin, all proposals, % of it): " + ", ".join(
         f"{druid(t, mults=DRU_WOWSIMS):.0f} ({pct(paladin(t), druid(t, mults=DRU_WOWSIMS))})" for t in TIERS))

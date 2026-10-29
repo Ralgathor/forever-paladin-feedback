@@ -78,13 +78,13 @@ def run_groups():
 
 if __name__ == "__main__":
     r = run()
-    print("| Tank | Gear | " + " | ".join(f"{s}: TPS (% Warrior), TMI (% Warrior), crushing blows" for s in SCENS) + " |")
+    print("| Tank | Gear | " + " | ".join(f"{s}: TPS (% Warrior, % Druid), TMI (% Warrior), crushing blows" for s in SCENS) + " |")
     print("| --- | --- | " + " | ".join("---" for _ in SCENS) + " |")
     for k in sorted({k[:2] for k in r}, key=lambda k: (k[1], k[0])):
         cells = []
         for s in SCENS:
-            m, w = r[k + (s,)], r[("Warrior", "", s)]
-            cells.append(f"{m['tps']:.0f} ({m['tps'] / w['tps']:.0%}), {m['tmi']:.1f} ({m['tmi'] / w['tmi']:.0%}), {m['crush']:.1f}%")
+            m, w, d = r[k + (s,)], r[("Warrior", "", s)], r[("Druid", "", s)]
+            cells.append(f"{m['tps']:.0f} ({m['tps'] / w['tps']:.0%}, {m['tps'] / d['tps']:.0%}), {m['tmi']:.1f} ({m['tmi'] / w['tmi']:.0%}), {m['crush']:.1f}%")
         print(f"| {k[0]} | {k[1]} | " + " | ".join(cells) + " |")
     g = run_groups()
     print("\n| Tank | 1 target | 3 targets | 5 targets |\n| --- | --- | --- | --- |")

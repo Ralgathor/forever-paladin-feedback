@@ -108,15 +108,15 @@ In raids, the gear and the boss damage increase together. This table shows the f
 | Blackwing Lair | 380 | 700 | 60 | 180 | 4,400 | 6,000 |
 | Naxxramas | 440 | 800 | 66 | 230 | 4,900 | 8,000 |
 
-TPS on one boss. The percentage is the Paladin TPS divided by the Druid TPS.
+TPS on one boss. The two percentages are the Paladin TPS divided by the Druid TPS and by the Warrior TPS.
 
 | Tier | Warrior | Druid | Paladin, beta | Paladin, proposals without Holy Shield (C-P9) | **Paladin, all proposals** | All proposals + Consecration |
 | --- | --- | --- | --- | --- | --- | --- |
-| Fresh level 60 | 535 | 475 | 395 (84%) | 450 (95%) | **470 (99%)** | 560 |
-| Pre-raid best in slot | 605 | 560 | 425 (76%) | 490 (87%) | **565 (100%)** | 660 |
-| Molten Core | 690 | 650 | 460 (70%) | 525 (81%) | **625 (96%)** | 720 |
-| Blackwing Lair | 750 | 735 | 495 (68%) | 570 (78%) | **695 (95%)** | 795 |
-| Naxxramas | 820 | 815 | 530 (65%) | 605 (75%) | **765 (94%)** | 875 |
+| Fresh level 60 | 535 | 475 | 395 (84%, 74%) | 450 (95%, 84%) | **470 (99%, 87%)** | 560 |
+| Pre-raid best in slot | 605 | 560 | 425 (76%, 71%) | 490 (87%, 81%) | **565 (100%, 93%)** | 660 |
+| Molten Core | 690 | 650 | 460 (70%, 67%) | 525 (81%, 76%) | **625 (96%, 90%)** | 720 |
+| Blackwing Lair | 750 | 735 | 495 (68%, 66%) | 570 (78%, 76%) | **695 (95%, 92%)** | 795 |
+| Naxxramas | 820 | 815 | 530 (65%, 65%) | 605 (75%, 74%) | **765 (94%, 93%)** | 875 |
 
 - All Paladin columns include Judgement of the Crusader. Without it (a raid that needs the beta tank's Judgement for Light or Wisdom), subtract about 50 TPS from the beta column.
 - With all proposals, the Paladin has 94–100% of the Druid threat at all tiers. With Consecration on cooldown, it has 107–118%. But Consecration costs 565 mana each 8 sec (see Analysis, Mana).
@@ -289,18 +289,18 @@ Epic shields use the block value of the Wowhead Forever tooltips. wowsims takes 
 
 Proposed: PT3 with all proposals, Holy Shield (C-P9) at 100% of block value. Beta: BT4b. Each build uses its pre-raid path gear with reputation items (builds/protection.md).
 
-| Tank | TPS (% of the Warrior) | TMI (% of the Warrior) | Crushing blows | TPS, no consumables (% of the Warrior) |
+| Tank | TPS (% of the Warrior, % of the Druid) | TMI (% of the Warrior) | Crushing blows | TPS, no consumables (% of the Warrior, % of the Druid) |
 | --- | --- | --- | --- | --- |
-| Warrior | 996 (100%) | 43.6 (100%) | 0.9% | 904 (100%) |
-| Druid | 711 (71%) | 34.0 (78%) | 15.0% | 673 (74%) |
-| Paladin, beta (BT4b, beta gear) | 883 (89%) | 26.2 (60%) | 6.0% | 650 (72%) |
-| Paladin, beta (BT4b, proposed gear) | 904 (91%) | 30.8 (71%) | 12.0% | 671 (74%) |
-| Paladin, PT3 talents, no proposals (proposed gear) | 960 (96%) | 34.9 (80%) | 11.5% | 734 (81%) |
-| **Paladin, all proposals (PT3, proposed gear)** | **1,151 (116%)** | **23.0 (53%)** | **0.5%** | **948 (105%)** |
-| Paladin, all proposals (PT3, beta gear) | 1,074 (108%) | 23.7 (54%) | 0.5% | 874 (97%) |
-| PT3, Holy Shield 200% of block value | 1,221 (123%) | 23.0 (53%) | 0.5% | 1,019 (113%) |
-| PT3, Holy Shield 150% of block value | 1,186 (119%) | 23.0 (53%) | 0.5% | 983 (109%) |
-| PT3, Iron Creed 6% | 1,151 (116%) | 24.6 (56%) | 0.5% | 948 (105%) |
+| Warrior | 996 (100%, 140%) | 43.6 (100%) | 0.9% | 904 (100%, 134%) |
+| Druid | 711 (71%, 100%) | 34.0 (78%) | 15.0% | 673 (74%, 100%) |
+| Paladin, beta (BT4b, beta gear) | 883 (89%, 124%) | 26.2 (60%) | 6.0% | 650 (72%, 97%) |
+| Paladin, beta (BT4b, proposed gear) | 904 (91%, 127%) | 30.8 (71%) | 12.0% | 671 (74%, 100%) |
+| Paladin, PT3 talents, no proposals (proposed gear) | 960 (96%, 135%) | 34.9 (80%) | 11.5% | 734 (81%, 109%) |
+| **Paladin, all proposals (PT3, proposed gear)** | **1,151 (116%, 162%)** | **23.0 (53%)** | **0.5%** | **948 (105%, 141%)** |
+| Paladin, all proposals (PT3, beta gear) | 1,074 (108%, 151%) | 23.7 (54%) | 0.5% | 874 (97%, 130%) |
+| PT3, Holy Shield 200% of block value | 1,221 (123%, 172%) | 23.0 (53%) | 0.5% | 1,019 (113%, 151%) |
+| PT3, Holy Shield 150% of block value | 1,186 (119%, 167%) | 23.0 (53%) | 0.5% | 983 (109%, 146%) |
+| PT3, Iron Creed 6% | 1,151 (116%, 162%) | 24.6 (56%) | 0.5% | 948 (105%, 141%) |
 
 TMI is the damage intake value of wowsims: less is better.
 
@@ -343,16 +343,16 @@ Conditions: wowsims Forever commit 69e0e5b with the proposals patch (models/wows
 
 **wowsims result of each tank** (Julien's gear for the Paladin)
 
-| Tank | TPS (% of the Warrior) | TMI (% of the Warrior) | Crushing blows | TPS, no consumables (% of the Warrior) |
+| Tank | TPS (% of the Warrior, % of the Druid) | TMI (% of the Warrior) | Crushing blows | TPS, no consumables (% of the Warrior, % of the Druid) |
 | --- | --- | --- | --- | --- |
-| Warrior | 996 (100%) | 43.6 (100%) | 0.9% | 904 (100%) |
-| Druid | 711 (71%) | 34.0 (78%) | 15.0% | 673 (74%) |
-| Paladin, beta | 988 (99%) | 38.7 (89%) | 10.8% | 789 (87%) |
-| Paladin, Redoubt (C-P1) only | 1,021 (103%) | 33.6 (77%) | 0.6% | 824 (91%) |
-| **Paladin, all proposals** | **1,130 (114%)** | **31.2 (72%)** | **0.6%** | **925 (102%)** |
-| Paladin, all proposals, Holy Shield 150% of block value | 1,114 (112%) | 31.2 (72%) | 0.6% | 909 (101%) |
-| Paladin, all proposals, Holy Shield 100% of block value | 1,098 (110%) | 31.2 (72%) | 0.6% | 892 (99%) |
-| Paladin, all proposals, Iron Creed 6% | 1,131 (114%) | 33.3 (76%) | 0.6% | 925 (102%) |
+| Warrior | 996 (100%, 140%) | 43.6 (100%) | 0.9% | 904 (100%, 134%) |
+| Druid | 711 (71%, 100%) | 34.0 (78%) | 15.0% | 673 (74%, 100%) |
+| Paladin, beta | 988 (99%, 139%) | 38.7 (89%) | 10.8% | 789 (87%, 117%) |
+| Paladin, Redoubt (C-P1) only | 1,021 (103%, 144%) | 33.6 (77%) | 0.6% | 824 (91%, 122%) |
+| **Paladin, all proposals** | **1,130 (114%, 159%)** | **31.2 (72%)** | **0.6%** | **925 (102%, 137%)** |
+| Paladin, all proposals, Holy Shield 150% of block value | 1,114 (112%, 157%) | 31.2 (72%) | 0.6% | 909 (101%, 135%) |
+| Paladin, all proposals, Holy Shield 100% of block value | 1,098 (110%, 154%) | 31.2 (72%) | 0.6% | 892 (99%, 133%) |
+| Paladin, all proposals, Iron Creed 6% | 1,131 (114%, 159%) | 33.3 (76%) | 0.6% | 925 (102%, 137%) |
 
 TMI is the damage intake value of wowsims: less is better.
 
