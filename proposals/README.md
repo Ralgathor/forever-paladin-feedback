@@ -31,7 +31,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 22 chan
 | C1 | Holy Strike | Baseline spell | Triggers only Seal of Light, Justice and Wisdom | Triggers your active Seal and Echo the same as a melee attack |
 | C2 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
 | C3 | Blessing of Light | Baseline spell, and Healing Light (C-H4) | +400 Holy Light, +115 Flash of Light. Uses a Blessing slot | Removed. Healing Light gives 10/20/30% |
-| C4 | Hand of Sacrifice | Baseline spell | Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown | Up to 825 damage moves to you. 15 sec cooldown |
+| C4 | Hand of Sacrifice | Baseline spell | Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown | Up to 825 damage moves to you. Lasts 30 sec, 15 sec cooldown |
 | C5 | Hands: Sacrifice, Protection and Freedom | Baseline spells | Blessings of Sacrifice, Protection and Freedom use a Blessing slot | The spells take the name Hand of. No Blessing slot. One Hand from each Paladin on a target |
 | C-H1 | Reverence | Holy, row 3 → row 2 | 10/20/30% of mana regeneration during casts | 17/33/50% |
 | C-H2 | Lingering Light (new) | Holy, row 3 | — | 2 ranks: a critical heal adds a heal over time of 10/20% of the heal |
