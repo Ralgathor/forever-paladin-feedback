@@ -339,7 +339,7 @@ const PROPOSED={
  tou:{pid:"C-P3",removed:true},
  uf:{pid:"M-H2",tier:1,col:2},
  vin:{pid:"C-P3",tier:2,col:3,ranks:5,rt:["Gives your damaging melee attacks a chance to reduce the target's Attack Power by 41, and increase your Attack Power by 1% for 30 sec.","Gives your damaging melee attacks a chance to reduce the target's Attack Power by 82, and increase your Attack Power by 2% for 30 sec.","Gives your damaging melee attacks a chance to reduce the target's Attack Power by 122, and increase your Attack Power by 3% for 30 sec.","Gives your damaging melee attacks a chance to reduce the target's Attack Power by 163, and increase your Attack Power by 4% for 30 sec.","Gives your damaging melee attacks a chance to reduce the target's Attack Power by 204, and increase your Attack Power by 5% for 30 sec."]},
- gf:{pid:"C-P10",rt:["Reduces the cooldown of your Hand of Protection by 1 min and of your Hand of Sacrifice by 5 sec, and increases the duration of your Hand of Freedom by 3 sec.","Reduces the cooldown of your Hand of Protection by 2 min and of your Hand of Sacrifice by 10 sec, and increases the duration of your Hand of Freedom by 6 sec."]},
+ gf:{pid:"C5",rt:["Reduces the cooldown of your Hand of Protection by 1 min and increases the duration of your Hand of Freedom by 3 sec.","Reduces the cooldown of your Hand of Protection by 2 min and increases the duration of your Hand of Freedom by 6 sec."]},
  ben:{pid:"M-P1",tree:"prot",tier:1,col:2},
  con:{pid:"C-R1",tier:1,col:3,r1:"Improves your chance to get a critical strike with attacks and spells by 1%.",rN:"Improves your chance to get a critical strike with attacks and spells by 5%."},
  ths:{pid:"M-R1",tier:4,col:4},
@@ -363,7 +363,6 @@ const PROPOSALS=[
  ["C-P7", "fj", "Reach of Law (new)", "Protection, row 5", "—", "2 ranks: Judgement range +5/10 yards while Seal of Fury is active"],
  ["C-P8", "ss", "Shield Specialization", "Protection, row 3", "33/66/100% chance to restore 4% of maximum mana, once each 3 sec", "Each block restores 2/4/6% of maximum mana, once each 2 sec"],
  ["C-P9", "hsh", "Holy Shield", "Protection, row 7", "221 Holy damage for each block (rank 3)", "221 Holy damage, increased by your block value (100%), for each block"],
- ["C-P10", "gf", "Guardian's Favor", "Protection, row 2", "Blessing of Protection −1/2 min, Blessing of Freedom +3/6 sec", "The same, and Hand of Sacrifice cooldown −5/10 sec (C4)"],
  ["C-P11", "dsac", "Devoted Sacrifice (new)", "Protection, row 3", "—", "2 ranks: Lay on Hands drains only 75/50% of your current mana, and you take 20/40% less damage from your Hand of Sacrifice"],
  ["C-R1", "con", "Conviction", "Retribution, row 2 → row 1 (Conviction, M-R2)", "+1–5% critical hit chance with melee attacks", "+1–5% critical hit chance with attacks and spells"],
  ["C-R2", "tol", "Twist of Light", "Retribution, row 7", "The Echo applies to the next melee attack only", "The Echo applies to all melee attacks for 10 sec"],
@@ -384,7 +383,7 @@ const BASELINE=[
  ["C3", "Blessing of Light", "+400 Holy Light, +115 Flash of Light. Uses a Blessing slot", "Removed. Healing Light (C-H4) gives 10/20/30% (recommended)"],
  ["C3a", "Blessing of Light", "Uses a Blessing slot", "Use if Blizzard keeps the spell: no Blessing slot, as Salvation"],
  ["C3b", "Holy Light and Flash of Light", "Base heal 1,580 and 308 (top ranks)", "Alternative: remove the Blessing and add its bonus to the base heals (1,980 and 423)"],
- ["C4", "Hand of Sacrifice", "Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown", "Up to 825 damage moves to you. 30 sec cooldown, 20 sec with Guardian's Favor 2/2"],
+ ["C4", "Hand of Sacrifice", "Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown", "Up to 825 damage moves to you. 15 sec cooldown"],
  ["C5", "Hands: Sacrifice, Protection and Freedom", "Blessings that use a Blessing slot", "The spells take the name Hand of. No Blessing slot. One Hand from each Paladin on a target"],
  ["C-P11a", "Lay on Hands", "Drains all your current mana", "Alternative to the Lay on Hands part of Devoted Sacrifice (C-P11): the spell drains 50% of your current mana for all Paladins. Devoted Sacrifice keeps only the Hand of Sacrifice part"]
 ];
@@ -589,9 +588,9 @@ ${dn("Holy Strike triggered only some Seals. Now one rule is true for all melee 
 ${dn("Since the patch of 15 October, Salvation does not use a Blessing slot. Two Paladins now give all Blessings to a raid. But each Paladin keeps only one Judgement on a target. Raids use Light and Wisdom and remove Crusader. Thus, Retribution loses damage and Protection loses threat. With this change, each Paladin keeps Crusader for their own Holy damage. The tank keeps about 55 threat per second.")}</li>
 <li>Blessing of Light and Greater Blessing of Light removed. ${g("C3")}
 ${dn("Forever talents give a %, not a flat value. Blessing of Light gives +400 to Holy Light and +115 to Flash of Light, and its value decreases with gear. At 700–900 healing power, it is about +18%. Healing Light now gives this bonus (see Holy). Forever also removed Blessing of Sanctuary.")}</li>
-<li>Hand of Sacrifice now transfers up to 825 damage taken to the caster (was 55 damage taken per hit). It now has a 30 sec cooldown. Guardian's Favor reduces it by 5/10 sec. ${g("C4")}
+<li>Hand of Sacrifice now transfers up to 825 damage taken to the caster (was 55 damage taken per hit). It now has a 15 sec cooldown. ${g("C4")}
 <ul><li>Rank 1 now transfers up to 675 damage (was 45 damage per hit).</li></ul>
-${dn("55 damage for each hit was about 2% of a raid boss hit. The pool keeps the budget of 15 hits. Now all hits use it, also large hits. The cooldown keeps one pool active for each Paladin, or two with Guardian's Favor 2/2. The damage does not disappear: the Paladin takes it and must heal it.")}</li>
+${dn("55 damage for each hit was about 2% of a raid boss hit. The pool keeps the budget of 15 hits. Now all hits use it, also large hits. The cooldown keeps two pools active at most for each Paladin. The damage does not disappear: the Paladin takes it and must heal it.")}</li>
 <li>Blessing of Sacrifice, Blessing of Protection and Blessing of Freedom are now Hand of Sacrifice, Hand of Protection and Hand of Freedom. Hands no longer use a Blessing slot. Each Paladin can have one Hand on a target. ${g("C5")}
 ${dn("A save replaced Kings or Might from the same Paladin, and you had to cast the buff again after it. Forever did the same for the Warlock: Bane of Agony and Bane of Doom are a group apart from Curses, with one Bane from each Warlock on a target.")}</li>
 <li>Alternatives, if the recommended changes are not possible:
@@ -632,7 +631,6 @@ ${dn("Forever removed the flat armor talents of the other tanks. Toughness was t
 ${dn("It takes the place of Toughness. Holy and Retribution open Protection Row 2 with it. Holy then takes Guardian's Favor, and Retribution takes Precision. Convection (Shaman) gives the same −10% in Elemental Row 1.")}</li>
 <li>${t("red","Redoubt")}: Your Holy Shield casts now also trigger this effect. ${g("C-P1")}
 ${dn("This change removes most crushing blows. It keeps the block values of the patch of 1 October.")}</li>
-<li>${t("gf","Guardian's Favor")} now also reduces the cooldown of your Hand of Sacrifice by 5/10 sec. ${g("C-P10","C4")}</li>
 <li>New Talent: ${t("dsac","Devoted Sacrifice")} (Row 3, Column 2, 2 ranks): Your Lay on Hands drains only 75/50% of your current mana (was all your current mana), and you take 20/40% less damage from your Hand of Sacrifice. ${g("C-P11")}
 ${dn("Lay on Hands now has a 20 min cooldown, thus about one cast for each boss. But it drains all your mana, and the drain is largest at full mana. Thus, Paladins used it only at low mana. At 50%, you can use it at any time in a fight.")}</li>
 <li>Improved Righteous Fury removed. ${g("C-P4")}

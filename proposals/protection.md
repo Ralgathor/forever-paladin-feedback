@@ -9,7 +9,6 @@ The Protection proposals give:
 - A ranged pull (Reach of Law, C-P7).
 - More stable mana for tanks (Shield Specialization, C-P8).
 - Threat that increases with gear (Holy Shield, C-P9).
-- More saves for allies (Guardian's Favor, C-P10).
 - A Lay on Hands that does not drain all the mana, and a Hand of Sacrifice that costs less health (Devoted Sacrifice, C-P11).
 
 ## Protection layout
@@ -17,7 +16,7 @@ The Protection proposals give:
 | Row (points necessary) | Talents | Points in the row |
 | --- | --- | --- |
 | 1 (0) | Benediction (M-P1), Redoubt (C-P1) | 10 |
-| 2 (5) | Precision, Guardian's Favor (C-P10), Anticipation | 10 |
+| 2 (5) | Precision, Guardian's Favor, Anticipation | 10 |
 | 3 (10) | Shoulder the Burden (C-P5), Devoted Sacrifice (C-P11), Shield Specialization (C-P8), Sacred Duty | 8 |
 | 4 (15) | Swift Judgement, One-Handed Weapon Specialization, Improved Hammer of Justice | 7 |
 | 5 (20) | Reach of Law (C-P7), Templar's Bulwark, Reckoning (C-P6) | 8 |
@@ -166,15 +165,6 @@ Simulation: the boss swings each 2 sec. 60% block with Redoubt (C-P1), 10.7% dod
 - **No new button.** You already use Holy Shield on cooldown. Redoubt (C-P1) keeps about 3 blocks each 10 sec.
 - **PvP.** At about 108 block value, each block does about 108 more Holy damage. The maximum is 4 blocks each 10 sec, against melee attacks only. Only Protection has Holy Shield.
 
-## C-P10. Guardian's Favor: Hand of Sacrifice cooldown
-
-- **Proposed text.** "Reduces the cooldown of your Hand of Protection by 1/2 min and of your Hand of Sacrifice by 5/10 sec, and increases the duration of your Hand of Freedom by 3/6 sec." 2 ranks, the same as the beta, in row 2.
-- **Change.** The Hand of Sacrifice part is new. It comes from Hand of Sacrifice (C4).
-- **Theme.** It improves the saves that the Paladin casts on allies: Hand of Protection, Hand of Freedom and Hand of Sacrifice (C4).
-- **Row 2.** Holy takes it with Benediction 5: 7 Protection points (M-P1, design rule 2).
-- **Builds.** All Holy builds, two of the five Retribution builds (RB3, RB5) and two of the four Protection builds (PB3, PB4) take it (see Analysis, Builds).
-- **Design rule 1.** Hands (C5) are not buffs. Thus, Guardian's Favor (C-P10) does not break the rule.
-
 ## C-P11. Devoted Sacrifice (new talent): row 3, column 2
 
 - **Proposed text.** "Your Lay on Hands drains only 75/50% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 20/40%." 2 ranks.
@@ -186,7 +176,7 @@ Simulation: the boss swings each 2 sec. 60% block with Redoubt (C-P1), 10.7% dod
 - **Other saves.** At 0 mana, the Paladin cannot cast Divine Shield (110 mana), Hand of Protection (7% of base mana) or Hammer of Justice (100 mana). With Devoted Sacrifice (C-P11), these saves stay available.
 - **Hand of Sacrifice.** The pool does not change. The target is still protected from up to 825 damage (Hand of Sacrifice, C4). Only the damage that the Paladin takes decreases: about 660 at 1/2 and 495 at 2/2. A tank takes the damage of an ally in addition to the boss damage. Thus, without Devoted Sacrifice (C-P11), a tank uses Hand of Sacrifice only when its health is high.
 - **Why row 3.** Lay on Hands comes at level 10. Thus, the talent has a use when row 3 opens (level 20). The Hand of Sacrifice part has a use from level 46. Improved Reincarnation (Shaman, Restoration row 2) is the same: it gives +2% health from level 15, and Reincarnation comes at level 30.
-- **Why 20/40%.** At rank 1, the drain is 75%. Lay on Hands is then more efficient than the usual heals only below 21% mana. Thus, the Hand of Sacrifice part gives the value of rank 1. At 40%, the Paladin still takes more than half of the damage. With Guardian's Favor 2/2 (Hand of Sacrifice each 20 sec), 2/2 removes about 16 damage per sec from the raid.
+- **Why 20/40%.** At rank 1, the drain is 75%. Lay on Hands is then more efficient than the usual heals only below 21% mana. Thus, the Hand of Sacrifice part gives the value of rank 1. At 40%, the Paladin still takes more than half of the damage. With Hand of Sacrifice each 15 sec (C4), 2/2 removes about 22 damage per sec from the raid.
 - **Model.** Improved Health Funnel (Warlock) and Improved Mend Pet (Hunter) are 2-rank talents for save spells. Sacred Duty also gives two effects in one talent.
 - **Cost for Holy.** Holy takes it with Benediction 5, Guardian's Favor 2 and Redoubt 3: 12 Protection points.
 - **Builds.** HB1, HB2, HB3 and RB3 take it (see Analysis, Builds).
