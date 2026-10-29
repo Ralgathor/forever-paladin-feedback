@@ -1,6 +1,6 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 23 changes and 7 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 22 changes and 7 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
 
 **Contents**
 
@@ -31,7 +31,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 23 chan
 | C1 | Holy Strike | Baseline spell | Triggers only Seal of Light, Justice and Wisdom | Triggers your active Seal and Echo the same as a melee attack |
 | C2 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
 | C3 | Blessing of Light | Baseline spell, and Healing Light (C-H4) | +400 Holy Light, +115 Flash of Light. Uses a Blessing slot | Removed. Healing Light gives 10/20/30% |
-| C4 | Hand of Sacrifice | Baseline spell | Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown | Up to 825 damage moves to you. 30 sec cooldown, 20 sec with Guardian's Favor 2/2 |
+| C4 | Hand of Sacrifice | Baseline spell | Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown | Up to 825 damage moves to you. 15 sec cooldown |
 | C5 | Hands: Sacrifice, Protection and Freedom | Baseline spells | Blessings of Sacrifice, Protection and Freedom use a Blessing slot | The spells take the name Hand of. No Blessing slot. One Hand from each Paladin on a target |
 | C-H1 | Reverence | Holy, row 3 → row 2 | 10/20/30% of mana regeneration during casts | 17/33/50% |
 | C-H2 | Lingering Light (new) | Holy, row 3 | — | 2 ranks: a critical heal adds a heal over time of 10/20% of the heal |
@@ -46,7 +46,6 @@ This document gives talent proposals for the WoW Forever Paladin. It has 23 chan
 | C-P7 | Reach of Law (new) | Protection, row 5 | — | 2 ranks: Judgement range +5/10 yards while Seal of Fury is active |
 | C-P8 | Shield Specialization | Protection, row 3 | 33/66/100% chance to restore 4% of maximum mana, once each 3 sec | Each block restores 2/4/6% of maximum mana, once each 2 sec |
 | C-P9 | Holy Shield | Protection, row 7 | 221 Holy damage for each block (rank 3) | 221 Holy damage, increased by your block value (100%), for each block |
-| C-P10 | Guardian's Favor | Protection, row 2 | Blessing of Protection −1/2 min, Blessing of Freedom +3/6 sec | The same, and Hand of Sacrifice cooldown −5/10 sec (C4) |
 | C-P11 | Devoted Sacrifice (new) | Protection, row 3 | — | 2 ranks: Lay on Hands drains only 75/50% of your current mana, and you take 20/40% less damage from your Hand of Sacrifice. Alternative C-P11a: the spell drains 50% for all Paladins |
 | C-R1 | Conviction | Retribution, row 2 → row 1 (Conviction, M-R2) | +1–5% critical hit chance with melee attacks | +1–5% critical hit chance with attacks and spells |
 | C-R2 | Twist of Light | Retribution, row 7 | The Echo applies to the next melee attack only | The Echo applies to all melee attacks for 10 sec |

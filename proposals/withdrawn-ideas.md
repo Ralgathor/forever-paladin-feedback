@@ -79,4 +79,6 @@ The analysis examined these ideas and rejected them. They are not proposals.
 | Benediction with 3 ranks, 3/6/9% | Benediction (M-P1) moves to Protection row 1. There, Benediction 5 opens row 2 for Holy and Retribution. The 5 beta ranks stay |
 | Benediction in Retribution row 2 (second part of the Conviction move, M-R2) | Benediction (M-P1) moves to Protection row 1. Conviction (M-R2) now moves only this talent |
 | Unyielding Faith in Protection row 2 | Resistance to fear fits a defensive tree. But Precision, Guardian's Favor and Anticipation fill Protection row 2, with the Redoubt arrow in column 3. Unyielding Faith stays in Holy row 1 |
+| Guardian's Favor also reduces the Hand of Sacrifice cooldown by 5/10 sec | Withdrawn on 29 October 2026. A 15 sec cooldown for all Paladins (C4) is simpler. All specs have the same Hand of Sacrifice. Guardian's Favor keeps its beta effects |
+| Hand of Sacrifice with no cooldown (825 pool) | In Divine Shield, the Paladin casts a new pool each global cooldown: about 8 pools (6,600 damage) in 12 sec. In PvP, any spec then protects one ally from about 550 damage per sec. A 15 sec lockout on the target (as Weakened Soul) fixes this, but it adds a new rule. A cooldown is simpler |
 | Guardian's Favor in row 1 of a tree | Guardian's Favor stays in Protection row 2, as in the beta. No other class has a save talent in row 1 |

@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 23 changes and 7 moves for the Holy, Protection and Retribution trees. 5 changes are baseline spell changes (C1–C5). 18 changes are talent changes (C-H1–C-H4, C-P1–C-P11, C-R1–C-R3), and four of them are new talents. The moves are M-H1–M-H4, M-P1, M-R1 and M-R2.
+- **Proposals:** 22 changes and 7 moves for the Holy, Protection and Retribution trees. 5 changes are baseline spell changes (C1–C5). 17 changes are talent changes (C-H1–C-H4, C-P1–C-P9, C-P11, C-R1–C-R3), and four of them are new talents. The moves are M-H1–M-H4, M-P1, M-R1 and M-R2.
 - **Talent calculator:** you can try the proposals and compare them with the beta trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
 - **Builds:** the best builds for each spec and role (raid, dungeon, PvP), with calculator codes. Also the builds that use a different tree for a role.
@@ -25,7 +25,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C1 Holy Strike:** Holy Strike triggers your active Seal and Echo the same as a melee attack, for all specs (beta: only Seal of Light, Justice and Wisdom).
 - **C2 Judgement of the Crusader:** a personal debuff. It does not count against the one-Judgement limit. C2a and C2b are alternatives.
 - **C3 Blessing of Light:** removed. Healing Light (C-H4) gives 10/20/30%. Thus, Holy healing does not change with the number of Paladins in the raid. C3a and C3b are alternatives.
-- **C4 Hand of Sacrifice:** up to 825 damage moves to you (beta: 55 for each hit). 30 sec cooldown, 20 sec with Guardian's Favor (C-P10) 2/2.
+- **C4 Hand of Sacrifice:** up to 825 damage moves to you (beta: 55 for each hit). 15 sec cooldown.
 - **C5 Hands:** Blessing of Sacrifice, Protection and Freedom become Hand of Sacrifice, Protection and Freedom. They use no Blessing slot. Each Paladin can have one Hand on a target.
 
 **Holy**
@@ -50,8 +50,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C-P7 Reach of Law (new, row 5):** Judgement range +5/10 yards while Seal of Fury is active.
 - **C-P8 Shield Specialization:** mana return once each 2 sec (beta: 3 sec).
 - **C-P9 Holy Shield:** each block also does 100% of your block value as Holy damage, as Shield Slam does. Paladin threat then increases with gear, as Warrior and Druid threat does.
-- **C-P10 Guardian's Favor:** it also reduces the cooldown of Hand of Sacrifice (C4) by 5/10 sec. The talent keeps its Hand of Protection and Hand of Freedom effects.
-- **C-P11 Devoted Sacrifice (new, row 3):** Lay on Hands drains only 75/50% of your current mana (beta: all of it). You also take 10/20% less damage from your Hand of Sacrifice. Alternative C-P11a (Devoted Sacrifice): the spell drains 50% for all Paladins.
+- **C-P11 Devoted Sacrifice (new, row 3):** Lay on Hands drains only 75/50% of your current mana (beta: all of it). You also take 20/40% less damage from your Hand of Sacrifice. Alternative C-P11a (Devoted Sacrifice): the spell drains 50% for all Paladins.
 - **M-P1 Benediction:** Retribution row 1 → Protection row 1, with its 5 beta ranks (2–10%). It takes the place of Toughness (Toughness and Divine Strength removal, C-P3).
 
 **Retribution**
