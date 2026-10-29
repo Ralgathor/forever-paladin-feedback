@@ -73,7 +73,7 @@ def ll_end_pool(heal, c, ling, samples=4000, seed=1):
 # tank: not used (the Paladin has the same spells for raid and one tank)
 def paladin(hp=HPG, tank=False, rev=0.30, illum=0.50, light=1.12, bol=True, ling=0.0, conv=0.0,
             bened=0.10, inf_all=False, hs_heal_mult=1.0, hs_cost_mult=1.0,
-            lv=True, lv_cost_mult=1.0, lv_heal_mult=1.0, lv_coef=0.15, lv_per_crit=False):
+            lv=True, lv_cost_mult=1.0, lv_heal_mult=1.0, lv_coef=0.15, lv_per_crit=False, df_cd=120):
     c = CRIT_BASE + PAL_CRIT + 0.05 + conv            # Holy Power +5% (all spells)
     c_hs = CRIT_BASE + PAL_CRIT + 0.15 + conv         # Holy Power +15% for Holy Shock
     def heal(base, coef, blessing):        # Healing Light multiplies the full heal (beta test)
@@ -92,11 +92,12 @@ def paladin(hp=HPG, tank=False, rev=0.30, illum=0.50, light=1.12, bol=True, ling
     hs_cost = 325*(1-bened)*hs_cost_mult - illum*325*c_hs
     p_inf = 1.0 if inf_all else c          # chance that a Flash of Light triggers Infusion of Light
     sp = []
-    # Divine Favor: the next Holy Light is a critical heal. 2 min cooldown, 4% of base mana
+    # Divine Favor: the next Holy Light is a critical heal. 2 min cooldown, 4% of base mana.
+    # Divine Grace (C-H6) 2/2: 1 min cooldown (df_cd=60).
     t_df = 1.5 if inf_all else 2.5
     df_r = hl*1.5 + ling*hl*1.5*kt
     sp.append(Spell("Divine Favor + Holy Light", df_r, hl*1.5*0.8 + ling*hl*1.5*kt*0.5,
-                    660 - illum*660 + 0.04*1512, t_df, maxn=cd_limit(120, t_df)))
+                    660 - illum*660 + 0.04*1512, t_df, maxn=cd_limit(df_cd, t_df)))
     sp.append(Spell("Holy Shock", hs_r, hs_e, hs_cost, 1.5, maxn=cd_limit(10, 1.5)))
     if lv:
         # Light's Vigil rank 3: 1,340 mana, 1.5 sec cast, 6 sec cooldown. The next Holy Shock on the

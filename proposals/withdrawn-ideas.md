@@ -82,3 +82,17 @@ The analysis examined these ideas and rejected them. They are not proposals.
 | Guardian's Favor also reduces the Hand of Sacrifice cooldown by 5/10 sec | Withdrawn on 29 October 2026. A 15 sec cooldown for all Paladins (C4) is simpler. All specs have the same Hand of Sacrifice. Guardian's Favor keeps its beta effects |
 | Hand of Sacrifice with no cooldown (825 pool) | In Divine Shield, the Paladin casts a new pool each global cooldown: about 8 pools (6,600 damage) in 12 sec. In PvP, any spec then protects one ally from about 550 damage per sec. A 15 sec lockout on the target (as Weakened Soul) fixes this, but it adds a new rule. A cooldown is simpler |
 | Guardian's Favor in row 1 of a tree | Guardian's Favor stays in Protection row 2, as in the beta. No other class has a save talent in row 1 |
+| Merciful Light on all targets: Holy Shock heals 25/50% more (first version of Merciful Light, C-H5) | Withdrawn on 29 October 2026. The 35% health limit gives a larger bonus (50/100%) when the tank needs it, with no change to raid healing |
+| Devout Light: Flash of Light and Holy Light cost 1–5% less (as Tidal Focus, Shaman) | Divine Grace (C-H6) helps one tank more than the raid. Devout Light gives +5% to +9% on one tank, but also more raid healing |
+| Divine Favor also makes the spell cost no mana (as Inner Focus, Priest) | Divine Grace (C-H6) gives the same one-tank result with a new talent. The free Divine Favor changes the spell for all specs |
+| Holy Reach: +20% range for heals and Light's Vigil | No change to the healing. Utility only |
+| Hallowed Wrath: Holy Shock, Exorcism and Holy Wrath +10/20% against Undead and Demons | Damage for Shockadin and leveling only. No healer value |
+| Purifying Light: Cleanse also heals for 5/10% of maximum health | No model value. In PvP, Cleanse becomes a fast heal |
+| Sanctity Aura (Classic): +10% Holy damage for the party | 69% of Retribution damage is Holy: +6.9% for the Paladin. Retribution goes to 110% of the pure average at fresh level 60 (W15) |
+| Bane of the Dead: +1/2/3% damage against Undead and Demons (as Monster Slaying, Hunter) | Withdrawn on 29 October 2026. With Burning Zeal (C-R4), Retribution is near 100% of the pure average in Naxxramas. Keep it as an option if tests show Retribution too weak in late raids |
+| Holy Strike cooldown −1/2 sec | +1.4% and +3.2% damage at all gear levels. It adds damage at fresh level 60, where Retribution is already 103% of the pure average |
+| Judgement of Command: the stunned damage (×2) on targets that cannot be stunned | The bonus is a fixed value: +8.2% at fresh level 60, +5.5% in Naxxramas. At 25/50%, +4.1%. The value decreases with gear, against W15 |
+| Judgement of Command: the stunned damage on targets below 20% health | +1.6% damage, but a burst on each player below 20% health in PvP |
+| Holy Strike +10/20/30% damage after you dodge or parry (first version of Measure for Measure, C-R5) | No raid value: in raids, Retribution attacks from behind |
+| Your dodges, parries, or the dodges and parries of the target reset Holy Strike (10/20/30% chance) | A chance to trigger only. The Judgement version (Measure for Measure, C-R5) also gives mana |
+| Measure for Measure resets the Judgement cooldown (33/66/100% chance) | About +10% Judgements from behind and +34% from the front. The reduction of 1/2/3 sec is smaller (+7% and +23%) |

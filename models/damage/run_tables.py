@@ -196,3 +196,18 @@ if __name__ == "__main__":
     print(f"Retribution tank (front, dungeon buffs): {a:.0f} TPS ({pct(a, PB2_TPS)} of PB2), with Consecration "
           f"{c:.0f} ({pct(c, PB2_CONS)} of PB2 with Consecration). From behind with raid buffs: "
           f"{pct(ret_tank(False, False), PB2_TPS)}")
+
+    print("\n## Part 11: new talents, Burning Zeal (C-R4) and Measure for Measure (C-R5)")
+    shape75 = lambda t: (PURE["Warrior"] * F[t] + PURE["Rogue"] * C[t] + casters * (1 + 0.75 * shape[t])) / 5
+    RB6 = dict(M.RB1, bz=3, mfm=3, di=1)                                    # 4/8/39: Holy dip Divine Intellect 1, Improved Seals 3
+    for name, tal, kw in (("Burning Zeal 3/3", dict(M.RB2, bz=3), {}), ("Measure for Measure 3/3", dict(M.RB2, mfm=3), {}),
+                          ("Measure for Measure 3/3, from the front", dict(M.RB2, mfm=3), dict(front=True)),
+                          ("Both (RB2 + 6 points)", dict(M.RB2, bz=3, mfm=3), {}), ("RB6, 4/8/39", RB6, {})):
+        base = (lambda h, kw=kw: retribution(h, **kw))
+        new = (lambda h, tal=tal, kw=kw: retribution(h, tal=tal, **kw))
+        inc = [new(gear(t)) / base(gear(t)) - 1 for t in range(5)]
+        row = " | ".join(f"{v:+.1%}" for v in inc)
+        rr = growth(new)
+        pure_row = " | ".join(pct(r * new(g) / P * rr[t], shape75(t)) for t in range(5))
+        print(f"{name}: {row}." + ("" if kw else f" Against the pure average (x1.75): {pure_row}"))
+    print("Now (RB2) against the pure average (x1.75): " + " | ".join(pct(r * R[t], shape75(t)) for t in range(5)))

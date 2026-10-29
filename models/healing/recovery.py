@@ -116,11 +116,11 @@ def best(case, W, long_cd=True):
     return v, names
 
 # ---------------------------------------------------------------- classes (715 healing power)
-def paladin_burst(hp=HPG, light=1.12, bol=True, ling=0.0, conv=0.0, inf_all=False):
+def paladin_burst(hp=HPG, light=1.12, bol=True, ling=0.0, conv=0.0, inf_all=False, ml=1.0):
     c = CRIT_BASE + PAL_CRIT + 0.05 + conv; c_hs = CRIT_BASE + PAL_CRIT + 0.15 + conv
     fol = (308 + (115 if bol else 0) + 1.5/3.5*hp) * light
     hl = (1580 + (400 if bol else 0) + 2.5/3.5*hp) * light
-    hs = (320 + 1.5/3.5*hp) * light
+    hs = (320 + 1.5/3.5*hp) * light * ml      # Merciful Light (C-H5) 2/2: x2 on a target at or below 35% health
     kt = (1 + 0.5*c) if H.HOT_CRIT else 1.0                 # Lingering Light ticks can be critical heals
     L = lambda h: ling*h*1.5                                 # Lingering Light added by one critical heal
     sp = [B("Flash of Light", 1.5, fol*(1+0.5*c), tags=("trigger",), ll=L(fol), cc=c),
@@ -179,11 +179,13 @@ def shaman_burst(hp=HPG):
     return sp, None, pre, None
 
 PROP_B = dict(light=1.30, bol=False, ling=0.2, conv=0.05, inf_all=True)
+PROP_ML = dict(PROP_B, ml=2.0)   # Merciful Light (C-H5) 2/2, the tank at or below 35% health after the hit
 
 def table(hp=HPG):
     rows = []
     cases = [("Priest", priest_burst(hp)), ("Druid", druid_burst(hp)), ("Shaman", shaman_burst(hp)),
-             ("Paladin, beta", paladin_burst(hp)), ("Paladin, proposed", paladin_burst(hp, **PROP_B))]
+             ("Paladin, beta", paladin_burst(hp)), ("Paladin, proposed", paladin_burst(hp, **PROP_B)),
+             ("Paladin, proposed, Merciful Light (tank at or below 35%)", paladin_burst(hp, **PROP_ML))]
     for name, case in cases:
         r = [name]
         for long_cd in (True, False):

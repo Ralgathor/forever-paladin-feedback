@@ -10,6 +10,7 @@ The script models/damage/run_tables.py calculates all values of this section. Fu
 - The hybrid target is 95% of the pure damage classes. Players report it from developer comments: hybrids do about 5% less damage than pure damage classes. In the beta, Retribution is 93%.
 - Holy Strike Seal trigger (C1) gives almost all of the increase. Twist of Light (C-R2) gives the same damage as the beta Seal swap, but the mana lasts for the full fight.
 - Retribution increases less with gear than Fury. In Naxxramas, it is about 92% of Fury (93% with flatter gear). No talent change closes this gap (part 6).
+- Burning Zeal (C-R4) gives more damage in late raids: +1.2% at fresh level 60, +2.0% in Naxxramas. Measure for Measure (C-R5) gives about +1% at all gear levels. RB6 (4/8/39) with both is 105% of the pure average at fresh level 60 and 98% in Naxxramas (part 11).
 - Fury increases more with gear than the other classes. Against the pure average, Retribution goes from 103% at fresh level 60 to about 95% in Naxxramas. The hybrid target is 95%.
 - Judgement of the Crusader gives Retribution about +10% DPS at fresh level 60. Personal Judgement of the Crusader (C2) makes this possible for each Paladin.
 
@@ -278,3 +279,34 @@ Conditions: wowsims Forever commit 69e0e5b with the proposals patch (models/wows
 - Sacred Arbiter at +10% removes 0.9% of the raid damage. An Echo of 6 sec removes 0.6%.
 
 The scripts are run_damage.py and check.py in models/wowsims. See its README for the setup and the proposal flags.
+
+## 11. New talents: Burning Zeal (C-R4) and Measure for Measure (C-R5)
+
+The script models/damage/run_tables.py (part 11) calculates these values. RB2 with each talent at 3/3, 2 min fight.
+
+- **Burning Zeal (C-R4).** The critical damage bonus of Seals, Judgements and Holy Strike is ×1.3 (critical hits do ×2.3 damage, not ×2). Hammer of Wrath and auto attacks do not change.
+- **Measure for Measure (C-R5).** Each dodge or parry of the target decreases the Judgement cooldown by 3 sec. Auto attacks and Holy Strike count. The model uses the average cooldown: 8 sec / (1 + 3 × dodges and parries each sec). From behind, the boss dodges 6.5% and does not parry. From the front, it also parries 14%.
+
+| Talents | Fresh level 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
+| --- | --- | --- | --- | --- | --- |
+| Burning Zeal 3/3 | +1.2% | +1.4% | +1.6% | +1.8% | +2.0% |
+| Measure for Measure 3/3, from behind | +1.1% | +1.1% | +1.1% | +1.0% | +1.0% |
+| Measure for Measure 3/3, from the front | +4.1% | +4.1% | +4.0% | +3.9% | +3.8% |
+| Both, from behind | +2.3% | +2.5% | +2.6% | +2.8% | +3.1% |
+| RB6 (4/8/39), from behind | +2.2% | +2.4% | +2.5% | +2.8% | +3.0% |
+
+**Against the pure average** (Hunter, Mage and Warlock ×1.75, as part 6):
+
+| Build | Fresh level 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
+| --- | --- | --- | --- | --- | --- |
+| RB2 (calculator version 5) | 103% | 101% | 98% | 96% | 95% |
+| RB2 with Burning Zeal 3/3 | 104% | 102% | 100% | 98% | 97% |
+| RB2 with Measure for Measure 3/3 | 104% | 102% | 99% | 97% | 96% |
+| RB6 (4/8/39) | 105% | 103% | 101% | 99% | 98% |
+
+- **RB6.** RB1 with Burning Zeal 3/3 and Measure for Measure 3/3. The 6 points come from the Holy dip: Improved Seals 3 stays, with Divine Intellect 1. Reverence, Infusion of Light and Unyielding Faith go. RB6 is a little below "Both" at fresh level 60: Divine Intellect 2 (RB2) gives Champion of the Light more Intellect.
+- **Mana of RB6.** Without Reverence, the income is about 10 mana per sec less (see Mana). Each extra Judgement gives about +44 mana with Sanctified Judgement 3/3 (return 126, cost 82). From behind, this is about +0.4 mana per sec.
+- **Burning Zeal increases with gear.** The critical hit chance of Retribution increases from 11.6% to 16.9%. Thus, Burning Zeal closes a part of the gap with Fury (part 6).
+- **Measure for Measure from the front.** Tank hybrids and PvP fights from the front receive about +23% Judgements (W23).
+- **Balance.** RB6 is 105% of the pure average at fresh level 60. If this is too strong at the raid release, decrease Sacred Arbiter first (W15).
+
