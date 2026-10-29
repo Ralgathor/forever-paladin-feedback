@@ -10,6 +10,7 @@ This file gives the best tank build for the beta trees and for the proposed tree
 | Beta | BT4b | `50003-5230513021301351-50201` | 884 | 506 | 212 | 26.0 | about 6% |
 
 - Values: raid with consumables, path gear with reputation items (part 3), 3 min fight, level 63 boss, 3,000 iterations.
+- The search used Holy Shield (C-P9) at 200% of block value and the wowsims shield values. With 100% and the Wowhead Forever shield values, PT3 has 1,151 TPS and 23.0 TMI (Analysis, Threat, part 7).
 - The proposed tank has 40% more threat than the beta tank, with lower TMI. Redoubt (C-P1) and Holy Shield (C-P9) push crushing blows off the combat table.
 - The beta tank keeps 6–11% crushing blows with all gear sets of this file. No beta build in the search removes them.
 
@@ -189,7 +190,7 @@ Seconds out of mana: proposed 0 / 0 / 140, beta 0 / 65 / 155 (raid / no consumab
 
 ### What the weights show
 
-- **Proposed: block value is the best stat.** Holy Shield (C-P9) adds 200% of block value to each hit. Block rating has no value, because Holy Shield and Redoubt (C-P1) already fill the combat table.
+- **Proposed: block value is the best stat.** Holy Shield (C-P9) adds block value to each hit. The search used 200%. At 100%, each point of block value has half the threat value. Block rating has no value, because Holy Shield and Redoubt (C-P1) already fill the combat table.
 - **Proposed: Defense, dodge and parry lower the threat.** They take the place of blocks. Each block gives Holy Shield damage, Reckoning charges and mana. Defense still has the best TMI value.
 - **Beta: Defense is the best stat.** Each point removes crushing blows. Block rating is second. Block value gives no threat in the beta.
 - **Both trees: expertise and hit are the best threat stats after block value.** 1 spell damage gives the threat of 1.8 Strength (proposed) or 2.1 Strength (beta).

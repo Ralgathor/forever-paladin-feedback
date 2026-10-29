@@ -1,7 +1,7 @@
 """All threat values of the document: Analysis, Threat (proposals/analysis/threat.md), Analysis, Builds (parts 3,
 5 and 6), Protection (C-P2, C-P6, C-P9), Judgements and Blessings (C2), Retribution (C1) and Withdrawn ideas.
 Run: python3 run_tables.py. Part 8 (several targets): multi_target.py"""
-from threat_model import (DRU_WOWSIMS, PART1, TIERS, BUILDS, TANK_REF, PB1, PB2, HOLY_SHOCK_TANK, HEALING_TANK, flatter, paladin,
+from threat_model import (DRU_WOWSIMS, PART1, TIERS, BUILDS, TANK_REF, PB1, PB2, PT3, BT4b, PATH_PROP, PATH_BETA, HOLY_SHOCK_TANK, HEALING_TANK, flatter, paladin,
                           warrior, druid, armor_dr, table, OHWS)
 
 def beta(g, **kw):
@@ -17,7 +17,7 @@ def diff(f, base, **kw):
 if __name__ == "__main__":
     g = PART1
     P = paladin(g)
-    print("## Threat, part 1: pre-raid gear, 200 spell power, 60 block value (8/35/8 tank talents)")
+    print("## Threat, part 1: pre-raid gear, 200 spell power, 108 block value (8/35/8 tank talents)")
     print("Boss hit | Warrior | Druid | Paladin, beta | Paladin, all proposals | + Consecration")
     for H in (3000, 4500, 6000):
         h = g.but(boss_hit=H)
@@ -48,16 +48,27 @@ if __name__ == "__main__":
     print("Spell power: " + ", ".join(f"{sp} {x:.0f}" for sp, x in zip(sps, v))
           + f". Each +100: {(v[-1] - v[0]) / 2.5:+.0f}")
 
-    print("\n## Threat, part 2: gear tiers. Paladin columns: % of the Druid")
+    print("\n## Threat, part 2: gear tiers. Paladin columns: % of the Druid, % of the Warrior")
     print("Tier | Warrior | Druid | Paladin, beta | Without C-P9 | All proposals | + Consecration")
     for t in TIERS:
         w, d = warrior(t), druid(t)
         cols = (beta(t), paladin(t, c14=0), paladin(t))
-        print(f"{t.name} | {w:.0f} | {d:.0f} | " + " | ".join(f"{x:.0f} ({pct(x, d)})" for x in cols)
+        print(f"{t.name} | {w:.0f} | {d:.0f} | " + " | ".join(f"{x:.0f} ({pct(x, d)}, {pct(x, w)})" for x in cols)
               + f" | {paladin(t, consecration=True):.0f}")
     print("Druid with the wowsims multipliers (Paladin, all proposals, % of it): " + ", ".join(
         f"{druid(t, mults=DRU_WOWSIMS):.0f} ({pct(paladin(t), druid(t, mults=DRU_WOWSIMS))})" for t in TIERS))
     print("Judgement of the Crusader, beta: " + ", ".join(f"{beta(t) - beta(t, crusader=False):+.0f}" for t in TIERS))
+
+    print("\n## Threat, part 2: pre-raid path gear of builds/protection.md (PT3 and BT4b talents)")
+    print("Gear | Warrior | Druid | Druid, wowsims multipliers | Beta BT4b | PT3 without C-P9 | PT3 | PT3, C-P9 200% | PT3, C-P9 150%")
+    for t in (TIERS[1], PATH_PROP, PATH_BETA):
+        w, d = warrior(t), druid(t)
+        cols = (paladin(t, BT4b, proposed=False, c14=0), paladin(t, PT3, c14=0), paladin(t, PT3),
+                paladin(t, PT3, c14=2), paladin(t, PT3, c14=1.5))
+        print(f"{t.name} | {w:.0f} | {d:.0f} | {druid(t, mults=DRU_WOWSIMS):.0f} | "
+              + " | ".join(f"{x:.0f} ({pct(x, d)}, {pct(x, w)})" for x in cols))
+    _, src = paladin(PATH_PROP, PT3, detail=True)
+    print("PT3 sources, proposed path gear: " + ", ".join(f"{k} {v:.0f}" for k, v in src.items()))
 
     print("\n## Threat, part 3: % of the Druid (% of the Warrior)")
     cases = (("Gear as in part 2", TIERS), ("Flatter gear, boss hits as in part 2", flatter(False)),
@@ -66,7 +77,7 @@ if __name__ == "__main__":
         n = tiers[-1]
         print(name + ": " + ", ".join(f"{pct(paladin(t), druid(t))} ({pct(paladin(t), warrior(t))})" for t in tiers)
               + f". Naxxramas without C-P9 {pct(paladin(n, c14=0), druid(n))}"
-              + f", C-P9 at 100% {pct(paladin(n, c14=1), druid(n))}, 150% {pct(paladin(n, c14=1.5), druid(n))}"
+              + f", C-P9 at 200% {pct(paladin(n, c14=2), druid(n))}, 150% {pct(paladin(n, c14=1.5), druid(n))}"
               + f", 300% {pct(paladin(n, c14=3), druid(n))} ({pct(paladin(n, c14=3), warrior(n))} of the Warrior)")
     print("C-P9 at 300%, % of the Warrior: " + ", ".join(pct(paladin(t, c14=3), warrior(t)) for t in TIERS))
 

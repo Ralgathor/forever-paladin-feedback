@@ -23,7 +23,7 @@ These are risks to check in tests. None of them needs a change now.
 | W8 | Reach of Law (C-P7): a 20-point Protection dip with Swift Judgement gives a 20 yard Judgement | Monitor: the range works only with Seal of Fury |
 | W9 | Templar's Bulwark (an absorb of 100% of health, three times Last Stand) is a strong PvP dip | Monitor |
 | W10 | Shield Specialization (C-P8): from Molten Core, PB1 uses Consecration on cooldown with no mana loss (+2 to +21 mana per sec). Against groups that hit fast, it gives up to 87–147 mana per sec. More Consecration gives more threat | Monitor Protection threat in raids. If it is too strong, use a 3 sec limit (about the mana of the 4% version) |
-| W11 | Protection threat in late raids depends on Holy Shield (C-P9) and on the block value of Forever gear (see Threat, part 2) | Change the 200% of Holy Shield (C-P9). Then Iron Creed +100% Holy Strike threat. A shield attack only as the last step |
+| W11 | Protection threat in late raids depends on Holy Shield (C-P9) and on the block value of Forever gear (see Threat, part 2) | Change the 100% of Holy Shield (C-P9). Then Iron Creed +100% Holy Strike threat. A shield attack only as the last step |
 | W12 | Infusion of Light (C-H3): a 7-point Holy dip gives a 1.5 sec Holy Light after each Holy Strike in PvP | Holy Strike gives only −0.25/0.5 sec. Or only Holy Strike critical hits trigger it, as the beta triggers need critical hits |
 | W13 | Light's Vigil: the Illumination text names it. Illumination can return mana for each critical heal of Light's Vigil (up to 5 for each cast). Then the Paladin is 13–19% above the Shaman in raids (see Analysis, Healing, part 6) | Keep Illumination at 50% |
 | W14 | The design goal of Holy is the best single-target healer. With the proposals, the Paladin is first on one tank: 1–9% above the Druid, and 14–26% above the Shaman and the Priest (see Analysis, Healing, part 5) | Compare the healing on one tank in beta tests. A lead of more than 20% is too strong |
@@ -50,7 +50,7 @@ These are risks to check in tests. None of them needs a change now.
 - [ ] Primal Bite: the tooltip gives "a high amount of threat", with no number. The model uses ×3. The wowsims Forever data gives threat for the damage only. What is the multiplier? (Druid testers)
 - [ ] Judgement of Fury: the game files give a third effect of 1,691 + 18% of spell power. Is this bonus threat, the taunt or a server value? If it is bonus threat, it adds about 200 TPS to the Paladin. The model does not use it.
 - [ ] Champion of the Light: the patch note of 16 October gives 10/20/30% of Intellect. The client data of 18 October gives 20/40/60%. What is the live value?
-- [ ] How much block value do Forever shields and tank gear give at each tier? The 200% of Holy Shield (C-P9) uses Classic values.
+- [ ] How much block value do Forever shields and tank gear give at each tier? Pre-raid gear gives 108 (Wowhead Forever values). The raid values of the model (140, 180 and 230) are estimates. Forever has no raid shields yet.
 - [ ] What is the healing power coefficient of the Light's Vigil party heal? Do Purification and Healing Way (Shaman) add or multiply?
 - [ ] Holy Strike Seal trigger (C1): what sets the Seal of Command chance? Is it the weapon speed (3.6 sec) or the normalized speed (3.3 sec)?
 - [ ] Does MythicSim include Judgement of the Crusader in its raid debuffs? It changes the Retribution comparison by about 10% (see Analysis, Damage, part 7).

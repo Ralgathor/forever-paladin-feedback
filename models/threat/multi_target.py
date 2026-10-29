@@ -26,7 +26,7 @@ def tier(g, n):
 def pal(g, n, tal=PB1, proposed=True, cons=True):
     """Returns (threat per sec on all targets, threat per sec on one extra target)."""
     gg = g.but(armor=TRASH_ARMOR)
-    c14 = 2.0 if proposed else 0.0
+    c14 = 1.0 if proposed else 0.0
     tot, src = paladin(gg, tal, proposed=proposed, c14=c14, consecration=cons, detail=True)
     if n == 1:
         return tot, 0.0
