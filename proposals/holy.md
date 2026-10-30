@@ -9,7 +9,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 | 1 (0) | Improved Seals (M-H1), Unyielding Faith (M-H2), Divine Intellect | 10 |
 | 2 (5) | Infusion of Light (C-H3), Reverence (C-H1), Spiritual Focus | 7 |
 | 3 (10) | Voice of Truth, Purifying Power, Lingering Light (C-H2) | 5 |
-| 4 (15) | Illumination, Divine Favor, Divine Grace (C-H6) | 8 |
+| 4 (15) | Divine Grace (C-H6), Illumination, Divine Favor | 8 |
 | 5 (20) | Divine Precision (M-H5), Holy Shock, Merciful Light (C-H5), Holy Power (M-H3) | 11 |
 | 6 (25) | Consecrated Ground (M-H4), Healing Light (C-H4) | 5 |
 | 7 (30) | Light's Vigil | 1 |
@@ -17,7 +17,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - Holy has 47 points (beta: 46).
 - You can use each talent when its row opens.
 - Illumination still requires Reverence (straight arrow in column 2).
-- Divine Grace (C-H6) requires Divine Favor, and Merciful Light (C-H5) requires Holy Shock (arrows in the same row). A talent that changes only an ability of another talent requires that talent.
+- Merciful Light (C-H5) requires Holy Shock (arrow in the same row). Divine Grace (C-H6) has no requirement, because Lay on Hands also triggers it. A talent that changes only an ability of another talent requires that talent.
 - Row 5: Divine Precision (column 1) and Merciful Light (column 3) are on the two sides of Holy Shock (column 2). Merciful Light requires Holy Shock. Divine Precision is in its beta place, with no requirement (M-H5). Holy Power goes to column 4.
 - Toughness and Divine Strength removal (C-P3) deletes Divine Strength. Unyielding Faith (M-H2) goes to row 1.
 - A Holy healer needs no filler. Rows 1–3 hold 16 healer points (row 4 needs 15). Rows 1–5 hold 32 (row 6 needs 25). Holy healing is complete at 36 points. See Analysis, Tree balance.
@@ -117,20 +117,21 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Who takes it.** Row 5 needs 20 Holy points. Holy healers take it. Shock-Retribution can also take it.
 - **Risk.** In PvP, a Holy healer heals an ally at or below 35% health for about 1,630 each 10 sec, with no cast time. Shock-Retribution heals for about 640–860 (see Watch list, W21).
 
-## C-H6. Divine Grace (new talent): row 4, column 4, 2 ranks
+## C-H6. Divine Grace (new talent): row 4, column 1, 2 ranks
 
-- **Proposed text.** "Increases your target's armor from items by 15/30% for 15 sec after a Divine Favor critical effect from your Flash of Light, Holy Light or Holy Shock."
-- **Requires Divine Favor** (arrow in row 4). The talent changes only Divine Favor. Divine Favor affects Flash of Light, Holy Light and Holy Shock. Each of these heals gives the buff.
+- **Proposed text.** "Increases your target's armor from items by 15/30% for 15 sec after your Lay on Hands, or after a Divine Favor critical effect from your Flash of Light, Holy Light or Holy Shock."
+- **No requirement.** Two spells give the buff: Lay on Hands and Divine Favor. Thus, the talent does not change only Divine Favor, and it has no arrow. Divine Favor affects Flash of Light, Holy Light and Holy Shock. Each of these heals gives the buff.
 - **Problem.** After a large hit, the tank is in danger for some seconds. The Paladin heals the health back, but it cannot help the tank to take less damage.
-- **Model.** Improved Lay on Hands (Paladin, Classic) gave the target 15/30% armor from items. Forever removed that talent. Inspiration (Priest) and Ancestral Healing (Shaman) also give armor to the target of a critical heal. Divine Favor always gives a critical heal.
-- **Value.** The tank gear of wowsims has 5,500 to 6,400 armor from items. Against a level 63 boss, the tank takes 10–11% less physical damage while the buff is active (rank 1: 6%). With Divine Favor each 2 min, this is 1.4% less physical damage for the full fight (see Analysis, Healing, part 5).
+- **Model.** Improved Lay on Hands (Paladin, Classic) gave the target 15/30% armor from items after Lay on Hands. Forever removed that talent. Divine Grace brings back this effect. Inspiration (Priest) and Ancestral Healing (Shaman) also give armor to the target of a critical heal. Divine Favor always gives a critical heal.
+- **Value.** The tank gear of wowsims has 5,500 to 6,400 armor from items. Against a level 63 boss, the tank takes 10–11% less physical damage while the buff is active (rank 1: 6%). With Divine Favor each 2 min, this is 1.4% less physical damage for the full fight (see Analysis, Healing, part 5). Lay on Hands has a 20 min cooldown. With one Lay on Hands on the tank in a 3 min boss fight, the value is 2.3%.
 
 | Divine Grace | While the buff is active | Full fight |
 | --- | --- | --- |
-| 1/2 (15%) | −6% physical damage | −0.7% |
-| 2/2 (30%) | −10% to −11% physical damage | −1.4% |
+| 1/2 (15%) | −6% physical damage | −0.7% (−1.2% with one Lay on Hands in 3 min) |
+| 2/2 (30%) | −10% to −11% physical damage | −1.4% (−2.3% with one Lay on Hands in 3 min) |
 
 - **Duration.** The Classic buff lasted 2 min. With Divine Favor each 2 min, the buff is then always active on the main tank: −11% physical damage for the full fight. This is too strong. With 15 sec, the buff helps after a large hit, as Inspiration does.
+- **Who takes it.** Holy healers. Retribution and Protection can take it with 15 Holy points. Without Divine Favor, only Lay on Hands gives the buff, one time each 20 min.
 - **Healing.** The talent does not change the healing per sec. The healing model gives the same values as without the talent.
 - **Stacks.** Inspiration and Ancestral Fortitude do not stack in Classic. The buff of Improved Lay on Hands was a different effect. A beta test must find whether Divine Grace stacks with them (see Open items).
 
