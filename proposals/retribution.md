@@ -10,11 +10,11 @@ These proposals connect the melee attacks of Retribution to its Holy spells. The
 | 2 (5) | Improved Judgement, Holy Conduit, Vindication (C-P3) | 9 |
 | 3 (10) | Pursuit of Justice, Sanctified Judgement (C-R3), Seal of Command | 6 |
 | 4 (15) | Eye for an Eye, Sacred Arbiter, Two-Handed Weapon Specialization (M-R1) | 6 |
-| 5 (20) | Burning Zeal (C-R4), Vengeance, Repentance, Measure for Measure (C-R5) | 10 |
+| 5 (20) | Burning Zeal (C-R4), Vengeance, Repentance, Measure for Measure (C-R5) | 9 |
 | 6 (25) | Champion of the Light, Instrument of Law | 5 |
 | 7 (30) | Twist of Light (C-R2) | 1 |
 
-Retribution has 47 points (beta: 44). Benediction (M-P1) moves to Protection row 1. Vindication goes to row 2, column 3, with 5 ranks (see Protection, C-P3).
+Retribution has 46 points (beta: 44). Benediction (M-P1) moves to Protection row 1. Vindication goes to row 2, column 3, with 5 ranks (see Protection, C-P3).
 
 ## C1. Holy Strike triggers your Seal and Echo (spell change)
 
@@ -81,21 +81,21 @@ Retribution has 47 points (beta: 44). Benediction (M-P1) moves to Protection row
 - **Retribution.** Retribution has the critical hit at a lower level.
 - **Risk.** All specs can take +5% critical hit for 5 points. The other classes have the same.
 
-## C-R4. Burning Zeal (new talent): row 5, column 1, 3 ranks
+## C-R4. Burning Zeal (new talent): row 5, column 1, 2 ranks
 
-- **Proposed text.** "Increases the critical strike damage bonus of your Seals, Judgements and Holy Strike by 10/20/30%."
-- **Model.** Impale (Warrior) and Ruin (Warlock) increase the critical damage bonus. Both are Classic talents.
+- **Proposed text.** "Increases the critical strike damage bonus of your Seals, Judgements and Holy Strike by 10/20%."
+- **Model.** Impale (Warrior) and Ruin (Warlock) increase the critical damage bonus. Both are Classic talents. Burning Zeal has the ranks and values of Impale (10/20%).
 - **Problem.** Retribution damage increases less with gear than Fury damage (×1.58 against ×1.73 from fresh level 60 to Naxxramas). Fixed base values cause this (see Analysis, Damage, part 6). Row 5 also had only 4 points.
 - **Why critical damage.** The critical hit chance of Retribution increases with gear: 11.6% at fresh level 60, 16.9% in Naxxramas. Thus, the talent gives more in late raids.
-- **Value (RB2 with Burning Zeal 3/3, see Analysis, Damage, part 11).**
+- **Value (RB2 with Burning Zeal 2/2, see Analysis, Damage, part 11).**
 
 | Gear | Fresh level 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
 | --- | --- | --- | --- | --- | --- |
-| Damage | +1.2% | +1.4% | +1.6% | +1.8% | +2.0% |
-| Against the pure average | 104% | 102% | 100% | 98% | 97% |
+| Damage | +0.8% | +0.9% | +1.0% | +1.2% | +1.3% |
+| Against the pure average | 104% | 101% | 99% | 97% | 96% |
 | Now (RB2) | 103% | 101% | 98% | 96% | 95% |
 
-- **Risk.** In PvP, a critical Holy Strike or Judgement does 2.3 times the damage (now 2 times). See PvP burst check and Watch list, W6.
+- **Risk.** In PvP, a critical Holy Strike or Judgement does 2.2 times the damage (now 2 times). See PvP burst check and Watch list, W6.
 
 ## C-R5. Measure for Measure (new talent): row 5, column 4, 3 ranks
 
@@ -110,6 +110,6 @@ Retribution has 47 points (beta: 44). Benediction (M-P1) moves to Protection row
 
 ## Retribution with Burning Zeal (C-R4) and Measure for Measure (C-R5)
 
-- **Points.** A deep build with both talents needs 6 more Retribution points. RB6 (4/8/39) takes them from the Holy dip: it keeps Improved Seals 3 and Divine Intellect 1, and loses Reverence, Infusion of Light and Unyielding Faith.
-- **Damage.** RB6 has +2.2% at fresh level 60 and +3.0% in Naxxramas against RB2. It is 105% of the pure average at fresh level 60 and 98% in Naxxramas (see Analysis, Damage, part 11).
+- **Points.** A deep build with both talents needs 5 more Retribution points. RB6 (5/8/38) takes them from the Holy dip: it keeps Improved Seals 3 and Divine Intellect 2, and loses Reverence, Infusion of Light and Unyielding Faith.
+- **Damage.** RB6 has +1.9% at fresh level 60 and +2.4% in Naxxramas against RB2. It is 105% of the pure average at fresh level 60 and 97% in Naxxramas (see Analysis, Damage, part 11).
 - **Balance.** The hybrid target is 95% of the pure average. If Retribution is above the pure average at the raid release, decrease Sacred Arbiter first (+20% → +10%, see Watch list, W15).
