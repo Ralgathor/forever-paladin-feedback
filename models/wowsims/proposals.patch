@@ -574,10 +574,10 @@ index 0000000000..72f49a0ec5
 +}
 diff --git a/sim/paladin/zz_new_talents.go b/sim/paladin/zz_new_talents.go
 new file mode 100644
-index 0000000000..24266c2c4e
+index 0000000000..65b04b729a
 --- /dev/null
 +++ b/sim/paladin/zz_new_talents.go
-@@ -0,0 +1,47 @@
+@@ -0,0 +1,52 @@
 +package paladin
 +
 +import (
@@ -588,6 +588,7 @@ index 0000000000..24266c2c4e
 +
 +// New Retribution talents of the proposals (row 5). They are not in the beta talent string: flags give the ranks.
 +// BZ<n>: Burning Zeal (C-R4), +10% critical damage bonus for each rank on Seals, Judgements and Holy Strike.
++// BZR5: Burning Zeal has 5 ranks, +4% for each rank.
 +// MFM<n>: Measure for Measure (C-R5), a dodge or parry of the target reduces the remaining Judgement cooldown by n sec.
 +func (paladin *Paladin) applyNewRetributionTalents() {
 +	if bz := zzNum("BZ", 0); bz > 0 {
@@ -595,9 +596,13 @@ index 0000000000..24266c2c4e
 +			SpellMaskJudgementOfFury | SpellMaskJudgementOfJustice | SpellMaskJudgementOfTheCrusader |
 +			SpellMaskJudgementOfLight | SpellMaskJudgementOfWisdom | SpellMaskSealOfRighteousnessProc |
 +			SpellMaskSealOfCommandProc | SpellMaskSealOfFuryProc
++		per := 0.10
++		if prop("BZR5") {
++			per = 0.04
++		}
 +		paladin.OnSpellRegistered(func(spell *core.Spell) {
 +			if spell.Matches(mask) {
-+				spell.CritMultiplierAdditive += 0.10 * bz
++				spell.CritMultiplierAdditive += per * bz
 +			}
 +		})
 +	}

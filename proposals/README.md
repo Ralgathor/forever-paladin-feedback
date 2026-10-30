@@ -52,7 +52,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 26 chan
 | C-R1 | Conviction | Retribution, row 2 → row 1 (Conviction, M-R2) | +1–5% critical hit chance with melee attacks | +1–5% critical hit chance with attacks and spells |
 | C-R2 | Twist of Light | Retribution, row 7 | The Echo applies to the next melee attack only | The Echo applies to all melee attacks for 10 sec |
 | C-R3 | Sanctified Judgement | Retribution, row 3 | 33/66/100% chance to return 20/40/60% of the Seal cost | 100% chance at all ranks. The return is 20/40/60% of the Seal cost |
-| C-R4 | Burning Zeal (new) | Retribution, row 3, before Vengeance | — | 2 ranks: +10/20% critical damage bonus for Seals, Judgements and Holy Strike |
+| C-R4 | Burning Zeal (new) | Retribution, row 3, before Vengeance | — | 5 ranks: +4/8/12/16/20% critical damage bonus for Seals, Judgements and Holy Strike |
 | C-R5 | Measure for Measure (new) | Retribution, row 5, column 1 | — | 3 ranks: when the target dodges or parries, the Judgement cooldown decreases by 1/2/3 sec |
 
 **Moves**
@@ -68,7 +68,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 26 chan
 | M-R1 | Two-Handed Weapon Specialization | Retribution | Row 5 (20 points) | Row 4, column 4 (15 points) |
 | M-R2 | Conviction | Retribution | Row 2 | Row 1 |
 | M-R4 | Sanctified Judgement | Retribution | Row 3, column 2 | Row 3, column 1, requires Improved Judgement 2/2 |
-| M-R5 | Vengeance | Retribution | Requires Sanctified Judgement 3/3 | Requires Burning Zeal 2/2 |
+| M-R5 | Vengeance | Retribution | Requires Sanctified Judgement 3/3 | Requires Burning Zeal 5/5 |
 
 ## Design rules
 

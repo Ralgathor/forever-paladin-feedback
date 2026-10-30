@@ -61,7 +61,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **M-R1 Two-Handed Weapon Specialization:** row 5 → row 4, column 4 (20 → 15 points).
 - **M-R2 Conviction:** row 2 → row 1, as all other +5% critical hit talents. A Holy Paladin takes it for 5 points. Retribution has 41 points.
 - **M-R4 Sanctified Judgement:** column 1, below Improved Judgement. It requires Improved Judgement 2/2.
-- **M-R5 Vengeance:** requires Burning Zeal 2/2 (beta: Sanctified Judgement). Both talents increase critical hits.
+- **M-R5 Vengeance:** requires Burning Zeal 5/5 (beta: Sanctified Judgement). Both talents increase critical hits.
 
 ## Read and try
 

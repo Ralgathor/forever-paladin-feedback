@@ -140,7 +140,7 @@ def paladin(g, tal=TANK_REF, proposed=True, c14=1.0, crusader=True, consecration
     land_a, f_auto = table(hit, crit, auto=True)
     land_s, f_spec = table(hit, crit, auto=False)
     swings = (1 - casting) / g.wspeed                # a cast stops the auto attacks
-    bz = 1 + 0.10 * t("bz")                          # Burning Zeal: critical damage bonus of Seals, Judgements, Holy Strike
+    bz = 1 + 0.04 * t("bz")                          # Burning Zeal (5 ranks): critical damage bonus of Seals, Judgements, Holy Strike
     src = {}
     if t("hsh"):
         # Holy Shield: 221 + 8% of spell power (+ c14 x block value) for each block. Not OHWS. No critical hits.

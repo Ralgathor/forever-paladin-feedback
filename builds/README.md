@@ -23,7 +23,7 @@ This folder gives the best build, the pre-raid gear and the stat weights of each
 
 ## Common rules
 
-- **Codes.** The Holy and Protection codes load in calculator version 6 with 51 points. The proposed Retribution codes are version 5 codes (`v5p`): they open on the version 5 page. In version 6, Vengeance requires Burning Zeal 2/2. [retribution.md](retribution.md) gives the version 6 builds. A code with only digits opens the beta trees.
+- **Codes.** The Holy and Protection codes load in calculator version 6 with 51 points. The proposed Retribution codes are version 5 codes (`v5p`): they open on the version 5 page. In version 6, Vengeance requires Burning Zeal 5/5. [retribution.md](retribution.md) gives the version 6 builds. A code with only digits opens the beta trees.
 - **Gear.** Pre-raid gear for all specs. Holy also has a raid set (Naxxramas). The gear search changes one slot at a time and keeps the best item in the sim. Thus, it gives a good set, not a proven best set.
 - **Item list.** On 28 October 2026, wowsims rebuilt its item list from the live Forever game cache. Some items left the list (for example Hand of Edward the Odd and Arcanoweave Cloak). All sets of this folder use only items of the new list.
 - **wowsims links.** Each link loads the gear and the talents in wowsims. The live wowsims has no proposals. Thus, a proposed build loads in the beta tree order, and the site gives beta values for it. The values of this folder come from the sim with the proposals.

@@ -16,7 +16,7 @@ The script models/damage/run_tables.py calculates all values of this section. Fu
 
 ## 1. Build and gear
 
-- **Build.** 12/8/31: v5p200320302-030000000000005-0225531001330321 in calculator version 5 (RB2). Parts 1 to 10 use these talents. In version 6, Vengeance requires Burning Zeal 2/2. Vindication also has 3 ranks (+2/4/6% Attack Power). Thus, RB2 of version 6 has Burning Zeal 2/2 and Measure for Measure 2/3 in place of Holy Conduit 2/2: v6p200320302-030000000000005-020533100133032122 (part 11).
+- **Build.** 12/8/31: v5p200320302-030000000000005-0225531001330321 in calculator version 5 (RB2). Parts 1 to 10 use these talents. In version 6, Vengeance requires Burning Zeal 5/5. Vindication also has 3 ranks (+2/4/6% Attack Power). Thus, RB2 of version 6 has Burning Zeal 5/5 and Measure for Measure 2/3 in place of Holy Conduit 2/2, Unyielding Faith 1 and Infusion of Light 2: v6p2003103-030000000000005-020533100133032152 (part 11).
   - Holy 12: Divine Intellect 2/5, Improved Seals 3/3, Unyielding Faith 2/2, Reverence 3/3, Infusion of Light 2/2.
   - Protection 8: Benediction 5/5 (M-P1), Precision 3/3.
   - Retribution 31: Conviction 5/5, Improved Judgement 2/2, Holy Conduit 2/2, Vindication 5/5 (C-P3), Sanctified Judgement 3/3, Seal of Command, Two-Handed Weapon Specialization 3/3, Sacred Arbiter, Vengeance 3/3, Champion of the Light 3/3, Instrument of Law 2/2, Twist of Light.
@@ -282,14 +282,14 @@ The scripts are run_damage.py and check.py in models/wowsims. See its README for
 
 ## 11. New talents: Burning Zeal (C-R4) and Measure for Measure (C-R5)
 
-The script models/damage/run_tables.py (part 11) calculates these values. RB2 with each talent at its maximum rank (Burning Zeal 2/2, Measure for Measure 3/3), 2 min fight.
+The script models/damage/run_tables.py (part 11) calculates these values. RB2 with each talent at its maximum rank (Burning Zeal 5/5, Measure for Measure 3/3), 2 min fight.
 
 - **Burning Zeal (C-R4).** The critical damage bonus of Seals, Judgements and Holy Strike is ×1.2 (critical hits do ×2.2 damage, not ×2). Hammer of Wrath and auto attacks do not change.
 - **Measure for Measure (C-R5).** Each dodge or parry of the target decreases the Judgement cooldown by 3 sec. Auto attacks and Holy Strike count. The model uses the average cooldown: 8 sec / (1 + 3 × dodges and parries each sec). From behind, the boss dodges 6.5% and does not parry. From the front, it also parries 14%.
 
 | Talents | Fresh level 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
 | --- | --- | --- | --- | --- | --- |
-| Burning Zeal 2/2 | +0.8% | +0.9% | +1.0% | +1.2% | +1.3% |
+| Burning Zeal 5/5 | +0.8% | +0.9% | +1.0% | +1.2% | +1.3% |
 | Measure for Measure 3/3, from behind | +1.1% | +1.1% | +1.1% | +1.0% | +1.0% |
 | Measure for Measure 3/3, from the front | +4.1% | +4.1% | +4.0% | +3.9% | +3.8% |
 | Both, from behind | +1.9% | +2.0% | +2.1% | +2.2% | +2.4% |
@@ -300,11 +300,11 @@ The script models/damage/run_tables.py (part 11) calculates these values. RB2 wi
 | Build | Fresh level 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
 | --- | --- | --- | --- | --- | --- |
 | RB2 (calculator version 5) | 103% | 101% | 98% | 96% | 95% |
-| RB2 with Burning Zeal 2/2 | 104% | 101% | 99% | 97% | 96% |
+| RB2 with Burning Zeal 5/5 | 104% | 101% | 99% | 97% | 96% |
 | RB2 with Measure for Measure 3/3 | 104% | 102% | 99% | 97% | 96% |
 | RB6 (5/8/38) | 105% | 103% | 100% | 98% | 97% |
 
-- **RB6.** RB1 with Burning Zeal 2/2 and Measure for Measure 3/3. The 5 points come from the Holy dip: Improved Seals 3 stays, with Divine Intellect 2. Reverence, Infusion of Light and Unyielding Faith go. RB6 is equal to "Both": it keeps the Divine Intellect 2 of RB2.
+- **RB6.** RB1 with Burning Zeal 2/2 (version 5, 2 ranks) and Measure for Measure 3/3. The 5 points come from the Holy dip: Improved Seals 3 stays, with Divine Intellect 2. Reverence, Infusion of Light and Unyielding Faith go. RB6 is equal to "Both": it keeps the Divine Intellect 2 of RB2.
 - **Mana of RB6.** Without Reverence, the income is about 10 mana per sec less (see Mana). Each extra Judgement gives about +44 mana with Sanctified Judgement 3/3 (return 126, cost 82). From behind, this is about +0.4 mana per sec.
 - **Burning Zeal increases with gear.** The critical hit chance of Retribution increases from 11.6% to 16.9%. Thus, Burning Zeal closes a part of the gap with Fury (part 6).
 - **Measure for Measure from the front.** Retribution tanks and PvP fights from the front receive about +23% Judgements (W23). A tank with Holy Shield cannot take the talent (see Builds, part 5).
@@ -315,16 +315,16 @@ The script models/damage/run_tables.py (part 11) calculates these values. RB2 wi
 | Build | Raid | Raid, no consumables | Alone | From the front | Raid, % of the pure average |
 | --- | --- | --- | --- | --- | --- |
 | RB2 | 824 | 667 | 325 | 768 | 105% |
-| RB2 with Burning Zeal 2/2 | 841 (+2.0%) | 679 (+1.8%) | 329 (+1.4%) | 783 (+1.9%) | 107% |
+| RB2 with Burning Zeal 5/5 | 841 (+2.0%) | 679 (+1.8%) | 329 (+1.4%) | 783 (+1.9%) | 107% |
 | RB2 with Measure for Measure 3/3 | 831 (+0.8%) | 674 (+1.0%) | 327 (+0.9%) | 801 (+4.3%) | 106% |
 | RB2 with both | 848 (+2.9%) | 686 (+2.8%) | 332 (+2.3%) | 817 (+6.3%) | 108% |
 | RB6 (5/8/38) | 849 (+2.9%) | 686 (+2.8%) | 311 (−4.2%) | 818 (+6.6%) | 108% |
 | Shock-Retribution (26/0/25) | 791 (−4.1%) | 642 (−3.7%) | 285 (−12.3%) | — | 101% |
 | Shock-Retribution with Divine Precision (28/0/23) | 853 (+3.4%) | 693 (+3.8%) | 299 (−8.0%) | — | 108% |
-| RB2, version 6 (Burning Zeal 2/2 and Measure for Measure 2/3 in place of Holy Conduit 2/2; Vindication 3/3, +6%) | 847 (+2.8%) | — | 317 (−2.5%) | — | 108% |
-| Shock-Retribution 28/0/23, version 6 (Burning Zeal 2/2 in place of Sanctified Judgement 1 and Two-Handed Weapon Specialization 1; Vindication 3/3, +6%) | 868 (+5.3%) | — | 289 (−11.1%) | — | 110% |
+| RB2, version 6 (Burning Zeal 5/5 and Measure for Measure 2/3 in place of Holy Conduit 2/2, Unyielding Faith 1 and Infusion of Light 2; Vindication 3/3, +6%) | 847 (+2.8%) | — | 317 (−2.5%) | — | 108% |
+| Shock-Retribution 28/0/23, version 6 (Burning Zeal 5/5 in place of Sanctified Judgement 3, Two-Handed Weapon Specialization 1 and Vindication 1; Vindication 2/3, +4%) | 860 (+4.4%) | — | 252 (−22.6%) | — | 109% |
 
-- **Version 6.** The Retribution layout of version 6 (M-R4, M-R5) puts Burning Zeal before Vengeance. Vindication has 3 ranks with +2/4/6% Attack Power (C-P3). Each Retribution build takes Burning Zeal 2/2 and Vindication 3/3 (see Builds, part 4). In a raid, RB2 of version 6 has +2.8%. Alone, it has −2.5%: Holy Conduit 2/2 decreases the Consecration cost, and the mana is the limit alone.
+- **Version 6.** The Retribution layout of version 6 (M-R4, M-R5) puts Burning Zeal before Vengeance. Vindication has 3 ranks with +2/4/6% Attack Power (C-P3). Each Retribution build takes Burning Zeal 5/5 and Vindication 3/3 (see Builds, part 4). In a raid, RB2 of version 6 has +2.8%. Alone, it has −2.5%: Holy Conduit 2/2 decreases the Consecration cost, and the mana is the limit alone.
 - **Burning Zeal gives two times the model value** (+2.0% against +0.9% with pre-raid gear). The preset gear, the raid buffs and the consumables give more critical hits than the model gear.
 - **Measure for Measure agrees with the model.** From the front, Judgements increase by 23% in wowsims and in the model. From behind, they increase by 6% (model: 7%).
 - **RB6 is 108% of the pure average in wowsims,** and 105% in the model at fresh level 60. See Watch list, W15.

@@ -153,7 +153,7 @@ def retribution(g, version="c16", sa=None, crusader=False, ths=None, fight=FIGHT
     # spells (Judgement, Hammer of Wrath, Exorcism, Consecration). Not on Seals.
     hp = t("hp")
     # Burning Zeal (C-R4): +10% critical damage bonus for each rank on Seals, Judgements and Holy Strike.
-    bz = 1 + 0.10 * t("bz")
+    bz = 1 + 0.04 * t("bz")   # Burning Zeal: 5 ranks, +4% each
     _, crit_j, f_jud = spec_table(s["hit"], s["crit"] + 0.01 * hp, dodge=0.0, crit_mult=1 + bz)   # Judgement: no dodge
     _, crit_hs, f_hs = spec_table(s["hit"], s["crit"] + 0.03 * hp, dodge=dodge, crit_mult=1 + bz)
     _, crit_how, f_how = spec_table(s["hit"], s["crit"] + 0.01 * hp, dodge=dodge)

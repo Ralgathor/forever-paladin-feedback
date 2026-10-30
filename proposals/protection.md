@@ -68,7 +68,7 @@ The Protection proposals give:
 - **Holy Conduit.** It stays in Retribution row 2, as in the beta. A tank takes it with Deflection 5 and Holy Conduit 2 (7 points). Deflection is also a tank talent. With Benediction and Holy Conduit, Consecration on cooldown costs 76 mana per sec, not 112 (see Analysis, Mana).
 - **Why Vindication goes to row 2.** It takes the row 2 place of Conviction (M-R2). +2% Attack Power for each point gives each point the value of a 5-rank talent point. +6% Attack Power gives about +7 DPS.
 - **Why Unyielding Faith goes to row 1 (M-H2).** Improved Seals (M-H1) keeps its 3 beta ranks. Unyielding Faith fills the other 2 points of Holy row 1. Retribution and Protection open Holy row 2 with Improved Seals 3 and Unyielding Faith 2. Retribution then takes Infusion of Light. Iron Will (Warrior) is also in row 1.
-- **Shape.** Each row 1 has 10 points. Holy uses 5 + 3 + 2, as Fire (Mage). Protection and Retribution use 5 + 5. Holy has 43 points, Protection 49 and Retribution 39 (44 with Burning Zeal and Measure for Measure).
+- **Shape.** Each row 1 has 10 points. Holy uses 5 + 3 + 2, as Fire (Mage). Protection and Retribution use 5 + 5. Holy has 43 points, Protection 49 and Retribution 39 (47 with Burning Zeal and Measure for Measure).
 - **Parity.** Convection (Shaman) gives −10% mana cost for 5 points in Elemental row 1. Benediction gives the same in Protection row 1.
 
 ## C-P4. Improved Righteous Fury: removed

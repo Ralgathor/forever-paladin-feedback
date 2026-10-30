@@ -61,6 +61,7 @@ Set the flags in the `PROPOSE` environment variable, with commas: `PROPOSE=C6,C1
 | `VIN5` | Vindication (C-P3) | Vindication has 5 ranks: +1% Attack Power for each rank |
 | `VIN3` | Vindication (C-P3), calculator version 6 | Vindication has 3 ranks: +2% Attack Power for each rank. The debuff keeps the beta values |
 | `BZ<n>` | Burning Zeal (C-R4) | n ranks: the critical damage bonus of Seals, Judgements and Holy Strike increases by 10% for each rank |
+| `BZR5` | Burning Zeal (C-R4), calculator version 6 | Burning Zeal has 5 ranks: +4% for each rank. Use it with `BZ<n>` |
 | `MFM<n>` | Measure for Measure (C-R5) | n ranks: a dodge or parry of a melee attack decreases the remaining Judgement cooldown by n sec |
 
 `builds.py` gives the talent strings and the flag lists of each spec. The new talents of calculator version 5 are not in the beta talent string. The flags `BZ<n>` and `MFM<n>` give their ranks. Divine Grace and Merciful Light have no damage effect and no flag. A talent string uses the tree order of the sim, not the order of the game client.

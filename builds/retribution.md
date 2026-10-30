@@ -43,16 +43,16 @@ This file gives the best damage builds on one target for the beta trees and for 
 
 ### Calculator version 6
 
-In version 6, Vengeance requires Burning Zeal 2/2 (M-R5), and Sanctified Judgement requires Improved Judgement 2/2 (M-R4). Vindication has 3 ranks with +2/4/6% Attack Power (C-P3). Thus, each proposed build takes Burning Zeal 2/2 and Vindication 3/3. A wowsims search chose the other points. The values use the Retribution preset gear, not the gear of part 3. Thus, compare only the change.
+In version 6, Burning Zeal has 5 ranks and Vengeance requires Burning Zeal 5/5 (M-R5), and Sanctified Judgement requires Improved Judgement 2/2 (M-R4). Vindication has 3 ranks with +2/4/6% Attack Power (C-P3). Thus, each proposed build takes Burning Zeal 5/5 and Vindication 3/3. A wowsims search chose the other points. The values use the Retribution preset gear, not the gear of part 3. Thus, compare only the change.
 
 | Build | Code | Change | Raid | Fresh 60 |
 | --- | --- | --- | --- | --- |
-| Holy Shock, 21/0/30 | `v6p50032032201010002--022531100133032022` | Sanctified Judgement 3 → 1, Vindication 5 → 3, Burning Zeal 2, Measure for Measure 2 | +2.6% | −7% |
-| Ret, raid, 9/8/34 | `v6p5003001-030000000000005-021533120133132121` | Reverence 3 → 1, Vindication 5 → 3, Burning Zeal 2, Measure for Measure 1, Repentance 1 | +3.0% | −2% |
-| Ret, fresh 60, 9/8/34 | `v6p3003003-030000000000005-022533120133032121` | Divine Intellect 5 → 3, Vindication 5 → 3, Burning Zeal 2, Measure for Measure 1, Instrument of Law 2 | +5.1% | +1.8% |
+| Holy Shock, 21/0/30 | `v6p50032032201010002--02252110013303205` | Sanctified Judgement 3 → 1, Vindication 5 → 2, Burning Zeal 5 | +1.2% | −8% |
+| Ret, raid, 9/8/34 | `v6p5003001-030000000000005-020532120133032151` | Reverence 3 → 1, Holy Conduit 1 → 0, Vindication 5 → 3, Sanctified Judgement 3 → 2, Burning Zeal 5, Measure for Measure 1 | +3.0% | −7% |
+| Ret, fresh 60, 9/8/34 | `v6p3003003-030000000000005-02253310013303215` | Divine Intellect 5 → 3, Vindication 5 → 3, Pursuit of Justice 2 → 0, Burning Zeal 5, Instrument of Law 2 | +4.1% | +2.0% |
 
 - **Sanctified Judgement and fresh 60.** Alone, Sanctified Judgement 3/3 gives the mana for the fight. Thus, the Ret builds keep it. The Holy Shock build is a raid build, and it gives up 2 points of Sanctified Judgement.
-- **Raid order.** With the preset gear, the Holy Shock build is 1.8% above the Ret build (866 against 851).
+- **Raid order.** With the preset gear, the Holy Shock build is 0.4% above the Ret build (854 against 851).
 
 ### Beta
 
