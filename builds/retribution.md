@@ -26,7 +26,7 @@ This file gives the best damage builds on one target for the beta trees and for 
 - **Talent search.** A script makes valid builds with the rules of the calculator. It changes 1 to 5 points at a time and keeps a change when the DPS increases. The first search tested about 9,000 builds.
 - **Path.** Gear search and talent search in turns, until neither changes. The gear search changes one slot at a time. It tests the 10 to 20 best pre-raid items for each slot. Then each build is tested with the gear of all the other cases, and the best gear stays.
 - **Gear rules.** Item level 66 or lower, no raid drops, no raid materials, Alliance. Reputation and PvP reputation rewards stay in. The enchants are the enchants of the wowsims Twist of Light preset.
-- **Codes.** All codes load in calculator version 5 with 51 points.
+- **Codes.** The proposed codes of parts 2 and 3 load in calculator version 5 with 51 points (the version 5 page). Version 6 moves Retribution talents (M-R3 to M-R5). The version 6 builds are under "Calculator version 6" in part 2.
 
 ## 2. Best builds
 
@@ -40,6 +40,19 @@ This file gives the best damage builds on one target for the beta trees and for 
 
 - The raid Ret build is equal to Build B of the Ret build check (`v5p4003003-030000000000005-0225531201330321`: Divine Intellect 4, Holy Conduit 2). With the same gear, the difference is less than 1 DPS.
 - The Holy Shock build needs mana support. At fresh 60, it is 13% below the Ret build.
+
+### Calculator version 6
+
+In version 6, Vengeance requires Burning Zeal 2/2 (M-R5), and Sanctified Judgement requires Improved Judgement 2/2 (M-R4). Thus, each proposed build takes Burning Zeal 2/2 and loses 2 points. A wowsims search chose the 2 points. The values use the Retribution preset gear, not the gear of part 3. Thus, compare only the change.
+
+| Build | Code | Change | Raid | Fresh 60 |
+| --- | --- | --- | --- | --- |
+| Holy Shock, 21/0/30 | `v6p50032032201010002--02255110013303202` | Sanctified Judgement 3 → 1 | +1.5% | −8% |
+| Ret, raid, 9/8/34 | `v6p5003001-030000000000005-02155312013303212` | Reverence 3 → 1 | +2.0% | −2% |
+| Ret, fresh 60, 9/8/34 | `v6p3003003-030000000000005-02255312013303112` | Divine Intellect 5 → 3 | +1.8% | +1.4% |
+
+- **Sanctified Judgement and fresh 60.** Alone, Sanctified Judgement 3/3 gives the mana for the fight. Thus, the Ret builds keep it. The Holy Shock build is a raid build, and it gives up 2 points of Sanctified Judgement.
+- The raid order does not change: the Holy Shock build and the Ret build stay equal (within 1%).
 
 ### Beta
 

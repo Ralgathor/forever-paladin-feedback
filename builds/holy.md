@@ -6,7 +6,7 @@ This file gives the best healing build for the beta trees and for the proposed t
 
 | Trees | Build | Points | Code | Raid, 3 / 10 min (model, 715 healing power) | Pre-raid gear, 3 min (wowsims) | Raid gear, 3 min (wowsims) |
 | --- | --- | --- | --- | --- | --- | --- |
-| Proposed | P1 (= HB1) | 34/12/5 | `v5p53201132251010512-30200000000000502-0005` | 694 / 526 | 625 | 853 |
+| Proposed | P1 (= HB1) | 34/12/5 | `v6p53201132251010512-30200000000000502-0005` | 694 / 526 | 625 | 853 |
 | Beta | B1 | 32/14/5 | `05320113225101051-500250002-05` | 616 / 449 | 519 | 742 |
 
 - In both trees, all healing talents fit in 51 points. Thus, the best healing build takes all of them. The other points give only utility.
@@ -20,13 +20,13 @@ This file gives the best healing build for the beta trees and for the proposed t
 - **Gear search.** wowsims Forever commit 47b3c01 with `models/wowsims/proposals.patch`. Slot by slot, 12 candidates for each slot (24 for rings and trinkets). The sim keeps the set with the most healing per sec. 3 min, raid buffs, no consumables, no enchants, Alliance.
 - **Gear tiers.** Pre-raid: item level 65 or lower, no raid drops. Raid: all items up to item level 92 (Naxxramas).
 - **Sim rules.** The heal targets the caster. The sim has no overhealing: the values are raw healing.
-- **Codes.** All codes load in calculator version 5 with 51 points.
+- **Codes.** All codes load in calculator version 6 with 51 points.
 
 ## 2. Best builds
 
 ### Proposed: P1
 
-`v5p53201132251010512-30200000000000502-0005` (34/12/5). This is HB1 of Analysis, Builds.
+`v6p53201132251010512-30200000000000502-0005` (34/12/5). This is HB1 of Analysis, Builds.
 
 - Holy: Divine Intellect 5, Healing Light 3, Spiritual Focus 2, Unyielding Faith 1, Voice of Truth, Reverence 3, Purifying Power 2, Infusion of Light 2, Illumination 5, Divine Favor, Holy Shock, Holy Power 5, Light's Vigil, Lingering Light 2.
 - Protection: Redoubt 3, Guardian's Favor 2, Benediction 5, Devoted Sacrifice 2.
@@ -44,8 +44,8 @@ This file gives the best healing build for the beta trees and for the proposed t
 
 | Trees | Build | Code | Healing against the best build | Use |
 | --- | --- | --- | --- | --- |
-| Proposed | P2 (= HB2) | `v5p53200032251010512-30200020000000502-0005` | The same | Sacred Duty 2/2 in place of Unyielding Faith and Voice of Truth |
-| Proposed | P3, PvP | `v5p53201030251000502-30201020030000502-0004` | −0.9% (model), −1.1% (wowsims) | Improved Hammer of Justice 3/3. No Holy Shock or Light's Vigil, Conviction 4 |
+| Proposed | P2 (= HB2) | `v6p53200032251010512-30200020000000502-0005` | The same | Sacred Duty 2/2 in place of Unyielding Faith and Voice of Truth |
+| Proposed | P3, PvP | `v6p53201030251000502-30201020030000502-0004` | −0.9% (model), −1.1% (wowsims) | Improved Hammer of Justice 3/3. No Holy Shock or Light's Vigil, Conviction 4 |
 | Beta | B2, PvP | `05320203125101051-530230002003-02` | −0.03% (model), 0% (wowsims) | Improved Hammer of Justice 3/3, Benediction 2 |
 
 ### Value of each talent (model, raid, 3 min)

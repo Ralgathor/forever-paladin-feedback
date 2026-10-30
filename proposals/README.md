@@ -1,6 +1,6 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 26 changes and 8 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 26 changes and 11 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
 
 **Contents**
 
@@ -52,8 +52,8 @@ This document gives talent proposals for the WoW Forever Paladin. It has 26 chan
 | C-R1 | Conviction | Retribution, row 2 → row 1 (Conviction, M-R2) | +1–5% critical hit chance with melee attacks | +1–5% critical hit chance with attacks and spells |
 | C-R2 | Twist of Light | Retribution, row 7 | The Echo applies to the next melee attack only | The Echo applies to all melee attacks for 10 sec |
 | C-R3 | Sanctified Judgement | Retribution, row 3 | 33/66/100% chance to return 20/40/60% of the Seal cost | 100% chance at all ranks. The return is 20/40/60% of the Seal cost |
-| C-R4 | Burning Zeal (new) | Retribution, row 5 | — | 2 ranks: +10/20% critical damage bonus for Seals, Judgements and Holy Strike |
-| C-R5 | Measure for Measure (new) | Retribution, row 5 | — | 3 ranks: when the target dodges or parries, the Judgement cooldown decreases by 1/2/3 sec |
+| C-R4 | Burning Zeal (new) | Retribution, row 4, before Vengeance | — | 2 ranks: +10/20% critical damage bonus for Seals, Judgements and Holy Strike |
+| C-R5 | Measure for Measure (new) | Retribution, row 5, column 1 | — | 3 ranks: when the target dodges or parries, the Judgement cooldown decreases by 1/2/3 sec |
 
 **Moves**
 
@@ -65,8 +65,11 @@ This document gives talent proposals for the WoW Forever Paladin. It has 26 chan
 | M-H4 | Consecrated Ground | Holy | Row 5 | Row 6 |
 | M-H5 | Divine Precision | Holy | Row 5, requires Holy Shock | Row 4, no requirement |
 | M-P1 | Benediction | Retribution → Protection | Retribution row 1 | Protection row 1 |
-| M-R1 | Two-Handed Weapon Specialization | Retribution | Row 5 (20 points) | Row 4 (15 points) |
+| M-R1 | Two-Handed Weapon Specialization | Retribution | Row 5 (20 points) | Row 4, column 1 (15 points) |
 | M-R2 | Conviction | Retribution | Row 2 | Row 1 |
+| M-R3 | Eye for an Eye | Retribution | Row 4 (15 points) | Row 3, column 2 (10 points) |
+| M-R4 | Sanctified Judgement | Retribution | Row 3, column 2 | Row 3, column 1, requires Improved Judgement 2/2 |
+| M-R5 | Vengeance | Retribution | Requires Sanctified Judgement 3/3 | Requires Burning Zeal 2/2 |
 
 ## Design rules
 

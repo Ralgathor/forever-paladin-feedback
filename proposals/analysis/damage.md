@@ -16,7 +16,7 @@ The script models/damage/run_tables.py calculates all values of this section. Fu
 
 ## 1. Build and gear
 
-- **Build.** 12/8/31: v5p200320302-030000000000005-0225531001330321 in the calculator (RB2).
+- **Build.** 12/8/31: v5p200320302-030000000000005-0225531001330321 in calculator version 5 (RB2). Parts 1 to 10 use these talents. In version 6, Vengeance requires Burning Zeal 2/2. Thus, RB2 of version 6 has Burning Zeal 2/2 in place of Holy Conduit 2/2: v6p200320302-030000000000005-02055310013303212 (part 11).
   - Holy 12: Divine Intellect 2/5, Improved Seals 3/3, Unyielding Faith 2/2, Reverence 3/3, Infusion of Light 2/2.
   - Protection 8: Benediction 5/5 (M-P1), Precision 3/3.
   - Retribution 31: Conviction 5/5, Improved Judgement 2/2, Holy Conduit 2/2, Vindication 5/5 (C-P3), Sanctified Judgement 3/3, Seal of Command, Two-Handed Weapon Specialization 3/3, Sacred Arbiter, Vengeance 3/3, Champion of the Light 3/3, Instrument of Law 2/2, Twist of Light.
@@ -321,7 +321,10 @@ The script models/damage/run_tables.py (part 11) calculates these values. RB2 wi
 | RB6 (5/8/38) | 849 (+2.9%) | 686 (+2.8%) | 311 (−4.2%) | 818 (+6.6%) | 108% |
 | Shock-Retribution (26/0/25) | 791 (−4.1%) | 642 (−3.7%) | 285 (−12.3%) | — | 101% |
 | Shock-Retribution with Divine Precision (28/0/23) | 853 (+3.4%) | 693 (+3.8%) | 299 (−8.0%) | — | 108% |
+| RB2, version 6 (Burning Zeal 2/2 in place of Holy Conduit 2/2) | 837 (+1.6%) | — | 315 (−3.1%) | — | 106% |
+| Shock-Retribution 28/0/23, version 6 (Burning Zeal 2/2 in place of Sanctified Judgement 1 and Two-Handed Weapon Specialization 1) | 860 (+4.4%) | — | 287 (−11.7%) | — | 109% |
 
+- **Version 6.** The Retribution layout of version 6 (M-R3 to M-R5) puts Burning Zeal before Vengeance. Each Retribution build takes Burning Zeal 2/2 and loses 2 points (see Builds, part 4). In a raid, RB2 of version 6 has +1.6%. Alone, it has −3.1%: Holy Conduit 2/2 decreases the Consecration cost, and the mana is the limit alone.
 - **Burning Zeal gives two times the model value** (+2.0% against +0.9% with pre-raid gear). The preset gear, the raid buffs and the consumables give more critical hits than the model gear.
 - **Measure for Measure agrees with the model.** From the front, Judgements increase by 23% in wowsims and in the model. From behind, they increase by 6% (model: 7%).
 - **RB6 is 108% of the pure average in wowsims,** and 105% in the model at fresh level 60. See Watch list, W15.

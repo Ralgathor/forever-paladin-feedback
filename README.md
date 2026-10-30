@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 26 changes and 8 moves for the Holy, Protection and Retribution trees. 5 changes are baseline spell changes (C1–C5). 21 changes are talent changes (C-H1–C-H6, C-P1–C-P9, C-P11, C-R1–C-R5), and eight of them are new talents. The moves are M-H1–M-H5, M-P1, M-R1 and M-R2.
+- **Proposals:** 26 changes and 11 moves for the Holy, Protection and Retribution trees. 5 changes are baseline spell changes (C1–C5). 21 changes are talent changes (C-H1–C-H6, C-P1–C-P9, C-P11, C-R1–C-R5), and eight of them are new talents. The moves are M-H1–M-H5, M-P1, M-R1 and M-R2.
 - **Talent calculator:** you can try the proposals and compare them with the beta trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
 - **Builds:** the best builds for each spec and role (raid, dungeon, PvP), with calculator codes. Also the builds that use a different tree for a role.
@@ -60,15 +60,18 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C-R3 Sanctified Judgement:** each Judgement returns 20/40/60% of the Seal cost (beta: a 33/66/100% chance).
 - **M-R1 Two-Handed Weapon Specialization:** row 5 → row 4 (20 → 15 points).
 - **M-R2 Conviction:** row 2 → row 1, as all other +5% critical hit talents. A Holy Paladin takes it for 5 points. Retribution has 41 points.
+- **M-R3 Eye for an Eye:** row 4 → row 3 (15 → 10 points).
+- **M-R4 Sanctified Judgement:** column 1, below Improved Judgement. It requires Improved Judgement 2/2.
+- **M-R5 Vengeance:** requires Burning Zeal 2/2 (beta: Sanctified Judgement). Both talents increase critical hits.
 
 ## Read and try
 
 - **[Proposals](proposals/README.md).** The full document, in one file for each part. For each proposal, it gives the beta text, the proposed text, the reason and the model talent from another class. It also gives the analysis, the test results and the open questions.
 - **[Talent calculator](calculator/index.html).** Live version: https://ralgathor.github.io/forever-paladin-feedback/calculator/
   - The calculator opens with the proposed trees. Push **Beta** to see the beta trees.
-  - **Versions.** Use the Version list to open an earlier version of the proposed trees. Version 5 (26 October 2026) is the current version. Its build codes start with `v5p`. A version 4 code (it starts with `v4p`) opens on the version 4 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v4/. A version 3 code (it starts with `v3p`) opens on the version 3 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v3/. A version 2 code (it starts with `v2p`) opens on the version 2 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v2/. A version 1 code (it starts with `p`) opens on the version 1 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v1/
+  - **Versions.** Use the Version list to open an earlier version of the proposed trees. Version 6 (30 October 2026) is the current version. Its build codes start with `v6p`. A version 5 code (it starts with `v5p`) opens on the version 5 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v5/. A version 4 code (it starts with `v4p`) opens on the version 4 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v4/. A version 3 code (it starts with `v3p`) opens on the version 3 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v3/. A version 2 code (it starts with `v2p`) opens on the version 2 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v2/. A version 1 code (it starts with `p`) opens on the version 1 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v1/
   - A purple tag (C) shows a changed talent. A blue tag (M) shows a talent that only moves.
-  - A build code that starts with `v5p` opens a proposed build. A build code with only digits opens a beta build.
+  - A build code that starts with `v6p` opens a proposed build. A build code with only digits opens a beta build.
 
 The talent icons come from the Wowhead icon server (wow.zamimg.com). If the icons do not load, the calculator shows drawn icons. This project does not keep game files.
 

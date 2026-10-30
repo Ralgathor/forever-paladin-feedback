@@ -1,9 +1,10 @@
 # PvP burst check
 
-This check is for Reckoning (C-P6). The build is 0/26/25 with a two-handed weapon. It is the build v5p-532300210215002-5005031211331 in the calculator (RB5):
+This check is for Reckoning (C-P6). The build is 0/26/25 with a two-handed weapon. It is the build v6p-532300210215002-32050312013300002 in the calculator (RB5):
 
 - Protection 26: Reckoning 5/5, Swift Judgement, Improved Hammer of Justice 2/3.
 - Retribution 25: Seal of Command, Sacred Arbiter, Two-Handed Weapon Specialization 3/3, Vengeance 3/3, Conviction 5/5.
+- Calculator version 6 (M-R3 to M-R5): Vengeance requires Burning Zeal 2/2, and Sanctified Judgement requires Improved Judgement 2/2. The version 6 code has both. Burning Zeal 2/2 gives the critical hits of Judgement, Holy Strike and the Seals +20% damage bonus. The values of this check do not include it. With critical hits, the real burst is a little higher.
 - Toughness and Divine Strength removal (C-P3) deletes Divine Strength from this build. The model uses a fixed 300 damage for each swing. Thus, the values do not change. Without +10% Strength, the real burst is about 2% lower.
 
 The values are estimates, not a simulation.

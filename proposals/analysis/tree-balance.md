@@ -131,13 +131,14 @@ Source: the talent data of wowsims/forever (25 October 2026) for all nine classe
 | Protection, proposed | 10 / 10 / 8 / 7 / 8 / 5 / 1 | 28 | 20 |
 | Retribution, calculator version 5 | 10 / 9 / 6 / 6 / 4 / 5 / 1 | 25 | **15** (other trees: 15–25) |
 | Retribution, with Burning Zeal (C-R4) and Measure for Measure (C-R5) | 10 / 9 / 6 / 6 / 9 / 5 / 1 | 25 | 20 |
+| Retribution, calculator version 6 (M-R3, M-R4, M-R5) | 10 / 9 / 8 / 6 / 7 / 5 / 1 | 27 | 18 |
 | Mean of the other 24 trees | — | 28.6 | 19.1 |
 
 - In version 4, Holy row 3 has 3 points. Each other tree has 4 points or more in row 3. Holy rows 1–3 (20 points) are the lowest of the 27 trees.
 - This causes 2 points of filler for the Holy healer. Row 4 needs 15 points in rows 1–3, and only 14 of these points help a healer. Row 6 needs 25 points in rows 1–5, and only 23 help a healer.
 - **The fix: one new talent and two moves in Holy.** Lingering Light (C-H2) is a new talent in row 3. Holy Power goes to row 5 (M-H3). Consecrated Ground goes to row 6 (M-H4). Rows 1–3 then hold 16 healer points, and rows 1–5 hold 28. The Holy healer has no filler.
 - After the moves, each Holy row is in the range of the other trees. Rows 1–3 (22) are 1 point below the lowest other tree.
-- In calculator version 5, Retribution rows 4–6 (15 points) were equal to the lowest other tree (Discipline). A deep Retribution build took almost all of them. With Burning Zeal (C-R4) and Measure for Measure (C-R5), rows 4–6 have 20 points. A deep build now chooses between them, Eye for an Eye and Repentance.
+- In calculator version 5, Retribution rows 4–6 (15 points) were equal to the lowest other tree (Discipline). A deep Retribution build took almost all of them. With Burning Zeal (C-R4) and Measure for Measure (C-R5), rows 4–6 have 20 points. In calculator version 6, Eye for an Eye goes to row 3 (M-R3): rows 1–3 have 27 points and rows 4–6 have 18. Both values are in the range of the other trees. A deep build chooses between Measure for Measure, Eye for an Eye and Repentance.
 
 **What the smaller trees change.**
 

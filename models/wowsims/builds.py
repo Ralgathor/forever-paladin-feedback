@@ -3,6 +3,7 @@ RET = "ClassPaladin__default__default__default__Default"   # wowsims Retribution
 RB1 = "0000320302-003-05225331201330321"
 RET_PROP = "C1,C15,C16,C17,C26"
 # Builds of Analysis, Builds, parts 4 and 5 (calculator version 5). RB6 needs the flags BZ2,MFM3 (new talents).
+# Version 6 adds Burning Zeal 2/2 to RB1, RB2 and SHOCK_RET_DP (flag BZ2). See Analysis, Builds, part 4.
 RB2 = "0200320302-003-05225531001330321"
 RB6 = "02003-003-05225531201330321"
 SHOCK_RET = "0502320322010105--0022533120133"              # 26/0/25, before Divine Precision in row 4 (M-H5)

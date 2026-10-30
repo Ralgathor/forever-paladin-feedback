@@ -6,7 +6,7 @@ This file gives the best tank build for the beta trees and for the proposed tree
 
 | Trees | Build | Code | TPS | DPS | DTPS | TMI | Crushing blows |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Proposed | PT3 | `v5p0003-53030321301551-5215200001` | 1,240 | 710 | 208 | 22.5 | 0.5% |
+| Proposed | PT3 | `v6p0003-53030321301551-5215200001` | 1,240 | 710 | 208 | 22.5 | 0.5% |
 | Beta | BT4b | `50003-5230513021301351-50201` | 884 | 506 | 212 | 26.0 | about 6% |
 
 - Values: raid with consumables, path gear with reputation items (part 3), 3 min fight, level 63 boss, 3,000 iterations.
@@ -22,13 +22,13 @@ This file gives the best tank build for the beta trees and for the proposed tree
 - **Gear rules.** Pre-raid items only, no raid drops, Alliance. All items are in the wowsims item list of 28 October 2026. The enchants and the libram are the enchants and the libram of the reference tank.
 - **Last points.** A check of all 1-point moves from the best beta build, at 3,000 iterations. The last points change the score by less than 1%.
 - **Limit.** The search is a local search, not a test of all builds. Builds with no Holy Shield are far below (73–83% of the reference score).
-- **Codes.** All codes load in calculator version 5 with 51 points.
+- **Codes.** All codes load in calculator version 6 with 51 points.
 
 ## 2. Best builds
 
 ### Proposed: PT3
 
-`v5p0003-53030321301551-5215200001` (3/32/16)
+`v6p0003-53030321301551-5215200001` (3/32/16)
 
 - Holy: Improved Seals 3.
 - Protection: Redoubt 5, Precision 3, Anticipation 3, Shield Specialization 3, Sacred Duty 2, Swift Judgement, One-Handed Weapon Specialization 3, Templar's Bulwark, Reckoning 5, Iron Creed 5, Holy Shield.
@@ -52,9 +52,9 @@ In the beta, each point of threat costs survival. Toughness, Sacred Duty and Imp
 
 | Trees | Build | Code | Use |
 | --- | --- | --- | --- |
-| Proposed | PT1 | `v5p0003-52040321301551-5205300001` | Best with the older gear (Precision 2, Anticipation 4, Conviction 5, Vindication 3). 1,226 TPS and TMI 22.6 with the path gear |
-| Proposed | PT2, maximum threat | `v5p0003-53040311301551-0205501201` | +2% TPS against PT1, but +9% damage taken. No Deflection |
-| Proposed | PB1 | `v5p0003-53051321301551-522103` | Fresh level 60 with no mana support |
+| Proposed | PT1 | `v6p0003-52040321301551-5205300001` | Best with the older gear (Precision 2, Anticipation 4, Conviction 5, Vindication 3). 1,226 TPS and TMI 22.6 with the path gear |
+| Proposed | PT2, maximum threat | `v6p0003-53040311301551-0205501201` | +2% TPS against PT1, but +9% damage taken. No Deflection |
+| Proposed | PB1 | `v6p0003-53051321301551-522103` | Fresh level 60 with no mana support |
 | Beta | BT5 | `50003-5330513011301451-502` | Best beta build with the gear with no reputation items (part 3) |
 | Beta | Maximum threat | `50003-0530511101301541-50205` | +3% TPS against the reference beta tank, but TMI +9% |
 
