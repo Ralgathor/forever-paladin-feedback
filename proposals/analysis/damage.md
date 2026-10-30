@@ -10,7 +10,7 @@ The script models/damage/run_tables.py calculates all values of this section. Fu
 - The hybrid target is 95% of the pure damage classes. Players report it from developer comments: hybrids do about 5% less damage than pure damage classes. In the beta, Retribution is 93%.
 - Holy Strike Seal trigger (C1) gives almost all of the increase. Twist of Light (C-R2) gives the same damage as the beta Seal swap, but the mana lasts for the full fight.
 - Retribution increases less with gear than Fury. In Naxxramas, it is about 92% of Fury (93% with flatter gear). No talent change closes this gap (part 6).
-- Burning Zeal (C-R4) gives more damage in late raids: +0.8% at fresh level 60, +1.3% in Naxxramas. Measure for Measure (C-R5) gives about +1% at all gear levels. RB6 (5/8/38) with both is 105% of the pure average at fresh level 60 and 97% in Naxxramas (part 11). In wowsims, Burning Zeal gives +2.0%, and RB6 is 108% of the pure average. Shock-Retribution with Divine Precision (28/0/23) is also 108%.
+- Burning Zeal (C-R4) gives more damage in late raids: +0.8% at fresh level 60, +1.3% in Naxxramas. Measure for Measure (C-R5) gives about +1% at all gear levels. RB6 (5/8/38) with both is 105% of the pure average at fresh level 60 and 97% in Naxxramas (part 11). In wowsims, Burning Zeal gives +2.0%, and RB6 is 108% of the pure average. In version 6, Shock-Retribution with Divine Precision in Holy row 5 (28/0/23) is also 108%.
 - Fury increases more with gear than the other classes. Against the pure average, Retribution goes from 103% at fresh level 60 to about 95% in Naxxramas. The hybrid target is 95%.
 - Judgement of the Crusader gives Retribution about +10% DPS at fresh level 60. Personal Judgement of the Crusader (C2) makes this possible for each Paladin.
 
@@ -322,10 +322,11 @@ The script models/damage/run_tables.py (part 11) calculates these values. RB2 wi
 | Shock-Retribution (26/0/25) | 791 (−4.1%) | 642 (−3.7%) | 285 (−12.3%) | — | 101% |
 | Shock-Retribution with Divine Precision (28/0/23) | 853 (+3.4%) | 693 (+3.8%) | 299 (−8.0%) | — | 108% |
 | RB2, version 6 (Burning Zeal 5/5 and Measure for Measure 2/3 in place of Holy Conduit 2/2, Unyielding Faith 1 and Infusion of Light 2; Vindication 3/3, +6%) | 847 (+2.8%) | — | 317 (−2.5%) | — | 108% |
-| Shock-Retribution 28/0/23, version 6 (Burning Zeal 5/5 in place of Sanctified Judgement 3, Two-Handed Weapon Specialization 1 and Vindication 1; Vindication 2/3, +4%) | 860 (+4.4%) | — | 252 (−22.6%) | — | 109% |
+| Shock-Retribution 28/0/23, version 6 (Divine Precision 2/3 in Holy row 5, beta place; Burning Zeal 5/5; Vindication 1/3) | 852.5 (+3.5%) | — | 249 (−23.5%) | — | 108% |
+| Shock-Retribution 21/0/30 with Divine Precision 2/3 in Holy row 4 (withdrawn) | 869 (+5.4%) | — | — | — | 110% |
 
 - **Version 6.** The Retribution layout of version 6 (M-R4, M-R5) puts Burning Zeal before Vengeance. Vindication has 3 ranks with +2/4/6% Attack Power (C-P3). Each Retribution build takes Burning Zeal 5/5 and Vindication 3/3 (see Builds, part 4). In a raid, RB2 of version 6 has +2.8%. Alone, it has −2.5%: Holy Conduit 2/2 decreases the Consecration cost, and the mana is the limit alone.
 - **Burning Zeal gives two times the model value** (+2.0% against +0.9% with pre-raid gear). The preset gear, the raid buffs and the consumables give more critical hits than the model gear.
 - **Measure for Measure agrees with the model.** From the front, Judgements increase by 23% in wowsims and in the model. From behind, they increase by 6% (model: 7%).
 - **RB6 is 108% of the pure average in wowsims,** and 105% in the model at fresh level 60. See Watch list, W15.
-- **Shock-Retribution with Divine Precision (28/0/23).** Divine Precision is in Holy row 4 with no requirement now (M-H5). It replaces 4 points of Spiritual Focus and Purifying Power. Holy Shock and Consecration then do not miss. With Consecrated Ground 2/2, the build is the best raid build in wowsims (see Builds, part 5 and Watch list, W22).
+- **Shock-Retribution with Divine Precision (28/0/23).** In version 5, Divine Precision was in Holy row 4 with no requirement. A 21/0/30 build with Divine Precision 2/3 then had 869 DPS, 2.0% above RB6. In version 6, Divine Precision is in its beta place again (Holy row 5, requires Holy Shock). It then needs 20 Holy points. The best Shock-Retribution builds have 852–855 DPS, equal to RB6 (see Builds, part 5 and Watch list, W22).

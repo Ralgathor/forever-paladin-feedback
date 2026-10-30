@@ -36,6 +36,8 @@ This file gives the best tank build for the beta trees and for the proposed tree
 
 Against PB1 (Analysis, Builds), PT3 has +5% TPS with the same gear and about the same TMI. PT3 takes Sacred Arbiter, 4 more points of Conviction and Vindication 2. It drops Sanctified Judgement 3, 1 point of Holy Conduit, 2 points of Anticipation and Shoulder the Burden. With Holy Strike Seal trigger (C1), Holy Strike also triggers Seal of Fury.
 
+**Version 6 option.** `v6p0003-53040221301551-52050000010000003` (3/32/16) takes Burning Zeal 3/5 and Anticipation 4. It drops Vindication 2, Holy Conduit 1 and 1 point of Shield Specialization. In wowsims (raid, Wowhead shield values), it has +1.1% TPS against PT3 and +0.6% damage taken. It has less mana (no Holy Conduit).
+
 **Mana.** PT3 needs raid mana support (Judgement of Wisdom, Blessing of Wisdom). With no buffs and no consumables, PT3 is out of mana for 140 sec. PB1 keeps its mana longer (Sanctified Judgement 3, Holy Conduit 2). Thus, PB1 is the better tank at fresh level 60 with no mana support.
 
 ### Beta: BT4b

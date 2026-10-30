@@ -53,6 +53,7 @@ In version 6, Burning Zeal has 5 ranks and Vengeance requires Burning Zeal 5/5 (
 
 - **Sanctified Judgement and fresh 60.** Alone, Sanctified Judgement 3/3 gives the mana for the fight. Thus, the Ret builds keep it. The Holy Shock build is a raid build, and it gives up 2 points of Sanctified Judgement.
 - **Raid order.** With the preset gear, the Holy Shock build is 0.4% above the Ret build (854 against 851).
+- **Divine Precision.** In version 6, Divine Precision is in its beta place (Holy row 5). The Holy Shock build has no Divine Precision. A build with it (28/0/23, `v6p50032032201212302--02251010013300005`) has 852.5 DPS in a raid, equal to the Holy Shock build. Alone, it has 249 DPS (Holy Shock build: 267).
 
 ### Beta
 
