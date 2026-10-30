@@ -6,7 +6,8 @@ RET_PROP = "C1,C15,C16,C17,C26"
 RB2 = "0200320302-003-05225531001330321"
 RB6 = "02003-003-05225531201330321"
 SHOCK_RET = "0502320322010105--0022533120133"              # 26/0/25, before Divine Precision in row 4 (M-H5)
-SHOCK_RET_DP = "0500320302013125--0022533100133"        # 28/0/23: Divine Precision 3/3, Consecrated Ground 2/2
+SHOCK_RET_DP = "0500320302013125--0022533100133"        # 28/0/23: Divine Precision 3/3, Consecrated Ground 2/2.
+# Divine Grace 1/2 (filler, no damage effect) is not in the beta string: the sim string has 50 points.
 PB1 = "00003-0530500321301551-5022103"                     # Julien's beta build is in data/julien_prot.json
 PROT_PROP = "C6,C7,C11,C13,C14"
 PT3 = "00003-0530300321301551-50215200001"                # best proposed tank, builds/protection.md

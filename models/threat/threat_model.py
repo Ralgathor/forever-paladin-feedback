@@ -153,7 +153,7 @@ def paladin(g, tal=TANK_REF, proposed=True, c14=1.0, crusader=True, consecration
     # the remaining Judgement cooldown by 1 sec for each rank. Average cooldown: cd / (1 + rank x dodges and parries per sec).
     _, f_jud = table(hit, crit, auto=False, dodge=0.0, parry=0.0, crit_bonus=bz)
     jud = (160 + 0.429 * sp) * seals * ohws * cg * f_jud
-    avoided = (swings + (extra if proposed else 0.0) + 0.1) * (DODGE + PARRY)
+    avoided = (swings + extra + 0.1) * (DODGE + PARRY)
     jud_cd = (10 - t("ij")) / (1 + t("mfm") * avoided)
     src["Judgement of Fury"] = jud * RF * (1 / jud_cd + t("sj") / 60)
     # Holy Strike: 50% of (normalized weapon damage + 93 + 42.9%), all Holy damage: no armor. Holy Power: +3% critical

@@ -63,10 +63,15 @@ def righteous_fury(p):
                                                "doAtValue": {"const": {"val": "-25s"}}})
     return p
 
+def front(p):
+    """From the front: request(tank=True) keeps the preset buffs. Use the same raid buffs as the other columns."""
+    p = copy.deepcopy(p); p["buffs"] = load(REF)["buffs"]; return p
+
 def new_talents():
     jobs = [((l, s), shock_player(t), s, f) for l, t, f in NEW_BUILDS for s in SCENS]
-    jobs += [((l, "front"), (shock_player(t), "raid", True), None, f) for l, t, f in NEW_BUILDS[:5]]
-    jobs += [((l, "tank"), (righteous_fury(shock_player(t)), "raid", True), None, f) for l, t, f in NEW_BUILDS[::4][:2]]
+    jobs += [((l, "front"), (front(shock_player(t)), "raid", True), None, f) for l, t, f in NEW_BUILDS[:5]]
+    jobs += [((l, "tank"), (front(righteous_fury(shock_player(t))), "raid", True), None, f) for l, t, f in NEW_BUILDS
+             if l in ("RB2", "RB6 (5/8/38)")]
     def one(j):
         if j[2] is None:
             p, s, tank = j[1]
