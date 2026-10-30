@@ -17,8 +17,8 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - Holy has 47 points (beta: 46).
 - You can use each talent when its row opens.
 - Illumination still requires Reverence (straight arrow in column 2).
-- Divine Grace (C-H6) requires Divine Favor, and Merciful Light (C-H5) requires Holy Shock (arrows in the same row).
-- Row 5: Divine Precision (column 1) and Merciful Light (column 3) are on the two sides of Holy Shock (column 2). Both require Holy Shock. Divine Precision is in its beta place. Holy Power goes to column 4. A talent that changes only an ability of another talent requires that talent.
+- Divine Grace (C-H6) requires Divine Favor, and Merciful Light (C-H5) requires Holy Shock (arrows in the same row). A talent that changes only an ability of another talent requires that talent.
+- Row 5: Divine Precision (column 1) and Merciful Light (column 3) are on the two sides of Holy Shock (column 2). Both require Holy Shock. Divine Precision is in its beta place. Holy Power goes to column 4.
 - Toughness and Divine Strength removal (C-P3) deletes Divine Strength. Unyielding Faith (M-H2) goes to row 1.
 - A Holy healer needs no filler. Rows 1–3 hold 16 healer points (row 4 needs 15). Rows 1–5 hold 32 (row 6 needs 25). Holy healing is complete at 36 points. See Analysis, Tree balance.
 
@@ -96,7 +96,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 
 - **Text.** "Gives your Holy spells 5/10% increased damage against the first 4 enemies that enter your Consecration." 2 ranks, the same as the beta.
 - **Position.** Row 6, column 1. Healing Light stays in column 3. The Light's Vigil arrow uses column 2.
-- **Why.** Row 5 has Holy Power now (M-H3). Consecrated Ground moves one row lower. Thus, row 5 has 8 points (with Merciful Light, C-H5) and row 6 has 5.
+- **Why.** Row 5 has Holy Power now (M-H3). Consecrated Ground moves one row lower. Thus, row 5 has 11 points (with Divine Precision and Merciful Light, C-H5) and row 6 has 5.
 - **Who takes it.** Only deep Holy builds with Holy Shock (Shockadin, 38/0/13).
 
 ## C-H5. Merciful Light (new talent): row 5, column 3, 2 ranks
