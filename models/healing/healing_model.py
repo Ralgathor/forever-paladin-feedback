@@ -93,7 +93,6 @@ def paladin(hp=HPG, tank=False, rev=0.30, illum=0.50, light=1.12, bol=True, ling
     p_inf = 1.0 if inf_all else c          # chance that a Flash of Light triggers Infusion of Light
     sp = []
     # Divine Favor: the next Holy Light is a critical heal. 2 min cooldown, 4% of base mana.
-    # Divine Grace (C-H6) 2/2: 1 min cooldown (df_cd=60).
     t_df = 1.5 if inf_all else 2.5
     df_r = hl*1.5 + ling*hl*1.5*kt
     sp.append(Spell("Divine Favor + Holy Light", df_r, hl*1.5*0.8 + ling*hl*1.5*kt*0.5,

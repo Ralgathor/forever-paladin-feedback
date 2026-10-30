@@ -118,20 +118,20 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 
 ## C-H6. Divine Grace (new talent): row 4, column 4, 2 ranks
 
-- **Proposed text.** "Reduces the cooldown of your Divine Favor by 30/60 sec."
-- **Requires Divine Favor** (arrow in row 4). The talent changes only Divine Favor.
-- **Problem.** The design goal of Holy is the best single-target healer. The lead on one tank is small: +1% to +9% against the Druid (W14).
-- **Model.** Cooldown talents of Classic, for example Improved Reincarnation (Shaman).
-- **Value.** Divine Favor with Holy Light is the largest heal of the Paladin. At 2/2, you cast it each 1 min (beta: each 2 min).
+- **Proposed text.** "Your heals from Divine Favor increase the armor from items of the target by 15/30% for 15 sec."
+- **Requires Divine Favor** (arrow in row 4). The talent changes only Divine Favor. Divine Favor affects Flash of Light, Holy Light and Holy Shock. Each of these heals gives the buff.
+- **Problem.** After a large hit, the tank is in danger for some seconds. The Paladin heals the health back, but it cannot help the tank to take less damage.
+- **Model.** Improved Lay on Hands (Paladin, Classic) gave the target 15/30% armor from items. Forever removed that talent. Inspiration (Priest) and Ancestral Healing (Shaman) also give armor to the target of a critical heal. Divine Favor always gives a critical heal.
+- **Value.** The tank gear of wowsims has 5,500 to 6,400 armor from items. Against a level 63 boss, the tank takes 10–11% less physical damage while the buff is active (rank 1: 6%). With Divine Favor each 2 min, this is 1.4% less physical damage for the full fight (see Analysis, Healing, part 5).
 
-| | One tank, against the Druid | Raid, against the Shaman |
+| Divine Grace | While the buff is active | Full fight |
 | --- | --- | --- |
-| Proposed, without Divine Grace | +1% to +9% | −2% to +5% |
-| With Divine Grace 2/2 | +3% to +11% | −1% to +7% |
+| 1/2 (15%) | −6% physical damage | −0.7% |
+| 2/2 (30%) | −10% to −11% physical damage | −1.4% |
 
-- **Range.** 715 and 900 healing power, fights of 3, 5 and 10 min (see Analysis, Healing, parts 4 and 5).
-- **Recovery after a large hit.** Divine Favor is ready more often. The table of Merciful Light (C-H5) with all cooldowns applies each 1 min.
-- **The lead stays below the W14 limit.** The Paladin is 3–11% above the Druid on one tank. W14 gives 20% as the limit.
+- **Duration.** The Classic buff lasted 2 min. With Divine Favor each 2 min, the buff is then always active on the main tank: −11% physical damage for the full fight. This is too strong. With 15 sec, the buff helps after a large hit, as Inspiration does.
+- **Healing.** The talent does not change the healing per sec. The healing model gives the same values as without the talent.
+- **Stacks.** Inspiration and Ancestral Fortitude do not stack in Classic. The buff of Improved Lay on Hands was a different effect. A beta test must find whether Divine Grace stacks with them (see Open items).
 
 ## M-H5. Divine Precision: row 5 → row 4, no requirement
 
