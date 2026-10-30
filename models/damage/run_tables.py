@@ -199,10 +199,10 @@ if __name__ == "__main__":
 
     print("\n## Part 11: new talents, Burning Zeal (C-R4) and Measure for Measure (C-R5)")
     shape75 = lambda t: (PURE["Warrior"] * F[t] + PURE["Rogue"] * C[t] + casters * (1 + 0.75 * shape[t])) / 5
-    RB6 = dict(M.RB1, bz=2, mfm=3, di=2)                                    # 4/8/39: Holy dip Divine Intellect 2, Improved Seals 3
+    RB6 = dict(M.RB1, bz=2, mfm=3, di=2)                                    # 5/8/38: Holy dip Divine Intellect 2, Improved Seals 3
     for name, tal, kw in (("Burning Zeal 2/2", dict(M.RB2, bz=2), {}), ("Measure for Measure 3/3", dict(M.RB2, mfm=3), {}),
                           ("Measure for Measure 3/3, from the front", dict(M.RB2, mfm=3), dict(front=True)),
-                          ("Both (RB2 + 5 points)", dict(M.RB2, bz=2, mfm=3), {}), ("RB6, 4/8/39", RB6, {})):
+                          ("Both (RB2 + 5 points)", dict(M.RB2, bz=2, mfm=3), {}), ("RB6, 5/8/38", RB6, {})):
         base = (lambda h, kw=kw: retribution(h, **kw))
         new = (lambda h, tal=tal, kw=kw: retribution(h, tal=tal, **kw))
         inc = [new(gear(t)) / base(gear(t)) - 1 for t in range(5)]
