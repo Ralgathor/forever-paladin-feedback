@@ -7,6 +7,7 @@ import run_healing as RH
 
 N = 300
 HOLY_SHIELD = 20928
+HOLY_STRIKE, JUDGEMENT_SOR, JUDGEMENT_SOC = 10333, 20286, 20968
 results = []
 
 def action(o, sid):
@@ -68,6 +69,20 @@ if __name__ == "__main__":
     check("Shield Specialization (C-P8): largest mana of each block / maximum mana", max(g for _, g in gains), 0.0599, 0.0601)
     check("Shield Specialization (C-P8): shortest time between two mana gains, sec",
           min(b[0] - a[0] for a, b in zip(gains, gains[1:])), 2.0, 60.0)
+
+    # C-R4 Burning Zeal 2/2: a critical Holy Strike or Judgement does x2.2, not x2. Average critical hit / average hit.
+    r = with_talents(load(RET), RB2)
+    ret = lambda f, **kw: sim(request(r, "raid", iters=N, **kw), RET_PROP + f)
+    crit_ratio = lambda a: (S(a, "critDamage") / S(a, "crits")) / ((S(a, "damage") - S(a, "critDamage")) / S(a, "hits"))
+    for sid, name in ((HOLY_STRIKE, "Holy Strike"), (JUDGEMENT_SOR, "Judgement of Righteousness")):
+        a, b = (crit_ratio(action(ret(f), sid)) for f in ("", ",BZ2"))
+        check(f"Burning Zeal 2/2 (C-R4): {name} critical / hit, BZ2 / no talent", b / a, 1.08, 1.12)
+    # C-R5 Measure for Measure 3/3: from the front (dodge and parry) about +23% Judgements (model), from behind about +7%.
+    casts = lambda o: S(action(o, JUDGEMENT_SOR), "casts") + S(action(o, JUDGEMENT_SOC), "casts")
+    check("Measure for Measure 3/3 (C-R5): Judgements from the front, MFM3 / no talent",
+          casts(ret(",MFM3", tank=True)) / casts(ret("", tank=True)), 1.12, 1.35)
+    check("Measure for Measure 3/3 (C-R5): Judgements from behind, MFM3 / no talent",
+          casts(ret(",MFM3")) / casts(ret("")), 1.02, 1.12)
 
     print(f"\n{sum(results)} of {len(results)} checks pass")
     sys.exit(0 if all(results) else 1)

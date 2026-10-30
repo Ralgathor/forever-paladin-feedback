@@ -28,45 +28,52 @@ PATH_RUNS += [(f"PT3 without {f}", PT3, "proposed", ",".join(x for x in PROT_ALL
 
 WOWHEAD = os.environ.get("WOWHEAD_BV", "1") == "1"   # Wowhead shield values (wowsims.WOWHEAD_BV); WOWHEAD_BV=0 for the wowsims values
 
-def tank(p, s, f=""):
-    o = sim(request(p, s, tank=True, wowhead=WOWHEAD), f)
+def tank(p, s, f="", env=None):
+    o = sim(request(p, s, tank=True, wowhead=WOWHEAD), f, env)
     return dict(metrics(o), crush=boss_swings(o)["crushes"])
 
 def run():
     jobs = [(("Paladin beta (Julien)", "Julien gear", s), julien(), s, "") for s in SCENS]
     jobs += [(("Warrior", "", s), load(WARRIOR_TANK), s, "") for s in SCENS]
-    jobs += [(("Druid", "", s), load(BEAR), s, "") for s in SCENS]
+    jobs += [(("Warrior, Shield Slam x2.25", "", s), load(WARRIOR_TANK), s, "", SHIELD_SLAM_225) for s in SCENS]
+    jobs += [(("Druid", "", s), load(BEAR), s, "", DRUID_THREAT) for s in SCENS]
+    jobs += [(("Druid, wowsims threat", "", s), load(BEAR), s, "") for s in SCENS]
     for g, eq in GEARS.items():
         for l, f in VARIANTS:
             p = with_talents(julien(), PB1); p["equipment"] = eq
             jobs += [((l, g, s), p, s, f) for s in SCENS]
     for l, t, g, f in PATH_RUNS:
         jobs += [((l, "Path gear", s), path_player(t, g), s, f) for s in SCENS]
-    return dict(ThreadPoolExecutor(4).map(lambda j: (j[0], tank(j[1], j[2], j[3])), jobs))
+    return dict(ThreadPoolExecutor(4).map(lambda j: (j[0], tank(*j[1:])), jobs))
 
 # Part 8: groups of 3 and 5 enemies. Each enemy hits for 1/3 of the boss. The Druid uses Swipe on 2 or more targets.
+# The Druid rows use the player data threat (DRUID_THREAT), except "Druid, wowsims threat".
 def druid_multi(p):
-    p = copy.deepcopy(p); apl = p["rotation"]
+    """The preset Bear rotation has no Swipe. Swipe goes before Primal Bite on 2 or more targets. Maul then waits
+    for 45 rage, so that Swipe keeps its rage."""
+    p = copy.deepcopy(p); pl = p["rotation"]["priorityList"]
     multi = {"cmp": {"op": "OpGt", "lhs": {"numberTargets": {}}, "rhs": {"const": {"val": "1"}}}}
-    for g in apl["groups"]:
-        if g["name"] == "Damage":
-            g["actions"].insert(1, {"action": {"condition": multi, "castSpell": {"spellId": {"spellId": 9908}}}})
-    for a in apl["priorityList"]:
+    rage = lambda v: {"cmp": {"op": "OpGe", "lhs": {"currentRage": {}}, "rhs": {"const": {"val": v}}}}
+    one = {"cmp": {"op": "OpEq", "lhs": {"numberTargets": {}}, "rhs": {"const": {"val": "1"}}}}
+    k = next(i for i, a in enumerate(pl) if (a.get("notes") or "").startswith("Use Primal Bite"))
+    pl.insert(k, {"action": {"condition": multi, "castSpell": {"spellId": {"spellId": 9908}}}})
+    for a in pl:
         if a.get("action", {}).get("castSpell", {}).get("spellId", {}).get("spellId") == 9881:
-            rage = lambda v: {"cmp": {"op": "OpGe", "lhs": {"currentRage": {}}, "rhs": {"const": {"val": v}}}}
-            one = {"cmp": {"op": "OpEq", "lhs": {"numberTargets": {}}, "rhs": {"const": {"val": "1"}}}}
-            a["action"]["condition"] = {"or": {"vals": [{"and": {"vals": [one, rage("20")]}}, rage("45")]}}
+            c = a["action"].get("condition")
+            extra = {"or": {"vals": [one, rage("45")]}}
+            a["action"]["condition"] = {"and": {"vals": [c, extra]}} if c else extra
     return p
 
 GROUP_TANKS = {"Paladin beta (BT4b)": (path_player(BT4b, "beta"), ""),
                "Paladin proposed (PT3)": (path_player(PT3, "proposed"), PROT_ALL),
-               "Warrior": (load(WARRIOR_TANK), ""), "Druid": (druid_multi(load(BEAR)), "")}
+               "Warrior": (load(WARRIOR_TANK), ""), "Warrior, Shield Slam x2.25": (load(WARRIOR_TANK), "", SHIELD_SLAM_225),
+               "Druid": (druid_multi(load(BEAR)), "", DRUID_THREAT), "Druid, wowsims threat": (druid_multi(load(BEAR)), "")}
 
-def group(p, f, n, share=1 / 3, iters=2000):
+def group(p, f, n, env=None, share=1 / 3, iters=2000):
     rq = request(p, "raid", tank=True, iters=iters, wowhead=WOWHEAD)
     t0 = rq["encounter"]["targets"][0]; t0["minBaseDamage"] *= share
     rq["encounter"]["targets"] = [dict(copy.deepcopy(t0), name=f"Mob {i + 1}") for i in range(n)]
-    pl = player_metrics(sim(rq, f)); per = [0.0] * n
+    pl = player_metrics(sim(rq, f, env)); per = [0.0] * n
     for a in pl["actions"]:
         for x in a["targets"]:
             if x.get("unitIndex", 0) < n: per[x.get("unitIndex", 0)] += x.get("threat", 0)
@@ -74,7 +81,7 @@ def group(p, f, n, share=1 / 3, iters=2000):
 
 def run_groups():
     jobs = [(t, n) for t in GROUP_TANKS for n in (1, 3, 5)]
-    return dict(ThreadPoolExecutor(4).map(lambda j: (j, group(*GROUP_TANKS[j[0]], j[1])), jobs))
+    return dict(ThreadPoolExecutor(4).map(lambda j: (j, group(*GROUP_TANKS[j[0]][:2], j[1], *GROUP_TANKS[j[0]][2:])), jobs))
 
 if __name__ == "__main__":
     r = run()

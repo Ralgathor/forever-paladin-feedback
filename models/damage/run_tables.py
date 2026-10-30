@@ -183,12 +183,12 @@ if __name__ == "__main__":
     sh, sh0 = retribution(g, tal=M.SHOCK_RET), retribution(g, tal=dict(M.SHOCK_RET, hsk=0))
     print(f"Shock-Retribution: {sh:.0f} ({pct(sh, P)} of RB2). No mana for Holy Shock: {sh0:.0f} ({pct(sh0, P)})")
 
-    def ret_tank(front=True, dungeon=True, cons=False):
+    def ret_tank(front=True, dungeon=True, cons=False, tal=M.RB2):
         """RB2 with Righteous Fury (x1.9 on Holy damage), pre-raid gear (Threat, part 1). dungeon: Blessing of Might only."""
         save = (M.KINGS, M.SHOUT, M.MOTW)
         if dungeon:
             M.KINGS, M.SHOUT, M.MOTW = 1.0, 0, 0
-        tot, src_t, _ = retribution(gear(1), detail=True, front=front, extra="consecration" if cons else None)
+        tot, src_t, _ = retribution(gear(1), detail=True, front=front, tal=tal, extra="consecration" if cons else None)
         M.KINGS, M.SHOUT, M.MOTW = save
         return src_t["Auto attacks"] + 1.9 * (tot - src_t["Auto attacks"])
     PB2_TPS, PB2_CONS = 560, 652          # Analysis, Builds, part 3 (threat model)
@@ -199,15 +199,20 @@ if __name__ == "__main__":
 
     print("\n## Part 11: new talents, Burning Zeal (C-R4) and Measure for Measure (C-R5)")
     shape75 = lambda t: (PURE["Warrior"] * F[t] + PURE["Rogue"] * C[t] + casters * (1 + 0.75 * shape[t])) / 5
-    RB6 = dict(M.RB1, bz=2, mfm=3, di=2)                                    # 5/8/38: Holy dip Divine Intellect 2, Improved Seals 3
-    for name, tal, kw in (("Burning Zeal 2/2", dict(M.RB2, bz=2), {}), ("Measure for Measure 3/3", dict(M.RB2, mfm=3), {}),
-                          ("Measure for Measure 3/3, from the front", dict(M.RB2, mfm=3), dict(front=True)),
-                          ("Both (RB2 + 5 points)", dict(M.RB2, bz=2, mfm=3), {}), ("RB6, 5/8/38", RB6, {})):
-        base = (lambda h, kw=kw: retribution(h, **kw))
+    RB6 = M.RB6
+    BASE0 = dict(M.RB2, bz=0, mfm=0)                                        # RB2 without the new talents
+    for name, tal, kw in (("Burning Zeal 5/5", dict(BASE0, bz=5), {}), ("Measure for Measure 3/3", dict(BASE0, mfm=3), {}),
+                          ("Measure for Measure 3/3, from the front", dict(BASE0, mfm=3), dict(front=True)),
+                          ("Both", dict(BASE0, bz=5, mfm=3), {}), ("RB2 (Burning Zeal 5/5, Measure for Measure 2/3)", M.RB2, {}),
+                          ("RB6, 5/8/38", RB6, {})):
+        base = (lambda h, kw=kw: retribution(h, tal=BASE0, **kw))
         new = (lambda h, tal=tal, kw=kw: retribution(h, tal=tal, **kw))
         inc = [new(gear(t)) / base(gear(t)) - 1 for t in range(5)]
         row = " | ".join(f"{v:+.1%}" for v in inc)
         rr = growth(new)
         pure_row = " | ".join(pct(r * new(g) / P * rr[t], shape75(t)) for t in range(5))
         print(f"{name}: {row}." + ("" if kw else f" Against the pure average (x1.75): {pure_row}"))
+    b, bc = ret_tank(tal=RB6), ret_tank(cons=True, tal=RB6)
+    print(f"Retribution tank RB6 (Measure for Measure 3/3, front, dungeon buffs): {b:.0f} TPS ({pct(b, PB2_TPS)} of PB2), "
+          f"with Consecration {bc:.0f} ({pct(bc, PB2_CONS)})")
     print("Now (RB2) against the pure average (x1.75): " + " | ".join(pct(r * R[t], shape75(t)) for t in range(5)))

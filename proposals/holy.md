@@ -9,15 +9,16 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 | 1 (0) | Improved Seals (M-H1), Unyielding Faith (M-H2), Divine Intellect | 10 |
 | 2 (5) | Infusion of Light (C-H3), Reverence (C-H1), Spiritual Focus | 7 |
 | 3 (10) | Voice of Truth, Purifying Power, Lingering Light (C-H2) | 5 |
-| 4 (15) | Divine Precision (M-H5), Illumination, Divine Favor, Divine Grace (C-H6) | 11 |
-| 5 (20) | Merciful Light (C-H5), Holy Shock, Holy Power (M-H3) | 8 |
+| 4 (15) | Divine Grace (C-H6), Illumination, Divine Favor | 8 |
+| 5 (20) | Divine Precision (M-H5), Holy Shock, Merciful Light (C-H5), Holy Power (M-H3) | 11 |
 | 6 (25) | Consecrated Ground (M-H4), Healing Light (C-H4) | 5 |
 | 7 (30) | Light's Vigil | 1 |
 
 - Holy has 47 points (beta: 46).
 - You can use each talent when its row opens.
 - Illumination still requires Reverence (straight arrow in column 2).
-- Divine Grace (C-H6) requires Divine Favor, and Merciful Light (C-H5) requires Holy Shock (arrows in the same row). A talent that changes only an ability of another talent requires that talent.
+- Merciful Light (C-H5) requires Holy Shock (arrow in the same row). Divine Grace (C-H6) has no requirement, because Lay on Hands also triggers it. A talent that changes only an ability of another talent requires that talent.
+- Row 5: Divine Precision (column 1) and Merciful Light (column 3) are on the two sides of Holy Shock (column 2). Merciful Light requires Holy Shock. Divine Precision is in its beta place, with no requirement (M-H5). Holy Power goes to column 4.
 - Toughness and Divine Strength removal (C-P3) deletes Divine Strength. Unyielding Faith (M-H2) goes to row 1.
 - A Holy healer needs no filler. Rows 1–3 hold 16 healer points (row 4 needs 15). Rows 1–5 hold 32 (row 6 needs 25). Holy healing is complete at 36 points. See Analysis, Tree balance.
 
@@ -87,7 +88,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 ## M-H3. Holy Power: row 6 → row 5
 
 - **Text.** "Increases the critical strike chance of your Holy Shock and Holy Strike spells by 3/6/9/12/15%, and all other spells by 1/2/3/4/5%." 5 ranks, the same as the beta.
-- **Position.** Row 5, column 3.
+- **Position.** Row 5, column 4.
 - **Why.** In row 6, a Holy healer needed 2 points of filler: rows 1–5 held only 23 healer points. With Holy Power in row 5, they hold 28 (32 with Divine Grace, C-H6, and Merciful Light, C-H5).
 - **Retribution and Protection cannot take it.** Twist of Light and Holy Shield need 31 points. Holy Power needs 25 Holy points. 25/0/26 with Holy Power loses Twist of Light and Champion of the Light: −19% (see Builds, part 4).
 
@@ -95,48 +96,50 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 
 - **Text.** "Gives your Holy spells 5/10% increased damage against the first 4 enemies that enter your Consecration." 2 ranks, the same as the beta.
 - **Position.** Row 6, column 1. Healing Light stays in column 3. The Light's Vigil arrow uses column 2.
-- **Why.** Row 5 has Holy Power now (M-H3). Consecrated Ground moves one row lower. Thus, row 5 has 8 points (with Merciful Light, C-H5) and row 6 has 5.
+- **Why.** Row 5 has Holy Power now (M-H3). Consecrated Ground moves one row lower. Thus, row 5 has 11 points (with Divine Precision and Merciful Light, C-H5) and row 6 has 5.
 - **Who takes it.** Only deep Holy builds with Holy Shock (Shockadin, 38/0/13).
 
-## C-H5. Merciful Light (new talent): row 5, column 1, 2 ranks
+## C-H5. Merciful Light (new talent): row 5, column 3, 2 ranks
 
 - **Proposed text.** "Increases the amount healed by your Holy Shock by 50/100% on targets at or below 35% health."
 - **Requires Holy Shock** (arrow in row 5). The talent changes only the Holy Shock heal.
 - **Problem.** After a large hit on one tank, the Druid heals the most. It has Swiftmend and Nature's Swiftness. The proposed Paladin is 14–18% below the Druid after 3 sec (see Analysis, Healing, part 5). Holy Shock is the only instant heal of the Paladin.
 - **Model.** Decimation (Warlock, Forever) gives a bonus below 35% health. Hammer of Wrath is the Paladin attack below 20% health. Merciful Light is the healing version of this rule.
-- **Value.** At 715 healing power, on a tank at or below 35% health after the hit:
+- **Value.** At 715 healing power, on a tank 1,000 health below 35% after the hit. The bonus applies only while the tank is at or below 35% health:
 
 | Against the Druid | 3 sec | 6 sec | 3 sec, short cooldowns | 6 sec, short cooldowns |
 | --- | --- | --- | --- | --- |
 | Proposed, without Merciful Light | −18% | −3% | −14% | −3% |
-| With Merciful Light 2/2 | −2% | +6% | +6% | +9% |
+| With Merciful Light 2/2 | −2% | +4% | +6% | +9% |
 
 - **No change to the healing in long fights.** Holy Shock gives less healing for each mana point than Flash of Light. Thus, the best cast plan does not use it, also with the bonus. In raids, few targets go below 35% health.
-- **Limit.** After a large hit that leaves the tank above 35% health, the talent gives nothing.
-- **Who takes it.** Row 5 needs 20 Holy points. Holy healers take it. Shock-Retribution (26/0/25) can also take it.
-- **Risk.** In PvP, Shock-Retribution heals an ally at or below 35% health for about 1,630 each 10 sec, with no cast time (see Watch list, W21).
+- **Limit.** After a large hit that leaves the tank above 35% health, the talent gives nothing. The Paladin must cast Holy Shock first, before other heals take the tank above 35%.
+- **Who takes it.** Row 5 needs 20 Holy points. Holy healers take it. Shock-Retribution can also take it.
+- **Risk.** In PvP, a Holy healer heals an ally at or below 35% health for about 1,630 each 10 sec, with no cast time. Shock-Retribution heals for about 640–860 (see Watch list, W21).
 
-## C-H6. Divine Grace (new talent): row 4, column 4, 2 ranks
+## C-H6. Divine Grace (new talent): row 4, column 1, 2 ranks
 
-- **Proposed text.** "Reduces the cooldown of your Divine Favor by 30/60 sec."
-- **Requires Divine Favor** (arrow in row 4). The talent changes only Divine Favor.
-- **Problem.** The design goal of Holy is the best single-target healer. The lead on one tank is small: +1% to +9% against the Druid (W14).
-- **Model.** Cooldown talents of Classic, for example Improved Reincarnation (Shaman).
-- **Value.** Divine Favor with Holy Light is the largest heal of the Paladin. At 2/2, you cast it each 1 min (beta: each 2 min).
+- **Proposed text.** "Gives the target of your Lay on Hands spell, or of a Divine Favor critical effect from your Flash of Light, Holy Light or Holy Shock, a 15/30% bonus to their armor value from items for 15 sec."
+- **No requirement.** Two spells give the buff: Lay on Hands and Divine Favor. Thus, the talent does not change only Divine Favor, and it has no arrow. Divine Favor affects Flash of Light, Holy Light and Holy Shock. Each of these heals gives the buff.
+- **Problem.** After a large hit, the tank is in danger for some seconds. The Paladin heals the health back, but it cannot help the tank to take less damage.
+- **Model.** Improved Lay on Hands (Paladin, Classic) gave the target 15/30% armor from items after Lay on Hands. Forever removed that talent. Divine Grace brings back this effect. Inspiration (Priest) and Ancestral Healing (Shaman) also give armor to the target of a critical heal. Divine Favor always gives a critical heal.
+- **Value.** The tank gear of wowsims has 5,500 to 6,400 armor from items. Against a level 63 boss, the tank takes 10–11% less physical damage while the buff is active (rank 1: 6%). With Divine Favor each 2 min, this is 1.4% less physical damage for the full fight (see Analysis, Healing, part 5). Lay on Hands has a 20 min cooldown. With one Lay on Hands on the tank in a 3 min boss fight, the value is 2.3%.
 
-| | One tank, against the Druid | Raid, against the Shaman |
+| Divine Grace | While the buff is active | Full fight |
 | --- | --- | --- |
-| Proposed, without Divine Grace | +1% to +9% | −2% to +5% |
-| With Divine Grace 2/2 | +3% to +11% | −1% to +7% |
+| 1/2 (15%) | −6% physical damage | −0.7% (−1.2% with one Lay on Hands in 3 min) |
+| 2/2 (30%) | −10% to −11% physical damage | −1.4% (−2.3% with one Lay on Hands in 3 min) |
 
-- **Range.** 715 and 900 healing power, fights of 3, 5 and 10 min (see Analysis, Healing, parts 4 and 5).
-- **Recovery after a large hit.** Divine Favor is ready more often. The table of Merciful Light (C-H5) with all cooldowns applies each 1 min.
-- **The lead stays below the W14 limit.** The Paladin is 3–11% above the Druid on one tank. W14 gives 20% as the limit.
+- **Duration.** The Classic buff lasted 2 min. With Divine Favor each 2 min, the buff is then always active on the main tank: −11% physical damage for the full fight. This is too strong. With 15 sec, the buff helps after a large hit, as Inspiration does.
+- **Who takes it.** Holy healers. Retribution and Protection can take it with 15 Holy points. Without Divine Favor, only Lay on Hands gives the buff, one time each 20 min.
+- **Healing.** The talent does not change the healing per sec. The healing model gives the same values as without the talent.
+- **Stacks.** Inspiration and Ancestral Fortitude do not stack in Classic. The buff of Improved Lay on Hands was a different effect. A beta test must find whether Divine Grace stacks with them (see Open items).
 
-## M-H5. Divine Precision: row 5 → row 4, no requirement
+## M-H5. Divine Precision: no requirement
 
 - **Text.** "Improves your chance to hit with Holy spells by 6/12/18%." 3 ranks, the same as the beta.
-- **Change.** Row 4, column 1. In the beta, it requires Holy Shock (row 5). A talent in row 4 cannot require a talent in row 5. Thus, the requirement goes.
-- **Why.** Merciful Light (C-H5) uses the place next to Holy Shock (row 5, column 1). Row 4 then has 4 talents, from column 1 to column 4.
-- **Who takes it.** Holy Shock builds (Shockadin, 38/0/13). Other specs need 15 Holy points.
-- **Risk.** Retribution and Protection can take it with 15 Holy points. It gives spell hit to Exorcism, Holy Wrath and Consecration. Judgements use the melee hit table (see Watch list, W22).
+- **Change.** Row 5, column 1, the beta place. In the beta, it requires Holy Shock. The requirement goes.
+- **Why.** Divine Precision does not change Holy Shock. It gives hit to all Holy spells. Thus, by the rule of the Holy layout, it does not require Holy Shock.
+- **Cost.** Row 5 needs 20 Holy points. Holy Shock costs 1 point, and all Divine Precision builds take it. Thus, the build values do not change.
+- **Who takes it.** Holy Shock builds (Shockadin, 38/0/13, and Shock-Retribution, 28/0/23).
+- **Risk.** It gives spell hit to Holy Shock, Exorcism, Holy Wrath and Consecration. Seals and Judgements use the melee hit table (see Watch list, W22).

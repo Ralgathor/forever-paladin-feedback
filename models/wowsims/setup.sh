@@ -4,7 +4,7 @@
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 WORK="${WOWSIMS_WORK:-$HERE/.work}"
-COMMIT=69e0e5b
+COMMIT=a10f483
 mkdir -p "$WORK"
 if [ ! -d "$WORK/forever" ]; then
   git clone https://github.com/wowsims/forever.git "$WORK/forever"
@@ -13,6 +13,7 @@ cd "$WORK/forever"
 git checkout -q -f "$COMMIT"
 git clean -qfd sim
 git apply "$HERE/proposals.patch"
+git apply "$HERE/tank_threat.patch"   # threat values of the Druid and Warrior abilities, off by default (wowsims.py)
 
 # Go code for the protobuf files (the repository does not keep it).
 go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.36.10   # the protobuf version of go.mod

@@ -66,7 +66,7 @@ def threat_same_inputs():
     m = player_metrics(sim(request(julien(), "raid", tank=True, iters=iters, dur=dur)))
     def S(key, k):
         a = [x for x in m["actions"] if (x["id"].get("spellId") == key or
-             (key == "attack1" and x["id"].get("otherId") == "OtherActionAttack" and x["id"].get("tag") == 1))]
+             (key == "attack1" and x["id"].get("otherId") == "OtherActionAttack"))]
         return sum(t.get(k, 0) for x in a for t in x["targets"])
     crit = S("attack1", "crits") / (S("attack1", "hits") + S("attack1", "crits")) + TM.CRIT_SUPP
     g = TM.PART1.but(sp=sp, ap=ap, wdps=35.3, wspeed=1.5, bv=36 * 1.3, hit=0.06, crit=crit)

@@ -28,16 +28,17 @@ def armor_dr(armor=BOSS_ARMOR, level=60):
     """Classic physical damage reduction."""
     return armor / (armor + 400 + 85 * level)
 
-def table(hit, crit, auto, dodge=DODGE, parry=PARRY):
+def table(hit, crit, auto, dodge=DODGE, parry=PARRY, crit_bonus=1.0):
     """Melee attack table. Returns (chance to land, expected damage factor).
-    Auto attacks: one roll. Special attacks: the critical hit is a separate roll on the hits that land."""
+    Auto attacks: one roll. Special attacks: the critical hit is a separate roll on the hits that land.
+    crit_bonus: the critical damage bonus of special attacks (1.0: critical hit x2)."""
     miss = max(0.0, MISS - hit)
     land = 1 - miss - dodge - parry
     crit = max(0.0, crit - CRIT_SUPP)
     if auto:
         crit = min(crit, land - GLANCE)
         return land, GLANCE * GLANCE_DMG + crit * 2 + (land - GLANCE - crit)
-    return land, land * (1 + crit)
+    return land, land * (1 + crit * crit_bonus)
 
 # ---------------------------------------------------------------- gear (parts 1, 2 and 3)
 class Gear:
@@ -96,7 +97,8 @@ CONS_EVERY = 8              # Consecration on cooldown, as in Analysis, Mana
 
 # Talents. Holy: "is" Improved Seals, "cg" Consecrated Ground, "hp" Holy Power. Protection: "prec" Precision,
 # "red" Redoubt, "sj" Swift Judgement, "ohws" One-Handed Weapon Specialization, "reck" Reckoning, "ic" Iron Creed,
-# "hsh" Holy Shield. Retribution: "conv" Conviction, "ij" Improved Judgement, "vind" Vindication, "sa" Sacred Arbiter. Talents with no threat effect are left out.
+# "hsh" Holy Shield. Retribution: "conv" Conviction, "ij" Improved Judgement, "vind" Vindication, "sa" Sacred Arbiter,
+# "bz" Burning Zeal (C-R4), "mfm" Measure for Measure (C-R5). Talents with no threat effect are left out.
 # TANK_REF: the 8/35/8 tank of Analysis, Threat (Conviction 3, Reverence; first PB1). All threat tables use it.
 TANK_REF = {"is": 3, "prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 5, "ic": 5, "hsh": 1, "conv": 3}
 # Analysis, Builds, part 3: 3/35/13 tanks with Sanctified Judgement (no threat effect) and Improved Judgement.
@@ -126,7 +128,7 @@ def paladin(g, tal=TANK_REF, proposed=True, c14=1.0, crusader=True, consecration
     crit = g.crit + 0.01 * t("conv")
     spell_crit = crit if proposed else g.crit        # spells crit in the beta too. C-R1: Conviction also for spells
     sp = g.sp + (CRUSADER if crusader else 0)
-    ap = g.ap * (1 + 0.01 * t("vind"))               # Vindication: +1-5% Attack Power (full uptime)
+    ap = g.ap * (1 + 0.02 * t("vind"))               # Vindication 3 ranks (C-P3): +2/4/6% Attack Power (full uptime)
     w = g.but(ap=ap)
     dr = armor_dr(g.armor)
     ohws = 1 + OHWS[t("ohws")]                       # melee, Seals, Judgements, Holy Strike (beta test)
@@ -138,6 +140,7 @@ def paladin(g, tal=TANK_REF, proposed=True, c14=1.0, crusader=True, consecration
     land_a, f_auto = table(hit, crit, auto=True)
     land_s, f_spec = table(hit, crit, auto=False)
     swings = (1 - casting) / g.wspeed                # a cast stops the auto attacks
+    bz = 1 + 0.04 * t("bz")                          # Burning Zeal (5 ranks): critical damage bonus of Seals, Judgements, Holy Strike
     src = {}
     if t("hsh"):
         # Holy Shield: 221 + 8% of spell power (+ c14 x block value) for each block. Not OHWS. No critical hits.
@@ -146,12 +149,16 @@ def paladin(g, tal=TANK_REF, proposed=True, c14=1.0, crusader=True, consecration
     # Judgement of Fury: 153-167 + 42.9%. Melee hit table with no dodge or parry, critical hit x2. One each 10 sec,
     # Swift Judgement each min. Improved Judgement: -1 sec cooldown for each rank. The damage hits before the taunt
     # (beta test).
-    _, f_jud = table(hit, crit, auto=False, dodge=0.0, parry=0.0)
+    # Measure for Measure: each dodge or parry of the target (auto attacks, Reckoning attacks and Holy Strike) reduces
+    # the remaining Judgement cooldown by 1 sec for each rank. Average cooldown: cd / (1 + rank x dodges and parries per sec).
+    _, f_jud = table(hit, crit, auto=False, dodge=0.0, parry=0.0, crit_bonus=bz)
     jud = (160 + 0.429 * sp) * seals * ohws * cg * f_jud
-    src["Judgement of Fury"] = jud * RF * (1 / (10 - t("ij")) + t("sj") / 60)
+    avoided = (swings + extra + 0.1) * (DODGE + PARRY)
+    jud_cd = (10 - t("ij")) / (1 + t("mfm") * avoided)
+    src["Judgement of Fury"] = jud * RF * (1 / jud_cd + t("sj") / 60)
     # Holy Strike: 50% of (normalized weapon damage + 93 + 42.9%), all Holy damage: no armor. Holy Power: +3% critical
     # hit for each rank. Its threat is x1.9 in full (beta test), and Iron Creed adds ic_rank for each rank.
-    _, f_hstr = table(hit, crit + 0.03 * t("hp"), auto=False)
+    _, f_hstr = table(hit, crit + 0.03 * t("hp"), auto=False, crit_bonus=bz)
     hstr = 0.5 * (w.weapon(NORM_1H) + 93 + 0.429 * sp) * cg * ohws * f_hstr
     src["Holy Strike"] = hstr * RF * (1 + ic_rank * t("ic")) * (1 + 0.20 * t("sa")) / 10   # Sacred Arbiter: +20%
     # Auto attacks: physical. Reckoning extra attacks: in the beta, the next swing (glancing blows possible).
@@ -160,7 +167,7 @@ def paladin(g, tal=TANK_REF, proposed=True, c14=1.0, crusader=True, consecration
     src["Reckoning attacks"] = w.weapon() * (1 - dr) * ohws * (f_spec if proposed else f_auto) * extra * phys_mult
     # Seal of Fury (rank 7): 35 + 10% of spell power for each melee hit. Cannot miss. Critical hit x2 with a separate roll.
     hits = land_a * swings + (land_s if proposed else land_a) * extra + (land_s / 10 if c16 else 0)
-    src["Seal of Fury"] = (35 + 0.10 * sp) * seals * ohws * cg * (1 + max(0.0, crit - CRIT_SUPP)) * RF * hits
+    src["Seal of Fury"] = (35 + 0.10 * sp) * seals * ohws * cg * (1 + max(0.0, crit - CRIT_SUPP) * bz) * RF * hits
     if consecration:
         # Rank 5: 8 ticks of 12 + 27 Holy damage (312) + 33.6% of spell power. 15% of the ticks miss. Not OHWS.
         # Spell critical hit x1.5 (beta test).

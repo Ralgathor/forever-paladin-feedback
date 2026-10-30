@@ -8,9 +8,9 @@ This section compares the Holy Paladin with the three other healers of Forever: 
 - **The cooldown heals cause the difference.** For the other healers, a cooldown heal is the most efficient spell: Prayer of Mending, Riptide, Swiftmend and Tranquility. For the Paladin, Holy Shock and Light's Vigil are the least efficient spells (part 3).
 - **The Paladin also has the least mana.** Reverence keeps 30% of the Spirit regeneration during casts. Meditation, Reflection and Mindfulness keep 50% (part 2).
 - **The Druid talents make the Druid strong.** Nature's Splendor makes Rejuvenation and Regrowth last longer. Swiftmend heals for the full heal over time and does not remove it (player test). Gift of the Earthmother gives a global cooldown of 1 sec.
-- **With the proposals, the Paladin is about equal to the Shaman in raids** (−1% to +7%). It is 5–18% below the Druid and 26–30% below the Priest. Reverence (C-H1) gives the mana. Lingering Light (C-H2), Blessing of Light removal (C3) and Conviction give larger heals. Divine Grace (C-H6) gives one more Divine Favor each 2 min (part 4).
-- **On one tank, the proposed Paladin is first.** It is 3–11% above the Druid, and 16–28% above the Shaman and the Priest. Without Divine Grace (C-H6), it is 1–9% above the Druid. Thus, the proposals make the Paladin the best single-target healer, as the design goal says. In the beta, the Paladin is 5–13% below the Druid (part 5).
-- **After a large hit on one tank, the Druid is first after 3 sec.** Without Merciful Light (C-H5), the proposed Paladin is 14–18% below it after 3 sec, and 3–4% below after 6 sec. With Merciful Light, on a tank at or below 35% health, it is 2% below to 7% above after 3 sec, and 6–9% above after 6 sec. In the beta, the Paladin is 18–22% below the Druid (part 5).
+- **With the proposals, the Paladin is about equal to the Shaman in raids** (−2% to +5%). It is 7–19% below the Druid and 27–32% below the Priest. Reverence (C-H1) gives the mana. Lingering Light (C-H2), Blessing of Light removal (C3) and Conviction give larger heals (part 4).
+- **On one tank, the proposed Paladin is first.** It is 1–9% above the Druid, and 14–26% above the Shaman and the Priest. Divine Grace (C-H6) also gives the tank 1.4% less physical damage (2.3% with one Lay on Hands in a 3 min fight). Thus, the proposals make the Paladin the best single-target healer, as the design goal says. In the beta, the Paladin is 5–13% below the Druid (part 5).
+- **After a large hit on one tank, the Druid is first after 3 sec.** Without Merciful Light (C-H5), the proposed Paladin is 14–18% below it after 3 sec, and 3–4% below after 6 sec. With Merciful Light, on a tank at or below 35% health, it is 2% below to 6% above after 3 sec, and 4–9% above after 6 sec. In the beta, the Paladin is 18–22% below the Druid (part 5).
 - **Heals over time can be critical heals in Forever.** This helps the Priest, the Druid and the Shaman. The Paladin has almost no heals over time. With the Classic rule, the proposed Paladin is 1–4% higher against each healer (part 8).
 - **Illumination at 75%: withdrawn.** With it, the Paladin is first on one tank by 9–15%, and 10–14% above the Shaman in raids. Healing Light at 35% gives +5% to +13% on one tank (part 6, W14).
 - **A stronger Holy Shock or Light's Vigil is not necessary in raids.** The raid healing is already at the level of the Shaman (part 6).
@@ -85,12 +85,11 @@ Healing per sec after overhealing, all targets.
 | Druid | 855 | 689 | 604 | 903 | 729 | 639 |
 | Shaman | 709 | 599 | 517 | 779 | 654 | 562 |
 | Paladin, beta | 616 | 532 | 449 | 674 | 588 | 496 |
-| Paladin, proposed, without Divine Grace (C-H6) | 694 | 605 | 526 | 769 | 677 | 592 |
-| Paladin, proposed | 704 | 617 | 537 | 780 | 690 | 602 |
+| Paladin, proposed | 694 | 605 | 526 | 769 | 677 | 592 |
 
 - The Priest, the Druid and the Shaman spend all their mana before the end of the fight. Thus, their healing per mana and their mana decide the result.
 - In the beta, the Paladin is 10–13% below the lowest other healer.
-- With the proposals, the Paladin is −1% to +7% against the Shaman and 5–18% below the Druid. It is still 26–30% below the Priest. The cause is Prayer of Mending (part 8). Without Divine Grace (C-H6), it is −2% to +5% against the Shaman.
+- With the proposals, the Paladin is −2% to +5% against the Shaman and 7–19% below the Druid. It is still 27–32% below the Priest. The cause is Prayer of Mending (part 8).
 - After the Priest, the Druid heals the most. Swiftmend on a Regrowth of 27 sec is its most efficient heal after Tranquility. It also casts Innervate on itself.
 - The proposed Paladin casts Flash of Light, Holy Light when Infusion of Light is active, and Divine Favor. It does not cast Holy Shock or Light's Vigil. In fights of 10 min, it also uses all its mana before the end.
 
@@ -104,14 +103,13 @@ Healing per sec after overhealing, on one tank. "Maximum" is the raw healing per
 | Druid | 681 | 573 | 518 | 737 | 622 | 563 | 1,320 | 1,423 |
 | Shaman | 607 | 509 | 437 | 654 | 548 | 470 | 1,278 | 1,377 |
 | Paladin, beta | 616 | 532 | 449 | 674 | 588 | 496 | 1,279 | 1,347 |
-| Paladin, proposed, without Divine Grace (C-H6) | 694 | 605 | 526 | 769 | 677 | 592 | 1,531 | 1,647 |
-| Paladin, proposed | 704 | 617 | 537 | 780 | 690 | 602 | 1,531 | 1,647 |
+| Paladin, proposed | 694 | 605 | 526 | 769 | 677 | 592 | 1,531 | 1,647 |
 
 - In the beta, the Paladin is 5–13% below the Druid, and 1–7% above the Shaman and the Priest. Its maximum is about equal to the Shaman.
-- With the proposals, the Paladin is 3–11% above the Druid, and 16–28% above the Shaman and the Priest. Without Divine Grace (C-H6), it is 1–9% above the Druid. Its maximum is 16% above the Druid and 20% above the Shaman.
+- With the proposals, the Paladin is 1–9% above the Druid, and 14–26% above the Shaman and the Priest. Its maximum is 16% above the Druid and 20% above the Shaman.
 - The proposals give more mana (Reverence, C-H1) and larger heals (Lingering Light, C-H2; Blessing of Light removal, C3; Conviction, C-R1). The lead over the Shaman and the Priest increases with the fight length.
-- The design goal of Holy is the best single-target healer. The proposals reach it by 3–11% (1–9% without Divine Grace, C-H6). With Illumination at 75% (withdrawn), the lead is 9–15%. With Healing Light at 35%, it is 5–13% (part 6, W14).
-- **Divine Grace (C-H6)** gives one more Divine Favor with Holy Light each 2 min. The model uses 3 casts in a 3 min fight (was 2), 5 in 5 min (was 3) and 10 in 10 min (was 5).
+- The design goal of Holy is the best single-target healer. The proposals reach it by 1–9%. With Illumination at 75% (withdrawn), the lead is 9–15%. With Healing Light at 35%, it is 5–13% (part 6, W14).
+- **Divine Grace (C-H6)** does not change the healing. Lay on Hands and each heal from Divine Favor give the tank 30% armor from items for 15 sec. With the tank gear of wowsims (5,500 to 6,400 armor from items), the tank takes 10–11% less physical damage for 15 sec, and 1.4% less for the full fight (models/healing/divine_grace.py). With one Lay on Hands on the tank in a 3 min fight, the value is 2.3%.
 
 **Holy Light in the model.** The values above count all healing on the tank as equal. Thus, the model casts Holy Light only after Infusion of Light or with Divine Favor. Holy Light gives about 30% of the healing in fights of 3 min and 6% in fights of 10 min. The other heals are Flash of Light, because it gives more healing for each mana point (8.2 against 5.9). In a real fight, a Paladin casts more Holy Light after a large hit. The table below shows this value.
 
@@ -132,11 +130,13 @@ The rules of the recovery model:
 | Shaman | 4,750 | 8,054 | 3,361 | 6,664 | Healing Wave, Healing Wave |
 | Paladin, beta | 5,024 | 8,232 | 3,947 | 7,155 | Holy Light (Infusion of Light), Holy Shock, Holy Light, Flash of Light |
 | Paladin, proposed | 5,188 | 9,695 | 4,217 | 8,449 | Holy Light (1.5 sec), Flash of Light, Holy Light (1.5 sec), Holy Shock |
-| Paladin, proposed, Merciful Light (C-H5), tank at or below 35% health | 6,156 | 10,664 | 5,185 | 9,437 | Holy Shock, Holy Light (1.5 sec), Flash of Light, Holy Light (1.5 sec) |
+| Paladin, proposed, Merciful Light (C-H5), tank at or below 35% health | 6,156 | 10,469 | 5,175 | 9,437 | Holy Shock, Holy Light (1.5 sec), Flash of Light, Holy Light (1.5 sec) |
 
 - The heals over time at the hit give the other healers 300–670 in the first 3 sec: Druid 669, Priest 383, Shaman 301. The Lingering Light pool of the Paladin gives 179.
 - Without Merciful Light (C-H5), the Druid is first in all cases. Its heals over time are on the tank, and Swiftmend heals for a full Rejuvenation in a global cooldown of 1 sec. The proposed Paladin is 14–18% below the Druid after 3 sec, and 3–4% below after 6 sec.
-- **Merciful Light (C-H5)** doubles the Holy Shock heal on a tank at or below 35% health. At 715 healing power, the Paladin is then 2% below the Druid after 3 sec (6% above with short cooldowns only), and 6–9% above after 6 sec. At 900, the result is almost the same (−2% to +7% after 3 sec, +6% to +9% after 6 sec). After a large hit that leaves the tank above 35% health, the values without Merciful Light apply.
+- **Merciful Light (C-H5)** doubles the Holy Shock heal on a tank at or below 35% health. The model gives the bonus only while the tank is still at or below 35% health. The healing that lands before the Holy Shock must stay below the health that the tank needs to reach 35%. The table uses a tank 1,000 health below 35% after the hit.
+- At 715 healing power, the Paladin is then 2% below the Druid after 3 sec (6% above with short cooldowns only), and 4–9% above after 6 sec. At 900, the result is the same. Thus, Holy Shock is the first heal after the hit. Values do not change from 500 to 4,000 health below 35%.
+- If the tank is at exactly 35% health, the first Lingering Light tick stops the bonus. The Paladin is then 8% below to 1% below the Druid after 3 sec, and 1–4% above after 6 sec. After a large hit that leaves the tank above 35% health, the values without Merciful Light apply.
 - The proposed Paladin is 9% or more above the Shaman and the Priest in all cases.
 - In the beta, the Paladin is 18–22% below the Druid.
 - Infusion of Light (C-H3) makes each Holy Light after a Flash of Light or Holy Shock a 1.5 sec cast. Without Infusion of Light (C-H3), the proposed Paladin heals 1–2% less after 3 sec, and 7–8% less after 6 sec. The beta often has Infusion of Light active at the hit. Thus, Infusion of Light (C-H3) adds little in the first 3 sec.
@@ -147,7 +147,7 @@ The rules of the recovery model:
 
 ## 6. Options and changes examined
 
-**The lead on one tank.** Each value range covers 715 and 900 healing power, and fights of 3, 5 and 10 min. The values of this part use the proposals without Divine Grace (C-H6). Divine Grace adds about +1% to +2% to each value.
+**The lead on one tank.** Each value range covers 715 and 900 healing power, and fights of 3, 5 and 10 min. The values of this part use the proposals.
 
 | Option | Raid, against the Shaman | Raid, against the Druid | Raid, against the Priest | One tank, against the best other healer |
 | --- | --- | --- | --- | --- |
@@ -231,7 +231,7 @@ The values in brackets are for a raid fight of 3 min at 715 healing power.
 
 wowsims Forever and the model agree for the Paladin: the healing for each point of mana is within −4.3% to +5.3%. For the Priest, wowsims gives a higher Greater Heal cost, because a plan with one spell has no Litany of Light return.
 
-Conditions: wowsims Forever commit 69e0e5b with the proposals patch (models/wowsims). The Holy Paladin gear of wowsims (382 healing power with raid buffs) for both classes. Raid buffs, no consumables, a 3 min fight, 1,000 iterations. One heal plan on one target. The sim has no overhealing. Thus, the values are raw healing for each point of mana, with the Illumination return.
+Conditions: wowsims Forever commit a10f483 (30 October 2026) with the proposals patch (models/wowsims). The Holy Paladin gear of wowsims (382 healing power with raid buffs) for both classes. Raid buffs, no consumables, a 3 min fight, 1,000 iterations. One heal plan on one target. The sim has no overhealing. Thus, the values are raw healing for each point of mana, with the Illumination return.
 
 - Beta: Healing Light 3/3, Reverence, Infusion of Light, Illumination, Divine Favor, Holy Shock, Holy Power, Light's Vigil, Benediction 5.
 - Proposed: the same with Conviction 5, Reverence (C-H1), Lingering Light 20% (C-H2), Infusion of Light (C-H3), Healing Light 30% (C-H4), Conviction on heals (C-R1). No Blessing of Light (C3).

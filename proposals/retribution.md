@@ -7,14 +7,23 @@ These proposals connect the melee attacks of Retribution to its Holy spells. The
 | Row (points necessary) | Talents | Points in the row |
 | --- | --- | --- |
 | 1 (0) | Deflection, Conviction (C-R1, M-R2) | 10 |
-| 2 (5) | Improved Judgement, Holy Conduit, Vindication (C-P3) | 9 |
-| 3 (10) | Pursuit of Justice, Sanctified Judgement (C-R3), Seal of Command | 6 |
+| 2 (5) | Improved Judgement, Holy Conduit, Vindication (C-P3) | 7 |
+| 3 (10) | Sanctified Judgement (C-R3, M-R4), Burning Zeal (C-R4), Seal of Command, Pursuit of Justice | 11 |
 | 4 (15) | Eye for an Eye, Sacred Arbiter, Two-Handed Weapon Specialization (M-R1) | 6 |
-| 5 (20) | Burning Zeal (C-R4), Vengeance, Repentance, Measure for Measure (C-R5) | 9 |
+| 5 (20) | Measure for Measure (C-R5), Vengeance (M-R5), Repentance | 7 |
 | 6 (25) | Champion of the Light, Instrument of Law | 5 |
 | 7 (30) | Twist of Light (C-R2) | 1 |
 
-Retribution has 46 points (beta: 44). Benediction (M-P1) moves to Protection row 1. Vindication goes to row 2, column 3, with 5 ranks (see Protection, C-P3).
+Retribution has 47 points (beta: 44). Benediction (M-P1) moves to Protection row 1. Vindication goes to row 2, column 3, with +2/4/6% Attack Power (see Protection, C-P3).
+
+- **Arrows.** Improved Judgement → Sanctified Judgement (column 1, 1 row, M-R4). Burning Zeal → Vengeance (column 2, 2 rows, M-R5). Row 4, column 2 is empty.
+- **Columns.** Column 1 holds the Judgement talents: Improved Judgement, Sanctified Judgement and Measure for Measure. Column 2 holds the critical strike chain: Burning Zeal and Vengeance.
+- **Beta places.** Eye for an Eye stays in its beta place (row 4, column 1). Two-Handed Weapon Specialization goes to row 4, column 4 (M-R1).
+- **Layout rules of Forever.** The Forever trees of all nine classes (27 trees, 72 arrows) give these rules:
+  - 70 of 72 arrows go down in the same column. Most arrows go down 1 or 2 rows.
+  - An arrow joins two talents with the same theme. Examples: Malice → Lethality, Ferocity → Frenzy, Critical Mass → Combustion.
+  - In 186 of 189 rows, a row that has a talent in column 4 also has a talent in column 1.
+  - A tree has about 2.7 arrows. Retribution now has 2 (beta: 1).
 
 ## C1. Holy Strike triggers your Seal and Echo (spell change)
 
@@ -67,11 +76,11 @@ Retribution has 46 points (beta: 44). Benediction (M-P1) moves to Protection row
 - **Each point has the same value.** Each rank adds 40 mana for each Judgement. In the beta, rank 1 adds 13 and rank 3 adds 67.
 - **Risk.** Row 3 needs 10 Retribution points. A 10-point dip with 1 point in Sanctified Judgement gives 5.7 MPS (beta: 1.9). Reverence gives 10.3 MPS for 3 points. Thus, the 1-point rank is not too strong.
 
-## M-R1. Two-Handed Weapon Specialization: row 5 → row 4 (20 → 15 points)
+## M-R1. Two-Handed Weapon Specialization: row 5 → row 4, column 4 (20 → 15 points)
 
 - **Model.** The Warrior version opens at 15 points.
 - **Values.** 2/4/6%, the same as the beta.
-- **Space.** Row 4 has a free column.
+- **Column.** Column 4. Eye for an Eye keeps column 1 of row 4, as in the beta.
 
 ## M-R2. Conviction: row 2 → row 1
 
@@ -81,13 +90,15 @@ Retribution has 46 points (beta: 44). Benediction (M-P1) moves to Protection row
 - **Retribution.** Retribution has the critical hit at a lower level.
 - **Risk.** All specs can take +5% critical hit for 5 points. The other classes have the same.
 
-## C-R4. Burning Zeal (new talent): row 5, column 1, 2 ranks
+## C-R4. Burning Zeal (new talent): row 3, column 2, 5 ranks
 
-- **Proposed text.** "Increases the critical strike damage bonus of your Seals, Judgements and Holy Strike by 10/20%."
-- **Model.** Impale (Warrior) and Ruin (Warlock) increase the critical damage bonus. Both are Classic talents. Burning Zeal has the ranks and values of Impale (10/20%).
-- **Problem.** Retribution damage increases less with gear than Fury damage (×1.58 against ×1.73 from fresh level 60 to Naxxramas). Fixed base values cause this (see Analysis, Damage, part 6). Row 5 also had only 4 points.
+- **Proposed text.** "Increases the critical strike damage bonus of your Seals, Judgements and Holy Strike by 4/8/12/16/20%."
+- **Model.** Impale (Warrior) and Ruin (Warlock) increase the critical damage bonus. Both are Classic talents. Burning Zeal has the maximum of Impale (20%).
+- **Ranks.** 5 ranks, +4% for each rank. Vengeance requires Burning Zeal 5/5. Thus, a deep build pays 8 points for column 2 (5 + 3). Impale has 2 ranks (10/20%). The 5 ranks make Retribution pay more for Vengeance.
+- **Row 3.** Burning Zeal opens at 10 Retribution points. A 13-point dip (the 3/35/13 tanks, Shockadin) can take it. It does not affect Holy Shock. Thus, the gain for these builds is small.
+- **Problem.** Retribution damage increases less with gear than Fury damage (×1.58 against ×1.73 from fresh level 60 to Naxxramas). Fixed base values cause this (see Analysis, Damage, part 6).
 - **Why critical damage.** The critical hit chance of Retribution increases with gear: 11.6% at fresh level 60, 16.9% in Naxxramas. Thus, the talent gives more in late raids.
-- **Value (RB2 with Burning Zeal 2/2, see Analysis, Damage, part 11).**
+- **Value (RB2 with Burning Zeal 5/5, see Analysis, Damage, part 11).**
 
 | Gear | Fresh level 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
 | --- | --- | --- | --- | --- | --- |
@@ -95,21 +106,36 @@ Retribution has 46 points (beta: 44). Benediction (M-P1) moves to Protection row
 | Against the pure average | 104% | 101% | 99% | 97% | 96% |
 | Now (RB2) | 103% | 101% | 98% | 96% | 95% |
 
+- **wowsims.** In a raid with consumables, Burning Zeal 5/5 (+20%) gives +2.0%: two times the model value. The wowsims gear and buffs give more critical hits.
+
 - **Risk.** In PvP, a critical Holy Strike or Judgement does 2.2 times the damage (now 2 times). See PvP burst check and Watch list, W6.
 
-## C-R5. Measure for Measure (new talent): row 5, column 4, 3 ranks
+## C-R5. Measure for Measure (new talent): row 5, column 1, 3 ranks
 
 - **Proposed text.** "When your target dodges or parries your attack, the remaining cooldown of your Judgement is reduced by 1/2/3 sec."
 - **Model.** Overpower (Warrior) answers a dodge of the target. The name is an old proverb: justice paid back in kind. Eye for an Eye has the same theme in the same tree.
 - **Problem.** From behind, a boss dodges 6.5% of the attacks. Hit chance does not remove dodges. The talent gives a small return for each dodge.
 - **Value (RB2 with Measure for Measure 3/3, see Analysis, Damage, part 11).**
   - Raid, from behind (dodge only): about +7% Judgements, +1.0% to +1.1% damage at all gear levels.
-  - From the front (dodge and parry: PvP, tank hybrids): about +23% Judgements, about +4% damage.
+  - From the front (dodge and parry: PvP, Retribution tanks): about +23% Judgements, about +4% damage.
 - **Mana.** A Judgement costs about 82 mana. Sanctified Judgement 3/3 returns 126. Thus, each extra Judgement gives mana.
-- **Risk.** In PvP, Evasion (Rogue) gives many dodges. Judgement then comes back fast while Evasion lasts. Tank hybrids with 20 Retribution points also receive more Judgement threat (see Watch list, W23).
+- **Risk.** In PvP, Evasion (Rogue) gives many dodges. Judgement then comes back fast while Evasion lasts. A Retribution tank with a two-handed weapon receives about +7% threat. A tank with Holy Shield cannot take the talent: row 5 needs 21 Retribution points (see Watch list, W23).
+
+## M-R4. Sanctified Judgement: column 2 → column 1, requires Improved Judgement
+
+- **Move.** Sanctified Judgement goes to row 3, column 1. It requires Improved Judgement 2/2 (arrow in column 1).
+- **Theme.** Both talents change Judgement. Measure for Measure (C-R5) is also in column 1.
+- **Cost.** Of the 16 builds of this document with Sanctified Judgement, 15 already have Improved Judgement 2/2. Only RB5 adds it.
+- **Pursuit of Justice** goes back to its beta place (row 3, column 4).
+
+## M-R5. Vengeance: requires Burning Zeal (was Sanctified Judgement)
+
+- **Move.** Vengeance stays in row 5, column 2. It requires Burning Zeal 5/5 (row 3, column 2). The arrow goes down 2 rows.
+- **Theme.** Both talents use critical strikes. A mana talent (Sanctified Judgement) gave no clear theme to a damage talent.
+- **Cost.** A build with Vengeance 3/3 now needs 8 points in column 2. The Retribution builds of Analysis, Builds take Burning Zeal 5/5 for this. Vindication with 3 ranks (C-P3) gives 2 points back. The other 3 points come from weak talents: Reverence, Infusion of Light, Unyielding Faith or Sanctified Judgement. In wowsims, the raid DPS stays about 3% above version 5 (see Analysis, Builds, part 4). Alone, a build loses up to 7%.
 
 ## Retribution with Burning Zeal (C-R4) and Measure for Measure (C-R5)
 
-- **Points.** A deep build with both talents needs 5 more Retribution points. RB6 (5/8/38) takes them from the Holy dip: it keeps Improved Seals 3, adds Divine Intellect 2 and loses Reverence, Infusion of Light and Unyielding Faith.
-- **Damage.** RB6 has +1.9% at fresh level 60 and +2.4% in Naxxramas against RB2. It is 105% of the pure average at fresh level 60 and 97% in Naxxramas (see Analysis, Damage, part 11).
+- **Points.** A deep build with both talents needs 8 more Retribution points. RB6 (5/8/38) takes them from the Holy dip and Holy Conduit. It keeps Improved Seals 3 and Divine Intellect 2. It loses Reverence, Infusion of Light, Unyielding Faith and 1 point of Holy Conduit.
+- **Damage.** RB6 has +1.9% at fresh level 60 and +2.4% in Naxxramas against RB2. It is 105% of the pure average at fresh level 60 and 97% in Naxxramas (see Analysis, Damage, part 11). In wowsims, it is 113% of the pure average in a raid.
 - **Balance.** The hybrid target is 95% of the pure average. If Retribution is above the pure average at the raid release, decrease Sacred Arbiter first (+20% → +10%, see Watch list, W15).

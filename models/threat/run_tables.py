@@ -95,7 +95,7 @@ if __name__ == "__main__":
            "One-Handed Weapon Specialization": ("ohws", 3), "Improved Seals": ("is", 3), "Precision": ("prec", 3),
            "Conviction": ("conv", 3), "Iron Creed": ("ic", 5)}
     print("Per point (8/35/8 tank): " + ", ".join(f"{n} {(P - paladin(g, dict(TANK_REF, **{k: 0}))) / r:.1f}" for n, (k, r) in per.items())
-          + f", Vindication {(paladin(g, dict(TANK_REF, vind=5)) - P) / 5:.1f}")
+          + f", Vindication {(paladin(g, dict(TANK_REF, vind=3)) - P) / 3:.1f}")
 
     print("\n## Builds, part 5")
     p2 = paladin(g, PB2)
@@ -111,6 +111,12 @@ if __name__ == "__main__":
     hstc = paladin(g, HOLY_SHOCK_TANK, holy_shock=True, consecration=True)
     print(f"Holy Shock tank: {hst:.0f} ({pct(hst, p2)} of PB2), with Consecration {hstc:.0f} ({pct(hstc, p2)})")
     print(f"Retribution tank, 75-95% of PB2: {0.75 * p2:.0f}-{0.95 * p2:.0f}")
+    # Retribution row 5 (Burning Zeal, Measure for Measure) needs 21 Retribution points. Holy Shield needs 31 Protection points.
+    p1 = paladin(g, PB1)
+    no_hs = {"prec": 3, "red": 5, "sj": 1, "ohws": 3, "reck": 5, "ic": 4, "ij": 2, "conv": 5, "vind": 3, "mfm": 1}   # 0/30/21
+    print(f"PB1 with Measure for Measure 3/3 (52 points, not possible): {paladin(g, dict(PB1, mfm=3)) / p1 - 1:+.0%}. "
+          f"With Burning Zeal 5/5: {paladin(g, dict(PB1, bz=5)) / p1 - 1:+.1%}. "
+          f"0/30/21, no Holy Shield, Measure for Measure 1/3: {pct(paladin(g, no_hs), p1)} of PB1")
 
     print("\n## Builds, part 6: healing threat (Righteous Fury x1 / x1.9 on heals)")
     v1 = dict(TANK_REF, conv=5)    # dungeon tank of version 1: the threat talents of the 8/35/8 tank, Conviction 5

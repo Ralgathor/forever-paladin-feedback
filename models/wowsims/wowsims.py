@@ -46,6 +46,20 @@ def wowhead_shields(p):
     if new:
         p["database"] = {"items": new}
 
+LEGACY = {i["id"]: i for i in json.load(open(os.path.join(HERE, "data", "legacy_items.json")))["items"]}
+_IDS = None
+
+def legacy_items(p):
+    """Items of the saved gear sets that left the wowsims item list (data/legacy_items.json).
+    The request gives their old values to the sim."""
+    global _IDS
+    if _IDS is None:
+        _IDS = {i["id"] for i in json.load(open(os.path.join(WORK, "forever", "assets", "database", "db.json")))["items"]}
+    add = [copy.deepcopy(LEGACY[e["id"]]) for e in p.get("equipment", {}).get("items", [])
+           if e.get("id") in LEGACY and e["id"] not in _IDS]
+    if add:
+        p.setdefault("database", {}).setdefault("items", []).extend(add)
+
 def julien():
     return copy.deepcopy(PROT["raid"]["parties"][0]["players"][0])
 
@@ -57,6 +71,7 @@ def request(player, scen="raid", tank=False, iters=3000, dur=180, keep_buffs=Fal
     p = copy.deepcopy(player); p["name"] = "Player"
     if wowhead:
         wowhead_shields(p)
+    legacy_items(p)
     raid = {"parties": [{"players": [p]}], "numActiveParties": 1}
     if scen in ("raid", "raid_nocons"):
         raid["buffs"] = ref_raid["buffs"]; raid["debuffs"] = ref_raid["debuffs"]
@@ -76,15 +91,22 @@ def request(player, scen="raid", tank=False, iters=3000, dur=180, keep_buffs=Fal
         t = enc["targets"][0]; t["minBaseDamage"] = 0; t.pop("canCrush", None)
     return {"raid": raid, "encounter": enc, "simOptions": {"iterations": iters, "randomSeed": "101"}}
 
-def sim(req, flags=""):
-    """Runs the CLI. flags: the PROPOSE list (see README.md). Results are cached by request and flags."""
-    key = hashlib.md5((json.dumps(req, sort_keys=True) + "|" + flags).encode()).hexdigest()[:16]
+# Ability threat of the other tanks (tank_threat.patch). wowsims gives these abilities threat for the damage only.
+# Druid: player data (Analysis, Threat, part 6). Warrior: the Shield Slam value is not known, x2.25 is a test case.
+DRUID_THREAT = {"DRU_MAUL": "1.75", "DRU_SWIPE": "1.75", "DRU_PB": "3", "DRU_FF": "120"}
+SHIELD_SLAM_225 = {"WAR_SS": "2.25"}
+
+def sim(req, flags="", env=None):
+    """Runs the CLI. flags: the PROPOSE list (see README.md). env: threat values of tank_threat.patch.
+    Results are cached by request, flags and env."""
+    env = env or {}
+    key = hashlib.md5((json.dumps(req, sort_keys=True) + "|" + flags + ("|" + json.dumps(env, sort_keys=True) if env else "")).encode()).hexdigest()[:16]
     os.makedirs(CACHE, exist_ok=True)
     fi, fo = os.path.join(CACHE, key + ".in.json"), os.path.join(CACHE, key + ".out.json")
-    if not os.path.exists(fo):
+    if not os.path.exists(fo) or os.path.getsize(fo) == 0:
         json.dump(req, open(fi, "w"))
         r = subprocess.run([CLI, "sim", "--infile", fi, "--outfile", fo],
-                           env=dict(os.environ, PROPOSE=flags), capture_output=True, text=True)
+                           env=dict(os.environ, PROPOSE=flags, **env), capture_output=True, text=True)
         if not os.path.exists(fo):
             raise RuntimeError(f"wowsimcli gave no result (run setup.sh first?): {r.stderr[-400:]}")
     o = json.load(open(fo))

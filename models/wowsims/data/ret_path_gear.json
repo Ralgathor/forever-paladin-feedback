@@ -1,0 +1,263 @@
+{
+ "note": "Pre-raid path gear of builds/retribution.md, wowsims Forever a10f483. Enchants of the wowsims Twist of Light preset, Libram of Law.",
+ "raid": {
+  "build": "RB6",
+  "equipment": {
+   "items": [
+    {
+     "id": 12640,
+     "enchant": 2543
+    },
+    {
+     "id": 22659,
+     "enchant": 904
+    },
+    {
+     "id": 271955
+    },
+    {
+     "id": 20073,
+     "enchant": 849
+    },
+    {
+     "id": 252484,
+     "enchant": 1891
+    },
+    {
+     "id": 21184,
+     "enchant": 2566
+    },
+    {
+     "id": 22090,
+     "enchant": 8206
+    },
+    {
+     "id": 18405
+    },
+    {
+     "id": 22753,
+     "enchant": 2543
+    },
+    {
+     "id": 22107,
+     "enchant": 1887
+    },
+    {
+     "id": 21182
+    },
+    {
+     "id": 19325
+    },
+    {
+     "id": 270225
+    },
+    {
+     "id": 272437
+    },
+    {
+     "id": 12790,
+     "enchant": 1900
+    },
+    {},
+    {
+     "id": 272435
+    }
+   ]
+  }
+ },
+ "shock": {
+  "build": "Shock-Retribution 28/0/23",
+  "equipment": {
+   "items": [
+    {
+     "id": 12640,
+     "enchant": 2543
+    },
+    {
+     "id": 22659,
+     "enchant": 904
+    },
+    {
+     "id": 16729
+    },
+    {
+     "id": 20073,
+     "enchant": 849
+    },
+    {
+     "id": 252484,
+     "enchant": 1891
+    },
+    {
+     "id": 21186,
+     "enchant": 2566
+    },
+    {
+     "id": 22090,
+     "enchant": 8206
+    },
+    {
+     "id": 18405
+    },
+    {
+     "id": 22753,
+     "enchant": 2543
+    },
+    {
+     "id": 22107,
+     "enchant": 1887
+    },
+    {
+     "id": 21182
+    },
+    {
+     "id": 19325
+    },
+    {
+     "id": 270225
+    },
+    {
+     "id": 272437
+    },
+    {
+     "id": 22348,
+     "enchant": 1900
+    },
+    {},
+    {
+     "id": 272435
+    }
+   ]
+  }
+ },
+ "holy_shock": {
+  "build": "Holy Shock 21/0/30",
+  "equipment": {
+   "items": [
+    {
+     "id": 12640,
+     "enchant": 2543
+    },
+    {
+     "id": 22659,
+     "enchant": 904
+    },
+    {
+     "id": 16729
+    },
+    {
+     "id": 16337,
+     "enchant": 849
+    },
+    {
+     "id": 252484,
+     "enchant": 1891
+    },
+    {
+     "id": 21186,
+     "enchant": 2566
+    },
+    {
+     "id": 22090,
+     "enchant": 8206
+    },
+    {
+     "id": 18405
+    },
+    {
+     "id": 22753,
+     "enchant": 2543
+    },
+    {
+     "id": 22107,
+     "enchant": 1887
+    },
+    {
+     "id": 21182
+    },
+    {
+     "id": 19325
+    },
+    {
+     "id": 270225
+    },
+    {
+     "id": 272437
+    },
+    {
+     "id": 22348,
+     "enchant": 1900
+    },
+    {},
+    {
+     "id": 272435
+    }
+   ]
+  }
+ },
+ "fresh": {
+  "build": "Ret 9/8/34, fresh 60",
+  "equipment": {
+   "items": [
+    {
+     "id": 252605,
+     "enchant": 2543
+    },
+    {
+     "id": 22657,
+     "enchant": 904
+    },
+    {
+     "id": 19050
+    },
+    {
+     "id": 16337,
+     "enchant": 849
+    },
+    {
+     "id": 22089,
+     "enchant": 1891
+    },
+    {
+     "id": 22088,
+     "enchant": 2566
+    },
+    {
+     "id": 22090,
+     "enchant": 8206
+    },
+    {
+     "id": 18405
+    },
+    {
+     "id": 22385,
+     "enchant": 2543
+    },
+    {
+     "id": 22087,
+     "enchant": 1887
+    },
+    {
+     "id": 272406
+    },
+    {
+     "id": 19325
+    },
+    {
+     "id": 270225
+    },
+    {
+     "id": 272437
+    },
+    {
+     "id": 22348,
+     "enchant": 1900
+    },
+    {},
+    {
+     "id": 272435
+    }
+   ]
+  }
+ }
+}

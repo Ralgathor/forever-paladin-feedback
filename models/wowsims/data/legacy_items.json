@@ -1,0 +1,114 @@
+{
+ "items": [
+  {
+   "id": 871,
+   "name": "Flurry Axe",
+   "icon": "inv_axe_17",
+   "type": 13,
+   "weaponType": 1,
+   "handType": 2,
+   "weaponSpeed": 1.5,
+   "phase": 1,
+   "quality": 4,
+   "scalingOptions": {
+    "0": {
+     "randPropPoints": 15,
+     "weaponDamageMin": 37,
+     "weaponDamageMax": 69,
+     "unroundedDps": 35.27858,
+     "ilvl": 47
+    }
+   },
+   "itemEffects": [
+    {
+     "buffId": 18797,
+     "buffName": "Flurry Axe (18797)",
+     "proc": {
+      "ppm": 1.9
+     }
+    }
+   ]
+  },
+  {
+   "id": 272411,
+   "name": "Arcanoweave Cloak",
+   "icon": "inv_misc_cape_05",
+   "type": 4,
+   "armorType": 1,
+   "phase": 1,
+   "quality": 3,
+   "scalingOptions": {
+    "0": {
+     "randPropPoints": 21,
+     "stats": {
+      "3": 8,
+      "4": 16,
+      "5": 16,
+      "17": 10,
+      "27": 46,
+      "28": 70
+     },
+     "ilvl": 65
+    }
+   }
+  },
+  {
+   "id": 2243,
+   "name": "Hand of Edward the Odd",
+   "icon": "inv_mace_14",
+   "type": 13,
+   "weaponType": 4,
+   "handType": 2,
+   "weaponSpeed": 1.6,
+   "phase": 1,
+   "quality": 4,
+   "unique": true,
+   "scalingOptions": {
+    "0": {
+     "randPropPoints": 19,
+     "weaponDamageMin": 33,
+     "weaponDamageMax": 62,
+     "unroundedDps": 30.008053,
+     "stats": {
+      "3": 13,
+      "4": 90,
+      "5": 90,
+      "13": 10
+     },
+     "ilvl": 62
+    }
+   },
+   "itemEffects": [
+    {
+     "buffId": 18803,
+     "buffName": "Focus (18803)",
+     "effectDurationMs": 4000,
+     "proc": {
+      "ppm": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": 272415,
+   "name": "Stalwart Cloak",
+   "icon": "inv_misc_cape_16",
+   "type": 4,
+   "armorType": 1,
+   "phase": 1,
+   "quality": 3,
+   "scalingOptions": {
+    "0": {
+     "randPropPoints": 21,
+     "stats": {
+      "2": 14,
+      "17": 10,
+      "27": 46,
+      "28": 80
+     },
+     "ilvl": 65
+    }
+   }
+  }
+ ]
+}

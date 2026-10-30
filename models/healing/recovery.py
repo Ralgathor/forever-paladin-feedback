@@ -20,6 +20,9 @@ The healer heals the tank before the hit (warm start):
   If the Rejuvenation ran out before the Swiftmend, it uses the Regrowth. Swiftmend heals for the full heal over
   time (Forever text). Druid talents: Nature's Splendor (Rejuvenation 15 sec, Regrowth 27 sec) and Gift of the
   Earthmother (1 sec global cooldown for Rejuvenation and Swiftmend). The Priest has no Penance (DoubleZug build).
+- Merciful Light (C-H5): x2 on a Holy Shock that lands while the tank is at or below 35% health. 'room' is the
+  healing that brings the tank from its health after the hit to 35%. The healing that lands before the Holy Shock
+  (direct heals and Lingering Light ticks) must stay at or below 'room'.
 Run: python3 recovery.py"""
 import itertools, math, random
 import healing_model as H
@@ -35,6 +38,7 @@ class B:
     def __init__(s, name, t, direct, hot=0.0, dur=1.0, tick=3.0, cd=None, tags=(), ll=0.0, cc=0.0, fn=None):
         s.name, s.t, s.direct, s.hot, s.dur, s.tick, s.cd, s.tags = name, t, direct, hot, dur, tick, cd, set(tags)
         s.ll, s.cc, s.fn = ll, cc, fn
+        s.ml = 1.0   # Paladin: Merciful Light multiplier, if the tank is at or below 35% health at the heal
 
 def pre_hots(pre, ends, W):
     """Expected ticks in the window of the heals over time that are on the tank at the hit.
@@ -67,6 +71,7 @@ def eval_fixed(seq, W, pre):
 def eval_paladin(seq, W, pal, samples=3000, seed=7):
     """Paladin: simulation of critical heals, Infusion of Light and Lingering Light."""
     c, ling, fol_h, inf_all, kt = pal["c"], pal["ling"], pal["fol"], pal["inf_all"], pal["kt"]
+    room = pal.get("room")
     rng = random.Random(seed); tot = 0.0
     for _ in range(samples):
         # 20 Flash of Light casts before the hit, one each 1.5 sec; the last one ends at the hit
@@ -80,9 +85,13 @@ def eval_paladin(seq, W, pal, samples=3000, seed=7):
                 ct = max(GCD, s.t - 1.0); inf = False
             end = t + ct
             if end > W + 1e-9: break
-            v += s.direct
+            k = 1.0
+            if s.ml != 1.0:
+                landed = v + (kt*sum(a for tt, a in ll_ticks(ev) if 0 < tt < end - 1e-9) if ev else 0.0)
+                if landed <= room + 1e-9: k = s.ml
+            v += s.direct * k
             crit = rng.random() < s.cc
-            if s.ll and crit: ev.append((end, s.ll))
+            if s.ll and crit: ev.append((end, s.ll * k))
             if "trigger" in s.tags and (inf_all or crit): inf = True
             t = end
         if ev: v += sum(a for tt, a in ll_ticks(ev) if 0 < tt <= W + 1e-9) * kt
@@ -116,18 +125,19 @@ def best(case, W, long_cd=True):
     return v, names
 
 # ---------------------------------------------------------------- classes (715 healing power)
-def paladin_burst(hp=HPG, light=1.12, bol=True, ling=0.0, conv=0.0, inf_all=False, ml=1.0):
+def paladin_burst(hp=HPG, light=1.12, bol=True, ling=0.0, conv=0.0, inf_all=False, ml=1.0, room=0.0):
     c = CRIT_BASE + PAL_CRIT + 0.05 + conv; c_hs = CRIT_BASE + PAL_CRIT + 0.15 + conv
     fol = (308 + (115 if bol else 0) + 1.5/3.5*hp) * light
     hl = (1580 + (400 if bol else 0) + 2.5/3.5*hp) * light
-    hs = (320 + 1.5/3.5*hp) * light * ml      # Merciful Light (C-H5) 2/2: x2 on a target at or below 35% health
+    hs = (320 + 1.5/3.5*hp) * light
     kt = (1 + 0.5*c) if H.HOT_CRIT else 1.0                 # Lingering Light ticks can be critical heals
     L = lambda h: ling*h*1.5                                 # Lingering Light added by one critical heal
     sp = [B("Flash of Light", 1.5, fol*(1+0.5*c), tags=("trigger",), ll=L(fol), cc=c),
           B("Holy Light", 2.5, hl*(1+0.5*c), tags=("infusable",), ll=L(hl), cc=c),
           B("Holy Shock", GCD, hs*(1+0.5*c_hs), cd="short", tags=("trigger",), ll=L(hs), cc=c_hs),
           B("Divine Favor + Holy Light", 2.5, hl*1.5, cd="long", tags=("infusable",), ll=L(hl), cc=1.0)]
-    pal = dict(c=c, ling=ling, fol=fol, inf_all=inf_all, kt=kt)
+    sp[2].ml = ml   # Merciful Light (C-H5) 2/2: x2 on a target at or below 35% health
+    pal = dict(c=c, ling=ling, fol=fol, inf_all=inf_all, kt=kt, room=room)
     return sp, None, (), pal
 
 def priest_burst(hp=HPG):
@@ -179,7 +189,7 @@ def shaman_burst(hp=HPG):
     return sp, None, pre, None
 
 PROP_B = dict(light=1.30, bol=False, ling=0.2, conv=0.05, inf_all=True)
-PROP_ML = dict(PROP_B, ml=2.0)   # Merciful Light (C-H5) 2/2, the tank at or below 35% health after the hit
+PROP_ML = dict(PROP_B, ml=2.0, room=1000)   # Merciful Light (C-H5) 2/2, the tank 1,000 health or more below 35% after the hit
 
 def table(hp=HPG):
     rows = []

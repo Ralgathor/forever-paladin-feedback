@@ -12,8 +12,9 @@ Requirements: git, Go 1.25 or later, Python 3, and grpcio-tools (`pip install gr
 
 The script does these steps:
 
-1. It clones wowsims Forever at commit `69e0e5b` into `.work/forever`. Set `WOWSIMS_WORK` to use a different folder.
+1. It clones wowsims Forever at commit `a10f483` into `.work/forever`. Set `WOWSIMS_WORK` to use a different folder.
 2. It applies `proposals.patch`. The patch adds the proposals to the sim. Each proposal is off until you set its flag.
+   It also applies `tank_threat.patch`. wowsims gives Maul, Swipe, Primal Bite and Shield Slam threat for the damage only. The patch reads the threat values from environment variables (`DRU_MAUL`, `DRU_SWIPE`, `DRU_PB`, `DRU_FF`, `WAR_SS`). With no variable, the sim does not change. `run_threat.py` sets the Druid values of the player data (`wowsims.DRUID_THREAT`) and a Shield Slam test case (×2.25).
 3. It makes the Go code of the protobuf files and builds the `wowsimcli` program.
 4. It writes the player presets of each spec (gear, talents, rotation, consumables) to `.work/dump`.
 
@@ -23,7 +24,7 @@ A new wowsims commit can change the results. Change the commit in `setup.sh` onl
 
 | Script | What it gives | Analysis tab |
 | --- | --- | --- |
-| `run_damage.py` | Retribution against the other damage specs, and the value of each Retribution proposal | Damage, part 10 |
+| `run_damage.py` | Retribution against the other damage specs, and the value of each Retribution proposal. The new talents (Burning Zeal, Measure for Measure), RB6, Shock-Retribution and the Retribution tank, with the Holy Shock rotation (`data/shock_ret.apl.json`) | Damage, parts 10 and 11. Builds, parts 4 and 5 |
 | `run_threat.py` | Protection against the Warrior and the Druid, with tuned values of Holy Shield and Iron Creed. The best tank builds with their pre-raid gear (`data/tank_path_gear.json`), and groups of 3 and 5 enemies. Epic shields use the Wowhead Forever block value (`WOWHEAD_BV` in `wowsims.py`). `WOWHEAD_BV=0` gives the wowsims values | Threat, parts 7 and 8 |
 | `run_healing.py` | Holy Paladin and Holy Priest, one heal plan each: healing for each point of mana | Healing, part 9 |
 | `tests.py` | One check for each proposal in the patch. The result must show the proposal text | — |
@@ -59,8 +60,12 @@ Set the flags in the `PROPOSE` environment variable, with commas: `PROPOSE=C6,C1
 | `LL<n>` | Lingering Light (C-H2) | Each critical heal heals n% more in 3 ticks of 2 sec. Ticks can be critical heals |
 | `BOL` | Blessing of Light (C3) | The Blessing of Light heal bonus on the target. The wowsims buff does not add the bonus |
 | `VIN5` | Vindication (C-P3) | Vindication has 5 ranks: +1% Attack Power for each rank |
+| `VIN3` | Vindication (C-P3), calculator version 6 | Vindication has 3 ranks: +2% Attack Power for each rank. The debuff keeps the beta values |
+| `BZ<n>` | Burning Zeal (C-R4) | n ranks: the critical damage bonus of Seals, Judgements and Holy Strike increases by 10% for each rank |
+| `BZR5` | Burning Zeal (C-R4), calculator version 6 | Burning Zeal has 5 ranks: +4% for each rank. Use it with `BZ<n>` |
+| `MFM<n>` | Measure for Measure (C-R5) | n ranks: a dodge or parry of a melee attack decreases the time left on the Judgement cooldown by n sec |
 
-`builds.py` gives the talent strings and the flag lists of each spec. A talent string uses the tree order of the sim, not the order of the game client.
+`builds.py` gives the talent codes and the flag lists of each spec. The new talents of calculator version 5 are not in the beta talent code. The flags `BZ<n>` and `MFM<n>` give their ranks. Divine Grace and Merciful Light have no damage effect and no flag. A talent string uses the tree order of the sim, not the order of the game client.
 
 ## Limits
 
