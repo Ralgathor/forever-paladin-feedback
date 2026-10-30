@@ -138,7 +138,7 @@ Source: the talent data of wowsims/forever (25 October 2026) for all nine classe
 - This causes 2 points of filler for the Holy healer. Row 4 needs 15 points in rows 1–3, and only 14 of these points help a healer. Row 6 needs 25 points in rows 1–5, and only 23 help a healer.
 - **The fix: one new talent and two moves in Holy.** Lingering Light (C-H2) is a new talent in row 3. Holy Power goes to row 5 (M-H3). Consecrated Ground goes to row 6 (M-H4). Rows 1–3 then hold 16 healer points, and rows 1–5 hold 28. The Holy healer has no filler.
 - After the moves, each Holy row is in the range of the other trees. Rows 1–3 (22) are 1 point below the lowest other tree.
-- In calculator version 5, Retribution rows 4–6 (15 points) were equal to the lowest other tree (Discipline). A deep Retribution build took almost all of them. With Burning Zeal (C-R4) and Measure for Measure (C-R5), rows 4–6 have 20 points. In calculator version 6, Burning Zeal (5 ranks) goes to row 3, and Vindication has 3 ranks (C-P3): rows 1–3 have 28 points and rows 4–6 have 18. Both values are in the range of the other trees. A deep build chooses between Measure for Measure, Eye for an Eye and Repentance.
+- In calculator version 5, Retribution rows 4–6 (15 points) were equal to the lowest other tree (Discipline). A deep Retribution build took almost all of them. With Burning Zeal (C-R4) and Measure for Measure (C-R5), rows 4–6 have 20 points. In calculator version 6, Burning Zeal (5 ranks) goes to row 3, and Vindication has 3 ranks (C-P3). Rows 1–3 then have 28 points and rows 4–6 have 18. Both values are in the range of the other trees. A deep build chooses between Measure for Measure, Eye for an Eye and Repentance.
 
 **What the smaller trees change.**
 
@@ -146,7 +146,7 @@ Source: the talent data of wowsims/forever (25 October 2026) for all nine classe
 | --- | --- |
 | Choices in the main tree | In calculator version 5, a deep build left 8 points of Retribution, 11 points of Holy (healer: 32 points) and 14 points of Protection. With the four new talents, Holy healing needs 36 points. RB6 (38 Retribution points) leaves 9 points of Retribution |
 | Forced filler | It comes from thin rows, not from the total. Holy healer: 2 points in version 4, none with the three moves. Main Protection and Retribution builds: none |
-| Points for the other trees | Smaller trees free more points: up to 19 for Holy (HB1, 34/12/5, uses 17) and 18 for Retribution (RB1, 10/8/33). Rule 1 needs these dips |
+| Points for the other trees | Smaller trees free more points: up to 19 for Holy (HB1, 34/12/5, uses 17) and 17 for Retribution (RB2, 9/8/34). Rule 1 needs these dips |
 | The 52-point hybrids | The tree size does not cause them. Holy Shock with Twist of Light or Holy Shield needs 52 of the 51 points |
 
 **Result.** Do not add ranks to reach the totals of the other classes. New ranks become stat filler again, as Toughness and Divine Strength were (Toughness and Divine Strength removal, C-P3). Devoted Sacrifice (C-P11) adds 2 ranks to Protection, but for an effect, not for stats. The talent count is already in the range of the other classes. Holy rows were the one weak point. One new talent and two moves fix them: Lingering Light (C-H2) in row 3, Holy Power (M-H3) and Consecrated Ground (M-H4). These three changes keep all build codes valid. Shock-Retribution changes to 26/0/25 (see Builds, part 5).
