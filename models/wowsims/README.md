@@ -23,7 +23,7 @@ A new wowsims commit can change the results. Change the commit in `setup.sh` onl
 
 | Script | What it gives | Analysis tab |
 | --- | --- | --- |
-| `run_damage.py` | Retribution against the other damage specs, and the value of each Retribution proposal | Damage, part 10 |
+| `run_damage.py` | Retribution against the other damage specs, and the value of each Retribution proposal. The new talents (Burning Zeal, Measure for Measure), RB6, Shock-Retribution and the Retribution tank, with the Holy Shock rotation (`data/shock_ret.apl.json`) | Damage, parts 10 and 11. Builds, parts 4 and 5 |
 | `run_threat.py` | Protection against the Warrior and the Druid, with tuned values of Holy Shield and Iron Creed. The best tank builds with their pre-raid gear (`data/tank_path_gear.json`), and groups of 3 and 5 enemies. Epic shields use the Wowhead Forever block value (`WOWHEAD_BV` in `wowsims.py`). `WOWHEAD_BV=0` gives the wowsims values | Threat, parts 7 and 8 |
 | `run_healing.py` | Holy Paladin and Holy Priest, one heal plan each: healing for each point of mana | Healing, part 9 |
 | `tests.py` | One check for each proposal in the patch. The result must show the proposal text | — |
@@ -59,8 +59,10 @@ Set the flags in the `PROPOSE` environment variable, with commas: `PROPOSE=C6,C1
 | `LL<n>` | Lingering Light (C-H2) | Each critical heal heals n% more in 3 ticks of 2 sec. Ticks can be critical heals |
 | `BOL` | Blessing of Light (C3) | The Blessing of Light heal bonus on the target. The wowsims buff does not add the bonus |
 | `VIN5` | Vindication (C-P3) | Vindication has 5 ranks: +1% Attack Power for each rank |
+| `BZ<n>` | Burning Zeal (C-R4) | n ranks: the critical damage bonus of Seals, Judgements and Holy Strike increases by 10% for each rank |
+| `MFM<n>` | Measure for Measure (C-R5) | n ranks: a dodge or parry of a melee attack decreases the remaining Judgement cooldown by n sec |
 
-`builds.py` gives the talent strings and the flag lists of each spec. A talent string uses the tree order of the sim, not the order of the game client.
+`builds.py` gives the talent strings and the flag lists of each spec. The new talents of calculator version 5 are not in the beta talent string. The flags `BZ<n>` and `MFM<n>` give their ranks. Divine Grace and Merciful Light have no damage effect and no flag. A talent string uses the tree order of the sim, not the order of the game client.
 
 ## Limits
 

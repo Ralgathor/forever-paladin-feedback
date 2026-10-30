@@ -10,7 +10,7 @@ The script models/damage/run_tables.py calculates all values of this section. Fu
 - The hybrid target is 95% of the pure damage classes. Players report it from developer comments: hybrids do about 5% less damage than pure damage classes. In the beta, Retribution is 93%.
 - Holy Strike Seal trigger (C1) gives almost all of the increase. Twist of Light (C-R2) gives the same damage as the beta Seal swap, but the mana lasts for the full fight.
 - Retribution increases less with gear than Fury. In Naxxramas, it is about 92% of Fury (93% with flatter gear). No talent change closes this gap (part 6).
-- Burning Zeal (C-R4) gives more damage in late raids: +0.8% at fresh level 60, +1.3% in Naxxramas. Measure for Measure (C-R5) gives about +1% at all gear levels. RB6 (5/8/38) with both is 105% of the pure average at fresh level 60 and 97% in Naxxramas (part 11).
+- Burning Zeal (C-R4) gives more damage in late raids: +0.8% at fresh level 60, +1.3% in Naxxramas. Measure for Measure (C-R5) gives about +1% at all gear levels. RB6 (5/8/38) with both is 105% of the pure average at fresh level 60 and 97% in Naxxramas (part 11). In wowsims, Burning Zeal gives +2.0%, and RB6 is 108% of the pure average. Shock-Retribution with Divine Precision (28/0/23) is also 108%.
 - Fury increases more with gear than the other classes. Against the pure average, Retribution goes from 103% at fresh level 60 to about 95% in Naxxramas. The hybrid target is 95%.
 - Judgement of the Crusader gives Retribution about +10% DPS at fresh level 60. Personal Judgement of the Crusader (C2) makes this possible for each Paladin.
 
@@ -222,7 +222,7 @@ Judgement of the Crusader gives about +10% DPS at fresh level 60. It adds 161 Ho
 - **Stat values (raid buffs, 5 min fight).** 1 spell damage: 0.22 DPS. 1 Attack Power: 0.12 DPS. 1 Strength: 0.25 DPS. 1% critical hit: 5.6 DPS. 1% hit: 5.1 DPS, up to the cap. Thus, 1 spell damage is worth about 2 Attack Power. Plate items with spell damage are good for Retribution, and Warriors do not want them.
 - **Hit cap.** The build has 8% hit (Precision 3% + 5% from gear). The cap is 8%.
 - **Consecration on cooldown.** About +13% on one target (374 → 423 DPS). Consecration ticks can be critical hits (×1.5). The mana pool comes from the Retribution gear: 2,931 at fresh level 60 to 4,284 in Naxxramas, with Divine Intellect 2 and no mp5. With Holy Conduit and Benediction (M-P1), the mana is zero after 1 min 33 sec at fresh level 60. In Naxxramas, it is zero after 2 min 17 sec (3 min fight). The average increase is +10% in a 2 min fight and +8% in a 3 min fight. Retribution is then 102–114% of the pure average. Consecration damage and the mana costs come from wowsims Forever. Mana is the balance: the 95% target is for the rotation without Consecration (see Watch list, W16).
-- **Consecrated Ground.** It is in Holy row 6 (M-H4). 31 Retribution points and 27 Holy points are more than 51. Thus, Retribution with Twist of Light cannot take it. Shock-Retribution (26/0/25) takes Holy Power (M-H3) in its place: with Consecration, 357 → 405 DPS (+13%, 96% of RB2). With Consecrated Ground in row 5, it had 352 → 429 DPS (+22%). The +10% applies to all your Holy damage on the target. Seals and Judgements also do Holy damage, thus this is the tooltip effect.
+- **Consecrated Ground.** It is in Holy row 6 (M-H4). 31 Retribution points and 27 Holy points are more than 51. Thus, Retribution with Twist of Light cannot take it. Shock-Retribution 26/0/25 takes Holy Power (M-H3) in its place: with Consecration, 357 → 405 DPS (+13%, 96% of RB2). With Consecrated Ground in row 5, it had 352 → 429 DPS (+22%). Shock-Retribution 28/0/23 takes Holy Power and Consecrated Ground (see part 11). The +10% applies to all your Holy damage on the target. Seals and Judgements also do Holy damage, thus this is the tooltip effect.
 - **Exorcism against Undead and Demons.** About +12% (420 DPS). If you use it on cooldown, the mana is zero after about 2 min.
 - **Two-Handed Weapon Specialization.** The Paladin talent gives 6%. The Warrior talent in Forever gives 3%. Each 1% gives Retribution about 3.3 DPS (0.9%). At 6%, Retribution is 101% of Fury at fresh level 60 and 93% in Naxxramas. At 3%, it is 98% and 90%. The 6% stays: it is an intentional Paladin strength (see Tree balance, Paladin strengths).
 
@@ -307,6 +307,22 @@ The script models/damage/run_tables.py (part 11) calculates these values. RB2 wi
 - **RB6.** RB1 with Burning Zeal 2/2 and Measure for Measure 3/3. The 5 points come from the Holy dip: Improved Seals 3 stays, with Divine Intellect 2. Reverence, Infusion of Light and Unyielding Faith go. RB6 is equal to "Both": it keeps the Divine Intellect 2 of RB2.
 - **Mana of RB6.** Without Reverence, the income is about 10 mana per sec less (see Mana). Each extra Judgement gives about +44 mana with Sanctified Judgement 3/3 (return 126, cost 82). From behind, this is about +0.4 mana per sec.
 - **Burning Zeal increases with gear.** The critical hit chance of Retribution increases from 11.6% to 16.9%. Thus, Burning Zeal closes a part of the gap with Fury (part 6).
-- **Measure for Measure from the front.** Tank hybrids and PvP fights from the front receive about +23% Judgements (W23).
+- **Measure for Measure from the front.** Retribution tanks and PvP fights from the front receive about +23% Judgements (W23). A tank with Holy Shield cannot take the talent (see Builds, part 5).
 - **Balance.** RB6 is 105% of the pure average at fresh level 60. If this is too strong at the raid release, decrease Sacred Arbiter first (W15).
 
+**Check with wowsims.** wowsims Forever with the flags BZ2 and MFM3 (models/wowsims/run_damage.py). Raid buffs and consumables, a 3 min fight, the Retribution preset gear, the Holy Shock rotation. Pure average: 787 (part 10).
+
+| Build | Raid | Raid, no consumables | Alone | From the front | Raid, % of the pure average |
+| --- | --- | --- | --- | --- | --- |
+| RB2 | 824 | 667 | 325 | 768 | 105% |
+| RB2 with Burning Zeal 2/2 | 841 (+2.0%) | 679 (+1.8%) | 329 (+1.4%) | 783 (+1.9%) | 107% |
+| RB2 with Measure for Measure 3/3 | 831 (+0.8%) | 674 (+1.0%) | 327 (+0.9%) | 801 (+4.3%) | 106% |
+| RB2 with both | 848 (+2.9%) | 686 (+2.8%) | 332 (+2.3%) | 817 (+6.3%) | 108% |
+| RB6 (5/8/38) | 849 (+2.9%) | 686 (+2.8%) | 311 (−4.2%) | 818 (+6.6%) | 108% |
+| Shock-Retribution (26/0/25) | 791 (−4.1%) | 642 (−3.7%) | 285 (−12.3%) | — | 101% |
+| Shock-Retribution with Divine Precision (28/0/23) | 853 (+3.4%) | 693 (+3.8%) | 299 (−8.0%) | — | 108% |
+
+- **Burning Zeal gives two times the model value** (+2.0% against +0.9% with pre-raid gear). The preset gear, the raid buffs and the consumables give more critical hits than the model gear.
+- **Measure for Measure agrees with the model.** From the front, Judgements increase by 23% in wowsims and in the model. From behind, they increase by 6% (model: 7%).
+- **RB6 is 108% of the pure average in wowsims,** and 105% in the model at fresh level 60. See Watch list, W15.
+- **Shock-Retribution with Divine Precision (28/0/23).** Divine Precision is in Holy row 4 with no requirement now (M-H5). It replaces 4 points of Spiritual Focus and Purifying Power. Holy Shock and Consecration then do not miss. With Consecrated Ground 2/2, the build is the best raid build in wowsims (see Builds, part 5 and Watch list, W22).

@@ -94,7 +94,7 @@ index 737917eee9..b84444f3c8 100644
  		}
  		spell.CalcAndDealHealing(sim, target, amount, spell.OutcomeHealingCrit)
 diff --git a/sim/paladin/holy_shield.go b/sim/paladin/holy_shield.go
-index bba09b1fbd..2cf6eeca44 100644
+index bba09b1fbd..a58da19b3b 100644
 --- a/sim/paladin/holy_shield.go
 +++ b/sim/paladin/holy_shield.go
 @@ -29,7 +29,11 @@ func (paladin *Paladin) registerHolyShield(_ int32, rank *spelldata.Spell) {
@@ -368,7 +368,7 @@ index a91bb2e473..ceac820821 100644
  	ironCreed := paladin.RegisterAura(core.Aura{
  		Label:    "Iron Creed" + paladin.Label,
 diff --git a/sim/paladin/talents_retribution.go b/sim/paladin/talents_retribution.go
-index d350ba33e8..61af9cb478 100644
+index d350ba33e8..09a336a7fc 100644
 --- a/sim/paladin/talents_retribution.go
 +++ b/sim/paladin/talents_retribution.go
 @@ -2,6 +2,7 @@ package paladin
@@ -379,7 +379,17 @@ index d350ba33e8..61af9cb478 100644
  
  	"github.com/wowsims/forever/sim/core"
  	"github.com/wowsims/forever/sim/core/buffs"
-@@ -87,6 +88,15 @@ func (paladin *Paladin) applyConviction() {
+@@ -40,6 +41,9 @@ func (paladin *Paladin) registerRetributionTalents() {
+ 
+ 	// Tier 7
+ 	paladin.applyTwistOfLight()
++
++	// New talents of the proposals (flags)
++	paladin.applyNewRetributionTalents()
+ }
+ 
+ // Deflection - Increases your Parry chance by 1/2/3/4/5%.
+@@ -87,6 +91,15 @@ func (paladin *Paladin) applyConviction() {
  	}
  
  	spelldata.ParseStatic(&paladin.Character, spellData.Conviction.Rank(paladin.Talents.Conviction))
@@ -395,7 +405,7 @@ index d350ba33e8..61af9cb478 100644
  }
  
  // Vindication - Gives your damaging melee attacks a chance to reduce the target's Attack Power by
-@@ -105,12 +115,16 @@ func (paladin *Paladin) applyVindication() {
+@@ -105,12 +118,16 @@ func (paladin *Paladin) applyVindication() {
  	}
  
  	rank := spellData.VindicationTriggered.Highest()
@@ -414,7 +424,7 @@ index d350ba33e8..61af9cb478 100644
  	})
  
  	attackPowerDep := paladin.NewDynamicMultiplyStat(stats.AttackPower, core.MultiplierFromPercent(points))
-@@ -132,7 +146,7 @@ func (paladin *Paladin) applyVindication() {
+@@ -132,7 +149,7 @@ func (paladin *Paladin) applyVindication() {
  	debuffConfig.RelatedAuraArrays = targetAuras.ToMap()
  	debuff := paladin.RegisterSpell(debuffConfig)
  
@@ -423,7 +433,7 @@ index d350ba33e8..61af9cb478 100644
  		debuff.Cast(sim, result.Target)
  		selfAura.Activate(sim)
  	}, spelldata.WeaponSpeedPPM(vindicationPPM))
-@@ -163,7 +177,7 @@ func (paladin *Paladin) applySanctifiedJudgement() {
+@@ -163,7 +180,7 @@ func (paladin *Paladin) applySanctifiedJudgement() {
  		Name:               "Sanctified Judgement" + paladin.Label,
  		Callback:           core.CallbackOnSpellHitDealt,
  		ClassSpellMask:     SpellMaskAllJudgements,
@@ -432,7 +442,7 @@ index d350ba33e8..61af9cb478 100644
  		TriggerImmediately: true,
  		Handler: func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
  			if seal := paladin.activeSeal(); seal != nil {
-@@ -225,7 +239,15 @@ func (paladin *Paladin) applySacredArbiter() {
+@@ -225,7 +242,15 @@ func (paladin *Paladin) applySacredArbiter() {
  		return
  	}
  
@@ -449,7 +459,7 @@ index d350ba33e8..61af9cb478 100644
  
  	paladin.MakeProcTriggerAura(core.ProcTrigger{
  		Name:               "Sacred Arbiter" + paladin.Label,
-@@ -353,9 +375,21 @@ func (paladin *Paladin) applyTwistOfLight() {
+@@ -353,9 +378,21 @@ func (paladin *Paladin) applyTwistOfLight() {
  		echo.aura = paladin.RegisterAura(core.Aura{
  			Label:    fmt.Sprintf("Echo (%d)%s", id, paladin.Label),
  			ActionID: core.ActionID{SpellID: id},
@@ -472,7 +482,7 @@ index d350ba33e8..61af9cb478 100644
  		echo.aura.AttachProcTrigger(core.ProcTrigger{
  			Callback:           core.CallbackOnSpellHitDealt,
  			ProcMask:           core.ProcMaskMeleeWhiteHit,
-@@ -370,6 +404,9 @@ func (paladin *Paladin) applyTwistOfLight() {
+@@ -370,6 +407,9 @@ func (paladin *Paladin) applyTwistOfLight() {
  						seal.echo(sim, target)
  					})
  				}
@@ -558,6 +568,59 @@ index 0000000000..72f49a0ec5
 +			})
 +		},
 +	})
++}
+diff --git a/sim/paladin/zz_new_talents.go b/sim/paladin/zz_new_talents.go
+new file mode 100644
+index 0000000000..24266c2c4e
+--- /dev/null
++++ b/sim/paladin/zz_new_talents.go
+@@ -0,0 +1,47 @@
++package paladin
++
++import (
++	"time"
++
++	"github.com/wowsims/forever/sim/core"
++)
++
++// New Retribution talents of the proposals (row 5). They are not in the beta talent string: flags give the ranks.
++// BZ<n>: Burning Zeal (C-R4), +10% critical damage bonus for each rank on Seals, Judgements and Holy Strike.
++// MFM<n>: Measure for Measure (C-R5), a dodge or parry of the target reduces the remaining Judgement cooldown by n sec.
++func (paladin *Paladin) applyNewRetributionTalents() {
++	if bz := zzNum("BZ", 0); bz > 0 {
++		mask := SpellMaskHolyStrike | SpellMaskJudgementOfRighteousness | SpellMaskJudgementOfCommand |
++			SpellMaskJudgementOfFury | SpellMaskJudgementOfJustice | SpellMaskJudgementOfTheCrusader |
++			SpellMaskJudgementOfLight | SpellMaskJudgementOfWisdom | SpellMaskSealOfRighteousnessProc |
++			SpellMaskSealOfCommandProc | SpellMaskSealOfFuryProc
++		paladin.OnSpellRegistered(func(spell *core.Spell) {
++			if spell.Matches(mask) {
++				spell.CritMultiplierAdditive += 0.10 * bz
++			}
++		})
++	}
++	if mfm := zzNum("MFM", 0); mfm > 0 {
++		cut := time.Duration(mfm * float64(time.Second))
++		paladin.MakeProcTriggerAura(core.ProcTrigger{
++			Name:               "Measure for Measure" + paladin.Label,
++			Callback:           core.CallbackOnSpellHitDealt,
++			ProcMask:           core.ProcMaskMelee,
++			Outcome:            core.OutcomeDodge | core.OutcomeParry,
++			TriggerImmediately: true,
++			Handler: func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
++				jud := paladin.Judgement
++				if jud == nil || jud.CD.Timer == nil || jud.CD.IsReady(sim) {
++					return
++				}
++				jud.CD.Set(max(sim.CurrentTime, jud.CD.ReadyAt()-cut))
++				pa := sim.GetConsumedPendingActionFromPool()
++				pa.NextActionAt = jud.CD.ReadyAt() + core.SpellBatchWindow
++				pa.OnAction = func(sim *core.Simulation) {
++					paladin.ReactToEvent(sim, false, false)
++				}
++				sim.AddPendingAction(pa)
++			},
++		})
++	}
 +}
 diff --git a/sim/paladin/zz_proposals.go b/sim/paladin/zz_proposals.go
 new file mode 100644

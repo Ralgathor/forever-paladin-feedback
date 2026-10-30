@@ -95,6 +95,8 @@ Retribution has 46 points (beta: 44). Benediction (M-P1) moves to Protection row
 | Against the pure average | 104% | 101% | 99% | 97% | 96% |
 | Now (RB2) | 103% | 101% | 98% | 96% | 95% |
 
+- **wowsims.** In a raid with consumables, Burning Zeal 2/2 gives +2.0%: two times the model value. The wowsims gear and buffs give more critical hits.
+
 - **Risk.** In PvP, a critical Holy Strike or Judgement does 2.2 times the damage (now 2 times). See PvP burst check and Watch list, W6.
 
 ## C-R5. Measure for Measure (new talent): row 5, column 4, 3 ranks
@@ -104,12 +106,12 @@ Retribution has 46 points (beta: 44). Benediction (M-P1) moves to Protection row
 - **Problem.** From behind, a boss dodges 6.5% of the attacks. Hit chance does not remove dodges. The talent gives a small return for each dodge.
 - **Value (RB2 with Measure for Measure 3/3, see Analysis, Damage, part 11).**
   - Raid, from behind (dodge only): about +7% Judgements, +1.0% to +1.1% damage at all gear levels.
-  - From the front (dodge and parry: PvP, tank hybrids): about +23% Judgements, about +4% damage.
+  - From the front (dodge and parry: PvP, Retribution tanks): about +23% Judgements, about +4% damage.
 - **Mana.** A Judgement costs about 82 mana. Sanctified Judgement 3/3 returns 126. Thus, each extra Judgement gives mana.
-- **Risk.** In PvP, Evasion (Rogue) gives many dodges. Judgement then comes back fast while Evasion lasts. Tank hybrids with 20 Retribution points also receive more Judgement threat (see Watch list, W23).
+- **Risk.** In PvP, Evasion (Rogue) gives many dodges. Judgement then comes back fast while Evasion lasts. A Retribution tank with a two-handed weapon receives about +7% threat. A tank with Holy Shield cannot take the talent: row 5 needs 21 Retribution points (see Watch list, W23).
 
 ## Retribution with Burning Zeal (C-R4) and Measure for Measure (C-R5)
 
 - **Points.** A deep build with both talents needs 5 more Retribution points. RB6 (5/8/38) takes them from the Holy dip: it keeps Improved Seals 3, adds Divine Intellect 2 and loses Reverence, Infusion of Light and Unyielding Faith.
-- **Damage.** RB6 has +1.9% at fresh level 60 and +2.4% in Naxxramas against RB2. It is 105% of the pure average at fresh level 60 and 97% in Naxxramas (see Analysis, Damage, part 11).
+- **Damage.** RB6 has +1.9% at fresh level 60 and +2.4% in Naxxramas against RB2. It is 105% of the pure average at fresh level 60 and 97% in Naxxramas (see Analysis, Damage, part 11). In wowsims, it is 108% of the pure average in a raid.
 - **Balance.** The hybrid target is 95% of the pure average. If Retribution is above the pure average at the raid release, decrease Sacred Arbiter first (+20% → +10%, see Watch list, W15).

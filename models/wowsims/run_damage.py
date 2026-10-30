@@ -1,4 +1,5 @@
 """Retribution against the other damage specs (Analysis, Damage, part 7). Run: python3 run_damage.py"""
+import copy, json, os
 from concurrent.futures import ThreadPoolExecutor
 from wowsims import *
 from builds import *
@@ -43,6 +44,36 @@ def proposals():
              ("All", RET_PROP), ("All, Sacred Arbiter +10%", RET_PROP + ",SA10"), ("All, Echo 6 sec", RET_PROP + ",ECHO6")]
     return run([((l, s), P(RET, talents=RB1), s, f) for l, f in cases for s in ("raid", "solo")]), [c[0] for c in cases]
 
+# Analysis, Damage, part 11 and Builds, parts 4 and 5: the new Retribution talents (flags BZ<n>, MFM<n>) and
+# Shock-Retribution with Divine Precision in Holy row 4 (M-H5). The Holy Shock rotation casts Holy Shock above 40% mana.
+# Builds without Holy Shock give the same result with it as with the preset rotation (within 0.3%).
+SHOCK_APL = json.load(open(os.path.join(HERE, "data", "shock_ret.apl.json")))
+NEW = RET_PROP + ",VIN5"
+NEW_BUILDS = [("RB2", RB2, NEW), ("RB2, Burning Zeal 2/2", RB2, NEW + ",BZ2"),
+              ("RB2, Measure for Measure 3/3", RB2, NEW + ",MFM3"), ("RB2, both", RB2, NEW + ",BZ2,MFM3"),
+              ("RB6 (5/8/38)", RB6, NEW + ",BZ2,MFM3"), ("Shock-Retribution (26/0/25)", SHOCK_RET, NEW),
+              ("Shock-Retribution with Divine Precision (28/0/23)", SHOCK_RET_DP, NEW)]
+
+def shock_player(t):
+    p = P(RET, talents=t); p["rotation"] = SHOCK_APL; return p
+
+def righteous_fury(p):
+    p = copy.deepcopy(p)
+    p["rotation"]["prepullActions"].insert(0, {"action": {"castSpell": {"spellId": {"spellId": 25780}}},
+                                               "doAtValue": {"const": {"val": "-25s"}}})
+    return p
+
+def new_talents():
+    jobs = [((l, s), shock_player(t), s, f) for l, t, f in NEW_BUILDS for s in SCENS]
+    jobs += [((l, "front"), (shock_player(t), "raid", True), None, f) for l, t, f in NEW_BUILDS[:5]]
+    jobs += [((l, "tank"), (righteous_fury(shock_player(t)), "raid", True), None, f) for l, t, f in NEW_BUILDS[::4][:2]]
+    def one(j):
+        if j[2] is None:
+            p, s, tank = j[1]
+            return j[0], metrics(sim(request(p, s, tank=tank), j[3]))
+        return j[0], metrics(sim(request(j[1], j[2]), j[3]))
+    return dict(ThreadPoolExecutor(4).map(one, jobs))
+
 if __name__ == "__main__":
     r, pure = classes()
     print("| Spec | Raid | Raid, no consumables | Solo |\n| --- | --- | --- | --- |")
@@ -62,3 +93,15 @@ if __name__ == "__main__":
     print("\n| Case (RB1) | Raid | Solo |\n| --- | --- | --- |")
     for l in labels:
         print(f"| {l} | " + " | ".join(f"{pr[(l, s)]['dps']:.0f} ({pr[(l, s)]['dps'] / base[s] - 1:+.1%})" for s in ("raid", "solo")) + " |")
+
+    n = new_talents()
+    rb2 = {s: n[("RB2", s)]["dps"] for s in SCENS + ("front",)}
+    print("\n| Build (Holy Shock rotation) | Raid | Raid, no consumables | Solo | From the front | Raid, % of the pure average |")
+    print("| --- | --- | --- | --- | --- | --- |")
+    for l, _, _ in NEW_BUILDS:
+        cols = [f"{n[(l, s)]['dps']:.0f} ({n[(l, s)]['dps'] / rb2[s] - 1:+.1%})" for s in SCENS]
+        cols.append(f"{n[(l, 'front')]['dps']:.0f} ({n[(l, 'front')]['dps'] / rb2['front'] - 1:+.1%})" if (l, "front") in n else "—")
+        print(f"| {l} | " + " | ".join(cols) + f" | {n[(l, 'raid')]['dps'] / pure['raid']:.0%} |")
+    for l in ("RB2", "RB6 (5/8/38)"):
+        t = n[(l, "tank")]
+        print(f"Retribution tank, {l}, Righteous Fury, from the front: {t['tps']:.0f} TPS, {t['dtps']:.0f} damage taken per sec")

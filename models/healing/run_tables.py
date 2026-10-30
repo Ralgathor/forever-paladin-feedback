@@ -5,6 +5,9 @@ from healing_model import paladin, priest, druid, shaman, solve, budget, max_hps
 
 PROP = dict(rev=0.5, light=1.30, bol=False, ling=0.2, conv=0.05, bened=0.09, inf_all=True, df_cd=60)   # Divine Grace (C-H6) 2/2
 PROP_V5 = dict(PROP, df_cd=120)   # the proposals before Divine Grace (C-H6)
+# Analysis, Builds, part 2: HB1 (no Divine Grace), HB4 (Divine Grace, Conviction 4/5), HB5 (Divine Grace, Conviction 5/5).
+# Merciful Light (C-H5) changes only the recovery after a large hit (recovery.py).
+HB = (("HB1", PROP_V5), ("HB4", dict(PROP, conv=0.04)), ("HB5", PROP))
 TS = (180, 300, 600)
 OTHERS = (("Priest", priest), ("Druid", druid), ("Shaman", shaman))
 
@@ -47,6 +50,11 @@ if __name__ == "__main__":
         print(f"## Maximum (raw, one tank, 30 sec), {hp}")
         print("  " + "  ".join(f"{n} {max_hps(mk(f, hp, 30, True)):.0f}" for n, f in OTHERS)
               + f"  Paladin beta {max_hps(paladin(hp)):.0f}  proposed {max_hps(paladin(hp, **PROP)):.0f}")
+    print("## Holy builds (Analysis, Builds, part 2): healing per sec against HB1, raid")
+    for hp in (715, 900):
+        base = {T: pal(hp, T, False, **HB[0][1]) for T in TS}
+        for n, kw in HB[1:]:
+            print(f"  {hp} {n}: " + " | ".join(f"{pal(hp, T, False, **kw) / base[T] - 1:+.1%}" for T in TS))
     print("## Cast plans, proposed Paladin (715)")
     for tank in (False, True):
         for T in TS:

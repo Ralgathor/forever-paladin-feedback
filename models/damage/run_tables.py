@@ -183,12 +183,12 @@ if __name__ == "__main__":
     sh, sh0 = retribution(g, tal=M.SHOCK_RET), retribution(g, tal=dict(M.SHOCK_RET, hsk=0))
     print(f"Shock-Retribution: {sh:.0f} ({pct(sh, P)} of RB2). No mana for Holy Shock: {sh0:.0f} ({pct(sh0, P)})")
 
-    def ret_tank(front=True, dungeon=True, cons=False):
+    def ret_tank(front=True, dungeon=True, cons=False, tal=M.RB2):
         """RB2 with Righteous Fury (x1.9 on Holy damage), pre-raid gear (Threat, part 1). dungeon: Blessing of Might only."""
         save = (M.KINGS, M.SHOUT, M.MOTW)
         if dungeon:
             M.KINGS, M.SHOUT, M.MOTW = 1.0, 0, 0
-        tot, src_t, _ = retribution(gear(1), detail=True, front=front, extra="consecration" if cons else None)
+        tot, src_t, _ = retribution(gear(1), detail=True, front=front, tal=tal, extra="consecration" if cons else None)
         M.KINGS, M.SHOUT, M.MOTW = save
         return src_t["Auto attacks"] + 1.9 * (tot - src_t["Auto attacks"])
     PB2_TPS, PB2_CONS = 560, 652          # Analysis, Builds, part 3 (threat model)
@@ -210,4 +210,7 @@ if __name__ == "__main__":
         rr = growth(new)
         pure_row = " | ".join(pct(r * new(g) / P * rr[t], shape75(t)) for t in range(5))
         print(f"{name}: {row}." + ("" if kw else f" Against the pure average (x1.75): {pure_row}"))
+    b, bc = ret_tank(tal=RB6), ret_tank(cons=True, tal=RB6)
+    print(f"Retribution tank RB6 (Measure for Measure 3/3, front, dungeon buffs): {b:.0f} TPS ({pct(b, PB2_TPS)} of PB2), "
+          f"with Consecration {bc:.0f} ({pct(bc, PB2_CONS)})")
     print("Now (RB2) against the pure average (x1.75): " + " | ".join(pct(r * R[t], shape75(t)) for t in range(5)))

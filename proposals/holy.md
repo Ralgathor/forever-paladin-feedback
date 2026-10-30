@@ -113,8 +113,8 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 
 - **No change to the healing in long fights.** Holy Shock gives less healing for each mana point than Flash of Light. Thus, the best cast plan does not use it, also with the bonus. In raids, few targets go below 35% health.
 - **Limit.** After a large hit that leaves the tank above 35% health, the talent gives nothing.
-- **Who takes it.** Row 5 needs 20 Holy points. Holy healers take it. Shock-Retribution (26/0/25) can also take it.
-- **Risk.** In PvP, Shock-Retribution heals an ally at or below 35% health for about 1,630 each 10 sec, with no cast time (see Watch list, W21).
+- **Who takes it.** Row 5 needs 20 Holy points. Holy healers take it. Shock-Retribution can also take it.
+- **Risk.** In PvP, a Holy healer heals an ally at or below 35% health for about 1,630 each 10 sec, with no cast time. Shock-Retribution heals for about 640–860 (see Watch list, W21).
 
 ## C-H6. Divine Grace (new talent): row 4, column 4, 2 ranks
 
