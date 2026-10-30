@@ -4,7 +4,7 @@
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 WORK="${WOWSIMS_WORK:-$HERE/.work}"
-COMMIT=69e0e5b
+COMMIT=a10f483
 mkdir -p "$WORK"
 if [ ! -d "$WORK/forever" ]; then
   git clone https://github.com/wowsims/forever.git "$WORK/forever"

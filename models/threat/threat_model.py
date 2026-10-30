@@ -128,7 +128,7 @@ def paladin(g, tal=TANK_REF, proposed=True, c14=1.0, crusader=True, consecration
     crit = g.crit + 0.01 * t("conv")
     spell_crit = crit if proposed else g.crit        # spells crit in the beta too. C-R1: Conviction also for spells
     sp = g.sp + (CRUSADER if crusader else 0)
-    ap = g.ap * (1 + 0.01 * t("vind"))               # Vindication: +1-5% Attack Power (full uptime)
+    ap = g.ap * (1 + 0.02 * t("vind"))               # Vindication 3 ranks (C-P3): +2/4/6% Attack Power (full uptime)
     w = g.but(ap=ap)
     dr = armor_dr(g.armor)
     ohws = 1 + OHWS[t("ohws")]                       # melee, Seals, Judgements, Holy Strike (beta test)

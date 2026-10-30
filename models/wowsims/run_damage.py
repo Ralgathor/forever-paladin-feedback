@@ -13,7 +13,7 @@ def P(name, gearpath=None, talents=None):
 
 SPECS = {
     "Retribution, beta": (P(RET), ""),
-    "Retribution, proposed (RB1)": (P(RET, talents=RB1), RET_PROP),
+    "Retribution, proposed (RB1)": (P(RET, talents=RB1_V6[0]), RET6 + "," + RB1_V6[1]),
     "Fury Warrior (prebis gear)": (P("ClassWarrior__p1_fury__default__fury__Fury", "warrior/dps/gear_sets/prebis_fury"), ""),
     "Arms Warrior (prebis gear)": (P("ClassWarrior__p1_arms__Arms__arms__Fury", "warrior/dps/gear_sets/prebis_arms"), ""),
     "Rogue (Combat gear)": (P("ClassRogue__p1_muti__default__default__Rogue", "rogue/dps/gear_sets/p1_bscombat"), ""),
@@ -44,15 +44,17 @@ def proposals():
              ("All", RET_PROP), ("All, Sacred Arbiter +10%", RET_PROP + ",SA10"), ("All, Echo 6 sec", RET_PROP + ",ECHO6")]
     return run([((l, s), P(RET, talents=RB1), s, f) for l, f in cases for s in ("raid", "solo")]), [c[0] for c in cases]
 
-# Analysis, Damage, part 11 and Builds, parts 4 and 5: the new Retribution talents (flags BZ<n>, MFM<n>) and
-# Shock-Retribution with Divine Precision in Holy row 4 (M-H5). The Holy Shock rotation casts Holy Shock above 40% mana.
+# Analysis, Damage, part 11 and Builds, parts 4 and 5: the builds of calculator version 6 and the value of the new
+# Retribution talents (flags BZ<n>, MFM<n>). RB2 with no Burning Zeal is not a legal build (Vengeance requires
+# Burning Zeal 5/5): it gives the talent value only. The Holy Shock rotation casts Holy Shock above 40% mana.
 # Builds without Holy Shock give the same result with it as with the preset rotation (within 0.3%).
 SHOCK_APL = json.load(open(os.path.join(HERE, "data", "shock_ret.apl.json")))
-NEW = RET_PROP + ",VIN5"
-NEW_BUILDS = [("RB2", RB2, NEW), ("RB2, Burning Zeal 2/2", RB2, NEW + ",BZ2"),
-              ("RB2, Measure for Measure 3/3", RB2, NEW + ",MFM3"), ("RB2, both", RB2, NEW + ",BZ2,MFM3"),
-              ("RB6 (5/8/38)", RB6, NEW + ",BZ2,MFM3"), ("Shock-Retribution (26/0/25)", SHOCK_RET, NEW),
-              ("Shock-Retribution with Divine Precision (28/0/23)", SHOCK_RET_DP, NEW)]
+NEW_BUILDS = [("RB2", RB2_V6[0], RET6 + ",BZ5,MFM2"), ("RB2, no Burning Zeal", RB2_V6[0], RET6 + ",MFM2"),
+              ("RB2, no Measure for Measure", RB2_V6[0], RET6 + ",BZ5"),
+              ("RB2, no Burning Zeal or Measure for Measure", RB2_V6[0], RET6),
+              ("RB1 (7/8/36)", RB1_V6[0], RET6 + "," + RB1_V6[1]), ("RB6 (5/8/38)", RB6_V6[0], RET6 + "," + RB6_V6[1]),
+              ("Shock-Retribution (28/0/23)", SR28_V6[0], RET6 + "," + SR28_V6[1]),
+              ("Holy Shock build (21/0/30)", HS21_V6[0], RET6 + "," + HS21_V6[1])]
 
 def shock_player(t):
     p = P(RET, talents=t); p["rotation"] = SHOCK_APL; return p
@@ -69,7 +71,7 @@ def front(p):
 
 def new_talents():
     jobs = [((l, s), shock_player(t), s, f) for l, t, f in NEW_BUILDS for s in SCENS]
-    jobs += [((l, "front"), (front(shock_player(t)), "raid", True), None, f) for l, t, f in NEW_BUILDS[:5]]
+    jobs += [((l, "front"), (front(shock_player(t)), "raid", True), None, f) for l, t, f in NEW_BUILDS[:6]]
     jobs += [((l, "tank"), (front(righteous_fury(shock_player(t))), "raid", True), None, f) for l, t, f in NEW_BUILDS
              if l in ("RB2", "RB6 (5/8/38)")]
     def one(j):
@@ -89,7 +91,7 @@ if __name__ == "__main__":
         print(f"| {n}, % of the pure average / of Fury | " + " | ".join(
             f"{r[(n, s)]['dps'] / pure[s]:.0%} / {r[(n, s)]['dps'] / r[('Fury Warrior (prebis gear)', s)]['dps']:.0%}" for s in SCENS) + " |")
     same = run([(("beta", "raid"), P(RET, "warrior/dps/gear_sets/prebis_arms"), "raid", ""),
-                (("prop", "raid"), P(RET, "warrior/dps/gear_sets/prebis_arms", RB1), "raid", RET_PROP)])
+                (("prop", "raid"), P(RET, "warrior/dps/gear_sets/prebis_arms", RB1_V6[0]), "raid", RET6 + "," + RB1_V6[1])])
     arms = r[("Arms Warrior (prebis gear)", "raid")]["dps"]
     print(f"\nSame gear (Arms prebis): beta {same[('beta', 'raid')]['dps']:.0f} ({same[('beta', 'raid')]['dps'] / arms:.0%} of Arms), "
           f"proposed {same[('prop', 'raid')]['dps']:.0f} ({same[('prop', 'raid')]['dps'] / arms:.0%})")

@@ -95,7 +95,7 @@ if __name__ == "__main__":
            "One-Handed Weapon Specialization": ("ohws", 3), "Improved Seals": ("is", 3), "Precision": ("prec", 3),
            "Conviction": ("conv", 3), "Iron Creed": ("ic", 5)}
     print("Per point (8/35/8 tank): " + ", ".join(f"{n} {(P - paladin(g, dict(TANK_REF, **{k: 0}))) / r:.1f}" for n, (k, r) in per.items())
-          + f", Vindication {(paladin(g, dict(TANK_REF, vind=5)) - P) / 5:.1f}")
+          + f", Vindication {(paladin(g, dict(TANK_REF, vind=3)) - P) / 3:.1f}")
 
     print("\n## Builds, part 5")
     p2 = paladin(g, PB2)

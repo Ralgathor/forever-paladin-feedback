@@ -95,28 +95,32 @@ def gear(tier=0, flat=False, sd_fixed=False):
     return g
 
 # ---------------------------------------------------------------- Retribution (parts 1-4, 7, 8)
-# Build 12/8/31 (RB2). Conviction +5% critical hit. Precision +3% hit. Two-Handed Weapon Specialization x1.06.
-# Improved Seals x1.15 (Seals and Judgements). Vindication 5/5 (C-P3): +5% Attack Power, full uptime on a boss.
+# Build 9/8/34 (RB2, calculator version 6). Conviction +5% critical hit. Precision +3% hit. Two-Handed Weapon Specialization
+# x1.06. Improved Seals x1.15 (Seals and Judgements). Vindication 3/3 (C-P3): +6% Attack Power, full uptime on a boss.
+# Burning Zeal 5/5 (C-R4) and Measure for Measure 2/3 (C-R5).
 THWS, IMP_SEALS = 1.06, 1.15
 NORM_2H = 3.3
 
-# Talents (points) of the Retribution builds of Analysis, Builds, part 4. Only the talents with a raid damage effect.
+# Talents (points) of the Retribution builds of Analysis, Builds, part 4 (calculator version 6). Only the talents with a
+# raid damage effect.
 # "is" Improved Seals, "cg" Consecrated Ground, "di" Divine Intellect, "hsk" Holy Shock, "prec" Precision,
 # "sj" Swift Judgement, "conv" Conviction, "ij" Improved Judgement, "vind" Vindication, "soc" Seal of Command,
 # "sa" Sacred Arbiter, "thws" Two-Handed Weapon Specialization, "veng" Vengeance, "cotl" Champion of the Light,
 # "iol" Instrument of Law, "tol" Twist of Light, "hp" Holy Power, "bz" Burning Zeal (C-R4), "mfm" Measure for Measure (C-R5).
-RB2 = dict(is_=3, di=2, prec=3, conv=5, ij=2, vind=5, soc=1, sa=1, thws=3, veng=3, cotl=3, iol=2, tol=1)
-RB1 = dict(RB2, di=0)                                                     # Pursuit of Justice
-RB3 = dict(RB2, is_=0, di=0, sj=1)                                        # 0/19/32: no Holy points
-RB4 = dict(RB2, di=0)                                                     # Repentance, Eye for an Eye
-RB5 = dict(RB2, is_=0, di=0, ij=0, vind=0, cotl=0, iol=0, tol=0, sj=1)    # 0/26/25
-SHOCK_RET = dict(RB2, prec=0, vind=3, iol=0, tol=0, cotl=0, di=5, hsk=1, hp=5)   # 26/0/25: Holy Power (Holy row 5, M-H3)
-RET_BUILDS = (("RB1", RB1), ("RB2", RB2), ("RB3", RB3), ("RB4", RB4), ("RB5", RB5))
+RB2 = dict(is_=3, di=2, prec=3, conv=5, ij=2, vind=3, soc=1, sa=1, thws=3, veng=3, cotl=3, iol=2, tol=1, bz=5, mfm=2)
+RB1 = dict(RB2, di=0)                                                     # 7/8/36: Pursuit of Justice
+RB3 = dict(RB2, is_=1, di=0, sj=1, mfm=0)                                 # 1/19/31: Improved Hammer of Justice
+RB4 = dict(RB2, di=0, mfm=1)                                              # 5/8/38: Repentance
+RB5 = dict(prec=3, sj=1, ij=2, conv=5, soc=1, sa=1, thws=3, veng=3, bz=5) # 0/26/25
+RB6 = dict(RB2, mfm=3)                                                    # 5/8/38: Measure for Measure 3/3
+# 28/0/23: Divine Precision (Holy row 5), Holy Power 3/5 and Consecrated Ground 2/2. No Twist of Light.
+SHOCK_RET = dict(is_=3, di=5, hsk=1, cg=2, hp=3, ij=2, conv=5, vind=1, soc=1, sa=1, thws=3, veng=3, bz=5)
+RET_BUILDS = (("RB1", RB1), ("RB2", RB2), ("RB3", RB3), ("RB4", RB4), ("RB5", RB5), ("RB6", RB6))
 
 def ret_stats(g, cotl=None, ap_pct=None, str_pct=0.0, tal=RB2):
     t = lambda k: tal.get(k, 0)
     cotl = 0.20 * t("cotl") if cotl is None else cotl
-    ap_pct = 0.01 * t("vind") if ap_pct is None else ap_pct     # Vindication: +1-5% Attack Power
+    ap_pct = 0.02 * t("vind") if ap_pct is None else ap_pct     # Vindication: +2/4/6% Attack Power
     st = (g["str"] + MOTW) * KINGS * (1 + str_pct)
     ap = (st * 2 + g["ap_items"] + MIGHT + SHOUT) * (1 + ap_pct)
     intel = (g["int"] + MOTW) * KINGS * (1 + 0.02 * t("di"))

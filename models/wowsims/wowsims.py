@@ -46,6 +46,20 @@ def wowhead_shields(p):
     if new:
         p["database"] = {"items": new}
 
+LEGACY = {i["id"]: i for i in json.load(open(os.path.join(HERE, "data", "legacy_items.json")))["items"]}
+_IDS = None
+
+def legacy_items(p):
+    """Items of the saved gear sets that left the wowsims item list (data/legacy_items.json).
+    The request gives their old values to the sim."""
+    global _IDS
+    if _IDS is None:
+        _IDS = {i["id"] for i in json.load(open(os.path.join(WORK, "forever", "assets", "database", "db.json")))["items"]}
+    add = [copy.deepcopy(LEGACY[e["id"]]) for e in p.get("equipment", {}).get("items", [])
+           if e.get("id") in LEGACY and e["id"] not in _IDS]
+    if add:
+        p.setdefault("database", {}).setdefault("items", []).extend(add)
+
 def julien():
     return copy.deepcopy(PROT["raid"]["parties"][0]["players"][0])
 
@@ -57,6 +71,7 @@ def request(player, scen="raid", tank=False, iters=3000, dur=180, keep_buffs=Fal
     p = copy.deepcopy(player); p["name"] = "Player"
     if wowhead:
         wowhead_shields(p)
+    legacy_items(p)
     raid = {"parties": [{"players": [p]}], "numActiveParties": 1}
     if scen in ("raid", "raid_nocons"):
         raid["buffs"] = ref_raid["buffs"]; raid["debuffs"] = ref_raid["debuffs"]
