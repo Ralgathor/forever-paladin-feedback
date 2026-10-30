@@ -10,7 +10,7 @@ The script models/damage/run_tables.py calculates all values of this section. Fu
 - The hybrid target is 95% of the pure damage classes. Players report it from developer comments: hybrids do about 5% less damage than pure damage classes. In the beta, Retribution is 93%.
 - Holy Strike Seal trigger (C1) gives almost all of the increase. Twist of Light (C-R2) gives the same damage as the beta Seal swap, but the mana lasts for the full fight.
 - Retribution increases less with gear than Fury. In Naxxramas, it is about 95% of Fury (also with flatter gear). No talent change closes this gap (part 6).
-- Burning Zeal (C-R4) gives more damage in late raids: +0.8% at fresh level 60, +1.3% in Naxxramas. Measure for Measure (C-R5) gives about +1% at all gear levels. RB6 (5/8/38) with both is 105% of the pure average at fresh level 60 and 97% in Naxxramas (part 11). In wowsims, Burning Zeal gives +2.0%, and RB6 is 108% of the pure average. In version 6, Shock-Retribution with Divine Precision in Holy row 5 (28/0/23) is also 108%.
+- Burning Zeal (C-R4) gives more damage in late raids: +0.8% at fresh level 60, +1.3% in Naxxramas. Measure for Measure (C-R5) gives about +1% at all gear levels. RB6 (5/8/38) with both is 105% of the pure average at fresh level 60 and 97% in Naxxramas (part 11). In wowsims, Burning Zeal gives +2.0%, and RB6 is 113% of the pure average. Shock-Retribution with Divine Precision in Holy row 5 (28/0/23) is also 113%.
 - Fury increases more with gear than the other classes. Against the pure average, Retribution goes from 105% at fresh level 60 to about 97% in Naxxramas. The hybrid target is 95%.
 - Judgement of the Crusader gives Retribution about +10% DPS at fresh level 60. Personal Judgement of the Crusader (C2) makes this possible for each Paladin.
 
@@ -106,7 +106,7 @@ The pure average is the best spec of each pure damage class: Warrior 929, Rogue 
 - **The hybrid target is 95% of the pure average.** In the beta, Retribution is 93%.
 - **With all proposals, Retribution is 103% of Fury and 105% of the pure average.** Without Combat Rogue (the lowest pure class), the pure average is 961. Retribution is then 99% of it.
 - **Retribution is the strongest hybrid** in the beta and with the proposals. In the beta, it is 7% above Feral and 14% above Enhancement.
-- **Check with the same gear.** The model also calculates Arms, Fury and Combat Rogue with the gear of part 1 and Forever rage. The beta Retribution is 15% above Arms. wowsims Forever gives 16% with its own pre-raid gear, and MythicSim gives 6%. The Arms rotation is now the wowsims rotation: Rend, Overpower, Mortal Strike, Spearing Strike, Slam, then Heroic Strike. Other causes can be the gear, consumables and Windfury Totem. Part 6 uses only the increase with gear.
+- **Check with the same gear.** The model also calculates Arms, Fury and Combat Rogue with the gear of part 1 and Forever rage. The beta Retribution is 15% above Arms. wowsims Forever gives 7% with the Arms pre-raid gear, and MythicSim gives 6%. The Arms rotation is now the wowsims rotation: Rend, Overpower, Mortal Strike, Spearing Strike, Slam, then Heroic Strike. Other causes can be the gear, consumables and Windfury Totem. Part 6 uses only the increase with gear.
 - **One source only.** The MythicSim page has some errors in its rank order. Its Hunter values add melee attacks between shots. No player has confirmed this in a raid.
 - **No raid gear.** MythicSim has no raid gear tiers. Part 6 uses a model for the increase with gear.
 
@@ -240,43 +240,44 @@ Judgement of the Crusader gives about +10% DPS at fresh level 60. It adds 161 Ho
 
 ## 10. Check with wowsims
 
-wowsims Forever with the proposals gives the same Retribution increase as the model, within 5%. The Retribution level against the Warrior is lower in wowsims than in the model.
+wowsims Forever with the proposals gives a smaller Retribution increase than the model (−6.5%). Against Fury, the two results agree.
 
-Conditions: wowsims Forever commit 69e0e5b with the proposals patch (models/wowsims). Presets of wowsims for gear, talents, rotation and consumables. The same raid buffs for all specs, a 3 min fight against one level 63 boss, 3,000 iterations. Beta: the wowsims Retribution preset. Proposed: RB1 with Reverence (C-H1), Conviction (C-R1), Holy Strike Seal trigger (C1), Twist of Light (C-R2) and Sanctified Judgement (C-R3).
+Conditions: wowsims Forever commit a10f483 (30 October 2026) with the proposals patch (models/wowsims). Presets of wowsims for gear, talents, rotation and consumables. The same raid buffs for all specs, a 3 min fight against one level 63 boss, 3,000 iterations. Beta: the wowsims Retribution preset. Proposed: RB1 of version 6 with Reverence (C-H1), Conviction (C-R1), Holy Strike Seal trigger (C1), Twist of Light (C-R2), Sanctified Judgement (C-R3), Burning Zeal (C-R4) and Measure for Measure (C-R5). The rows for each proposal use RB1 of version 5 (no Burning Zeal or Measure for Measure).
 
 | Value | Model | wowsims | Difference |
 | --- | --- | --- | --- |
-| Retribution, all proposals against the beta (same talents) | +11% | +6% | −4.5% |
-| Beta Retribution against Arms, same gear | 115% | 108% | −5.7% |
-| Retribution, all proposals, as a % of Fury | 101% (part 5) | 100% | −1% |
+| Retribution, all proposals against the beta (same talents) | +13% | +5% | −6.5% |
+| Beta Retribution against Arms, same gear | 115% | 107% | −6.9% |
+| Retribution, all proposals, as a % of Fury | 103% (part 5) | 104% | +0.8% |
 
-- **Proposals against the beta.** The two results agree. In wowsims, Twist of Light (C-R2) gives +3.1% and the Holy Strike Seal trigger (C1) gives +2.3%. Conviction (C-R1), Reverence (C-H1) and Sanctified Judgement (C-R3) each give +0.2% or less in a raid.
-- **Beta against Arms (−5.7%).** The model uses the gear of part 1 for both specs. wowsims uses the Arms pre-raid gear for both specs, with consumables. Both results put the beta Retribution above Arms.
-- **Against Fury.** Part 5 uses the MythicSim ratio for Fury. With this ratio, the model gives 101% and wowsims gives 100%. The model Fury with the gear of part 1 gives a different result (119%). Thus, part 5 does not use the model Fury.
+- **Proposals against the beta.** In wowsims, Twist of Light (C-R2) gives +2.9% and the Holy Strike Seal trigger (C1) gives +2.0%. Conviction (C-R1), Reverence (C-H1) and Sanctified Judgement (C-R3) each give +0.2% or less in a raid. All of them give +5.4% (alone: +22%).
+- **Beta against Arms (−6.9%).** The model uses the gear of part 1 for both specs. wowsims uses the Arms pre-raid gear for both specs, with consumables. Both results put the beta Retribution above Arms.
+- **Against Fury.** Part 5 uses the MythicSim ratio for Fury. With this ratio, the model gives 103% and wowsims gives 104%. The model Fury with the gear of part 1 gives a different result (119%). Thus, part 5 does not use the model Fury.
 
 **wowsims result of each spec** (DPS, raid buffs)
 
 | Spec | Raid | Raid, no consumables | Alone (no buffs) |
 | --- | --- | --- | --- |
-| Hunter (Marksmanship) | 907 | 807 | 259 |
-| Mage (Fire) | 852 | 678 | 485 |
-| Fury Warrior (pre-raid gear) | 817 | 734 | 358 |
-| **Retribution, all proposals** | **816** | **661** | **318** |
-| Retribution, beta | 790 | 640 | 270 |
-| Shadow Priest | 774 | 680 | 302 |
-| Balance Druid (pre-raid gear) | 742 | 559 | 311 |
-| Arms Warrior (pre-raid gear) | 721 | 650 | 268 |
-| Warlock (Destruction) | 707 | 530 | 438 |
-| Enhancement Shaman | 658 | 544 | 240 |
-| Rogue (Combat gear) | 649 | 603 | 297 |
-| Feral Druid | 620 | 620 | 310 |
-| Elemental Shaman | 575 | 416 | 181 |
-| Pure average (Fury, Rogue, Hunter, Mage, Warlock) | 787 | 671 | 367 |
+| Mage (Fire) | 844 | 673 | 477 |
+| **Retribution, all proposals (RB1)** | **829** | **670** | **299** |
+| Fury Warrior (pre-raid gear) | 799 | 714 | 350 |
+| Shadow Priest | 770 | 675 | 311 |
+| Retribution, beta | 763 | 620 | 273 |
+| Hunter (Marksmanship) | 749 | 706 | 241 |
+| Balance Druid (pre-raid gear) | 721 | 540 | 314 |
+| Arms Warrior (pre-raid gear) | 716 | 646 | 266 |
+| Warlock (Destruction) | 695 | 521 | 430 |
+| Enhancement Shaman | 649 | 536 | 237 |
+| Feral Druid | 625 | 625 | 303 |
+| Rogue (Combat gear) | 592 | 548 | 271 |
+| Elemental Shaman | 560 | 410 | 181 |
+| Pure average (Fury, Rogue, Hunter, Mage, Warlock) | 736 | 632 | 354 |
 
-- In a raid, the beta Retribution is 100% of the pure average. With all proposals, it is 104%, and 100% of Fury.
-- Without consumables, Retribution is 95% (beta) and 99% (proposed) of the pure average.
-- Alone, Retribution is 74% (beta) and 87% (proposed) of the pure average. Retribution has more raid buffs in its damage than the pure classes.
-- Sacred Arbiter at +10% removes 0.9% of the raid damage. An Echo of 6 sec removes 0.6%.
+- In a raid, the beta Retribution is 104% of the pure average and 95% of Fury. With all proposals, it is 113% of the pure average and 104% of Fury.
+- Without consumables, Retribution is 98% (beta) and 106% (proposed) of the pure average.
+- Alone, Retribution is 77% (beta) and 85% (proposed) of the pure average. Retribution has more raid buffs in its damage than the pure classes.
+- **New presets.** The Hunter and Rogue presets of commit a10f483 have new gear and rotations: Hunter 907 → 749, Rogue 649 → 592. Thus, the pure average goes from 787 to 736, and all specs are higher against it. The old presets do not load in the new sim. Against Fury, the proposed Retribution is 104% (commit 69e0e5b: 100%).
+- Sacred Arbiter at +10% removes 0.9% of the raid damage. An Echo of 6 sec removes 0.4%.
 
 The scripts are run_damage.py and check.py in models/wowsims. See its README for the setup and the proposal flags.
 
@@ -311,23 +312,23 @@ The script models/damage/run_tables.py (part 11) calculates these values. The ba
 - **Measure for Measure from the front.** Retribution tanks and PvP fights from the front receive about +23% Judgements (W23). A tank with Holy Shield cannot take the talent (see Builds, part 5).
 - **Balance.** RB2 and RB6 are 105% of the pure average at fresh level 60. If this is too strong at the raid release, decrease Sacred Arbiter first (W15).
 
-**Check with wowsims.** wowsims Forever with the flags BZ2 and MFM3 (models/wowsims/run_damage.py). Raid buffs and consumables, a 3 min fight, the Retribution preset gear, the Holy Shock rotation. Pure average: 787 (part 10).
+**Check with wowsims.** wowsims Forever commit a10f483 with the flags BZ and MFM (models/wowsims/run_damage.py). Raid buffs and consumables, a 3 min fight, the Retribution preset gear, the Holy Shock rotation. All builds are version 6 builds. The base is RB2 of version 6. Pure average: 736 (part 10).
 
 | Build | Raid | Raid, no consumables | Alone | From the front | Raid, % of the pure average |
 | --- | --- | --- | --- | --- | --- |
-| RB2 | 824 | 667 | 325 | 768 | 105% |
-| RB2 with Burning Zeal 5/5 | 841 (+2.0%) | 679 (+1.8%) | 329 (+1.4%) | 783 (+1.9%) | 107% |
-| RB2 with Measure for Measure 3/3 | 831 (+0.8%) | 674 (+1.0%) | 327 (+0.9%) | 801 (+4.3%) | 106% |
-| RB2 with both | 848 (+2.9%) | 686 (+2.8%) | 332 (+2.3%) | 817 (+6.3%) | 108% |
-| RB6 (5/8/38) | 849 (+2.9%) | 686 (+2.8%) | 311 (−4.2%) | 818 (+6.6%) | 108% |
-| Shock-Retribution (26/0/25) | 791 (−4.1%) | 642 (−3.7%) | 285 (−12.3%) | — | 101% |
-| Shock-Retribution with Divine Precision (28/0/23) | 853 (+3.4%) | 693 (+3.8%) | 299 (−8.0%) | — | 108% |
-| RB2, version 6 (Burning Zeal 5/5 and Measure for Measure 2/3 in place of Holy Conduit 2/2, Unyielding Faith 1 and Infusion of Light 2; Vindication 3/3, +6%) | 847 (+2.8%) | — | 317 (−2.5%) | — | 108% |
-| Shock-Retribution 28/0/23, version 6 (Divine Precision 2/3 in Holy row 5, beta place; Burning Zeal 5/5; Vindication 1/3) | 852.5 (+3.5%) | — | 249 (−23.5%) | — | 108% |
-| Shock-Retribution 21/0/30 with Divine Precision 2/3 in Holy row 4 (withdrawn) | 869 (+5.4%) | — | — | — | 110% |
+| RB2 (9/8/34) | 831 | 672 | 311 | 787 | 113% |
+| RB2 with no Burning Zeal | 814 (−2.0%) | 660 (−1.8%) | 307 (−1.5%) | 771 (−2.0%) | 111% |
+| RB2 with no Measure for Measure | 825 (−0.8%) | 667 (−0.7%) | 312 (+0.1%) | 760 (−3.3%) | 112% |
+| RB2 with neither talent | 808 (−2.8%) | 655 (−2.5%) | 307 (−1.4%) | 746 (−5.2%) | 110% |
+| RB1 (7/8/36) | 830 (−0.1%) | 670 (−0.3%) | 299 (−4.0%) | 784 (−0.3%) | 113% |
+| RB6 (5/8/38) | 835 (+0.4%) | 676 (+0.7%) | 291 (−6.6%) | 799 (+1.5%) | 113% |
+| Shock-Retribution (28/0/23) | 830 (−0.1%) | 652 (−3.0%) | 246 (−20.9%) | — | 113% |
+| Holy Shock build (21/0/30) | 827 (−0.5%) | 653 (−2.7%) | 243 (−21.9%) | — | 112% |
 
-- **Version 6.** The Retribution layout of version 6 (M-R4, M-R5) puts Burning Zeal before Vengeance. Vindication has 3 ranks with +2/4/6% Attack Power (C-P3). Each Retribution build takes Burning Zeal 5/5 and Vindication 3/3 (see Builds, part 4). In a raid, RB2 of version 6 has +2.8%. Alone, it has −2.5%: Holy Conduit 2/2 decreases the Consecration cost, and the mana is the limit alone.
+- **Version 6.** The Retribution layout of version 6 (M-R4, M-R5) puts Burning Zeal before Vengeance. Vindication has 3 ranks with +2/4/6% Attack Power (C-P3). Each Retribution build takes Burning Zeal 5/5 (see Builds, part 4).
+- **The four best builds are equal in a raid** (827 to 835, within 1%). Alone, the Holy Shock builds are about 20% below RB2: they have no mana for Holy Shock.
+- **Retribution tank** (Righteous Fury, from the front): RB2 897 TPS, RB6 912 TPS (+1.7%), with Measure for Measure 3/3.
 - **Burning Zeal gives two times the model value** (+2.0% against +0.9% with pre-raid gear). The preset gear, the raid buffs and the consumables give more critical hits than the model gear.
-- **Measure for Measure agrees with the model.** From the front, Judgements increase by 23% in wowsims and in the model. From behind, they increase by 6% (model: 7%).
-- **RB6 is 108% of the pure average in wowsims,** and 105% in the model at fresh level 60. See Watch list, W15.
-- **Shock-Retribution with Divine Precision (28/0/23).** In version 5, Divine Precision was in Holy row 4 with no requirement. A 21/0/30 build with Divine Precision 2/3 then had 869 DPS, 2.0% above RB6. In version 6, Divine Precision is in its beta place again (Holy row 5), with no requirement (M-H5). It then needs 20 Holy points. The best Shock-Retribution builds have 852–855 DPS, equal to RB6 (see Builds, part 5 and Watch list, W22).
+- **Measure for Measure agrees with the model.** From behind, it gives +0.8% (model: +1.1%). From the front, it gives +3.3% (model: +4.1%).
+- **RB6 is 113% of the pure average in wowsims,** and 105% in the model at fresh level 60. The wowsims pure average is lower with the new Hunter and Rogue presets (part 10). See Watch list, W15.
+- **Shock-Retribution with Divine Precision (28/0/23).** In version 5, Divine Precision was in Holy row 4 with no requirement. A 21/0/30 build with Divine Precision 2/3 then had 869 DPS, 2.0% above RB6. In version 6, Divine Precision is in its beta place again (Holy row 5), with no requirement (M-H5). It then needs 20 Holy points. The best Shock-Retribution build has 830 DPS with the preset gear, equal to RB6. With its own pre-raid gear, it has 867 DPS, 1.6% below RB6 (881) (see builds/retribution.md and Watch list, W22).

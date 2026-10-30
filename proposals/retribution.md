@@ -137,5 +137,5 @@ Retribution has 47 points (beta: 44). Benediction (M-P1) moves to Protection row
 ## Retribution with Burning Zeal (C-R4) and Measure for Measure (C-R5)
 
 - **Points.** A deep build with both talents needs 8 more Retribution points. RB6 (5/8/38) takes them from the Holy dip and Holy Conduit. It keeps Improved Seals 3 and Divine Intellect 2. It loses Reverence, Infusion of Light, Unyielding Faith and 1 point of Holy Conduit.
-- **Damage.** RB6 has +1.9% at fresh level 60 and +2.4% in Naxxramas against RB2. It is 105% of the pure average at fresh level 60 and 97% in Naxxramas (see Analysis, Damage, part 11). In wowsims, it is 108% of the pure average in a raid.
+- **Damage.** RB6 has +1.9% at fresh level 60 and +2.4% in Naxxramas against RB2. It is 105% of the pure average at fresh level 60 and 97% in Naxxramas (see Analysis, Damage, part 11). In wowsims, it is 113% of the pure average in a raid.
 - **Balance.** The hybrid target is 95% of the pure average. If Retribution is above the pure average at the raid release, decrease Sacred Arbiter first (+20% → +10%, see Watch list, W15).

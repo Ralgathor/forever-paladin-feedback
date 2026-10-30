@@ -17,7 +17,7 @@ This file gives the best healing build for the beta trees and for the proposed t
 
 - **Build search.** The healing model examined all legal talent sets down to 8 points below the full healing set. That is 7,103 beta sets and 26,629 proposed sets. The best sets then ran at full precision: 3, 5 and 10 min, 715 and 900 healing power, recovery after 3 and 6 sec.
 - **wowsims check.** wowsims gives the same build order. The value of each talent is within about 2 percentage points of the model.
-- **Gear search.** wowsims Forever commit 47b3c01 with `models/wowsims/proposals.patch`. Slot by slot, 12 candidates for each slot (24 for rings and trinkets). The sim keeps the set with the most healing per sec. 3 min, raid buffs, no consumables, no enchants, Alliance.
+- **Gear search.** wowsims Forever commit 47b3c01 with `models/wowsims/proposals.patch`. A check on commit a10f483 (30 October 2026) gives the same healing per sec for all sets. Slot by slot, 12 candidates for each slot (24 for rings and trinkets). The sim keeps the set with the most healing per sec. 3 min, raid buffs, no consumables, no enchants, Alliance.
 - **Gear tiers.** Pre-raid: item level 65 or lower, no raid drops. Raid: all items up to item level 92 (Naxxramas).
 - **Sim rules.** The heal targets the caster. The sim has no overhealing: the values are raw healing.
 - **Codes.** All codes load in calculator version 6 with 51 points.

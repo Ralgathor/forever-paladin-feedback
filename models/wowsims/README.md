@@ -12,8 +12,9 @@ Requirements: git, Go 1.25 or later, Python 3, and grpcio-tools (`pip install gr
 
 The script does these steps:
 
-1. It clones wowsims Forever at commit `69e0e5b` into `.work/forever`. Set `WOWSIMS_WORK` to use a different folder.
+1. It clones wowsims Forever at commit `a10f483` into `.work/forever`. Set `WOWSIMS_WORK` to use a different folder.
 2. It applies `proposals.patch`. The patch adds the proposals to the sim. Each proposal is off until you set its flag.
+   It also applies `tank_threat.patch`. wowsims gives Maul, Swipe, Primal Bite and Shield Slam threat for the damage only. The patch reads the threat values from environment variables (`DRU_MAUL`, `DRU_SWIPE`, `DRU_PB`, `DRU_FF`, `WAR_SS`). With no variable, the sim does not change. `run_threat.py` sets the Druid values of the player data (`wowsims.DRUID_THREAT`) and a Shield Slam test case (×2.25).
 3. It makes the Go code of the protobuf files and builds the `wowsimcli` program.
 4. It writes the player presets of each spec (gear, talents, rotation, consumables) to `.work/dump`.
 

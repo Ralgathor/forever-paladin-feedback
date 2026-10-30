@@ -4,7 +4,7 @@ This section compares the threat of the three tanks: Warrior, Druid and Paladin.
 
 The values come from a model. The model uses beta tests and developer notes. It is not a combat log. The inputs are in part 6. The spell data from beta tests is in Beta test results. The values that are not known are in Open questions.
 
-The script models/threat/run_tables.py calculates all values of this section from the inputs of part 6. The Warrior and Druid values come from the Forever spellbook and talents (wowforevertalents.com) and from player data (see Sources). Spell values and combat rules are checked against wowsims Forever (23 October 2026). The rotations of the three tanks are checked against the wowsims Forever rotations (28 October 2026). Parts 2, 7 and 8 also use the best tank builds and the pre-raid gear of builds/protection.md (29 October 2026). Some threat values are not known. Part 6 shows them.
+The script models/threat/run_tables.py calculates all values of this section from the inputs of part 6. The Warrior and Druid values come from the Forever spellbook and talents (wowforevertalents.com) and from player data (see Sources). Spell values and combat rules are checked against wowsims Forever (23 October 2026). The rotations of the three tanks are checked against the wowsims Forever rotations (28 October 2026). Parts 2, 7 and 8 also use the best tank builds and the pre-raid gear of builds/protection.md (30 October 2026). Some threat values are not known. Part 6 shows them.
 
 ## Summary
 
@@ -15,11 +15,11 @@ The script models/threat/run_tables.py calculates all values of this section fro
 - Judgement of the Crusader gives the Paladin tank about +55 TPS. Judgement of Fury does not remove it. With Personal Judgement of the Crusader (C2), the tank keeps it. This is also true when the raid needs the Judgement of the tank for Light or Wisdom.
 - If the gear progression is flatter, the Paladin has 91–95% of the Druid threat in Naxxramas.
 - The Druid threat multipliers are not known. The model uses the player data (Maul ×1.75, Primal Bite ×3). wowsims Forever uses Bear Form ×1.5 only. With the wowsims values, the Druid loses about one third of its threat (part 2).
-- Against 3 or more enemies, the Paladin has the most threat on the extra targets (part 8). With the pre-raid gear of builds/protection.md, the proposed Paladin also has the most total threat in wowsims.
+- Against 3 or more enemies, the proposed Paladin has the most total threat in wowsims with the pre-raid gear of builds/protection.md (part 8). On 3 targets, the Druid with the player data has the most threat on the lowest target. On 5 targets, the Paladin has the most.
 - Holy Strike Seal trigger (C1: Holy Strike triggers Seal of Fury) gives about +14 TPS more. The tables do not include it. wowsims gives +24 TPS with the PT3 tank.
 - **Block value comes from Forever gear.** The gear search of builds/protection.md gives the proposed tank 108 block value from items with Shield Specialization. The model uses this value for pre-raid, and about 230 for Naxxramas (part 2).
 - **Shield block in wowsims is too high.** For epic shields, wowsims gives about 32% more block than the Wowhead Forever tooltips. All runs use the Wowhead values (part 7).
-- **wowsims with the new builds and gear.** The proposed tank PT3 has 116% of the Warrior threat and 53% of its TMI. The beta tank BT4b has 89% of the Warrior threat (part 7).
+- **wowsims with the new builds and gear.** The proposed tank PT3 has 132% of the Warrior threat (111% with Shield Slam ×2.25), 92% of the Druid threat (player data multipliers) and 51% of the Warrior TMI. The beta tank BT4b has 111% of the Warrior threat and 77% of the Druid threat (part 7).
 
 ## 1. Result with the same gear
 
@@ -281,26 +281,30 @@ Other options were examined and rejected. See Withdrawn ideas.
 
 wowsims Forever gives a second calculation with the full rules of the game. This part has two checks. The first uses the best builds and the pre-raid gear of builds/protection.md. The second is the first check, with Julien's gear and PB1.
 
-Conditions: wowsims Forever commit 69e0e5b with the proposals patch (models/wowsims). The patch also has the Seal of Fury trigger of C1 and Vindication with 5 ranks (C-P3). The Paladin is Human. Weapon skill racials are not in WoW Forever. Warrior and Druid: the wowsims pre-raid presets. A 3 min fight against one level 63 boss, 3,000 iterations.
+Conditions: wowsims Forever commit a10f483 (30 October 2026) with the proposals patch (models/wowsims). The patch also has the Seal of Fury trigger of C1 and Vindication with 3 ranks, +2/4/6% Attack Power (C-P3). The Paladin is Human. Weapon skill racials are not in WoW Forever. Warrior and Druid: the wowsims pre-raid presets. A 3 min fight against one level 63 boss, 3,000 iterations.
 
 Epic shields use the block value of the Wowhead Forever tooltips. wowsims takes shield block from a table by item level, and the table gives about 32% more. Examples: The Immovable Object 66 (wowsims 79), Evergreen Shield 44 (58), Blessed Qiraji Bulwark 70 (88). Other items with block value agree. The Warrior shield is a rare item and agrees.
 
-### Best builds and pre-raid gear (29 October 2026)
+### Best builds and pre-raid gear (30 October 2026)
 
-Proposed: PT3 with all proposals, Holy Shield (C-P9) at 100% of block value. Beta: BT4b. Each build uses its pre-raid path gear with reputation items (builds/protection.md).
+Proposed: PT3 with all proposals, Holy Shield (C-P9) at 100% of block value. Beta: BT4b. Each build uses its pre-raid path gear with reputation items (builds/protection.md). Warrior and Druid: the presets of commit a10f483.
+
+wowsims gives Maul, Swipe, Primal Bite and Shield Slam threat for the damage only (TODO in the wowsims code). Thus, the Druid and Warrior runs use a local patch (models/wowsims/tank_threat.patch). Druid: the player data of part 6 (Maul and Swipe ×1.75, Primal Bite ×3, Faerie Fire (Feral) +120 threat), with Bear Form ×1.5. Warrior: the Shield Slam value is not known. The table gives ×1 and ×2.25. The percentages use the Warrior with Shield Slam ×1 and the Druid with the player data.
 
 | Tank | TPS (% of the Warrior, % of the Druid) | TMI (% of the Warrior) | Crushing blows | TPS, no consumables (% of the Warrior, % of the Druid) |
 | --- | --- | --- | --- | --- |
-| Warrior | 996 (100%, 140%) | 43.6 (100%) | 0.9% | 904 (100%, 134%) |
-| Druid | 711 (71%, 100%) | 34.0 (78%) | 15.0% | 673 (74%, 100%) |
-| Paladin, beta (BT4b, beta gear) | 883 (89%, 124%) | 26.2 (60%) | 6.0% | 650 (72%, 97%) |
-| Paladin, beta (BT4b, proposed gear) | 904 (91%, 127%) | 30.8 (71%) | 12.0% | 671 (74%, 100%) |
-| Paladin, PT3 talents, no proposals (proposed gear) | 960 (96%, 135%) | 34.9 (80%) | 11.5% | 734 (81%, 109%) |
-| **Paladin, all proposals (PT3, proposed gear)** | **1,151 (116%, 162%)** | **23.0 (53%)** | **0.5%** | **948 (105%, 141%)** |
-| Paladin, all proposals (PT3, beta gear) | 1,074 (108%, 151%) | 23.7 (54%) | 0.5% | 874 (97%, 130%) |
-| PT3, Holy Shield 200% of block value | 1,221 (123%, 172%) | 23.0 (53%) | 0.5% | 1,019 (113%, 151%) |
-| PT3, Holy Shield 150% of block value | 1,186 (119%, 167%) | 23.0 (53%) | 0.5% | 983 (109%, 146%) |
-| PT3, Iron Creed 6% | 1,151 (116%, 162%) | 24.6 (56%) | 0.5% | 948 (105%, 141%) |
+| Warrior, Shield Slam ×1 | 897 (100%, 70%) | 42.5 (100%) | 1.0% | 813 (100%, 66%) |
+| Warrior, Shield Slam ×2.25 | 1,073 (120%, 83%) | 42.5 (100%) | 1.0% | 981 (121%, 80%) |
+| Druid, player data threat | 1,289 (144%, 100%) | 37.0 (87%) | 15.1% | 1,224 (151%, 100%) |
+| Druid, wowsims threat | 773 (86%, 60%) | 37.0 (87%) | 15.1% | 730 (90%, 60%) |
+| Paladin, beta (BT4b, beta gear) | 994 (111%, 77%) | 28.8 (68%) | 9.4% | 753 (93%, 61%) |
+| Paladin, beta (BT4b, proposed gear) | 945 (105%, 73%) | 28.7 (68%) | 13.1% | 715 (88%, 58%) |
+| Paladin, PT3 talents, no proposals (proposed gear) | 997 (111%, 77%) | 32.3 (76%) | 11.6% | 780 (96%, 64%) |
+| **Paladin, all proposals (PT3, proposed gear)** | **1,187 (132%, 92%)** | **21.8 (51%)** | **0.5%** | **975 (120%, 80%)** |
+| Paladin, all proposals (PT3, beta gear) | 1,198 (134%, 93%) | 24.8 (58%) | 0.5% | 982 (121%, 80%) |
+| PT3, Holy Shield 200% of block value | 1,255 (140%, 97%) | 21.8 (51%) | 0.5% | 1,043 (128%, 85%) |
+| PT3, Holy Shield 150% of block value | 1,221 (136%, 95%) | 21.8 (51%) | 0.5% | 1,009 (124%, 82%) |
+| PT3, Iron Creed 6% | 1,187 (132%, 92%) | 23.4 (55%) | 0.5% | 975 (120%, 80%) |
 
 TMI is the damage intake value of wowsims: less is better.
 
@@ -308,57 +312,59 @@ TMI is the damage intake value of wowsims: less is better.
 
 | Proposal | TPS | Other effect |
 | --- | --- | --- |
-| Holy Shield (C-P9) | +70 | — |
-| Redoubt (C-P1) | +54 | TMI 32.4 → 23.0. Crushing blows 11.4% → 0.5% |
-| Reckoning (C-P6) | +61 | — |
-| Holy Strike Seal trigger (C1) | +23 | — |
+| Holy Shield (C-P9) | +69 | — |
+| Redoubt (C-P1) | +58 | TMI 29.8 → 21.8. Crushing blows 11.8% → 0.5% |
+| Reckoning (C-P6) | +54 | — |
+| Holy Strike Seal trigger (C1) | +26 | — |
 | Conviction (C-R1) | +3 | — |
-| Iron Creed (C-P2) | 0 | TMI 24.6 → 23.0 |
-| Shield Specialization (C-P8) | −6 (no consumables: +18) | Without it, 20 sec out of mana with no consumables |
-| **All proposals** | **+191 (+20%)** | TMI 34.9 → 23.0 |
+| Iron Creed (C-P2) | 0 | TMI 23.4 → 21.8 |
+| Shield Specialization (C-P8) | −5 (no consumables: +3) | — |
+| **All proposals** | **+190 (+19%)** | TMI 32.3 → 21.8 |
 
-- **The increase agrees with the model.** The model gives +171 TPS for the same inputs (−10%). The inputs are 397 spell power and 1,180 Attack Power (raid buffs), with Consecration and Retribution Aura.
-- **Block value sets the value of Holy Shield (C-P9).** With the proposed gear (108 block value), it gives +70 TPS at 100%, +105 at 150% and +140 at 200%.
-- **Holy Shield at 100% of block value.** At 200%, PT3 had 123% of the Warrior threat. The cut removes 70 TPS. TMI does not change.
-- **The beta gear trades threat for survival.** Against Julien's gear, the beta path gear gives −11% TPS and −33% TMI. Crushing blows stay at 6–8%.
-- **The level does not agree with the model.** wowsims puts PT3 at 116% of the Warrior, and the model at 87% (part 2). The cause is the same as in the first check.
-- **The Warrior gear is not searched.** The Paladin gear comes from a gear search, but the Warrior uses the wowsims preset. Warrior gear of the same quality can make the Paladin lead smaller.
+- **The increase agrees with the model.** The model gives +171 TPS with the inputs of the 29 October gear (397 spell power and 1,180 Attack Power, raid buffs), with Consecration and Retribution Aura.
+- **Block value sets the value of Holy Shield (C-P9).** With the proposed gear, it gives +69 TPS at 100%, +103 at 150% and +137 at 200%.
+- **Holy Shield at 100% of block value.** At 200%, PT3 has 140% of the Warrior threat and 97% of the Druid threat. The cut removes 68 TPS. TMI does not change.
+- **The beta gear trades threat for survival.** With the beta gear, PT3 has +1% TPS and +14% TMI. BT4b with the proposed gear has −5% TPS and keeps 13% crushing blows.
+- **The Druid has the most threat.** With the player data multipliers, the Druid has 144% of the Warrior threat (×1). PT3 has 92% of the Druid threat, and BT4b 77%. Without consumables, the Paladin loses more threat (mana): PT3 80%, BT4b 61%.
+- **The Warrior depends on Shield Slam.** At ×2.25, the Warrior has +176 TPS. PT3 then has 111% of the Warrior threat, and BT4b 93%.
+- **The level does not agree with the model.** wowsims puts PT3 at 132% of the Warrior (×1), and the model at 87% (part 2). The cause is the same as in the first check.
+- **The real values are not known.** The Primal Bite, Lacerate and Shield Slam tooltips say "high threat" or "very high threat", with no number. The player data is the only source for the Druid (Open questions). A search of Warrior and Druid gear can also change their values (the Paladin gear comes from a search).
 
 ### First check: Julien's gear and PB1 (27 October 2026)
 
-This check uses Holy Shield (C-P9) at 200% of block value. wowsims Forever and the model give the same TPS increase from the proposals: +142 and +143. The TPS level against the Warrior is not the same. wowsims puts the beta Paladin at 99% of the Warrior, and the model at 64%.
+This check uses Holy Shield (C-P9) at 200% of block value. wowsims Forever and the model give almost the same TPS increase from the proposals: +138 and +143. The TPS level against the Warrior is not the same. wowsims puts the beta Paladin at 106% of the Warrior, and the model at 64%.
 
-Conditions: wowsims Forever commit 69e0e5b with the proposals patch (models/wowsims). Julien's gear, talents and rotation (Consecration on cooldown). Proposed: PB1 with Redoubt (C-P1), Iron Creed (C-P2), Reckoning (C-P6), Shield Specialization (C-P8) and Holy Shield (C-P9). Warrior and Druid: the wowsims pre-raid presets. A 3 min fight against one level 63 boss, 3,000 iterations.
+Conditions: wowsims Forever commit a10f483 with the proposals patch (models/wowsims). Julien's gear, talents and rotation (Consecration on cooldown). Proposed: PB1 with Redoubt (C-P1), Iron Creed (C-P2), Reckoning (C-P6), Shield Specialization (C-P8) and Holy Shield (C-P9). Warrior and Druid: the wowsims pre-raid presets. A 3 min fight against one level 63 boss, 3,000 iterations.
 
 | Value | Model | wowsims | Difference |
 | --- | --- | --- | --- |
-| Proposals, TPS added to the beta Paladin | +143 | +142 | −0.8% |
-| Beta Paladin as a % of the Warrior | 64% | 99% | +56% |
-| Proposed Paladin as a % of the Warrior | 86% | 114% | +33% |
+| Proposals, TPS added to the beta Paladin | +143 | +138 | −4.0% |
+| Beta Paladin as a % of the Warrior | 64% | 106% | +66% |
+| Proposed Paladin as a % of the Warrior | 86% | 121% | +41% |
 
 - **The increase agrees.** Thus, the model value of each proposal is correct.
-- **The level does not agree.** Julien's gear gives 468 spell power with consumables and 42.6% melee critical hit chance. It also has a fast weapon with an extra attack, Windfury and Consecration. Part 1 uses 200 spell power, 6% critical hit chance and no Consecration. Curse of the Elements in the sim raid adds 10% to Holy damage taken.
-- **The model with the sim inputs.** With these inputs, the model gives 1,001 TPS for the same sources, and wowsims gives 894 (−11%). wowsims has fewer Holy Shield blocks (−26%), fewer boss hits for Retribution Aura (−24%) and less auto attack threat (−28%). Seal of Fury is 6% higher in wowsims. check.py gives this table for each source.
+- **The level does not agree.** Julien's gear gives 468 spell power with consumables and 42.3% melee critical hit chance. It also has a fast weapon with an extra attack, Windfury and Consecration. Part 1 uses 200 spell power, 6% critical hit chance and no Consecration. Curse of the Elements in the sim raid adds 10% to Holy damage taken.
+- **The model with the sim inputs.** With these inputs, the model gives 997 TPS for the same sources, and wowsims gives 902 (−9.5%). wowsims has fewer Holy Shield blocks (−27%) and fewer boss hits for Retribution Aura (−24%). Judgement of Fury is 9% lower and Consecration 7% lower in wowsims. Auto attacks agree (+2.5%). check.py gives this table for each source.
 - **The Warrior is also different.** The model Warrior and the wowsims Warrior do not use the same gear and talents. The cause of the Warrior difference is not confirmed. Thus, part 1 compares the tanks with the same model inputs.
 
 **wowsims result of each tank** (Julien's gear for the Paladin)
 
 | Tank | TPS (% of the Warrior, % of the Druid) | TMI (% of the Warrior) | Crushing blows | TPS, no consumables (% of the Warrior, % of the Druid) |
 | --- | --- | --- | --- | --- |
-| Warrior | 996 (100%, 140%) | 43.6 (100%) | 0.9% | 904 (100%, 134%) |
-| Druid | 711 (71%, 100%) | 34.0 (78%) | 15.0% | 673 (74%, 100%) |
-| Paladin, beta | 988 (99%, 139%) | 38.7 (89%) | 10.8% | 789 (87%, 117%) |
-| Paladin, Redoubt (C-P1) only | 1,021 (103%, 144%) | 33.6 (77%) | 0.6% | 824 (91%, 122%) |
-| **Paladin, all proposals** | **1,130 (114%, 159%)** | **31.2 (72%)** | **0.6%** | **925 (102%, 137%)** |
-| Paladin, all proposals, Holy Shield 150% of block value | 1,114 (112%, 157%) | 31.2 (72%) | 0.6% | 909 (101%, 135%) |
-| Paladin, all proposals, Holy Shield 100% of block value | 1,098 (110%, 154%) | 31.2 (72%) | 0.6% | 892 (99%, 133%) |
-| Paladin, all proposals, Iron Creed 6% | 1,131 (114%, 159%) | 33.3 (76%) | 0.6% | 925 (102%, 137%) |
+| Warrior, Shield Slam ×1 | 897 (100%, 70%) | 42.5 (100%) | 1.0% | 813 (100%, 66%) |
+| Druid, player data threat | 1,289 (144%, 100%) | 37.0 (87%) | 15.1% | 1,224 (151%, 100%) |
+| Paladin, beta | 946 (106%, 73%) | 38.4 (90%) | 10.9% | 754 (93%, 62%) |
+| Paladin, Redoubt (C-P1) only | 979 (109%, 76%) | 33.3 (78%) | 0.6% | 791 (97%, 65%) |
+| **Paladin, all proposals** | **1,084 (121%, 84%)** | **30.9 (73%)** | **0.6%** | **888 (109%, 72%)** |
+| Paladin, all proposals, Holy Shield 150% of block value | 1,068 (119%, 83%) | 30.9 (73%) | 0.6% | 871 (107%, 71%) |
+| Paladin, all proposals, Holy Shield 100% of block value | 1,052 (117%, 82%) | 30.9 (73%) | 0.6% | 855 (105%, 70%) |
+| Paladin, all proposals, Iron Creed 6% | 1,084 (121%, 84%) | 32.9 (78%) | 0.6% | 888 (109%, 72%) |
 
 TMI is the damage intake value of wowsims: less is better.
 
-- Redoubt (C-P1) removes the crushing blows: 10.8% to 0.6%.
-- With all proposals, the Paladin has 114% of the Warrior TPS, and 102% without consumables.
-- Holy Shield at 150% of block value removes 16 TPS. Iron Creed at 6% increases TMI by 2.1.
+- Redoubt (C-P1) removes the crushing blows: 10.9% to 0.6%.
+- With all proposals, the Paladin has 121% of the Warrior TPS, and 109% without consumables.
+- Holy Shield at 150% of block value removes 16 TPS. Iron Creed at 6% increases TMI by 2.0.
 
 The scripts are run_threat.py and check.py in models/wowsims. See its README for the setup and the proposal flags.
 
@@ -374,10 +380,10 @@ Terms:
 
 **Summary**
 
-- On the extra targets, the Paladin has the most threat of the three tanks. The model and wowsims agree.
-- On total threat (all targets), wowsims gives the proposed Paladin 122–130% of the Warrior with the pre-raid path gear (builds/protection.md). With the default wowsims gear, it was about equal. The model gives the Paladin about 1.5 times more. This model lead comes from the assumptions, not from the extra targets (see "Where the lead comes from").
+- On 5 targets, the Paladin has the most threat on the extra targets. On 3 targets, the Druid with the player data multipliers has the most threat on the lowest target in wowsims (Swipe hits 3 targets).
+- On total threat (all targets), wowsims gives the proposed Paladin 109–111% of the Druid and 122–128% of the Warrior with Shield Slam ×2.25, with the pre-raid path gear (builds/protection.md). With the default wowsims gear, it was about equal to the Warrior. The model gives the Paladin about 1.5 times more. This model lead comes from the assumptions, not from the extra targets (see "Where the lead comes from").
 - Consecration and Holy Shield give the threat on the extra targets.
-- In wowsims, the beta Paladin has about the same threat as the Druid on the lowest target (pre-raid path gear: 19% more). With the proposals, the Paladin leads by 39%.
+- On the lowest of 3 targets, the Druid has 325 TPS, the proposed Paladin 290 (89%) and the beta Paladin 264 (81%). With the wowsims Druid threat, the Paladin led (part 7).
 - No proposal is necessary for threat against groups.
 
 **Area spells** (wowsims Forever spell data)
@@ -442,33 +448,35 @@ The model lead on all targets is large. Most of it is not from the extra targets
 - **Consecration.** The Paladin uses it on cooldown here: +91 to +107 TPS on the main target. Parts 1 to 3 do not include it.
 - **The proposals.** At fresh level 60, they add little. In Naxxramas, they give about half of the lead, mostly with Holy Shield (C-P9 and C-P1). On each extra target, they add 8 TPS at fresh level 60 and 71 TPS in Naxxramas.
 
-**Check with wowsims Forever** (29 October 2026)
+**Check with wowsims Forever** (30 October 2026)
 
-Setup: wowsims Forever commit 69e0e5b with the proposals patch (models/wowsims). Paladin: PT3 (all proposals, Holy Shield (C-P9) at 100%) and BT4b (beta), each with its pre-raid path gear (builds/protection.md) and Julien's rotation. Warrior: pre-raid preset. Druid: default preset, with Swipe on 2 or more targets. All tanks have the same raid buffs and debuffs. Each level 63 target hits for 1/3 of the boss. 3 min, 2,000 iterations. The script is run_threat.py in models/wowsims.
+Setup: wowsims Forever commit a10f483 with the proposals patch (models/wowsims). Paladin: PT3 (all proposals, Holy Shield (C-P9) at 100%) and BT4b (beta), each with its pre-raid path gear (builds/protection.md) and Julien's rotation. Warrior: pre-raid preset. Druid: default preset, with Swipe before Primal Bite on 2 or more targets (Maul then waits for 45 rage), and the threat values of part 7. Warrior: Shield Slam ×1 and ×2.25. All tanks have the same raid buffs and debuffs. Each level 63 target hits for 1/3 of the boss. 3 min, 2,000 iterations. The script is run_threat.py in models/wowsims.
 
 Threat per sec on each target. The main target is first.
 
 | Tank | 1 target | 3 targets | 5 targets |
 | --- | --- | --- | --- |
-| Paladin, beta (BT4b) | 883 | 881 / 245 / 245 | 877 / 214 / 214 / 214 / 115 |
-| Paladin, proposed (PT3) | 1,150 | 1,056 / 287 / 287 | 1,019 / 241 / 240 / 241 / 141 |
-| Warrior | 926 | 944 / 241 / 71 | 1,001 / 370 / 70 / 69 / 28 |
-| Druid | 614 | 614 / 213 / 206 | 646 / 217 / 209 / 31 / 31 |
+| Paladin, beta (BT4b) | 992 | 984 / 264 / 265 | 983 / 232 / 233 / 232 / 123 |
+| Paladin, proposed (PT3) | 1,184 | 1,089 / 291 / 290 | 1,052 / 246 / 245 / 245 / 141 |
+| Warrior, Shield Slam ×1 | 834 | 846 / 216 / 69 | 899 / 337 / 68 / 68 / 28 |
+| Warrior, Shield Slam ×2.25 | 1,008 | 1,020 / 216 / 69 | 1,074 / 337 / 68 / 68 / 28 |
+| Druid, player data threat | 1,047 | 867 / 338 / 325 | 984 / 352 / 335 / 36 / 36 |
+| Druid, wowsims threat | 667 | 580 / 219 / 210 | 621 / 219 / 209 / 36 / 36 |
 
-- **Lowest target: the Paladin leads.** On 3 targets, the proposed Paladin has about 4 times the Warrior threat and 1.4 times the Druid threat. On 5 targets, it has 4.5 to 5 times both.
-- **The beta Paladin also leads on the lowest target.** On 3 targets, BT4b has 245 TPS and the Druid 206. With the default wowsims gear of the first check, the beta Paladin was equal to the Druid.
-- **Total threat: the proposed Paladin leads.** On 3 targets, PT3 has 1,630 TPS on all targets, and the Warrior 1,256 (130%). On 5 targets, PT3 has 1,882 and the Warrior 1,538 (122%). The beta Paladin has 109% and 106% of the Warrior.
-- **Holy Shield.** With 3 or 5 attackers, Holy Shield does damage 3.6 times each 10 sec. With the proposals, it gives about 114 TPS on each extra target against 3 targets (beta: about 74). The first check used 200% and the default gear (about 120 TPS).
-- **Consecration.** It gives about 124 TPS on each of the first 4 targets. The fifth target takes only the base damage (about 24 TPS).
+- **Lowest target.** On 3 targets, the Druid leads: 325 TPS, against 290 for the proposed Paladin and 69 for the Warrior. On 5 targets, the Paladin leads: 141 TPS, about 4 times the Druid and 5 times the Warrior.
+- **The beta Paladin.** On 3 targets, BT4b has 264 TPS on the lowest target (81% of the Druid). On 5 targets, it has 123 TPS, more than the Druid and the Warrior.
+- **Total threat: the proposed Paladin leads.** On 3 targets, PT3 has 1,670 TPS on all targets, the Druid 1,530 (PT3: 109%) and the Warrior 1,305 with Shield Slam ×2.25 (128%). On 5 targets, PT3 has 1,929, the Druid 1,743 (111%) and the Warrior 1,575 (122%). The beta Paladin has 99% and 103% of the Druid.
+- **Holy Shield.** With 3 or 5 attackers, all 4 charges are used each 10 sec. With the proposals, block value adds to each charge (C-P9). Thus, the proposed Paladin has about 10% more threat on each extra target than the beta Paladin.
+- **Consecration.** It hits the first 4 targets with the full damage. The fifth target takes only the base damage.
 - **Warrior.** Cleave hits only 2 targets, and Thunder Clap gives only about 41 TPS on each target. Thus, the third target and the others have little Warrior threat.
 - **Druid.** Swipe hits 3 targets. Against 5 targets, the fourth and fifth targets have little Druid threat. In wowsims, Maul and Primal Bite also hit a second and third target for a part of their damage.
 - **First check** (28 October 2026, commit 05ce531, the default wowsims gear of each tank). Holy Shield (C-P9) at 200%. Lowest target on 3 targets: proposed PB1 255, beta 203, Druid 206, Warrior 71. Total threat: Paladin about equal to the Warrior (3 targets: 1,269 against 1,261).
-- The Druid multipliers are not verified (see part 6).
+- The Druid multipliers (player data) and the Shield Slam value are not verified (see part 6 and Open questions).
 
 **Conclusion**
 
-- Against 3 or more enemies, the Paladin holds the group best. It has the most threat on the lowest target. The model and wowsims agree.
-- On total threat, wowsims gives the proposed Paladin 122–130% of the Warrior with the pre-raid path gear. With the default wowsims gear, the Paladin was about equal to the Warrior. The model gives about 1.5 times, from low rage on trash, trash armor and Consecration.
+- Against 3 or more enemies, the proposed Paladin has the most total threat. On 5 targets, it also has the most threat on the lowest target. On 3 targets, the Druid has more on the lowest target in wowsims (89% for the Paladin).
+- On total threat, wowsims gives the proposed Paladin 109–111% of the Druid and 122–128% of the Warrior (Shield Slam ×2.25) with the pre-raid path gear. With the default wowsims gear, the Paladin was about equal to the Warrior. The model gives about 1.5 times, from low rage on trash, trash armor and Consecration.
 - Consecration and Holy Shield give the threat on extra targets. Consecration gives its full damage to 4 enemies only.
-- The proposals give the lead on the lowest target. Holy Shield (C-P9) and Redoubt (C-P1) add Holy Shield damage, and Shield Specialization (C-P8) pays for Consecration.
+- The proposals give the Paladin its group threat. Holy Shield (C-P9) and Redoubt (C-P1) add Holy Shield damage, and Shield Specialization (C-P8) pays for Consecration.
 - No proposal is necessary for threat against groups.
