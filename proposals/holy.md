@@ -119,7 +119,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 
 ## C-H6. Divine Grace (new talent): row 4, column 1, 2 ranks
 
-- **Proposed text.** "Increases your target's armor from items by 15/30% for 15 sec after your Lay on Hands, or after a Divine Favor critical effect from your Flash of Light, Holy Light or Holy Shock."
+- **Proposed text.** "Gives the target of your Lay on Hands spell, or of a Divine Favor critical effect from your Flash of Light, Holy Light or Holy Shock, a 15/30% bonus to their armor value from items for 15 sec."
 - **No requirement.** Two spells give the buff: Lay on Hands and Divine Favor. Thus, the talent does not change only Divine Favor, and it has no arrow. Divine Favor affects Flash of Light, Holy Light and Holy Shock. Each of these heals gives the buff.
 - **Problem.** After a large hit, the tank is in danger for some seconds. The Paladin heals the health back, but it cannot help the tank to take less damage.
 - **Model.** Improved Lay on Hands (Paladin, Classic) gave the target 15/30% armor from items after Lay on Hands. Forever removed that talent. Divine Grace brings back this effect. Inspiration (Priest) and Ancestral Healing (Shaman) also give armor to the target of a critical heal. Divine Favor always gives a critical heal.
