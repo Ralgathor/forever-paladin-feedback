@@ -38,7 +38,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 26 chan
 | C-H3 | Infusion of Light | Holy, row 4 → row 2 | Holy Shock and Flash of Light critical hits make the next Holy Light faster | All Holy Shock, Flash of Light and Holy Strike hits do this. No critical hit is necessary |
 | C-H4 | Healing Light | Holy, row 2 → row 6 | 3 ranks: 4/8/12% | 3 ranks: 10/20/30% (with Blessing of Light removal, C3) |
 | C-H5 | Merciful Light (new) | Holy, row 5 | — | 2 ranks: Holy Shock heals 50/100% more on targets at or below 35% health. Requires Holy Shock |
-| C-H6 | Divine Grace (new) | Holy, row 4 | — | 2 ranks: heals from Divine Favor give the target 15/30% armor from items for 15 sec. Requires Divine Favor |
+| C-H6 | Divine Grace (new) | Holy, row 4 | — | 2 ranks: a Flash of Light, Holy Light or Holy Shock heal while Divine Favor is active gives the target 15/30% armor from items for 15 sec. Requires Divine Favor |
 | C-P1 | Redoubt | Protection, row 1 | 10% chance when you are hit: +4–20% block | The same. Each Holy Shield cast also starts it |
 | C-P2 | Iron Creed | Protection, row 6 | −2–10% damage taken for 6 sec after Holy Strike | −2–10% damage taken while Righteous Fury is active |
 | C-P3 | Toughness and Divine Strength: removed | Protection row 1, Retribution row 2, Holy row 1 | Toughness: +2–10% armor from items. Divine Strength: +2–10% Strength | Both removed. Vindication goes to Retribution row 2 with 5 ranks (+1–5% Attack Power). Benediction (M-P1) and Unyielding Faith (M-H2) fill row 1 of Protection and Holy |
