@@ -18,7 +18,7 @@ SPECS = {
     "Arms Warrior (prebis gear)": (P("ClassWarrior__p1_arms__Arms__arms__Fury", "warrior/dps/gear_sets/prebis_arms"), ""),
     "Rogue (Combat gear)": (P("ClassRogue__p1_muti__default__default__Rogue", "rogue/dps/gear_sets/p1_bscombat"), ""),
     "Enhancement Shaman": (P("shaman_enhancement/ClassShaman__testing__default__testing__Windfury"), ""),
-    "Feral Druid": (P("druid_feralcat/ClassDruid__default__default__default__Standard"), ""),
+    "Feral Druid": (P("druid_feralcat/ClassDruid__default__default__adaptive__Standard"), ""),
     "Hunter (Marksmanship)": (P("ClassHunter__p1__default__default__Default"), ""),
     "Mage (Fire)": (P("ClassMage__p1Arcane__default__deepFire__Default"), ""),
     "Warlock (Destruction)": (P("ClassWarlock__preraid__default__destro__Destruction"), ""),

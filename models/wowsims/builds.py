@@ -27,4 +27,4 @@ HOLY_PROP_TALENTS = "05320013025101051--05005"             # + Conviction 5
 HOLY_PROP = "C1,C15,C15H,HL30,IOL,LL20"
 PRIEST = "00000503103000000-03505003030120531"
 WARRIOR_TANK = "ClassWarrior__prebis__default__default__Protection"
-BEAR = "druid_feralbear/ClassDruid__default__default__default__Standard"
+BEAR = "druid_feralbear/ClassDruid__default__default__adaptive__Standard"

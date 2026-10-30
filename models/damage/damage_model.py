@@ -142,6 +142,7 @@ def retribution(g, version="c16", sa=None, crusader=False, ths=None, fight=FIGHT
         version = "c16_soc"
     if version.startswith("beta"):
         kw = dict(dict(str_pct=0.10, ap_pct=0.0), **kw)                 # beta: Divine Strength 5/5 (+10% Strength), no Vindication
+        tal = dict(tal, bz=0, mfm=0)                                     # beta: no Burning Zeal or Measure for Measure
     sa = (1 + 0.20 * t("sa")) if sa is None else sa
     ths = (1 + 0.02 * t("thws")) if ths is None else ths
     imp = 1 + 0.05 * t("is_")

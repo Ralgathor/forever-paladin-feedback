@@ -1,5 +1,5 @@
 {
- "note": "Pre-raid path gear of builds/protection.md (with reputation items). Enchants and libram of julien_prot.json.",
+ "note": "Pre-raid path gear of builds/protection.md (with reputation items), wowsims Forever a10f483. Enchants and libram of julien_prot.json.",
  "beta": {
   "build": "BT4b",
   "code": "50003-5230513021301351-50201",
@@ -74,7 +74,7 @@
   "equipment": {
    "items": [
     {
-     "id": 250599,
+     "id": 250597,
      "enchant": 2544
     },
     {
@@ -117,13 +117,13 @@
      "id": 275984
     },
     {
-     "id": 17904
+     "id": 272437
     },
     {
      "id": 272440
     },
     {
-     "id": 279261,
+     "id": 22383,
      "enchant": 8217
     },
     {
