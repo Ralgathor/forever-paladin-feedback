@@ -104,15 +104,15 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Requires Holy Shock** (arrow in row 5). The talent changes only the Holy Shock heal.
 - **Problem.** After a large hit on one tank, the Druid heals the most. It has Swiftmend and Nature's Swiftness. The proposed Paladin is 14–18% below the Druid after 3 sec (see Analysis, Healing, part 5). Holy Shock is the only instant heal of the Paladin.
 - **Model.** Decimation (Warlock, Forever) gives a bonus below 35% health. Hammer of Wrath is the Paladin attack below 20% health. Merciful Light is the healing version of this rule.
-- **Value.** At 715 healing power, on a tank at or below 35% health after the hit:
+- **Value.** At 715 healing power, on a tank 1,000 health below 35% after the hit. The bonus applies only while the tank is at or below 35% health:
 
 | Against the Druid | 3 sec | 6 sec | 3 sec, short cooldowns | 6 sec, short cooldowns |
 | --- | --- | --- | --- | --- |
 | Proposed, without Merciful Light | −18% | −3% | −14% | −3% |
-| With Merciful Light 2/2 | −2% | +6% | +6% | +9% |
+| With Merciful Light 2/2 | −2% | +4% | +6% | +9% |
 
 - **No change to the healing in long fights.** Holy Shock gives less healing for each mana point than Flash of Light. Thus, the best cast plan does not use it, also with the bonus. In raids, few targets go below 35% health.
-- **Limit.** After a large hit that leaves the tank above 35% health, the talent gives nothing.
+- **Limit.** After a large hit that leaves the tank above 35% health, the talent gives nothing. The Paladin must cast Holy Shock first, before other heals take the tank above 35%.
 - **Who takes it.** Row 5 needs 20 Holy points. Holy healers take it. Shock-Retribution can also take it.
 - **Risk.** In PvP, a Holy healer heals an ally at or below 35% health for about 1,630 each 10 sec, with no cast time. Shock-Retribution heals for about 640–860 (see Watch list, W21).
 
