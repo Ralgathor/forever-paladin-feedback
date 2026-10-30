@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 26 changes and 11 moves for the Holy, Protection and Retribution trees. 5 changes are baseline spell changes (C1–C5). 21 changes are talent changes (C-H1–C-H6, C-P1–C-P9, C-P11, C-R1–C-R5), and eight of them are new talents. The moves are M-H1–M-H5, M-P1, M-R1 and M-R2.
+- **Proposals:** 26 changes and 10 moves for the Holy, Protection and Retribution trees. 5 changes are baseline spell changes (C1–C5). 21 changes are talent changes (C-H1–C-H6, C-P1–C-P9, C-P11, C-R1–C-R5), and eight of them are new talents. The moves are M-H1–M-H5, M-P1, M-R1 and M-R2.
 - **Talent calculator:** you can try the proposals and compare them with the beta trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
 - **Builds:** the best builds for each spec and role (raid, dungeon, PvP), with calculator codes. Also the builds that use a different tree for a role.
@@ -43,7 +43,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 - **C-P1 Redoubt:** each Holy Shield cast also starts it. The block chance stays high. Most crushing blows stop.
 - **C-P2 Iron Creed:** −2–10% damage taken while Righteous Fury is active (beta: for 6 sec after Holy Strike).
-- **C-P3 Toughness and Divine Strength:** removed. Vindication goes to Retribution row 2 with 5 ranks (+1–5% Attack Power). Benediction (M-P1) and Unyielding Faith (M-H2) fill row 1 of Protection and Holy. Precision, Guardian's Favor, Anticipation and Holy Conduit stay in their beta place. Each point in rows 1 and 2 then has a use for its spec.
+- **C-P3 Toughness and Divine Strength:** removed. Vindication goes to Retribution row 2, with +2/4/6% Attack Power (beta: +1/2/3%). Benediction (M-P1) and Unyielding Faith (M-H2) fill row 1 of Protection and Holy. Precision, Guardian's Favor, Anticipation and Holy Conduit stay in their beta place. Each point in rows 1 and 2 then has a use for its spec.
 - **C-P4 Improved Righteous Fury:** removed. Iron Creed alone gives −10% damage taken.
 - **C-P5 Shoulder the Burden (new, row 3) replaces Improved Seal of Fury:** 50% of the threat of an ally moves to you. 5 min cooldown (4 min with Sacred Duty 2/2). It has no effect in PvP. Swift Judgement keeps its row 4 place with no requirement.
 - **C-P6 Reckoning:** block, dodge and parry also give charges (once each 4 sec). Holy Strike releases up to 2 charges.
@@ -58,9 +58,8 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **C-R1 Conviction:** +1–5% critical hit chance with attacks and spells (beta: melee only).
 - **C-R2 Twist of Light:** the Echo applies to all melee attacks for 10 sec (beta: the next melee attack only).
 - **C-R3 Sanctified Judgement:** each Judgement returns 20/40/60% of the Seal cost (beta: a 33/66/100% chance).
-- **M-R1 Two-Handed Weapon Specialization:** row 5 → row 4 (20 → 15 points).
+- **M-R1 Two-Handed Weapon Specialization:** row 5 → row 4, column 4 (20 → 15 points).
 - **M-R2 Conviction:** row 2 → row 1, as all other +5% critical hit talents. A Holy Paladin takes it for 5 points. Retribution has 41 points.
-- **M-R3 Eye for an Eye:** row 4 → row 3 (15 → 10 points).
 - **M-R4 Sanctified Judgement:** column 1, below Improved Judgement. It requires Improved Judgement 2/2.
 - **M-R5 Vengeance:** requires Burning Zeal 2/2 (beta: Sanctified Judgement). Both talents increase critical hits.
 

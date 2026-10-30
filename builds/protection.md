@@ -22,7 +22,7 @@ This file gives the best tank build for the beta trees and for the proposed tree
 - **Gear rules.** Pre-raid items only, no raid drops, Alliance. All items are in the wowsims item list of 28 October 2026. The enchants and the libram are the enchants and the libram of the reference tank.
 - **Last points.** A check of all 1-point moves from the best beta build, at 3,000 iterations. The last points change the score by less than 1%.
 - **Limit.** The search is a local search, not a test of all builds. Builds with no Holy Shield are far below (73–83% of the reference score).
-- **Codes.** All codes load in calculator version 6 with 51 points.
+- **Codes.** All codes load in calculator version 6 with 51 points. In version 6, Vindication gives +2% Attack Power for each rank (C-P3). The TPS values of this file use +1% for each rank. PT1 (Vindication 3) and PT3 (Vindication 2) then have a little more threat.
 
 ## 2. Best builds
 
@@ -53,7 +53,7 @@ In the beta, each point of threat costs survival. Toughness, Sacred Duty and Imp
 | Trees | Build | Code | Use |
 | --- | --- | --- | --- |
 | Proposed | PT1 | `v6p0003-52040321301551-5205300001` | Best with the older gear (Precision 2, Anticipation 4, Conviction 5, Vindication 3). 1,226 TPS and TMI 22.6 with the path gear |
-| Proposed | PT2, maximum threat | `v6p0003-53040311301551-0205501201` | +2% TPS against PT1, but +9% damage taken. No Deflection |
+| Proposed | PT2, maximum threat | `v6p0003-53040311301551-0225301201` | +2% TPS against PT1, but +9% damage taken. No Deflection. Version 6: Vindication 3 (+6% Attack Power) and Holy Conduit 2 in place of Vindication 5 (estimate, no new sim) |
 | Proposed | PB1 | `v6p0003-53051321301551-522103` | Fresh level 60 with no mana support |
 | Beta | BT5 | `50003-5330513011301451-502` | Best beta build with the gear with no reputation items (part 3) |
 | Beta | Maximum threat | `50003-0530511101301541-50205` | +3% TPS against the reference beta tank, but TMI +9% |

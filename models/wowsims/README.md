@@ -59,6 +59,7 @@ Set the flags in the `PROPOSE` environment variable, with commas: `PROPOSE=C6,C1
 | `LL<n>` | Lingering Light (C-H2) | Each critical heal heals n% more in 3 ticks of 2 sec. Ticks can be critical heals |
 | `BOL` | Blessing of Light (C3) | The Blessing of Light heal bonus on the target. The wowsims buff does not add the bonus |
 | `VIN5` | Vindication (C-P3) | Vindication has 5 ranks: +1% Attack Power for each rank |
+| `VIN3` | Vindication (C-P3), calculator version 6 | Vindication has 3 ranks: +2% Attack Power for each rank. The debuff keeps the beta values |
 | `BZ<n>` | Burning Zeal (C-R4) | n ranks: the critical damage bonus of Seals, Judgements and Holy Strike increases by 10% for each rank |
 | `MFM<n>` | Measure for Measure (C-R5) | n ranks: a dodge or parry of a melee attack decreases the remaining Judgement cooldown by n sec |
 

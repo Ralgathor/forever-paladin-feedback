@@ -1,6 +1,6 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 26 changes and 11 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 26 changes and 10 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
 
 **Contents**
 
@@ -41,7 +41,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 26 chan
 | C-H6 | Divine Grace (new) | Holy, row 4 | — | 2 ranks: +15/30% armor from items for 15 sec on the target, after a Divine Favor critical effect. Requires Divine Favor |
 | C-P1 | Redoubt | Protection, row 1 | 10% chance when you are hit: +4–20% block | The same. Each Holy Shield cast also starts it |
 | C-P2 | Iron Creed | Protection, row 6 | −2–10% damage taken for 6 sec after Holy Strike | −2–10% damage taken while Righteous Fury is active |
-| C-P3 | Toughness and Divine Strength: removed | Protection row 1, Retribution row 2, Holy row 1 | Toughness: +2–10% armor from items. Divine Strength: +2–10% Strength | Both removed. Vindication goes to Retribution row 2 with 5 ranks (+1–5% Attack Power). Benediction (M-P1) and Unyielding Faith (M-H2) fill row 1 of Protection and Holy |
+| C-P3 | Toughness and Divine Strength: removed | Protection row 1, Retribution row 2, Holy row 1 | Toughness: +2–10% armor from items. Divine Strength: +2–10% Strength | Both removed. Vindication goes to Retribution row 2, with +2/4/6% Attack Power (beta: +1/2/3%). Benediction (M-P1) and Unyielding Faith (M-H2) fill row 1 of Protection and Holy |
 | C-P4 | Improved Righteous Fury | Protection, row 3 | −2–6% damage taken with Righteous Fury | Removed |
 | C-P5 | Shoulder the Burden (new) replaces Improved Seal of Fury | Protection, row 3 | Improved Seal of Fury: mana when the Seal of Fury shield absorbs a hit | Shoulder the Burden: 50% of the threat of an ally moves to you, 3 min cooldown. Swift Judgement keeps its row 4 place with no requirement |
 | C-P6 | Reckoning | Protection, row 5 | Extra attack after a block (40%) or a critical hit taken (100%). It hits with the next swing | Charge after a block, dodge or parry (once each 4 sec) or a critical hit taken. Holy Strike releases up to 2 charges |
@@ -52,7 +52,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 26 chan
 | C-R1 | Conviction | Retribution, row 2 → row 1 (Conviction, M-R2) | +1–5% critical hit chance with melee attacks | +1–5% critical hit chance with attacks and spells |
 | C-R2 | Twist of Light | Retribution, row 7 | The Echo applies to the next melee attack only | The Echo applies to all melee attacks for 10 sec |
 | C-R3 | Sanctified Judgement | Retribution, row 3 | 33/66/100% chance to return 20/40/60% of the Seal cost | 100% chance at all ranks. The return is 20/40/60% of the Seal cost |
-| C-R4 | Burning Zeal (new) | Retribution, row 4, before Vengeance | — | 2 ranks: +10/20% critical damage bonus for Seals, Judgements and Holy Strike |
+| C-R4 | Burning Zeal (new) | Retribution, row 3, before Vengeance | — | 2 ranks: +10/20% critical damage bonus for Seals, Judgements and Holy Strike |
 | C-R5 | Measure for Measure (new) | Retribution, row 5, column 1 | — | 3 ranks: when the target dodges or parries, the Judgement cooldown decreases by 1/2/3 sec |
 
 **Moves**
@@ -65,9 +65,8 @@ This document gives talent proposals for the WoW Forever Paladin. It has 26 chan
 | M-H4 | Consecrated Ground | Holy | Row 5 | Row 6 |
 | M-H5 | Divine Precision | Holy | Row 5, requires Holy Shock | Row 4, no requirement |
 | M-P1 | Benediction | Retribution → Protection | Retribution row 1 | Protection row 1 |
-| M-R1 | Two-Handed Weapon Specialization | Retribution | Row 5 (20 points) | Row 4, column 1 (15 points) |
+| M-R1 | Two-Handed Weapon Specialization | Retribution | Row 5 (20 points) | Row 4, column 4 (15 points) |
 | M-R2 | Conviction | Retribution | Row 2 | Row 1 |
-| M-R3 | Eye for an Eye | Retribution | Row 4 (15 points) | Row 3, column 2 (10 points) |
 | M-R4 | Sanctified Judgement | Retribution | Row 3, column 2 | Row 3, column 1, requires Improved Judgement 2/2 |
 | M-R5 | Vengeance | Retribution | Requires Sanctified Judgement 3/3 | Requires Burning Zeal 2/2 |
 

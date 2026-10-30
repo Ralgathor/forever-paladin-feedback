@@ -75,6 +75,8 @@ The analysis examined these ideas and rejected them. They are not proposals.
 | Unyielding Faith with Precision in Protection row 1 | It works, but Unyielding Faith (M-H2) moves to Holy row 1 |
 | Precision and Redoubt only in Protection row 1 (8 points) | Each row 1 of the other classes has 10 points or more. Holy and Retribution then pay for points that they do not use |
 | Vindication with 5 ranks and the same maximum (+3%) | More points with no more value. +1/2/3/4/5% makes the 5 points useful |
+| Vindication with 5 ranks, +1/2/3/4/5% Attack Power (calculator versions 2 to 5) | 3 ranks with +2/4/6% give more value for each point. Retribution has 44 points, as in the beta |
+| Eye for an Eye in Retribution row 3, column 2, and Two-Handed Weapon Specialization in row 4, column 1 (M-R3, first version 6 layout) | Burning Zeal goes to row 3. Eye for an Eye stays in its beta place |
 | Precision and Guardian's Favor in Protection row 1, Holy Conduit in Protection row 2 (Toughness and Divine Strength removal, C-P3, version of 23 October) | Too far from the beta tree. Now Benediction fills the place of Toughness. Precision, Guardian's Favor and Holy Conduit stay in their beta place. Tanks take Holy Conduit with Deflection 5 (7 Retribution points) |
 | Benediction with 3 ranks, 3/6/9% | Benediction (M-P1) moves to Protection row 1. There, Benediction 5 opens row 2 for Holy and Retribution. The 5 beta ranks stay |
 | Benediction in Retribution row 2 (second part of the Conviction move, M-R2) | Benediction (M-P1) moves to Protection row 1. Conviction (M-R2) now moves only this talent |

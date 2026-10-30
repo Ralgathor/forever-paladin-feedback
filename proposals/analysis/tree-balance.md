@@ -76,7 +76,7 @@ Each row 3 has a 1-point signature talent, as in the other classes. Each also ha
 | Improved Seals (+15% Seals and Judgements, 3 points, row 1) | Concussion (+5%), Improved Eviscerate (+20%) | Parity. Strong for each point, but the beta value |
 | Unyielding Faith (−30% Fear and Disorient, 2 points, Holy row 1 with the Unyielding Faith move, M-H2) | Iron Will (−15% stun and fear, 5 points, Warrior row 1), Silent Resolve (−15%, 3 points) | Stronger. Resistance to fear is a Paladin strength. If PvP shows a problem: −10/20% |
 | Holy Conduit (−40% on 4 spells, 2 points, Retribution row 2) | Moonglow (−25%, 3 points, row 2), Cataclysm (−10%, 3 points) | Stronger for each point, but on few spells (W4) |
-| Vindication (+5% Attack Power, 5 points, Retribution row 2 with Toughness and Divine Strength removal, C-P3) | Demoralizing Shout, Demoralizing Roar (baseline Attack Power debuffs) | Equal. The stack with these debuffs is not known (Open questions) |
+| Vindication (+6% Attack Power, 3 points, Retribution row 2 with Toughness and Divine Strength removal, C-P3) | Demoralizing Shout, Demoralizing Roar (baseline Attack Power debuffs) | Equal. The stack with these debuffs is not known (Open questions) |
 | Improved Judgement (−2 sec, 2 points) | Improved Mind Blast (−2.5 sec, 5 points), Reverberation (−1 sec, 5 points) | Stronger for each point. It is the Classic value |
 | Guardian's Favor (Protection row 2), Sacred Duty, Improved Hammer of Justice | Endurance, Elusiveness, Brutal Impact (row 2). Frost Warding, Earth's Grasp (row 1 utility) | Stronger on saves |
 | Two-Handed Weapon Specialization (+6%, row 4 with the Two-Handed Weapon Specialization move, M-R1) | Two-Handed Weapon Specialization (Warrior, +3%, row 4) | Stronger, intentional. Retribution is the two-handed spec of the class. The 3% difference gives Retribution about +10 DPS (+3%). See Analysis, Damage, part 8 |
@@ -108,17 +108,17 @@ Source: the talent data of wowsims/forever (25 October 2026) for all nine classe
 | Mage | Arcane 49 | Fire 46 | Frost 48 | 143 | 54 |
 | Rogue | Assassination 48 | Combat 44 | Subtlety 47 | 139 | 53 |
 | **Paladin, beta** | Holy 46 | Protection 48 | Retribution 44 | **138** | 50 |
-| **Paladin, proposed** | Holy 47 | Protection 49 | Retribution 46 | **142** | 54 |
+| **Paladin, proposed** | Holy 47 | Protection 49 | Retribution 44 | **140** | 54 |
 
 - The other classes have 139–150 points (mean 146, or 48.75 for each tree). Their smallest trees are Beast Mastery and Combat (44).
 - In the beta, the Paladin is the smallest class, 1 point below the Rogue. Retribution (44) is equal to Beast Mastery and Combat.
-- With the proposals, the Paladin has 142 points: 3 points above the Rogue and 4 points below the mean. Holy (47) and Retribution (46) are in the range of the other trees. Without the four new talents of 29 October, Retribution (41) and Holy (43) were the two smallest of the 27 trees.
+- With the proposals, the Paladin has 140 points: 1 point above the Rogue and 6 points below the mean. Holy (47) and Retribution (44) are in the range of the other trees. Retribution is equal to Beast Mastery and Combat. Without the four new talents of 29 October, Retribution (39) and Holy (43) are the two smallest of the 27 trees.
 - wowforevertalents.com gives Frost 53 points. wowsims gives 48. The table uses the wowsims value.
 
 **Cause: ranks, not talents.**
 
 - The Paladin had 49–50 talents. The other classes have 50–54. Thus, the difference was in the ranks. With the four new talents, the Paladin has 54.
-- Toughness and Divine Strength removal (C-P3) deletes Divine Strength (5) and Toughness (5). Improved Righteous Fury removal (C-P4) deletes its 3 ranks. Vindication, Lingering Light, Reach of Law and Devoted Sacrifice (C-P11) add 8. Merciful Light (C-H5), Divine Grace (C-H6), Burning Zeal (C-R4) and Measure for Measure (C-R5) add 9. The net change is +4 (138 to 142).
+- Toughness and Divine Strength removal (C-P3) deletes Divine Strength (5) and Toughness (5). Improved Righteous Fury removal (C-P4) deletes its 3 ranks. Lingering Light, Reach of Law and Devoted Sacrifice (C-P11) add 6. Vindication keeps its 3 beta ranks (C-P3). Merciful Light (C-H5), Divine Grace (C-H6), Burning Zeal (C-R4) and Measure for Measure (C-R5) add 9. The net change is +2 (138 to 140).
 - All tank builds skipped Toughness and Divine Strength (see Analysis, Builds, part 3).
 
 **Thin rows.**
@@ -131,14 +131,14 @@ Source: the talent data of wowsims/forever (25 October 2026) for all nine classe
 | Protection, proposed | 10 / 10 / 8 / 7 / 8 / 5 / 1 | 28 | 20 |
 | Retribution, calculator version 5 | 10 / 9 / 6 / 6 / 4 / 5 / 1 | 25 | **15** (other trees: 15–25) |
 | Retribution, with Burning Zeal (C-R4) and Measure for Measure (C-R5) | 10 / 9 / 6 / 6 / 9 / 5 / 1 | 25 | 20 |
-| Retribution, calculator version 6 (M-R3, M-R4, M-R5) | 10 / 9 / 8 / 6 / 7 / 5 / 1 | 27 | 18 |
+| Retribution, calculator version 6 (Burning Zeal in row 3, M-R4, M-R5, Vindication with 3 ranks) | 10 / 7 / 8 / 6 / 7 / 5 / 1 | 25 | 18 |
 | Mean of the other 24 trees | — | 28.6 | 19.1 |
 
 - In version 4, Holy row 3 has 3 points. Each other tree has 4 points or more in row 3. Holy rows 1–3 (20 points) are the lowest of the 27 trees.
 - This causes 2 points of filler for the Holy healer. Row 4 needs 15 points in rows 1–3, and only 14 of these points help a healer. Row 6 needs 25 points in rows 1–5, and only 23 help a healer.
 - **The fix: one new talent and two moves in Holy.** Lingering Light (C-H2) is a new talent in row 3. Holy Power goes to row 5 (M-H3). Consecrated Ground goes to row 6 (M-H4). Rows 1–3 then hold 16 healer points, and rows 1–5 hold 28. The Holy healer has no filler.
 - After the moves, each Holy row is in the range of the other trees. Rows 1–3 (22) are 1 point below the lowest other tree.
-- In calculator version 5, Retribution rows 4–6 (15 points) were equal to the lowest other tree (Discipline). A deep Retribution build took almost all of them. With Burning Zeal (C-R4) and Measure for Measure (C-R5), rows 4–6 have 20 points. In calculator version 6, Eye for an Eye goes to row 3 (M-R3): rows 1–3 have 27 points and rows 4–6 have 18. Both values are in the range of the other trees. A deep build chooses between Measure for Measure, Eye for an Eye and Repentance.
+- In calculator version 5, Retribution rows 4–6 (15 points) were equal to the lowest other tree (Discipline). A deep Retribution build took almost all of them. With Burning Zeal (C-R4) and Measure for Measure (C-R5), rows 4–6 have 20 points. In calculator version 6, Burning Zeal goes to row 3, and Vindication has 3 ranks (C-P3): rows 1–3 have 25 points and rows 4–6 have 18. Both values are in the range of the other trees. A deep build chooses between Measure for Measure, Eye for an Eye and Repentance.
 
 **What the smaller trees change.**
 
@@ -151,4 +151,4 @@ Source: the talent data of wowsims/forever (25 October 2026) for all nine classe
 
 **Result.** Do not add ranks to reach the totals of the other classes. New ranks become stat filler again, as Toughness and Divine Strength were (Toughness and Divine Strength removal, C-P3). Devoted Sacrifice (C-P11) adds 2 ranks to Protection, but for an effect, not for stats. The talent count is already in the range of the other classes. Holy rows were the one weak point. One new talent and two moves fix them: Lingering Light (C-H2) in row 3, Holy Power (M-H3) and Consecrated Ground (M-H4). These three changes keep all build codes valid. Shock-Retribution changes to 26/0/25 (see Builds, part 5).
 
-**New talents of 29 October 2026.** Each new talent has an effect, not a stat. Merciful Light (C-H5) gives Holy the burst after a large hit. Divine Grace (C-H6) gives the tank armor after a large hit. Burning Zeal (C-R4) and Measure for Measure (C-R5) give Retribution new choices. In calculator version 6, Burning Zeal is in row 4 and Measure for Measure is in row 5. The new talents go at the end of the build code of each tree. Thus, all version 5 codes stay valid.
+**New talents of 29 October 2026.** Each new talent has an effect, not a stat. Merciful Light (C-H5) gives Holy the burst after a large hit. Divine Grace (C-H6) gives the tank armor after a large hit. Burning Zeal (C-R4) and Measure for Measure (C-R5) give Retribution new choices. In calculator version 6, Burning Zeal is in row 3 and Measure for Measure is in row 5. The new talents go at the end of the build code of each tree. Thus, all version 5 codes stay valid.

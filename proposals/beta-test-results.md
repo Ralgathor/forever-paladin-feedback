@@ -44,7 +44,7 @@
 | Benediction | Its cost decrease multiplies with Purifying Power, Holy Conduit and Twist of Light | Benediction (M-P1) moves to Protection row 1. It keeps 5 ranks |
 | Holy Conduit | With Benediction, Consecration costs ×0.60 × 0.90 | None |
 | Conviction | Also applies to damage Seals and Hammer of Wrath | Conviction (C-R1) adds only Holy Shock, Exorcism, Consecration and heals |
-| Vindication | About 5 procs each minute. Ranks: −67/136/204 Attack Power on the target and +1/2/3% on you | Toughness and Divine Strength removal (C-P3): row 2, 5 ranks, +1/2/3/4/5% |
+| Vindication | About 5 procs each minute. Ranks: −67/136/204 Attack Power on the target and +1/2/3% on you | Toughness and Divine Strength removal (C-P3): row 2, 3 ranks, +2/4/6% |
 | Sanctified Judgement | Returns 60% of the base cost of the Seal, before talent cost decreases: 126 mana for Seal of Command with Benediction and Twist of Light | The mana models use 126 |
 | Pursuit of Justice | 15% at 2/2. Better than the 8% boot enchant | On the watch list (W1) |
 | Eye for an Eye | Uses the damage taken after armor and resistance | None |

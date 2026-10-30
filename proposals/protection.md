@@ -45,19 +45,19 @@ The Protection proposals give:
 - **Total.** −10% damage taken. This is the same as Defensive Stance (Warrior).
 - **Rule exception.** Iron Creed works as an improved Righteous Fury. But the full 10% needs 30 Protection points. Monitor it in PvP, because all specs can use Righteous Fury.
 
-## C-P3. Toughness and Divine Strength: removed, Vindication with 5 ranks
+## C-P3. Toughness and Divine Strength: removed, Vindication with +2/4/6% Attack Power
 
-- **Change.** Toughness (Protection row 1) and Divine Strength (Holy row 1) leave the trees. Three talents move to fill rows 1 and 2. Benediction (M-P1) and Unyielding Faith (M-H2) only move. Vindication also has 5 ranks (C-P3):
+- **Change.** Toughness (Protection row 1) and Divine Strength (Holy row 1) leave the trees. Three talents move to fill rows 1 and 2. Benediction (M-P1) and Unyielding Faith (M-H2) only move. Vindication also gives more Attack Power (C-P3):
 
 | Talent | Beta | Proposed | Text |
 | --- | --- | --- | --- |
 | Benediction (M-P1) | Retribution row 1, column 3 | Protection row 1, column 2 | The same: 5 ranks, 2/4/6/8/10% |
-| Vindication (C-P3) | Retribution row 3, column 1 | Retribution row 2, column 3 | 5 ranks (see below) |
+| Vindication (C-P3) | Retribution row 3, column 1 | Retribution row 2, column 3 | 3 ranks, +2/4/6% Attack Power (see below) |
 | Unyielding Faith (M-H2) | Holy row 2, column 4 | Holy row 1, column 2 | The same |
 
 - **The other talents stay in their beta place.** Precision, Guardian's Favor and Anticipation stay in Protection row 2. Holy Conduit stays in Retribution row 2. Only Conviction moves in Retribution (M-R2).
 - **Benediction text.** "Reduces the Mana cost of all instant cast spells and abilities by 2/4/6/8/10%." The same as the beta.
-- **Vindication text.** "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 41/82/122/163/204, and increase your Attack Power by 1/2/3/4/5% for 30 sec." Beta: 3 ranks, −67/136/204 Attack Power and +1/2/3%.
+- **Vindication text.** "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 67/136/204, and increase your Attack Power by 2/4/6% for 30 sec." Beta: +1/2/3%. The debuff on the target does not change.
 - **Why remove Toughness.** Forever removed flat armor talents for tanks. Toughness (Warrior) was removed. Toughness (Shaman) now gives Stamina. Thick Hide (Druid) increases with Defense. Toughness (Paladin) was the last flat armor talent.
 - **Why remove Divine Strength.** +10% Strength gives a tank about +15 Strength with pre-raid gear. This is less than 1 threat per sec for each point. Retribution receives about +7 DPS for 5 points, the least of its talents (see Analysis, Builds).
 - **Goal.** Each point in rows 1 and 2 has a use for its spec. The other specs keep a reason to put points in each tree (design rule 2). The other talents stay near the beta tree.
@@ -66,9 +66,9 @@ The Protection proposals give:
 - **Retribution.** Benediction 5 opens Protection row 2. Retribution then takes Precision 3 (+3% hit). This dip is 8 points. Benediction also decreases the cost of Judgement, Holy Strike, Seals and Consecration.
 - **Holy.** Benediction 5 opens Protection row 2. Holy then takes Guardian's Favor 2. Holy Shock and Cleanse cost 10% less. This dip is 7 points.
 - **Holy Conduit.** It stays in Retribution row 2, as in the beta. A tank takes it with Deflection 5 and Holy Conduit 2 (7 points). Deflection is also a tank talent. With Benediction and Holy Conduit, Consecration on cooldown costs 76 mana per sec, not 112 (see Analysis, Mana).
-- **Why Vindication goes to row 2.** It takes the row 2 place of Conviction (M-R2). With 5 ranks, Retribution keeps 41 points. +5% Attack Power gives about +6 DPS.
+- **Why Vindication goes to row 2.** It takes the row 2 place of Conviction (M-R2). +2% Attack Power for each point gives each point the value of a 5-rank talent point. +6% Attack Power gives about +7 DPS.
 - **Why Unyielding Faith goes to row 1 (M-H2).** Improved Seals (M-H1) keeps its 3 beta ranks. Unyielding Faith fills the other 2 points of Holy row 1. Retribution and Protection open Holy row 2 with Improved Seals 3 and Unyielding Faith 2. Retribution then takes Infusion of Light. Iron Will (Warrior) is also in row 1.
-- **Shape.** Each row 1 has 10 points. Holy uses 5 + 3 + 2, as Fire (Mage). Protection and Retribution use 5 + 5. Holy has 43 points, Protection 49 and Retribution 41.
+- **Shape.** Each row 1 has 10 points. Holy uses 5 + 3 + 2, as Fire (Mage). Protection and Retribution use 5 + 5. Holy has 43 points, Protection 49 and Retribution 39 (44 with Burning Zeal and Measure for Measure).
 - **Parity.** Convection (Shaman) gives −10% mana cost for 5 points in Elemental row 1. Benediction gives the same in Protection row 1.
 
 ## C-P4. Improved Righteous Fury: removed
