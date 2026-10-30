@@ -24,7 +24,7 @@ Healer dips of other classes:
 
 ## Rule 1: rows 1 and 2 give something to the other specs
 
-This table uses the proposed trees with Conviction (M-R2) and Toughness and Divine Strength removal (C-P3), in calculator version 5.
+This table uses the proposed trees with Conviction (M-R2) and Toughness and Divine Strength removal (C-P3), in calculator version 6.
 
 | Tree | Rows 1–2 | Retribution receives | Protection receives | Holy receives |
 | --- | --- | --- | --- | --- |
@@ -95,7 +95,7 @@ These talents are stronger than, or different from, the talents of other classes
 
 ## Points in each tree
 
-Source: the talent data of wowsims/forever (25 October 2026) for all nine classes. The proposed values use calculator version 5, with Merciful Light (C-H5), Divine Grace (C-H6), Burning Zeal (C-R4) and Measure for Measure (C-R5).
+Source: the talent data of wowsims/forever (25 October 2026) for all nine classes. The proposed values use calculator version 6, with Merciful Light (C-H5), Divine Grace (C-H6), Burning Zeal (C-R4) and Measure for Measure (C-R5).
 
 | Class | Tree 1 | Tree 2 | Tree 3 | Total | Talents |
 | --- | --- | --- | --- | --- | --- |
