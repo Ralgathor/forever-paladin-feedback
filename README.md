@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 26 changes and 9 moves for the Holy, Protection and Retribution trees. 5 changes are baseline spell changes (C1–C5). 21 changes are talent changes (C-H1–C-H6, C-P1–C-P9, C-P11, C-R1–C-R5), and eight of them are new talents. The moves are M-H1–M-H4, M-P1, M-R1, M-R2, M-R4 and M-R5.
+- **Proposals:** 26 changes and 10 moves for the Holy, Protection and Retribution trees. 5 changes are baseline spell changes (C1–C5). 21 changes are talent changes (C-H1–C-H6, C-P1–C-P9, C-P11, C-R1–C-R5), and eight of them are new talents. The moves are M-H1–M-H5, M-P1, M-R1, M-R2, M-R4 and M-R5.
 - **Talent calculator:** you can try the proposals and compare them with the beta trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
 - **Builds:** the best builds for each spec and role (raid, dungeon, PvP), with calculator codes. Also the builds that use a different tree for a role.

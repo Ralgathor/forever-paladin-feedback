@@ -8,7 +8,7 @@ This section examines the builds that are possible with the proposed trees. It g
 - Each talent is in at least one good build. No talent is without a use.
 - The tank builds dip 13 points into Retribution for Sanctified Judgement and Improved Judgement (3/35/13). This dip gives more threat and mana than the Holy dip with Reverence (8/35/8): +12 threat per sec and +4.4 mana per sec.
 - Each spec has a clear main build. Each role also has real choices: mana, threat, saves and PvP control.
-- Only one build outside the main tree is good: Shock-Retribution. In version 6, Divine Precision is in its beta place (Holy row 5, requires Holy Shock). Shock-Retribution is then equal to RB6 in a raid in wowsims (part 5). Tanks and healers outside their tree are weaker.
+- Only one build outside the main tree is good: Shock-Retribution. In version 6, Divine Precision is in its beta place (Holy row 5), with no requirement (M-H5). Shock-Retribution is then equal to RB6 in a raid in wowsims (part 5). Tanks and healers outside their tree are weaker.
 - Toughness and Divine Strength removal (C-P3) deletes both talents. Each point in rows 1 and 2 now has a use for its spec. A tank build can have area and single-target talents together (part 3).
 - Benediction (M-P1) moves to Protection row 1. The tank, Retribution and Holy builds keep their damage, threat and healing values. Retribution raid builds lose Guardian's Favor. Holy builds receive Benediction 5/5 and 4 free points.
 - Three hybrids need 52 points. They are Holy Shock with Twist of Light, Holy Shock with Holy Shield, and Holy Shield with Retribution row 5. This 1-point gap stops the strongest hybrids.

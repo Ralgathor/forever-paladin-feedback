@@ -1,6 +1,6 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 26 changes and 9 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 26 changes and 10 moves. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
 
 **Contents**
 
@@ -63,6 +63,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 26 chan
 | M-H2 | Unyielding Faith | Holy | Row 2 | Row 1 |
 | M-H3 | Holy Power | Holy | Row 6 | Row 5, column 4 |
 | M-H4 | Consecrated Ground | Holy | Row 5 | Row 6 |
+| M-H5 | Divine Precision | Holy | Row 5, requires Holy Shock | Row 5, column 1, no requirement |
 | M-P1 | Benediction | Retribution → Protection | Retribution row 1 | Protection row 1 |
 | M-R1 | Two-Handed Weapon Specialization | Retribution | Row 5 (20 points) | Row 4, column 4 (15 points) |
 | M-R2 | Conviction | Retribution | Row 2 | Row 1 |

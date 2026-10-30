@@ -10,7 +10,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 | 2 (5) | Infusion of Light (C-H3), Reverence (C-H1), Spiritual Focus | 7 |
 | 3 (10) | Voice of Truth, Purifying Power, Lingering Light (C-H2) | 5 |
 | 4 (15) | Illumination, Divine Favor, Divine Grace (C-H6) | 8 |
-| 5 (20) | Divine Precision, Holy Shock, Merciful Light (C-H5), Holy Power (M-H3) | 11 |
+| 5 (20) | Divine Precision (M-H5), Holy Shock, Merciful Light (C-H5), Holy Power (M-H3) | 11 |
 | 6 (25) | Consecrated Ground (M-H4), Healing Light (C-H4) | 5 |
 | 7 (30) | Light's Vigil | 1 |
 
@@ -18,7 +18,7 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - You can use each talent when its row opens.
 - Illumination still requires Reverence (straight arrow in column 2).
 - Divine Grace (C-H6) requires Divine Favor, and Merciful Light (C-H5) requires Holy Shock (arrows in the same row). A talent that changes only an ability of another talent requires that talent.
-- Row 5: Divine Precision (column 1) and Merciful Light (column 3) are on the two sides of Holy Shock (column 2). Both require Holy Shock. Divine Precision is in its beta place. Holy Power goes to column 4.
+- Row 5: Divine Precision (column 1) and Merciful Light (column 3) are on the two sides of Holy Shock (column 2). Merciful Light requires Holy Shock. Divine Precision is in its beta place, with no requirement (M-H5). Holy Power goes to column 4.
 - Toughness and Divine Strength removal (C-P3) deletes Divine Strength. Unyielding Faith (M-H2) goes to row 1.
 - A Holy healer needs no filler. Rows 1–3 hold 16 healer points (row 4 needs 15). Rows 1–5 hold 32 (row 6 needs 25). Holy healing is complete at 36 points. See Analysis, Tree balance.
 
@@ -133,3 +133,12 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 - **Duration.** The Classic buff lasted 2 min. With Divine Favor each 2 min, the buff is then always active on the main tank: −11% physical damage for the full fight. This is too strong. With 15 sec, the buff helps after a large hit, as Inspiration does.
 - **Healing.** The talent does not change the healing per sec. The healing model gives the same values as without the talent.
 - **Stacks.** Inspiration and Ancestral Fortitude do not stack in Classic. The buff of Improved Lay on Hands was a different effect. A beta test must find whether Divine Grace stacks with them (see Open items).
+
+## M-H5. Divine Precision: no requirement
+
+- **Text.** "Improves your chance to hit with Holy spells by 6/12/18%." 3 ranks, the same as the beta.
+- **Change.** Row 5, column 1, the beta place. In the beta, it requires Holy Shock. The requirement goes.
+- **Why.** Divine Precision does not change Holy Shock. It gives hit to all Holy spells. Thus, by the rule of the Holy layout, it does not require Holy Shock.
+- **Cost.** Row 5 needs 20 Holy points. Holy Shock costs 1 point, and all Divine Precision builds take it. Thus, the build values do not change.
+- **Who takes it.** Holy Shock builds (Shockadin, 38/0/13, and Shock-Retribution, 28/0/23).
+- **Risk.** It gives spell hit to Holy Shock, Exorcism, Holy Wrath and Consecration. Seals and Judgements use the melee hit table (see Watch list, W22).
