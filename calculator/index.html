@@ -339,7 +339,6 @@ const PROPOSALS=[
  ["C-H1", "rev", "Reverence", "Holy, row 2", "15/30% of mana regeneration during casts", "25/50%"],
  ["C-H2", "sw", "Lingering Light (new)", "Holy, row 3", "—", "2 ranks: a critical heal adds a heal over time of 10/20% of the heal"],
  ["C-H3", "iol", "Infusion of Light", "Holy, row 4", "Holy Shock and Flash of Light critical hits make the next Holy Light faster", "All Holy Shock, Flash of Light and Holy Strike hits do this. No critical hit is necessary"],
- ["C-H4", "hl", "Healing Light", "Holy, row 2", "3 ranks: 4/8/12%", "On hold: 10/20/30%. The Holy rewrite decides between Healing Light and Oath of Light. Not in the proposed trees yet"],
  ["C-P1", "red", "Redoubt", "Protection, row 1", "10% chance when you are hit: +6–30% block", "The same. Each Holy Shield cast also starts it"],
  ["C-P5", "rdef", "Shoulder the Burden (new)", "Protection, row 5", "—", "50% of the threat of an ally moves to you, 3 min cooldown"],
  ["C-P11", "dsac", "Devoted Sacrifice (new)", "Protection, row 4", "—", "2 ranks: Lay on Hands drains only 75/50% of your current mana, and you take 20/40% less damage from your Hand of Sacrifice"],
@@ -576,8 +575,6 @@ ${dn("The beta of 30 October moved Reverence to Row 2, as this proposal asked. M
 ${dn("Holy has no heal over time. Lingering Light works as Ignite and Blessed Recovery work in Forever. It also gives more value to the critical heal talents of the tree: Illumination, Divine Favor, Boundless Light and Holy Power.")}</li>
 <li>${t("iol","Infusion of Light")}: A critical hit is no longer necessary (was Holy Shock and Flash of Light critical hits only). Holy Strike hits are a new trigger. ${g("C-H3")}
 ${dn("No talent reduces the cast time of Holy Light in all cases. Divine Fury, Naturalist and Improved Healing Wave give −0.5 sec to the large heal of their class. Hybrids also have a fast emergency heal now: after each Holy Strike, Holy Light has a 1.5 sec cast.")}</li>
-<li>${t("hl","Healing Light")}: 10/20/30% (was 4/8/12%) is on hold. ${g("C-H4")}
-${dn("The beta removed Blessing of Light and added Oath of Light. Healing Light helps all targets, and Oath of Light helps one target. The Holy rewrite decides between the two. The proposed trees keep the beta values until then.")}</li>
 </ul>
 
 <p class="cat"><b>Protection</b></p>
@@ -629,8 +626,7 @@ heal:[
  {t:"One tank, healing per sec",c:"715 healing power, 3 min, Oath of Light on the tank",b:"732",p:"Not modeled yet",big:1,bars:[["Paladin, beta",732,"b"],["Druid",681,"o"],["Shaman",607,"o"],["Priest",606,"o"]],s:"First of the four healers: 3–12% above the Druid.",d:"If Holy Power gives a 175% critical heal (not 225%), the Paladin is 7% below to 1% above the Druid. Maximum raw healing per sec: Paladin 1,536, other healers 1,278–1,320."},
  {t:"Recovery after a large hit",c:"First 3–6 sec, against the Druid",b:"11–18% above with Divine Favor, 2% below with short cooldowns",p:"Not modeled yet",ids:["C-H3"],s:"Infusion of Light (C-H3) makes Holy Light fast after each Flash of Light, not only after a critical heal."},
  {t:"Large heal",b:"Only a critical heal makes Holy Light faster",p:"Flash of Light, then a 1.5 sec Holy Light",ids:["C-H3"],s:"Each other healer has a talent for −0.5 sec on its large heal."},
- {t:"Lay on Hands at full mana",b:"Drains all 4,416 mana",p:"Drains 2,208 (50%)",ids:["C-P11"],s:"With Devoted Sacrifice 2/2, the mana is back after 1 min 38 sec (was 3 min 15 sec)."},
- {t:"Healing bonus",b:"Oath of Light: +400 Holy Light, +115 Flash of Light, +229 Holy Shock on one target",p:"On hold: Healing Light 10/20/30% on all targets",ids:["C-H4"],s:"The Holy rewrite decides between the two."}
+ {t:"Lay on Hands at full mana",b:"Drains all 4,416 mana",p:"Drains 2,208 (50%)",ids:["C-P11"],s:"With Devoted Sacrifice 2/2, the mana is back after 1 min 38 sec (was 3 min 15 sec)."}
 ],
 tank:[
  {t:"Crushing blows",b:"Holy Shield +30% block. Redoubt is a 10% proc",p:"Holy Shield also starts Redoubt: up to 60% block",ids:["C-P1"],s:"This removes most crushing blows. The values need a new model on the beta of 30 October."},

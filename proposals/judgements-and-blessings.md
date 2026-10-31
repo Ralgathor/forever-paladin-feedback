@@ -31,7 +31,7 @@
 
 - **Adopted.** The beta of 30 October removes Blessing of Light and Greater Blessing of Light, as Blessing of Light removal (C3) asked. C3 is no longer a proposal.
 - **Oath of Light.** The beta adds Oath of Light, a Holy row 4 talent. It gives the Blessing of Light bonus (+400 Holy Light, +115 Flash of Light) and +229 Holy Shock, on one ally only.
-- **Healing Light.** The beta keeps Healing Light at 4/8/12%. The 10/20/30% of Healing Light (C-H4) is on hold until the Holy rewrite (see Holy, C-H4).
+- **Oath of Light stays.** Oath of Light keeps its beta version. Healing Light keeps 4/8/12%. The proposal for Healing Light 10/20/30% (C-H4) is withdrawn.
 
 ## C4. Hand of Sacrifice: a damage pool
 
