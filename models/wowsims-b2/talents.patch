@@ -1,0 +1,104 @@
+diff --git a/sim/paladin/talents.go b/sim/paladin/talents.go
+index f3d252f74..299b085e9 100644
+--- a/sim/paladin/talents.go
++++ b/sim/paladin/talents.go
+@@ -6,6 +6,7 @@ func (paladin *Paladin) ApplyTalents() {
+ 	paladin.registerHolyTalents()
+ 	paladin.registerProtectionTalents()
+ 	paladin.registerRetributionTalents()
++	paladin.applySimProposals()
+ }
+ 
+ // The abilities a talent point buys.
+diff --git a/sim/paladin/talents_protection.go b/sim/paladin/talents_protection.go
+index ca780f1be..901231639 100644
+--- a/sim/paladin/talents_protection.go
++++ b/sim/paladin/talents_protection.go
+@@ -1,6 +1,8 @@
+ package paladin
+ 
+ import (
++	"time"
++
+ 	"github.com/wowsims/forever/sim/core"
+ 	"github.com/wowsims/forever/sim/core/dbcenums"
+ 	"github.com/wowsims/forever/sim/core/spelldata"
+@@ -51,7 +53,7 @@ func (paladin *Paladin) applyDivineIntellect() {
+ 
+ // Toughness - Increases your armor value from items by 2/4/6/8/10%.
+ func (paladin *Paladin) applyToughness() {
+-	if paladin.Talents.Toughness == 0 {
++	if paladin.Talents.Toughness == 0 || proposeFlag("NOTOUGH") {
+ 		return
+ 	}
+ 
+@@ -192,28 +194,54 @@ func (paladin *Paladin) applyReckoning() {
+ 	rank := spellData.ReckoningTriggered.Highest()
+ 	blockChance := spellData.Reckoning.FractionAt(paladin.Talents.Reckoning)
+ 	critChance := blockChance * 2.5
++	icd := talent.ICD()
++	if proposeFlag("RK100") { // block chance 100%
++		blockChance = 1.0
++	}
++	if proposeFlag("RKICD4") {
++		icd = 4 * time.Second
++	}
+ 
+ 	stored := paladin.RegisterAura(spelldata.AuraConfig(rank, spelldata.Label("Reckoning"+paladin.Label)))
+ 	gain := func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
+ 		stored.Activate(sim)
+ 		stored.AddStack(sim)
+ 	}
++	// RKB: the beta block chance and limit also on dodges and parries.
++	avoid := core.OutcomeBlock
++	if proposeFlag("RKB") {
++		avoid |= core.OutcomeDodge | core.OutcomeParry
++	}
++	if proposeFlag("CP6A") { // C-P6 triggers, the beta release on the next auto attack
++		paladin.applyReckoningCP6(stored, gain, rank.ID, true, false)
++	} else if proposeFlag("CP6") || proposeFlag("CP6R") {
++		if proposeFlag("CP6R") { // beta triggers, only the Holy Strike release is new
++			paladin.MakeProcTriggerAura(core.ProcTrigger{Name: "Reckoning - Block" + paladin.Label, Callback: core.CallbackOnSpellHitTaken,
++				Outcome: avoid, ProcChance: blockChance, ICD: icd, Handler: gain})
++			paladin.MakeProcTriggerAura(core.ProcTrigger{Name: "Reckoning - Crit" + paladin.Label, Callback: core.CallbackOnSpellHitTaken,
++				Outcome: core.OutcomeCrit, ProcChance: critChance, Handler: gain})
++		}
++		paladin.applyReckoningCP6(stored, gain, rank.ID, !proposeFlag("CP6R"), true)
++		return
++	}
+ 
+-	paladin.MakeProcTriggerAura(core.ProcTrigger{
+-		Name:       "Reckoning - Block" + paladin.Label,
+-		Callback:   core.CallbackOnSpellHitTaken,
+-		Outcome:    core.OutcomeBlock,
+-		ProcChance: blockChance,
+-		ICD:        talent.ICD(),
+-		Handler:    gain,
+-	})
+-	paladin.MakeProcTriggerAura(core.ProcTrigger{
+-		Name:       "Reckoning - Crit" + paladin.Label,
+-		Callback:   core.CallbackOnSpellHitTaken,
+-		Outcome:    core.OutcomeCrit,
+-		ProcChance: critChance,
+-		Handler:    gain,
+-	})
++	if !proposeFlag("CP6A") {
++		paladin.MakeProcTriggerAura(core.ProcTrigger{
++			Name:       "Reckoning - Block" + paladin.Label,
++			Callback:   core.CallbackOnSpellHitTaken,
++			Outcome:    avoid,
++			ProcChance: blockChance,
++			ICD:        icd,
++			Handler:    gain,
++		})
++		paladin.MakeProcTriggerAura(core.ProcTrigger{
++			Name:       "Reckoning - Crit" + paladin.Label,
++			Callback:   core.CallbackOnSpellHitTaken,
++			Outcome:    core.OutcomeCrit,
++			ProcChance: critChance,
++			Handler:    gain,
++		})
++	}
+ 
+ 	// The next main-hand swing spends every stored charge as a copy of itself, tagged with
+ 	// Reckoning, at the same target. The copies spend none.

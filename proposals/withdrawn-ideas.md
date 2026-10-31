@@ -2,6 +2,40 @@
 
 The analysis examined these ideas and rejected them. They are not proposals.
 
+## Withdrawn on 31 October 2026: the beta of 30 October
+
+The beta of 30 October 2026 changes the three trees. These proposals are now unnecessary, or their place in the tree is gone. The earlier ID stays reserved. The Analysis tabs still use it.
+
+| Earlier proposal (ID) | Why it was withdrawn |
+| --- | --- |
+| Improved Seals to Holy row 1 (M-H1) | Spiritual Focus and Divine Strength now fill Holy row 1. Divine Strength gives Retribution a row 1 talent |
+| Unyielding Faith to Holy row 1 (M-H2) | Unyielding Faith is now in Retribution row 3 |
+| Holy Power to row 5 (M-H3) | Holy Power now increases only the critical heal bonus. A Holy healer needs no filler in the new tree |
+| Consecrated Ground to row 6 (M-H4) | It depended on the Holy Power move (M-H3) |
+| Merciful Light: Holy Shock +50/100% at or below 35% health (C-H5) | After a large hit, the beta Paladin with Divine Favor is now 11–18% above the Druid. Boundless Light uses the place next to Holy Shock |
+| Divine Grace: Divine Favor cooldown −30/60 sec (C-H6) | On one tank, the beta Paladin is now 3–12% above the Druid. Divine Favor is in row 3, column 1: no place for the arrow |
+| Iron Creed while Righteous Fury is active (C-P2) | With Shieldsworn, Holy Strike has a 6 sec cooldown, the same as the Iron Creed duration. Thus, Iron Creed is always active |
+| Toughness and Divine Strength: removed, Vindication with 5 ranks (C-P3) | The beta fills Protection row 1 with Divine Intellect and moves Toughness to row 3. Vindication has no Attack Power buff now. Toughness removal (C-P13) now removes only Toughness, for the tree of 30 October |
+| Improved Righteous Fury: removed (C-P4) | It depended on the Iron Creed change (C-P2) |
+| Reckoning: charges from block, dodge and parry, released by Holy Strike (C-P6) | The beta tank has 101% of the Warrior threat with the same gear. Reckoning is not necessary for threat |
+| Reach of Law: Judgement range +5/10 yards (C-P7) | It requires Swift Judgement. Swift Judgement is now a second Judgement. No free place before row 6. The beta tank threat is high, thus the first pull is not a problem |
+| Shield Specialization: mana on each block (C-P8) | Shieldsworn adds a Shield Specialization return on each Holy Strike. The beta tank has +26 to +55 mana per sec while it tanks |
+| Holy Shield: damage increases with block value (C-P9) | The beta tank has 102–118% of the Warrior threat at all gear levels. Shieldsworn doubles the Holy Shield damage |
+| Benediction to Protection row 1 (M-P1) | Divine Intellect now fills that place |
+| Twist of Light: the Echo lasts 10 sec (C-R2) | Twist of Light is removed. Unsealed Wrath stores up to 3 Seal copies for 15 sec: about one Seal change each 10 sec, the goal of the proposal |
+| Measure for Measure: dodges and parries reduce the Judgement cooldown (C-R5) | About +1% damage at all gear levels. With pre-raid gear, Retribution is at the hybrid target (about 96% of the pure average) |
+| Conviction to Retribution row 1 (M-R2) | Conviction stays in row 2 with 3 ranks (6%). A healer now takes Benediction 5 and Conviction 3 |
+| Judgement Echo: a replaced Judgement stays for 40 sec (C2b) | It used the Echo of Twist of Light. Twist of Light is removed |
+| Blessing of Light uses no Blessing slot (C3a) | Blessing of Light is removed |
+| The Blessing of Light bonus goes into the base heals (C3b) | Blessing of Light is removed. Oath of Light gives its bonus on one ally |
+| Infusion of Light: no critical hit necessary, Holy Strike added (C-H3) | No change to sustained healing, because mana limits Holy Light. It added only burst on one tank: 6 sec after a large hit, 10% above the Druid with short cooldowns (beta: 2% below). The beta already meets the single-target goal with Divine Favor (decision of 31 October) |
+| Reverence: 25/50% of mana regeneration during casts (C-H1) | The beta moved Reverence to row 2 (adopted). The 25/50% part aimed at the raid gap. Holy is the best single-target healer, and the raid gap is accepted (decision of 31 October). The beta already meets the single-target goal |
+| Lingering Light: a critical heal adds a heal over time of 10/20% (C-H2) | Holy Power makes each critical heal 225%. With Reverence 50% (C-H1), Lingering Light 2/2 gives one tank 20–25% above the Druid, past the 20% limit (W14). It adds the same % in raids and on a tank. Thus, it cannot close the raid gap alone |
+| Healing Light: 10/20/30% (C-H4) | Oath of Light keeps its beta version (decision of 31 October). It gives the Blessing of Light bonus on one ally. Healing Light keeps 4/8/12% |
+| Burning Zeal: +10/20% critical damage bonus for Seals, Judgements and Holy Strike (C-R4) | Withdrawn by decision of 31 October. It gave +0.8–1.3% damage (model) and +1.9–2.4% (wowsims). With Holy Strike Seal trigger (C1) only, Retribution is at the hybrid target until Blackwing Lair and 1 point below it in Naxxramas (94%). Retribution keeps the 44 points of the beta |
+
+## Earlier withdrawn ideas
+
 | Idea | Why it was rejected |
 | --- | --- |
 | Light's Vigil costs less (for example 50% less, or rank 1 from 730 to about 500 mana) | At 50% of its cost, the Paladin is 11–16% above the Priest and 51–72% above the Shaman in raids (see Analysis, Healing, part 6) |
