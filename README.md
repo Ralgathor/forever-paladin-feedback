@@ -68,7 +68,8 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
   - The calculator opens with the proposed trees. Push **Beta** to see the beta trees.
   - **Versions.** Use the Version list to open an earlier version of the proposed trees. Version 5 (26 October 2026) is the current version. Its build codes start with `v5p`. A version 4 code (it starts with `v4p`) opens on the version 4 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v4/. A version 3 code (it starts with `v3p`) opens on the version 3 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v3/. A version 2 code (it starts with `v2p`) opens on the version 2 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v2/. A version 1 code (it starts with `p`) opens on the version 1 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v1/
   - A purple tag (C) shows a changed talent. A blue tag (M) shows a talent that only moves.
-  - A build code that starts with `v5p` opens a proposed build. A build code with only digits opens a beta build.
+  - A build code that starts with `v5p` opens a proposed build. A build code that starts with `b2` opens a build in the beta trees of 30 October 2026. A build code with only digits is a build in the beta trees of 18 October 2026. It opens on the page of that beta: https://ralgathor.github.io/forever-paladin-feedback/calculator/beta1/
+  - The proposed trees still change the beta trees of 18 October 2026.
 
 The talent icons come from the Wowhead icon server (wow.zamimg.com). If the icons do not load, the calculator shows drawn icons. This project does not keep game files.
 
