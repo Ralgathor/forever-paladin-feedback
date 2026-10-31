@@ -11,7 +11,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 9 chang
 
 ## How to read this document
 
-- **C1 to C5 (spell change).** These change baseline spells, not talents.
+- **C1 to C5 (spell change).** These change baseline spells, not talents. Shoulder the Burden (C-P5) is also a new baseline spell.
 - **C-H, C-P and C-R (talent change).** These change what a talent does, add a talent or remove a talent. The letter after C gives the tree: H (Holy), P (Protection), R (Retribution). A change can also move the talent. The text then gives the new row.
 - **M-H, M-P and M-R (move).** These move a talent to a different row. The talent text does not change. No move proposal is open now.
 - **New IDs.** A new proposal takes the next free number of its series. A new proposal never takes the number of a withdrawn proposal.
@@ -34,7 +34,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 9 chang
 | C4 | Hand of Sacrifice | Baseline spell | Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown | Up to 825 damage moves to you. Lasts 30 sec, 15 sec cooldown |
 | C5 | Hands: Sacrifice, Protection and Freedom | Baseline spells | Blessings of Sacrifice, Protection and Freedom use a Blessing slot | The spells take the name Hand of. No Blessing slot. One Hand from each Paladin on a target |
 | C-P1 | Redoubt | Protection, row 1 | 10% chance when you are hit: +6–30% block | The same. Each Holy Shield cast also starts it |
-| C-P5 | Shoulder the Burden (new) | Protection, row 5 | — | 50% of the threat of an ally moves to you, 3 min cooldown |
+| C-P5 | Shoulder the Burden (new) | Baseline spell | — | 50% of the threat of an ally moves to you, 5 min cooldown |
 | C-P11 | Devoted Sacrifice (new) | Protection, row 4 | — | 2 ranks: Lay on Hands drains only 75/50% of your current mana, and you take 20/40% less damage from your Hand of Sacrifice. Alternative C-P11a: the spell drains 50% for all Paladins |
 | C-P12 | Reckoning | Protection, row 5 | 8–40% chance after a block, once each 1.5 sec | 20–100% chance after a block, once each 4 sec. The critical hit trigger does not change |
 | C-R3 | Sanctified Judgement | Retribution, row 2 | 33/66/100% chance to return 20/40/60% of the Seal cost | 100% chance at all ranks. The return is 20/40/60% of the Seal cost |
