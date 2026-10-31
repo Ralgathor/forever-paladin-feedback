@@ -16,7 +16,7 @@ The beta of 30 October 2026 changes most of the Holy tree. Oath of Light, Boundl
 
 - Holy has 48 points (beta: 46).
 - All talents keep their beta places. Lingering Light (C-H2) uses the free place in row 3, column 4.
-- Healing Light (C-H4) waits for a decision (see C-H4). It keeps its beta values in this layout.
+- Healing Light and Oath of Light keep their beta values. The proposal for Healing Light 10/20/30% (C-H4) is withdrawn (see Withdrawn ideas).
 
 ## C-H1. Reverence: 15/30% → 25/50%
 
@@ -57,10 +57,3 @@ The beta of 30 October 2026 changes most of the Holy tree. Oath of Light, Boundl
 - **Use (Retribution and Protection).** These specs have only two heals. After each Holy Strike, the next Holy Light has a 1.5 sec cast. This is a fast emergency heal.
 - **Limits.** Holy Light costs 660 mana. Players can still interrupt the cast. Mortal Strike decreases the heal by 50% (see Analysis, Healing, part 7).
 - **Risk.** The talent now needs 15 Holy points (the earlier proposal moved it to row 2). A Protection tank with Shieldsworn has a Holy Strike each 6 sec. See W12.
-
-## C-H4. Healing Light: 10/20/30% (on hold)
-
-- **Proposed text.** "Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 10/20/30%."
-- **State.** On hold. The beta of 30 October removed Blessing of Light, as Blessing of Light removal (C3) asked. But the beta also adds Oath of Light: the Blessing of Light bonus (+400 Holy Light, +115 Flash of Light) and +229 Holy Shock, on one target.
-- **The decision.** Healing Light 30% helps all targets. Oath of Light helps only one target. In raids, the Paladin is 18–26% below the Druid. On one tank, it is 3–12% above the Druid. The Holy rewrite decides between a larger Healing Light and a % Oath of Light.
-- **Oath of Light.** It gives a flat value. Forever talents give a % (see W27).

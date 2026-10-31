@@ -31,7 +31,7 @@ These are risks to check in tests. None of them needs a change now. A removed nu
 | W24 | Holy Shield is in Protection row 5. Holy and Retribution can take it with 20 Protection points | Monitor hybrid builds in PvP |
 | W25 | Shieldsworn: each Holy Strike lets the Paladin block spells for 6 sec. With a Holy Strike each 6 sec, the effect is always active | Monitor in PvP against casters |
 | W26 | Swift Judgement is now a second Judgement with a 1 min cooldown, at 15 Protection points. Two Judgements of Command on a stunned target give a large burst | Monitor in PvP with W6 |
-| W27 | Oath of Light gives a flat value (+400, +115, +229). Forever talents give a %. The value decreases with gear | The Holy rewrite decides (see Holy, C-H4) |
+| W27 | Oath of Light gives a flat value (+400, +115, +229). Forever talents give a %. The value decreases with gear | Decision of 31 October: Oath of Light keeps its beta version. Compare its value with gear in beta tests |
 | W28 | The tank of the beta of 30 October has 101–118% of the Warrior threat, and 120–142% with Consecration (see Beta test results) | Compare tank threat in raids. If it is too high, decrease the Righteous Fury bonus (+33%) first |
 | W29 | Unsealed Wrath has no Seal cost decrease (Twist of Light had −20%). Retribution mana can be lower in long fights | Model the Retribution mana again |
 

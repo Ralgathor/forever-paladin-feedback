@@ -1,6 +1,6 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 13 changes. The proposals use the beta trees of 30 October 2026. That beta adopts 6 earlier proposals, and makes 20 others unnecessary. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 12 changes. The proposals use the beta trees of 30 October 2026. That beta adopts 6 earlier proposals, and makes 20 others unnecessary. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same beta build as a model.
 
 **Contents**
 
@@ -36,7 +36,6 @@ This document gives talent proposals for the WoW Forever Paladin. It has 13 chan
 | C-H1 | Reverence | Holy, row 2 | 15/30% of mana regeneration during casts | 25/50% |
 | C-H2 | Lingering Light (new) | Holy, row 3 | — | 2 ranks: a critical heal adds a heal over time of 10/20% of the heal |
 | C-H3 | Infusion of Light | Holy, row 4 | Holy Shock and Flash of Light critical hits make the next Holy Light faster | All Holy Shock, Flash of Light and Holy Strike hits do this. No critical hit is necessary |
-| C-H4 | Healing Light (on hold) | Holy, row 2 | 3 ranks: 4/8/12% | 3 ranks: 10/20/30%. On hold until the decision on Oath of Light |
 | C-P1 | Redoubt | Protection, row 1 | 10% chance when you are hit: +6–30% block | The same. Each Holy Shield cast also starts it |
 | C-P5 | Shoulder the Burden (new) | Protection, row 5 | — | 50% of the threat of an ally moves to you, 3 min cooldown |
 | C-P11 | Devoted Sacrifice (new) | Protection, row 4 | — | 2 ranks: Lay on Hands drains only 75/50% of your current mana, and you take 20/40% less damage from your Hand of Sacrifice. Alternative C-P11a: the spell drains 50% for all Paladins |
