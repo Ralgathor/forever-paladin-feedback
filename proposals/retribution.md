@@ -94,3 +94,21 @@ The beta of 30 October 2026 changes most of the Retribution tree. Unsealed Wrath
 - **Result.** At fresh level 60, the mana decreases the damage by 2% in a 2 min fight and by 4% in a 5 min fight. With better gear, the mana pool is larger. From Molten Core, a Seal change after each swing is possible for 2 min.
 - **The pure average table above uses no mana limit.** In long fights, Retribution is 2–4 points lower.
 - **Spell data.** Unsealed Wrath has a Seal cost effect at 0% (wowsims spell data, spell 1310735). A −20% value, as Twist of Light had, gives +0.8% damage in a 2 min fight and +2.4% in a 5 min fight.
+
+## wowsims check
+
+- **Sim.** wowsims Forever, branch paladin/hotfix-113554-port, with the proposals as flags (models/wowsims-b2). Default gear, rotation and consumables of the Unsealed Wrath set, 3,000 iterations.
+- **Full buffs** have Mana Spring Totem, Mana Tide Totem and Atiesh. **Lean buffs** have only Gift of the Wild, Battle Shout, Kings, Might and Wisdom.
+
+| Fight | Beta | C1 | C-R4 | C1 and C-R4 | Seal cost −20% |
+| --- | --- | --- | --- | --- | --- |
+| 2 min, full buffs | 830 DPS | +4.2% | +2.4% | +6.7% | 0% |
+| 5 min, full buffs | 839 DPS | +4.0% | +2.4% | +6.6% | +0.3% |
+| 2 min, lean buffs | 609 DPS | +5.0% | +1.9% | +7.0% | +0.1% |
+| 5 min, lean buffs | 583 DPS | +5.3% | +2.0% | +7.5% | +5.2% |
+
+- **C1.** The sim gives +4.0–5.3%. The model gives +5.2%.
+- **C-R4.** The sim gives +1.9–2.4%. The model gives +0.8–1.3%. The sim has more critical hit chance from buffs and consumables.
+- **Mana.** With full buffs, the mana is empty after 5 min 28 sec. With lean buffs, it is empty after about 4 min: in a 5 min fight, Retribution has no mana for 38 sec and loses 5% damage. The model is lower (1 min 22 sec) because it has no Demonic Rune and no consumables.
+- **Seal cost −20%.** It has an effect only in long fights with lean buffs (+5.2% in 5 min).
+
