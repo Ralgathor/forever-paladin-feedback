@@ -5,6 +5,7 @@ The beta of 30 October 2026 changes most of the Protection tree. Righteous Fury 
 - A fix for crushing blows (Redoubt, C-P1). This is the largest difference between the Paladin and the Warrior.
 - A threat transfer for tank swaps and groups (Shoulder the Burden, C-P5).
 - A Lay on Hands that does not drain all the mana, and a Hand of Sacrifice that costs less health (Devoted Sacrifice, C-P11).
+- A Reckoning that works in raids: more extra attacks from blocks (Reckoning, C-P12).
 
 ## Protection layout
 
@@ -14,7 +15,7 @@ The beta of 30 October 2026 changes most of the Protection tree. Righteous Fury 
 | 2 (5) | Precision, Guardian's Favor, Sacred Duty | 7 |
 | 3 (10) | Templar's Bulwark, Improved Hammer of Justice, Shield Specialization, Toughness | 11 |
 | 4 (15) | Swift Judgement, Improved Righteous Fury, Anticipation, Devoted Sacrifice (C-P11) | 11 |
-| 5 (20) | Stoicism, Holy Shield, Reckoning, Shoulder the Burden (C-P5) | 9 |
+| 5 (20) | Stoicism, Holy Shield, Reckoning (C-P12), Shoulder the Burden (C-P5) | 9 |
 | 6 (25) | Iron Creed | 3 |
 | 7 (30) | Shieldsworn | 1 |
 
@@ -100,6 +101,29 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 | ID | Option | How it works | Precedent | Tradeoff |
 | --- | --- | --- | --- | --- |
 | C-P11a | Change the base spell (use this if Blizzard does not want the talent) | Lay on Hands drains 50% of the current mana for all Paladins. Devoted Sacrifice keeps only the Hand of Sacrifice part | Forever moves the cooldown of Improved Lay on Hands into the spell | All specs receive it with no points. There is no talent choice. Retribution raid builds also receive it |
+
+## C-P12. Reckoning: 20–100% after a block, 4 sec limit
+
+- **Proposed text.** "Gives you a 20/40/60/80/100% chance after Blocking or after receiving a non-periodic critical strike to gain an extra attack. Stores up to 4 extra attacks. Cannot occur from Blocks more than once every 4 sec."
+- **Beta text.** "Gives you a 8/16/24/32/40% chance after Blocking and a 20/40/60/80/100% chance after receiving a non-periodic critical strike to gain an extra attack. Stores up to 4 extra attacks. Cannot occur from Blocks more than once every 1.5 sec."
+- **Change.** The block chance is now the same as the critical hit chance: 20–100%. The block limit is 4 sec (beta: 1.5 sec). The critical hit trigger does not change. The stored attacks hit with your next melee swing, as in the beta.
+- **Problem.** At the Defense cap, a raid boss cannot make critical hits on the tank. Thus, only the block trigger works in raids. At 40%, it gives about 5 extra attacks each min.
+- **Why a 4 sec limit.** With 100% and the 1.5 sec limit, Redoubt (C-P1) gives 15 extra attacks each min. The threat is then 15% above the Warrior. With the 4 sec limit, the value stays almost the same with and without Redoubt.
+- **Why the next swing.** Holy Strike already triggers Shieldsworn, Iron Creed, Sacred Arbiter and your Seal (C1). A release with Holy Strike puts too many effects on one ability.
+- **Ranks.** Each rank increases the chance. The limit does not change with the rank, as with other proc talents.
+
+**Value (wowsims, beta of 30 October, 2 min, see Protection, wowsims check)**
+
+| Case | Extra attacks each min | Threat each sec |
+| --- | --- | --- |
+| Beta | 4.9 | 918 |
+| Reckoning (C-P12) | 7.8 | 940 (+2%) |
+| Beta with Redoubt (C-P1) | 6.3 | 975 |
+| Reckoning (C-P12) with Redoubt (C-P1) | 9.3 | 1,002 (+3%) |
+
+- Damage taken does not change. The 5 min values are the same (±0.5%).
+- **Other tests.** Block, dodge and parry at 40% with a 1.5 sec limit: 7.4 extra attacks each min, +2% threat. Block at 100% with a 1.5 sec limit: 11.1 each min, +6% threat (+8% with Redoubt).
+- **PvP.** The critical hit trigger and the storage do not change. Thus, the Classic Reckoning bomb stays as in the beta. Blocks give a maximum of 1 charge each 4 sec (see Watch list, W6).
 
 ## wowsims check
 
