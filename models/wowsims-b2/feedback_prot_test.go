@@ -30,6 +30,7 @@ func TestFeedbackRun(t *testing.T) {
 		Buffs:         core.FullTankIndividualBuffs,
 		Profession1:   proto.Profession_Engineering, Profession2: proto.Profession_Enchanting,
 		DistanceFromTarget: 5,
+		HealingModel:       &proto.HealingModel{BurstWindow: 6},
 		InFrontOfTarget:    true,
 	}
 	enc := core.MakeSingleTargetEncounter(5)
@@ -68,6 +69,9 @@ func TestFeedbackRun(t *testing.T) {
 				extra += float64(tm.Casts)
 			}
 		}
+	}
+	if u.Tmi != nil {
+		fmt.Printf("TMI avg=%.2f std=%.2f\n", u.Tmi.Avg, u.Tmi.Stdev)
 	}
 	fmt.Printf("EXTRA per min=%.2f\n", extra/3000/(dur/60))
 	all := casts

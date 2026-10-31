@@ -20,7 +20,7 @@ for b in full lean; do for d in 120 180 300; do for p in "" C1 BZ C1,BZ UW20 C1,
 done; done; done
 cd ../protection
 go test -tags with_db -c -o /tmp/prottest .
-for d in 120 300; do for p in "" CP1 CP1,RD20 RD20; do
+for d in 120 300; do for p in "" CP1 CP1,RD20 RD20 NOTOUGH CP1,NOTOUGH CP1,RK100,RKICD4 CP1,NOTOUGH,RK100,RKICD4; do
   FEEDBACK_DUR=$d PROPOSE=$p /tmp/prottest -test.run TestFeedbackRun -test.v | grep RESULT
 done; done
 cd ../../warrior/protection
