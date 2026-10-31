@@ -25,7 +25,7 @@ The beta of 30 October 2026 changes most of the Holy tree. Oath of Light, Boundl
 - **Model.** Meditation (Priest), Reflection (Druid) and Mindfulness (Shaman) give 50%.
 - **Why.** In raids, the Paladin is still 18–26% below the Druid. The best cast plan is almost only Flash of Light, because mana is the limit (see Beta test results).
 - **Illumination is not sufficient.** Other healers have a mana return in addition to their 50% (Litany of Light, Water Shield, Mana Tide Totem). Forever also decreased Illumination to 50% of the base cost.
-- **Model (beta of 30 October, 715 healing power, 3/5/10 min).** In raids, the Paladin is 22/18/19% below the Druid (beta: 26/23/26%). On one tank, it is 13/17/12% above the Druid (beta: 8/10/3%). This is below the 20% limit of W14.
+- **Result (beta of 30 October, 715 healing power, 3/5/10 min).** In raids, the Paladin is 22/18/19% below the Druid (beta: 26/23/26%). On one tank, it is 13/17/12% above the Druid (beta: 8/10/3%). This is below the 20% limit of W14.
 - **If it is too strong:** use 20/40%.
 
 ## C-H3. Infusion of Light: no critical hit necessary, Holy Strike added
