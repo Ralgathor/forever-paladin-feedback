@@ -221,7 +221,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
     <button id="resetAll" type="button">Reset all</button>
   </section>
 
-  <div class="mode-note" id="modeNote" hidden><b>Proposed trees.</b> A purple tag (C-H3, C-P5…) marks a changed or new talent. Builds made here do not load in the beta trees. The proposals change the beta trees of 30 October 2026. This is version 6 of the proposed trees (31 October 2026). A version 1, 2, 3, 4 or 5 code opens on its page.</div>
+  <div class="mode-note" id="modeNote" hidden><b>Proposed trees.</b> A purple tag (C-P1, C-P5…) marks a changed or new talent. Builds made here do not load in the beta trees. The proposals change the beta trees of 30 October 2026. This is version 6 of the proposed trees (31 October 2026). A version 1, 2, 3, 4 or 5 code opens on its page.</div>
 
   <div class="trees" id="trees"></div>
 
@@ -322,7 +322,6 @@ const RAW_BETA=[
 // Proposed changes: patches to RAW_BETA talents, keyed by talent key. "replace" swaps a talent out for a new one in the same spot.
 // Row layout: fill each row from column 1; a row with two slots is centered (columns 2 and 3); a prerequisite arrow counts as a slot.
 const PROPOSED={
- iol:{pid:"C-H3",rt:["Your Holy Shock and Flash of Light spells and your Holy Strike hits reduce the cast time of your next Holy Light cast within 15 sec by 0.5 sec.","Your Holy Shock and Flash of Light spells and your Holy Strike hits reduce the cast time of your next Holy Light cast within 15 sec by 1 sec."]},
  red:{pid:"C-P1",rt:["Damaging melee attacks against you have a 10% chance to increase your chance to block by 6%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 12%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 18%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 24%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 30%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect."]},
  sanj:{pid:"C-R3",rt:["Your Judgement ability returns 20% of the Mana cost of the judged seal.","Your Judgement ability returns 40% of the Mana cost of the judged seal.","Your Judgement ability returns 60% of the Mana cost of the judged seal."]},
  gf:{pid:null,rt:["Reduces the cooldown of your Hand of Protection by 1 min and increases the duration of your Hand of Freedom by 3 sec.","Reduces the cooldown of your Hand of Protection by 2 min and increases the duration of your Hand of Freedom by 6 sec."]}
@@ -334,7 +333,6 @@ const PROPOSED_NEW=[
 ];
 // Rows for the proposals table: [id, talent key in proposed trees, talent, tree, today, proposed]
 const PROPOSALS=[
- ["C-H3", "iol", "Infusion of Light", "Holy, row 4", "Holy Shock and Flash of Light critical hits make the next Holy Light faster", "All Holy Shock, Flash of Light and Holy Strike hits do this. No critical hit is necessary"],
  ["C-P1", "red", "Redoubt", "Protection, row 1", "10% chance when you are hit: +6–30% block", "The same. Each Holy Shield cast also starts it"],
  ["C-P5", "rdef", "Shoulder the Burden (new)", "Protection, row 5", "—", "50% of the threat of an ally moves to you, 3 min cooldown"],
  ["C-P11", "dsac", "Devoted Sacrifice (new)", "Protection, row 4", "—", "2 ranks: Lay on Hands drains only 75/50% of your current mana, and you take 20/40% less damage from your Hand of Sacrifice"],
@@ -564,8 +562,7 @@ ${dn("A save replaced Kings or Might from the same Paladin, and you had to cast 
 
 <p class="cat"><b>Holy</b></p>
 <ul>
-<li>${t("iol","Infusion of Light")}: A critical hit is no longer necessary (was Holy Shock and Flash of Light critical hits only). Holy Strike hits are a new trigger. ${g("C-H3")}
-${dn("No talent reduces the cast time of Holy Light in all cases. Divine Fury, Naturalist and Improved Healing Wave give −0.5 sec to the large heal of their class. Hybrids also have a fast emergency heal now: after each Holy Strike, Holy Light has a 1.5 sec cast.")}</li>
+<li>No talent change. The beta meets the design goal of Holy: the best single-target healer. Raid healing is not the goal.</li>
 </ul>
 
 <p class="cat"><b>Protection</b></p>
@@ -615,8 +612,7 @@ const CMP={
 heal:[
  {t:"Raid healing per sec",c:"715 healing power, 3 min",b:"629",p:"No proposal",big:1,bars:[["Priest",948,"o"],["Druid",855,"o"],["Shaman",709,"o"],["Paladin, beta",629,"b"]],s:"26% below the Druid and 11% below the Shaman. This is accepted: Holy is the best single-target healer, not the best raid healer.",d:"Beta of 18 October: 616. Mana is the limit: the best cast plan is almost only Flash of Light."},
  {t:"One tank, healing per sec",c:"715 healing power, 3 min, Oath of Light on the tank",b:"732",p:"Not modeled yet",big:1,bars:[["Paladin, beta",732,"b"],["Druid",681,"o"],["Shaman",607,"o"],["Priest",606,"o"]],s:"First of the four healers: 3–12% above the Druid.",d:"If Holy Power gives a 175% critical heal (not 225%), the Paladin is 7% below to 1% above the Druid. Maximum raw healing per sec: Paladin 1,536, other healers 1,278–1,320."},
- {t:"Recovery after a large hit",c:"First 3–6 sec, against the Druid",b:"11–18% above with Divine Favor, 2% below with short cooldowns",p:"Not modeled yet",ids:["C-H3"],s:"Infusion of Light (C-H3) makes Holy Light fast after each Flash of Light, not only after a critical heal."},
- {t:"Large heal",b:"Only a critical heal makes Holy Light faster",p:"Flash of Light, then a 1.5 sec Holy Light",ids:["C-H3"],s:"Each other healer has a talent for −0.5 sec on its large heal."},
+ {t:"Recovery after a large hit",c:"First 3–6 sec, against the Druid",b:"11–18% above with Divine Favor, 2% below with short cooldowns",p:"No proposal",s:"The beta meets the single-target goal with Divine Favor."},
  {t:"Lay on Hands at full mana",b:"Drains all 4,416 mana",p:"Drains 2,208 (50%)",ids:["C-P11"],s:"With Devoted Sacrifice 2/2, the mana is back after 1 min 38 sec (was 3 min 15 sec)."}
 ],
 tank:[
@@ -633,7 +629,6 @@ dps:[
  {t:"Sanctified Judgement, rank 1",c:"Seal of Fury, 8.5 Judgements each min",b:"1.9 mana per sec",p:"5.7 mana per sec",ids:["C-R3"],s:"Each rank adds the same value: 40 mana for each Judgement."}
 ],
 pvp:[
- {t:"Fast heal for Retribution and Protection",b:"Only after a critical heal",p:"A 1.5 sec Holy Light after each Holy Strike",ids:["C-H3"],s:"It needs 15 Holy points. See W12."},
  {t:"Saves after Lay on Hands",b:"0 mana: no saves",p:"Half of the mana stays",ids:["C-P11"],s:"Divine Shield, Hand of Protection and Hammer of Justice stay available. See W18."},
  {t:"Critical Holy Strike or Judgement",b:"2 times the damage",p:"2.2 times the damage",ids:["C-R4"],s:"See W6."}
 ]};
