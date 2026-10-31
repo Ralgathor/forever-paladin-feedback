@@ -30,6 +30,7 @@ func TestFeedbackRun(t *testing.T) {
 		Buffs:         core.FullTankIndividualBuffs,
 		Profession1:   proto.Profession_Engineering, Profession2: proto.Profession_Blacksmithing,
 		DistanceFromTarget: 0,
+		HealingModel:       &proto.HealingModel{BurstWindow: 6},
 		InFrontOfTarget:    true,
 	}
 	enc := core.MakeSingleTargetEncounter(5)
@@ -60,6 +61,9 @@ func TestFeedbackRun(t *testing.T) {
 	}
 	all := casts
 	_ = hits
+	if u.Tmi != nil {
+		fmt.Printf("TMI avg=%.0f\n", u.Tmi.Avg)
+	}
 	fmt.Printf("RESULT dur=%.0f propose=%q tps=%.1f dps=%.1f dtps=%.1f swings=%.1f hit=%.1f%% miss=%.1f%% dodge=%.1f%% parry=%.1f%% block=%.1f%% crit=%.1f%% crush=%.1f%%\n",
 		dur, os.Getenv("PROPOSE"), u.Threat.Avg, u.Dps.Avg, u.Dtps.Avg, all/3000, 100*hits/all, 100*miss/all, 100*dodge/all, 100*parry/all,
 		100*block/all, 100*crits/all, 100*crush/all)

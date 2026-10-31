@@ -15,7 +15,7 @@ The beta of 30 October 2026 changes the three trees. These proposals are now unn
 | Merciful Light: Holy Shock +50/100% at or below 35% health (C-H5) | After a large hit, the beta Paladin with Divine Favor is now 11–18% above the Druid. Boundless Light uses the place next to Holy Shock |
 | Divine Grace: Divine Favor cooldown −30/60 sec (C-H6) | On one tank, the beta Paladin is now 3–12% above the Druid. Divine Favor is in row 3, column 1: no place for the arrow |
 | Iron Creed while Righteous Fury is active (C-P2) | With Shieldsworn, Holy Strike has a 6 sec cooldown, the same as the Iron Creed duration. Thus, Iron Creed is always active |
-| Toughness and Divine Strength: removed, Vindication with 5 ranks (C-P3) | The beta fills Protection row 1 with Divine Intellect and moves Toughness to row 3. Vindication has no Attack Power buff now |
+| Toughness and Divine Strength: removed, Vindication with 5 ranks (C-P3) | The beta fills Protection row 1 with Divine Intellect and moves Toughness to row 3. Vindication has no Attack Power buff now. Toughness removal (C-P13) now removes only Toughness, for the tree of 30 October |
 | Improved Righteous Fury: removed (C-P4) | It depended on the Iron Creed change (C-P2) |
 | Reckoning: charges from block, dodge and parry, released by Holy Strike (C-P6) | The beta tank has 101% of the Warrior threat with the same gear. Reckoning is not necessary for threat |
 | Reach of Law: Judgement range +5/10 yards (C-P7) | It requires Swift Judgement. Swift Judgement is now a second Judgement. No free place before row 6. The beta tank threat is high, thus the first pull is not a problem |

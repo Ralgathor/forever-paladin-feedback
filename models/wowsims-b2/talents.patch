@@ -11,7 +11,7 @@ index f3d252f74..299b085e9 100644
  
  // The abilities a talent point buys.
 diff --git a/sim/paladin/talents_protection.go b/sim/paladin/talents_protection.go
-index ca780f1be..a1cd19a52 100644
+index ca780f1be..901231639 100644
 --- a/sim/paladin/talents_protection.go
 +++ b/sim/paladin/talents_protection.go
 @@ -1,6 +1,8 @@
@@ -23,6 +23,15 @@ index ca780f1be..a1cd19a52 100644
  	"github.com/wowsims/forever/sim/core"
  	"github.com/wowsims/forever/sim/core/dbcenums"
  	"github.com/wowsims/forever/sim/core/spelldata"
+@@ -51,7 +53,7 @@ func (paladin *Paladin) applyDivineIntellect() {
+ 
+ // Toughness - Increases your armor value from items by 2/4/6/8/10%.
+ func (paladin *Paladin) applyToughness() {
+-	if paladin.Talents.Toughness == 0 {
++	if paladin.Talents.Toughness == 0 || proposeFlag("NOTOUGH") {
+ 		return
+ 	}
+ 
 @@ -192,28 +194,54 @@ func (paladin *Paladin) applyReckoning() {
  	rank := spellData.ReckoningTriggered.Highest()
  	blockChance := spellData.Reckoning.FractionAt(paladin.Talents.Reckoning)

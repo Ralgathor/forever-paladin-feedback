@@ -6,6 +6,7 @@ The beta of 30 October 2026 changes most of the Protection tree. Righteous Fury 
 - A threat transfer for tank swaps and groups (Shoulder the Burden, C-P5, a baseline spell).
 - A Lay on Hands that does not drain all the mana, and a Hand of Sacrifice that costs less health (Devoted Sacrifice, C-P11).
 - A Reckoning that works in raids: more extra attacks from blocks (Reckoning, C-P12).
+- No talent that gives only armor (Toughness removal, C-P13). Devoted Sacrifice takes its place.
 
 ## Protection layout
 
@@ -13,14 +14,14 @@ The beta of 30 October 2026 changes most of the Protection tree. Righteous Fury 
 | --- | --- | --- |
 | 1 (0) | Divine Intellect, Redoubt (C-P1) | 10 |
 | 2 (5) | Precision, Guardian's Favor, Sacred Duty | 7 |
-| 3 (10) | Templar's Bulwark, Improved Hammer of Justice, Shield Specialization, Toughness | 11 |
-| 4 (15) | Swift Judgement, Improved Righteous Fury, Anticipation, Devoted Sacrifice (C-P11) | 11 |
+| 3 (10) | Templar's Bulwark, Improved Hammer of Justice, Shield Specialization, Devoted Sacrifice (C-P11) | 8 |
+| 4 (15) | Swift Judgement, Improved Righteous Fury, Anticipation | 9 |
 | 5 (20) | Stoicism, Holy Shield, Reckoning (C-P12) | 8 |
 | 6 (25) | Iron Creed | 3 |
 | 7 (30) | Shieldsworn | 1 |
 
-- Protection has 51 points (beta: 49). The Warrior Protection tree has 50.
-- All talents keep their beta places. Devoted Sacrifice (C-P11) uses the free place in row 4, column 4.
+- Protection has 46 points (beta: 49). The Warrior Protection tree has 50.
+- Toughness removal (C-P13) deletes Toughness (row 3, column 4). Devoted Sacrifice (C-P11) takes its place. All other talents keep their beta places. Row 4, column 4 stays free.
 - Row 2, column 3 is not free. The arrow from Redoubt to Shield Specialization passes through it.
 
 ## C-P1. Redoubt: Holy Shield also starts it
@@ -47,10 +48,10 @@ The beta of 30 October 2026 changes most of the Protection tree. Righteous Fury 
 - **Other specs.** Holy and Retribution also have the spell. The threat goes to the caster, not to a tank. Thus, a Holy or Retribution Paladin only takes the boss with it. The risk is low.
 - **No change.** Righteous Fury, Seal of Fury and its absorb shield stay baseline spells.
 
-## C-P11. Devoted Sacrifice (new talent): row 4, column 4
+## C-P11. Devoted Sacrifice (new talent): row 3, column 4
 
 - **Proposed text.** "Your Lay on Hands drains only 75/50% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 20/40%." 2 ranks.
-- **Position.** Row 4, column 4, a free place.
+- **Position.** Row 3, column 4, the place of Toughness (Toughness removal, C-P13).
 - **Theme.** The Paladin gives its own resources to save others. Lay on Hands costs mana, and Hand of Sacrifice costs health. Devoted Sacrifice makes the two spells cost less.
 - **Lay on Hands.** The spell keeps its heal, its 20 min cooldown and its mana for the target.
 - **Problem.** Lay on Hands drains all the mana of the Paladin (Forever spellbook, all ranks). Forever decreases the cooldown from 1 hour to 20 min. Thus, the Paladin can use it about one time for each boss. But the drain is largest when the mana is full, early in a fight. Thus, Paladins use it only when their mana is already low.
@@ -59,7 +60,7 @@ The beta of 30 October 2026 changes most of the Protection tree. Righteous Fury 
 - **Hand of Sacrifice.** The pool does not change. The target is still protected from up to 825 damage (Hand of Sacrifice, C4). Only the damage that the Paladin takes decreases: about 660 at 1/2 and 495 at 2/2. A tank takes the damage of an ally in addition to the boss damage. Thus, without Devoted Sacrifice (C-P11), a tank uses Hand of Sacrifice only when its health is high.
 - **Why 20/40%.** At rank 1, the drain is 75%. Lay on Hands is then more efficient than the usual heals only below 21% mana. Thus, the Hand of Sacrifice part gives the value of rank 1. At 40%, the Paladin still takes more than half of the damage. With Hand of Sacrifice each 15 sec (C4), 2/2 removes about 22 damage per sec from the raid.
 - **Model.** Improved Health Funnel (Warlock) and Improved Mend Pet (Hunter) are 2-rank talents for save spells. Sacred Duty also gives two effects in one talent.
-- **Cost for Holy.** Holy takes it with 17 Protection points, for example Divine Intellect 5, Redoubt 3, Guardian's Favor 2, Sacred Duty 2, Improved Hammer of Justice 3 and Devoted Sacrifice 2. In the beta of 18 October, it cost 12 points.
+- **Cost for Holy.** Holy takes it with 12 Protection points, for example Divine Intellect 5, Guardian's Favor 2, Sacred Duty 2, Precision 1 and Devoted Sacrifice 2. Holy keeps 39 points. Holy then removes only damage talents: Improved Seals and Consecrated Ground. In row 4, the cost was 17 points.
 - **PvP.** Divine Shield already stops all the damage that moves (W20). Thus, the Hand of Sacrifice part does not change the Divine Shield risk.
 - **Design rule 1.** Lay on Hands and Hand of Sacrifice are not buffs (Hands, C5). Thus, Devoted Sacrifice (C-P11) does not break the rule.
 
@@ -125,6 +126,30 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 - **Other tests.** Block, dodge and parry at 40% with a 1.5 sec limit: 7.4 extra attacks each min, +2% threat. Block at 100% with a 1.5 sec limit: 11.1 each min, +6% threat (+8% with Redoubt).
 - **PvP.** The critical hit trigger and the storage do not change. Thus, the Classic Reckoning bomb stays as in the beta. Blocks give a maximum of 1 charge each 4 sec (see Watch list, W6).
 
+## C-P13. Toughness removal
+
+- **Change.** Remove Toughness (row 3, column 4, 5 ranks: +2–10% armor from items). Devoted Sacrifice (C-P11) takes its place.
+- **Why.** Toughness gives only a stat. The Protection Warrior of Forever has no armor talent.
+- **Balance with Redoubt (C-P1).** With Redoubt (C-P1), the Paladin takes almost the same damage as the Warrior and has a better TMI. Without Toughness, the Paladin is near the Warrior again (see the table).
+- **Druid.** Thick Hide (Druid) gives armor. But the Druid tank cannot block, and armor is its main defense.
+- **Holy and Retribution.** These specs do not take Toughness. Thus, they lose nothing. Holy can now take Devoted Sacrifice (C-P11) with 12 Protection points.
+- **Tank points.** Protection has 46 points. The tank has 5 more points for the other trees, for example Retribution.
+- **C-P3.** Toughness and Divine Strength removal (C-P3) is withdrawn. C-P13 is a new proposal for the tree of 30 October. It removes only Toughness.
+
+**wowsims, 2 min, 3,000 iterations, TMI with a 6 sec window (a lower TMI is better)**
+
+| Case | Damage taken each sec | TMI |
+| --- | --- | --- |
+| Paladin, beta | 326 | 56.0 |
+| Paladin, beta, no Toughness | 332 (+2%) | 57.3 (+2.5%) |
+| Paladin, Redoubt (C-P1) | 281 | 43.4 |
+| Paladin, C-P1 and C-P13 | 287 (+2%) | 44.5 (+2.5%) |
+| Paladin, C-P1, C-P12 and C-P13 | 286 | 44.3 |
+| Warrior, pre-raid | 277 | 46 |
+
+- Threat does not change: 975 each sec with C-P1, with and without Toughness.
+- 3 min fights give the same result: damage taken +1.9%, TMI +2.5%.
+
 ## wowsims check
 
 - **Sim.** wowsims Forever, branch paladin/hotfix-113554-port, with the proposals as flags (models/wowsims-b2). The default Protection set: default tank gear, rotation and consumables, talents 14/32/5 with Redoubt 5/5. A level 63 boss attacks the Paladin from the front. Full buffs, 3,000 iterations, 2 min.
@@ -140,5 +165,6 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 - **Result.** With Redoubt (C-P1), the Paladin takes almost the same damage as the Warrior (+2%). The beta Paladin takes 18% more. With 4–20%, 4.8% of the attacks are still crushing blows. Thus, keep Redoubt at 6–30% with the trigger.
 - **Threat.** More blocks give more Holy Shield damage. Thus, threat increases by 6%.
 - **5 min fights.** The results are the same: crushing blows 11.9% → 1.1%, damage taken −13%.
+- **Toughness removal (C-P13).** Without Toughness, damage taken increases by 2% (see Toughness removal, C-P13).
 - **Not in the sim.** Shoulder the Burden (C-P5) and Devoted Sacrifice (C-P11) act in raid situations that the sim does not have: a threat transfer between tanks, and Lay on Hands. Their values stay as in Analysis.
 
