@@ -33,6 +33,7 @@ The beta of 30 October 2026 changes the three trees. These proposals are now unn
 | Lingering Light: a critical heal adds a heal over time of 10/20% (C-H2) | Holy Power makes each critical heal 225%. With Reverence 50% (C-H1), Lingering Light 2/2 gives one tank 20–25% above the Druid, past the 20% limit (W14). It adds the same % in raids and on a tank. Thus, it cannot close the raid gap alone |
 | Healing Light: 10/20/30% (C-H4) | Oath of Light keeps its beta version (decision of 31 October). It gives the Blessing of Light bonus on one ally. Healing Light keeps 4/8/12% |
 | Burning Zeal: +10/20% critical damage bonus for Seals, Judgements and Holy Strike (C-R4) | Withdrawn by decision of 31 October. It gave +0.8–1.3% damage (model) and +1.9–2.4% (wowsims). With Holy Strike Seal trigger (C1) only, Retribution is at the hybrid target until Blackwing Lair and 1 point below it in Naxxramas (94%). Retribution keeps the 44 points of the beta |
+| Boundless Light: also +15/30% critical chance for Flash of Light | Withdrawn by decision of 31 October. Flash of Light is almost all raid casts. Raid healing +36% at 5 min, above the Druid and the Shaman (+15% version: +18%). The tank healing does not change, because the tank has the Oath of Light |
 
 ## Earlier withdrawn ideas
 
