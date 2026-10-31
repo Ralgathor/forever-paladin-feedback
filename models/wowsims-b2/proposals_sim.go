@@ -5,6 +5,7 @@ import (
 	"strings"
 
 	"github.com/wowsims/forever/sim/core"
+	"github.com/wowsims/forever/sim/core/stats"
 )
 
 // Proposal flags for the feedback checks (PROPOSE=C1,BZ,UW20). Off by default.
@@ -53,5 +54,22 @@ func (paladin *Paladin) applySimProposals() {
 			Kind:       core.SpellMod_PowerCost_Pct,
 			FloatValue: -0.20,
 		})
+	}
+	// C-P1: each Holy Shield cast also starts Redoubt (full charges). RD20: Redoubt 4-20% (5/5 = 20%).
+	if redoubt := paladin.GetAura("Redoubt" + paladin.Label); redoubt != nil {
+		if proposeFlag("RD20") {
+			redoubt.AttachStatBuff(stats.BlockPercent, -10)
+		}
+		if proposeFlag("CP1") {
+			paladin.MakeProcTriggerAura(core.ProcTrigger{
+				Name:           "C-P1 Holy Shield starts Redoubt" + paladin.Label,
+				Callback:       core.CallbackOnCastComplete,
+				ClassSpellMask: SpellMaskHolyShield,
+				Handler: func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
+					redoubt.Activate(sim)
+					redoubt.SetStacks(sim, redoubt.MaxStacks)
+				},
+			})
+		}
 	}
 }
