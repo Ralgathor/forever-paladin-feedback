@@ -77,7 +77,7 @@ func (paladin *Paladin) applySimProposals() {
 
 // C-P6: Reckoning charges from blocks, dodges and parries (20-100%, once each 4 sec) and from critical hits
 // taken (no limit). Stores up to 4. Holy Strike releases up to 2 stored extra attacks; auto attacks spend none.
-func (paladin *Paladin) applyReckoningCP6(stored *core.Aura, gain func(*core.Simulation, *core.Spell, *core.SpellResult), tag int32, newTriggers bool) {
+func (paladin *Paladin) applyReckoningCP6(stored *core.Aura, gain func(*core.Simulation, *core.Spell, *core.SpellResult), tag int32, newTriggers bool, release bool) {
 	chance := 0.20 * float64(paladin.Talents.Reckoning)
 	if newTriggers {
 		paladin.MakeProcTriggerAura(core.ProcTrigger{
@@ -95,6 +95,9 @@ func (paladin *Paladin) applyReckoningCP6(stored *core.Aura, gain func(*core.Sim
 			ProcChance: chance,
 			Handler:    gain,
 		})
+	}
+	if !release {
+		return
 	}
 	var extraAttack *core.Spell
 	paladin.MakeProcTriggerAura(core.ProcTrigger{
