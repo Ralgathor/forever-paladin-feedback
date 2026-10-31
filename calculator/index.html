@@ -329,7 +329,6 @@ const PROPOSED={
 const PROPOSED_NEW=[
  {pid:"C-P11",tree:"prot",key:"dsac",name:"Devoted Sacrifice",tier:4,col:4,ranks:2,rt:["Your Lay on Hands drains only 75% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 20%.","Your Lay on Hands drains only 50% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 40%."],req:null,status:"N",info:""},
  {pid:"C-P5",tree:"prot",key:"rdef",name:"Shoulder the Burden",tier:5,col:4,ranks:1,rt:["You shoulder the burden of a friendly party or raid member, transferring 50% of their threat against all enemies to you."],req:null,status:"N",info:"45 Mana · 30 yd range · Instant · 3 min cooldown"},
- {pid:"C-R4",tree:"ret",key:"bz",name:"Burning Zeal",tier:5,col:4,ranks:2,rt:["Increases the critical strike damage bonus of your Seals, Judgements and Holy Strike by 10%.","Increases the critical strike damage bonus of your Seals, Judgements and Holy Strike by 20%."],req:null,status:"N",info:""}
 ];
 // Rows for the proposals table: [id, talent key in proposed trees, talent, tree, today, proposed]
 const PROPOSALS=[
@@ -337,7 +336,6 @@ const PROPOSALS=[
  ["C-P5", "rdef", "Shoulder the Burden (new)", "Protection, row 5", "—", "50% of the threat of an ally moves to you, 3 min cooldown"],
  ["C-P11", "dsac", "Devoted Sacrifice (new)", "Protection, row 4", "—", "2 ranks: Lay on Hands drains only 75/50% of your current mana, and you take 20/40% less damage from your Hand of Sacrifice"],
  ["C-R3", "sanj", "Sanctified Judgement", "Retribution, row 2", "33/66/100% chance to return 20/40/60% of the Seal cost", "100% chance at all ranks. The return is 20/40/60% of the Seal cost"],
- ["C-R4", "bz", "Burning Zeal (new)", "Retribution, row 5", "—", "2 ranks: +10/20% critical damage bonus for Seals, Judgements and Holy Strike"]
 ];
 const BASELINE=[
  ["C1", "Holy Strike", "Triggers Seal of Light, Justice and Wisdom only", "Triggers your active Seal the same as a melee attack. Seal of Command keeps its usual chance (7 procs each minute)"],
@@ -579,8 +577,6 @@ ${dn("The beta of 30 October removed Improved Seal of Fury, as this proposal ask
 <ul>
 <li>${t("sanj","Sanctified Judgement")}: The 20/40/60% mana return now occurs on each Judgement (was a 33/66/100% chance). ${g("C-R3")}
 ${dn("Each rank increases the chance and the return. Thus, ranks 1 and 2 give almost no mana. Master of Elements also increases only the return. At 3/3, the return does not change.")}</li>
-<li>New Talent: ${t("bz","Burning Zeal")} (Row 5, Column 4, 2 ranks): Increases the critical strike damage bonus of your Seals, Judgements and Holy Strike by 10/20%. ${g("C-R4")}
-${dn("Retribution damage increases less with gear than Fury damage. Critical strike chance increases with gear. Impale and Ruin increase the critical damage bonus in the same way. The values need a new model with Unsealed Wrath.")}</li>
 </ul>
 
 <p class="cat"><b>Adopted in the beta of 30 October 2026</b></p>
@@ -624,14 +620,13 @@ tank:[
 ],
 dps:[
  {t:"DPS on one boss",c:"wowsims test runs, fresh level 60",b:"848",p:"About 892 (+5.2%)",big:1,ids:["C1"],s:"+3% against the beta of 18 October (824). Beta: 93% of the pure average. With Holy Strike Seal trigger: 98%.",d:"Unsealed Wrath triggers only on auto attacks. Thus, Holy Strike triggers only the active Seal."},
- {t:"DPS with better gear",c:"Naxxramas, % of the pure average",b:"89%",p:"95% (with Holy Strike Seal trigger and Burning Zeal)",ids:["C1","C-R4"],s:"Burning Zeal: +0.8% at fresh level 60, +1.3% in Naxxramas. The fixed base values of the Seals, Judgement and Holy Strike did not change."},
+ {t:"DPS with better gear",c:"Naxxramas, % of the pure average",b:"89%",p:"94% (with Holy Strike Seal trigger)",ids:["C1"],s:"At or above the 95% target until Blackwing Lair. The fixed base values of the Seals, Judgement and Holy Strike did not change."},
  {t:"Mana with Unsealed Wrath",c:"Fresh level 60, a Seal change after each swing",b:"Empty after 1 min 22 sec",p:"No proposal",s:"Fewer Seal changes: −2% damage in a 2 min fight, −4% in a 5 min fight.",d:"Unsealed Wrath has no Seal cost decrease (Twist of Light had −20%)."},
  {t:"Holy Strike",b:"No Seal of Command, Righteousness or Fury",p:"Triggers your active Seal",ids:["C1"]},
  {t:"Sanctified Judgement, rank 1",c:"Seal of Fury, 8.5 Judgements each min",b:"1.9 mana per sec",p:"5.7 mana per sec",ids:["C-R3"],s:"Each rank adds the same value: 40 mana for each Judgement."}
 ],
 pvp:[
  {t:"Saves after Lay on Hands",b:"0 mana: no saves",p:"Half of the mana stays",ids:["C-P11"],s:"Divine Shield, Hand of Protection and Hammer of Justice stay available. See W18."},
- {t:"Critical Holy Strike or Judgement",b:"2 times the damage",p:"2.2 times the damage",ids:["C-R4"],s:"See W6."}
 ]};
 function renderCompare(role){
   const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");

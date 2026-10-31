@@ -1,6 +1,6 @@
 # Retribution
 
-The beta of 30 October 2026 changes most of the Retribution tree. Unsealed Wrath replaces Twist of Light. Conviction now applies to all spells and attacks. Two-Handed Weapon Specialization is now in row 4. In wowsims, Retribution has +3% damage against the beta of 18 October (see Beta test results). These proposals connect Holy Strike to the Seals, make Sanctified Judgement useful at each rank, and help Retribution in late raids.
+The beta of 30 October 2026 changes most of the Retribution tree. Unsealed Wrath replaces Twist of Light. Conviction now applies to all spells and attacks. Two-Handed Weapon Specialization is now in row 4. In wowsims, Retribution has +3% damage against the beta of 18 October (see Beta test results). These proposals connect Holy Strike to the Seals and make Sanctified Judgement useful at each rank.
 
 ## Retribution layout
 
@@ -10,12 +10,12 @@ The beta of 30 October 2026 changes most of the Retribution tree. Unsealed Wrath
 | 2 (5) | Improved Judgement, Conviction, Sanctified Judgement (C-R3) | 8 |
 | 3 (10) | Vindication, Unyielding Faith, Seal of Command, Pursuit of Justice | 8 |
 | 4 (15) | Eye for an Eye, Sacred Arbiter, Two-Handed Weapon Specialization | 6 |
-| 5 (20) | Turn Evil, Repentance, Vengeance, Burning Zeal (C-R4) | 8 |
+| 5 (20) | Turn Evil, Repentance, Vengeance | 6 |
 | 6 (25) | Champion of the Light | 5 |
 | 7 (30) | Unsealed Wrath | 1 |
 
-- Retribution has 46 points (beta: 44).
-- All talents keep their beta places. Burning Zeal (C-R4) uses the free place in row 5, column 4.
+- Retribution has 44 points, as in the beta.
+- All talents keep their beta places.
 - Row 4, column 3 is not free. The arrow from Seal of Command to Vengeance passes through it.
 
 ## C1. Holy Strike triggers your Seal (spell change)
@@ -47,35 +47,20 @@ The beta of 30 October 2026 changes most of the Retribution tree. Unsealed Wrath
 - **Each point has the same value.** Each rank adds 40 mana for each Judgement. In the beta, rank 1 adds 13 and rank 3 adds 67.
 - **Risk.** Row 2 needs only 5 Retribution points. A 6-point dip (Benediction 5, Sanctified Judgement 1) gives 5.7 MPS (beta: 1.9). Reverence gives 10.3 MPS for 2 points. Thus, the 1-point rank is not too strong.
 
-## C-R4. Burning Zeal (new talent): row 5, column 4, 2 ranks
-
-- **Proposed text.** "Increases the critical strike damage bonus of your Seals, Judgements and Holy Strike by 10/20%."
-- **Model.** Impale (Warrior) and Ruin (Warlock) increase the critical damage bonus. Both are Classic talents. Burning Zeal has the ranks and values of Impale (10/20%).
-- **Problem.** Retribution damage increases less with gear than Fury damage: ×1.65 against ×1.73 from fresh level 60 to Naxxramas. Fixed base values of the Seals, Judgement and Holy Strike cause this (see Analysis, Damage, part 6). The beta of 30 October does not change these values. At fresh level 60, Retribution has about 93% of the pure average. In Naxxramas, it has about 89% (see the table below).
-- **Why critical damage.** The critical hit chance of Retribution increases with gear. Conviction now gives 6%. Thus, the talent gives more in late raids.
-- **Value (beta of 30 October).**
-
-| Gear | Fresh level 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
-| --- | --- | --- | --- | --- | --- |
-| Damage | +0.8% | +0.9% | +1.0% | +1.2% | +1.3% |
-
-- **Position.** Row 5, column 4, a free place.
-- **Risk.** In PvP, a critical Holy Strike or Judgement does 2.2 times the damage (now 2 times). See PvP burst check and Watch list, W6.
-
 ## Retribution against the pure average
 
 - **Model.** models/beta-30-oct/retribution_b2.py. It uses the wowsims build with Unsealed Wrath (14/5/32) and the wowsims rotation: a Seal change after each swing.
 - **Start value.** The wowsims test runs give 848 DPS at fresh level 60. The model gives the increase with gear.
+- **Increase with gear.** Retribution damage increases less with gear than Fury damage: ×1.65 against ×1.73 from fresh level 60 to Naxxramas. Fixed base values of the Seals, Judgement and Holy Strike cause this (see Analysis, Damage, part 6).
 - **Pure average.** Fury and Combat Rogue use the increase of the model. Hunter, Mage and Warlock increase ×1.75 to Naxxramas (the middle case of Analysis, Damage, part 6).
 
 | Build | Fresh level 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
 | --- | --- | --- | --- | --- | --- |
 | Beta | 93% | 92% | 91% | 90% | 89% |
 | With C1 | 98% | 97% | 96% | 95% | 94% |
-| With C1 and C-R4 | 99% | 98% | 97% | 96% | 95% |
 
-- **Result.** With Holy Strike Seal trigger (C1) and Burning Zeal (C-R4), Retribution is at the hybrid target (95%) or above it at all tiers. The beta is 2–6 points below the target.
-- **Other cases.** Hunter, Mage and Warlock ×1.60: 99–101%. ×1.90: 90–99%.
+- **Result.** With Holy Strike Seal trigger (C1), Retribution is at the hybrid target (95%) or above it until Blackwing Lair. In Naxxramas, it is 1 point below. The beta is 2–6 points below the target.
+- **Other cases.** Hunter, Mage and Warlock ×1.60: 98–100%. ×1.90: 89–98%.
 
 ## Mana with Unsealed Wrath (W29)
 
@@ -100,15 +85,14 @@ The beta of 30 October 2026 changes most of the Retribution tree. Unsealed Wrath
 - **Sim.** wowsims Forever, branch paladin/hotfix-113554-port, with the proposals as flags (models/wowsims-b2). Default gear, rotation and consumables of the Unsealed Wrath set, 3,000 iterations.
 - **Full buffs** have Mana Spring Totem, Mana Tide Totem and Atiesh. **Lean buffs** have only Gift of the Wild, Battle Shout, Kings, Might and Wisdom.
 
-| Fight | Beta | C1 | C-R4 | C1 and C-R4 | Seal cost −20% |
-| --- | --- | --- | --- | --- | --- |
-| 2 min, full buffs | 830 DPS | +4.2% | +2.4% | +6.7% | 0% |
-| 5 min, full buffs | 839 DPS | +4.0% | +2.4% | +6.6% | +0.3% |
-| 2 min, lean buffs | 609 DPS | +5.0% | +1.9% | +7.0% | +0.1% |
-| 5 min, lean buffs | 583 DPS | +5.3% | +2.0% | +7.5% | +5.2% |
+| Fight | Beta | C1 | Seal cost −20% |
+| --- | --- | --- | --- |
+| 2 min, full buffs | 830 DPS | +4.2% | 0% |
+| 5 min, full buffs | 839 DPS | +4.0% | +0.3% |
+| 2 min, lean buffs | 609 DPS | +5.0% | +0.1% |
+| 5 min, lean buffs | 583 DPS | +5.3% | +5.2% |
 
 - **C1.** The sim gives +4.0–5.3%. The model gives +5.2%.
-- **C-R4.** The sim gives +1.9–2.4%. The model gives +0.8–1.3%. The sim has more critical hit chance from buffs and consumables.
 - **Mana.** With full buffs, the mana is empty after 5 min 28 sec. With lean buffs, it is empty after about 4 min: in a 5 min fight, Retribution has no mana for 38 sec and loses 5% damage. The model is lower (1 min 22 sec) because it has no Demonic Rune and no consumables.
 - **Seal cost −20%.** It has an effect only in long fights with lean buffs (+5.2% in 5 min).
 
