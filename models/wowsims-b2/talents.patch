@@ -11,10 +11,32 @@ index f3d252f74..299b085e9 100644
  
  // The abilities a talent point buys.
 diff --git a/sim/paladin/talents_protection.go b/sim/paladin/talents_protection.go
-index ca780f1be..d1122bf13 100644
+index ca780f1be..a1cd19a52 100644
 --- a/sim/paladin/talents_protection.go
 +++ b/sim/paladin/talents_protection.go
-@@ -198,22 +198,41 @@ func (paladin *Paladin) applyReckoning() {
+@@ -1,6 +1,8 @@
+ package paladin
+ 
+ import (
++	"time"
++
+ 	"github.com/wowsims/forever/sim/core"
+ 	"github.com/wowsims/forever/sim/core/dbcenums"
+ 	"github.com/wowsims/forever/sim/core/spelldata"
+@@ -192,28 +194,54 @@ func (paladin *Paladin) applyReckoning() {
+ 	rank := spellData.ReckoningTriggered.Highest()
+ 	blockChance := spellData.Reckoning.FractionAt(paladin.Talents.Reckoning)
+ 	critChance := blockChance * 2.5
++	icd := talent.ICD()
++	if proposeFlag("RK100") { // block chance 100%
++		blockChance = 1.0
++	}
++	if proposeFlag("RKICD4") {
++		icd = 4 * time.Second
++	}
+ 
+ 	stored := paladin.RegisterAura(spelldata.AuraConfig(rank, spelldata.Label("Reckoning"+paladin.Label)))
+ 	gain := func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
  		stored.Activate(sim)
  		stored.AddStack(sim)
  	}
@@ -28,7 +50,7 @@ index ca780f1be..d1122bf13 100644
 +	} else if proposeFlag("CP6") || proposeFlag("CP6R") {
 +		if proposeFlag("CP6R") { // beta triggers, only the Holy Strike release is new
 +			paladin.MakeProcTriggerAura(core.ProcTrigger{Name: "Reckoning - Block" + paladin.Label, Callback: core.CallbackOnSpellHitTaken,
-+				Outcome: avoid, ProcChance: blockChance, ICD: talent.ICD(), Handler: gain})
++				Outcome: avoid, ProcChance: blockChance, ICD: icd, Handler: gain})
 +			paladin.MakeProcTriggerAura(core.ProcTrigger{Name: "Reckoning - Crit" + paladin.Label, Callback: core.CallbackOnSpellHitTaken,
 +				Outcome: core.OutcomeCrit, ProcChance: critChance, Handler: gain})
 +		}
@@ -57,7 +79,7 @@ index ca780f1be..d1122bf13 100644
 +			Callback:   core.CallbackOnSpellHitTaken,
 +			Outcome:    avoid,
 +			ProcChance: blockChance,
-+			ICD:        talent.ICD(),
++			ICD:        icd,
 +			Handler:    gain,
 +		})
 +		paladin.MakeProcTriggerAura(core.ProcTrigger{
