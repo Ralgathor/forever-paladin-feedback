@@ -10,3 +10,24 @@ index f3d252f74..299b085e9 100644
  }
  
  // The abilities a talent point buys.
+diff --git a/sim/paladin/talents_protection.go b/sim/paladin/talents_protection.go
+index ca780f1be..7bcec576b 100644
+--- a/sim/paladin/talents_protection.go
++++ b/sim/paladin/talents_protection.go
+@@ -198,6 +198,16 @@ func (paladin *Paladin) applyReckoning() {
+ 		stored.Activate(sim)
+ 		stored.AddStack(sim)
+ 	}
++	if proposeFlag("CP6") || proposeFlag("CP6R") {
++		if proposeFlag("CP6R") { // beta triggers, only the Holy Strike release is new
++			paladin.MakeProcTriggerAura(core.ProcTrigger{Name: "Reckoning - Block" + paladin.Label, Callback: core.CallbackOnSpellHitTaken,
++				Outcome: core.OutcomeBlock, ProcChance: blockChance, ICD: talent.ICD(), Handler: gain})
++			paladin.MakeProcTriggerAura(core.ProcTrigger{Name: "Reckoning - Crit" + paladin.Label, Callback: core.CallbackOnSpellHitTaken,
++				Outcome: core.OutcomeCrit, ProcChance: critChance, Handler: gain})
++		}
++		paladin.applyReckoningCP6(stored, gain, rank.ID, !proposeFlag("CP6R"))
++		return
++	}
+ 
+ 	paladin.MakeProcTriggerAura(core.ProcTrigger{
+ 		Name:       "Reckoning - Block" + paladin.Label,
