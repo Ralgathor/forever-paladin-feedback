@@ -22,10 +22,10 @@ The beta of 30 October 2026 changes most of the Retribution tree. Unsealed Wrath
 
 - **Proposed Holy Strike text (spell, all specs).** "An instant strike that causes 50% weapon damage plus an additional 97 to 121 as Holy damage. Triggers your active Seal the same as a melee attack."
 - **Change.** In the beta, Holy Strike triggers Seal of Light, Justice and Wisdom. It does not trigger Seal of Command, Righteousness or Fury. With Holy Strike Seal trigger (C1), Holy Strike triggers all Seals, as all melee attacks do. Seal of Command keeps its usual chance: 7 procs each minute.
-- **Unsealed Wrath.** Holy Strike is a melee attack. Thus, it also stores a copy of the Seal and can consume the stored copies.
+- **Unsealed Wrath.** Unsealed Wrath triggers only on auto attacks (wowsims spell data, spell 1310735). Thus, Holy Strike does not store a Seal copy and does not consume the stored copies. With C1, Holy Strike triggers only the active Seal.
 - **Why the trigger is in the spell.** Holy Strike uses the usual Seal rule. Thus, one rule is true for all melee attacks, with no exceptions.
 - **Protection.** With Shieldsworn, Holy Strike has a 6 sec cooldown. Seal of Fury on each Holy Strike gives more threat. The Threat tables do not include it.
-- **Values to model again.** With the beta of 18 October, Holy Strike Seal trigger (C1) gave Retribution +11% damage. The damage model has no Unsealed Wrath yet.
+- **Value (beta of 30 October).** Holy Strike Seal trigger (C1) gives Retribution +5.2% damage at all gear tiers. With the beta of 18 October, it gave +11%. Unsealed Wrath already gives both Seals to each auto attack. Thus, Holy Strike adds less now.
 - **Balance.** If Retribution does more damage than the pure damage classes in raids, decrease the Sacred Arbiter bonus first: +20% → +10% (see Watch list, W15).
 
 ## C-R3. Sanctified Judgement: the return always occurs
@@ -51,14 +51,46 @@ The beta of 30 October 2026 changes most of the Retribution tree. Unsealed Wrath
 
 - **Proposed text.** "Increases the critical strike damage bonus of your Seals, Judgements and Holy Strike by 10/20%."
 - **Model.** Impale (Warrior) and Ruin (Warlock) increase the critical damage bonus. Both are Classic talents. Burning Zeal has the ranks and values of Impale (10/20%).
-- **Problem.** Retribution damage increases less with gear than Fury damage. Fixed base values of the Seals, Judgement and Holy Strike cause this (see Analysis, Damage, part 6). The beta of 30 October does not change these values. With pre-raid gear, Retribution has about 96% of the pure average. In Naxxramas, it has about 88–89% (estimate).
+- **Problem.** Retribution damage increases less with gear than Fury damage: ×1.65 against ×1.73 from fresh level 60 to Naxxramas. Fixed base values of the Seals, Judgement and Holy Strike cause this (see Analysis, Damage, part 6). The beta of 30 October does not change these values. At fresh level 60, Retribution has about 93% of the pure average. In Naxxramas, it has about 89% (see the table below).
 - **Why critical damage.** The critical hit chance of Retribution increases with gear. Conviction now gives 6%. Thus, the talent gives more in late raids.
-- **Value (beta of 18 October, see Analysis, Damage, part 11).**
+- **Value (beta of 30 October).**
 
 | Gear | Fresh level 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
 | --- | --- | --- | --- | --- | --- |
 | Damage | +0.8% | +0.9% | +1.0% | +1.2% | +1.3% |
 
-- **Values to model again.** The values use the damage model of 18 October. The model has no Unsealed Wrath yet.
 - **Position.** Row 5, column 4, a free place.
 - **Risk.** In PvP, a critical Holy Strike or Judgement does 2.2 times the damage (now 2 times). See PvP burst check and Watch list, W6.
+
+## Retribution against the pure average
+
+- **Model.** models/beta-30-oct/retribution_b2.py. It uses the wowsims build with Unsealed Wrath (14/5/32) and the wowsims rotation: a Seal change after each swing.
+- **Start value.** The wowsims test runs give 848 DPS at fresh level 60. The model gives the increase with gear.
+- **Pure average.** Fury and Combat Rogue use the increase of the model. Hunter, Mage and Warlock increase ×1.75 to Naxxramas (the middle case of Analysis, Damage, part 6).
+
+| Build | Fresh level 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
+| --- | --- | --- | --- | --- | --- |
+| Beta | 93% | 92% | 91% | 90% | 89% |
+| With C1 | 98% | 97% | 96% | 95% | 94% |
+| With C1 and C-R4 | 99% | 98% | 97% | 96% | 95% |
+
+- **Result.** With Holy Strike Seal trigger (C1) and Burning Zeal (C-R4), Retribution is at the hybrid target (95%) or above it at all tiers. The beta is 2–6 points below the target.
+- **Other cases.** Hunter, Mage and Warlock ×1.60: 99–101%. ×1.90: 90–99%.
+
+## Mana with Unsealed Wrath (W29)
+
+- **Rotation.** The wowsims rotation casts the other Seal after each swing. Each auto attack then triggers Seal of Righteousness and has a Seal of Command chance. This is one Seal cast for each swing.
+- **Cost.** Unsealed Wrath has no Seal cost decrease. Twist of Light had −20%. With fresh level 60 gear, the rotation uses 50.7 mana each sec. The income is 14.2 mana each sec (Reverence 2/2 and Blessing of Wisdom). The mana pool (3,029) is empty after 1 min 22 sec.
+- **Fewer Seal changes.** The plans below use n swings with Seal of Righteousness, then 1 swing with Seal of Command (fresh level 60, Blessing of Wisdom).
+
+| Seal plan | Damage | Mana each sec | Mana empty after |
+| --- | --- | --- | --- |
+| A Seal change after each swing (n = 1) | 100% | 50.7 | 1 min 22 sec |
+| n = 2 | 98.3% | 35.2 | 2 min 23 sec |
+| n = 3 | 97.4% | 27.5 | 3 min 47 sec |
+| n = 4 | 94.6% | 22.9 | 5 min 48 sec |
+| Seal of Command only | 88% | 10.2 | No limit |
+
+- **Result.** At fresh level 60, the mana decreases the damage by 2% in a 2 min fight and by 4% in a 5 min fight. With better gear, the mana pool is larger. From Molten Core, a Seal change after each swing is possible for 2 min.
+- **The pure average table above uses no mana limit.** In long fights, Retribution is 2–4 points lower.
+- **Spell data.** Unsealed Wrath has a Seal cost effect at 0% (wowsims spell data, spell 1310735). A −20% value, as Twist of Light had, gives +0.8% damage in a 2 min fight and +2.4% in a 5 min fight.
