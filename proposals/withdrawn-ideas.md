@@ -28,6 +28,7 @@ The beta of 30 October 2026 changes the three trees. These proposals are now unn
 | Judgement Echo: a replaced Judgement stays for 40 sec (C2b) | It used the Echo of Twist of Light. Twist of Light is removed |
 | Blessing of Light uses no Blessing slot (C3a) | Blessing of Light is removed |
 | The Blessing of Light bonus goes into the base heals (C3b) | Blessing of Light is removed. Oath of Light gives its bonus on one ally |
+| Lingering Light: a critical heal adds a heal over time of 10/20% (C-H2) | Holy Power makes each critical heal 225%. With Reverence 50% (C-H1), Lingering Light 2/2 gives one tank 20–25% above the Druid, past the 20% limit (W14). It adds the same % in raids and on a tank. Thus, it cannot close the raid gap alone |
 | Healing Light: 10/20/30% (C-H4) | Oath of Light keeps its beta version (decision of 31 October). It gives the Blessing of Light bonus on one ally. Healing Light keeps 4/8/12% |
 
 ## Earlier withdrawn ideas

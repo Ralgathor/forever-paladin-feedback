@@ -36,7 +36,7 @@ The models of the Analysis tabs ran again on the new trees, with no proposal. He
 | Talent | Result in the beta | Effect on the proposals |
 | --- | --- | --- |
 | Divine Strength, Divine Intellect | % of base, gear and flat buff stats. Multiplies with Kings | None |
-| Healing Light | Increases the full heal, not only the base | Supports Lingering Light (C-H2): a second flat healing talent overlaps with it |
+| Healing Light | Increases the full heal, not only the base | None |
 | Spiritual Focus | Adds to other pushback resistance (Concentration Aura 35% + 70% = immune) | None |
 | Improved Seals | Increases the full damage, not only the base. No effect on Seal of the Crusader | None |
 | Unyielding Faith | Diminishing returns not tested | None. The beta of 30 October moves it to Retribution row 3 |

@@ -8,14 +8,14 @@ The beta of 30 October 2026 changes most of the Holy tree. Oath of Light, Boundl
 | --- | --- | --- |
 | 1 (0) | Spiritual Focus, Divine Strength | 10 |
 | 2 (5) | Healing Light, Reverence (C-H1), Improved Seals, Purifying Power | 12 |
-| 3 (10) | Divine Favor, Illumination, Holy Conduit, Lingering Light (C-H2) | 10 |
+| 3 (10) | Divine Favor, Illumination, Holy Conduit | 8 |
 | 4 (15) | Divine Precision, Infusion of Light (C-H3), Oath of Light | 5 |
 | 5 (20) | Consecrated Ground, Holy Shock, Boundless Light | 5 |
 | 6 (25) | Holy Power | 5 |
 | 7 (30) | Light's Vigil | 1 |
 
-- Holy has 48 points (beta: 46).
-- All talents keep their beta places. Lingering Light (C-H2) uses the free place in row 3, column 4.
+- Holy has 46 points, the same as the beta.
+- All talents keep their beta places.
 - Healing Light and Oath of Light keep their beta values. The proposal for Healing Light 10/20/30% (C-H4) is withdrawn (see Withdrawn ideas).
 
 ## C-H1. Reverence: 15/30% → 25/50%
@@ -25,28 +25,8 @@ The beta of 30 October 2026 changes most of the Holy tree. Oath of Light, Boundl
 - **Model.** Meditation (Priest), Reflection (Druid) and Mindfulness (Shaman) give 50%.
 - **Why.** In raids, the Paladin is still 18–26% below the Druid. The best cast plan is almost only Flash of Light, because mana is the limit (see Beta test results).
 - **Illumination is not sufficient.** Other healers have a mana return in addition to their 50% (Litany of Light, Water Shield, Mana Tide Totem). Forever also decreased Illumination to 50% of the base cost.
+- **Model (beta of 30 October, 715 healing power, 3/5/10 min).** In raids, the Paladin is 22/18/19% below the Druid (beta: 26/23/26%). On one tank, it is 13/17/12% above the Druid (beta: 8/10/3%). This is below the 20% limit of W14.
 - **If it is too strong:** use 20/40%.
-
-## C-H2. Lingering Light (new talent): row 3, column 4, 2 ranks
-
-- **Proposed text.** "Your non-periodic critical heals cause the target to be healed for an additional 10/20% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing."
-- **Identity.** It is the only Holy heal over time. It is not the same as Divine Aegis (Priest), because Divine Aegis is a shield.
-- **Text model.** "Non-periodic critical heals" comes from Divine Aegis and Inspiration (Priest). "Refreshing this effect carries over any remaining healing" comes from Blessed Recovery (Priest). Blessed Recovery already works this way in Forever.
-- **Why critical heals.** The Holy tree has many critical heal talents: Illumination, Divine Favor, Boundless Light and Holy Power. This talent gives them more value.
-- **Values to model again.** In the beta of 30 October, Holy Power makes each critical heal larger. Thus, Lingering Light also gives more. The values of Analysis, Healing use the beta of 18 October.
-- **Position.** Row 3, column 4, a free place. Retribution and Protection can take it with 10 Holy points. They have few critical heals. Thus, its value for them is small (see W12 for PvP).
-
-**How the heal over time works.** It works as Ignite and Blessed Recovery do in Forever, not as Deep Wounds.
-
-|  | Ignite (Mage) | Deep Wounds (Warrior) | Lingering Light |
-| --- | --- | --- | --- |
-| Amount | 8–40% of the critical hit damage | 20–60% of average weapon damage, the same for each critical hit | 10/20% of the critical heal |
-| Duration | 4 sec, one tick each 2 sec | 12 sec | 6 sec, one tick each 2 sec |
-| New critical hit while active | The old damage stays and the new damage is added | Only the duration starts again | The old healing stays. The new healing is added. The total spreads over a new 6 sec |
-| Number | One for each Mage on each target | One for each target | One for each Paladin on each target |
-
-- **Amount.** It uses the full critical heal, with the overhealing.
-- **No double bonus.** Healing bonuses apply one time, to the critical heal. They do not apply again to the heal over time. Each tick can be a critical heal, as other heals over time in Forever. A critical tick does not start Lingering Light again. Only a direct critical heal starts it again.
 
 ## C-H3. Infusion of Light: no critical hit necessary, Holy Strike added
 
