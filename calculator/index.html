@@ -221,7 +221,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
     <button id="resetAll" type="button">Reset all</button>
   </section>
 
-  <div class="mode-note" id="modeNote" hidden><b>Proposed trees.</b> A purple tag (C-H1, C-P5…) marks a changed or new talent. Builds made here do not load in the beta trees. The proposals change the beta trees of 30 October 2026. This is version 6 of the proposed trees (31 October 2026). A version 1, 2, 3, 4 or 5 code opens on its page.</div>
+  <div class="mode-note" id="modeNote" hidden><b>Proposed trees.</b> A purple tag (C-H3, C-P5…) marks a changed or new talent. Builds made here do not load in the beta trees. The proposals change the beta trees of 30 October 2026. This is version 6 of the proposed trees (31 October 2026). A version 1, 2, 3, 4 or 5 code opens on its page.</div>
 
   <div class="trees" id="trees"></div>
 
@@ -322,7 +322,6 @@ const RAW_BETA=[
 // Proposed changes: patches to RAW_BETA talents, keyed by talent key. "replace" swaps a talent out for a new one in the same spot.
 // Row layout: fill each row from column 1; a row with two slots is centered (columns 2 and 3); a prerequisite arrow counts as a slot.
 const PROPOSED={
- rev:{pid:"C-H1",rt:["Allows 25% of your Mana regeneration to continue while casting.","Allows 50% of your Mana regeneration to continue while casting."]},
  iol:{pid:"C-H3",rt:["Your Holy Shock and Flash of Light spells and your Holy Strike hits reduce the cast time of your next Holy Light cast within 15 sec by 0.5 sec.","Your Holy Shock and Flash of Light spells and your Holy Strike hits reduce the cast time of your next Holy Light cast within 15 sec by 1 sec."]},
  red:{pid:"C-P1",rt:["Damaging melee attacks against you have a 10% chance to increase your chance to block by 6%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 12%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 18%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 24%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect.","Damaging melee attacks against you have a 10% chance to increase your chance to block by 30%. Lasts 10 sec or 5 blocks. Casting Holy Shield also triggers this effect."]},
  sanj:{pid:"C-R3",rt:["Your Judgement ability returns 20% of the Mana cost of the judged seal.","Your Judgement ability returns 40% of the Mana cost of the judged seal.","Your Judgement ability returns 60% of the Mana cost of the judged seal."]},
@@ -335,7 +334,6 @@ const PROPOSED_NEW=[
 ];
 // Rows for the proposals table: [id, talent key in proposed trees, talent, tree, today, proposed]
 const PROPOSALS=[
- ["C-H1", "rev", "Reverence", "Holy, row 2", "15/30% of mana regeneration during casts", "25/50%"],
  ["C-H3", "iol", "Infusion of Light", "Holy, row 4", "Holy Shock and Flash of Light critical hits make the next Holy Light faster", "All Holy Shock, Flash of Light and Holy Strike hits do this. No critical hit is necessary"],
  ["C-P1", "red", "Redoubt", "Protection, row 1", "10% chance when you are hit: +6–30% block", "The same. Each Holy Shield cast also starts it"],
  ["C-P5", "rdef", "Shoulder the Burden (new)", "Protection, row 5", "—", "50% of the threat of an ally moves to you, 3 min cooldown"],
@@ -566,8 +564,6 @@ ${dn("A save replaced Kings or Might from the same Paladin, and you had to cast 
 
 <p class="cat"><b>Holy</b></p>
 <ul>
-<li>${t("rev","Reverence")}: It now keeps 25/50% of your mana regeneration during casts (was 15/30%). ${g("C-H1")}
-${dn("The beta of 30 October moved Reverence to Row 2, as this proposal asked. Meditation, Reflection and Mindfulness give 50%. In raids, the Paladin is still 18–26% below the Druid, and mana is the limit.")}</li>
 <li>${t("iol","Infusion of Light")}: A critical hit is no longer necessary (was Holy Shock and Flash of Light critical hits only). Holy Strike hits are a new trigger. ${g("C-H3")}
 ${dn("No talent reduces the cast time of Holy Light in all cases. Divine Fury, Naturalist and Improved Healing Wave give −0.5 sec to the large heal of their class. Hybrids also have a fast emergency heal now: after each Holy Strike, Holy Light has a 1.5 sec cast.")}</li>
 </ul>
@@ -617,7 +613,7 @@ window.addEventListener("scroll",hideTip,{passive:true});
 // Beta and proposals compared: one card per topic. bars: [label, value, kind b|p|o, shown text?]
 const CMP={
 heal:[
- {t:"Raid healing per sec",c:"715 healing power, 3 min",b:"629",p:"Not modeled yet",big:1,ids:["C-H1"],bars:[["Priest",948,"o"],["Druid",855,"o"],["Shaman",709,"o"],["Paladin, beta",629,"b"]],s:"26% below the Druid and 11% below the Shaman. Reverence (C-H1) aims at this gap.",d:"Beta of 18 October: 616. Mana is the limit: the best cast plan is almost only Flash of Light."},
+ {t:"Raid healing per sec",c:"715 healing power, 3 min",b:"629",p:"No proposal",big:1,bars:[["Priest",948,"o"],["Druid",855,"o"],["Shaman",709,"o"],["Paladin, beta",629,"b"]],s:"26% below the Druid and 11% below the Shaman. This is accepted: Holy is the best single-target healer, not the best raid healer.",d:"Beta of 18 October: 616. Mana is the limit: the best cast plan is almost only Flash of Light."},
  {t:"One tank, healing per sec",c:"715 healing power, 3 min, Oath of Light on the tank",b:"732",p:"Not modeled yet",big:1,bars:[["Paladin, beta",732,"b"],["Druid",681,"o"],["Shaman",607,"o"],["Priest",606,"o"]],s:"First of the four healers: 3–12% above the Druid.",d:"If Holy Power gives a 175% critical heal (not 225%), the Paladin is 7% below to 1% above the Druid. Maximum raw healing per sec: Paladin 1,536, other healers 1,278–1,320."},
  {t:"Recovery after a large hit",c:"First 3–6 sec, against the Druid",b:"11–18% above with Divine Favor, 2% below with short cooldowns",p:"Not modeled yet",ids:["C-H3"],s:"Infusion of Light (C-H3) makes Holy Light fast after each Flash of Light, not only after a critical heal."},
  {t:"Large heal",b:"Only a critical heal makes Holy Light faster",p:"Flash of Light, then a 1.5 sec Holy Light",ids:["C-H3"],s:"Each other healer has a talent for −0.5 sec on its large heal."},

@@ -40,7 +40,7 @@ The models of the Analysis tabs ran again on the new trees, with no proposal. He
 | Spiritual Focus | Adds to other pushback resistance (Concentration Aura 35% + 70% = immune) | None |
 | Improved Seals | Increases the full damage, not only the base. No effect on Seal of the Crusader | None |
 | Unyielding Faith | Diminishing returns not tested | None. The beta of 30 October moves it to Retribution row 3 |
-| Reverence | Keeps a % of Spirit regeneration during casts. The 5-second rule starts again when a cast ends | Supports Reverence (C-H1) |
+| Reverence | Keeps a % of Spirit regeneration during casts. The 5-second rule starts again when a cast ends | None |
 | Purifying Power | Multiplies with Benediction (×0.80 × 0.90) | None |
 | Illumination | Returns 50% of the base cost. Cost decreases do not decrease the return | None |
 | Divine Favor | Not on the global cooldown | None |
