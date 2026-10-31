@@ -1,0 +1,12 @@
+diff --git a/sim/paladin/talents.go b/sim/paladin/talents.go
+index f3d252f74..299b085e9 100644
+--- a/sim/paladin/talents.go
++++ b/sim/paladin/talents.go
+@@ -6,6 +6,7 @@ func (paladin *Paladin) ApplyTalents() {
+ 	paladin.registerHolyTalents()
+ 	paladin.registerProtectionTalents()
+ 	paladin.registerRetributionTalents()
++	paladin.applySimProposals()
+ }
+ 
+ // The abilities a talent point buys.

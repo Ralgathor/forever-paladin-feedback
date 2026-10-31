@@ -32,7 +32,7 @@ These are risks to check in tests. None of them needs a change now. A removed nu
 | W26 | Swift Judgement is now a second Judgement with a 1 min cooldown, at 15 Protection points. Two Judgements of Command on a stunned target give a large burst | Monitor in PvP with W6 |
 | W27 | Oath of Light gives a flat value (+400, +115, +229). Forever talents give a %. The value decreases with gear | Decision of 31 October: Oath of Light keeps its beta version. Compare its value with gear in beta tests |
 | W28 | The tank of the beta of 30 October has 101–118% of the Warrior threat, and 120–142% with Consecration (see Beta test results) | Compare tank threat in raids. If it is too high, decrease the Righteous Fury bonus (+33%) first |
-| W29 | Unsealed Wrath has no Seal cost decrease (Twist of Light had −20%). With a Seal change after each swing, the mana is empty after 1 min 22 sec at fresh level 60. Fewer Seal changes cost 2% damage in a 2 min fight and 4% in a 5 min fight (see Retribution, Mana with Unsealed Wrath) | Its spell data has a Seal cost effect at 0%. A −20% value gives +0.8% (2 min) to +2.4% (5 min) damage. Watch the next beta values |
+| W29 | Unsealed Wrath has no Seal cost decrease (Twist of Light had −20%). With a Seal change after each swing, the mana is empty after 1 min 22 sec at fresh level 60 (model). In wowsims, it is empty after about 4 min with lean buffs and after 5 min 28 sec with full buffs. Fewer Seal changes cost 2% damage in a 2 min fight and 4% in a 5 min fight (see Retribution, Mana with Unsealed Wrath) | Its spell data has a Seal cost effect at 0%. A −20% value gives +0.8% (2 min) to +2.4% (5 min) damage. Watch the next beta values |
 
 ## Open questions
 
