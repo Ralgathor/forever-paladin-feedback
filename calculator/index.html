@@ -329,7 +329,6 @@ const PROPOSED={
  gf:{pid:null,rt:["Reduces the cooldown of your Hand of Protection by 1 min and increases the duration of your Hand of Freedom by 3 sec.","Reduces the cooldown of your Hand of Protection by 2 min and increases the duration of your Hand of Freedom by 6 sec."]}
 };
 const PROPOSED_NEW=[
- {pid:"C-H2",tree:"holy",key:"sw",name:"Lingering Light",tier:3,col:4,ranks:2,rt:["Your non-periodic critical heals cause the target to be healed for an additional 10% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing.","Your non-periodic critical heals cause the target to be healed for an additional 20% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing."],req:null,status:"N",info:""},
  {pid:"C-P11",tree:"prot",key:"dsac",name:"Devoted Sacrifice",tier:4,col:4,ranks:2,rt:["Your Lay on Hands drains only 75% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 20%.","Your Lay on Hands drains only 50% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 40%."],req:null,status:"N",info:""},
  {pid:"C-P5",tree:"prot",key:"rdef",name:"Shoulder the Burden",tier:5,col:4,ranks:1,rt:["You shoulder the burden of a friendly party or raid member, transferring 50% of their threat against all enemies to you."],req:null,status:"N",info:"45 Mana · 30 yd range · Instant · 3 min cooldown"},
  {pid:"C-R4",tree:"ret",key:"bz",name:"Burning Zeal",tier:5,col:4,ranks:2,rt:["Increases the critical strike damage bonus of your Seals, Judgements and Holy Strike by 10%.","Increases the critical strike damage bonus of your Seals, Judgements and Holy Strike by 20%."],req:null,status:"N",info:""}
@@ -337,7 +336,6 @@ const PROPOSED_NEW=[
 // Rows for the proposals table: [id, talent key in proposed trees, talent, tree, today, proposed]
 const PROPOSALS=[
  ["C-H1", "rev", "Reverence", "Holy, row 2", "15/30% of mana regeneration during casts", "25/50%"],
- ["C-H2", "sw", "Lingering Light (new)", "Holy, row 3", "—", "2 ranks: a critical heal adds a heal over time of 10/20% of the heal"],
  ["C-H3", "iol", "Infusion of Light", "Holy, row 4", "Holy Shock and Flash of Light critical hits make the next Holy Light faster", "All Holy Shock, Flash of Light and Holy Strike hits do this. No critical hit is necessary"],
  ["C-P1", "red", "Redoubt", "Protection, row 1", "10% chance when you are hit: +6–30% block", "The same. Each Holy Shield cast also starts it"],
  ["C-P5", "rdef", "Shoulder the Burden (new)", "Protection, row 5", "—", "50% of the threat of an ally moves to you, 3 min cooldown"],
@@ -570,9 +568,6 @@ ${dn("A save replaced Kings or Might from the same Paladin, and you had to cast 
 <ul>
 <li>${t("rev","Reverence")}: It now keeps 25/50% of your mana regeneration during casts (was 15/30%). ${g("C-H1")}
 ${dn("The beta of 30 October moved Reverence to Row 2, as this proposal asked. Meditation, Reflection and Mindfulness give 50%. In raids, the Paladin is still 18–26% below the Druid, and mana is the limit.")}</li>
-<li>New Talent: ${t("sw","Lingering Light")} (Row 3, Column 4, 2 ranks): Your direct critical heals also heal the target for 10/20% of the amount over 6 sec. A new direct critical heal adds the healing that stays, and the total ticks over a new 6 sec. ${g("C-H2")}
-<ul><li>Each tick can be a critical heal. A critical tick does not start the effect again.</li></ul>
-${dn("Holy has no heal over time. Lingering Light works as Ignite and Blessed Recovery work in Forever. It also gives more value to the critical heal talents of the tree: Illumination, Divine Favor, Boundless Light and Holy Power.")}</li>
 <li>${t("iol","Infusion of Light")}: A critical hit is no longer necessary (was Holy Shock and Flash of Light critical hits only). Holy Strike hits are a new trigger. ${g("C-H3")}
 ${dn("No talent reduces the cast time of Holy Light in all cases. Divine Fury, Naturalist and Improved Healing Wave give −0.5 sec to the large heal of their class. Hybrids also have a fast emergency heal now: after each Holy Strike, Holy Light has a 1.5 sec cast.")}</li>
 </ul>
