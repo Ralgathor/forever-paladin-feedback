@@ -58,6 +58,18 @@ func TestFeedbackRun(t *testing.T) {
 			casts += float64(tm.Casts)
 		}
 	}
+	var extra float64
+	for _, a := range u.Actions {
+		if os.Getenv("FEEDBACK_RAW") != "" && a.Id.GetOtherId() == proto.OtherAction_OtherActionAttack {
+			fmt.Printf("PACT %v %d\n", a.Id, a.Targets[0].Casts)
+		}
+		if a.Id.GetOtherId() == proto.OtherAction_OtherActionAttack && a.Id.Tag == 1326084 {
+			for _, tm := range a.Targets {
+				extra += float64(tm.Casts)
+			}
+		}
+	}
+	fmt.Printf("EXTRA per min=%.2f\n", extra/3000/(dur/60))
 	all := casts
 	_ = hits
 	fmt.Printf("RESULT dur=%.0f propose=%q tps=%.1f dps=%.1f dtps=%.1f swings=%.1f hit=%.1f%% miss=%.1f%% dodge=%.1f%% parry=%.1f%% block=%.1f%% crit=%.1f%% crush=%.1f%%\n",

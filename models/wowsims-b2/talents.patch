@@ -11,17 +11,22 @@ index f3d252f74..299b085e9 100644
  
  // The abilities a talent point buys.
 diff --git a/sim/paladin/talents_protection.go b/sim/paladin/talents_protection.go
-index ca780f1be..7bcec576b 100644
+index ca780f1be..443e6853a 100644
 --- a/sim/paladin/talents_protection.go
 +++ b/sim/paladin/talents_protection.go
-@@ -198,6 +198,16 @@ func (paladin *Paladin) applyReckoning() {
+@@ -198,11 +198,26 @@ func (paladin *Paladin) applyReckoning() {
  		stored.Activate(sim)
  		stored.AddStack(sim)
  	}
++	// RKB: the beta block chance and limit also on dodges and parries.
++	avoid := core.OutcomeBlock
++	if proposeFlag("RKB") {
++		avoid |= core.OutcomeDodge | core.OutcomeParry
++	}
 +	if proposeFlag("CP6") || proposeFlag("CP6R") {
 +		if proposeFlag("CP6R") { // beta triggers, only the Holy Strike release is new
 +			paladin.MakeProcTriggerAura(core.ProcTrigger{Name: "Reckoning - Block" + paladin.Label, Callback: core.CallbackOnSpellHitTaken,
-+				Outcome: core.OutcomeBlock, ProcChance: blockChance, ICD: talent.ICD(), Handler: gain})
++				Outcome: avoid, ProcChance: blockChance, ICD: talent.ICD(), Handler: gain})
 +			paladin.MakeProcTriggerAura(core.ProcTrigger{Name: "Reckoning - Crit" + paladin.Label, Callback: core.CallbackOnSpellHitTaken,
 +				Outcome: core.OutcomeCrit, ProcChance: critChance, Handler: gain})
 +		}
@@ -31,3 +36,9 @@ index ca780f1be..7bcec576b 100644
  
  	paladin.MakeProcTriggerAura(core.ProcTrigger{
  		Name:       "Reckoning - Block" + paladin.Label,
+ 		Callback:   core.CallbackOnSpellHitTaken,
+-		Outcome:    core.OutcomeBlock,
++		Outcome:    avoid,
+ 		ProcChance: blockChance,
+ 		ICD:        talent.ICD(),
+ 		Handler:    gain,
