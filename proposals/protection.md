@@ -28,7 +28,7 @@ The beta of 30 October 2026 changes most of the Protection tree. Righteous Fury 
 - **Change.** Only the Holy Shield trigger is new. If Redoubt is active, a new trigger sets it again to 10 sec and 5 blocks.
 - **Why.** It removes most crushing blows (see Analysis, Crushing blows).
 - **Beta.** The beta of 30 October gives Redoubt 6–30% again (18 October: 4–20%). Holy Shield is now in row 5.
-- **Values to model again.** With Holy Shield (30%) and Redoubt 5/5 (30%), block from talents can be 60%. This can be more than necessary. If it is too much, use 4/8/12/16/20% with the trigger. Analysis, Crushing blows uses the values of 18 October.
+- **Value (wowsims, beta of 30 October).** With Holy Shield (30%) and Redoubt 5/5 (30%), block from talents can be 60%. This removes almost all crushing blows: 12.0% → 0.9% of the boss attacks. The Warrior has 1.1%. Thus, 60% is not too much. Keep 6–30% (see Protection, wowsims check).
 - **Other specs.** Holy and Retribution can take Holy Shield with 20 Protection points. Then their Redoubt also starts with each Holy Shield.
 
 ## C-P5. Shoulder the Burden (new talent): row 5, column 4
@@ -100,3 +100,21 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 | ID | Option | How it works | Precedent | Tradeoff |
 | --- | --- | --- | --- | --- |
 | C-P11a | Change the base spell (use this if Blizzard does not want the talent) | Lay on Hands drains 50% of the current mana for all Paladins. Devoted Sacrifice keeps only the Hand of Sacrifice part | Forever moves the cooldown of Improved Lay on Hands into the spell | All specs receive it with no points. There is no talent choice. Retribution raid builds also receive it |
+
+## wowsims check
+
+- **Sim.** wowsims Forever, branch paladin/hotfix-113554-port, with the proposals as flags (models/wowsims-b2). The default Protection set: default tank gear, rotation and consumables, talents 14/32/5 with Redoubt 5/5. A level 63 boss attacks the Paladin from the front. Full buffs, 3,000 iterations, 2 min.
+- **Warrior.** The Protection Warrior of wowsims with its pre-raid set, for comparison. The gear is not the same.
+
+| Case | Block | Crushing blows | Damage taken each sec | Threat each sec |
+| --- | --- | --- | --- | --- |
+| Paladin, beta | 42.7% | 12.0% | 326 | 918 |
+| Paladin, Redoubt (C-P1) | 62.0% | 0.9% | 281 (−14%) | 975 (+6%) |
+| Paladin, C-P1 with 4–20% | 55.7% | 4.8% | 306 (−6%) | 961 (+5%) |
+| Warrior, pre-raid | 49.1% | 1.1% | 277 | 917 |
+
+- **Result.** With Redoubt (C-P1), the Paladin takes almost the same damage as the Warrior (+2%). The beta Paladin takes 18% more. With 4–20%, 4.8% of the attacks are still crushing blows. Thus, keep Redoubt at 6–30% with the trigger.
+- **Threat.** More blocks give more Holy Shield damage. Thus, threat increases by 6%.
+- **5 min fights.** The results are the same: crushing blows 11.9% → 1.1%, damage taken −13%.
+- **Not in the sim.** Shoulder the Burden (C-P5) and Devoted Sacrifice (C-P11) act in raid situations that the sim does not have: a threat transfer between tanks, and Lay on Hands. Their values stay as in Analysis.
+

@@ -566,7 +566,7 @@ ${dn("A save replaced Kings or Might from the same Paladin, and you had to cast 
 <p class="cat"><b>Protection</b></p>
 <ul>
 <li>${t("red","Redoubt")}: Your Holy Shield casts now also trigger this effect. ${g("C-P1")}
-${dn("This change removes most crushing blows. With Holy Shield and Redoubt 5/5, block from talents can be 60%. If this is too much, use 4/8/12/16/20% with the trigger.")}</li>
+${dn("This change removes most crushing blows. With Holy Shield and Redoubt 5/5, block from talents can be 60%. In wowsims, crushing blows go from 12.0% to 0.9% of the boss attacks (Warrior: 1.1%).")}</li>
 <li>New Talent: ${t("dsac","Devoted Sacrifice")} (Row 4, Column 4, 2 ranks): Your Lay on Hands drains only 75/50% of your current mana (was all your current mana), and you take 20/40% less damage from your Hand of Sacrifice. ${g("C-P11")}
 ${dn("Lay on Hands has a 20 min cooldown, thus about one cast for each boss. But it drains all your mana, and the drain is largest at full mana. Thus, Paladins use it only at low mana. At 50%, you can use it at any time in a fight.")}</li>
 <li>New Talent: ${t("rdef","Shoulder the Burden")} (Row 5, Column 4, 1 point): Moves 50% of the threat of a party or raid member to you, on all enemies. Instant, 30 yards, 3 min cooldown. ${g("C-P5")}
@@ -612,7 +612,7 @@ heal:[
  {t:"Lay on Hands at full mana",b:"Drains all 4,416 mana",p:"Drains 2,208 (50%)",ids:["C-P11"],s:"With Devoted Sacrifice 2/2, the mana is back after 1 min 38 sec (was 3 min 15 sec)."}
 ],
 tank:[
- {t:"Crushing blows",b:"Holy Shield +30% block. Redoubt is a 10% proc",p:"Holy Shield also starts Redoubt: up to 60% block",ids:["C-P1"],s:"This removes most crushing blows. The values need a new model on the beta of 30 October."},
+ {t:"Crushing blows",c:"wowsims, level 63 boss, 2 min",b:"12.0% of the boss attacks",p:"0.9% (Warrior: 1.1%)",big:1,ids:["C-P1"],s:"Holy Shield also starts Redoubt: up to 60% block. Damage taken −14%, threat +6%.",d:"With Redoubt 4–20%, 4.8% are still crushing blows."},
  {t:"Threat, as a % of the Warrior",c:"Same gear, one boss, no Consecration",b:"118% fresh level 60, 102% Naxxramas",p:"No threat proposals",bars:[["Warrior",100,"o","100%"],["Fresh 60, beta",118,"b","118%"],["Naxxramas, beta",102,"b","102%"]],s:"The beta removes the threat gap. With Consecration: 120–142% of the Warrior. See W28.",d:"Beta of 18 October: 63% of the Warrior. wowsims preset tank: 932 threat per sec (was 663)."},
  {t:"Mana of the tank",c:"Mana per sec, Blessing of Wisdom, no Consecration",b:"+26.1 fresh level 60, +55.2 Naxxramas",p:"No mana proposals",bars:[["Fresh 60, beta",26.1,"b","+26.1"],["Naxxramas, beta",55.2,"b","+55.2"]],s:"Shieldsworn gives Shield Specialization mana from each Holy Strike.",d:"With Consecration on cooldown: −37.5 per sec at fresh level 60. The mana is zero after 1 min 17 sec."},
  {t:"Lay on Hands, tank",c:"Naxxramas, 4,900 mana",b:"The mana is back after 1 min 29 sec",p:"The mana is back after 44 sec",ids:["C-P11"],s:"Half of the mana stays. The tank keeps its threat."},
