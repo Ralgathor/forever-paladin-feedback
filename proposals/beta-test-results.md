@@ -25,7 +25,7 @@ The models of the Analysis tabs ran again on the new trees, with no proposal. He
 | Protection threat, same gear for all tanks | 63% of the Warrior | 101% of the Warrior |
 | Protection threat, fresh level 60 to Naxxramas | 65–74% of the Warrior | 102–118% of the Warrior (120–142% with Consecration) |
 | Protection mana while it tanks, Blessing of Wisdom | +24 to +39 per sec | +26 to +55 per sec |
-| Retribution damage (wowsims test runs) | 824 DPS | 848 DPS (+3%), about 96% of the pure average with pre-raid gear |
+| Retribution damage (wowsims test runs) | 824 DPS | 848 DPS (+3%), about 93% of the pure average at fresh level 60 and 89% in Naxxramas (model) |
 
 - **Holy Power.** The Holy values use a 225% critical heal (wowsims). If the critical heal is 175%, the Paladin is 7% below to 1% above the Druid on one tank.
 - **Mana.** In raids, mana is still the limit of the Paladin. The best cast plan is almost only Flash of Light.
