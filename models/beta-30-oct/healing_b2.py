@@ -6,7 +6,7 @@ Changes against the beta of 18 October (healing_model.paladin defaults):
 - No Blessing of Light. Oath of Light on one ally: Holy Light +400, Flash of Light +115, Holy Shock +229 (only there).
 - Holy Power 5/5: no critical chance. The critical heal multiplier x1.5: 150% -> 225% (wowsims and the server rule,
   aura A_MOD_CRITICAL_HEALING_AMOUNT). The low case reads the text as +50% of the bonus: 175%.
-- Boundless Light 2/2: Holy Shock +30% critical chance on an ally with no Oath of Light.
+- Boundless Light 2/2: Holy Shock +30% critical chance on an ally with no Oath of Light. bl_fol: the same for Flash of Light (a withdrawn idea, see Withdrawn ideas).
 - Build 38/5/8: Holy (no Divine Strength, no Divine Precision, Purifying Power 1), Divine Intellect 5/5,
   Benediction 5/5, Conviction 3/3 (+6% critical chance, all spells). Reverence 2/2 = 30% (as before).
 - Light's Vigil rank 3: no change in cost or heal (only the range, 20 -> 40 yd).
@@ -17,24 +17,25 @@ import healing_model as H
 from healing_model import Spell, cd_limit, regen_full, solve, priest, druid, shaman, budget, max_hps, HPG, CRIT_BASE, PAL_CRIT
 
 def paladin_b2(hp=HPG, tank=False, oath=None, bonus=1.25, conv=0.06, boundless=0.30, light=1.12, rev=0.30,
-               illum=0.50, bened=0.10, lv=True, df_cd=120):
+               illum=0.50, bened=0.10, lv=True, df_cd=120, bl_fol=0.0):
     """oath: Oath of Light on the healed target (default: True on one tank, False in the raid).
     bonus: critical heal bonus (0.5 = no Holy Power, 1.25 = Holy Power 5/5 with the server rule)."""
     if oath is None: oath = tank
     c = CRIT_BASE + PAL_CRIT + conv
     c_hs = c + (0 if oath else boundless)
     o = (lambda v: v) if oath else (lambda v: 0)
+    c_fol = c + (0 if oath else bl_fol)   # Boundless Light for Flash of Light (withdrawn idea)
     fol = (308 + o(115) + 1.5/3.5*hp) * light
     hl = (1580 + o(400) + 2.5/3.5*hp) * light
     hs = (320 + o(229) + 1.5/3.5*hp) * light
     def direct(h, cc, oh):
         r = h*(1 + bonus*cc)
         return r, r*(1-oh)
-    fol_r, fol_e = direct(fol, c, 0.15); hl_r, hl_e = direct(hl, c, 0.20); hs_r, hs_e = direct(hs, c_hs, 0.15)
-    fol_cost = 140 - illum*140*c
+    fol_r, fol_e = direct(fol, c_fol, 0.15); hl_r, hl_e = direct(hl, c, 0.20); hs_r, hs_e = direct(hs, c_hs, 0.15)
+    fol_cost = 140 - illum*140*c_fol
     hl_cost = 660 - illum*660*c
     hs_cost = 325*(1-bened) - illum*325*c_hs
-    p_inf_fol = c                 # Flash of Light critical heal: next Holy Light 1 sec faster
+    p_inf_fol = c_fol                 # Flash of Light critical heal: next Holy Light 1 sec faster
     sp = []
     df_r = hl*(1 + bonus)
     sp.append(Spell("Divine Favor + Holy Light", df_r, df_r*0.8, 660 - illum*660 + 0.04*1512, 2.5,
@@ -68,6 +69,11 @@ TS = (180, 300, 600)
 CASES = (("Paladin, beta 18 Oct", lambda hp, tank: H.paladin(hp, tank=tank)),
          ("Paladin, beta 30 Oct", lambda hp, tank: paladin_b2(hp, tank)),
          ("Paladin, beta 30 Oct, crit 175%", lambda hp, tank: paladin_b2(hp, tank, bonus=0.75)),
+         ("Paladin, beta 30 Oct, crit 200%", lambda hp, tank: paladin_b2(hp, tank, bonus=1.0)),
+         ("Paladin, Boundless Light for Flash of Light +15%, crit 225%", lambda hp, tank: paladin_b2(hp, tank, bl_fol=0.15)),
+         ("Paladin, Boundless Light for Flash of Light +15%, crit 200%", lambda hp, tank: paladin_b2(hp, tank, bonus=1.0, bl_fol=0.15)),
+         ("Paladin, Boundless Light for Flash of Light +15%, crit 175%", lambda hp, tank: paladin_b2(hp, tank, bonus=0.75, bl_fol=0.15)),
+         ("Paladin, Flash of Light +30%, crit 200%", lambda hp, tank: paladin_b2(hp, tank, bonus=1.0, bl_fol=0.30)),
          ("Paladin, beta 30 Oct, no Conviction", lambda hp, tank: paladin_b2(hp, tank, conv=0.0)),
          ("Paladin, beta 30 Oct, raid with Oath on all heals (upper limit)", lambda hp, tank: paladin_b2(hp, tank, oath=True)))
 
