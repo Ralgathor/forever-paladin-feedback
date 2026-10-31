@@ -1,43 +1,40 @@
 # Holy
 
-Most saved Holy builds stop at about 20 points. These proposals make the deep Holy talents better for healers. They also give Retribution and Protection a reason to put a few points in Holy.
+The beta of 30 October 2026 changes most of the Holy tree. Oath of Light, Boundless Light and the new Holy Power make the Paladin the best healer on one tank. In raids, the Paladin is still the weakest healer, and mana is the limit (see Beta test results). These proposals now aim at raid healing and mana.
 
 ## Holy layout
 
 | Row (points necessary) | Talents | Points in the row |
 | --- | --- | --- |
-| 1 (0) | Improved Seals (M-H1), Unyielding Faith (M-H2), Divine Intellect | 10 |
-| 2 (5) | Infusion of Light (C-H3), Reverence (C-H1), Spiritual Focus | 7 |
-| 3 (10) | Voice of Truth, Purifying Power, Lingering Light (C-H2) | 5 |
-| 4 (15) | Divine Precision (M-H5), Illumination, Divine Favor, Divine Grace (C-H6) | 11 |
-| 5 (20) | Merciful Light (C-H5), Holy Shock, Holy Power (M-H3) | 8 |
-| 6 (25) | Consecrated Ground (M-H4), Healing Light (C-H4) | 5 |
+| 1 (0) | Spiritual Focus, Divine Strength | 10 |
+| 2 (5) | Healing Light, Reverence (C-H1), Improved Seals, Purifying Power | 12 |
+| 3 (10) | Divine Favor, Illumination, Holy Conduit, Lingering Light (C-H2) | 10 |
+| 4 (15) | Divine Precision, Infusion of Light (C-H3), Oath of Light | 5 |
+| 5 (20) | Consecrated Ground, Holy Shock, Boundless Light | 5 |
+| 6 (25) | Holy Power | 5 |
 | 7 (30) | Light's Vigil | 1 |
 
-- Holy has 47 points (beta: 46).
-- You can use each talent when its row opens.
-- Illumination still requires Reverence (straight arrow in column 2).
-- Divine Grace (C-H6) requires Divine Favor, and Merciful Light (C-H5) requires Holy Shock (arrows in the same row). A talent that changes only an ability of another talent requires that talent.
-- Toughness and Divine Strength removal (C-P3) deletes Divine Strength. Unyielding Faith (M-H2) goes to row 1.
-- A Holy healer needs no filler. Rows 1–3 hold 16 healer points (row 4 needs 15). Rows 1–5 hold 32 (row 6 needs 25). Holy healing is complete at 36 points. See Analysis, Tree balance.
+- Holy has 48 points (beta: 46).
+- All talents keep their beta places. Lingering Light (C-H2) uses the free place in row 3, column 4.
+- Healing Light (C-H4) waits for a decision (see C-H4). It keeps its beta values in this layout.
 
-## C-H1. Reverence: 10/20/30% → 17/33/50%, row 3 → row 2
+## C-H1. Reverence: 15/30% → 25/50%
 
-- **Proposed text.** "Allows 17/33/50% of your Mana regeneration to continue while casting."
-- **Model.** Meditation (Priest), Reflection (Druid) and Mindfulness (Shaman) give 50% with 3 ranks.
+- **Proposed text.** "Allows 25/50% of your Mana regeneration to continue while casting."
+- **Beta.** 2 ranks, 15/30%, in row 2. The beta of 30 October moved Reverence to row 2, as this proposal asked. Thus, only the values change now.
+- **Model.** Meditation (Priest), Reflection (Druid) and Mindfulness (Shaman) give 50%.
+- **Why.** In raids, the Paladin is still 18–26% below the Druid. The best cast plan is almost only Flash of Light, because mana is the limit (see Beta test results).
 - **Illumination is not sufficient.** Other healers have a mana return in addition to their 50% (Litany of Light, Water Shield, Mana Tide Totem). Forever also decreased Illumination to 50% of the base cost.
-- **Row 2.** Holy has its mana talent early, while it levels.
-- **If it is too strong:** use 13/27/40%.
+- **If it is too strong:** use 20/40%.
 
 ## C-H2. Lingering Light (new talent): row 3, column 4, 2 ranks
 
 - **Proposed text.** "Your non-periodic critical heals cause the target to be healed for an additional 10/20% of the amount healed over 6 sec. Refreshing this effect carries over any remaining healing."
 - **Identity.** It is the only Holy heal over time. It is not the same as Divine Aegis (Priest), because Divine Aegis is a shield.
 - **Text model.** "Non-periodic critical heals" comes from Divine Aegis and Inspiration (Priest). "Refreshing this effect carries over any remaining healing" comes from Blessed Recovery (Priest). Blessed Recovery already works this way in Forever.
-- **Why critical heals.** Healing Light already gives a bonus to each heal. The Holy tree has many critical hit talents (Illumination, Divine Favor, Holy Power). This talent gives them more value.
-- **Value.** At 22% critical heal chance: 22% × 1.5 (critical heal) × 20% = about +6.6% of a normal heal. Critical ticks add about 11% to this: about +7.3%. Some of it is overhealing on targets with full health.
-- **Why row 3.** Holy row 3 had only 3 points, the smallest row 3 of all classes. With Lingering Light, it has 5. A Holy healer then needs no filler for row 4. Retribution and Protection can take it with 10 Holy points. They have few critical heals, thus its value for them is small (see W12 for PvP).
-- **Why 10/20%.** Healing Light (C-H4) gives the main healing bonus. Lingering Light gives a smaller bonus, and only on critical heals. At 20%, it gives about 3.6% for each point, as Spiritual Healing (Priest) does. After overhealing, it adds about 5% healing in raids and on one tank, in all fight lengths (see Analysis, Healing, part 6). At 30%, it adds about 8%, and the Paladin is first on one tank by 4–12%, not 1–9%.
+- **Why critical heals.** The Holy tree has many critical heal talents: Illumination, Divine Favor, Boundless Light and Holy Power. This talent gives them more value.
+- **Values to model again.** In the beta of 30 October, Holy Power makes each critical heal larger. Thus, Lingering Light also gives more. The values of Analysis, Healing use the beta of 18 October.
+- **Position.** Row 3, column 4, a free place. Retribution and Protection can take it with 10 Holy points. They have few critical heals. Thus, its value for them is small (see W12 for PvP).
 
 **How the heal over time works.** It works as Ignite and Blessed Recovery do in Forever, not as Deep Wounds.
 
@@ -50,93 +47,20 @@ Most saved Holy builds stop at about 20 points. These proposals make the deep Ho
 
 - **Amount.** It uses the full critical heal, with the overhealing.
 - **No double bonus.** Healing bonuses apply one time, to the critical heal. They do not apply again to the heal over time. Each tick can be a critical heal, as other heals over time in Forever. A critical tick does not start Lingering Light again. Only a direct critical heal starts it again.
-- **Use.** Many critical heals on the tank make a large heal over time. Divine Favor on Holy Light gives one large heal over time when you want it. Holy Shock critical heals (+15% from Holy Power) give many small amounts.
 
-## C-H3. Infusion of Light: no critical hit necessary, Holy Strike added, row 4 → row 2
+## C-H3. Infusion of Light: no critical hit necessary, Holy Strike added
 
 - **Proposed text.** "Your Holy Shock and Flash of Light spells and your Holy Strike hits reduce the cast time of your next Holy Light cast within 15 sec by 0.5/1 sec."
-- **Change.** A critical hit is not necessary now. Holy Strike is a new trigger. A miss, dodge or parry does not trigger it. The values and the duration are the same as in the beta.
-- **Problem.** No talent decreases the cast time of Holy Light. Divine Fury (Priest), Naturalist (Druid) and Improved Healing Wave (Shaman) give −0.5 sec to the big heal of their class. Thus, healing power gives the smallest increase in healing per second to the Paladin. In the beta, Infusion of Light works only after a critical hit. Thus, it is not reliable.
-- **Use (Holy).** Cast Flash of Light, then Holy Light, and do this again. At rank 2, Holy Light then has a 1.5 sec cast. With 900 healing power and 19% critical heals, this gives 1,405 healing per sec and 5.83 healing per mana. Holy Light alone gives 1,288 and 5.40. With Blessing of Light removal (C3: no Blessing of Light, Healing Light 30%), the mix gives 1,386 and 5.75.
-- **Long fights.** The best cast plan also uses the least mana. Flash of Light is the most efficient heal, and it makes Holy Light faster.
-- **Use (Retribution and Protection).** These specs have only two heals. Flash of Light is too small in PvP. After each Holy Strike, the next Holy Light has a 1.5 sec cast. This is a fast emergency heal one time each 10 sec.
-- **Limits.** Holy Strike has a 10 sec cooldown. Holy Light costs 660 mana. Players can still interrupt the cast. Mortal Strike decreases the heal by 50% (see Analysis, Healing, part 7).
-- **Row 2.** Retribution and Protection keep a healing reason to put points in Holy: faster heals, not larger heals.
-- **Risk.** A 7-point Holy dip gives a 1.5 sec Holy Light after each Holy Strike in PvP. This is on the watch list (W12).
+- **Change.** A critical hit is not necessary now. Holy Strike is a new trigger. A miss, dodge or parry does not trigger it. The values, the duration and the place (row 4, column 2) are the same as in the beta.
+- **Problem.** No talent decreases the cast time of Holy Light in all cases. Divine Fury (Priest), Naturalist (Druid) and Improved Healing Wave (Shaman) give −0.5 sec to the large heal of their class. In the beta, Infusion of Light works only after a critical hit. Thus, it is not reliable.
+- **Use (Holy).** Cast Flash of Light, then Holy Light, and do this again. At rank 2, Holy Light then has a 1.5 sec cast.
+- **Use (Retribution and Protection).** These specs have only two heals. After each Holy Strike, the next Holy Light has a 1.5 sec cast. This is a fast emergency heal.
+- **Limits.** Holy Light costs 660 mana. Players can still interrupt the cast. Mortal Strike decreases the heal by 50% (see Analysis, Healing, part 7).
+- **Risk.** The talent now needs 15 Holy points (the earlier proposal moved it to row 2). A Protection tank with Shieldsworn has a Holy Strike each 6 sec. See W12.
 
-## C-H4. Healing Light: row 2 → row 6, 10/20/30%
+## C-H4. Healing Light: 10/20/30% (on hold)
 
 - **Proposed text.** "Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 10/20/30%."
-- **Change.** 3 ranks: 10/20/30% (beta: 4/8/12%). The maximum increases from 12% to 30%, because Blessing of Light removal (C3) removes the spell. The 18% difference replaces the Blessing of Light bonus (see C3).
-- **Why row 6.** The healing bonus is now at 25 points, as Spiritual Healing (Priest) and Purification (Shaman) are.
-- **Deep Holy** keeps Healing Light, Holy Power and Light's Vigil. Thus, a deep Holy build stays clearly better for healing. Lingering Light is in row 3 (C-H2), but its value comes from critical heals.
-- **Cost.** A Holy Paladin who levels has the full bonus at level 37, not at level 17. Blessing of Light rank 1 came at level 40.
-
-## M-H1. Improved Seals: row 2 → row 1
-
-- **Text.** "Increases the damage done by your Seals and Judgements by 5/10/15%." 3 ranks, the same as the beta.
-- **Change.** Only the row changes. Row 1 has Divine Intellect 5, Improved Seals 3 and Unyielding Faith 2 (M-H2).
-- **Dip.** With Improved Seals 3 and Unyielding Faith 2, Retribution and Protection open Holy row 2. They receive +15% Seal and Judgement damage and −30% Fear and Disorient duration. Retribution then takes Infusion of Light (7 points).
-
-## M-H2. Unyielding Faith: row 2 → row 1
-
-- **Text.** "Reduces the duration of Fear and Disorient effects on you by 15/30%." 2 ranks, the same as the beta.
-- **Position.** Row 1, column 2. It fills the 2 points that Divine Strength leaves (C-P3).
-- **Why.** With Improved Seals 3 (M-H1), it opens Holy row 2 for Retribution and Protection. Iron Will (Warrior) is also in row 1.
-
-## M-H3. Holy Power: row 6 → row 5
-
-- **Text.** "Increases the critical strike chance of your Holy Shock and Holy Strike spells by 3/6/9/12/15%, and all other spells by 1/2/3/4/5%." 5 ranks, the same as the beta.
-- **Position.** Row 5, column 3.
-- **Why.** In row 6, a Holy healer needed 2 points of filler: rows 1–5 held only 23 healer points. With Holy Power in row 5, they hold 28 (32 with Divine Grace, C-H6, and Merciful Light, C-H5).
-- **Retribution and Protection cannot take it.** Twist of Light and Holy Shield need 31 points. Holy Power needs 25 Holy points. 25/0/26 with Holy Power loses Twist of Light and Champion of the Light: −19% (see Builds, part 4).
-
-## M-H4. Consecrated Ground: row 5 → row 6
-
-- **Text.** "Gives your Holy spells 5/10% increased damage against the first 4 enemies that enter your Consecration." 2 ranks, the same as the beta.
-- **Position.** Row 6, column 1. Healing Light stays in column 3. The Light's Vigil arrow uses column 2.
-- **Why.** Row 5 has Holy Power now (M-H3). Consecrated Ground moves one row lower. Thus, row 5 has 8 points (with Merciful Light, C-H5) and row 6 has 5.
-- **Who takes it.** Only deep Holy builds with Holy Shock (Shockadin, 38/0/13).
-
-## C-H5. Merciful Light (new talent): row 5, column 1, 2 ranks
-
-- **Proposed text.** "Increases the amount healed by your Holy Shock by 50/100% on targets at or below 35% health."
-- **Requires Holy Shock** (arrow in row 5). The talent changes only the Holy Shock heal.
-- **Problem.** After a large hit on one tank, the Druid heals the most. It has Swiftmend and Nature's Swiftness. The proposed Paladin is 14–18% below the Druid after 3 sec (see Analysis, Healing, part 5). Holy Shock is the only instant heal of the Paladin.
-- **Model.** Decimation (Warlock, Forever) gives a bonus below 35% health. Hammer of Wrath is the Paladin attack below 20% health. Merciful Light is the healing version of this rule.
-- **Value.** At 715 healing power, on a tank at or below 35% health after the hit:
-
-| Against the Druid | 3 sec | 6 sec | 3 sec, short cooldowns | 6 sec, short cooldowns |
-| --- | --- | --- | --- | --- |
-| Proposed, without Merciful Light | −18% | −3% | −14% | −3% |
-| With Merciful Light 2/2 | −2% | +6% | +6% | +9% |
-
-- **No change to the healing in long fights.** Holy Shock gives less healing for each mana point than Flash of Light. Thus, the best cast plan does not use it, also with the bonus. In raids, few targets go below 35% health.
-- **Limit.** After a large hit that leaves the tank above 35% health, the talent gives nothing.
-- **Who takes it.** Row 5 needs 20 Holy points. Holy healers take it. Shock-Retribution (26/0/25) can also take it.
-- **Risk.** In PvP, Shock-Retribution heals an ally at or below 35% health for about 1,630 each 10 sec, with no cast time (see Watch list, W21).
-
-## C-H6. Divine Grace (new talent): row 4, column 4, 2 ranks
-
-- **Proposed text.** "Reduces the cooldown of your Divine Favor by 30/60 sec."
-- **Requires Divine Favor** (arrow in row 4). The talent changes only Divine Favor.
-- **Problem.** The design goal of Holy is the best single-target healer. The lead on one tank is small: +1% to +9% against the Druid (W14).
-- **Model.** Cooldown talents of Classic, for example Improved Reincarnation (Shaman).
-- **Value.** Divine Favor with Holy Light is the largest heal of the Paladin. At 2/2, you cast it each 1 min (beta: each 2 min).
-
-| | One tank, against the Druid | Raid, against the Shaman |
-| --- | --- | --- |
-| Proposed, without Divine Grace | +1% to +9% | −2% to +5% |
-| With Divine Grace 2/2 | +3% to +11% | −1% to +7% |
-
-- **Range.** 715 and 900 healing power, fights of 3, 5 and 10 min (see Analysis, Healing, parts 4 and 5).
-- **Recovery after a large hit.** Divine Favor is ready more often. The table of Merciful Light (C-H5) with all cooldowns applies each 1 min.
-- **The lead stays below the W14 limit.** The Paladin is 3–11% above the Druid on one tank. W14 gives 20% as the limit.
-
-## M-H5. Divine Precision: row 5 → row 4, no requirement
-
-- **Text.** "Improves your chance to hit with Holy spells by 6/12/18%." 3 ranks, the same as the beta.
-- **Change.** Row 4, column 1. In the beta, it requires Holy Shock (row 5). A talent in row 4 cannot require a talent in row 5. Thus, the requirement goes.
-- **Why.** Merciful Light (C-H5) uses the place next to Holy Shock (row 5, column 1). Row 4 then has 4 talents, from column 1 to column 4.
-- **Who takes it.** Holy Shock builds (Shockadin, 38/0/13). Other specs need 15 Holy points.
-- **Risk.** Retribution and Protection can take it with 15 Holy points. It gives spell hit to Exorcism, Holy Wrath and Consecration. Judgements use the melee hit table (see Watch list, W22).
+- **State.** On hold. The beta of 30 October removed Blessing of Light, as Blessing of Light removal (C3) asked. But the beta also adds Oath of Light: the Blessing of Light bonus (+400 Holy Light, +115 Flash of Light) and +229 Holy Shock, on one target.
+- **The decision.** Healing Light 30% helps all targets. Oath of Light helps only one target. In raids, the Paladin is 18–26% below the Druid. On one tank, it is 3–12% above the Druid. The Holy rewrite decides between a larger Healing Light and a % Oath of Light.
+- **Oath of Light.** It gives a flat value. Forever talents give a % (see W27).
