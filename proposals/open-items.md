@@ -58,7 +58,7 @@ These are risks to check in tests. None of them needs a change now. A removed nu
 - [ ] What is the Spirit regeneration formula in Forever? Does Intellect change it? The DoubleZug tests agree with neither the Classic nor the TBC formula.
 - [ ] Can heals start Omen of Clarity for a Druid? Can the Druid use it for Wild Growth? (Druid testers)
 - [ ] How many targets does Prayer of Mending heal in a raid fight? The Priest result depends on it (Priest testers)
-- [ ] Holy Power 5/5 (beta of 30 October): does a critical heal heal for 225% (×1.5 on the full critical heal, the wowsims value) or for 175% (+50% of the bonus)? The Holy results change by about 10%.
+- [ ] Holy Power 5/5 (beta of 30 October): does a critical heal heal for 225% (×1.5 on the full critical heal, the wowsims value) or for 175% (+50% of the bonus, the Classic rule of Ice Shards and Ruin)? At 225%, Holy is 3–10% above the Druid on one tank. At 175%, it is 7% below to 1% above. **Test:** take Holy Power 5/5. Cast Divine Favor, then Holy Light on a target with no Oath of Light. Compare the heal with the average of the tooltip. 2.25 times the average is 225%. 1.75 times the average is 175%.
 - [ ] Oath of Light gives "up to" +400 to Holy Light. Do the low ranks of Holy Light receive less?
 - [ ] Shieldsworn: does a Holy Strike that misses still trigger Holy Shield and Shield Specialization?
 - [ ] Unsealed Wrath: does Holy Strike store a Seal copy and consume the stored copies?
