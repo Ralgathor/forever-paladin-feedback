@@ -58,7 +58,7 @@ The models of the Analysis tabs ran again on the new trees, with no proposal. He
 | Precision | Melee, ranged and spell hit. Each ability uses the correct hit type | Confirms it as the shared hit talent |
 | Anticipation | A raid boss stops critical hits at 440 Defense. Anticipation gives 20 | The stat targets use this cap |
 | Improved Seal of Fury | The mana return does not change with the rank of the Seal. The mana gives no threat | Removed by Shoulder the Burden (C-P5) |
-| Improved Righteous Fury | Applies after armor. Multiplies with Iron Creed (×0.94 × 0.90) | None. See W7 |
+| Improved Righteous Fury | Applies after armor. Multiplies with Iron Creed (×0.94 × 0.91, about −15% in total) | None. See W7 |
 | Shield Specialization | Multiplies Shield Block Value. Mana return is 4%. The mana gives no threat | Stays the main mana source. Shieldsworn adds a return on each Holy Strike |
 | Sacred Duty | % of total Stamina, multiplies with Kings. Decreases the cooldowns of Forbearance spells | None |
 | Swift Judgement | Not on the global cooldown | None |
