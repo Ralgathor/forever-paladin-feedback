@@ -3,7 +3,7 @@
 The beta of 30 October 2026 changes most of the Protection tree. Righteous Fury now increases all threat by 33%. Shieldsworn gives a Holy Strike each 6 sec that triggers Holy Shield and Shield Specialization. Thus, threat and mana are no longer the main problems (see Beta test results). The Protection proposals now give:
 
 - A fix for crushing blows (Redoubt, C-P1). This is the largest difference between the Paladin and the Warrior.
-- A threat transfer for tank swaps and groups (Shoulder the Burden, C-P5).
+- A threat transfer for tank swaps and groups (Shoulder the Burden, C-P5, a baseline spell).
 - A Lay on Hands that does not drain all the mana, and a Hand of Sacrifice that costs less health (Devoted Sacrifice, C-P11).
 - A Reckoning that works in raids: more extra attacks from blocks (Reckoning, C-P12).
 
@@ -15,12 +15,12 @@ The beta of 30 October 2026 changes most of the Protection tree. Righteous Fury 
 | 2 (5) | Precision, Guardian's Favor, Sacred Duty | 7 |
 | 3 (10) | Templar's Bulwark, Improved Hammer of Justice, Shield Specialization, Toughness | 11 |
 | 4 (15) | Swift Judgement, Improved Righteous Fury, Anticipation, Devoted Sacrifice (C-P11) | 11 |
-| 5 (20) | Stoicism, Holy Shield, Reckoning (C-P12), Shoulder the Burden (C-P5) | 9 |
+| 5 (20) | Stoicism, Holy Shield, Reckoning (C-P12) | 8 |
 | 6 (25) | Iron Creed | 3 |
 | 7 (30) | Shieldsworn | 1 |
 
-- Protection has 52 points (beta: 49). The Warrior Protection tree has 50.
-- All talents keep their beta places. The two new talents use the free places in rows 4 and 5, column 4.
+- Protection has 51 points (beta: 49). The Warrior Protection tree has 50.
+- All talents keep their beta places. Devoted Sacrifice (C-P11) uses the free place in row 4, column 4.
 - Row 2, column 3 is not free. The arrow from Redoubt to Shield Specialization passes through it.
 
 ## C-P1. Redoubt: Holy Shield also starts it
@@ -32,19 +32,19 @@ The beta of 30 October 2026 changes most of the Protection tree. Righteous Fury 
 - **Value (wowsims, beta of 30 October).** With Holy Shield (30%) and Redoubt 5/5 (30%), block from talents can be 60%. This removes almost all crushing blows: 12.0% → 0.9% of the boss attacks. The Warrior has 1.1%. Thus, 60% is not too much. Keep 6–30% (see Protection, wowsims check).
 - **Other specs.** Holy and Retribution can take Holy Shield with 20 Protection points. Then their Redoubt also starts with each Holy Shield.
 
-## C-P5. Shoulder the Burden (new talent): row 5, column 4
+## C-P5. Shoulder the Burden (baseline spell)
 
-- **Proposed text.** "You shoulder the burden of a friendly party or raid member, transferring 50% of their threat against all enemies to you." Instant, 30 yards, 3 min cooldown, 45 mana (3% of base mana).
+- **Proposed text.** "You shoulder the burden of a friendly party or raid member, transferring 50% of their threat against all enemies to you." Instant, 30 yards, 5 min cooldown, 45 mana (3% of base mana). All Paladins can learn it.
 - **Problem.** The Paladin tank has no area taunt and no threat transfer. Judgement of Fury taunts only one enemy, at 10 yards. Thus, tank swaps and threat on a group of enemies are difficult. The beta of 30 October gives more threat, but no new tool for a swap.
 - **Change.** Shoulder the Burden moves half of the threat of the ally to the Paladin, on each enemy. The ally keeps the other half. Thus, the ally must still control their threat.
 - **Model.** Fade (Priest) and Feint (Rogue) decrease the threat of a player. Shoulder the Burden also moves that threat to the tank.
 - **Raw threat.** The threat that moves does not change. Righteous Fury does not multiply it.
 - **Tank swaps.** First use Judgement of Fury to take the boss. Then use Shoulder the Burden on the other tank. You then have 1.5 times their threat, and they keep 0.5 times. Do not use it before the taunt: the threat of the other tank decreases, and a damage dealer can then pull the boss.
-- **PvP.** Players do not use threat. Thus, the talent has no effect in PvP.
-- **Why 3 min.** It works on all enemies that the ally has threat on, at any range, and the threat stays moved. Thus, it is near an area taunt. Challenging Shout (Warrior) has 10 min. Mocking Blow (Warrior) has 2 min, but it works on one target for 6 sec. At 3 min, a raid tank uses it 2–3 times in each boss fight.
-- **Sacred Duty.** Sacred Duty does not decrease the cooldown of Shoulder the Burden. The 3 min cooldown is the final value.
-- **Position.** Row 5, column 4, a free place. The beta of 30 October removed Improved Seal of Fury, as the earlier version of this proposal asked.
-- **Other specs.** Holy and Retribution can take it with 20 points, but they have no use for it. The threat goes to them, not to a tank. Thus, only Protection takes Shoulder the Burden.
+- **PvP.** Players do not use threat. Thus, the spell has no effect in PvP.
+- **Why a baseline spell.** The beta of 30 October gives the Protection tree its ability talents: Templar's Bulwark, Swift Judgement, Holy Shield and Shieldsworn. There is no place for one more ability talent.
+- **Why 5 min.** It works on all enemies that the ally has threat on, at any range, and the threat stays moved. Thus, it is near an area taunt. Challenging Shout (Warrior) and Challenging Roar (Druid) have 10 min, but they taunt all enemies. Mocking Blow (Warrior) has 2 min, but it works on one target for 6 sec. Most boss fights last 3–6 min. At 5 min, a raid tank uses it one time for each tank swap.
+- **Sacred Duty.** Sacred Duty does not decrease the cooldown of Shoulder the Burden. The 5 min cooldown is the final value.
+- **Other specs.** Holy and Retribution also have the spell. The threat goes to the caster, not to a tank. Thus, a Holy or Retribution Paladin only takes the boss with it. The risk is low.
 - **No change.** Righteous Fury, Seal of Fury and its absorb shield stay baseline spells.
 
 ## C-P11. Devoted Sacrifice (new talent): row 4, column 4

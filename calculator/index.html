@@ -221,7 +221,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
     <button id="resetAll" type="button">Reset all</button>
   </section>
 
-  <div class="mode-note" id="modeNote" hidden><b>Proposed trees.</b> A purple tag (C-P1, C-P5…) marks a changed or new talent. Builds made here do not load in the beta trees. The proposals change the beta trees of 30 October 2026. This is version 6 of the proposed trees (31 October 2026). A version 1, 2, 3, 4 or 5 code opens on its page.</div>
+  <div class="mode-note" id="modeNote" hidden><b>Proposed trees.</b> A purple tag (C-P1, C-P12…) marks a changed or new talent. Builds made here do not load in the beta trees. The proposals change the beta trees of 30 October 2026. This is version 6 of the proposed trees (31 October 2026). A version 1, 2, 3, 4 or 5 code opens on its page.</div>
 
   <div class="trees" id="trees"></div>
 
@@ -329,12 +329,10 @@ const PROPOSED={
 };
 const PROPOSED_NEW=[
  {pid:"C-P11",tree:"prot",key:"dsac",name:"Devoted Sacrifice",tier:4,col:4,ranks:2,rt:["Your Lay on Hands drains only 75% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 20%.","Your Lay on Hands drains only 50% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 40%."],req:null,status:"N",info:""},
- {pid:"C-P5",tree:"prot",key:"rdef",name:"Shoulder the Burden",tier:5,col:4,ranks:1,rt:["You shoulder the burden of a friendly party or raid member, transferring 50% of their threat against all enemies to you."],req:null,status:"N",info:"45 Mana · 30 yd range · Instant · 3 min cooldown"},
 ];
 // Rows for the proposals table: [id, talent key in proposed trees, talent, tree, today, proposed]
 const PROPOSALS=[
  ["C-P1", "red", "Redoubt", "Protection, row 1", "10% chance when you are hit: +6–30% block", "The same. Each Holy Shield cast also starts it"],
- ["C-P5", "rdef", "Shoulder the Burden (new)", "Protection, row 5", "—", "50% of the threat of an ally moves to you, 3 min cooldown"],
  ["C-P12", "rec", "Reckoning", "Protection, row 5", "8–40% chance after a block, once each 1.5 sec", "20–100% chance after a block, once each 4 sec. The critical hit trigger does not change"],
  ["C-P11", "dsac", "Devoted Sacrifice (new)", "Protection, row 4", "—", "2 ranks: Lay on Hands drains only 75/50% of your current mana, and you take 20/40% less damage from your Hand of Sacrifice"],
  ["C-R3", "sanj", "Sanctified Judgement", "Retribution, row 2", "33/66/100% chance to return 20/40/60% of the Seal cost", "100% chance at all ranks. The return is 20/40/60% of the Seal cost"],
@@ -345,6 +343,7 @@ const BASELINE=[
  ["C2a", "Judgement of Light and Wisdom", "Two separate Judgements", "Use if Personal Judgement of the Crusader (C2) is rejected: one Judgement of Grace that heals and restores mana"],
  ["C4", "Hand of Sacrifice", "Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown", "Up to 825 damage moves to you. Lasts 30 sec, 15 sec cooldown"],
  ["C5", "Hands: Sacrifice, Protection and Freedom", "Blessings that use a Blessing slot", "The spells take the name Hand of. No Blessing slot. One Hand from each Paladin on a target"],
+ ["C-P5", "Shoulder the Burden (new)", "—", "50% of the threat of an ally moves to you, on all enemies. Instant, 30 yards, 5 min cooldown"],
  ["C-P11a", "Lay on Hands", "Drains all your current mana", "Alternative to the Lay on Hands part of Devoted Sacrifice (C-P11): the spell drains 50% of your current mana for all Paladins. Devoted Sacrifice keeps only the Hand of Sacrifice part"]
 ];
 let mode="prop",T=[],BY={};
@@ -553,6 +552,8 @@ ${dn("Two Paladins give all Blessings to a raid. But each Paladin keeps only one
 ${dn("55 damage for each hit was about 2% of a raid boss hit. The pool keeps the budget of 15 hits. Now all hits use it, also large hits. The damage does not disappear: the Paladin takes it and must heal it.")}</li>
 <li>Blessing of Sacrifice, Blessing of Protection and Blessing of Freedom are now Hand of Sacrifice, Hand of Protection and Hand of Freedom. Hands no longer use a Blessing slot. Each Paladin can have one Hand on a target. ${g("C5")}
 ${dn("A save replaced Kings or Might from the same Paladin, and you had to cast the buff again after it. Forever did the same for the Warlock: Bane of Agony and Bane of Doom are a group apart from Curses.")}</li>
+<li>New spell: Shoulder the Burden (all Paladins): Moves 50% of the threat of a party or raid member to you, on all enemies. Instant, 30 yards, 5 min cooldown. ${g("C-P5")}
+${dn("The beta tree has no place for one more ability talent. The Paladin tank still has no area taunt and no threat transfer. Judgement of Fury taunts only one enemy, at 10 yards.")}</li>
 <li>Alternatives, if the recommended changes are not possible:
 <ul>
 <li>Judgement of Light and Judgement of Wisdom become one Judgement of Grace. It heals and restores mana. ${g("C2a")}</li>
@@ -573,8 +574,6 @@ ${dn("This change removes most crushing blows. With Holy Shield and Redoubt 5/5,
 ${dn("Lay on Hands has a 20 min cooldown, thus about one cast for each boss. But it drains all your mana, and the drain is largest at full mana. Thus, Paladins use it only at low mana. At 50%, you can use it at any time in a fight.")}</li>
 <li>${t("rec","Reckoning")}: The chance after Blocking is now 20/40/60/80/100% (was 8/16/24/32/40%). Cannot occur from Blocks more than once every 4 sec (was 1.5 sec). ${g("C-P12")}
 ${dn("A raid boss cannot make critical hits on a tank at the Defense cap. Thus, only the block trigger works in raids. In wowsims: 4.9 → 7.8 extra attacks each min, threat +2% (+3% with Redoubt). The 4 sec limit stops a large increase with Redoubt.")}</li>
-<li>New Talent: ${t("rdef","Shoulder the Burden")} (Row 5, Column 4, 1 point): Moves 50% of the threat of a party or raid member to you, on all enemies. Instant, 30 yards, 3 min cooldown. ${g("C-P5")}
-${dn("The beta of 30 October removed Improved Seal of Fury, as this proposal asked. The Paladin tank still has no area taunt and no threat transfer. Judgement of Fury taunts only one enemy, at 10 yards.")}</li>
 </ul>
 
 <p class="cat"><b>Retribution</b></p>
@@ -621,7 +620,7 @@ tank:[
  {t:"Threat, as a % of the Warrior",c:"Same gear, one boss, no Consecration",b:"118% fresh level 60, 102% Naxxramas",p:"No threat proposals",bars:[["Warrior",100,"o","100%"],["Fresh 60, beta",118,"b","118%"],["Naxxramas, beta",102,"b","102%"]],s:"The beta removes the threat gap. With Consecration: 120–142% of the Warrior. See W28.",d:"Beta of 18 October: 63% of the Warrior. wowsims preset tank: 932 threat per sec (was 663)."},
  {t:"Mana of the tank",c:"Mana per sec, Blessing of Wisdom, no Consecration",b:"+26.1 fresh level 60, +55.2 Naxxramas",p:"No mana proposals",bars:[["Fresh 60, beta",26.1,"b","+26.1"],["Naxxramas, beta",55.2,"b","+55.2"]],s:"Shieldsworn gives Shield Specialization mana from each Holy Strike.",d:"With Consecration on cooldown: −37.5 per sec at fresh level 60. The mana is zero after 1 min 17 sec."},
  {t:"Lay on Hands, tank",c:"Naxxramas, 4,900 mana",b:"The mana is back after 1 min 29 sec",p:"The mana is back after 44 sec",ids:["C-P11"],s:"Half of the mana stays. The tank keeps its threat."},
- {t:"Group tools",b:"Judgement of Fury: one enemy at 10 yards",p:"Shoulder the Burden: 50% of the threat of an ally, on all enemies",ids:["C-P5"],s:"Warrior: Challenging Shout. Druid: Challenging Roar."}
+ {t:"Group tools",b:"Judgement of Fury: one enemy at 10 yards",p:"Shoulder the Burden (baseline spell, 5 min): 50% of the threat of an ally, on all enemies",ids:["C-P5"],s:"Warrior: Challenging Shout. Druid: Challenging Roar."}
 ],
 dps:[
  {t:"DPS on one boss",c:"wowsims test runs, fresh level 60",b:"848",p:"About 892 (+5.2%)",big:1,ids:["C1"],s:"+3% against the beta of 18 October (824). Beta: 93% of the pure average. With Holy Strike Seal trigger: 98%.",d:"Unsealed Wrath triggers only on auto attacks. Thus, Holy Strike triggers only the active Seal."},
