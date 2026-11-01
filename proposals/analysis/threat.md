@@ -234,7 +234,7 @@ The design goal of the Protection Paladin is a tank with the same threat as the 
 
 wowsims Forever gives a second calculation with the full rules of the game.
 
-Conditions: wowsims Forever master commit 895cd67f9 (game files of hotfix push 113554), with the proposals as flags (models/wowsims-b2). The Paladin is Human, with the default tank set, rotation and consumables. Talents 14/32/5 with Redoubt 5/5. Warrior: the pre-raid set. Druid: the default Bear set. Full buffs. A 3 min fight against one level 63 boss from the front, 3,000 iterations.
+Conditions: wowsims Forever master commit 895cd67f9 (game files of hotfix push 113554), with the proposals as flags (models/wowsims-b2). The Paladin is Human, with the default tank set, rotation and consumables. Talents 12/32/7 (the wowsims default tank build) with Redoubt 5/5. Warrior: the pre-raid set. Druid: the default Bear set. Full buffs. A 3 min fight against one level 63 boss from the front, 3,000 iterations.
 
 | Tank | TPS (% of the Warrior) | Damage taken each sec | TMI | Crushing blows |
 | --- | --- | --- | --- | --- |

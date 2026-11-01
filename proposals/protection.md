@@ -151,7 +151,7 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 
 ## wowsims check
 
-- **Sim.** wowsims Forever, branch paladin/hotfix-113554-port, with the proposals as flags (models/wowsims-b2). The default Protection set: default tank gear, rotation and consumables, talents 14/32/5 with Redoubt 5/5. A level 63 boss attacks the Paladin from the front. Full buffs, 3,000 iterations, 2 min.
+- **Sim.** wowsims Forever, branch paladin/hotfix-113554-port, with the proposals as flags (models/wowsims-b2). The default Protection set: default tank gear, rotation and consumables, talents 12/32/7 with Redoubt 5/5. A level 63 boss attacks the Paladin from the front. Full buffs, 3,000 iterations, 2 min.
 - **Warrior.** The Protection Warrior of wowsims with its pre-raid set, for comparison. The gear is not the same.
 
 | Case | Block | Crushing blows | Damage taken each sec | Threat each sec |

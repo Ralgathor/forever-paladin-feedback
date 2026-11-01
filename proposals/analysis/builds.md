@@ -28,9 +28,9 @@ This section gives the main builds for each spec and role. It uses the proposed 
 | Build | Points and code | Threat each sec | Damage taken each sec | TMI | What it gives |
 | --- | --- | --- | --- | --- | --- |
 | PT1. Raid tank | 0/34/17: v6p-3530110213501531-45233 | 1,015 | 296 | 45.3 | Divine Intellect 3, Redoubt 5, Precision 3, Sacred Duty 1, Templar's Bulwark, Shield Specialization 2, Swift Judgement, Improved Righteous Fury 3, Anticipation 5, Holy Shield, Reckoning 5, Iron Creed 3, Shieldsworn. Deflection 4, Benediction 5, Improved Judgement 2, Conviction 3, Sanctified Judgement 3 |
-| Beta tank (reference) | 0/38/13 in the beta trees, with Toughness 5 | 928 | 333 | 57.1 | The tank of Beta test results, no proposals |
+| Beta tank (reference) | 12/32/7 in the beta trees: b2050050002-05302102213301531-502 | 928 | 333 | 57.1 | The wowsims default tank build, no proposals. Toughness 2 |
 
-- **Values.** wowsims with the proposals Redoubt (C-P1) and Reckoning (C-P12). The beta tank uses the beta talents and no proposal.
+- **Values.** wowsims with the proposals Redoubt (C-P1) and Reckoning (C-P12). With the Holy Strike Seal trigger (C1) also, PT1 has 1,041 threat each sec (builds/protection.md). The beta tank uses the beta talents and no proposal.
 - **Row 4 needs 15 points in rows 1–3.** Divine Intellect 3 gives the last point. With Divine Intellect 2, Swift Judgement is not available.
 - **Toughness removal (C-P13).** The 5 free points go to Deflection 4 and Divine Intellect 1. With the beta talents, Deflection 4 in place of Toughness 5 gives the same damage taken (340 against 340). The TMI is worse (58.1 against 55.9).
 - **Devoted Sacrifice (C-P11)** is available to a tank for 2 points in place of Deflection. The sim does not model Lay on Hands.

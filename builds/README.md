@@ -1,39 +1,41 @@
-# Best builds, gear and stat weights
+# Best builds and stat weights
 
-This folder gives the best build, the pre-raid gear and the stat weights of each spec, for the beta trees and for the proposed trees. The values come from wowsims Forever with the proposals patch (`models/wowsims/proposals.patch`). This folder is a reference. It does not change a proposal.
-
-**Trees.** This folder uses the trees of 18 October 2026: the beta of 18 October and the proposed trees of calculator version 5. The beta of 30 October changes the three trees. Thus, the builds and the values of this folder are not current. For the main builds on the current trees, see Analysis, Builds (calculator version 6).
+This folder gives the best build and the stat weights of each spec. It uses the beta trees of 30 October 2026 and the proposed trees of calculator version 6. It also gives a talent order to level up. This folder is a reference. It does not change a proposal.
 
 | Spec | File | Best proposed build | Best beta build |
 | --- | --- | --- | --- |
-| Holy (healer) | [holy.md](holy.md) | P1: `v5p53201132251010512-30200000000000502-0005` | B1: `05320113225101051-500250002-05` |
-| Protection (tank) | [protection.md](protection.md) | PT3: `v5p0003-53030321301551-5215200001` | BT4b: `50003-5230513021301351-50201` |
-| Retribution (damage), raid | [retribution.md](retribution.md) | Holy Shock 21/0/30: `v5p50032032201010002--022553100133032`, or Ret 11/8/32: `v5p5003003-030000000000005-0215531201330321` (equal within 1%) | Holy Shock 23/0/28: `551030032001012--052152310012303` |
-| Retribution (damage), fresh 60 | [retribution.md](retribution.md) | Ret 11/8/32: `v5p5003003-030000000000005-0225531201330311` | 22/0/29: `550031031101002--052251310013303` |
-| Level-up (beta only) | [level-up.md](level-up.md) | — | 12/3/36: `52003002-3-5122533120133032` |
+| Holy (healer) | [holy.md](holy.md) | HB2, 31/12/8: `v6p50320115202101251-50122000000000002-0503` | HB1, 38/5/8: `b250325115202121251-5-0503` |
+| Protection (tank) | [protection.md](protection.md) | PS1, 0/34/17: `v6p-3530110213501531-44233000001` | BT1, 12/32/7: `b2050050002-05302102213301531-502`, or BS1 for more threat |
+| Retribution (damage), raid and fresh 60 | [retribution.md](retribution.md) | RB1, 14/6/31: `v6p050250002-501-05233011201301351` | RB1, 14/6/31: `b2050250002-501-05233011201301351` |
+| Level-up (beta) | [level-up.md](level-up.md) | — | Ends at RB1 |
 
 ## Main results
 
 | Spec | Measure | Proposed | Beta | Proposed against beta |
 | --- | --- | --- | --- | --- |
-| Holy | Healing per sec, pre-raid gear, 3 min | 625 | 519 | +20% |
-| Holy | Healing per sec, raid gear, 3 min | 853 | 742 | +15% |
-| Protection | Threat per sec (TPS), raid | 1,240 | 884 | +40% |
-| Protection | TMI, raid (lower is better) | 22.5 | 26.0 | −13% |
-| Retribution | DPS, raid, best build | 860 | 879 | −2% |
-| Retribution | DPS, fresh 60, best build | 341 | 315 | +8% |
+| Holy | Healing each sec, raid, 5 min | 506 | 506 | 0% |
+| Holy | Healing each sec, one tank, 5 min | 601 | 601 | 0% |
+| Protection | Threat each sec | 1,062 | 928 | +14% |
+| Protection | Damage taken each sec | 296 | 333 | −11% |
+| Protection | TMI (lower is better) | 45.1 | 57.1 | −21% |
+| Retribution | DPS, raid | 960 | 910 | +5.5% |
+| Retribution | DPS, fresh 60 | 324 | 303 | +6.8% |
+
+- **Holy.** The proposals change no Holy talent. HB2 takes Devoted Sacrifice (C-P11) with the free points.
+- **Protection and Retribution.** The Holy Strike Seal trigger (C1) adds threat and damage. Redoubt (C-P1) removes almost all crushing blows.
 
 ## Common rules
 
-- **Codes.** All codes load with 51 points. A code that starts with `v5p` opens on the version 5 page of the calculator. A code with only digits opens on the page of the 18 October beta.
-- **Gear.** Pre-raid gear for all specs. Holy also has a raid set (Naxxramas). The gear search changes one slot at a time and keeps the best item in the sim. Thus, it gives a good set, not a proven best set.
-- **Item list.** On 28 October 2026, wowsims rebuilt its item list from the live Forever game cache. Some items left the list (for example Hand of Edward the Odd and Arcanoweave Cloak). All sets of this folder use only items of the new list.
-- **wowsims links.** Each link loads the gear and the talents in wowsims. The live wowsims has no proposals. Thus, a proposed build loads in the beta tree order, and the site gives beta values for it. The values of this folder come from the sim with the proposals.
-- **Stat weights.** Each stat changes by a small amount, with the same random seed for all runs. The reference stat is 1.00: healing power for Holy, Strength (and spell damage) for Protection, Strength for Retribution.
+- **Codes.** All codes load with 51 points. A code that starts with `v6p` opens the proposed trees. A code that starts with `b2` opens the beta trees of 30 October.
+- **Sim.** wowsims Forever, master of 1 November 2026 (commit 895cd67f9), with the proposals as flags (`models/wowsims-b2`). 3 min, one level 63 boss, 3,000 iterations.
+- **Gear.** The default gear set of each spec in wowsims Forever. This folder has no gear search.
+- **Holy.** wowsims Forever has no Holy healing sim. The Holy values come from the healing model (`models/beta-30-oct/healing_b2.py`), with 200% critical heals (Holy Power 5/5, main hypothesis).
+- **Stat weights.** Each stat changes by a small amount, with the same random seed for all runs. The reference stat is 1.00: healing power for Holy, Strength for Retribution. For Protection, the table gives the change for each point.
+- **Talent search.** A hill climb in wowsims (`models/wowsims-b2/search.py`). It gives a good build, not a proven best build.
 
 ## Sources
 
-- Tank: build search and gear path in wowsims Forever (commit 69e0e5b, item list of commit 47b3c01).
-- Healer: healing model search (`models/healing`), with a wowsims check. Gear search and stat weights in wowsims Forever (commit 47b3c01).
-- Damage: build search and gear path in wowsims Forever (commit 47b3c01).
-- Level-up: wowsims Forever (commit 69e0e5b), beta talents.
+- Damage and tank: talent search and stat weights in wowsims Forever (commit 895cd67f9). Scripts and logs in `models/wowsims-b2` (`search.py`, `finals.py`, `finals.log`).
+- Healer: healing model and stat weights (`models/beta-30-oct/holy_builds_b2.py`).
+- Level-up: wowsims Forever (commit 895cd67f9), beta talents (`models/wowsims-b2/levelup.py`).
+- The earlier files (trees of 18 October, calculator version 5) are in the history of the repository.
