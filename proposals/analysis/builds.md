@@ -15,13 +15,13 @@ This section gives the main builds for each spec and role. It uses the proposed 
 
 | Build | Points and code | Healing (raid / one tank, healing each sec) | What it gives |
 | --- | --- | --- | --- |
-| HB1. Raid healer, beta talents | 38/5/8: v6p50325115202121251-5-0503 | 533 / 633 | The build of the healing model. Divine Intellect 5, Benediction 5, Conviction 3. Improved Seals 5, Holy Conduit 2 and Consecrated Ground 2 fill the rows |
-| HB2. Raid healer, Devoted Sacrifice | 31/12/8: v6p50320115202101251-50122000000000002-0503 | 533 / 633 | Devoted Sacrifice 2/2 (C-P11): Lay on Hands drains only 50%. Guardian's Favor 2/2 (Hand of Protection each 3 min), Sacred Duty 2/2 (Divine Shield −60 sec). Precision 1. No Improved Seals and no Consecrated Ground |
+| HB1. Raid healer, beta talents | 38/5/8: v6p50325115202121251-5-0503 | 506 / 601 | The build of the healing model. Divine Intellect 5, Benediction 5, Conviction 3. Improved Seals 5, Holy Conduit 2 and Consecrated Ground 2 fill the rows |
+| HB2. Raid healer, Devoted Sacrifice | 31/12/8: v6p50320115202101251-50122000000000002-0503 | 506 / 601 | Devoted Sacrifice 2/2 (C-P11): Lay on Hands drains only 50%. Guardian's Favor 2/2 (Hand of Protection each 3 min), Sacred Duty 2/2 (Divine Shield −60 sec). Precision 1. No Improved Seals and no Consecrated Ground |
 
 - **HB2 is the main build with the proposals.** It gives up only damage talents: Improved Seals and Consecrated Ground. The healing does not change.
 - **Holy needs 31 points for Light's Vigil.** Holy Conduit 2/2 fills rows 1–5. Thus, a Holy healer has 2 points of filler (Holy Conduit gives only cheaper Consecration, Holy Wrath, Exorcism and Hammer of Wrath).
 - **The 3 Retribution points after Benediction** go to Conviction 3/3: +6% critical chance, also more Illumination mana.
-- **Healing values.** The model uses a 225% critical heal (Holy Power 5/5). At 175%, raid healing is 479 and one tank is 568 (see Open items).
+- **Healing values.** The model uses a 200% critical heal (Holy Power 5/5, main hypothesis). At 225%, raid healing is 533 and one tank is 633. At 175%, 479 and 568 (see Open items).
 
 ## 2. Protection
 
@@ -62,5 +62,5 @@ This section gives the main builds for each spec and role. It uses the proposed 
 
 - The values come from wowsims and models, not from combat logs.
 - wowsims does not model Lay on Hands, Shoulder the Burden (C-P5) or Hand of Sacrifice (C4).
-- The Holy model uses 225% critical heals. The beta test of Holy Power can change the Holy values (see Open items).
+- The Holy model uses 200% critical heals. The beta test of Holy Power can change the Holy values (see Open items).
 - The earlier builds (calculator version 5, beta of 18 October) are in the history of the repository.

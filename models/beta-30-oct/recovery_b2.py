@@ -6,7 +6,7 @@ sys.path.insert(0, sys.argv[1] if len(sys.argv) > 1 else ".")
 import recovery as R
 from recovery import B, GCD, best, HPG, CRIT_BASE, PAL_CRIT
 
-def paladin_burst_b2(hp=HPG, bonus=1.25, conv=0.06, light=1.12):
+def paladin_burst_b2(hp=HPG, bonus=1.0, conv=0.06, light=1.12):
     c = CRIT_BASE + PAL_CRIT + conv
     fol = (308 + 115 + 1.5/3.5*hp) * light
     hl = (1580 + 400 + 2.5/3.5*hp) * light
@@ -23,7 +23,8 @@ if __name__ == "__main__":
         print("## healing power", hp, "| 3 sec, 6 sec (all cooldowns) | 3 sec, 6 sec (short cooldowns only)")
         cases = [("Priest", R.priest_burst(hp)), ("Druid", R.druid_burst(hp)), ("Shaman", R.shaman_burst(hp)),
                  ("Paladin, beta 18 Oct", R.paladin_burst(hp)), ("Paladin, beta 30 Oct", paladin_burst_b2(hp)),
-                 ("Paladin, beta 30 Oct, crit 175%", paladin_burst_b2(hp, bonus=0.75))]
+                 ("Paladin, beta 30 Oct, crit 175%", paladin_burst_b2(hp, bonus=0.75)),
+                 ("Paladin, beta 30 Oct, crit 225%", paladin_burst_b2(hp, bonus=1.25))]
         for name, case in cases:
             vals = [best(case, W, lc) for lc in (True, False) for W in (3.0, 6.0)]
             print(f"  {name:34s} " + " | ".join(f"{round(v):5d}" for v, _ in vals))

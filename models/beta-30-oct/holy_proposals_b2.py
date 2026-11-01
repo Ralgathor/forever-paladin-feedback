@@ -6,7 +6,7 @@ import healing_model as H
 from healing_model import Spell, cd_limit, regen_full, solve, priest, druid, shaman, max_hps, HPG, CRIT_BASE, PAL_CRIT, HOT_CRIT, ll_end_pool
 import healing_b2 as B
 
-def pal(hp=HPG, tank=False, oath=None, bonus=1.25, conv=0.06, boundless=0.30, light=1.12, rev=0.30, illum=0.50, bened=0.10, ling=0.0, df_cd=120, infall=False):
+def pal(hp=HPG, tank=False, oath=None, bonus=1.0, conv=0.06, boundless=0.30, light=1.12, rev=0.30, illum=0.50, bened=0.10, ling=0.0, df_cd=120, infall=False):
     if oath is None: oath = tank
     c = CRIT_BASE + PAL_CRIT + conv
     c_hs = c + (0 if oath else boundless)
@@ -41,7 +41,8 @@ TS=(180,300,600)
 cases=[("Beta 30 Oct",{}),("+ Lingering Light 1/2",dict(ling=0.10)),("+ Lingering Light 2/2",dict(ling=0.20)),
        ("+ Reverence 50%",dict(rev=0.50)),("+ Rev 50% + LL 2/2",dict(rev=0.50,ling=0.20)),("+ Rev 50% + LL 1/2",dict(rev=0.50,ling=0.10)),
        ("+ Rev 50% + LL 2/2 + Infusion all",dict(rev=0.50,ling=0.20,infall=True)),
-       ("175%: beta",dict(bonus=0.75)),("175%: + Rev 50% + LL 2/2",dict(bonus=0.75,rev=0.50,ling=0.20))]
+       ("175%: beta",dict(bonus=0.75)),("175%: + Rev 50% + LL 2/2",dict(bonus=0.75,rev=0.50,ling=0.20)),
+       ("225%: beta",dict(bonus=1.25)),("225%: + Rev 50% + LL 2/2",dict(bonus=1.25,rev=0.50,ling=0.20))]
 for hp in (715,900):
   for tank in (False,True):
     O={T:B.others(hp,T,tank) for T in TS}

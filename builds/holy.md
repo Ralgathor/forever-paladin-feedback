@@ -6,13 +6,13 @@ This file gives the best healing build on the trees of 30 October 2026, the valu
 
 | Trees | Build | Points | Code | Raid, 3 / 5 / 10 min | One tank, 3 / 5 / 10 min |
 | --- | --- | --- | --- | --- | --- |
-| Proposed | HB2 | 31/12/8 | `v6p50320115202101251-50122000000000002-0503` | 629 / 533 / 450 | 732 / 633 / 534 |
-| Beta | HB1 | 38/5/8 | `b250325115202121251-5-0503` | 629 / 533 / 450 | 732 / 633 / 534 |
+| Proposed | HB2 | 31/12/8 | `v6p50320115202101251-50122000000000002-0503` | 596 / 506 / 427 | 695 / 601 / 507 |
+| Beta | HB1 | 38/5/8 | `b250325115202121251-5-0503` | 596 / 506 / 427 | 695 / 601 / 507 |
 
-- Healing each sec after overhealing, 715 healing power.
+- Healing each sec after overhealing, 715 healing power, 200% critical heals (Holy Power 5/5, main hypothesis).
 - In both trees, all healing talents fit in 51 points. Thus, the best healing build takes all of them. The other points give only utility.
 - The proposed trees have no Holy talent change. Thus, HB1 and HB2 heal the same. HB2 takes Devoted Sacrifice (C-P11) and Protection saves in place of Improved Seals and Consecrated Ground.
-- **Stat weights.** MP5 is the best stat for each point in all fight lengths (2.3–3.3 healing power). Intellect is about 1 healing power, crit rating 1.4–1.7 (part 3).
+- **Stat weights.** MP5 is the best stat for each point in all fight lengths (2.3–3.3 healing power). Intellect is about 1 healing power, crit rating 1.3–1.5 (part 3).
 
 ## 1. Builds
 
@@ -39,18 +39,18 @@ The healing without the talent, 5 min fight, against HB1/HB2.
 
 | Talent | Raid | One tank |
 | --- | --- | --- |
-| Reverence 2/2 and Illumination 5/5 (Illumination needs Reverence) | −20.7% | −20.7% |
-| Holy Power 5/5 (225% critical heals) | −15.3% | −15.3% |
+| Reverence 2/2 and Illumination 5/5 (Illumination needs Reverence) | −20.8% | −20.8% |
 | Illumination 5/5 | −11.9% | −11.9% |
+| Holy Power 5/5 (200% critical heals) | −10.8% | −10.8% |
 | Healing Light 3/3 | −10.7% | −10.7% |
-| Conviction 3/3 | −7.7% | −7.7% |
-| Divine Intellect 5/5 | −2.7% | −2.7% |
-| Divine Favor | −2.6% | −2.7% |
+| Conviction 3/3 | −6.9% | −6.9% |
+| Divine Intellect 5/5 | −2.6% | −2.6% |
+| Divine Favor | −2.3% | −2.4% |
 | Benediction 5/5 | 0% | 0% |
 | Boundless Light 2/2 | 0% | 0% |
 | Light's Vigil | 0% | 0% |
 
-- **Mana talents give the most.** Reverence and Illumination together give 21% of the healing. Holy Power gives 15%.
+- **Mana talents give the most.** Reverence and Illumination together give 21% of the healing. Holy Power gives 11% (15% at 225%).
 - **Holy Shock, Boundless Light and Light's Vigil give 0%.** The best spell plan does not cast them: they heal the least for each mana point. Holy Shock has value when you move.
 - **Benediction gives 0%** because the plan casts no instant spell. It has value with Holy Shock and Seals.
 
@@ -60,17 +60,17 @@ Each stat + a small amount (40 healing power, Intellect or Spirit, 10 MP5, 14 cr
 
 | Stat | Raid, 3 min | Raid, 5 min | Raid, 10 min | One tank, 5 min |
 | --- | --- | --- | --- | --- |
-| Healing each sec for 1 healing power | 0.368 | 0.357 | 0.301 | 0.357 |
+| Healing each sec for 1 healing power | 0.349 | 0.340 | 0.287 | 0.340 |
 | Healing power | 1.00 | 1.00 | 1.00 | 1.00 |
-| Intellect | 1.38 | 0.94 | 0.75 | 1.02 |
-| Spirit | 0.35 | 0.38 | 0.61 | 0.42 |
-| MP5 | 2.31 | 2.48 | 3.31 | 2.65 |
-| Crit rating | 1.71 | 1.41 | 1.41 | 1.67 |
+| Intellect | 1.33 | 0.90 | 0.71 | 0.98 |
+| Spirit | 0.34 | 0.38 | 0.61 | 0.42 |
+| MP5 | 2.30 | 2.47 | 3.32 | 2.66 |
+| Crit rating | 1.54 | 1.26 | 1.26 | 1.49 |
 
 - **MP5 has the most value in all cases.** Its value increases with the fight length.
 - **Intellect** gives mana and critical chance. In a short fight, the critical chance has more value.
 - **Spirit** has little value: Reverence keeps only 30% of the Spirit regeneration during casts.
-- **Crit rating** gives larger heals (225%) and Illumination mana.
+- **Crit rating** gives larger heals (200%) and Illumination mana.
 
 ## 4. Gear
 
@@ -79,5 +79,5 @@ This folder has no new gear search for Holy. wowsims Forever has no Holy healing
 ## 5. Limits
 
 - The values come from a model, not from combat logs. The model uses fixed overhealing for each spell.
-- The model uses 225% critical heals (Holy Power 5/5). The beta test of Holy Power can change these values (see Open items).
+- The model uses 200% critical heals (Holy Power 5/5, decision of 1 November). The beta test of Holy Power can change these values (see Open items).
 - The earlier values (trees of 18 October) are in the history of the repository.

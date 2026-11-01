@@ -613,9 +613,9 @@ window.addEventListener("scroll",hideTip,{passive:true});
 // Beta and proposals compared: one card per topic. bars: [label, value, kind b|p|o, shown text?]
 const CMP={
 heal:[
- {t:"Raid healing per sec",c:"715 healing power, 3 min",b:"629",p:"No proposal",big:1,bars:[["Priest",948,"o"],["Druid",855,"o"],["Shaman",709,"o"],["Paladin, beta",629,"b"]],s:"26% below the Druid and 11% below the Shaman. This is accepted: Holy is the best single-target healer, not the best raid healer.",d:"Beta of 18 October: 616. Mana is the limit: the best cast plan is almost only Flash of Light."},
- {t:"One tank, healing per sec",c:"715 healing power, 3 min, Oath of Light on the tank",b:"732",p:"Not modeled yet",big:1,bars:[["Paladin, beta",732,"b"],["Druid",681,"o"],["Shaman",607,"o"],["Priest",606,"o"]],s:"First of the four healers: 3–12% above the Druid.",d:"If Holy Power gives a 175% critical heal (not 225%), the Paladin is 7% below to 1% above the Druid. Maximum raw healing per sec: Paladin 1,536, other healers 1,278–1,320."},
- {t:"Recovery after a large hit",c:"First 3–6 sec, against the Druid",b:"11–18% above with Divine Favor, 2% below with short cooldowns",p:"No proposal",s:"The beta meets the single-target goal with Divine Favor."},
+ {t:"Raid healing per sec",c:"715 healing power, 3 min",b:"596",p:"No proposal",big:1,bars:[["Priest",948,"o"],["Druid",855,"o"],["Shaman",709,"o"],["Paladin, beta",596,"b"]],s:"30% below the Druid and 16% below the Shaman. This is accepted: Holy is the best single-target healer, not the best raid healer.",d:"Beta of 18 October: 616. Mana is the limit: the best cast plan is almost only Flash of Light."},
+ {t:"One tank, healing per sec",c:"715 healing power, 3 min, Oath of Light on the tank",b:"695",p:"Not modeled yet",big:1,bars:[["Paladin, beta",695,"b"],["Druid",681,"o"],["Shaman",607,"o"],["Priest",606,"o"]],s:"About equal to the Druid: 2% below to 7% above (200% critical heal). In fights of 10 min, the Druid is first.",d:"At 225% (wowsims), the Paladin is 3–10% above the Druid. At 175%, 1–7% below. Maximum raw healing per sec: Paladin 1,452, other healers 1,278–1,320."},
+ {t:"Recovery after a large hit",c:"First 3–6 sec, against the Druid",b:"2–6% above with Divine Favor, 6–7% below with short cooldowns",p:"No proposal",s:"200% critical heal. At 225%: 11–18% above with Divine Favor."},
  {t:"Lay on Hands at full mana",b:"Drains all 4,416 mana",p:"Drains 2,208 (50%)",ids:["C-P11"],s:"With Devoted Sacrifice 2/2, the mana is back after 1 min 38 sec (was 3 min 15 sec)."}
 ],
 tank:[
