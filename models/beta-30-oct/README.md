@@ -9,5 +9,6 @@ These scripts run the models of the Analysis tabs on the beta trees of 30 Octobe
 | threat_b2.py | `python3 threat_b2.py ..` | Protection threat and mana against the Warrior and the Druid |
 | holy_proposals_b2.py | `python3 holy_proposals_b2.py` | Reverence 50% (C-H1) and Lingering Light (C-H2, withdrawn) against the Druid: raid and one tank |
 | retribution_b2.py | `python3 retribution_b2.py ../damage` | Retribution with Unsealed Wrath: Holy Strike Seal trigger (C1), Burning Zeal (C-R4), Seal plans and mana (W29), against the pure average |
+| pvp_burst_b2.py | `python3 pvp_burst_b2.py` | PvP burst in one Hammer of Justice stun, and Reckoning charges in PvP (W6), beta and proposed |
 
 The inputs come from wowsims Forever, branch `paladin/hotfix-113554-port`. Each script gives its inputs at the top. The results are in Beta test results.

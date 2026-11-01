@@ -1,5 +1,54 @@
 # PvP burst check
 
+## Beta of 30 October 2026
+
+This check is for Watch list W6. The model is models/beta-30-oct/pvp_burst_b2.py. The values are estimates, not a simulation.
+
+**Builds**
+
+- **0/25/26, two-handed weapon (the Reckoning bomb).** Protection 25: Reckoning 5/5, Swift Judgement, Improved Hammer of Justice 3/3. Retribution 26: Seal of Command, Conviction 3/3, Sacred Arbiter, Two-Handed Weapon Specialization 3/3, Vengeance 3/3.
+- **0/20/31, two-handed weapon (Unsealed Wrath).** Protection 20 gives Swift Judgement and Improved Hammer of Justice. This build cannot take Reckoning.
+- **Protection with a shield.** Reckoning 5/5 and Shieldsworn. A one-handed weapon gives a smaller burst.
+
+**Changes against the check of 18 October**
+
+- Two-Handed Weapon Specialization now increases only physical damage. Thus, it does not increase Seals, Judgements and the Holy damage of Holy Strike.
+- Conviction 3/3 gives +6% critical chance (26% in the model).
+- Improved Hammer of Justice 3/3 gives a 45 sec cooldown.
+- Reckoning (C-P12) replaces Reckoning (C-P6). The release stays as in the beta: the stored attacks occur on the next auto attack.
+
+**Burst in one 6 sec Hammer of Justice stun**
+
+| Case | 0/25/26, no stored attacks | 0/25/26, 4 stored attacks | 0/20/31, Unsealed Wrath |
+| --- | --- | --- | --- |
+| Beta | 2,070 | 3,630 | 2,400 |
+| Proposed (C1, C-P12) | 2,180 (+5%) | 3,740 (+3%) | 2,510 (+5%) |
+
+- Each extra attack does about 390 damage. 4 stored attacks add about 1,560.
+- Holy Strike Seal trigger (C1) adds one Seal of Command chance to Holy Strike: about +110. This is the only change from the proposals.
+- Unsealed Wrath gives 3 stored Seal of Command copies. A Seal change consumes them: about +330. C1 does not change Unsealed Wrath, because Unsealed Wrath triggers only on auto attacks.
+
+**Reckoning charges (5/5, one melee attacker, an attack each 1.5 sec)**
+
+| Case | Charges each min | Time to 4 charges |
+| --- | --- | --- |
+| Two-handed weapon, beta and C-P12 | 8.0 | 30 sec |
+| Shield, 35% block, beta | 13.2 | 18 sec |
+| Shield, 35% block, C-P12 | 16.0 | 15 sec |
+| Shield, 60% block (with Redoubt, C-P1), beta | 16.6 | 14 sec |
+| Shield, 60% block (with Redoubt, C-P1), C-P12 | 18.4 | 13 sec |
+
+- **Two-handed weapon.** There is no block without a shield. Thus, only the critical hit trigger works, and C-P12 does not change the bomb.
+- **Shield.** With C-P12, 4 charges come 1–3 sec sooner. But a one-handed weapon does less damage: 4 stored attacks add about 1,050 (estimate), against 1,560 with a two-handed weapon.
+
+**Result**
+
+- The proposals increase the PvP burst by 3–5%. All of it comes from Holy Strike Seal trigger (C1).
+- Reckoning (C-P12) does not change the largest burst (two-handed weapon). It makes the smaller shield burst a little more frequent.
+- Thus, W6 needs no change to the proposals. Monitor the bomb in the beta (W6, W26).
+
+## Beta of 18 October 2026 (earlier check)
+
 This check is for Reckoning (C-P6). The build is 0/26/25 with a two-handed weapon. It is the build v5p-532300210215002-5005031211331 in the calculator (RB5):
 
 - Protection 26: Reckoning 5/5, Swift Judgement, Improved Hammer of Justice 2/3.
