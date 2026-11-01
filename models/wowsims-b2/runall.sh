@@ -1,0 +1,9 @@
+#!/bin/sh
+# builds/: all talent searches (about 4 hours with 4 cores).
+cd "$(dirname "$0")"
+python3 search.py ret-raid 050250002-501-05233011201301351 050250002-5-05233301101301351
+python3 search.py ret-raid-prop 050250002-501-05233011201301351 050250002-5-05233301101301351
+python3 search.py ret-fresh 050250002-501-05233011201301351
+python3 search.py ret-fresh-prop 050250002-501-05233011201301351
+python3 search.py prot 050050002-05302102213301531-502
+python3 search.py prot-prop -3530110213501531-45233
