@@ -35,6 +35,16 @@ func TestFeedbackRun(t *testing.T) {
 	}
 	enc := core.MakeSingleTargetEncounter(5)
 	enc.Duration = dur
+	ntg := 1
+	if v := os.Getenv("FEEDBACK_TARGETS"); v != "" {
+		ntg, _ = strconv.Atoi(v)
+		t0 := core.FreshDefaultTargetConfig()
+		t0.MinBaseDamage *= 1.0 / 3
+		enc.Targets = nil
+		for i := 0; i < ntg; i++ {
+			enc.Targets = append(enc.Targets, t0)
+		}
+	}
 	raid := core.SinglePlayerRaidProto(player, core.FullPartyBuffs, core.FullRaidBuffs, core.FullDebuffs)
 	raid.Tanks = append(raid.Tanks, &proto.UnitReference{Type: proto.UnitReference_Player, Index: 0})
 	rsr := &proto.RaidSimRequest{Raid: raid, Encounter: enc, SimOptions: &proto.SimOptions{Iterations: 3000, RandomSeed: 101}}
@@ -43,6 +53,15 @@ func TestFeedbackRun(t *testing.T) {
 		t.Fatal(res.Error.Message)
 	}
 	u := res.RaidMetrics.Parties[0].Players[0]
+	per := make([]float64, ntg)
+	for _, a := range u.Actions {
+		for _, tm := range a.Targets {
+			if int(tm.UnitIndex) < ntg {
+				per[tm.UnitIndex] += tm.Threat / 3000 / dur
+			}
+		}
+	}
+	fmt.Printf("PERTARGET %v\n", per)
 	var casts, hits, crits, miss, dodge, parry, block, crush float64
 	for _, a := range res.EncounterMetrics.Targets[0].Actions {
 		for _, tm := range a.Targets {

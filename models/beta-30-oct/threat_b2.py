@@ -23,7 +23,16 @@ from threat_model import table, armor_dr, CRUSADER, NORM_1H, HS_THREAT, CONS_EVE
 RF_ALL, RF_HOLY = 1.33, 1.9
 B2T = dict(prec=3, red=5, sj=1, reck=5, ic=3, hsh=1, ij=2, conv=3, shs=1, sanj=3, ben=5, ss=2)
 
-def paladin_b2(g, tal=B2T, crusader=True, consecration=False, detail=False, rf_all=RF_ALL):
+# Kept proposals (threat_tables_b2.py). wowsims Forever, default tank set, 3 min (models/wowsims-b2):
+# block 42.3% (beta) -> 61.6% (Redoubt, C-P1). Reckoning extra attacks each min: 4.9 (beta), 6.3 (C-P1),
+# 9.3 (C-P1 and Reckoning, C-P12).
+CP1_BLOCKS = 61.6 / 42.3
+CP12_EXTRA = 9.3 / 6.3
+
+def paladin_b2(g, tal=B2T, crusader=True, consecration=False, detail=False, rf_all=RF_ALL, prop=()):
+    """prop: kept proposals. "C1": Holy Strike triggers Seal of Fury. "CP1": each Holy Shield cast starts Redoubt
+    (more blocks). "CP12": Reckoning 100% chance after a block, once each 4 sec. Personal Judgement of the Crusader (C2):
+    use crusader=True when the raid needs the Judgement of the tank (the beta then has crusader=False)."""
     t = lambda k: tal.get(k, 0)
     hit = g.hit + 0.01 * t("prec")
     crit = g.crit + 0.02 * t("conv")
@@ -32,7 +41,13 @@ def paladin_b2(g, tal=B2T, crusader=True, consecration=False, detail=False, rf_a
     seals = 1 + 0.03 * t("is")                        # Improved Seals: 3% each rank now
     hs_cd = 6 if t("shs") else 10
     hs_blocks = (1.5 + t("red") / 5) / 10             # beta rule: 2.5 blocks each 10 sec with Redoubt 5/5
+    if "CP1" in prop:
+        hs_blocks = min(0.4, hs_blocks * CP1_BLOCKS)   # 4 charges each 10 sec
     extra = 1.0 / 10 * t("reck") / 5
+    if "CP1" in prop:
+        extra *= 6.3 / 4.9
+    if "CP12" in prop:
+        extra *= CP12_EXTRA
     land_a, f_auto = table(hit, crit, auto=True)
     land_s, f_spec = table(hit, crit, auto=False)
     swings = 1 / g.wspeed
@@ -49,6 +64,8 @@ def paladin_b2(g, tal=B2T, crusader=True, consecration=False, detail=False, rf_a
     src["Auto attacks"] = g.weapon() * (1 - dr) * f_auto * swings * phys
     src["Reckoning attacks"] = g.weapon() * (1 - dr) * f_auto * extra * phys
     hits = land_a * swings + land_a * extra
+    if "C1" in prop:
+        hits += land_s / hs_cd
     src["Seal of Fury"] = (35 + 0.10 * sp) * seals * (1 + max(0.0, crit - CRIT_SUPP)) * holy * hits
     if consecration:
         src["Consecration"] = (312 + 0.336 * sp) * 0.85 * (1 + 0.5 * crit) * holy / CONS_EVERY

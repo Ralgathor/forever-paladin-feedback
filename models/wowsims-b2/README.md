@@ -9,8 +9,11 @@ These files add the proposals to wowsims Forever, branch `paladin/hotfix-113554-
 | feedback_run_test.go | One Retribution sim: `FEEDBACK_DUR` (sec), `FEEDBACK_BUFFS` (`full` or `lean`), 3,000 iterations |
 | feedback_prot_test.go | One Protection sim (default tank set, full buffs, level 63 boss in front): threat, damage taken, TMI (6 sec window) and the boss attack table |
 | feedback_warrior_test.go | The same for the Protection Warrior (pre-raid set), for comparison |
+| feedback_bear_test.go | The same for the Druid tank (default Bear set): threat, damage taken, TMI and crushing blows |
+| `FEEDBACK_TARGETS` | In the three tank tests: the number of targets. Each target hits for 1/3 of the boss. The tests then print the threat on each target |
 | run.sh | All runs: `./run.sh <wowsims clone>` |
 
 - **Full buffs.** The wowsims test buffs, with Mana Spring Totem, Mana Tide Totem and Atiesh.
 - **Lean buffs.** Gift of the Wild, Battle Shout, Kings, Might and Wisdom only.
-- The results are in Retribution, wowsims check, and in Protection, wowsims check.
+- The results are in Retribution, wowsims check, in Protection, wowsims check, and in Analysis, Threat, parts 7 and 8.
+- The threat runs of Analysis, Threat, used the master branch at commit 895cd67f9. It contains db28d84a8.

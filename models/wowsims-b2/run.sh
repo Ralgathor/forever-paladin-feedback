@@ -10,6 +10,7 @@ cp "$D/proposals_sim.go" sim/paladin/
 cp "$D/feedback_run_test.go" sim/paladin/retribution/
 cp "$D/feedback_prot_test.go" sim/paladin/protection/feedback_run_test.go
 cp "$D/feedback_warrior_test.go" sim/warrior/protection/feedback_run_test.go
+cp "$D/feedback_bear_test.go" sim/druid/feralbear/
 GRPC_PROTO="$(python3 -c 'import grpc_tools, os; print(os.path.join(os.path.dirname(grpc_tools.__file__), "_proto"))')"
 python3 -m grpc_tools.protoc -I=./proto -I="$GRPC_PROTO" \
   --go_opt=Mgoogle/protobuf/descriptor.proto=google.golang.org/protobuf/types/descriptorpb --go_out=./sim/core ./proto/*.proto
@@ -26,3 +27,18 @@ done; done
 cd ../../warrior/protection
 go test -tags with_db -c -o /tmp/wartest .
 FEEDBACK_DUR=120 /tmp/wartest -test.run TestFeedbackRun -test.v | grep RESULT
+# Analysis, Threat, parts 7 and 8: 3 min, 1, 3 and 5 targets (each target hits for 1/3 of the boss when FEEDBACK_TARGETS is set)
+cd ../../paladin/protection
+for p in "" C1 CP1 CP1,RK100,RKICD4 CP1,RK100,RKICD4,C1 CP1,RK100,RKICD4,C1,NOTOUGH; do
+  FEEDBACK_DUR=180 PROPOSE=$p /tmp/prottest -test.run TestFeedbackRun -test.v | grep -E "RESULT|TMI"
+done
+for n in 1 3 5; do for p in "" CP1,RK100,RKICD4,C1; do
+  FEEDBACK_DUR=180 FEEDBACK_TARGETS=$n PROPOSE=$p /tmp/prottest -test.run TestFeedbackRun -test.v | grep PERTARGET
+done; done
+cd ../../warrior/protection
+FEEDBACK_DUR=180 /tmp/wartest -test.run TestFeedbackRun -test.v | grep -E "RESULT|TMI"
+for n in 1 3 5; do FEEDBACK_DUR=180 FEEDBACK_TARGETS=$n /tmp/wartest -test.run TestFeedbackRun -test.v | grep PERTARGET; done
+cd ../../druid/feralbear
+go test -tags with_db -c -o /tmp/beartest .
+FEEDBACK_DUR=180 /tmp/beartest -test.run TestFeedbackBear -test.v | grep RESULT
+for n in 1 3 5; do FEEDBACK_DUR=180 FEEDBACK_TARGETS=$n /tmp/beartest -test.run TestFeedbackBear -test.v | grep PERTARGET; done
