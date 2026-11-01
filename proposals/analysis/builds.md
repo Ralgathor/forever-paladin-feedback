@@ -9,7 +9,7 @@ This section gives the main builds for each spec and role. It uses the proposed 
 - **Protection** uses 34 points for Shieldsworn and all tank talents. The tank then has 17 points for Retribution rows 1–2: Deflection, Benediction, Improved Judgement, Conviction and Sanctified Judgement.
 - **Retribution** needs 31 points for Unsealed Wrath. The dips into Holy (Divine Strength, Reverence, Improved Seals, Holy Conduit) and Protection (Divine Intellect) are strong.
 - **PvP.** The Reckoning bomb (0/25/26) and the Unsealed Wrath build (0/20/31) both take Swift Judgement and Hammer of Justice each 45 sec.
-- **Method.** wowsims Forever (branch paladin/hotfix-113554-port, 3,000 iterations, 3 min, full buffs) for Protection and Retribution. The Holy healing model (models/beta-30-oct/healing_b2.py, 715 healing power, 5 min) for Holy. The PvP burst model (models/beta-30-oct/pvp_burst_b2.py) for one Hammer of Justice stun.
+- **Method.** wowsims Forever (master of 1 November, 3,000 iterations, 3 min, full buffs) for Protection and Retribution. The Holy healing model (models/beta-30-oct/healing_b2.py, 715 healing power, 5 min) for Holy. The PvP burst model (models/beta-30-oct/pvp_burst_b2.py) for one Hammer of Justice stun.
 
 ## 1. Holy
 
@@ -27,8 +27,8 @@ This section gives the main builds for each spec and role. It uses the proposed 
 
 | Build | Points and code | Threat each sec | Damage taken each sec | TMI | What it gives |
 | --- | --- | --- | --- | --- | --- |
-| PT1. Raid tank | 0/34/17: v6p-3530110213501531-45233 | 1,010 | 296 | 45.2 | Divine Intellect 3, Redoubt 5, Precision 3, Sacred Duty 1, Templar's Bulwark, Shield Specialization 2, Swift Judgement, Improved Righteous Fury 3, Anticipation 5, Holy Shield, Reckoning 5, Iron Creed 3, Shieldsworn. Deflection 4, Benediction 5, Improved Judgement 2, Conviction 3, Sanctified Judgement 3 |
-| Beta tank (reference) | 0/38/13 in the beta trees, with Toughness 5 | 927 | 340 | 55.9 | The tank of Beta test results, no proposals |
+| PT1. Raid tank | 0/34/17: v6p-3530110213501531-45233 | 1,015 | 296 | 45.3 | Divine Intellect 3, Redoubt 5, Precision 3, Sacred Duty 1, Templar's Bulwark, Shield Specialization 2, Swift Judgement, Improved Righteous Fury 3, Anticipation 5, Holy Shield, Reckoning 5, Iron Creed 3, Shieldsworn. Deflection 4, Benediction 5, Improved Judgement 2, Conviction 3, Sanctified Judgement 3 |
+| Beta tank (reference) | 0/38/13 in the beta trees, with Toughness 5 | 928 | 333 | 57.1 | The tank of Beta test results, no proposals |
 
 - **Values.** wowsims with the proposals Redoubt (C-P1) and Reckoning (C-P12). The beta tank uses the beta talents and no proposal.
 - **Row 4 needs 15 points in rows 1–3.** Divine Intellect 3 gives the last point. With Divine Intellect 2, Swift Judgement is not available.
@@ -40,13 +40,14 @@ This section gives the main builds for each spec and role. It uses the proposed 
 
 | Build | Points and code | Raid DPS, beta / with Holy Strike Seal trigger (C1) | PvP burst (one stun) | What it gives |
 | --- | --- | --- | --- | --- |
-| RB1. Raid | 14/5/32: v6p050250002-5-05233301101301351 | 838 / 871 (+3.9%) | — | The wowsims Unsealed Wrath build. Divine Strength 5, Reverence 2, Improved Seals 5, Holy Conduit 2. Divine Intellect 5. Unsealed Wrath, Champion of the Light 5, Vengeance 3, Two-Handed Weapon Specialization 3, Sacred Arbiter, Seal of Command. Pursuit of Justice 1 |
-| RB2. PvP, Unsealed Wrath | 0/20/31: v6p-50322130101000002-05233001211301351 | 755 / 787 | About 2,400 (2,510 with C1) | Swift Judgement and Improved Hammer of Justice 3/3 (Hammer of Justice each 45 sec). Guardian's Favor, Sacred Duty, Devoted Sacrifice. Eye for an Eye 1. No Holy points: the mana is empty after about 22 sec in a raid |
-| RB3. PvP, Reckoning bomb | 0/25/26: v6p-50322130101005002-052330012213013 | 648 / 677 | About 2,070, with 4 stored attacks about 3,630 (2,180 and 3,740 with C1) | Reckoning 5/5 (critical hit trigger), Swift Judgement, Improved Hammer of Justice 3/3, Devoted Sacrifice. Eye for an Eye 2, Repentance, Vengeance 3. No Unsealed Wrath and no Champion of the Light |
+| RB1. Raid | 14/6/31: v6p050250002-501-05233011201301351 | 910 / 960 (+5.5%) | — | The wowsims default build of 1 November. Divine Strength 5, Reverence 2, Improved Seals 5, Holy Conduit 2. Divine Intellect 5, Precision 1. Unsealed Wrath, Champion of the Light 5, Vengeance 3, Two-Handed Weapon Specialization 3, Sacred Arbiter, Seal of Command, Repentance. Unyielding Faith 1, Pursuit of Justice 2 |
+| RB2. PvP, Unsealed Wrath | 0/20/31: v6p-50322130101000002-05233001211301351 | 845 / 887 | About 2,400 (2,510 with C1) | Swift Judgement and Improved Hammer of Justice 3/3 (Hammer of Justice each 45 sec). Guardian's Favor, Sacred Duty, Devoted Sacrifice. Eye for an Eye 1. No Holy points: in wowsims, the mana is empty for about 2 sec of a 3 min raid fight |
+| RB3. PvP, Reckoning bomb | 0/25/26: v6p-50322130101005002-052330012213013 | 653 / 696 | About 2,070, with 4 stored attacks about 3,630 (2,180 and 3,740 with C1) | Reckoning 5/5 (critical hit trigger), Swift Judgement, Improved Hammer of Justice 3/3, Devoted Sacrifice. Eye for an Eye 2, Repentance, Vengeance 3. No Unsealed Wrath and no Champion of the Light |
 
 - **Raid DPS** from wowsims, 3 min, full buffs. The wowsims rotation is the rotation of RB1. Thus, the values of RB2 and RB3 are only approximate.
-- **The Holy dip is the strongest part of RB1:** Improved Seals +15% on Seals and Judgements, and Reverence for mana. Without Holy points (RB2), raid DPS is 10% lower.
-- **Holy Strike Seal trigger (C1)** gives +4% in each build.
+- **The Holy dip is the strongest part of RB1:** Improved Seals +15% on Seals and Judgements, and Reverence for mana. Without Holy points (RB2), raid DPS is 7% lower.
+- **Holy Strike Seal trigger (C1)** gives +5–7% in each build.
+- **The earlier wowsims build (14/5/32,** v6p050250002-5-05233301101301351) gives 896 / 942. Precision 1 in place of Vindication gives RB1 +1.6%.
 - **PvP burst** from Analysis, PvP burst check. The proposals add 3–5%.
 
 ## 4. Points that the rows force
@@ -55,7 +56,7 @@ This section gives the main builds for each spec and role. It uses the proposed 
 | --- | --- | --- |
 | Holy healer (HB2) | Holy Conduit 2 | Row 6 needs 25 points in rows 1–5. Without Improved Seals and Consecrated Ground, only 23 of these points help a healer |
 | Raid tank (PT1) | None | Divine Intellect gives mana. Deflection gives parry |
-| Retribution raid (RB1) | Pursuit of Justice 1 | The last of the 51 points has no damage value |
+| Retribution raid (RB1) | Unyielding Faith 1, Pursuit of Justice 2 | Unsealed Wrath needs 30 points in rows 1–6. These 3 points have no damage value |
 
 ## 5. Limits
 
