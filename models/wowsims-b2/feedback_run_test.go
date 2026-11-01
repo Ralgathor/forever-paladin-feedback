@@ -26,7 +26,7 @@ func TestFeedbackRun(t *testing.T) {
 		Name: "Ret", Race: proto.Race_RaceHuman, Class: proto.Class_ClassPaladin,
 		Equipment:     core.GetGearSet("../../../ui/specs/paladin/retribution/gear_sets", "default").GearSet,
 		Consumables:   DefaultConsumables,
-		TalentsString: UnsealedWrathTalents,
+		TalentsString: talentsOr(UnsealedWrathTalents),
 		Spec:          DefaultSpecOptions,
 		Rotation:      core.GetAplRotation("../../../ui/specs/paladin/retribution/apls", "default").Rotation,
 		Buffs:         indiv,
@@ -47,4 +47,11 @@ func TestFeedbackRun(t *testing.T) {
 	u := res.RaidMetrics.Parties[0].Players[0]
 	fmt.Printf("RESULT dur=%.0f buffs=%s propose=%q dps=%.1f tto=%.1f oom=%.1f\n", dur, os.Getenv("FEEDBACK_BUFFS"),
 		os.Getenv("PROPOSE"), u.Dps.Avg, u.Tto.Avg, u.SecondsOomAvg)
+}
+
+func talentsOr(d string) string {
+	if v := os.Getenv("FEEDBACK_TALENTS"); v != "" {
+		return v
+	}
+	return d
 }
