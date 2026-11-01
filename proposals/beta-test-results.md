@@ -24,7 +24,7 @@ The models of the Analysis tabs ran again on the new trees, with no proposal. He
 | Holy, after a large hit (3 and 6 sec, all cooldowns) | 18–20% below the Druid | 11–18% above the Druid |
 | Protection threat, same gear for all tanks | 63% of the Warrior | 101% of the Warrior |
 | Protection threat, fresh level 60 to Naxxramas | 65–74% of the Warrior | 102–118% of the Warrior (120–142% with Consecration) |
-| Protection mana while it tanks, Blessing of Wisdom | +24 to +39 per sec | +26 to +55 per sec |
+| Protection mana while it tanks, Blessing of Wisdom | +24 to +39 per sec | +15 to +37 per sec |
 | Retribution damage (wowsims test runs) | 824 DPS | 848 DPS (+3%), about 93% of the pure average at fresh level 60 and 89% in Naxxramas (model) |
 
 - **Holy Power.** The Holy values use a 225% critical heal (wowsims). If the critical heal is 175%, the Paladin is 7% below to 1% above the Druid on one tank.

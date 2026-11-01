@@ -69,8 +69,8 @@ The beta of 30 October 2026 changes most of the Protection tree. Righteous Fury 
 | Spec (maximum mana, mana income) | Heal (maximum health, estimate) | Beta: time until the mana is back | Devoted Sacrifice (C-P11) 2/2: drain, time until the mana is back |
 | --- | --- | --- | --- |
 | Holy (4,416, +22.6 per sec) | About 4,000 | 3 min 15 sec | 2,208: 1 min 38 sec |
-| Protection, fresh level 60 (2,897, +26.1 per sec while it tanks) | About 5,500 | 1 min 51 sec | 1,449: 56 sec |
-| Protection, Naxxramas (4,900, +55.2 per sec while it tanks) | About 8,500 | 1 min 29 sec | 2,450: 44 sec |
+| Protection, fresh level 60 (2,897, +14.5 per sec while it tanks) | About 5,500 | 3 min 19 sec | 1,449: 1 min 39 sec |
+| Protection, Naxxramas (4,900, +36.9 per sec while it tanks) | About 8,500 | 2 min 12 sec | 2,450: 1 min 6 sec |
 
 - The Holy values use a fresh level 60 Holy profile with no raid buffs and no consumables: 4,416 mana and 22.6 mana per sec.
 - The Protection values use the tank of the beta of 30 October with Blessing of Wisdom and no Consecration (see Beta test results).

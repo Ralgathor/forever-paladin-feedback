@@ -19,7 +19,7 @@ The beta of 30 October 2026 changes the three trees. These proposals are now unn
 | Improved Righteous Fury: removed (C-P4) | It depended on the Iron Creed change (C-P2) |
 | Reckoning: charges from block, dodge and parry, released by Holy Strike (C-P6) | The beta tank has 101% of the Warrior threat with the same gear. Reckoning is not necessary for threat |
 | Reach of Law: Judgement range +5/10 yards (C-P7) | It requires Swift Judgement. Swift Judgement is now a second Judgement. No free place before row 6. The beta tank threat is high, thus the first pull is not a problem |
-| Shield Specialization: mana on each block (C-P8) | Shieldsworn adds a Shield Specialization return on each Holy Strike. The beta tank has +26 to +55 mana per sec while it tanks |
+| Shield Specialization: mana on each block (C-P8) | Shieldsworn adds a Shield Specialization return on each Holy Strike. The beta tank has +15 to +37 mana per sec while it tanks |
 | Holy Shield: damage increases with block value (C-P9) | The beta tank has 102–118% of the Warrior threat at all gear levels. Shieldsworn doubles the Holy Shield damage |
 | Benediction to Protection row 1 (M-P1) | Divine Intellect now fills that place |
 | Twist of Light: the Echo lasts 10 sec (C-R2) | Twist of Light is removed. Unsealed Wrath stores up to 3 Seal copies for 15 sec: about one Seal change each 10 sec, the goal of the proposal |

@@ -45,7 +45,7 @@ The beta of 30 October 2026 changes most of the Retribution tree. Unsealed Wrath
 
 - **MPS.** Mana per sec with 8.5 Judgements each min: Improved Judgement 2/2 and Swift Judgement.
 - **Each point has the same value.** Each rank adds 40 mana for each Judgement. In the beta, rank 1 adds 13 and rank 3 adds 67.
-- **Risk.** Row 2 needs only 5 Retribution points. A 6-point dip (Benediction 5, Sanctified Judgement 1) gives 5.7 MPS (beta: 1.9). Reverence gives 10.3 MPS for 2 points. Thus, the 1-point rank is not too strong.
+- **Risk.** Row 2 needs only 5 Retribution points. A 6-point dip (Benediction 5, Sanctified Judgement 1) gives 5.7 MPS (beta: 1.9). Reverence 2/2 gives 6.1 MPS for 7 Holy points. Thus, the 1-point rank is not too strong.
 
 ## Retribution against the pure average
 

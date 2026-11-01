@@ -1,190 +1,180 @@
 # Mana
 
-This section compares the mana of the Paladin in the beta and with the proposals. The unit is mana per second (MPS). A positive value means that the mana increases. A negative value means that the mana decreases.
+This section gives the mana of the Paladin on the beta trees of 30 October 2026, in the beta and with the proposals. The unit is mana per second (MPS). A positive value means that the mana increases. A negative value means that the mana decreases.
 
-## Beta of 30 October 2026
-
-The scripts of models/beta-30-oct run the mana models on the new trees, with no proposal. The other parts of this tab use the beta of 18 October.
-
-**Protection** (tank build 0/38/13, Blessing of Wisdom, mana each sec)
-
-| Case | Fresh level 60 | Fresh level 60, Consecration | Naxxramas | Naxxramas, Consecration |
-| --- | --- | --- | --- | --- |
-| Beta of 30 October, the tank is hit | +26.1 | −37.5 (empty after 1 min 17 sec) | +55.2 | −8.3 (empty after 9 min 48 sec) |
-| Beta of 18 October, the tank is hit | +24.2 | −46.5 (empty after 1 min 2 sec) | +39.3 | −31.3 (empty after 2 min 36 sec) |
-
-- Shield Specialization with Shieldsworn gives more mana. Thus, a tank that is hit has mana without Consecration.
-
-**Retribution** (Unsealed Wrath build 14/5/32, fresh level 60)
-
-- The rotation of wowsims changes the Seal after each swing. It uses 50.7 mana each sec. The income is 14.2 mana each sec with Blessing of Wisdom. The mana pool (3,029) is empty after 1 min 22 sec.
-- Fewer Seal changes cost damage: −1.7% with two swings for each Seal of Command, −2.6% with three swings. With three swings, the mana is empty after 3 min 47 sec.
-- Unsealed Wrath has no Seal cost decrease (W29). Retribution, Mana with Unsealed Wrath gives the details.
+The script models/beta-30-oct/mana_tables_b2.py gives the Protection values. It uses the spell costs and the gear tiers of models/mana/mana_model.py. The script models/beta-30-oct/retribution_b2.py gives the Retribution values. Analysis, Healing, part 2, gives the Holy values.
 
 ## Summary
 
-- Sanctified Judgement (Retribution row 3) is the best mana talent for a tank. It returns 120 mana for each Judgement: 14 MPS, or 17 MPS with Improved Judgement 2/2. Reverence gives 10.3 MPS.
-- The tank builds PB1, PB3 and PB4 (3/35/13, see Builds) have Sanctified Judgement, Improved Judgement and Holy Conduit. PB2 has no Holy Conduit. With Consecration on cooldown, the mana lasts 2 min 53 sec at fresh level 60. From Molten Core, the mana lasts all the fight.
-- Reverence (C-H1) stays the main mana talent for Holy. Retribution takes it without raid buffs (+4% DPS at fresh level 60). In a raid, Twist of Light (C-R2) and Sanctified Judgement give the mana of Retribution. Tanks receive their mana from Sanctified Judgement.
-- PB1 receives +25.7 MPS while it tanks at fresh level 60 without Consecration, and +63.6 MPS in Naxxramas.
-- **PB1 has more mana than in the beta at all gear levels** (fresh level 60: +25.7 MPS, beta +16.2). Shoulder the Burden (C-P5) removes Improved Seal of Fury (23.3 MPS). Shield Specialization (C-P8, 6% on each block) and Redoubt (C-P1) return more than this loss.
-- Shield Specialization (C-P8, 2/4/6% on each block, once each 2 sec) is necessary. Without Shield Specialization (C-P8), a fresh level 60 PB1 tank loses about 7 MPS.
-- Consecration uses much mana. Use it against groups of enemies, not all the time.
-- Benediction (M-P1) moves to Protection row 1. PB1 with Benediction and Consecration on cooldown has mana for 7 min 37 sec at fresh level 60. In Naxxramas, its mana lasts all the fight (part 4).
-- Twist of Light (C-R2) fixes the mana of Retribution.
+- **A tank that is hit has mana without Consecration.** The tank build 0/38/13 receives +6.5 MPS at fresh level 60 and +28.9 MPS in Naxxramas. With Blessing of Wisdom, it receives +14.5 and +36.9 MPS.
+- **Shield Specialization is the main mana source.** It gives 4% of maximum mana on a block, once each 3 sec. With Shieldsworn, each Holy Strike that lands with Holy Shield active also gives 4%. Sanctified Judgement gives 17.0 MPS.
+- **Redoubt (C-P1) gives the tank +4.9 to +8.3 MPS.** More blocks give more Shield Specialization returns.
+- **Consecration on cooldown empties the mana quickly.** With Blessing of Wisdom, the beta tank has mana for 59 sec at fresh level 60. In Naxxramas, it has mana for 3 min 3 sec. Use Consecration against groups of enemies, not all the time.
+- **A tank that is not hit loses mana at fresh level 60.** With Blessing of Wisdom, it loses 2.7 MPS. In Naxxramas, it receives +7.8 MPS.
+- **Holy has the least mana of the four healers.** Reverence keeps only 30% of the Spirit regeneration during casts (see Analysis, Healing, part 2).
+- **Retribution loses mana because of Seal changes.** The wowsims rotation changes the Seal after each swing: 50.7 MPS. With Blessing of Wisdom, the mana is empty after 1 min 22 sec. A plan with fewer Seal changes costs 1.7–2.6% damage, and the mana lasts 1.7–2.8 times longer.
+- **Sanctified Judgement (C-R3) does not change the total return.** At 3/3, it gives 17.0 MPS in the beta and with the proposal. It gives more at ranks 1 and 2.
 
 ## 1. Problems in the beta
 
 - **Spirit regeneration stops when you cast.** It gives 15 + Spirit ÷ 5 mana each 2 sec. It stops for 5 sec after each cast. In combat, it is almost zero.
-- **Protection and Retribution have no talent for regeneration during casts.** Other classes give 50% to their damage and hybrid specs at about 20 points (see What the other classes have).
-- **Protection receives mana mainly when it is hit.** Shield Specialization and Improved Seal of Fury give this mana. The other source is Sanctified Judgement in Retribution row 3. A tank needs 13 Retribution points for it.
-- **Retribution loses mana because of Seal swaps.** The cause is not the regeneration.
+- **Reverence keeps only 30%.** Reverence (Holy row 2, 2 ranks) keeps 15/30% of the regeneration during casts. Meditation (Priest), Reflection (Druid) and Mindfulness (Shaman) keep 50%. Reverence 2/2 gives 6.1 MPS at 130 Spirit.
+- **Protection receives mana mainly when it is hit.** Shield Specialization gives this mana. The beta of 30 October removes Improved Seal of Fury. Shieldsworn adds a return on each Holy Strike. Sanctified Judgement (Retribution row 2) is the other source.
+- **Retribution loses mana because of Seal changes.** The cause is not the regeneration.
 
-## 2. Fixes
-
-| Fix | Effect |
-| --- | --- |
-| Reverence in row 2 at 50% (C-H1) | Holy has 50%, as the other healers. Retribution takes it without raid buffs: +4% DPS at fresh level 60 (part 5). In a raid, Twist of Light (C-R2) and Sanctified Judgement give its mana. For a tank, Sanctified Judgement gives more (part 4) |
-| Shield Specialization: 2/4/6% on each block, once each 2 sec (C-P8) | It stays the main mana source of the tank. Water Shield (Shaman) is the Forever precedent |
-| Improved Seal of Fury removed (C-P5) | One talent for "mana when you are hit" is sufficient |
-| Echo of 10 sec (Twist of Light, C-R2) | Retribution changes Seals one time each 10 sec, not before each swing |
-
-## 3. Inputs
+## 2. Inputs
 
 **Gear**
 
-- Maximum mana and mp5 come from the gear tiers (see Threat, part 2).
-- Fresh level 60 uses the real gear profile: 2,897 mana, 3 mp5.
+- Maximum mana and mp5 come from the gear tiers (see Threat, part 2). Fresh level 60: 2,897 mana and 3 mp5. Naxxramas: 4,900 mana and 12 mp5.
 - Tank gear does not give much Spirit. All tiers use 130 Spirit.
 
-**Combat**
+**Combat (wowsims Forever, default tank set, 3 min)**
 
 - The boss swings each 2.0 sec.
-- One-handed weapon: 2.7 sec.
-- Block: 50% in the beta, 60% with Redoubt (C-P1).
+- Blocks: 42.3% of the boss swings in the beta, 61.6% with Redoubt (C-P1).
+- The 3 sec limit of Shield Specialization skips the next swing after a return. Thus, the returns from blocks each sec are block ÷ (2 × (1 + block)).
+- Holy Strike with Shieldsworn: 0.65 returns for each Holy Strike cast. The Holy Strike must land while Holy Shield is active. In wowsims, about 17 of 26.9 Holy Strikes in 3 min give a return.
+
+**Tank build 0/38/13 (only the talents that change mana)**
+
+- Shield Specialization 2/2: a 100% chance to return 4% of maximum mana on a block, once each 3 sec. With Shieldsworn, the same chance on each Holy Strike that lands, with no limit.
+- Shieldsworn: Holy Strike has a 6 sec cooldown.
+- Benediction 5/5: −10% cost of instant spells.
+- Improved Judgement 2/2: the Judgement cooldown is 8 sec. With Swift Judgement, the tank uses 8.5 Judgements each min.
+- Sanctified Judgement 3/3: 60% of the base cost of the Seal on each Judgement. Seal of Fury rank 7 costs 200: the return is 120 mana. The free Judgement of Swift Judgement also gives the return (wowsims Forever).
 
 **Spell costs at level 60 (Forever spellbook)**
 
 | Spell | Cost |
 | --- | --- |
 | Holy Shield rank 3 | 240 mana, each 10 sec |
-| Holy Strike | 20 mana, each 10 sec |
-| Judgement | 91 mana (6% of base mana 1,512), each 10 sec |
+| Holy Strike | 20 mana, each 6 sec (Shieldsworn) |
+| Judgement | 91 mana (6% of base mana 1,512), each 8 sec |
 | Seal of Fury rank 7 | 200 mana, each 30 sec |
-| Seal of Command | 210 mana |
 | Consecration rank 5 | 565 mana, each 8 sec |
 
 - Base mana 1,512 is the Classic value. It is not confirmed for Forever.
-- Holy Conduit (Consecration ×0.60) is in Retribution row 2, as in the beta. A tank takes it with Deflection 5 (7 points).
-- Benediction 5/5 (all costs ×0.90) is in Protection row 1 (M-P1). In the beta, it is in Retribution row 1. The beta columns use the same talents from a Retribution dip.
-- Sanctified Judgement 3/3 returns 60% of the base cost of the Seal for each Judgement. Seal of Fury rank 7 costs 200: the return is 120 mana. The free Judgement of Swift Judgement also gives the return (wowsims Forever).
-- Improved Judgement 2/2 (Retribution row 2) decreases the Judgement cooldown to 8 sec. The tank then uses 8.5 Judgements each min, not 7.
-- Raid buffs are not in the model. Blessing of Wisdom gives 8 MPS. Judgement of Wisdom on the boss gives more.
+- Holy Shield rank 4 has no cost yet in the game files. The model uses the cost of rank 3.
+- Holy Conduit (Consecration ×0.60) is now in the Holy tree. A tank does not take it.
+- Blessing of Wisdom gives 8 MPS. Judgement of Wisdom on the boss gives more. They are not in the tables, except where a column says so.
 
-## 4. Protection results
+## 3. Protection results
 
-The tables use the raid tank PB1 (3/35/13, see Builds, part 3): Sanctified Judgement 3/3, Improved Judgement 2/2 and Holy Conduit 2/2, no Benediction. The beta columns use the same talents in the beta tree, with Improved Seal of Fury and the beta Shield Specialization. The script models/mana/mana_model.py gives all values.
+**Mana income and cost of the tank (hit, no Consecration, no Blessing of Wisdom)**
 
-**Mana income of the tank**
+| Source | Fresh level 60, beta | Fresh level 60, Redoubt (C-P1) | Naxxramas, beta | Naxxramas, Redoubt (C-P1) |
+| --- | --- | --- | --- | --- |
+| Shield Specialization, blocks | 17.2 | 22.1 | 29.1 | 37.4 |
+| Shield Specialization, Holy Strike (Shieldsworn) | 12.6 | 12.6 | 21.2 | 21.2 |
+| Sanctified Judgement 3/3 | 17.0 | 17.0 | 17.0 | 17.0 |
+| mp5 from gear | 0.6 | 0.6 | 2.4 | 2.4 |
+| Cost: Holy Shield, Holy Strike, Judgement, Seal of Fury | −40.8 | −40.8 | −40.8 | −40.8 |
+| **Result** | **+6.5** | **+11.4** | **+28.9** | **+37.2** |
 
-| Source | Beta | Proposed | Calculation |
-| --- | --- | --- | --- |
-| Shield Specialization | Maximum mana × 4% ÷ 6 sec | Maximum mana × 6% × 60% ÷ 2 sec | Beta: the 3 sec limit skips the next swing. 50% block. Proposed: each block counts (Shield Specialization, C-P8). 60% block (Redoubt, C-P1) |
-| Improved Seal of Fury | 23.3 | 0 (Shoulder the Burden, C-P5) | 87 mana for each shield that a boss hit uses |
-| Sanctified Judgement 3/3 | 17.0 | 17.0 | 120 mana for each Judgement, 8.5 Judgements each min (Improved Judgement 2/2 and Swift Judgement) |
-| mp5 from gear | 0.6–2.4 | 0.6–2.4 | 3–12 mp5 |
+- Consecration on cooldown adds 63.6 MPS of cost (104.4 in all).
+- Sanctified Judgement returns 60% of the base cost of the Seal, before talent cost decreases (Beta test results): 120 mana for each Judgement.
 
-**Mana used**
+**Result for each gear tier (hit, no Consecration)**
 
-| Case | MPS |
-| --- | --- |
-| Tank, no Consecration | 41.7 |
-| Tank, Consecration on cooldown | 112.4 |
-| Tank, Consecration on cooldown, Holy Conduit | 84.1 |
-| Tank, no Consecration, Benediction (M-P1) | 37.6 |
-| Tank, Consecration on cooldown, Benediction (M-P1) | 101.2 |
-| Tank, Consecration on cooldown, Benediction (M-P1) and Holy Conduit | 75.7 |
-| **PB1:** tank, no Consecration (Improved Judgement 2/2) | 44.0 |
-| **PB1:** tank, Consecration on cooldown | 114.7 |
-| **PB1:** tank, Consecration on cooldown, Holy Conduit | 86.4 |
-
-The costs do not change with gear.
-
-**PB1: income and result for each gear tier (tank, no Consecration)**
-
-| Tier (maximum mana) | Income, beta | Income, proposed | Result, beta | Result, proposed | Result, proposed, flatter gear |
+| Tier (maximum mana) | Beta | Redoubt (C-P1) | Redoubt (C-P1), flatter gear | Beta, Blessing of Wisdom | Redoubt (C-P1), Blessing of Wisdom |
 | --- | --- | --- | --- | --- | --- |
-| Fresh level 60 (2,897) | 60.2 | 69.7 | +16.2 | +25.7 | +25.7 |
-| Pre-raid best in slot (3,400) | 64.0 | 79.2 | +19.9 | +35.2 | +35.2 |
-| Molten Core (3,900) | 67.9 | 88.8 | +23.9 | +44.8 | +40.1 |
-| Blackwing Lair (4,400) | 71.6 | 98.2 | +27.6 | +54.2 | +44.8 |
-| Naxxramas (4,900) | 75.4 | 107.6 | +31.3 | +63.6 | +49.4 |
+| Fresh level 60 (2,897) | +6.5 | +11.4 | +11.4 | +14.5 | +19.4 |
+| Pre-raid best in slot (3,400) | +12.1 | +17.8 | +17.8 | +20.1 | +25.8 |
+| Molten Core (3,900) | +17.8 | +24.4 | +21.1 | +25.8 | +32.4 |
+| Blackwing Lair (4,400) | +23.4 | +30.8 | +24.3 | +31.4 | +38.8 |
+| Naxxramas (4,900) | +28.9 | +37.2 | +27.5 | +36.9 | +45.2 |
 
 "Flatter gear" uses the model of Threat, part 3.
 
-**PB1: other cases, MPS and time until the mana is zero**
+**Other cases: MPS and time until the mana is zero**
 
-| Case | Fresh level 60, beta | Fresh level 60, proposed | Naxxramas, beta | Naxxramas, proposed |
+| Case | Fresh level 60, beta | Fresh level 60, Redoubt (C-P1) | Naxxramas, beta | Naxxramas, Redoubt (C-P1) |
 | --- | --- | --- | --- | --- |
-| Tank, Consecration on cooldown, no Holy Conduit | −54.5: 53 sec | −44.9: 1 min 4 sec | −39.3: 2 min 4 sec | −7.1: 11 min 33 sec |
-| Tank, Consecration on cooldown, Holy Conduit | −26.2: 1 min 50 sec | −16.7: 2 min 53 sec | −11.0: 7 min 23 sec | +21.2: all the fight |
-| Tank, Consecration on cooldown, Holy Conduit, Benediction (M-P1) | −15.9: 3 min 2 sec | −6.3: 7 min 37 sec | −0.7: more than 1 hour | +31.5: all the fight |
-| Not hit, no Consecration | −26.4: 1 min 49 sec | −26.4: 1 min 49 sec | −24.6: 3 min 18 sec | −24.6: 3 min 18 sec |
-| Not hit, Consecration on cooldown, Holy Conduit | −68.8: 42 sec | −68.8: 42 sec | −67.0: 1 min 13 sec | −67.0: 1 min 13 sec |
+| Consecration on cooldown | −57.0: 50 sec | −52.2: 55 sec | −34.6: 2 min 21 sec | −26.4: 3 min 5 sec |
+| Consecration on cooldown, Blessing of Wisdom | −49.0: 59 sec | −44.2: 1 min 5 sec | −26.6: 3 min 3 sec | −18.4: 4 min 26 sec |
+| Not hit | −10.7: 4 min 31 sec | −10.7: 4 min 31 sec | −0.2: more than 1 hour | −0.2: more than 1 hour |
+| Not hit, Blessing of Wisdom | −2.7: 17 min 59 sec | −2.7: 17 min 59 sec | +7.8 | +7.8 |
+| Not hit, Consecration on cooldown | −74.2: 39 sec | −74.2: 39 sec | −63.8: 1 min 16 sec | −63.8: 1 min 16 sec |
 
-The Benediction row needs 5 Protection points from other PB1 talents.
+**Value of each mana talent (hit, no Consecration)**
 
-**Tank builds: Sanctified Judgement against Reverence**
-
-Each cell gives the MPS and the time until the mana is zero.
-
-| Build | Fresh level 60, no Consecration | Fresh level 60, Consecration on cooldown | Naxxramas, no Consecration | Naxxramas, Consecration on cooldown |
+| Case | Fresh level 60, beta | Fresh level 60, Redoubt (C-P1) | Naxxramas, beta | Naxxramas, Redoubt (C-P1) |
 | --- | --- | --- | --- | --- |
-| PB1, PB3, PB4 (3/35/13: Sanctified Judgement, Improved Judgement, Holy Conduit) | +25.7 | −16.7: 2 min 53 sec | +63.6 | +21.2 |
-| PB1, PB3, PB4, Blessing of Wisdom | +33.7 | −8.7: 5 min 34 sec | +71.6 | +29.2 |
-| PB2 (3/35/13, no Holy Conduit) | +25.7 | −44.9: 1 min 4 sec | +63.6 | −7.1: 11 min 33 sec |
-| 8/35/8 tank with Reverence | +21.3 | −49.3: 58 sec | +59.1 | −11.5: 7 min 6 sec |
-| 8/35/8 tank with Reverence and Holy Conduit | +21.3 | −21.1: 2 min 17 sec | +59.1 | +16.8 |
-| 8/35/8 tank with Reverence and Holy Conduit, Blessing of Wisdom | +29.3 | −13.1: 3 min 41 sec | +67.1 | +24.8 |
+| Tank build 0/38/13 | +6.5 | +11.4 | +28.9 | +37.2 |
+| No Shieldsworn | −4.8: 10 min 1 sec | 0.0 | +8.9 | +17.1 |
+| No Sanctified Judgement | −10.5: 4 min 36 sec | −5.6: 8 min 37 sec | +11.9 | +20.2 |
+| No Benediction | +2.0 | +6.9 | +24.4 | +32.6 |
 
-- **Sanctified Judgement** gives 14.0 MPS with 7 Judgements each min. Improved Judgement 2/2 adds 1.5 Judgements each min: +3.0 MPS of return and 2.3 MPS of cost. It also gives +19 threat per sec (see Builds).
-- **Thus, the 3/35/13 tank has 4.4 MPS more** than the 8/35/8 tank, with or without Consecration.
-- **Sanctified Judgement by rank (C-R3).** With Sanctified Judgement (C-R3), the return occurs on each Judgement. Each rank gives 40 mana for each Judgement with Seal of Fury: 5.7/11.3/17.0 MPS. The beta gives 1.9/7.5/17.0 MPS. At 3/3, the two are the same. Thus, the tables of this part do not change.
-- **When the boss does not hit the tank,** Sanctified Judgement is better than Reverence also: PB1 loses 26.4 MPS, the 8/35/8 tank 30.9 MPS.
-- Blessing of Wisdom (8 MPS) is not in the other tables of this part.
+- **Shieldsworn** gives 11–20 MPS of mana: the Shield Specialization return on Holy Strike. It also costs 1.2 MPS: Holy Strike each 6 sec, not 10 sec.
+- **Sanctified Judgement** gives 17.0 MPS at all tiers, also when the boss does not hit the tank.
+- **Benediction** saves 4.5 MPS.
 
-## 5. Retribution results
+**Sanctified Judgement by rank (C-R3)**
 
-One target. Sanctified Judgement returns 126 mana (60% of the base cost of the Seal) for each Judgement. Tests show this.
+8.5 Judgements each min with Seal of Fury (Improved Judgement 2/2 and Swift Judgement), no Benediction.
 
-| Case | Mana used | Time until zero, no regeneration (2,897 → 4,900 mana) | Time until zero, with Reverence 50% (9.75 MPS) |
-| --- | --- | --- | --- |
-| Beta: about 3 Seals each 10 sec | 41.6 MPS | 1 min 10 sec → 1 min 58 sec | 1 min 31 sec → 2 min 34 sec |
-| Twist of Light (C-R2): one Seal each 10 sec | 11.4 MPS | 4 min 14 sec → 7 min 10 sec | 29 min → 49 min |
-
-**wowsims check (27 October 2026).** RB1 with Reverence (C-H1), Twist of Light (C-R2) and Sanctified Judgement (C-R3), in a 3 min fight. Divine Intellect 3 replaces Reverence 3 in the second column. wowsims has only 3 ranks of Vindication, thus RB1 has Vindication 3.
-
-| Case | RB1 with Reverence | RB1 without Reverence |
+| Rank | Beta | Sanctified Judgement (C-R3) |
 | --- | --- | --- |
-| Raid buffs, Judgement of Wisdom | 849 DPS, the mana lasts all the fight | 853 DPS, the mana lasts all the fight |
-| Raid buffs, no Judgement of Wisdom, no mana consumables | 850 DPS, the mana lasts all the fight | 853 DPS, the mana lasts all the fight |
-| Fresh level 60, no buffs | 361 DPS | 348 DPS (−4%) |
-| Without Twist of Light (C-R2), raid buffs, no Judgement of Wisdom, no mana consumables | 775 DPS | 739 DPS (−5%) |
+| 1/3 | 1.9 | 5.7 |
+| 2/3 | 7.6 | 11.3 |
+| 3/3 | 17.0 | 17.0 |
 
-- With Twist of Light (C-R2), Retribution does not need Reverence in a raid. Twist of Light (C-R2) and Sanctified Judgement give the mana.
-- Without raid buffs, Reverence gives Retribution +4% DPS. Thus, it stays a Retribution talent while it levels and at fresh level 60. Without Twist of Light (C-R2), Reverence gives Retribution about 12 MPS.
+- In the beta, each rank increases the chance (33/66/100%) and the return (20/40/60%). With Sanctified Judgement (C-R3), the return occurs on each Judgement.
+- Tank and Retribution builds use 3/3. Thus, Sanctified Judgement (C-R3) does not change the tables of this part.
 
-## 6. What the results mean
+**Lay on Hands at full mana (hit, Blessing of Wisdom)**
 
-- **The tank receives more mana with gear.** Shield Specialization returns 6% of maximum mana for each block. More mana gives a larger return.
-- **At fresh level 60, PB1 receives +25.7 MPS** with the proposals. Without Shield Specialization (C-P8), it loses about 7 MPS.
-- **In raids, the tank does not lose mana without Consecration.** PB1 receives +35 to +64 MPS (beta: +20 to +31).
-- **The proposals give PB1 more mana than the beta at all gear levels** (+9.5 MPS at fresh level 60, +20.9 in Molten Core, +32.3 in Naxxramas). Shoulder the Burden (C-P5) removes Improved Seal of Fury (23.3 MPS at all gear levels). Shield Specialization (C-P8, 6%) returns more, and its return increases with maximum mana.
-- **Consecration on cooldown uses all mana quickly** without Holy Conduit: PB2 has mana for 1 min 4 sec at fresh level 60 and 11 min 33 sec in Naxxramas.
-- **Holy Conduit gives the large decrease with Consecration.** With Benediction, it saves about 25 mana per sec (W4).
-- **Sanctified Judgement is the best mana talent for a tank.** It gives 14–17 MPS, also when the boss does not hit the tank. Reverence gives 10.3 MPS. It stays the mana talent for Holy, and for Retribution without raid buffs.
-- **Sanctified Judgement (C-R3) does not change the total return.** It changes only ranks 1 and 2. Each point now gives the same mana.
-- **The 3/35/13 tank can use Consecration on cooldown for a long time.** With Holy Conduit, its mana lasts 2 min 53 sec at fresh level 60. From Molten Core, it lasts all the fight (W10).
-- **Flatter gear gives less mana.** In late raids, PB1 receives +40 to +49 MPS. Shield Specialization (C-P8) is then more important.
+| Tier (mana income) | Beta: all the mana, time until it is back | Devoted Sacrifice (C-P11) 2/2: drain, time until it is back |
+| --- | --- | --- |
+| Fresh level 60 (+14.5 MPS) | 2,897: 3 min 19 sec | 1,449: 1 min 39 sec |
+| Naxxramas (+36.9 MPS) | 4,900: 2 min 12 sec | 2,450: 1 min 6 sec |
+
+**wowsims check (default tank set, 3 min, full buffs)**
+
+| Case | Shield Specialization returns each min, wowsims | Model |
+| --- | --- | --- |
+| Beta | 14.7 | 15.4 (+5%) |
+| Redoubt (C-P1) | 17.0 | 17.9 (+5%) |
+
+- The model gives 5% more returns than wowsims. The model rules for the 3 sec limit and for Shieldsworn agree with the sim.
+- The wowsims tank has full buffs, Judgement of Wisdom on the boss and consumables. Thus, the sim result is not the result of the model tables.
+
+## 4. Retribution results
+
+The wowsims build with Unsealed Wrath (14/5/32) at fresh level 60. The wowsims rotation changes the Seal after each swing: Seal of Righteousness, then Seal of Command.
+
+- **Mana.** Pool 3,029. Cost 50.7 MPS (0.25 Seals each sec). Income 6.2 MPS, and 8 MPS from Blessing of Wisdom.
+- **Time until the mana is zero.** 1 min 22 sec with Blessing of Wisdom, 1 min 8 sec without.
+
+**Seal plans** (n swings with Seal of Righteousness, then 1 with Seal of Command, Blessing of Wisdom)
+
+| Plan | DPS (model) | Mana used | Time until the mana is zero |
+| --- | --- | --- | --- |
+| Seal of Command only | 281 (−12%) | — | — |
+| n = 1 (wowsims rotation) | 320 | 50.7 | 1 min 22 sec |
+| n = 2 | 314 (−1.7%) | 35.2 | 2 min 23 sec |
+| n = 3 | 312 (−2.6%) | 27.5 | 3 min 47 sec |
+| n = 4 | 302 (−5.4%) | 22.9 | 5 min 48 sec |
+| n = 6 | 292 (−8.8%) | 17.6 | 14 min 54 sec |
+
+- The best plan changes with the fight length. In fights of 2 min, n = 2 is best before raids, and n = 1 from Molten Core. In fights of 3 min, n = 3 is best before raids, and n = 2 from Molten Core. In fights of 5 min, n = 3 is best at all tiers.
+- **Unsealed Wrath.** The talent has no Seal cost decrease (W29). With a −20% Seal cost, n = 1 lasts 1 min 51 sec and n = 3 lasts 5 min 48 sec. The best damage in the fight increases by 0.8–2.4% at fresh level 60. See Analysis, Damage.
+- **Reverence.** Reverence is in Holy row 2. A Retribution Paladin needs 7 Holy points for Reverence 2/2. It gives 6.1 MPS at 130 Spirit.
+
+## 5. What the results mean
+
+- **The tank receives more mana with gear.** Shield Specialization returns 4% of maximum mana. More mana gives a larger return.
+- **The tank has mana without Consecration.** At fresh level 60, the margin is small: +6.5 MPS without Blessing of Wisdom.
+- **Consecration is for groups of enemies.** On cooldown, it empties the mana in 1–5 min (50 sec to 4 min 26 sec).
+- **Redoubt (C-P1) gives more mana.** It adds 4.9 MPS at fresh level 60 and 8.3 MPS in Naxxramas. More blocks give more returns.
 - **Intellect is a tank stat for the Paladin.** It gives more mana. It also increases the Shield Specialization return.
-- **Retribution with Twist of Light (C-R2) almost does not lose mana.** Sanctified Judgement pays for most of the Seal cost. Reverence adds no damage in a raid. It adds about 4% at fresh level 60. Thus, Retribution takes it without raid buffs (wowsims check, 27 October 2026).
+- **Retribution chooses between damage and mana.** Fewer Seal changes cost 1.7–8.8% damage, but the mana lasts 1.7–11 times longer.
+
+## 6. Limits
+
+- **Block rate.** The block rates come from wowsims with the default tank set. More Defense or block from gear changes them.
+- **Holy Shield.** The cost of rank 4 is not known. The model uses 240 mana (rank 3).
+- **Base mana.** 1,512 is the Classic value.
+- **Spirit regeneration.** The model uses the Classic 1.12 formula. Forever did not publish a formula.
+- **The beta of 18 October.** The earlier version of this tab used the trees of 18 October. It is in the history of the repository.

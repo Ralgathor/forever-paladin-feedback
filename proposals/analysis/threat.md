@@ -13,7 +13,7 @@ The script models/beta-30-oct/threat_tables_b2.py calculates the model values of
 - **The kept proposals add threat as a side effect.** No proposal is for threat. Redoubt (C-P1) gives more blocks, and thus more Holy Shield damage. Reckoning (C-P12) gives more extra attacks. The Holy Strike Seal trigger (C1) adds Seal of Fury hits. In wowsims, they give +12% together (928 → 1,038 TPS).
 - **The proposed Paladin has more threat than the Warrior.** In wowsims, it has 112% of the Warrior threat. The model gives 123–144% from fresh level 60 to Naxxramas. The model gives too much to Redoubt (C-P1) (part 7).
 - **Judgement of the Crusader gives the Paladin tank about +72 TPS.** In the beta, the raid can need the only Judgement of the tank for Light or Wisdom. Then the beta tank has 90% of the Warrior threat. With Personal Judgement of the Crusader (C2), the tank keeps it.
-- **Consecration is not necessary for threat.** With Consecration on cooldown, the proposed Paladin has 140–167% of the Warrior threat. But the mana then lasts about 1 min 17 sec at fresh level 60 (see Analysis, Mana).
+- **Consecration is not necessary for threat.** With Consecration on cooldown, the proposed Paladin has 140–167% of the Warrior threat. But at fresh level 60, the mana then lasts about 1 min (see Analysis, Mana).
 - **Against 3 or more enemies, the Paladin holds the group best.** In wowsims, it has 1.4 times the Druid threat and 3–4 times the Warrior threat on the lowest target. The proposals do not change this (part 8).
 - **The Druid threat multipliers are not known.** The model uses the player data (Maul ×1.75, Primal Bite ×3). wowsims Forever uses Bear Form ×1.5 only. With the wowsims values, the Druid loses about one third of its threat (part 2).
 
@@ -103,7 +103,7 @@ TPS on one boss. The two percentages are the Paladin TPS divided by the Warrior 
 - Without Judgement of the Crusader, the beta Paladin is below the Warrior from Molten Core (93–96%).
 - The proposed Paladin has 123–144% of the Warrior threat. In wowsims, the lead is smaller: 112% (part 7).
 - With the wowsims multipliers (Maul, Primal Bite and Swipe: Bear Form ×1.5 only), the Druid has 297, 349, 412, 467 and 526 TPS. The real multipliers are not known (see Open items).
-- Consecration costs 565 mana each 8 sec. At fresh level 60, the tank can use it on cooldown for about 1 min 17 sec. In Naxxramas, it can use it for about 9 min 48 sec (see Analysis, Mana).
+- Consecration costs 565 mana each 8 sec. With Blessing of Wisdom, the tank can use it on cooldown for about 1 min at fresh level 60. In Naxxramas, it can use it for about 3 min (see Analysis, Mana).
 
 ## 3. Result with flatter gear
 
