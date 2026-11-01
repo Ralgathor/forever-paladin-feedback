@@ -6,7 +6,7 @@ This section gives the main builds for each spec and role on the proposed trees 
 
 - Each spec has a clear main build. Each role also has real choices: saves, mana and PvP control.
 - **Holy** takes Devoted Sacrifice (C-P11) with 12 Protection points. Toughness removal (C-P13) moves Devoted Sacrifice to row 3. Thus, the healer loses no healing talent.
-- **Protection** needs 33 points for Shieldsworn. The tank then has 18 points for Retribution rows 1–2: Deflection, Benediction, Improved Judgement, Conviction and Sanctified Judgement.
+- **Protection** uses 34 points for Shieldsworn and all tank talents. The tank then has 17 points for Retribution rows 1–2: Deflection, Benediction, Improved Judgement, Conviction and Sanctified Judgement.
 - **Retribution** needs 31 points for Unsealed Wrath. The dips into Holy (Divine Strength, Reverence, Improved Seals, Holy Conduit) and Protection (Divine Intellect) are strong.
 - **PvP.** The Reckoning bomb (0/25/26) and the Unsealed Wrath build (0/20/31) both take Swift Judgement and Hammer of Justice each 45 sec.
 - **Method.** wowsims Forever (branch paladin/hotfix-113554-port, 3,000 iterations, 3 min, full buffs) for Protection and Retribution. The Holy healing model (models/beta-30-oct/healing_b2.py, 715 healing power, 5 min) for Holy. The PvP burst model (models/beta-30-oct/pvp_burst_b2.py) for one Hammer of Justice stun.
