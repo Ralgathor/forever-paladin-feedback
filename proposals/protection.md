@@ -77,7 +77,7 @@ The beta of 30 October 2026 changes most of the Protection tree. Righteous Fury 
 
 **Why 50%**
 
-At 900 healing power and 19% critical heals, Flash of Light and Holy Light give about 5.75 healing for each mana point with no Blessing of Light. Thus, 4,000 healing costs about 695 mana. If the drain is less than 695 mana, Lay on Hands is more efficient than the usual heals.
+At 900 healing power and 19% critical heals, Flash of Light and Holy Light give about 5.75 healing for each mana point. This value has no Blessing of Light. Thus, 4,000 healing costs about 695 mana. If the drain is less than 695 mana, Lay on Hands is more efficient than the usual heals.
 
 | Drain (% of the current mana) | Drain at full mana (Holy) | More efficient than the usual heals below | Mana that stays after a cast at 30% mana |
 | --- | --- | --- | --- |
@@ -166,5 +166,5 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 - **Threat.** More blocks give more Holy Shield damage. Thus, threat increases by 6%.
 - **5 min fights.** The results are the same: crushing blows 11.9% → 1.1%, damage taken −13%.
 - **Toughness removal (C-P13).** Without Toughness, damage taken increases by 2% (see Toughness removal, C-P13).
-- **Not in the sim.** Shoulder the Burden (C-P5) and Devoted Sacrifice (C-P11) act in raid situations that the sim does not have: a threat transfer between tanks, and Lay on Hands. Their values stay as in Analysis.
+- **Not in the sim.** The sim does not have a threat transfer between tanks or Lay on Hands. Thus, it does not include Shoulder the Burden (C-P5) and Devoted Sacrifice (C-P11). Their values stay as in Analysis.
 

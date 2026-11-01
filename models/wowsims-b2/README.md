@@ -1,6 +1,6 @@
 # wowsims check on the beta of 30 October
 
-These files add the Retribution proposals to wowsims Forever, branch `paladin/hotfix-113554-port` (commit `db28d84a8`), and run the default Retribution set (default gear, default rotation, Unsealed Wrath build 14/5/32, default consumables).
+These files add the proposals to wowsims Forever, branch `paladin/hotfix-113554-port` (commit `db28d84a8`). They run the default Retribution set: default gear, rotation and consumables, Unsealed Wrath build 14/5/32.
 
 | File | What it does |
 | --- | --- |

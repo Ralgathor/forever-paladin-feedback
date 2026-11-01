@@ -93,6 +93,6 @@ The beta of 30 October 2026 changes most of the Retribution tree. Unsealed Wrath
 | 5 min, lean buffs | 583 DPS | +5.3% | +5.2% |
 
 - **C1.** The sim gives +4.0–5.3%. The model gives +5.2%.
-- **Mana.** With full buffs, the mana is empty after 5 min 28 sec. With lean buffs, it is empty after about 4 min: in a 5 min fight, Retribution has no mana for 38 sec and loses 5% damage. The model is lower (1 min 22 sec) because it has no Demonic Rune and no consumables.
+- **Mana.** With full buffs, the mana is empty after 5 min 28 sec. With lean buffs, it is empty after about 4 min. In a 5 min fight, Retribution then has no mana for 38 sec and loses 5% damage. The model is lower (1 min 22 sec) because it has no Demonic Rune and no consumables.
 - **Seal cost −20%.** It has an effect only in long fights with lean buffs (+5.2% in 5 min).
 

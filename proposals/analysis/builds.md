@@ -1,6 +1,6 @@
 # Builds
 
-This section gives the main builds for each spec and role on the proposed trees of calculator version 6 (beta of 30 October 2026, with the proposals). All codes open in the calculator with 51 points and no error. A code that starts with "v6p" opens the proposed trees.
+This section gives the main builds for each spec and role. It uses the proposed trees of calculator version 6 (beta of 30 October 2026, with the proposals). All codes open in the calculator with 51 points and no error. A code that starts with "v6p" opens the proposed trees.
 
 ## Summary
 
@@ -32,7 +32,7 @@ This section gives the main builds for each spec and role on the proposed trees 
 
 - **Values.** wowsims with the proposals Redoubt (C-P1) and Reckoning (C-P12). The beta tank uses the beta talents and no proposal.
 - **Row 4 needs 15 points in rows 1–3.** Divine Intellect 3 gives the last point. With Divine Intellect 2, Swift Judgement is not available.
-- **Toughness removal (C-P13).** The 5 free points go to Deflection 4 and Divine Intellect 1. With the beta talents, Deflection 4 in place of Toughness 5 gives the same damage taken (340 against 340) and a worse TMI (58.1 against 55.9).
+- **Toughness removal (C-P13).** The 5 free points go to Deflection 4 and Divine Intellect 1. With the beta talents, Deflection 4 in place of Toughness 5 gives the same damage taken (340 against 340). The TMI is worse (58.1 against 55.9).
 - **Devoted Sacrifice (C-P11)** is available to a tank for 2 points in place of Deflection. The sim does not model Lay on Hands.
 - **Dungeons.** Dungeon enemies are level 62 or lower and cannot hit with crushing blows. A dungeon tank can move Anticipation points to Stoicism or Guardian's Favor.
 
