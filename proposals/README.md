@@ -4,7 +4,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 10 chan
 
 **Contents**
 
-- **This page:** [How to read this document](#how-to-read-this-document) · [Summary](#summary) · [Design rules](#design-rules)
+- **This tab:** [How to read this document](#how-to-read-this-document) · [Summary](#summary) · [Design rules](#design-rules)
 - **Proposals:** [Holy](holy.md) · [Protection](protection.md) · [Retribution](retribution.md) · [Judgements and Blessings](judgements-and-blessings.md)
 - **Analysis:** [Analysis](analysis/README.md): [Crushing blows](analysis/crushing-blows.md) · [Threat](analysis/threat.md) · [PvP burst check](analysis/pvp-burst-check.md) · [Mana](analysis/mana.md) · [Healing](analysis/healing.md) · [Damage](analysis/damage.md) · [Builds](analysis/builds.md) · [Tree balance](analysis/tree-balance.md)
 - **Tests and open items:** [Beta test results](beta-test-results.md) · [Open items](open-items.md) · [Withdrawn ideas](withdrawn-ideas.md) · [Sources](sources.md)
@@ -17,7 +17,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 10 chan
 - **New IDs.** A new proposal takes the next free number of its series. A new proposal never takes the number of a withdrawn proposal.
 - **Names.** The text gives the name first and the ID in parentheses, for example Sanctified Judgement (C-R3).
 - **C2a** is the alternative to Personal Judgement of the Crusader (C2). **C-P11a** is the alternative to the Lay on Hands part of Devoted Sacrifice (C-P11).
-- **Withdrawn ideas** have no ID. They are in [Withdrawn ideas](withdrawn-ideas.md) only. A withdrawn proposal shows its earlier ID there, because the Analysis tabs still use it.
+- **Withdrawn ideas** have no ID. They are in the [Withdrawn ideas](withdrawn-ideas.md) tab only. A withdrawn proposal shows its earlier ID there, because the Analysis tabs still use it.
 - **Data.** Forever client build 1.60.1.70707, hotfix push 113554 (beta of 30 October 2026), from the game files in wowsims Forever. Player tests from 19 October 2026 and later. The text tells you when a value comes from an in-game tooltip.
 - **Analysis values.** Most values in the Analysis tabs use the beta of 18 October 2026. Beta test results gives the first model results for the beta of 30 October. A proposal says when its values must be modeled again.
 - **Limits.** These are design proposals. No player has tested them in the game. The combat and mana values use Classic 1.12 rules when no test gives a different rule. Each estimate gives its assumptions.
