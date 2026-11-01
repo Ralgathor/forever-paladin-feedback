@@ -29,6 +29,7 @@ The builds use the proposed trees of calculator version 6 (the live version, wit
 | Build | Points and code | Threat each sec | Damage taken each sec | TMI | What it gives |
 | --- | --- | --- | --- | --- | --- |
 | **PT1. Raid tank** | 0/34/17: [`v6p-3530110213501531-45233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-45233) | 1,015 | 296 | 45.3 | Protection: Divine Intellect 3, Redoubt 5, Precision 3, Sacred Duty 1, Templar's Bulwark, Shield Specialization 2, Swift Judgement, Improved Righteous Fury 3, Anticipation 5, Holy Shield, Reckoning 5, Iron Creed 3, Shieldsworn. Retribution: Deflection 4, Benediction 5, Improved Judgement 2, Conviction 3, Sanctified Judgement 3 |
+| Live tank, best found (BS2) | 0/35/16 in the live trees: [`b2-05302102313501531-52233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2-05302102313501531-52233000001) | 953 | 325 | 55.5 | Sacred Arbiter and Sanctified Judgement 3, no Holy points. See builds/protection.md |
 | Live tank (reference) | 12/32/7 in the live trees: [`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) | 928 | 333 | 57.1 | The wowsims default tank build, no proposals. Toughness 2 |
 
 - **Values** come from wowsims with Redoubt (C-P1) and Reckoning (C-P12). With the Holy Strike Seal trigger (C1) also, PT1 has 1,041 threat each sec (builds/protection.md).
