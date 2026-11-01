@@ -79,7 +79,7 @@ The talent icons come from the Wowhead icon server (wow.zamimg.com). If the icon
 ## Method
 
 - **Data.** Forever client build 1.60.1.70707, hotfix push 113554 (live version). The talent data comes from the game files in wowsims Forever (branch `paladin/hotfix-113554-port`). Player tests give the talent behavior.
-- **Earlier data.** Most values in the Analysis tabs use the beta of 18 October 2026 (client build 1.60.1.70450). Beta test results gives the first model results for the live trees.
+- **Earlier data.** The Analysis tabs use the live trees. The values of the beta of 18 October 2026 (client build 1.60.1.70450) are in Beta test results and in the history of the repository.
 - **Model talents.** Each proposal uses a talent from another class in the same game version as a model (Warrior, Druid, Priest, Shaman, Hunter, Mage).
 - **Rules.** The combat and mana values use Classic 1.12 rules when no test gives a different rule.
 - **Estimates.** The burst values are estimates. The Reckoning, threat, mana, healing and damage values come from simple models, not combat logs. Each estimate gives its assumptions and limits.
