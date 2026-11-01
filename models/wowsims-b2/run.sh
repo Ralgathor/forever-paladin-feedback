@@ -7,7 +7,7 @@ cd "$W"
 git checkout -q 895cd67f9
 git apply "$D/talents.patch" || true
 cp "$D/proposals_sim.go" sim/paladin/
-cp "$D/feedback_run_test.go" sim/paladin/retribution/
+cp "$D/feedback_run_test.go" "$D/feedback_levelup_test.go" sim/paladin/retribution/
 cp "$D/feedback_prot_test.go" sim/paladin/protection/feedback_run_test.go
 cp "$D/feedback_warrior_test.go" sim/warrior/protection/feedback_run_test.go
 cp "$D/feedback_bear_test.go" sim/druid/feralbear/
