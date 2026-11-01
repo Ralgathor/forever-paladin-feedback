@@ -171,7 +171,7 @@ Default Retribution gear, rotation and consumables. One level 63 boss, 3,000 ite
 
 ## 9. Inputs of the model
 
-**Build.** The wowsims default Retribution build, 14/6/31 (`050250002-501-05233011201301351`).
+**Build.** The wowsims default Retribution build, 14/6/31 ([`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351)).
 
 - Holy: Divine Strength 5/5, Reverence 2/2, Improved Seals 5/5, Holy Conduit 2/2.
 - Protection: Divine Intellect 5/5, Precision 1/1.

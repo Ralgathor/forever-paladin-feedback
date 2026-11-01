@@ -6,8 +6,8 @@ This file gives the best healing build on the trees of 30 October 2026, the valu
 
 | Trees | Build | Points | Code | Raid, 3 / 5 / 10 min | One tank, 3 / 5 / 10 min |
 | --- | --- | --- | --- | --- | --- |
-| Proposed | HB2 | 31/12/8 | `v6p50320115202101251-50122000000000002-0503` | 596 / 506 / 427 | 695 / 601 / 507 |
-| Beta | HB1 | 38/5/8 | `b250325115202121251-5-0503` | 596 / 506 / 427 | 695 / 601 / 507 |
+| Proposed | HB2 | 31/12/8 | [`v6p50320115202101251-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50320115202101251-50122000000000002-0503) | 596 / 506 / 427 | 695 / 601 / 507 |
+| Beta | HB1 | 38/5/8 | [`b250325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b250325115202121251-5-0503) | 596 / 506 / 427 | 695 / 601 / 507 |
 
 - Healing each sec after overhealing, 715 healing power, 200% critical heals (Holy Power 5/5, main hypothesis).
 - In both trees, all healing talents fit in 51 points. Thus, the best healing build takes all of them. The other points give only utility.
@@ -18,7 +18,7 @@ This file gives the best healing build on the trees of 30 October 2026, the valu
 
 ### Proposed: HB2
 
-`v6p50320115202101251-50122000000000002-0503` (31/12/8). This is HB2 of Analysis, Builds.
+[`v6p50320115202101251-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50320115202101251-50122000000000002-0503) (31/12/8). This is HB2 of Analysis, Builds.
 
 - Holy: Spiritual Focus 5, Healing Light 3, Reverence 2, Purifying Power 1, Divine Favor, Illumination 5, Holy Conduit 2, Infusion of Light 2, Oath of Light, Holy Shock, Boundless Light 2, Holy Power 5, Light's Vigil.
 - Protection: Divine Intellect 5, Precision 1, Guardian's Favor 2, Sacred Duty 2, Devoted Sacrifice 2.
@@ -26,7 +26,7 @@ This file gives the best healing build on the trees of 30 October 2026, the valu
 
 ### Beta: HB1
 
-`b250325115202121251-5-0503` (38/5/8). This is HB1 of Analysis, Builds. It takes Improved Seals 5 and Consecrated Ground 2 in place of the Protection saves.
+[`b250325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b250325115202121251-5-0503) (38/5/8). This is HB1 of Analysis, Builds. It takes Improved Seals 5 and Consecrated Ground 2 in place of the Protection saves.
 
 ### Points that the rows force
 

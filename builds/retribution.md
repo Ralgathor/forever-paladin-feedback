@@ -6,10 +6,10 @@ This file gives the best damage builds on one target. It uses the beta trees of 
 
 | Trees | Case | Build | Points | Code | DPS |
 | --- | --- | --- | --- | --- | --- |
-| Beta | Raid | RB1 | 14/6/31 | `b2050250002-501-05233011201301351` | 910 |
-| Proposed | Raid | RB1 | 14/6/31 | `v6p050250002-501-05233011201301351` | 960 |
-| Beta | Fresh 60 | RB1 | 14/6/31 | `b2050250002-501-05233011201301351` | 303 |
-| Proposed | Fresh 60 | RB1 | 14/6/31 | `v6p050250002-501-05233011201301351` | 324 |
+| Beta | Raid | RB1 | 14/6/31 | [`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351) | 910 |
+| Proposed | Raid | RB1 | 14/6/31 | [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 960 |
+| Beta | Fresh 60 | RB1 | 14/6/31 | [`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351) | 303 |
+| Proposed | Fresh 60 | RB1 | 14/6/31 | [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 324 |
 
 - **RB1 is the best build in all four cases.** It is the wowsims default build of 1 November and RB1 of Analysis, Builds. The talent search found raid builds with at most +0.6%. These builds are 2–5% worse at fresh 60 (part 2).
 - **"Raid"** is full raid buffs and debuffs, with consumables. **"Fresh 60"** is no buffs, no debuffs and no consumables.
@@ -22,13 +22,13 @@ This file gives the best damage builds on one target. It uses the beta trees of 
 - **Fight.** 3 min, one level 63 boss, 3,000 iterations, the same random seed for all runs.
 - **Gear and rotation.** The default Retribution gear set and the default rotation of wowsims Forever. This folder has no gear search.
 - **Talent search.** A hill climb (`models/wowsims-b2/search.py`). Each step tests all moves of 1 point into a talent with damage value, at 1,000 iterations. It keeps the best move. A round with moves of 2 points then tests the best moves at 250 iterations, and the 6 best again at 2,000. The best builds then run at 3,000 iterations. The logs are `search_ret-*.log`.
-- **Starts.** RB1 and the earlier wowsims build (14/5/32, `050250002-5-05233301101301351`) for the raid. RB1 and the best raid builds for fresh 60.
+- **Starts.** RB1 and the earlier wowsims build (14/5/32, [`b2050250002-5-05233301101301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-5-05233301101301351)) for the raid. RB1 and the best raid builds for fresh 60.
 
 ## 2. Builds
 
 ### RB1
 
-`050250002-501-05233011201301351` (14/6/31).
+[`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) (14/6/31).
 
 - Holy: Divine Strength 5, Reverence 2, Improved Seals 5, Holy Conduit 2.
 - Protection: Divine Intellect 5, Precision 1.
@@ -38,9 +38,9 @@ This file gives the best damage builds on one target. It uses the beta trees of 
 
 | Build | Trees | Code | Raid | Fresh 60 | Change against RB1 |
 | --- | --- | --- | --- | --- | --- |
-| RS1, 12/8/31 | Beta | `050150001-503-15233011101301351` | 916 (+0.6%) | 288 (−5.0%) | Reverence 1, Holy Conduit 1, Pursuit of Justice 1, Precision 3, Deflection 1 |
-| RS2, 13/7/31 | Proposed | `050150002-502-05233011201301351` | 963 (+0.3%) | — | Reverence 1, Precision 2 |
-| RS3, 12/8/31 | Proposed | `050050002-503-15233011101301351` | — | 317 (−1.9%) | Reverence 0, Pursuit of Justice 1, Precision 3, Deflection 1 |
+| RS1, 12/8/31 | Beta | [`b2050150001-503-15233011101301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050150001-503-15233011101301351) | 916 (+0.6%) | 288 (−5.0%) | Reverence 1, Holy Conduit 1, Pursuit of Justice 1, Precision 3, Deflection 1 |
+| RS2, 13/7/31 | Proposed | [`v6p050150002-502-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050150002-502-05233011201301351) | 963 (+0.3%) | — | Reverence 1, Precision 2 |
+| RS3, 12/8/31 | Proposed | [`v6p050050002-503-15233011101301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050050002-503-15233011101301351) | — | 317 (−1.9%) | Reverence 0, Pursuit of Justice 1, Precision 3, Deflection 1 |
 
 - **Precision is the only gain in a raid.** The raid buffs fill the mana. Thus, the search moves Reverence points to Precision 3.
 - **At fresh 60, Reverence has value.** With no buffs, RB1 has no mana for 69 sec of the 3 min fight. RS1 has no mana for 88 sec.

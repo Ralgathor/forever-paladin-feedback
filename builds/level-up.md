@@ -4,7 +4,7 @@ This file gives a fast talent order to level a Paladin in the beta trees of 30 O
 
 ## Summary
 
-Go deep in Retribution first. Take Seal of Command at level 20, Pursuit of Justice at levels 21–22 and Unsealed Wrath at level 40. Then take the Holy talents (Divine Strength, Improved Seals, Holy Conduit) and Divine Intellect. The level 60 build is RB1, 14/6/31: `050250002-501-05233011201301351`.
+Go deep in Retribution first. Take Seal of Command at level 20, Pursuit of Justice at levels 21–22 and Unsealed Wrath at level 40. Then take the Holy talents (Divine Strength, Improved Seals, Holy Conduit) and Divine Intellect. The level 60 build is RB1, 14/6/31: [`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351).
 
 ## 1. Point order
 
@@ -37,11 +37,11 @@ Paste the code into the code box of the calculator and click "Load code". A code
 
 | Level | Points | Code |
 | --- | --- | --- |
-| 20 | 0/0/11 | `b2--05230001` |
-| 30 | 0/0/21 | `b2--052330012013001` |
-| 40 | 0/0/31 | `b2--05233011201301351` |
-| 50 | 10/0/31 | `b205005--05233011201301351` |
-| 60 | 14/6/31 | `b2050250002-501-05233011201301351` |
+| 20 | 0/0/11 | [`b2--05230001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2--05230001) |
+| 30 | 0/0/21 | [`b2--052330012013001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2--052330012013001) |
+| 40 | 0/0/31 | [`b2--05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2--05233011201301351) |
+| 50 | 10/0/31 | [`b205005--05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205005--05233011201301351) |
+| 60 | 14/6/31 | [`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351) |
 
 ## 3. Time for each kill
 

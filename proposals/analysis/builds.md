@@ -16,8 +16,8 @@ The builds use the proposed trees of calculator version 6 (the beta of 30 Octobe
 
 | Build | Points and code | Healing each sec (raid / one tank, 5 min) | What it gives |
 | --- | --- | --- | --- |
-| HB1. Raid healer, beta talents | 38/5/8: v6p50325115202121251-5-0503 | 506 / 601 | All healing talents. Divine Intellect 5, Benediction 5, Conviction 3. Improved Seals 5, Holy Conduit 2 and Consecrated Ground 2 fill the rows |
-| **HB2. Raid healer, Devoted Sacrifice** | 31/12/8: v6p50320115202101251-50122000000000002-0503 | 506 / 601 | All healing talents. Devoted Sacrifice 2/2 (C-P11): Lay on Hands drains only 50% of the mana. Guardian's Favor 2/2 (Hand of Protection each 3 min), Sacred Duty 2/2 (Divine Shield −60 sec), Precision 1 |
+| HB1. Raid healer, beta talents | 38/5/8: [`v6p50325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50325115202121251-5-0503) | 506 / 601 | All healing talents. Divine Intellect 5, Benediction 5, Conviction 3. Improved Seals 5, Holy Conduit 2 and Consecrated Ground 2 fill the rows |
+| **HB2. Raid healer, Devoted Sacrifice** | 31/12/8: [`v6p50320115202101251-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50320115202101251-50122000000000002-0503) | 506 / 601 | All healing talents. Devoted Sacrifice 2/2 (C-P11): Lay on Hands drains only 50% of the mana. Guardian's Favor 2/2 (Hand of Protection each 3 min), Sacred Duty 2/2 (Divine Shield −60 sec), Precision 1 |
 
 - **HB2 is the main build with the proposals.** It loses only two damage talents: Improved Seals and Consecrated Ground. The healing does not change.
 - **Holy needs 31 points for Light's Vigil.** Holy Conduit 2/2 fills the rows. It makes only Consecration, Holy Wrath, Exorcism and Hammer of Wrath cheaper.
@@ -28,8 +28,8 @@ The builds use the proposed trees of calculator version 6 (the beta of 30 Octobe
 
 | Build | Points and code | Threat each sec | Damage taken each sec | TMI | What it gives |
 | --- | --- | --- | --- | --- | --- |
-| **PT1. Raid tank** | 0/34/17: v6p-3530110213501531-45233 | 1,015 | 296 | 45.3 | Protection: Divine Intellect 3, Redoubt 5, Precision 3, Sacred Duty 1, Templar's Bulwark, Shield Specialization 2, Swift Judgement, Improved Righteous Fury 3, Anticipation 5, Holy Shield, Reckoning 5, Iron Creed 3, Shieldsworn. Retribution: Deflection 4, Benediction 5, Improved Judgement 2, Conviction 3, Sanctified Judgement 3 |
-| Beta tank (reference) | 12/32/7 in the beta trees: b2050050002-05302102213301531-502 | 928 | 333 | 57.1 | The wowsims default tank build, no proposals. Toughness 2 |
+| **PT1. Raid tank** | 0/34/17: [`v6p-3530110213501531-45233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-45233) | 1,015 | 296 | 45.3 | Protection: Divine Intellect 3, Redoubt 5, Precision 3, Sacred Duty 1, Templar's Bulwark, Shield Specialization 2, Swift Judgement, Improved Righteous Fury 3, Anticipation 5, Holy Shield, Reckoning 5, Iron Creed 3, Shieldsworn. Retribution: Deflection 4, Benediction 5, Improved Judgement 2, Conviction 3, Sanctified Judgement 3 |
+| Beta tank (reference) | 12/32/7 in the beta trees: [`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) | 928 | 333 | 57.1 | The wowsims default tank build, no proposals. Toughness 2 |
 
 - **Values** come from wowsims with Redoubt (C-P1) and Reckoning (C-P12). With the Holy Strike Seal trigger (C1) also, PT1 has 1,041 threat each sec (builds/protection.md).
 - **Divine Intellect 3 is necessary.** Row 4 needs 15 points in rows 1–3. With Divine Intellect 2, Swift Judgement is not available.
@@ -41,14 +41,14 @@ The builds use the proposed trees of calculator version 6 (the beta of 30 Octobe
 
 | Build | Points and code | Raid DPS, beta / with C1 | PvP burst (one stun) | What it gives |
 | --- | --- | --- | --- | --- |
-| **RB1. Raid** | 14/6/31: v6p050250002-501-05233011201301351 | 910 / 960 (+5.5%) | — | The wowsims default build. Holy: Divine Strength 5, Reverence 2, Improved Seals 5, Holy Conduit 2. Protection: Divine Intellect 5, Precision 1. Retribution: Unsealed Wrath, Champion of the Light 5, Vengeance 3, Two-Handed Weapon Specialization 3, Sacred Arbiter, Seal of Command, Repentance, Unyielding Faith 1, Pursuit of Justice 2 |
-| RB2. PvP, Unsealed Wrath | 0/20/31: v6p-50322130101000002-05233001211301351 | 845 / 887 | About 2,400 (2,510 with C1) | Swift Judgement and Improved Hammer of Justice 3/3 (Hammer of Justice each 45 sec). Guardian's Favor, Sacred Duty, Devoted Sacrifice. Eye for an Eye 1. No Holy points |
-| RB3. PvP, Reckoning bomb | 0/25/26: v6p-50322130101005002-052330012213013 | 653 / 696 | About 2,070; with 4 stored attacks about 3,630 (2,180 and 3,740 with C1) | Reckoning 5/5, Swift Judgement, Improved Hammer of Justice 3/3, Devoted Sacrifice. Eye for an Eye 2, Repentance, Vengeance 3. No Unsealed Wrath and no Champion of the Light |
+| **RB1. Raid** | 14/6/31: [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 910 / 960 (+5.5%) | — | The wowsims default build. Holy: Divine Strength 5, Reverence 2, Improved Seals 5, Holy Conduit 2. Protection: Divine Intellect 5, Precision 1. Retribution: Unsealed Wrath, Champion of the Light 5, Vengeance 3, Two-Handed Weapon Specialization 3, Sacred Arbiter, Seal of Command, Repentance, Unyielding Faith 1, Pursuit of Justice 2 |
+| RB2. PvP, Unsealed Wrath | 0/20/31: [`v6p-50322130101000002-05233001211301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-50322130101000002-05233001211301351) | 845 / 887 | About 2,400 (2,510 with C1) | Swift Judgement and Improved Hammer of Justice 3/3 (Hammer of Justice each 45 sec). Guardian's Favor, Sacred Duty, Devoted Sacrifice. Eye for an Eye 1. No Holy points |
+| RB3. PvP, Reckoning bomb | 0/25/26: [`v6p-50322130101005002-052330012213013`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-50322130101005002-052330012213013) | 653 / 696 | About 2,070; with 4 stored attacks about 3,630 (2,180 and 3,740 with C1) | Reckoning 5/5, Swift Judgement, Improved Hammer of Justice 3/3, Devoted Sacrifice. Eye for an Eye 2, Repentance, Vengeance 3. No Unsealed Wrath and no Champion of the Light |
 
 - **Raid DPS** comes from wowsims, 3 min, full buffs. The wowsims rotation is made for RB1. Thus, the values of RB2 and RB3 are approximate.
 - **The Holy points give RB1 the most.** Improved Seals gives +15% on Seals and Judgements, and Reverence gives mana. Without Holy points (RB2), raid DPS is 7% lower.
 - **C1 gives +5–7%** in each build.
-- **The earlier wowsims build** (14/5/32, v6p050250002-5-05233301101301351) gives 896 / 942. Precision 1 in place of Vindication gives RB1 +1.6%.
+- **The earlier wowsims build** (14/5/32, [`v6p050250002-5-05233301101301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-5-05233301101301351)) gives 896 / 942. Precision 1 in place of Vindication gives RB1 +1.6%.
 - **PvP burst** values come from PvP burst check. The proposals add 3–5%.
 
 ## 4. Points that the rows force

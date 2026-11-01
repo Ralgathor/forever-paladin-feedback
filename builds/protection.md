@@ -6,10 +6,10 @@ This file gives the best tank builds for the beta trees of 30 October 2026 and f
 
 | Trees | Build | Points | Code | Threat each sec | Damage taken each sec | TMI |
 | --- | --- | --- | --- | --- | --- | --- |
-| Proposed | PT1 | 0/34/17 | `v6p-3530110213501531-45233` | 1,041 | 296 | 45.1 |
-| Proposed | PS1 | 0/34/17 | `v6p-3530110213501531-44233000001` | 1,062 | 296 | 45.1 |
-| Beta | BT1 | 12/32/7 | `b2050050002-05302102213301531-502` | 928 | 333 | 57.1 |
-| Beta | BS1 | 10/31/10 | `b205005-05302102213201531-5023` | 975 | 342 | 58.5 |
+| Proposed | PT1 | 0/34/17 | [`v6p-3530110213501531-45233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-45233) | 1,041 | 296 | 45.1 |
+| Proposed | PS1 | 0/34/17 | [`v6p-3530110213501531-44233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-44233000001) | 1,062 | 296 | 45.1 |
+| Beta | BT1 | 12/32/7 | [`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) | 928 | 333 | 57.1 |
+| Beta | BS1 | 10/31/10 | [`b205005-05302102213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205005-05302102213201531-5023) | 975 | 342 | 58.5 |
 
 - **Proposed: PS1 is PT1 with Sacred Arbiter.** One Benediction point goes to Sacred Arbiter: +2.0% threat, the same damage taken and the same TMI. PT1 is the tank of Analysis, Builds.
 - **Beta: the build is a choice.** BT1 is the wowsims default tank build. The search build BS1 gives +5.1% threat, but 2.6% more damage taken and a 2.4% worse TMI. It takes Conviction 3 in place of Holy Conduit 2 and 1 Anticipation point.
@@ -29,22 +29,22 @@ This file gives the best tank builds for the beta trees of 30 October 2026 and f
 
 ### Proposed: PT1 and PS1
 
-`-3530110213501531-45233` (0/34/17).
+[`v6p-3530110213501531-45233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-45233) (0/34/17).
 
 - Protection: Divine Intellect 3, Redoubt 5, Precision 3, Sacred Duty 1, Templar's Bulwark, Shield Specialization 2, Swift Judgement, Improved Righteous Fury 3, Anticipation 5, Holy Shield, Reckoning 5, Iron Creed 3, Shieldsworn.
 - Retribution: Deflection 4, Benediction 5, Improved Judgement 2, Conviction 3, Sanctified Judgement 3.
-- **PS1** (`-3530110213501531-44233000001`): Benediction 4 and Sacred Arbiter in place of Benediction 5.
+- **PS1** ([`v6p-3530110213501531-44233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-44233000001)): Benediction 4 and Sacred Arbiter in place of Benediction 5.
 - **Without the Holy Strike Seal trigger (C1),** PT1 has 1,015 threat each sec and 296 damage taken each sec. Its TMI is 45.3 (Analysis, Builds).
 
 ### Beta: BT1 and BS1
 
-`050050002-05302102213301531-502` (12/32/7).
+[`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) (12/32/7).
 
 - Holy: Divine Strength 5, Improved Seals 5, Holy Conduit 2.
 - Protection: Redoubt 5, Precision 3, Sacred Duty 2, Templar's Bulwark, Shield Specialization 2, Toughness 2, Swift Judgement, Improved Righteous Fury 3, Anticipation 3, Holy Shield, Reckoning 5, Iron Creed 3, Shieldsworn.
 - Retribution: Deflection 5, Improved Judgement 2.
-- **BS1** (`05005-05302102213201531-5023`): no Holy Conduit, Anticipation 2, and Conviction 3.
-- **The tank build of the Analysis model** (B2T, 0/38/13, `-25301102513501531-05233`) gives 932 threat each sec and 340 damage taken each sec. Its TMI is 55.9.
+- **BS1** ([`b205005-05302102213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205005-05302102213201531-5023)): no Holy Conduit, Anticipation 2, and Conviction 3.
+- **The tank build of the Analysis model** (B2T, 0/38/13, [`b2-25301102513501531-05233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2-25301102513501531-05233)) gives 932 threat each sec and 340 damage taken each sec. Its TMI is 55.9.
 
 ## 3. Stat weights
 

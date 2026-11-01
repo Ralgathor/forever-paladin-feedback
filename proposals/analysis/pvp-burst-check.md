@@ -56,7 +56,7 @@ Reckoning 5/5, one melee attacker with an attack each 1.5 sec.
 
 ## 5. Earlier check: Reckoning (C-P6), beta of 18 October
 
-This check was for the withdrawn proposal C-P6. C-P6 released the stored attacks with Holy Strike. The build was 0/26/25 with a two-hand weapon (`v5p-532300210215002-5005031211331`, RB5).
+This check was for the withdrawn proposal C-P6. C-P6 released the stored attacks with Holy Strike. The build was 0/26/25 with a two-hand weapon ([`v5p-532300210215002-5005031211331`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v5p-532300210215002-5005031211331), RB5).
 
 | Part of the burst | C-P6 | Beta, no stored attacks | Beta, 4 stored attacks |
 | --- | --- | --- | --- |
