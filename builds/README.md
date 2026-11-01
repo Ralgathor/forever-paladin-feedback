@@ -2,6 +2,8 @@
 
 This folder gives the best build, the pre-raid gear and the stat weights of each spec, for the beta trees and for the proposed trees. The values come from wowsims Forever with the proposals patch (`models/wowsims/proposals.patch`). This folder is a reference. It does not change a proposal.
 
+**Trees.** This folder uses the trees of 18 October 2026: the beta of 18 October and the proposed trees of calculator version 5. The beta of 30 October changes the three trees. Thus, the builds and the values of this folder are not current. For the main builds on the current trees, see Analysis, Builds (calculator version 6).
+
 | Spec | File | Best proposed build | Best beta build |
 | --- | --- | --- | --- |
 | Holy (healer) | [holy.md](holy.md) | P1: `v5p53201132251010512-30200000000000502-0005` | B1: `05320113225101051-500250002-05` |
@@ -23,7 +25,7 @@ This folder gives the best build, the pre-raid gear and the stat weights of each
 
 ## Common rules
 
-- **Codes.** All codes load in calculator version 5 with 51 points. A code that starts with `v5p` opens the proposed trees. A code with only digits opens the beta trees.
+- **Codes.** All codes load with 51 points. A code that starts with `v5p` opens on the version 5 page of the calculator. A code with only digits opens on the page of the 18 October beta.
 - **Gear.** Pre-raid gear for all specs. Holy also has a raid set (Naxxramas). The gear search changes one slot at a time and keeps the best item in the sim. Thus, it gives a good set, not a proven best set.
 - **Item list.** On 28 October 2026, wowsims rebuilt its item list from the live Forever game cache. Some items left the list (for example Hand of Edward the Odd and Arcanoweave Cloak). All sets of this folder use only items of the new list.
 - **wowsims links.** Each link loads the gear and the talents in wowsims. The live wowsims has no proposals. Thus, a proposed build loads in the beta tree order, and the site gives beta values for it. The values of this folder come from the sim with the proposals.

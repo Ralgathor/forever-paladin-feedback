@@ -1,6 +1,6 @@
 # Level-up: best beta talent order from level 10 to 60
 
-This file gives the fastest talent order to level a Paladin in the beta trees, with 1 point for each level. The proposed trees are not in this check.
+This file gives the fastest talent order to level a Paladin in the beta trees, with 1 point for each level. The proposed trees are not in this check. The check uses the beta trees of 18 October 2026. The code opens on the page of that beta in the calculator.
 
 ## Summary
 

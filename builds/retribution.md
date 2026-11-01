@@ -26,7 +26,7 @@ This file gives the best damage builds on one target for the beta trees and for 
 - **Talent search.** A script makes valid builds with the rules of the calculator. It changes 1 to 5 points at a time and keeps a change when the DPS increases. The first search tested about 9,000 builds.
 - **Path.** Gear search and talent search in turns, until neither changes. The gear search changes one slot at a time. It tests the 10 to 20 best pre-raid items for each slot. Then each build is tested with the gear of all the other cases, and the best gear stays.
 - **Gear rules.** Item level 66 or lower, no raid drops, no raid materials, Alliance. Reputation and PvP reputation rewards stay in. The enchants are the enchants of the wowsims Twist of Light preset.
-- **Codes.** All codes load in calculator version 5 with 51 points.
+- **Codes.** All codes load in calculator version 5 with 51 points. A `v5p` code opens on the version 5 page. A beta code (only digits) opens on the page of the 18 October beta.
 
 ## 2. Best builds
 

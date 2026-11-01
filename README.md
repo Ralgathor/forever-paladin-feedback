@@ -4,82 +4,98 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 22 changes and 7 moves for the Holy, Protection and Retribution trees. 5 changes are baseline spell changes (C1–C5). 17 changes are talent changes (C-H1–C-H4, C-P1–C-P9, C-P11, C-R1–C-R3), and four of them are new talents. The moves are M-H1–M-H4, M-P1, M-R1 and M-R2.
+- **Proposals:** 10 changes for the beta trees of 30 October 2026. 4 changes are baseline spell changes (C1, C2, C4, C5). Shoulder the Burden (C-P5) is a new baseline spell. 5 changes are talent changes (C-P1, C-P11, C-P12, C-P13, C-R3). Devoted Sacrifice (C-P11) is a new talent. No Holy talent change and no move is open now.
+- **Adopted proposals:** the beta of 30 October 2026 adopts 6 earlier proposals (C3, the C-H1 move, the C-P5 removal, C-R1, M-H5 and M-R1).
 - **Talent calculator:** you can try the proposals and compare them with the beta trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
-- **Builds:** the best builds for each spec and role (raid, dungeon, PvP), with calculator codes. Also the builds that use a different tree for a role.
-- **Best builds, gear and stat weights:** the best build, pre-raid gear and stat weights of each spec in wowsims Forever, for the beta and the proposed trees ([builds](builds/README.md)).
+- **Builds:** the main builds for each spec and role (raid, dungeon, PvP), with calculator version 6 codes (Analysis, Builds).
+- **Best builds, gear and stat weights:** the best build, pre-raid gear and stat weights of each spec in wowsims Forever ([builds](builds/README.md)). This folder uses the trees of 18 October 2026 and calculator version 5.
 
 ## IDs
 
-- **C1 to C5 (spell change):** the proposal changes a baseline spell, not a talent.
+- **C1 to C5 (spell change):** the proposal changes a baseline spell, not a talent. Shoulder the Burden (C-P5) is also a new baseline spell.
 - **C-H, C-P and C-R (talent change):** the proposal changes what a talent does, adds a talent or removes a talent. The letter after C gives the tree: H (Holy), P (Protection), R (Retribution).
 - **M-H, M-P and M-R (move):** the proposal moves a talent to a different row. The talent text does not change.
+- **Alternatives.** C2a is the alternative to C2. C-P11a is the alternative to the Lay on Hands part of C-P11.
 - **New IDs.** A new proposal takes the next free number of its series. A new proposal never takes the number of a withdrawn proposal.
-- **Names.** The text gives the name first and the ID in parentheses, for example Twist of Light (C-R2).
+- **Names.** The text gives the name first and the ID in parentheses, for example Sanctified Judgement (C-R3).
 
-## Changes and moves
+## Changes
 
 **Spell changes**
 
-- **C1 Holy Strike:** Holy Strike triggers your active Seal and Echo the same as a melee attack, for all specs (beta: only Seal of Light, Justice and Wisdom).
-- **C2 Judgement of the Crusader:** a personal debuff. It does not count against the one-Judgement limit. C2a and C2b are alternatives.
-- **C3 Blessing of Light:** removed. Healing Light (C-H4) gives 10/20/30%. Thus, Holy healing does not change with the number of Paladins in the raid. C3a and C3b are alternatives.
-- **C4 Hand of Sacrifice:** up to 825 damage moves to you (beta: 55 for each hit). Lasts 30 sec, 15 sec cooldown.
+- **C1 Holy Strike:** Holy Strike triggers your active Seal the same as a melee attack, for all specs (beta: only Seal of Light, Justice and Wisdom).
+- **C2 Judgement of the Crusader:** a personal debuff. It does not count against the one-Judgement limit. C2a is the alternative.
+- **C4 Hand of Sacrifice:** up to 825 damage moves to you (beta: Blessing of Sacrifice, 55 damage for each hit, no cooldown). Lasts 30 sec, 15 sec cooldown.
 - **C5 Hands:** Blessing of Sacrifice, Protection and Freedom become Hand of Sacrifice, Protection and Freedom. They use no Blessing slot. Each Paladin can have one Hand on a target.
+- **C-P5 Shoulder the Burden (new baseline spell):** 50% of the threat of an ally moves to you. 5 min cooldown. All Paladins can learn it. It has no effect in PvP.
 
 **Holy**
 
-- **C-H1 Reverence:** 17/33/50% mana regeneration during casts (beta: 10/20/30%). It moves from row 3 to row 2. Retribution can take it with 8 Holy points.
-- **C-H2 Lingering Light (new, row 3):** a critical heal adds a heal over time of 10/20% of the heal.
-- **C-H3 Infusion of Light:** all Holy Shock, Flash of Light and Holy Strike hits make the next Holy Light faster (beta: critical hits only). It moves from row 4 to row 2.
-- **C-H4 Healing Light:** 3 ranks, 10/20/30% (beta: 4/8/12%), with Blessing of Light removal (C3). It moves from row 2 to row 6.
-- **M-H1 Improved Seals:** row 2 → row 1. It keeps 3 ranks, 5/10/15%.
-- **M-H2 Unyielding Faith:** row 2 → row 1, to fill the place of Divine Strength (Toughness and Divine Strength removal, C-P3).
-- **M-H3 Holy Power:** row 6 → row 5. With Lingering Light (C-H2) in row 3, a Holy healer needs no filler.
-- **M-H4 Consecrated Ground:** row 5 → row 6. Only deep Holy Shock builds take it.
+- No Holy talent change. Oath of Light, Boundless Light and the new Holy Power make the Paladin the best healer on one tank. The spell changes still apply to Holy.
 
 **Protection**
 
-- **C-P1 Redoubt:** each Holy Shield cast also starts it. The block chance stays high. Most crushing blows stop.
-- **C-P2 Iron Creed:** −2–10% damage taken while Righteous Fury is active (beta: for 6 sec after Holy Strike).
-- **C-P3 Toughness and Divine Strength:** removed. Vindication goes to Retribution row 2 with 5 ranks (+1–5% Attack Power). Benediction (M-P1) and Unyielding Faith (M-H2) fill row 1 of Protection and Holy. Precision, Guardian's Favor, Anticipation and Holy Conduit stay in their beta place. Each point in rows 1 and 2 then has a use for its spec.
-- **C-P4 Improved Righteous Fury:** removed. Iron Creed alone gives −10% damage taken.
-- **C-P5 Shoulder the Burden (new, row 3) replaces Improved Seal of Fury:** 50% of the threat of an ally moves to you. 5 min cooldown (4 min with Sacred Duty 2/2). It has no effect in PvP. Swift Judgement keeps its row 4 place with no requirement.
-- **C-P6 Reckoning:** block, dodge and parry also give charges (once each 4 sec). Holy Strike releases up to 2 charges.
-- **C-P7 Reach of Law (new, row 5):** Judgement range +5/10 yards while Seal of Fury is active.
-- **C-P8 Shield Specialization:** mana return once each 2 sec (beta: 3 sec).
-- **C-P9 Holy Shield:** each block also does 100% of your block value as Holy damage, as Shield Slam does. Paladin threat then increases with gear, as Warrior and Druid threat does.
-- **C-P11 Devoted Sacrifice (new, row 3):** Lay on Hands drains only 75/50% of your current mana (beta: all of it). You also take 20/40% less damage from your Hand of Sacrifice. Alternative C-P11a (Devoted Sacrifice): the spell drains 50% for all Paladins.
-- **M-P1 Benediction:** Retribution row 1 → Protection row 1, with its 5 beta ranks (2–10%). It takes the place of Toughness (Toughness and Divine Strength removal, C-P3).
+- **C-P1 Redoubt:** each Holy Shield cast also starts it. In wowsims, crushing blows decrease from 12.0% to 0.9% of the boss attacks (Warrior: 1.1%).
+- **C-P11 Devoted Sacrifice (new, row 3):** Lay on Hands drains only 75/50% of your current mana (beta: all of it). You also take 20/40% less damage from your Hand of Sacrifice. Alternative C-P11a: the spell drains 50% for all Paladins.
+- **C-P12 Reckoning:** 20–100% chance after a block, once each 4 sec (beta: 8–40%, once each 1.5 sec). The critical hit trigger does not change.
+- **C-P13 Toughness:** removed. Devoted Sacrifice (C-P11) takes its place in row 3. Protection then has 46 points (beta: 49).
 
 **Retribution**
 
-- **C-R1 Conviction:** +1–5% critical hit chance with attacks and spells (beta: melee only).
-- **C-R2 Twist of Light:** the Echo applies to all melee attacks for 10 sec (beta: the next melee attack only).
 - **C-R3 Sanctified Judgement:** each Judgement returns 20/40/60% of the Seal cost (beta: a 33/66/100% chance).
-- **M-R1 Two-Handed Weapon Specialization:** row 5 → row 4 (20 → 15 points).
-- **M-R2 Conviction:** row 2 → row 1, as all other +5% critical hit talents. A Holy Paladin takes it for 5 points. Retribution has 41 points.
+
+**Adopted in the beta of 30 October 2026**
+
+| ID | Proposal | What the beta does |
+| --- | --- | --- |
+| C3 | Blessing of Light: removed | Blessing of Light and Greater Blessing of Light are removed. Oath of Light (new Holy talent) gives their bonus on one ally |
+| C-H1 (move) | Reverence to Holy row 2 | Reverence is in row 2. Its values are 15/30% |
+| C-P5 (removal) | Improved Seal of Fury: removed | Improved Seal of Fury is removed |
+| C-R1 | Conviction: attacks and spells | Conviction gives 2/4/6% critical chance with all spells and attacks |
+| M-H5 | Divine Precision: row 4, no requirement | Divine Precision is in row 4 with no requirement |
+| M-R1 | Two-Handed Weapon Specialization: row 4 | Two-Handed Weapon Specialization is in row 4 |
 
 ## Read and try
 
 - **[Proposals](proposals/README.md).** The full document, in one file for each part. For each proposal, it gives the beta text, the proposed text, the reason and the model talent from another class. It also gives the analysis, the test results and the open questions.
 - **[Talent calculator](calculator/index.html).** Live version: https://ralgathor.github.io/forever-paladin-feedback/calculator/
-  - The calculator opens with the proposed trees. Push **Beta** to see the beta trees.
-  - **Versions.** Use the Version list to open an earlier version of the proposed trees. Version 5 (26 October 2026) is the current version. Its build codes start with `v5p`. A version 4 code (it starts with `v4p`) opens on the version 4 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v4/. A version 3 code (it starts with `v3p`) opens on the version 3 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v3/. A version 2 code (it starts with `v2p`) opens on the version 2 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v2/. A version 1 code (it starts with `p`) opens on the version 1 page: https://ralgathor.github.io/forever-paladin-feedback/calculator/v1/
-  - A purple tag (C) shows a changed talent. A blue tag (M) shows a talent that only moves.
-  - A build code that starts with `v5p` opens a proposed build. A build code that starts with `b2` opens a build in the beta trees of 30 October 2026. A build code with only digits is a build in the beta trees of 18 October 2026. It opens on the page of that beta: https://ralgathor.github.io/forever-paladin-feedback/calculator/beta1/
-  - The proposed trees still change the beta trees of 18 October 2026.
+  - The calculator opens with the proposed trees of version 6 (31 October 2026). These trees change the beta trees of 30 October 2026. Push **Beta** to see the beta trees of 30 October.
+  - A purple tag (C-P1, C-P12…) shows a changed or new talent.
+  - **Build codes.** A code that starts with `v6p` opens a proposed build. A code that starts with `b2` opens a build in the beta trees of 30 October 2026. A code with only digits is a build in the beta trees of 18 October 2026. It opens on the page of that beta: https://ralgathor.github.io/forever-paladin-feedback/calculator/beta1/
+  - **Versions.** Use the Version list to open an earlier version of the proposed trees. Versions 1 to 5 use the beta trees of 18 October 2026. Each earlier version has a frozen page. A code of an earlier version opens on its page.
+
+| Version | Date | Code starts with | Page |
+| --- | --- | --- | --- |
+| 6 (current) | 31 October 2026 | `v6p` | https://ralgathor.github.io/forever-paladin-feedback/calculator/ |
+| 5 | 26 and 29 October 2026 | `v5p` | https://ralgathor.github.io/forever-paladin-feedback/calculator/v5/ |
+| 4 | 24 October 2026 | `v4p` | https://ralgathor.github.io/forever-paladin-feedback/calculator/v4/ |
+| 3 | 24 October 2026 | `v3p` | https://ralgathor.github.io/forever-paladin-feedback/calculator/v3/ |
+| 2 | 23 October 2026 | `v2p` | https://ralgathor.github.io/forever-paladin-feedback/calculator/v2/ |
+| 1 | Before 23 October 2026 | `p` | https://ralgathor.github.io/forever-paladin-feedback/calculator/v1/ |
 
 The talent icons come from the Wowhead icon server (wow.zamimg.com). If the icons do not load, the calculator shows drawn icons. This project does not keep game files.
 
 ## Method
 
-- **Data.** Forever client build 1.60.1.70450, with the server hotfixes of 18 October 2026. The talent text comes from [wowforevertalents.com](https://wowforevertalents.com/). Player tests give the talent behavior.
-- **Models.** Each proposal uses a talent from another class in the same beta as a model (Warrior, Druid, Priest, Shaman, Hunter, Mage).
+- **Data.** Forever client build 1.60.1.70707, hotfix push 113554 (beta of 30 October 2026). The talent data comes from the game files in wowsims Forever (branch `paladin/hotfix-113554-port`). Player tests give the talent behavior.
+- **Earlier data.** Most values in the Analysis tabs use the beta of 18 October 2026 (client build 1.60.1.70450). Beta test results gives the first model results for the beta of 30 October.
+- **Model talents.** Each proposal uses a talent from another class in the same beta as a model (Warrior, Druid, Priest, Shaman, Hunter, Mage).
 - **Rules.** The combat and mana values use Classic 1.12 rules when no test gives a different rule.
 - **Estimates.** The burst values are estimates. The Reckoning, threat, mana, healing and damage values come from simple models, not combat logs. Each estimate gives its assumptions and limits.
 - **Other classes.** The healing comparison uses the DoubleZug sheets for the four Forever healers, with the spell values of the Forever spellbook ([model](models/healing/)). The damage comparison uses the ratios of one external simulation ([MythicSim](https://mythicsim.com/wow-forever/tier-list)) and a same-gear model check.
+
+## Models
+
+| Folder | What it holds | Beta |
+| --- | --- | --- |
+| [models/healing](models/healing/) | Healing model (linear program) and recovery after a large hit (Monte Carlo) | 18 October |
+| [models/threat](models/threat/) | Threat model, one enemy and groups of enemies | 18 October |
+| [models/damage](models/damage/) | Retribution damage model | 18 October |
+| [models/mana](models/mana/) | Protection mana model, one boss | 18 October |
+| [models/wowsims](models/wowsims/) | wowsims Forever check of the proposals (calculator version 5) | 18 October |
+| [models/beta-30-oct](models/beta-30-oct/) | The models of the Analysis tabs on the new trees | 30 October |
+| [models/wowsims-b2](models/wowsims-b2/) | wowsims Forever check of the kept proposals | 30 October |
 
 ## Feedback
 

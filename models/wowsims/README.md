@@ -2,6 +2,8 @@
 
 These scripts run the [wowsims Forever](https://github.com/wowsims/forever) simulator with the proposals. They check the Python models of this folder (damage, threat, healing). The Python models give the explanation. wowsims gives a second calculation with the full rules of the game.
 
+**Beta.** These scripts and `proposals.patch` use the beta of 18 October 2026 and the proposed trees of calculator version 5. Some flags are for proposals that the beta of 30 October adopts or that are withdrawn. For the check on the beta of 30 October, see [wowsims-b2](../wowsims-b2/README.md).
+
 ## Setup
 
 Requirements: git, Go 1.25 or later, Python 3, and grpcio-tools (`pip install grpcio-tools`).

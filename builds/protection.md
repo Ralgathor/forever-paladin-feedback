@@ -22,7 +22,7 @@ This file gives the best tank build for the beta trees and for the proposed tree
 - **Gear rules.** Pre-raid items only, no raid drops, Alliance. All items are in the wowsims item list of 28 October 2026. The enchants and the libram are the enchants and the libram of the reference tank.
 - **Last points.** A check of all 1-point moves from the best beta build, at 3,000 iterations. The last points change the score by less than 1%.
 - **Limit.** The search is a local search, not a test of all builds. Builds with no Holy Shield are far below (73–83% of the reference score).
-- **Codes.** All codes load in calculator version 5 with 51 points.
+- **Codes.** All codes load in calculator version 5 with 51 points. A `v5p` code opens on the version 5 page. A beta code (only digits) opens on the page of the 18 October beta.
 
 ## 2. Best builds
 

@@ -16,6 +16,3 @@ The beta of 30 October 2026 changes most of the Holy tree. Oath of Light, Boundl
 
 - Holy has 46 points, the same as the beta.
 - All talents keep their beta places and values.
-- Infusion of Light keeps its beta text. The proposal for no critical hit and a Holy Strike trigger (C-H3) is withdrawn (see Withdrawn ideas).
-- Reverence keeps 15/30%. The proposal for 25/50% (C-H1) is withdrawn (see Withdrawn ideas).
-- Healing Light and Oath of Light keep their beta values. The proposal for Healing Light 10/20/30% (C-H4) is withdrawn (see Withdrawn ideas).

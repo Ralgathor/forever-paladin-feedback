@@ -134,7 +134,6 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 - **Druid.** Thick Hide (Druid) gives armor. But the Druid tank cannot block, and armor is its main defense.
 - **Holy and Retribution.** These specs do not take Toughness. Thus, they lose nothing. Holy can now take Devoted Sacrifice (C-P11) with 12 Protection points.
 - **Tank points.** Protection has 46 points. The tank has 5 more points for the other trees, for example Retribution.
-- **C-P3.** Toughness and Divine Strength removal (C-P3) is withdrawn. C-P13 is a new proposal for the tree of 30 October. It removes only Toughness.
 
 **wowsims, 2 min, 3,000 iterations, TMI with a 6 sec window (a lower TMI is better)**
 

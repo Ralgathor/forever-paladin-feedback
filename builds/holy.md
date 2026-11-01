@@ -20,7 +20,7 @@ This file gives the best healing build for the beta trees and for the proposed t
 - **Gear search.** wowsims Forever commit 47b3c01 with `models/wowsims/proposals.patch`. Slot by slot, 12 candidates for each slot (24 for rings and trinkets). The sim keeps the set with the most healing per sec. 3 min, raid buffs, no consumables, no enchants, Alliance.
 - **Gear tiers.** Pre-raid: item level 65 or lower, no raid drops. Raid: all items up to item level 92 (Naxxramas).
 - **Sim rules.** The heal targets the caster. The sim has no overhealing: the values are raw healing.
-- **Codes.** All codes load in calculator version 5 with 51 points.
+- **Codes.** All codes load in calculator version 5 with 51 points. A `v5p` code opens on the version 5 page. A beta code (only digits) opens on the page of the 18 October beta.
 
 ## 2. Best builds
 
