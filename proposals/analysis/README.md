@@ -2,7 +2,7 @@
 
 This part gives the calculations that support the proposals. Each sub-tab gives one topic.
 
-- **Beta.** Builds and Tree balance use the proposed trees of calculator version 6 (beta of 30 October 2026). The other tabs use the beta trees of 18 October 2026. Beta test results gives the first model results for the beta of 30 October.
+- **Beta.** Builds and Tree balance use the proposed trees of calculator version 6 (beta of 30 October 2026). The other tabs use the beta trees of 18 October 2026. Each of these tabs starts with a short part for the beta of 30 October.
 - **Withdrawn proposals.** The tabs also examine proposals that were withdrawn on 31 October 2026. Withdrawn ideas gives the reasons.
 
 | Sub-tab | What it gives |

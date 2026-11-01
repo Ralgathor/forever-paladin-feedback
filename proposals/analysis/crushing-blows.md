@@ -1,5 +1,19 @@
 # Crushing blows
 
+## Beta of 30 October 2026
+
+The beta of 30 October gives Redoubt 6–30% block again (18 October: 4–20%). Holy Shield is now in row 5. The values in the other parts of this tab use the beta of 18 October.
+
+| Case (wowsims, 2 min, level 63 boss) | Block | Crushing blows |
+| --- | --- | --- |
+| Paladin, beta | 42.7% | 12.0% |
+| Paladin, Redoubt (C-P1) | 62.0% | 0.9% |
+| Paladin, C-P1 with 4–20% | 55.7% | 4.8% |
+| Warrior, pre-raid | 49.1% | 1.1% |
+
+- With Redoubt (C-P1), the Paladin has fewer crushing blows than the Warrior. Thus, Redoubt keeps 6–30% with the Holy Shield trigger.
+- The sim uses the default tank set of wowsims Forever (models/wowsims-b2). Protection, wowsims check gives the full results.
+
 ## The problem
 
 - A raid boss is 3 levels above the player.

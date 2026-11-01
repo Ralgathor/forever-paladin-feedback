@@ -2,6 +2,25 @@
 
 This section compares the mana of the Paladin in the beta and with the proposals. The unit is mana per second (MPS). A positive value means that the mana increases. A negative value means that the mana decreases.
 
+## Beta of 30 October 2026
+
+The scripts of models/beta-30-oct run the mana models on the new trees, with no proposal. The other parts of this tab use the beta of 18 October.
+
+**Protection** (tank build 0/38/13, Blessing of Wisdom, mana each sec)
+
+| Case | Fresh level 60 | Fresh level 60, Consecration | Naxxramas | Naxxramas, Consecration |
+| --- | --- | --- | --- | --- |
+| Beta of 30 October, the tank is hit | +26.1 | −37.5 (empty after 1 min 17 sec) | +55.2 | −8.3 (empty after 9 min 48 sec) |
+| Beta of 18 October, the tank is hit | +24.2 | −46.5 (empty after 1 min 2 sec) | +39.3 | −31.3 (empty after 2 min 36 sec) |
+
+- Shield Specialization with Shieldsworn gives more mana. Thus, a tank that is hit has mana without Consecration.
+
+**Retribution** (Unsealed Wrath build 14/5/32, fresh level 60)
+
+- The rotation of wowsims changes the Seal after each swing. It uses 50.7 mana each sec. The income is 14.2 mana each sec with Blessing of Wisdom. The mana pool (3,029) is empty after 1 min 22 sec.
+- Fewer Seal changes cost damage: −1.7% with two swings for each Seal of Command, −2.6% with three swings. With three swings, the mana is empty after 3 min 47 sec.
+- Unsealed Wrath has no Seal cost decrease (W29). Retribution, Mana with Unsealed Wrath gives the details.
+
 ## Summary
 
 - Sanctified Judgement (Retribution row 3) is the best mana talent for a tank. It returns 120 mana for each Judgement: 14 MPS, or 17 MPS with Improved Judgement 2/2. Reverence gives 10.3 MPS.

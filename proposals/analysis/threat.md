@@ -6,6 +6,21 @@ The values come from a model. The model uses beta tests and developer notes. It 
 
 The script models/threat/run_tables.py calculates all values of this section from the inputs of part 6. The Warrior and Druid values come from the Forever spellbook and talents (wowforevertalents.com) and from player data (see Sources). Spell values and combat rules are checked against wowsims Forever (23 October 2026). The rotations of the three tanks are checked against the wowsims Forever rotations (28 October 2026). Parts 2, 7 and 8 also use the best tank builds and the pre-raid gear of builds/protection.md (29 October 2026). Some threat values are not known. Part 6 shows them.
 
+## Beta of 30 October 2026
+
+The script models/beta-30-oct/threat_b2.py runs the model of this tab on the new trees, with no proposal. The tank build is 0/38/13. The other parts of this tab use the beta of 18 October.
+
+| Gear | Warrior | Druid | Paladin, beta of 18 October | Paladin, beta of 30 October | Beta of 30 October, with Consecration |
+| --- | --- | --- | --- | --- | --- |
+| Part 1 gear | 653 | 600 | 410 (63%) | 661 (101%) | 785 (120%) |
+| Fresh level 60 | 536 | 475 | 397 (74%) | 636 (118%) | 760 (142%) |
+| Molten Core | 690 | 652 | 459 (67%) | 733 (106%) | 867 (126%) |
+| Naxxramas | 820 | 814 | 529 (65%) | 837 (102%) | 983 (120%) |
+
+- Values are threat per sec (TPS). The percentages compare with the Warrior.
+- Shieldsworn and the +33% of Righteous Fury give most of the increase. Without Shieldsworn, the Paladin has 522 TPS with the part 1 gear. Without the +33%, it has 497 TPS.
+- Thus, threat is no longer a problem of the Paladin tank. The kept Protection proposals do not change threat much. In wowsims, Redoubt (C-P1) gives +6% threat, because more blocks give more Holy Shield damage.
+
 ## Summary
 
 - With all proposals, the Paladin has 94–100% of the Druid threat and 87–93% of the Warrior threat. Holy Shield (C-P9) adds 100% of block value.

@@ -2,6 +2,26 @@
 
 This section compares the Holy Paladin with the three other healers of Forever: Priest, Druid and Shaman. It uses all the Forever heals of each class, not only the big heals. It also checks Infusion of Light (C-H3) in PvP. The design goal of Holy is a healer for long fights and the best single-target healer.
 
+## Beta of 30 October 2026
+
+The scripts models/beta-30-oct/healing_b2.py and recovery_b2.py run the models of this tab on the new trees. No Holy talent proposal stays. Thus, the proposed Holy Paladin is the beta Holy Paladin. The other parts of this tab use the beta of 18 October.
+
+**Raid** (715 healing power, healing per sec after overhealing)
+
+| Healer | 3 min | 5 min | 10 min |
+| --- | --- | --- | --- |
+| Priest | 948 | 846 | 769 |
+| Druid | 855 | 689 | 604 |
+| Shaman | 709 | 599 | 517 |
+| Paladin, beta of 18 October | 616 | 532 | 449 |
+| Paladin, beta of 30 October | 629 | 533 | 450 |
+
+- In raids, the Paladin is 23–26% below the Druid and 11–13% below the Shaman. The beta of 30 October does not change the raid result.
+- **One tank, 715 healing power.** With Oath of Light on the tank, the Paladin is 3–10% above the Druid and 21–24% above the Shaman and the Priest. In the beta of 18 October, it was 7–13% below the Druid.
+- **After a large hit (715, all cooldowns).** The Paladin heals 7,441 in 3 sec and 11,183 in 6 sec. The Druid heals 6,293 and 10,041. Thus, the Paladin is 18% above after 3 sec and 11% above after 6 sec.
+- **Holy Power.** The values use a 225% critical heal (wowsims). At 175%, the Paladin is 7% below to 1% above the Druid on one tank. Open items gives the test.
+- Thus, the beta of 30 October makes Holy the best healer on one tank. This is the design goal of Holy.
+
 ## Summary
 
 - **In the beta, the Holy Paladin is the weakest raid healer.** It heals 10–13% less than the lowest other healer, and 35–42% less than the Priest (part 4).

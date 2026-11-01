@@ -4,6 +4,16 @@ This section compares the single-target damage of Retribution with the other dam
 
 The script models/damage/run_tables.py calculates all values of this section. Fury, Arms and Combat Rogue use the Forever spellbook and talents (wowforevertalents.com) and the Forever rage formula (see Threat, part 6). Spell values and combat rules are checked against wowsims Forever (23 October 2026). No value is fitted to the first calculation.
 
+## Beta of 30 October 2026
+
+The script models/beta-30-oct/retribution_b2.py runs the model of this tab on the new trees. The wowsims check is in models/wowsims-b2. The other parts of this tab use the beta of 18 October.
+
+- **Beta.** Unsealed Wrath replaces Twist of Light. The wowsims Retribution set (build 14/5/32) does 848 DPS, +3% against the beta of 18 October.
+- **Pure average.** Retribution is about 93% of the pure average at fresh level 60 and about 89% in Naxxramas (model). The hybrid target is 95%.
+- **Holy Strike Seal trigger (C1).** It gives +5.2% in the model and +4.0–5.3% in wowsims. With C1, Retribution is about 98% of the pure average at fresh level 60 and about 94% in Naxxramas.
+- **Mana.** The wowsims rotation changes the Seal after each swing. The mana is empty after 1 min 22 sec at fresh level 60 (model) and after 5 min 28 sec with full buffs (wowsims). Mana, Beta of 30 October gives the Seal plans.
+- Retribution gives the full results of C1 and Sanctified Judgement (C-R3).
+
 ## Summary
 
 - With all proposals, Retribution is about equal to Fury Warrior at fresh level 60. It is 101% of Fury and 103% of the average of the pure damage classes.
