@@ -4,7 +4,7 @@
 
 ## Short answer
 
-- **The problem.** In the beta, a raid boss hits the Paladin with a crushing blow on 11.9% of its swings. A crushing blow does 150% damage. The Warrior takes crushing blows on only 1.0% of the swings.
+- **The problem.** In the live version, a raid boss hits the Paladin with a crushing blow on 11.9% of its swings. A crushing blow does 150% damage. The Warrior takes crushing blows on only 1.0% of the swings.
 - **The fix.** With Redoubt (C-P1), each Holy Shield cast also starts Redoubt. The two block buffs are then active together. Crushing blows decrease to 1.0%, the same as the Warrior.
 - **The tank takes 13% less damage** with C-P1, and its TMI is better than the Warrior TMI.
 - **Keep Redoubt at 6–30% block.** At 4–20%, 4.9% of the swings are still crushing blows.
@@ -22,13 +22,13 @@ Each tank handles crushing blows in a different way:
 | --- | --- | --- |
 | Warrior | Shield Block gives +75% block for 2 blocks, each 5 sec | Almost no crushing blows |
 | Druid | No shield. High armor and health | Many crushing blows, but the Druid survives them |
-| Paladin, beta | Holy Shield gives +30% block for 4 blocks, each 10 sec. Redoubt gives +30% block, but it starts only on 10% of the hits | Many crushing blows, and no extra armor or health |
+| Paladin, live | Holy Shield gives +30% block for 4 blocks, each 10 sec. Redoubt gives +30% block, but it starts only on 10% of the hits | Many crushing blows, and no extra armor or health |
 
 Redoubt (C-P1) uses the Warrior method. It removes crushing blows with block. The Protection tree already gives block.
 
 ## 2. How Redoubt (C-P1) works
 
-- **In the beta,** Redoubt starts on only 10% of the melee hits. Thus, it is off for most of the fight.
+- **In the live version,** Redoubt starts on only 10% of the melee hits. Thus, it is off for most of the fight.
 - **With C-P1,** each Holy Shield cast starts Redoubt. Holy Shield has a 10 sec cooldown. Thus, both buffs are active for the full fight.
 - **The charges are enough.** The boss swings each 2.3 sec: about 4.4 swings in 10 sec. About 2.7 of them are blocks. Redoubt has 5 blocks and Holy Shield has 4.
 - **The first swing.** Cast Holy Shield before the pull. Then it covers the first swing.
@@ -40,7 +40,7 @@ Default tank gear of each class, full buffs, one level 63 boss, 3 min fight.
 
 | Tank | Block | Crushing blows | Damage taken each sec | TMI |
 | --- | --- | --- | --- | --- |
-| Paladin, beta | 42.3% | 11.9% | 333 | 57.1 |
+| Paladin, live | 42.3% | 11.9% | 333 | 57.1 |
 | **Paladin, Redoubt (C-P1)** | **61.6%** | **1.0%** | **288 (−13%)** | **44.0** |
 | Paladin, C-P1 with Redoubt 4–20% | 55.3% | 4.9% | 313 (−6%) | 52.8 |
 | Paladin, Redoubt 4–20% without C-P1 | 40.8% | 12.9% | 340 (+2%) | 58.7 |
@@ -48,7 +48,7 @@ Default tank gear of each class, full buffs, one level 63 boss, 3 min fight.
 | Druid | 0% | 15.0% | 379 | 39.7 |
 
 - **C-P1 puts the Paladin at the Warrior level.** Both have 1.0% crushing blows. The Paladin takes 2% more damage than the Warrior, but its TMI is better.
-- **5 min fights give the same result.** Beta 11.9%, C-P1 1.1%, C-P1 with 4–20% 5.1%, Warrior 1.0%.
+- **5 min fights give the same result.** Live 11.9%, C-P1 1.1%, C-P1 with 4–20% 5.1%, Warrior 1.0%.
 - **The Druid takes the most crushing blows,** but its armor and health keep it safe.
 
 ## 4. Stat targets for the tank
@@ -91,4 +91,4 @@ Both tanks have 440 Defense and 100 Agility. The boss swings each 2 sec. Shield 
 - **Sim.** wowsims Forever with the proposals as flags (`models/wowsims-b2`). The default tank gear of each class, full buffs, one level 63 boss, 3,000 iterations, 3 min.
 - **Gear.** The wowsims tank sets are pre-raid sets. They do not reach 440 Defense. Thus, the Paladin with C-P1 still has 0.2% critical hits.
 - **One weapon.** The sims use a boss with one weapon. A boss with two weapons uses the charges faster.
-- **Talents.** The values use the beta talents of 30 October. A change to Holy Shield or Redoubt changes all values.
+- **Talents.** The values use the live talents. A change to Holy Shield or Redoubt changes all values.

@@ -203,7 +203,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
 <div class="wrap">
   <header>
     <h1>Forever Paladin Talents</h1>
-    <p class="sub">Plan Holy, Protection and Retribution builds for World of Warcraft: Forever. Beta trees of 30 October 2026 (hotfix push 113554). The proposed trees change these beta trees.</p>
+    <p class="sub">Plan Holy, Protection and Retribution builds for World of Warcraft: Forever. Live trees of 4 November 2026 (hotfix push 113554). The proposed trees change these live trees.</p>
   </header>
 
   <section class="bar" aria-label="Build summary">
@@ -214,14 +214,14 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
       <select id="level"></select>
     </label>
     <span class="grow"></span>
-    <div class="mode" role="group" aria-label="Talent trees to show"><button type="button" id="mProp" aria-pressed="true">Proposed</button><button type="button" id="mBeta" aria-pressed="false">Beta</button></div>
+    <div class="mode" role="group" aria-label="Talent trees to show"><button type="button" id="mProp" aria-pressed="true">Proposed</button><button type="button" id="mBeta" aria-pressed="false">Live</button></div>
     <label class="lvl" for="ver">Version
       <select id="ver"><option value="v6" selected>v6 · 31 Oct 2026</option><option value="v5">v5 · 29 Oct 2026</option><option value="v4">v4 · 24 Oct 2026</option><option value="v3">v3 · 24 Oct 2026</option><option value="v2">v2 · 23 Oct 2026</option><option value="v1">v1 · before 23 Oct</option><option value="b1">Beta tree of 18 Oct 2026</option></select>
     </label>
     <button id="resetAll" type="button">Reset all</button>
   </section>
 
-  <div class="mode-note" id="modeNote" hidden><b>Proposed trees.</b> A purple tag (C-P1, C-P12…) marks a changed or new talent. Builds made here do not load in the beta trees. The proposals change the beta trees of 30 October 2026. This is version 6 of the proposed trees (31 October 2026). A version 1, 2, 3, 4 or 5 code opens on its page.</div>
+  <div class="mode-note" id="modeNote" hidden><b>Proposed trees.</b> A purple tag (C-P1, C-P12…) marks a changed or new talent. Builds made here do not load in the live trees. The proposals change the live trees. This is version 6 of the proposed trees (31 October 2026). A version 1, 2, 3, 4 or 5 code opens on its page.</div>
 
   <div class="trees" id="trees"></div>
 
@@ -242,19 +242,19 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
   </section>
 
   <section class="props" id="compare" aria-labelledby="cmpTitle">
-    <h2 id="cmpTitle">Beta and proposals compared, by role</h2>
+    <h2 id="cmpTitle">Live and proposals compared, by role</h2>
     <p>This is an overview. The values come from the models of the proposals document, not from combat logs. Level 60, one level 63 boss, unless a card gives a different condition. The proposals document gives the details and the limits of each value.</p>
     <div class="rtabs" role="tablist" aria-label="Role" aria-controls="cmpBody">
       <button type="button" role="tab" data-role="heal" aria-selected="true">Healer</button><button type="button" role="tab" data-role="tank" aria-selected="false">Tank</button><button type="button" role="tab" data-role="dps" aria-selected="false">Damage</button><button type="button" role="tab" data-role="pvp" aria-selected="false">PvP</button>
     </div>
-    <div class="mc-legend"><span><i class="sw b"></i>Paladin, beta</span><span><i class="sw p"></i>Paladin, proposed</span><span><i class="sw o"></i>Other classes</span></div>
+    <div class="mc-legend"><span><i class="sw b"></i>Paladin, live</span><span><i class="sw p"></i>Paladin, proposed</span><span><i class="sw o"></i>Other classes</span></div>
     <div id="cmpBody" class="mc-grid" role="tabpanel"></div>
   </section>
 
   <footer class="foot">
     <p>Click a talent to add a point, right-click to remove one. Shift-click fills or empties a talent. On a phone, tap a talent and use − and + in the card below the tree. Each row opens after 5 points per row in that tree, and a talent with an arrow needs the talent above it at full rank.</p>
-    <p>In Beta mode, tiers, rank counts, prerequisites and tooltips follow the Forever beta data of 30 October 2026: client build 1.60.1.70707 with hotfix push 113554, from the game files in wowsims Forever. Blizzard has not published patch notes for this change. Holy Shield shows rank 1 (75 damage). Rank 4 (221 damage) is in the game files, but it has no cost or level yet. Beta build codes start with b2. A beta code with only digits is a code for the beta trees of 18 October 2026. It opens on the <a href="beta1/index.html">page of the 18 October beta</a>. The proposed trees use the beta trees of 30 October 2026 as their base. The grid layout matches Wowhead's Forever calculator. Talent icons load from Wowhead's image server when this file is opened directly in a browser. Unofficial fan tool, not affiliated with Blizzard Entertainment or Wowhead.</p>
-    <p><b>Versions.</b> v6, 31 October 2026: the proposed trees use the beta trees of 30 October 2026. The beta adopts six proposals and makes twenty others unnecessary. The kept proposals use free places in the new rows. Toughness is removed (C-P13), and Devoted Sacrifice takes its place. Build codes start with v6p. <a href="v5/index.html">v5, 29 October 2026</a>: Merciful Light (C-H5) and Divine Grace (C-H6) are new in Holy rows 5 and 4, and Divine Precision goes to Holy row 4 (M-H5). Burning Zeal (C-R4) and Measure for Measure (C-R5) are new in Retribution row 5. The new talents go at the end of each tree code, thus version 5 codes stay valid. v5, 26 October 2026: Devoted Sacrifice (C-P11) is new in Protection row 3. Shoulder the Burden goes to row 3, column 1, and Reach of Law to row 5. Swift Judgement and Improved Hammer of Justice are in their beta places again. Build codes start with v5p. <a href="v4/index.html">v4, 24 October 2026</a>: Precision, Guardian's Favor, Anticipation and Holy Conduit are in their beta places again. Benediction (5 ranks, 2–10%) goes to Protection row 1. Vindication goes to Retribution row 2, column 3. Build codes start with v4p. <a href="v3/index.html">v3, 24 October 2026</a>: Consecrated Ground is in Holy row 5 again, as in the beta. Build codes start with v3p. <a href="v2/index.html">v2, 23 October 2026</a>: Toughness and Divine Strength removal (C-P3) deletes both talents. Precision and Guardian's Favor go to Protection row 1, Holy Conduit to Protection row 2, Vindication (5 ranks) to Retribution row 2 and Unyielding Faith to Holy row 1. Improved Seals keeps 3 ranks. Build codes start with v2p. <a href="v1/index.html">v1, before 23 October 2026</a>: the earlier proposed trees. Build codes start with p.</p>
+    <p>In Live mode, tiers, rank counts, prerequisites and tooltips follow the Forever live data (4 November 2026, same trees as the beta of 30 October): client build 1.60.1.70707 with hotfix push 113554, from the game files in wowsims Forever. Blizzard has not published patch notes for this change. Holy Shield shows rank 1 (75 damage). Rank 4 (221 damage) is in the game files, but it has no cost or level yet. Live build codes start with b2. A code with only digits is a code for the beta trees of 18 October 2026. It opens on the <a href="beta1/index.html">page of the 18 October beta</a>. The proposed trees use the live trees as their base. The grid layout matches Wowhead's Forever calculator. Talent icons load from Wowhead's image server when this file is opened directly in a browser. Unofficial fan tool, not affiliated with Blizzard Entertainment or Wowhead.</p>
+    <p><b>Versions.</b> v6, 31 October 2026: the proposed trees use the live trees. The live version adopts six proposals and makes twenty others unnecessary. The kept proposals use free places in the new rows. Toughness is removed (C-P13), and Devoted Sacrifice takes its place. Build codes start with v6p. <a href="v5/index.html">v5, 29 October 2026</a>: Merciful Light (C-H5) and Divine Grace (C-H6) are new in Holy rows 5 and 4, and Divine Precision goes to Holy row 4 (M-H5). Burning Zeal (C-R4) and Measure for Measure (C-R5) are new in Retribution row 5. The new talents go at the end of each tree code, thus version 5 codes stay valid. v5, 26 October 2026: Devoted Sacrifice (C-P11) is new in Protection row 3. Shoulder the Burden goes to row 3, column 1, and Reach of Law to row 5. Swift Judgement and Improved Hammer of Justice are in their live places again. Build codes start with v5p. <a href="v4/index.html">v4, 24 October 2026</a>: Precision, Guardian's Favor, Anticipation and Holy Conduit are in their live places again. Benediction (5 ranks, 2–10%) goes to Protection row 1. Vindication goes to Retribution row 2, column 3. Build codes start with v4p. <a href="v3/index.html">v3, 24 October 2026</a>: Consecrated Ground is in Holy row 5 again, as in the live trees. Build codes start with v3p. <a href="v2/index.html">v2, 23 October 2026</a>: Toughness and Divine Strength removal (C-P3) deletes both talents. Precision and Guardian's Favor go to Protection row 1, Holy Conduit to Protection row 2, Vindication (5 ranks) to Retribution row 2 and Unyielding Faith to Holy row 1. Improved Seals keeps 3 ranks. Build codes start with v2p. <a href="v1/index.html">v1, before 23 October 2026</a>: the earlier proposed trees. Build codes start with p.</p>
   </footer>
 </div>
 
@@ -488,7 +488,7 @@ function renderDetail(){
 }
 const tip=document.getElementById("tip");
 function chgBlock(t){if(!t.pid)return"";const r=PROPOSALS.find(x=>x[0]===t.pid);if(!r)return"";
-  return `<div class="chgbox"><b>${t.pid[0]==="M"?"Proposed move":"Proposed change"} ${t.pid}</b><br><span class="was">Beta:</span> ${esc(r[4])}<br><span class="now">Proposed:</span> ${esc(r[5])}</div>`;}
+  return `<div class="chgbox"><b>${t.pid[0]==="M"?"Proposed move":"Proposed change"} ${t.pid}</b><br><span class="was">Live:</span> ${esc(r[4])}<br><span class="now">Proposed:</span> ${esc(r[5])}</div>`;}
 function showTip(t,el){
   const cur=t.pts>0?rankText(t,t.pts):rankText(t,1);
   tip.innerHTML=`<h4>${t.pid?`<span class="pid">${t.pid}</span>`:""}${t.name}</h4><div class="meta">Rank ${t.pts}/${t.ranks}${t.info?" · "+t.info:""}</div><div class="meta">${reqLine(t)}</div><p>${cur}</p>${t.pts>0&&t.pts<t.ranks?`<p class="meta"><b>Next rank:</b> ${rankText(t,t.pts+1)}</p>`:""}${chgBlock(t)}<div class="hint">Click to learn · Right-click to unlearn</div>`;
@@ -555,7 +555,7 @@ ${dn("55 damage for each hit was about 2% of a raid boss hit. The pool keeps the
 <li>Blessing of Sacrifice, Blessing of Protection and Blessing of Freedom are now Hand of Sacrifice, Hand of Protection and Hand of Freedom. Hands no longer use a Blessing slot. Each Paladin can have one Hand on a target. ${g("C5")}
 ${dn("A save replaced Kings or Might from the same Paladin, and you had to cast the buff again after it. Forever did the same for the Warlock: Bane of Agony and Bane of Doom are a group apart from Curses.")}</li>
 <li>New spell: Shoulder the Burden (all Paladins): Moves 50% of the threat of a party or raid member to you, on all enemies. Instant, 30 yards, 5 min cooldown. ${g("C-P5")}
-${dn("The beta tree has no place for one more ability talent. The Paladin tank still has no area taunt and no threat transfer. Judgement of Fury taunts only one enemy, at 10 yards.")}</li>
+${dn("The live tree has no place for one more ability talent. The Paladin tank still has no area taunt and no threat transfer. Judgement of Fury taunts only one enemy, at 10 yards.")}</li>
 <li>Alternatives, if the recommended changes are not possible:
 <ul>
 <li>Judgement of Light and Judgement of Wisdom become one Judgement of Grace. It heals and restores mana. ${g("C2a")}</li>
@@ -565,7 +565,7 @@ ${dn("The beta tree has no place for one more ability talent. The Paladin tank s
 
 <p class="cat"><b>Holy</b></p>
 <ul>
-<li>No talent change. The beta meets the design goal of Holy: the best single-target healer. Raid healing is not the goal.</li>
+<li>No talent change. The live version meets the design goal of Holy: the best single-target healer. Raid healing is not the goal.</li>
 </ul>
 
 <p class="cat"><b>Protection</b></p>
@@ -586,7 +586,7 @@ ${dn("A raid boss cannot make critical hits on a tank at the Defense cap. Thus, 
 ${dn("Each rank increases the chance and the return. Thus, ranks 1 and 2 give almost no mana. Master of Elements also increases only the return. At 3/3, the return does not change.")}</li>
 </ul>
 
-<p class="cat"><b>Adopted in the beta of 30 October 2026</b></p>
+<p class="cat"><b>Adopted in the live version (4 November 2026)</b></p>
 <ul>
 <li>Blessing of Light removed (C3). Reverence in Row 2 (C-H1). Improved Seal of Fury removed (C-P5). Conviction applies to all attacks and spells (C-R1). Divine Precision in Row 4 (M-H5). Two-Handed Weapon Specialization in Row 4 (M-R1).</li>
 <li>Twenty other proposals are now unnecessary. The proposals document lists them in Withdrawn ideas.</li>
@@ -613,22 +613,22 @@ window.addEventListener("scroll",hideTip,{passive:true});
 // Beta and proposals compared: one card per topic. bars: [label, value, kind b|p|o, shown text?]
 const CMP={
 heal:[
- {t:"Raid healing per sec",c:"715 healing power, 3 min",b:"596",p:"No proposal",big:1,bars:[["Priest",948,"o"],["Druid",855,"o"],["Shaman",709,"o"],["Paladin, beta",596,"b"]],s:"30% below the Druid and 16% below the Shaman. This is accepted: Holy is the best single-target healer, not the best raid healer.",d:"Beta of 18 October: 616. Mana is the limit: the best cast plan is almost only Flash of Light."},
- {t:"One tank, healing per sec",c:"715 healing power, 3 min, Oath of Light on the tank",b:"695",p:"Not modeled yet",big:1,bars:[["Paladin, beta",695,"b"],["Druid",681,"o"],["Shaman",607,"o"],["Priest",606,"o"]],s:"About equal to the Druid: 2% below to 7% above (200% critical heal). In fights of 10 min, the Druid is first.",d:"At 225% (wowsims), the Paladin is 3–10% above the Druid. At 175%, 1–7% below. Maximum raw healing per sec: Paladin 1,452, other healers 1,278–1,320."},
+ {t:"Raid healing per sec",c:"715 healing power, 3 min",b:"596",p:"No proposal",big:1,bars:[["Priest",948,"o"],["Druid",855,"o"],["Shaman",709,"o"],["Paladin, live",596,"b"]],s:"30% below the Druid and 16% below the Shaman. This is accepted: Holy is the best single-target healer, not the best raid healer.",d:"Beta of 18 October: 616. Mana is the limit: the best cast plan is almost only Flash of Light."},
+ {t:"One tank, healing per sec",c:"715 healing power, 3 min, Oath of Light on the tank",b:"695",p:"Not modeled yet",big:1,bars:[["Paladin, live",695,"b"],["Druid",681,"o"],["Shaman",607,"o"],["Priest",606,"o"]],s:"About equal to the Druid: 2% below to 7% above (200% critical heal). In fights of 10 min, the Druid is first.",d:"At 225% (wowsims), the Paladin is 3–10% above the Druid. At 175%, 1–7% below. Maximum raw healing per sec: Paladin 1,452, other healers 1,278–1,320."},
  {t:"Recovery after a large hit",c:"First 3–6 sec, against the Druid",b:"2–6% above with Divine Favor, 6–7% below with short cooldowns",p:"No proposal",s:"200% critical heal. At 225%: 11–18% above with Divine Favor."},
  {t:"Lay on Hands at full mana",b:"Drains all 4,416 mana",p:"Drains 2,208 (50%)",ids:["C-P11"],s:"With Devoted Sacrifice 2/2, the mana is back after 1 min 38 sec (was 3 min 15 sec)."}
 ],
 tank:[
  {t:"Reckoning extra attacks",c:"wowsims, level 63 boss, 2 min",b:"4.9 each min",p:"7.8 each min",ids:["C-P12"],s:"Threat +2% (+3% with Redoubt). Damage taken does not change."},
  {t:"Crushing blows",c:"wowsims, level 63 boss, 2 min",b:"12.0% of the boss attacks",p:"0.9% (Warrior: 1.1%)",big:1,ids:["C-P1"],s:"Holy Shield also starts Redoubt: up to 60% block. Damage taken −14%, threat +6%.",d:"With Redoubt 4–20%, 4.8% are still crushing blows."},
- {t:"Threat, as a % of the Warrior",c:"Same gear, one boss, no Consecration",b:"118% fresh level 60, 102% Naxxramas",p:"No threat proposals",bars:[["Warrior",100,"o","100%"],["Fresh 60, beta",118,"b","118%"],["Naxxramas, beta",102,"b","102%"]],s:"The beta removes the threat gap. With Consecration: 120–142% of the Warrior. See W28.",d:"Beta of 18 October: 63% of the Warrior. wowsims preset tank: 932 threat per sec (was 663)."},
- {t:"Mana of the tank",c:"Mana per sec, Blessing of Wisdom, no Consecration",b:"+14.5 fresh level 60, +36.9 Naxxramas",p:"No mana proposals",bars:[["Fresh 60, beta",14.5,"b","+14.5"],["Naxxramas, beta",36.9,"b","+36.9"]],s:"Shieldsworn gives Shield Specialization mana from each Holy Strike. Redoubt (C-P1) adds 4.9–8.3 per sec: more blocks.",d:"With Consecration on cooldown: −49.0 per sec at fresh level 60. The mana is zero after 59 sec."},
+ {t:"Threat, as a % of the Warrior",c:"Same gear, one boss, no Consecration",b:"118% fresh level 60, 102% Naxxramas",p:"No threat proposals",bars:[["Warrior",100,"o","100%"],["Fresh 60, live",118,"b","118%"],["Naxxramas, live",102,"b","102%"]],s:"The live trees remove the threat gap. With Consecration: 120–142% of the Warrior. See W28.",d:"Beta of 18 October: 63% of the Warrior. wowsims preset tank: 932 threat per sec (was 663)."},
+ {t:"Mana of the tank",c:"Mana per sec, Blessing of Wisdom, no Consecration",b:"+14.5 fresh level 60, +36.9 Naxxramas",p:"No mana proposals",bars:[["Fresh 60, live",14.5,"b","+14.5"],["Naxxramas, live",36.9,"b","+36.9"]],s:"Shieldsworn gives Shield Specialization mana from each Holy Strike. Redoubt (C-P1) adds 4.9–8.3 per sec: more blocks.",d:"With Consecration on cooldown: −49.0 per sec at fresh level 60. The mana is zero after 59 sec."},
  {t:"Lay on Hands, tank",c:"Naxxramas, 4,900 mana",b:"The mana is back after 2 min 12 sec",p:"The mana is back after 1 min 6 sec",ids:["C-P11"],s:"Half of the mana stays. The tank keeps its threat."},
  {t:"Group tools",b:"Judgement of Fury: one enemy at 10 yards",p:"Shoulder the Burden (baseline spell, 5 min): 50% of the threat of an ally, on all enemies",ids:["C-P5"],s:"Warrior: Challenging Shout. Druid: Challenging Roar."}
 ],
 dps:[
- {t:"DPS on one boss",c:"wowsims of 1 November, fresh level 60",b:"906",p:"About 956 (+5.6%)",big:1,ids:["C1"],s:"Beta: 100% of the pure average. With Holy Strike Seal trigger: 105%. Before the wowsims update: 848.",d:"Unsealed Wrath triggers only on auto attacks. Thus, Holy Strike triggers only the active Seal."},
- {t:"DPS with better gear",c:"Naxxramas, % of the pure average",b:"94%",p:"99% (with Holy Strike Seal trigger)",ids:["C1"],s:"The beta is at or above the 95% target until Blackwing Lair. The fixed base values of the Seals, Judgement and Holy Strike did not change."},
+ {t:"DPS on one boss",c:"wowsims of 1 November, fresh level 60",b:"906",p:"About 956 (+5.6%)",big:1,ids:["C1"],s:"Live: 100% of the pure average. With Holy Strike Seal trigger: 105%. Before the wowsims update: 848.",d:"Unsealed Wrath triggers only on auto attacks. Thus, Holy Strike triggers only the active Seal."},
+ {t:"DPS with better gear",c:"Naxxramas, % of the pure average",b:"94%",p:"99% (with Holy Strike Seal trigger)",ids:["C1"],s:"The live version is at or above the 95% target until Blackwing Lair. The fixed base values of the Seals, Judgement and Holy Strike did not change."},
  {t:"Mana with Unsealed Wrath",c:"Fresh level 60, a Seal change after each swing",b:"Empty after 1 min 21 sec (model)",p:"No proposal",s:"Fewer Seal changes: −2% damage in a 2 min fight, −4% in a 5 min fight. In wowsims, Major Mana Potion makes the mana last 5 min.",d:"Unsealed Wrath has no Seal cost decrease (Twist of Light had −20%)."},
  {t:"Holy Strike",b:"No Seal of Command, Righteousness or Fury",p:"Triggers your active Seal",ids:["C1"]},
  {t:"Sanctified Judgement, rank 1",c:"Seal of Fury, 8.5 Judgements each min",b:"1.9 mana per sec",p:"5.7 mana per sec",ids:["C-R3"],s:"Each rank adds the same value: 40 mana for each Judgement."}
@@ -642,7 +642,7 @@ function renderCompare(role){
     const mx=x.bars?Math.max(...x.bars.map(b=>b[1])):0;
     const bars=x.bars?`<div class="bars">${x.bars.map(b=>`<span class="lb${b[2]!=="o"?" me":""}">${esc(b[0])}</span><span class="cbar"><i class="${b[2]}" style="width:${(b[1]/mx*100).toFixed(1)}%"></i></span><span class="vl">${esc(b[3]||b[1].toLocaleString("en-US"))}</span>`).join("")}</div>`:"";
     return `<article class="mc"><div><h4>${esc(x.t)}</h4>${x.c?`<div class="cond">${esc(x.c)}</div>`:""}</div>
-<div class="mc-v"><div><small>Beta</small><span class="vb${x.big?" big":""}">${esc(x.b)}</span></div><span class="ar" aria-hidden="true">→</span><div><small>Proposed</small><span class="vp${x.big?" big":""}">${esc(x.p)}</span></div></div>
+<div class="mc-v"><div><small>Live</small><span class="vb${x.big?" big":""}">${esc(x.b)}</span></div><span class="ar" aria-hidden="true">→</span><div><small>Proposed</small><span class="vp${x.big?" big":""}">${esc(x.p)}</span></div></div>
 ${bars}${x.s?`<p class="sum">${esc(x.s)}</p>`:""}${x.d?`<details><summary>More</summary><p>${esc(x.d)}</p></details>`:""}${x.ids?`<div class="ids">${x.ids.map(i=>`<span class="pid">${i}</span>`).join("")}</div>`:""}</article>`;};
   document.getElementById("cmpBody").innerHTML=CMP[role].map(card).join("");
   document.querySelectorAll(".rtabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.role===role));

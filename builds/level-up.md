@@ -1,6 +1,6 @@
 # Level-up: talent order from level 10 to 60
 
-This file gives a fast talent order to level a Paladin in the beta trees of 30 October 2026, with 1 point for each level. The order ends at the raid build RB1 (Analysis, Builds). The proposed trees have the same Retribution talents, thus the order is also valid for them.
+This file gives a fast talent order to level a Paladin in the live trees, with 1 point for each level. The order ends at the raid build RB1 (Analysis, Builds). The proposed trees have the same Retribution talents, thus the order is also valid for them.
 
 ## Summary
 
@@ -33,7 +33,7 @@ Go deep in Retribution first. Take Seal of Command at level 20, Pursuit of Justi
 
 ## 2. Codes for each level
 
-Paste the code into the code box of the calculator and click "Load code". A code that starts with "b2" opens the beta trees.
+Paste the code into the code box of the calculator and click "Load code". A code that starts with "b2" opens the live trees.
 
 | Level | Points | Code |
 | --- | --- | --- |
@@ -63,7 +63,7 @@ Paste the code into the code box of the calculator and click "Load code". A code
 
 ## 4. Method
 
-- **Sim.** wowsims Forever, master of 1 November 2026 (commit 895cd67f9), beta talents, no proposal flags. Test TestFeedbackLevelUp (models/wowsims-b2). One level 60 humanoid with 3,000 armor that attacks you (2.0 sec swing). Fights of 15 sec ±25%. No buffs, no consumables. Default Retribution gear and rotation. 1,000 iterations.
+- **Sim.** wowsims Forever, master of 1 November 2026 (commit 895cd67f9), live talents, no proposal flags. Test TestFeedbackLevelUp (models/wowsims-b2). One level 60 humanoid with 3,000 armor that attacks you (2.0 sec swing). Fights of 15 sec ±25%. No buffs, no consumables. Default Retribution gear and rotation. 1,000 iterations.
 - **Time for each kill.** Enemy health 5,000. Rest = the longer of mana / 120 per sec (water) and damage taken / 80 per sec (food). Travel = 10 sec for each kill, divided by 1.15 with Pursuit of Justice 2/2.
 - **Two cases.** The enemy hits for 400 (health limits the rest) or for 200 (mana limits the rest more often). The score is the average of the two cases.
 - **Search.** A beam search (30 paths) for the order of the 51 points of RB1. Its score is the sum over levels 10–60 of level × time for each kill. The weight gives more value to the slow, high levels. The script is models/wowsims-b2/levelup.py.

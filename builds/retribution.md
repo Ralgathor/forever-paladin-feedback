@@ -1,19 +1,19 @@
 # Retribution: best damage build and stat weights
 
-This file gives the best damage builds on one target. It uses the beta trees of 30 October 2026 and the proposed trees of calculator version 6. It also gives the stat weights. All values come from wowsims Forever (see [README](README.md)).
+This file gives the best damage builds on one target. It uses the live trees and the proposed trees of calculator version 6. It also gives the stat weights. All values come from wowsims Forever (see [README](README.md)).
 
 ## Summary
 
 | Trees | Case | Build | Points | Code | DPS |
 | --- | --- | --- | --- | --- | --- |
-| Beta | Raid | RB1 | 14/6/31 | [`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351) | 910 |
+| Live | Raid | RB1 | 14/6/31 | [`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351) | 910 |
 | Proposed | Raid | RB1 | 14/6/31 | [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 960 |
-| Beta | Fresh 60 | RB1 | 14/6/31 | [`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351) | 303 |
+| Live | Fresh 60 | RB1 | 14/6/31 | [`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351) | 303 |
 | Proposed | Fresh 60 | RB1 | 14/6/31 | [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 324 |
 
 - **RB1 is the best build in all four cases.** It is the wowsims default build of 1 November and RB1 of Analysis, Builds. The talent search found raid builds with at most +0.6%. These builds are 2–5% worse at fresh 60 (part 2).
 - **"Raid"** is full raid buffs and debuffs, with consumables. **"Fresh 60"** is no buffs, no debuffs and no consumables.
-- **Proposed against beta.** The Holy Strike Seal trigger (C1) gives +5.5% in a raid and +6.8% at fresh 60. No other proposal changes the Retribution talents.
+- **Proposed against live.** The Holy Strike Seal trigger (C1) gives +5.5% in a raid and +6.8% at fresh 60. No other proposal changes the Retribution talents.
 - **Stat weights.** In a raid, Expertise rating is the best stat for each point (2.1 Strength). Crit rating and Haste rating are about 1 Strength. At fresh 60, Haste rating and Intellect have more value (part 3).
 
 ## 1. Method
@@ -38,7 +38,7 @@ This file gives the best damage builds on one target. It uses the beta trees of 
 
 | Build | Trees | Code | Raid | Fresh 60 | Change against RB1 |
 | --- | --- | --- | --- | --- | --- |
-| RS1, 12/8/31 | Beta | [`b2050150001-503-15233011101301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050150001-503-15233011101301351) | 916 (+0.6%) | 288 (−5.0%) | Reverence 1, Holy Conduit 1, Pursuit of Justice 1, Precision 3, Deflection 1 |
+| RS1, 12/8/31 | Live | [`b2050150001-503-15233011101301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050150001-503-15233011101301351) | 916 (+0.6%) | 288 (−5.0%) | Reverence 1, Holy Conduit 1, Pursuit of Justice 1, Precision 3, Deflection 1 |
 | RS2, 13/7/31 | Proposed | [`v6p050150002-502-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050150002-502-05233011201301351) | 963 (+0.3%) | — | Reverence 1, Precision 2 |
 | RS3, 12/8/31 | Proposed | [`v6p050050002-503-15233011101301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050050002-503-15233011101301351) | — | 317 (−1.9%) | Reverence 0, Pursuit of Justice 1, Precision 3, Deflection 1 |
 
@@ -51,7 +51,7 @@ This file gives the best damage builds on one target. It uses the beta trees of 
 
 Each stat + a small amount (20 Strength, Agility or Intellect, 40 spell damage or Attack Power, 10 rating). DPS gain for each point, divided by the gain of 1 Strength. Build RB1.
 
-| Stat | Beta, raid | Proposed, raid | Beta, fresh 60 |
+| Stat | Live, raid | Proposed, raid | Live, fresh 60 |
 | --- | --- | --- | --- |
 | DPS for 1 Strength | 0.50 | 0.53 | 0.23 |
 | Strength | 1.00 | 1.00 | 1.00 |

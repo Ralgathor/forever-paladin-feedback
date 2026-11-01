@@ -1,13 +1,13 @@
 # Holy: best healing build, talent values and stat weights
 
-This file gives the best healing build on the trees of 30 October 2026, the value of each healing talent and the stat weights. All values come from the healing model of the beta of 30 October (`models/beta-30-oct/healing_b2.py`). The script is `models/beta-30-oct/holy_builds_b2.py`.
+This file gives the best healing build on the live trees, the value of each healing talent and the stat weights. All values come from the healing model of the live trees (`models/beta-30-oct/healing_b2.py`). The script is `models/beta-30-oct/holy_builds_b2.py`.
 
 ## Summary
 
 | Trees | Build | Points | Code | Raid, 3 / 5 / 10 min | One tank, 3 / 5 / 10 min |
 | --- | --- | --- | --- | --- | --- |
 | Proposed | HB2 | 31/12/8 | [`v6p50320115202101251-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50320115202101251-50122000000000002-0503) | 596 / 506 / 427 | 695 / 601 / 507 |
-| Beta | HB1 | 38/5/8 | [`b250325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b250325115202121251-5-0503) | 596 / 506 / 427 | 695 / 601 / 507 |
+| Live | HB1 | 38/5/8 | [`b250325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b250325115202121251-5-0503) | 596 / 506 / 427 | 695 / 601 / 507 |
 
 - Healing each sec after overhealing, 715 healing power, 200% critical heals (Holy Power 5/5, main hypothesis).
 - In both trees, all healing talents fit in 51 points. Thus, the best healing build takes all of them. The other points give only utility.
@@ -24,7 +24,7 @@ This file gives the best healing build on the trees of 30 October 2026, the valu
 - Protection: Divine Intellect 5, Precision 1, Guardian's Favor 2, Sacred Duty 2, Devoted Sacrifice 2.
 - Retribution: Benediction 5, Conviction 3.
 
-### Beta: HB1
+### Live: HB1
 
 [`b250325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b250325115202121251-5-0503) (38/5/8). This is HB1 of Analysis, Builds. It takes Improved Seals 5 and Consecrated Ground 2 in place of the Protection saves.
 
@@ -79,5 +79,5 @@ This folder has no new gear search for Holy. wowsims Forever has no Holy healing
 ## 5. Limits
 
 - The values come from a model, not from combat logs. The model uses fixed overhealing for each spell.
-- The model uses 200% critical heals (Holy Power 5/5, decision of 1 November). The beta test of Holy Power can change these values (see Open items).
+- The model uses 200% critical heals (Holy Power 5/5, decision of 1 November). The live test of Holy Power can change these values (see Open items).
 - The earlier values (trees of 18 October) are in the history of the repository.

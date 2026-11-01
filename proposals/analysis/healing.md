@@ -2,7 +2,7 @@
 
 **Question.** How well does the Holy Paladin heal against the other healers of Forever: Priest, Druid and Shaman?
 
-The design goal of Holy is a healer for long fights and the best healer on one target. It does not need to be the best raid healer. No Holy talent proposal stays. Thus, the proposed Holy Paladin is the beta Holy Paladin.
+The design goal of Holy is a healer for long fights and the best healer on one target. It does not need to be the best raid healer. No Holy talent proposal stays. Thus, the proposed Holy Paladin is the live Holy Paladin.
 
 All values are healing each sec after overhealing, at 715 healing power, from the healing model. A critical heal heals for 200% (Holy Power 5/5, main hypothesis).
 
@@ -13,7 +13,7 @@ All values are healing each sec after overhealing, at 715 healing power, from th
 - **In raids, the Paladin is the weakest healer:** 22–30% below the Druid, 13–17% below the Shaman and 37–44% below the Priest. This is accepted, because Holy is not a raid healer first.
 - **Why the Paladin is weak in raids.** Oath of Light helps only one ally. The other healers have strong cooldown heals for the raid: Prayer of Mending, Riptide, Swiftmend and Tranquility.
 - **The Paladin has the least mana.** Reverence keeps only 30% of the Spirit regeneration during casts. The other healers keep 50%.
-- **Holy Power decides the one-tank result.** At 225%, the Paladin is 3–10% above the Druid. At 175%, it is 1–7% below. A beta test must give the real value (Open items).
+- **Holy Power decides the one-tank result.** At 225%, the Paladin is 3–10% above the Druid. At 175%, it is 1–7% below. A live test must give the real value (Open items).
 - **No Holy proposal for now (decision of 1 November).** Reverence 50% (C-H1) and Lingering Light (C-H2) stay withdrawn until the Holy Power test.
 
 ## 1. Raid healing
@@ -26,7 +26,7 @@ All heals on all targets.
 | Druid | 855 | 689 | 604 | 903 | 729 | 639 |
 | Shaman | 709 | 599 | 517 | 779 | 654 | 562 |
 | Paladin, beta of 18 October | 616 | 532 | 449 | 674 | 588 | 496 |
-| **Paladin, beta of 30 October** | **596** | **506** | **427** | **661** | **569** | **480** |
+| **Paladin, live version** | **596** | **506** | **427** | **661** | **569** | **480** |
 
 - **The Paladin is last in raids.**
 - **It is 2–5% lower than in the beta of 18 October.** Holy Power gives larger critical heals, but Blessing of Light is gone.
@@ -43,7 +43,7 @@ Only the heals on the tank. The tank has Oath of Light. "Maximum" is the raw hea
 | Druid | 681 | 573 | 518 | 737 | 622 | 563 | 1,320 | 1,423 |
 | Shaman | 607 | 509 | 437 | 654 | 548 | 470 | 1,278 | 1,377 |
 | Paladin, beta of 18 October | 616 | 532 | 449 | 674 | 588 | 496 | 1,279 | 1,347 |
-| **Paladin, beta of 30 October** | **695** | **601** | **507** | **761** | **664** | **560** | **1,452** | **1,529** |
+| **Paladin, live version** | **695** | **601** | **507** | **761** | **664** | **560** | **1,452** | **1,529** |
 
 - **The Paladin is first in fights of 3 and 5 min,** by 2–7 points. The goal (W14) is the best single-target healer, with a lead of 20% or less.
 - **In fights of 10 min, the Druid is first** (−2% at 715, −1% at 900). The Paladin mana is then the limit.
@@ -62,7 +62,7 @@ Before the hit, each healer heals the tank as usual. Thus, its heals over time a
 | Druid | 6,293 | 10,041 | 4,898 | 8,686 | 6,839 | 10,860 |
 | Shaman | 4,750 | 8,054 | 3,361 | 6,664 | 5,119 | 8,689 |
 | Paladin, beta of 18 October | 5,024 | 8,232 | 3,947 | 7,155 | 5,337 | 8,745 |
-| **Paladin, beta of 30 October** | **6,691** | **10,261** | **4,565** | **8,135** | **7,090** | **10,865** |
+| **Paladin, live version** | **6,691** | **10,261** | **4,565** | **8,135** | **7,090** | **10,865** |
 
 - **With all cooldowns, the Paladin is first:** 6% above the Druid after 3 sec, 2% after 6 sec. Divine Favor and Holy Light with Oath of Light heal for about 5,600.
 - **With short cooldowns only, the Druid is first:** the Paladin is 6–7% below. The Druid heals over time are already on the tank, and Swiftmend heals for a full Rejuvenation.
@@ -126,7 +126,7 @@ These options are withdrawn (see Withdrawn ideas). The values at 200% are here f
 
 | Option | Raid against the Druid, 3 / 5 / 10 min | One tank against the Druid, 3 / 5 / 10 min |
 | --- | --- | --- |
-| Beta of 30 October | −30% / −27% / −29% | +2% / +5% / −2% |
+| Live version | −30% / −27% / −29% | +2% / +5% / −2% |
 | Lingering Light 2/2 (C-H2) | −26% / −22% / −25% | +8% / +11% / +4% |
 | Reverence 50% (C-H1) | −26% / −22% / −23% | +7% / +11% / +6% |
 | Reverence 50% and Lingering Light 2/2 | −22% / −17% / −18% | +14% / +18% / +13% |

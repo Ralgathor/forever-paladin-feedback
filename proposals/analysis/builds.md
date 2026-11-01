@@ -2,7 +2,7 @@
 
 **Question.** What are the main builds of each spec and role, with the proposals?
 
-The builds use the proposed trees of calculator version 6 (the beta of 30 October 2026, with the proposals). All codes open in the calculator with 51 points. A code that starts with "v6p" opens the proposed trees. A code that starts with "b2" opens the beta trees. For the best builds and stat weights of each spec, see the builds folder of the repository.
+The builds use the proposed trees of calculator version 6 (the live version, with the proposals). All codes open in the calculator with 51 points. A code that starts with "v6p" opens the proposed trees. A code that starts with "b2" opens the live trees. For the best builds and stat weights of each spec, see the builds folder of the repository.
 
 ## Short answer
 
@@ -16,7 +16,7 @@ The builds use the proposed trees of calculator version 6 (the beta of 30 Octobe
 
 | Build | Points and code | Healing each sec (raid / one tank, 5 min) | What it gives |
 | --- | --- | --- | --- |
-| HB1. Raid healer, beta talents | 38/5/8: [`v6p50325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50325115202121251-5-0503) | 506 / 601 | All healing talents. Divine Intellect 5, Benediction 5, Conviction 3. Improved Seals 5, Holy Conduit 2 and Consecrated Ground 2 fill the rows |
+| HB1. Raid healer, live talents | 38/5/8: [`v6p50325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50325115202121251-5-0503) | 506 / 601 | All healing talents. Divine Intellect 5, Benediction 5, Conviction 3. Improved Seals 5, Holy Conduit 2 and Consecrated Ground 2 fill the rows |
 | **HB2. Raid healer, Devoted Sacrifice** | 31/12/8: [`v6p50320115202101251-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50320115202101251-50122000000000002-0503) | 506 / 601 | All healing talents. Devoted Sacrifice 2/2 (C-P11): Lay on Hands drains only 50% of the mana. Guardian's Favor 2/2 (Hand of Protection each 3 min), Sacred Duty 2/2 (Divine Shield −60 sec), Precision 1 |
 
 - **HB2 is the main build with the proposals.** It loses only two damage talents: Improved Seals and Consecrated Ground. The healing does not change.
@@ -29,17 +29,17 @@ The builds use the proposed trees of calculator version 6 (the beta of 30 Octobe
 | Build | Points and code | Threat each sec | Damage taken each sec | TMI | What it gives |
 | --- | --- | --- | --- | --- | --- |
 | **PT1. Raid tank** | 0/34/17: [`v6p-3530110213501531-45233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-45233) | 1,015 | 296 | 45.3 | Protection: Divine Intellect 3, Redoubt 5, Precision 3, Sacred Duty 1, Templar's Bulwark, Shield Specialization 2, Swift Judgement, Improved Righteous Fury 3, Anticipation 5, Holy Shield, Reckoning 5, Iron Creed 3, Shieldsworn. Retribution: Deflection 4, Benediction 5, Improved Judgement 2, Conviction 3, Sanctified Judgement 3 |
-| Beta tank (reference) | 12/32/7 in the beta trees: [`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) | 928 | 333 | 57.1 | The wowsims default tank build, no proposals. Toughness 2 |
+| Live tank (reference) | 12/32/7 in the live trees: [`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) | 928 | 333 | 57.1 | The wowsims default tank build, no proposals. Toughness 2 |
 
 - **Values** come from wowsims with Redoubt (C-P1) and Reckoning (C-P12). With the Holy Strike Seal trigger (C1) also, PT1 has 1,041 threat each sec (builds/protection.md).
 - **Divine Intellect 3 is necessary.** Row 4 needs 15 points in rows 1–3. With Divine Intellect 2, Swift Judgement is not available.
-- **Toughness removal (C-P13)** frees 5 points. They go to Deflection 4 and Divine Intellect 1. In the beta talents, Deflection 4 in place of Toughness 5 gives the same damage taken (340), but a worse TMI (58.1 against 55.9).
+- **Toughness removal (C-P13)** frees 5 points. They go to Deflection 4 and Divine Intellect 1. In the live talents, Deflection 4 in place of Toughness 5 gives the same damage taken (340), but a worse TMI (58.1 against 55.9).
 - **Devoted Sacrifice (C-P11)** is available to a tank for 2 points in place of Deflection. The sim does not model Lay on Hands.
 - **Dungeons.** Dungeon enemies are level 62 or lower and cannot hit with crushing blows. A dungeon tank can move Anticipation points to Stoicism or Guardian's Favor.
 
 ## 3. Retribution
 
-| Build | Points and code | Raid DPS, beta / with C1 | PvP burst (one stun) | What it gives |
+| Build | Points and code | Raid DPS, live / with C1 | PvP burst (one stun) | What it gives |
 | --- | --- | --- | --- | --- |
 | **RB1. Raid** | 14/6/31: [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 910 / 960 (+5.5%) | — | The wowsims default build. Holy: Divine Strength 5, Reverence 2, Improved Seals 5, Holy Conduit 2. Protection: Divine Intellect 5, Precision 1. Retribution: Unsealed Wrath, Champion of the Light 5, Vengeance 3, Two-Handed Weapon Specialization 3, Sacred Arbiter, Seal of Command, Repentance, Unyielding Faith 1, Pursuit of Justice 2 |
 | RB2. PvP, Unsealed Wrath | 0/20/31: [`v6p-50322130101000002-05233001211301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-50322130101000002-05233001211301351) | 845 / 887 | About 2,400 (2,510 with C1) | Swift Judgement and Improved Hammer of Justice 3/3 (Hammer of Justice each 45 sec). Guardian's Favor, Sacred Duty, Devoted Sacrifice. Eye for an Eye 1. No Holy points |
@@ -64,7 +64,7 @@ Some builds must put points into talents with little value, to open a deeper row
 ## 5. Method and limits
 
 - **Protection and Retribution:** wowsims Forever (master of 1 November, 3,000 iterations, 3 min, full buffs).
-- **Holy:** the healing model (`models/beta-30-oct/healing_b2.py`, 715 healing power, 5 min). The beta test of Holy Power can change the Holy values (see Open items).
+- **Holy:** the healing model (`models/beta-30-oct/healing_b2.py`, 715 healing power, 5 min). The live test of Holy Power can change the Holy values (see Open items).
 - **PvP:** the PvP burst model (`models/beta-30-oct/pvp_burst_b2.py`), one Hammer of Justice stun.
 - wowsims does not model Lay on Hands, Shoulder the Burden (C-P5) or Hand of Sacrifice (C4).
 - The values come from sims and models, not from combat logs.

@@ -17,8 +17,8 @@ This part gives the calculations behind the proposals. Each sub-tab answers one 
 
 ## Trees
 
-- **Beta.** The beta trees of 30 October 2026, with no proposal.
-- **Proposed.** The beta trees of 30 October 2026, with the kept proposals (calculator version 6).
+- **Live.** The live trees, with no proposal.
+- **Proposed.** The live trees, with the kept proposals (calculator version 6).
 - **Withdrawn proposals.** Some tabs also give values for proposals that were withdrawn. The Withdrawn ideas tab gives the reasons.
 
 ## Words in these tabs

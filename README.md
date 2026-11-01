@@ -4,9 +4,9 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 10 changes for the beta trees of 30 October 2026. 4 changes are baseline spell changes (C1, C2, C4, C5). Shoulder the Burden (C-P5) is a new baseline spell. 5 changes are talent changes (C-P1, C-P11, C-P12, C-P13, C-R3). Devoted Sacrifice (C-P11) is a new talent. No Holy talent change and no move is open now.
-- **Adopted proposals:** the beta of 30 October 2026 adopts 6 earlier proposals (C3, the C-H1 move, the C-P5 removal, C-R1, M-H5 and M-R1).
-- **Talent calculator:** you can try the proposals and compare them with the beta trees.
+- **Proposals:** 10 changes for the live trees. 4 changes are baseline spell changes (C1, C2, C4, C5). Shoulder the Burden (C-P5) is a new baseline spell. 5 changes are talent changes (C-P1, C-P11, C-P12, C-P13, C-R3). Devoted Sacrifice (C-P11) is a new talent. No Holy talent change and no move is open now.
+- **Adopted proposals:** the live version of 4 November 2026 adopts 6 earlier proposals (C3, the C-H1 move, the C-P5 removal, C-R1, M-H5 and M-R1).
+- **Talent calculator:** you can try the proposals and compare them with the live trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
 - **Builds:** the main builds for each spec and role (raid, dungeon, PvP), with calculator version 6 codes (Analysis, Builds).
 - **Best builds, gear and stat weights:** the best build, pre-raid gear and stat weights of each spec in wowsims Forever ([builds](builds/README.md)). This folder uses the trees of 18 October 2026 and calculator version 5.
@@ -24,9 +24,9 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 **Spell changes**
 
-- **C1 Holy Strike:** Holy Strike triggers your active Seal the same as a melee attack, for all specs (beta: only Seal of Light, Justice and Wisdom).
+- **C1 Holy Strike:** Holy Strike triggers your active Seal the same as a melee attack, for all specs (live: only Seal of Light, Justice and Wisdom).
 - **C2 Judgement of the Crusader:** a personal debuff. It does not count against the one-Judgement limit. C2a is the alternative.
-- **C4 Hand of Sacrifice:** up to 825 damage moves to you (beta: Blessing of Sacrifice, 55 damage for each hit, no cooldown). Lasts 30 sec, 15 sec cooldown.
+- **C4 Hand of Sacrifice:** up to 825 damage moves to you (live: Blessing of Sacrifice, 55 damage for each hit, no cooldown). Lasts 30 sec, 15 sec cooldown.
 - **C5 Hands:** Blessing of Sacrifice, Protection and Freedom become Hand of Sacrifice, Protection and Freedom. They use no Blessing slot. Each Paladin can have one Hand on a target.
 - **C-P5 Shoulder the Burden (new baseline spell):** 50% of the threat of an ally moves to you. 5 min cooldown. All Paladins can learn it. It has no effect in PvP.
 
@@ -37,17 +37,17 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 **Protection**
 
 - **C-P1 Redoubt:** each Holy Shield cast also starts it. In wowsims, crushing blows decrease from 12.0% to 0.9% of the boss attacks (Warrior: 1.1%).
-- **C-P11 Devoted Sacrifice (new, row 3):** Lay on Hands drains only 75/50% of your current mana (beta: all of it). You also take 20/40% less damage from your Hand of Sacrifice. Alternative C-P11a: the spell drains 50% for all Paladins.
-- **C-P12 Reckoning:** 20–100% chance after a block, once each 4 sec (beta: 8–40%, once each 1.5 sec). The critical hit trigger does not change.
-- **C-P13 Toughness:** removed. Devoted Sacrifice (C-P11) takes its place in row 3. Protection then has 46 points (beta: 49).
+- **C-P11 Devoted Sacrifice (new, row 3):** Lay on Hands drains only 75/50% of your current mana (live: all of it). You also take 20/40% less damage from your Hand of Sacrifice. Alternative C-P11a: the spell drains 50% for all Paladins.
+- **C-P12 Reckoning:** 20–100% chance after a block, once each 4 sec (live: 8–40%, once each 1.5 sec). The critical hit trigger does not change.
+- **C-P13 Toughness:** removed. Devoted Sacrifice (C-P11) takes its place in row 3. Protection then has 46 points (live: 49).
 
 **Retribution**
 
-- **C-R3 Sanctified Judgement:** each Judgement returns 20/40/60% of the Seal cost (beta: a 33/66/100% chance).
+- **C-R3 Sanctified Judgement:** each Judgement returns 20/40/60% of the Seal cost (live: a 33/66/100% chance).
 
-**Adopted in the beta of 30 October 2026**
+**Adopted in the live version (4 November 2026)**
 
-| ID | Proposal | What the beta does |
+| ID | Proposal | What the live version does |
 | --- | --- | --- |
 | C3 | Blessing of Light: removed | Blessing of Light and Greater Blessing of Light are removed. Oath of Light (new Holy talent) gives their bonus on one ally |
 | C-H1 (move) | Reverence to Holy row 2 | Reverence is in row 2. Its values are 15/30% |
@@ -58,11 +58,11 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Read and try
 
-- **[Proposals](proposals/README.md).** The full document, in one file for each part. For each proposal, it gives the beta text, the proposed text, the reason and the model talent from another class. It also gives the analysis, the test results and the open questions.
+- **[Proposals](proposals/README.md).** The full document, in one file for each part. For each proposal, it gives the live text, the proposed text, the reason and the model talent from another class. It also gives the analysis, the test results and the open questions.
 - **[Talent calculator](calculator/index.html).** Live version: https://ralgathor.github.io/forever-paladin-feedback/calculator/
-  - The calculator opens with the proposed trees of version 6 (31 October 2026). These trees change the beta trees of 30 October 2026. Push **Beta** to see the beta trees of 30 October.
+  - The calculator opens with the proposed trees of version 6 (31 October 2026). These trees change the live trees. Push **Live** to see the live trees.
   - A purple tag (C-P1, C-P12…) shows a changed or new talent.
-  - **Build codes.** A code that starts with `v6p` opens a proposed build. A code that starts with `b2` opens a build in the beta trees of 30 October 2026. A code with only digits is a build in the beta trees of 18 October 2026. It opens on the page of that beta: https://ralgathor.github.io/forever-paladin-feedback/calculator/beta1/
+  - **Build codes.** A code that starts with `v6p` opens a proposed build. A code that starts with `b2` opens a build in the live trees. A code with only digits is a build in the beta trees of 18 October 2026. It opens on the page of that beta: https://ralgathor.github.io/forever-paladin-feedback/calculator/beta1/
   - **Versions.** Use the Version list to open an earlier version of the proposed trees. Versions 1 to 5 use the beta trees of 18 October 2026. Each earlier version has a frozen page. A code of an earlier version opens on its page.
 
 | Version | Date | Code starts with | Page |
@@ -78,24 +78,24 @@ The talent icons come from the Wowhead icon server (wow.zamimg.com). If the icon
 
 ## Method
 
-- **Data.** Forever client build 1.60.1.70707, hotfix push 113554 (beta of 30 October 2026). The talent data comes from the game files in wowsims Forever (branch `paladin/hotfix-113554-port`). Player tests give the talent behavior.
-- **Earlier data.** Most values in the Analysis tabs use the beta of 18 October 2026 (client build 1.60.1.70450). Beta test results gives the first model results for the beta of 30 October.
-- **Model talents.** Each proposal uses a talent from another class in the same beta as a model (Warrior, Druid, Priest, Shaman, Hunter, Mage).
+- **Data.** Forever client build 1.60.1.70707, hotfix push 113554 (live version). The talent data comes from the game files in wowsims Forever (branch `paladin/hotfix-113554-port`). Player tests give the talent behavior.
+- **Earlier data.** Most values in the Analysis tabs use the beta of 18 October 2026 (client build 1.60.1.70450). Beta test results gives the first model results for the live trees.
+- **Model talents.** Each proposal uses a talent from another class in the same game version as a model (Warrior, Druid, Priest, Shaman, Hunter, Mage).
 - **Rules.** The combat and mana values use Classic 1.12 rules when no test gives a different rule.
 - **Estimates.** The burst values are estimates. The Reckoning, threat, mana, healing and damage values come from simple models, not combat logs. Each estimate gives its assumptions and limits.
 - **Other classes.** The healing comparison uses the DoubleZug sheets for the four Forever healers, with the spell values of the Forever spellbook ([model](models/healing/)). The damage comparison uses the ratios of one external simulation ([MythicSim](https://mythicsim.com/wow-forever/tier-list)) and a same-gear model check.
 
 ## Models
 
-| Folder | What it holds | Beta |
+| Folder | What it holds | Trees |
 | --- | --- | --- |
-| [models/healing](models/healing/) | Healing model (linear program) and recovery after a large hit (Monte Carlo) | 18 October |
-| [models/threat](models/threat/) | Threat model, one enemy and groups of enemies | 18 October |
-| [models/damage](models/damage/) | Retribution damage model | 18 October |
-| [models/mana](models/mana/) | Protection mana model, one boss | 18 October |
-| [models/wowsims](models/wowsims/) | wowsims Forever check of the proposals (calculator version 5) | 18 October |
-| [models/beta-30-oct](models/beta-30-oct/) | The models of the Analysis tabs on the new trees | 30 October |
-| [models/wowsims-b2](models/wowsims-b2/) | wowsims Forever check of the kept proposals | 30 October |
+| [models/healing](models/healing/) | Healing model (linear program) and recovery after a large hit (Monte Carlo) | Beta (18 October) |
+| [models/threat](models/threat/) | Threat model, one enemy and groups of enemies | Beta (18 October) |
+| [models/damage](models/damage/) | Retribution damage model | Beta (18 October) |
+| [models/mana](models/mana/) | Protection mana model, one boss | Beta (18 October) |
+| [models/wowsims](models/wowsims/) | wowsims Forever check of the proposals (calculator version 5) | Beta (18 October) |
+| [models/beta-30-oct](models/beta-30-oct/) | The models of the Analysis tabs on the new trees | Live (30 October) |
+| [models/wowsims-b2](models/wowsims-b2/) | wowsims Forever check of the kept proposals | Live (30 October) |
 
 ## Feedback
 

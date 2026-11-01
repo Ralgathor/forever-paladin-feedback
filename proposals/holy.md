@@ -1,6 +1,6 @@
 # Holy
 
-The beta of 30 October 2026 changes most of the Holy tree. Oath of Light, Boundless Light and the new Holy Power make the Paladin the best healer on one tank. This is the design goal of Holy. In raids, the Paladin stays below the other healers (see Beta test results). This is accepted, because Holy is not a raid healer first. Thus, no Holy talent proposal stays. The spell changes (C1, C2, C4, C5) still apply to Holy.
+The live version changes most of the Holy tree. Oath of Light, Boundless Light and the new Holy Power make the Paladin the best healer on one tank. This is the design goal of Holy. In raids, the Paladin stays below the other healers (see Beta test results). This is accepted, because Holy is not a raid healer first. Thus, no Holy talent proposal stays. The spell changes (C1, C2, C4, C5) still apply to Holy.
 
 ## Holy layout
 
@@ -14,5 +14,5 @@ The beta of 30 October 2026 changes most of the Holy tree. Oath of Light, Boundl
 | 6 (25) | Holy Power | 5 |
 | 7 (30) | Light's Vigil | 1 |
 
-- Holy has 46 points, the same as the beta.
-- All talents keep their beta places and values.
+- Holy has 46 points, the same as the live version.
+- All talents keep their places and values of the live trees.

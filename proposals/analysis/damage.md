@@ -8,7 +8,7 @@ All values are DPS on one level 63 boss. The start values come from wowsims (mas
 
 ## Short answer
 
-- **The beta Retribution is near the target.** It does 906 DPS in wowsims: 100% of the pure average at fresh 60. In Naxxramas, it is 94% (model), 1 point below the target.
+- **The live Retribution is near the target.** It does 906 DPS in wowsims: 100% of the pure average at fresh 60. In Naxxramas, it is 94% (model), 1 point below the target.
 - **The wowsims update of 1 November** gives Retribution +7% (848 → 906): a new rotation, the Unsealed Wrath fix and new weapon oils.
 - **The Holy Strike Seal trigger (C1) gives +5.3–5.6%.** With C1, Retribution is 105% of the pure average at fresh 60 and 99% in Naxxramas.
 - **Keep C1.** Without it, Retribution is below the target in Naxxramas. If C1 is too strong, decrease Sacred Arbiter to +10% (W15).
@@ -19,23 +19,23 @@ All values are DPS on one level 63 boss. The start values come from wowsims (mas
 
 MythicSim values (22 October): Warrior 929, Rogue 702, Hunter 1,175, Mage 860, Warlock 879. The pure average is 909. Without the Rogue, it is 961.
 
-- **At fresh 60,** the beta Retribution (906) is 100% of the pure average and 98% of Fury. With C1 (954), it is 105% and 103%.
-- **Without the Rogue,** the beta is 94% and C1 is 99%.
+- **At fresh 60,** the live Retribution (906) is 100% of the pure average and 98% of Fury. With C1 (954), it is 105% and 103%.
+- **Without the Rogue,** the live version is 94% and C1 is 99%.
 
 The increase of Hunter, Mage and Warlock with gear is not known. The table uses ×1.75 to Naxxramas. The method part gives ×1.60 and ×1.90.
 
 | Build | Fresh 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
 | --- | --- | --- | --- | --- | --- |
-| **Beta** | **100%** | **98%** | **97%** | **95%** | **94%** |
+| **Live** | **100%** | **98%** | **97%** | **95%** | **94%** |
 | **C1** | **105%** | **104%** | **102%** | **100%** | **99%** |
 | C1, Sacred Arbiter +10% | 104% | 103% | 101% | 99% | 98% |
 | C1, Sacred Arbiter +0% | 103% | 101% | 100% | 98% | 97% |
-| Beta, no more spell damage on plate after fresh 60 | 100% | 96% | 93% | 89% | 86% |
+| Live, no more spell damage on plate after fresh 60 | 100% | 96% | 93% | 89% | 86% |
 | C1, no more spell damage on plate after fresh 60 | 105% | 101% | 98% | 94% | 91% |
 
-- **The beta reaches the target until Blackwing Lair.** In Naxxramas, it is 1 point below.
+- **The live version reaches the target until Blackwing Lair.** In Naxxramas, it is 1 point below.
 - **C1 is 4–10 points above the target.** At fresh 60, Retribution with C1 is 3% above Fury.
-- **Spell damage on plate gear is important.** Without new spell damage on plate items, the beta is only 86% in Naxxramas. C1 keeps 91%.
+- **Spell damage on plate gear is important.** Without new spell damage on plate items, the live Paladin reaches only 86% in Naxxramas. C1 keeps 91%.
 - **Why keep C1.** It gives one Seal rule for all melee attacks. It also gives the tank threat (see Threat). Without it, Retribution is below the target in Naxxramas.
 - **The balance lever is Sacred Arbiter (W15).** If raid logs confirm the wowsims level, decrease it to +10%. C1 then gives +4.1%. At +0%, it gives +2.9%.
 - **Check again later.** The MythicSim values are from 22 October. The wowsims update can also change the other classes.
@@ -44,7 +44,7 @@ The increase of Hunter, Mage and Warlock with gear is not known. The table uses 
 
 Fresh 60, raid buffs, 2 min fight (model).
 
-| Source | Beta | Share | With C1 | Share |
+| Source | Live | Share | With C1 | Share |
 | --- | --- | --- | --- | --- |
 | Auto attacks | 116 | 36% | 116 | 34% |
 | Seal of Command | 54 | 17% | 64 | 19% |
@@ -72,7 +72,7 @@ The five gear levels of Threat, part 2. Each level gives 17.5% more stats from g
 
 **Retribution as a % of Fury**
 
-| Gear level | Beta | Beta, no more spell damage on plate | Beta, flatter gear | C1 | C1, no more spell damage on plate | C1, flatter gear |
+| Gear level | Live | Live, no more spell damage on plate | Live, flatter gear | C1 | C1, no more spell damage on plate | C1, flatter gear |
 | --- | --- | --- | --- | --- | --- | --- |
 | Fresh 60 | 98% | 98% | 98% | 103% | 103% | 103% |
 | Pre-raid best | 96% | 94% | 96% | 101% | 98% | 101% |
@@ -97,7 +97,7 @@ The five gear levels of Threat, part 2. Each level gives 17.5% more stats from g
 - **About 18% comes from spell damage,** with small coefficients (12–43%).
 - **Only about 59% increases with the weapon and Attack Power.** For Fury and Rogue, it is almost 100%.
 - **Hit.** Retribution has 6% hit at fresh 60, near the 8% cap. The classes with two weapons start at 27% miss. Thus, each hit point helps them until Naxxramas.
-- **Fury is the outlier.** In Naxxramas, the beta Retribution is 116% of Arms and 131% of Combat Rogue.
+- **Fury is the outlier.** In Naxxramas, the live Retribution is 116% of Arms and 131% of Combat Rogue.
 
 ## 4. Judgement of the Crusader
 
@@ -105,7 +105,7 @@ Judgement of the Crusader adds 161 Holy damage taken. Each hit receives 161 × i
 
 | Build | Fresh 60 | Naxxramas |
 | --- | --- | --- |
-| Beta | +30 (+9.3%) | +33 (+6.3%) |
+| Live | +30 (+9.3%) | +33 (+6.3%) |
 | C1 | +33 (+9.5%) | +36 (+6.4%) |
 
 - **The +161 does not increase with gear.** Thus, its percentage decreases in raids.
@@ -130,7 +130,7 @@ The wowsims rotation changes the Seal after each swing. This costs 51.2 mana eac
 
 ## 6. Stat values
 
-Beta, raid buffs, 5 min fight (model).
+Live, raid buffs, 5 min fight (model).
 
 | Stat | DPS for each point |
 | --- | --- |
@@ -151,9 +151,9 @@ Default Retribution gear, rotation and consumables. One level 63 boss, 3,000 ite
 
 | Case | 2 min | 5 min |
 | --- | --- | --- |
-| Beta, full buffs | 906 | 914 |
+| Live, full buffs | 906 | 914 |
 | C1, full buffs | 956 (+5.6%) | 962 (+5.3%) |
-| Beta, lean buffs | 653 | 660 |
+| Live, lean buffs | 653 | 660 |
 | C1, lean buffs | 690 (+5.6%) | 696 (+5.5%) |
 | Fury Warrior, pre-raid gear | 826 | 821 |
 | Arms Warrior, pre-raid gear | 729 | 723 |
@@ -161,13 +161,13 @@ Default Retribution gear, rotation and consumables. One level 63 boss, 3,000 ite
 - **C1:** +5.3–5.6% in wowsims, +5.3% in the model. They agree.
 - **No run is out of mana.**
 - **The wowsims update of 1 November,** step by step: 836 → 852 (Unsealed Wrath fix) → 889 (new rotation and presets) → 901 (new weapon oils), in the wowsims test suite.
-- **wowsims Fury.** The beta Retribution is 110% of the wowsims Fury, but the two specs have different gear. Thus, this tab compares with the MythicSim Fury.
+- **wowsims Fury.** The live Retribution is 110% of the wowsims Fury, but the two specs have different gear. Thus, this tab compares with the MythicSim Fury.
 
 ## 8. Options that were not kept
 
 - **Burning Zeal (C-R4).** +0.8% at fresh 60 to +1.3% in Naxxramas. Withdrawn: with C1, Retribution is already above the target.
 - **Measure for Measure (C-R5).** About +1% at all gear levels. Withdrawn.
-- **Twist of Light (C-R2).** The beta removes it. Unsealed Wrath takes its place.
+- **Twist of Light (C-R2).** The live version removes it. Unsealed Wrath takes its place.
 
 ## 9. Inputs of the model
 
@@ -197,7 +197,7 @@ Default Retribution gear, rotation and consumables. One level 63 boss, 3,000 ite
 - Improved Seals ×1.15 (Seals and Judgements). Two-Handed Weapon Specialization ×1.06 (physical only). Conviction +6% critical hit. Vengeance: average +5.7%.
 - Not in the model: Exorcism, Consecration, Retribution Aura.
 
-**Other gear growth cases (beta / C1, Naxxramas):** ×1.60 gives 100% / 105%. ×1.90 gives 89% / 94%.
+**Other gear growth cases (live / C1, Naxxramas):** ×1.60 gives 100% / 105%. ×1.90 gives 89% / 94%.
 
 ## 10. Method and limits
 

@@ -1,6 +1,6 @@
 # Protection: best tank build and stat weights
 
-This file gives the best tank builds for the beta trees of 30 October 2026 and for the proposed trees of calculator version 6. It also gives the stat weights. All values come from wowsims Forever (see [README](README.md)).
+This file gives the best tank builds for the live trees and for the proposed trees of calculator version 6. It also gives the stat weights. All values come from wowsims Forever (see [README](README.md)).
 
 ## Summary
 
@@ -8,12 +8,12 @@ This file gives the best tank builds for the beta trees of 30 October 2026 and f
 | --- | --- | --- | --- | --- | --- | --- |
 | Proposed | PT1 | 0/34/17 | [`v6p-3530110213501531-45233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-45233) | 1,041 | 296 | 45.1 |
 | Proposed | PS1 | 0/34/17 | [`v6p-3530110213501531-44233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-44233000001) | 1,062 | 296 | 45.1 |
-| Beta | BT1 | 12/32/7 | [`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) | 928 | 333 | 57.1 |
-| Beta | BS1 | 10/31/10 | [`b205005-05302102213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205005-05302102213201531-5023) | 975 | 342 | 58.5 |
+| Live | BT1 | 12/32/7 | [`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) | 928 | 333 | 57.1 |
+| Live | BS1 | 10/31/10 | [`b205005-05302102213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205005-05302102213201531-5023) | 975 | 342 | 58.5 |
 
 - **Proposed: PS1 is PT1 with Sacred Arbiter.** One Benediction point goes to Sacred Arbiter: +2.0% threat, the same damage taken and the same TMI. PT1 is the tank of Analysis, Builds.
-- **Beta: the build is a choice.** BT1 is the wowsims default tank build. The search build BS1 gives +5.1% threat, but 2.6% more damage taken and a 2.4% worse TMI. It takes Conviction 3 in place of Holy Conduit 2 and 1 Anticipation point.
-- **Proposed against beta.** PT1 has +12% threat, 11% less damage taken and a 21% better TMI than BT1. Redoubt (C-P1) removes almost all crushing blows: 1.0% against 11.9%.
+- **Live: the build is a choice.** BT1 is the wowsims default tank build. The search build BS1 gives +5.1% threat, but 2.6% more damage taken and a 2.4% worse TMI. It takes Conviction 3 in place of Holy Conduit 2 and 1 Anticipation point.
+- **Proposed against live.** PT1 has +12% threat, 11% less damage taken and a 21% better TMI than BT1. Redoubt (C-P1) removes almost all crushing blows: 1.0% against 11.9%.
 - **Stat weights.** For threat, Expertise rating and Hit rating are the best stats for each point. For survival, Stamina, Defense rating and Block value (proposed trees) are the best (part 3).
 
 ## 1. Method
@@ -23,7 +23,7 @@ This file gives the best tank builds for the beta trees of 30 October 2026 and f
 - **Gear and rotation.** The default Protection gear set and the default rotation of wowsims Forever. This folder has no gear search.
 - **TMI.** The damage intake value of wowsims with a 6 sec window: less is better.
 - **Talent search.** A hill climb (`models/wowsims-b2/search.py`) with moves of 1 point into a talent with tank value, at 1,000 iterations. The score is 40% threat, 20% damage, 20% damage taken and 20% TMI, each against the start build. The best builds then run at 3,000 iterations. The logs are `search_prot*.log`.
-- **Starts.** BT1 for the beta trees. PT1 for the proposed trees.
+- **Starts.** BT1 for the live trees. PT1 for the proposed trees.
 
 ## 2. Builds
 
@@ -36,7 +36,7 @@ This file gives the best tank builds for the beta trees of 30 October 2026 and f
 - **PS1** ([`v6p-3530110213501531-44233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-44233000001)): Benediction 4 and Sacred Arbiter in place of Benediction 5.
 - **Without the Holy Strike Seal trigger (C1),** PT1 has 1,015 threat each sec and 296 damage taken each sec. Its TMI is 45.3 (Analysis, Builds).
 
-### Beta: BT1 and BS1
+### Live: BT1 and BS1
 
 [`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) (12/32/7).
 

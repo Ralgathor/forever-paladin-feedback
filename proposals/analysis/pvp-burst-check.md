@@ -7,9 +7,9 @@
 ## Short answer
 
 - **The proposals add only 3–5% to the burst.** All of it comes from the Holy Strike Seal trigger (C1): Holy Strike now has a Seal of Command chance.
-- **The largest burst does not change.** It is the "Reckoning bomb" with a two-hand weapon: about 3,630 damage in the beta, 3,740 with the proposals.
+- **The largest burst does not change.** It is the "Reckoning bomb" with a two-hand weapon: about 3,630 damage in the live version, 3,740 with the proposals.
 - **Reckoning (C-P12) does not change the two-hand bomb.** With a shield, it gives the 4 charges 1–3 sec sooner. But a one-hand weapon does less damage.
-- **No change to the proposals is necessary.** Watch the bomb in the beta (W6, W26).
+- **No change to the proposals is necessary.** Watch the bomb in the live version (W6, W26).
 
 ## 1. Builds
 
@@ -25,7 +25,7 @@
 
 | Case | Reckoning bomb, no stored attacks | Reckoning bomb, 4 stored attacks | Unsealed Wrath |
 | --- | --- | --- | --- |
-| Beta | 2,070 | 3,630 | 2,400 |
+| Live | 2,070 | 3,630 | 2,400 |
 | Proposed (C1, C-P12) | 2,180 (+5%) | 3,740 (+3%) | 2,510 (+5%) |
 
 - **Each extra attack** does about 390 damage. 4 stored attacks add about 1,560.
@@ -38,10 +38,10 @@ Reckoning 5/5, one melee attacker with an attack each 1.5 sec.
 
 | Case | Charges each min | Time to 4 charges |
 | --- | --- | --- |
-| Two-hand weapon, beta and C-P12 | 8.0 | 30 sec |
-| Shield, 35% block, beta | 13.2 | 18 sec |
+| Two-hand weapon, live and C-P12 | 8.0 | 30 sec |
+| Shield, 35% block, live | 13.2 | 18 sec |
 | Shield, 35% block, C-P12 | 16.0 | 15 sec |
-| Shield, 60% block (Redoubt, C-P1), beta | 16.6 | 14 sec |
+| Shield, 60% block (Redoubt, C-P1), live | 16.6 | 14 sec |
 | Shield, 60% block (Redoubt, C-P1), C-P12 | 18.4 | 13 sec |
 
 - **Two-hand weapon:** no shield, thus no blocks. Only critical hits give charges. C-P12 does not change the bomb.

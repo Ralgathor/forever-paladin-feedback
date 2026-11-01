@@ -2,7 +2,7 @@
 
 **Question.** Do the proposed Paladin trees follow the design rules of Forever, and are they in balance with the other classes?
 
-This tab uses the proposed trees of calculator version 6 (the beta of 30 October 2026, with the proposals). The builds come from Builds. The comparison uses the 24 trees of the other classes (wowsims Forever talent data, 25 October 2026).
+This tab uses the proposed trees of calculator version 6 (the live version, with the proposals). The builds come from Builds. The comparison uses the 24 trees of the other classes (wowsims Forever talent data, 25 October 2026).
 
 ## The three rules
 
@@ -75,10 +75,10 @@ This tab uses the proposed trees of calculator version 6 (the beta of 30 October
 | Warlock | Affliction 46 | Demonology 50 | Destruction 50 | 146 |
 | Mage | Arcane 49 | Fire 46 | Frost 48 | 143 |
 | Rogue | Assassination 48 | Combat 44 | Subtlety 47 | 139 |
-| **Paladin, beta** | Holy 46 | Protection 49 | Retribution 44 | **139** |
+| **Paladin, live** | Holy 46 | Protection 49 | Retribution 44 | **139** |
 | **Paladin, proposed** | Holy 46 | Protection 46 | Retribution 44 | **136** |
 
-- **The other classes have 139–150 points** (mean 146). The beta Paladin is equal to the Rogue.
+- **The other classes have 139–150 points** (mean 146). The live Paladin is equal to the Rogue.
 - **With the proposals, the Paladin has 136 points.** Toughness removal (C-P13) deletes 5 ranks, and Devoted Sacrifice (C-P11) adds 2.
 - **The small total is not a problem.** Each Paladin tree has 17 talents, as the other classes. Fewer ranks leave more points for dips: Holy takes 20 points outside its tree, the tank 17 and Retribution 19.
 - **Do not add ranks to reach the other totals.** New ranks become stat filler, as Toughness was.
@@ -98,5 +98,5 @@ This tab uses the proposed trees of calculator version 6 (the beta of 30 October
 ## 6. Limits
 
 - The comparison counts talents and points. It does not measure the value of each talent in a fight.
-- The talent data of the other classes is from 25 October 2026. A later beta can change it.
+- The talent data of the other classes is from 25 October 2026. A later patch can change it.
 - The earlier balance analysis (calculator version 5, beta of 18 October) is in the history of the repository.

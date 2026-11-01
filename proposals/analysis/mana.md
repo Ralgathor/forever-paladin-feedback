@@ -1,6 +1,6 @@
 # Mana
 
-**Question.** How long does the mana of a Protection or a Retribution Paladin last, in the beta and with the proposals?
+**Question.** How long does the mana of a Protection or a Retribution Paladin last, in the live version and with the proposals?
 
 The unit is mana each sec (MPS). A positive value means that the mana increases. A negative value means that the mana decreases. For Holy mana, see Healing, part 4.
 
@@ -25,7 +25,7 @@ The unit is mana each sec (MPS). A positive value means that the mana increases.
 
 **Mana in and out (the boss hits the tank, no Consecration, no Blessing of Wisdom)**
 
-| Source | Fresh 60, beta | Fresh 60, Redoubt (C-P1) | Naxxramas, beta | Naxxramas, Redoubt (C-P1) |
+| Source | Fresh 60, live | Fresh 60, Redoubt (C-P1) | Naxxramas, live | Naxxramas, Redoubt (C-P1) |
 | --- | --- | --- | --- | --- |
 | Shield Specialization, blocks | 17.2 | 22.1 | 29.1 | 37.4 |
 | Shield Specialization, Holy Strike | 12.6 | 12.6 | 21.2 | 21.2 |
@@ -38,7 +38,7 @@ Consecration on cooldown adds 63.6 MPS of cost.
 
 **Result at each gear level (the boss hits the tank, no Consecration)**
 
-| Gear level (maximum mana) | Beta | Redoubt (C-P1) | Redoubt (C-P1), flatter gear | Beta, Blessing of Wisdom | Redoubt (C-P1), Blessing of Wisdom |
+| Gear level (maximum mana) | Live | Redoubt (C-P1) | Redoubt (C-P1), flatter gear | Live, Blessing of Wisdom | Redoubt (C-P1), Blessing of Wisdom |
 | --- | --- | --- | --- | --- | --- |
 | Fresh 60 (2,897) | +6.5 | +11.4 | +11.4 | +14.5 | +19.4 |
 | Pre-raid best (3,400) | +12.1 | +17.8 | +17.8 | +20.1 | +25.8 |
@@ -50,7 +50,7 @@ The tank receives more mana with better gear: 4% of a larger mana pool is a larg
 
 **Other cases: MPS, and the time until the mana is empty**
 
-| Case | Fresh 60, beta | Fresh 60, Redoubt (C-P1) | Naxxramas, beta | Naxxramas, Redoubt (C-P1) |
+| Case | Fresh 60, live | Fresh 60, Redoubt (C-P1) | Naxxramas, live | Naxxramas, Redoubt (C-P1) |
 | --- | --- | --- | --- | --- |
 | Consecration on cooldown | −57.0: 50 sec | −52.2: 55 sec | −34.6: 2 min 21 sec | −26.4: 3 min 5 sec |
 | Consecration on cooldown, Blessing of Wisdom | −49.0: 59 sec | −44.2: 1 min 5 sec | −26.6: 3 min 3 sec | −18.4: 4 min 26 sec |
@@ -60,7 +60,7 @@ The tank receives more mana with better gear: 4% of a larger mana pool is a larg
 
 **Value of each mana talent (the boss hits the tank, no Consecration)**
 
-| Case | Fresh 60, beta | Fresh 60, Redoubt (C-P1) | Naxxramas, beta | Naxxramas, Redoubt (C-P1) |
+| Case | Fresh 60, live | Fresh 60, Redoubt (C-P1) | Naxxramas, live | Naxxramas, Redoubt (C-P1) |
 | --- | --- | --- | --- | --- |
 | Tank build 0/38/13 | +6.5 | +11.4 | +28.9 | +37.2 |
 | No Shieldsworn | −4.8 | 0.0 | +8.9 | +17.1 |
@@ -73,17 +73,17 @@ The tank receives more mana with better gear: 4% of a larger mana pool is a larg
 
 **Sanctified Judgement by rank (C-R3).** 8.5 Judgements each min with Seal of Fury.
 
-| Rank | Beta | With C-R3 |
+| Rank | Live | With C-R3 |
 | --- | --- | --- |
 | 1/3 | 1.9 | 5.7 |
 | 2/3 | 7.6 | 11.3 |
 | 3/3 | 17.0 | 17.0 |
 
-In the beta, each rank increases the chance (33/66/100%) and the return (20/40/60%). With C-R3, the return occurs on each Judgement. Tank and Retribution builds take 3/3. Thus, C-R3 does not change the other tables.
+In the live version, each rank increases the chance (33/66/100%) and the return (20/40/60%). With C-R3, the return occurs on each Judgement. Tank and Retribution builds take 3/3. Thus, C-R3 does not change the other tables.
 
 **Lay on Hands at full mana (the boss hits the tank, Blessing of Wisdom)**
 
-| Gear level (mana income) | Beta: mana lost, time until it is back | Devoted Sacrifice (C-P11) 2/2: mana lost, time until it is back |
+| Gear level (mana income) | Live: mana lost, time until it is back | Devoted Sacrifice (C-P11) 2/2: mana lost, time until it is back |
 | --- | --- | --- |
 | Fresh 60 (+14.5 MPS) | 2,897: 3 min 19 sec | 1,449: 1 min 39 sec |
 | Naxxramas (+36.9 MPS) | 4,900: 2 min 12 sec | 2,450: 1 min 6 sec |
@@ -122,7 +122,7 @@ The wowsims default Retribution build (14/6/31) at fresh 60, with Blessing of Wi
 
 **Combat (wowsims, default tank gear, 3 min)**
 
-- The boss swings each 2.0 sec. The tank blocks 42.3% of the swings in the beta, 61.6% with Redoubt (C-P1).
+- The boss swings each 2.0 sec. The tank blocks 42.3% of the swings in the live version, 61.6% with Redoubt (C-P1).
 - Shield Specialization gives a return at most once each 3 sec from blocks. Thus, the returns each sec are block ÷ (2 × (1 + block)).
 - With Shieldsworn, 0.65 of each Holy Strike gives a return. The Holy Strike must land while Holy Shield is active.
 
@@ -144,7 +144,7 @@ The wowsims default Retribution build (14/6/31) at fresh 60, with Blessing of Wi
 | Seal of Fury rank 7 | 200 mana, each 30 sec |
 | Consecration rank 5 | 565 mana, each 8 sec |
 
-**wowsims check.** The model gives 5% more Shield Specialization returns than wowsims: 15.4 against 14.7 each min (beta), 17.9 against 17.0 (Redoubt). The model rules agree with the sim.
+**wowsims check.** The model gives 5% more Shield Specialization returns than wowsims: 15.4 against 14.7 each min (live), 17.9 against 17.0 (Redoubt). The model rules agree with the sim.
 
 ## 6. Method and limits
 
