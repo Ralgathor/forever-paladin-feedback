@@ -11,7 +11,7 @@ index f3d252f74..299b085e9 100644
  
  // The abilities a talent point buys.
 diff --git a/sim/paladin/talents_protection.go b/sim/paladin/talents_protection.go
-index ca780f1be..901231639 100644
+index ca25ab643..a878eaa05 100644
 --- a/sim/paladin/talents_protection.go
 +++ b/sim/paladin/talents_protection.go
 @@ -1,6 +1,8 @@
@@ -32,7 +32,7 @@ index ca780f1be..901231639 100644
  		return
  	}
  
-@@ -192,28 +194,54 @@ func (paladin *Paladin) applyReckoning() {
+@@ -196,28 +198,54 @@ func (paladin *Paladin) applyReckoning() {
  	rank := spellData.ReckoningTriggered.Highest()
  	blockChance := spellData.Reckoning.FractionAt(paladin.Talents.Reckoning)
  	critChance := blockChance * 2.5

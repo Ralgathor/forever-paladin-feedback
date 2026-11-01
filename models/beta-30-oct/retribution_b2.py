@@ -2,12 +2,12 @@
 Uses models/damage/damage_model.py of the repo (gear tiers, hit tables, Vengeance, Fury, Arms, Rogue).
 Run from the repo: python3 retribution_b2.py <repo>/models/damage
 
-Build (wowsims UnsealedWrathTalents 050250002-5-05233301101301351, 14/5/32):
+Build (wowsims default Retribution build of 1 November, 050250002-501-05233011201301351, 14/6/31):
 - Holy: Divine Strength 5/5 (+10% Strength), Reverence 2/2, Improved Seals 5/5 (+15% Seals and Judgements),
   Holy Conduit 2/2 (-40% Hammer of Wrath and Consecration cost).
-- Protection: Divine Intellect 5/5 (+10% Intellect). No Precision.
+- Protection: Divine Intellect 5/5 (+10% Intellect), Precision 1/1 (+1% hit).
 - Retribution: Benediction 5/5, Improved Judgement 2/2, Conviction 3/3 (+6% critical chance, all attacks and spells),
-  Sanctified Judgement 3/3, Vindication 3/3 (no Attack Power now), Seal of Command, Sacred Arbiter (+20% Holy Strike),
+  Sanctified Judgement 3/3, Unyielding Faith 1, Pursuit of Justice 2, Seal of Command, Sacred Arbiter (+20% Holy Strike),
   Two-Handed Weapon Specialization 3/3 (+6% Physical damage only), Vengeance 3/3, Champion of the Light 5/5
   (60% of Intellect as spell damage, Hammer of Wrath -1 sec cast time), Unsealed Wrath.
 
@@ -27,11 +27,11 @@ import sys
 sys.path.insert(0, sys.argv[1] if len(sys.argv) > 1 else ".")
 import damage_model as M
 PURE = {"Warrior": 929, "Rogue": 702, "Hunter": 1175, "Mage": 860, "Warlock": 879}   # run_tables.py (MythicSim)
-RET_SIM = 848                                                                          # wowsims test runs, 30 October
+RET_SIM = 906                                                                          # wowsims master of 1 November, full buffs, 2 min (the anchor of Analysis, Damage)
 from damage_model import (gear, auto_table, spec_table, vengeance, fury, arms, rogue, TIER_NAMES, CRIT_SPEC, DODGE,
                           EXECUTE, FIGHT, KINGS, MOTW, MIGHT, SHOUT, NORM_2H, SPEED_2H, DR, MISS)
 
-B2 = dict(ds=5, is_=5, di=5, ben=5, ij=2, conv=3, sanc=3, soc=1, sa=1, thws=3, veng=3, cotl=5)
+B2 = dict(ds=5, is_=5, di=5, prec=1, ben=5, ij=2, conv=3, sanc=3, soc=1, sa=1, thws=3, veng=3, cotl=5)
 BEN = 0.90
 SOR_COST, SOC_COST, JUD_COST, HS_COST, HOW_COST = 200, 210, 91, 20, 425 * 0.60
 REV_INCOME, WISDOM = 10.3 * 30 / 50, 8.0
@@ -42,10 +42,10 @@ def stats_b2(g, tal=B2):
     ap = st * 2 + g["ap_items"] + MIGHT + SHOUT
     intel = (g["int"] + MOTW) * KINGS * (1 + 0.02 * t("di"))
     crit = g["crit"] + (MOTW * KINGS) / 20 / 100 + 0.02 * t("conv")
-    return dict(ap=ap, sd=g["sd"] + 0.12 * t("cotl") * intel, int=intel, hit=min(g["hit"], MISS), crit=crit,
+    return dict(ap=ap, sd=g["sd"] + 0.12 * t("cotl") * intel, int=intel, hit=min(g["hit"] + 0.01 * t("prec"), MISS), crit=crit,
                 w=g["w2"], speed=SPEED_2H)
 
-def retribution_b2(g, c1=False, bz=0, n=1, tal=B2, fight=FIGHT, detail=False, seal_mult=1.0):
+def retribution_b2(g, c1=False, bz=0, n=1, tal=B2, fight=FIGHT, detail=False, seal_mult=1.0, crusader=False):
     """c1: Holy Strike triggers your Seal (C1). bz: Burning Zeal ranks (C-R4, +10% critical damage bonus each).
     n: swings with Seal of Righteousness before one swing with Seal of Command. n=None: Seal of Command only.
     seal_mult: Seal cost factor (0.80: a -20% Seal cost on Unsealed Wrath, as Twist of Light)."""
@@ -94,6 +94,13 @@ def retribution_b2(g, c1=False, bz=0, n=1, tal=B2, fight=FIGHT, detail=False, se
     src["Judgement"] = jud_rate * (178.2 + 0.429 * sd) * imp * V * f_jud
     src["Seal of Righteousness"] = sor_rate * (67.5 + 0.12 * sd) * imp * V * (1 + c_seal * m)
     src["Hammer of Wrath"] = how_rate * (498 + 0.429 * sd) * V * f_how
+    if crusader:     # Judgement of the Crusader: +161 Holy damage taken, x the spell coefficient of each hit
+        cr = M.CRUSADER
+        src["Seal of Command"] += soc_rate * 0.29 * cr * imp * V * (1 + c_seal * m)
+        src["Holy Strike"] += hs_rate * 0.5 * 0.429 * cr * sa * V * f_hs
+        src["Judgement"] += jud_rate * 0.429 * cr * imp * V * f_jud
+        src["Seal of Righteousness"] += sor_rate * 0.12 * cr * imp * V * (1 + c_seal * m)
+        src["Hammer of Wrath"] += how_rate * 0.429 * cr * V * f_how
     total = sum(src.values())
     # Mana each sec
     seal_cost = (SOR_COST + SOC_COST) / 2 if n else SOC_COST
@@ -151,7 +158,7 @@ if __name__ == "__main__":
         for tier in range(5):
             h = gear(tier)
             b, nb = fight_dps(h, fight)
-            p, npp = fight_dps(h, fight, c1=True, bz=2)
+            p, npp = fight_dps(h, fight, c1=True)
             row.append(f"{b:.0f} (n={nb}) -> {p:.0f} (n={npp}, {p / b - 1:+.1%})")
         print(f"  {fight} sec: " + " | ".join(row))
     print("## Seal cost -20% on Unsealed Wrath (option for W29), with Blessing of Wisdom: mana zero, best DPS in the fight")
@@ -162,7 +169,7 @@ if __name__ == "__main__":
     for fight in (120, 180, 300):
         a = fight_dps(g, fight)[0]; b = fight_dps(g, fight, seal_mult=0.80)[0]
         print(f"  {fight} sec, fresh level 60: {a:.0f} -> {b:.0f} ({b / a - 1:+.1%})")
-    print("## Against the pure average (wowsims 848 at fresh level 60, the increase of the model; Hunter, Mage and "
+    print(f"## Against the pure average (wowsims {RET_SIM} at fresh level 60, the increase of the model; Hunter, Mage and "
           "Warlock with the shape of Arms, x1.60 | x1.75 | x1.90 in Naxxramas)")
     gr = lambda f: [f(gear(t)) / f(gear(0)) for t in range(5)]
     Rb, F, A, C = gr(retribution_b2), gr(fury), gr(arms), gr(rogue)

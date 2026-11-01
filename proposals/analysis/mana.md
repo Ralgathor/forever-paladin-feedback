@@ -12,7 +12,7 @@ The script models/beta-30-oct/mana_tables_b2.py gives the Protection values. It 
 - **Consecration on cooldown empties the mana quickly.** With Blessing of Wisdom, the beta tank has mana for 59 sec at fresh level 60. In Naxxramas, it has mana for 3 min 3 sec. Use Consecration against groups of enemies, not all the time.
 - **A tank that is not hit loses mana at fresh level 60.** With Blessing of Wisdom, it loses 2.7 MPS. In Naxxramas, it receives +7.8 MPS.
 - **Holy has the least mana of the four healers.** Reverence keeps only 30% of the Spirit regeneration during casts (see Analysis, Healing, part 2).
-- **Retribution loses mana because of Seal changes.** The wowsims rotation changes the Seal after each swing: 50.7 MPS. With Blessing of Wisdom, the mana is empty after 1 min 22 sec. A plan with fewer Seal changes costs 1.7–2.6% damage, and the mana lasts 1.7–2.8 times longer.
+- **Retribution loses mana because of Seal changes.** The wowsims rotation changes the Seal after each swing: 51.2 MPS. With Blessing of Wisdom, the mana is empty after 1 min 21 sec. A plan with fewer Seal changes costs 1.8–2.6% damage, and the mana lasts 1.7–2.8 times longer.
 - **Sanctified Judgement (C-R3) does not change the total return.** At 3/3, it gives 17.0 MPS in the beta and with the proposal. It gives more at ranks 1 and 2.
 
 ## 1. Problems in the beta
@@ -142,24 +142,24 @@ The script models/beta-30-oct/mana_tables_b2.py gives the Protection values. It 
 
 ## 4. Retribution results
 
-The wowsims build with Unsealed Wrath (14/5/32) at fresh level 60. The wowsims rotation changes the Seal after each swing: Seal of Righteousness, then Seal of Command.
+The wowsims default Retribution build of 1 November (14/6/31) at fresh level 60. The wowsims rotation changes the Seal after each swing: Seal of Righteousness, then Seal of Command.
 
-- **Mana.** Pool 3,029. Cost 50.7 MPS (0.25 Seals each sec). Income 6.2 MPS, and 8 MPS from Blessing of Wisdom.
-- **Time until the mana is zero.** 1 min 22 sec with Blessing of Wisdom, 1 min 8 sec without.
+- **Mana.** Pool 3,029. Cost 51.2 MPS (0.25 Seals each sec). Income 6.2 MPS, and 8 MPS from Blessing of Wisdom.
+- **Time until the mana is zero.** 1 min 21 sec with Blessing of Wisdom, 1 min 7 sec without.
 
 **Seal plans** (n swings with Seal of Righteousness, then 1 with Seal of Command, Blessing of Wisdom)
 
 | Plan | DPS (model) | Mana used | Time until the mana is zero |
 | --- | --- | --- | --- |
-| Seal of Command only | 281 (−12%) | — | — |
-| n = 1 (wowsims rotation) | 320 | 50.7 | 1 min 22 sec |
-| n = 2 | 314 (−1.7%) | 35.2 | 2 min 23 sec |
-| n = 3 | 312 (−2.6%) | 27.5 | 3 min 47 sec |
-| n = 4 | 302 (−5.4%) | 22.9 | 5 min 48 sec |
-| n = 6 | 292 (−8.8%) | 17.6 | 14 min 54 sec |
+| Seal of Command only | 285 (−12%) | — | — |
+| n = 1 (wowsims rotation) | 324 | 51.2 | 1 min 21 sec |
+| n = 2 | 318 (−1.8%) | 35.6 | 2 min 21 sec |
+| n = 3 | 316 (−2.6%) | 27.8 | 3 min 43 sec |
+| n = 4 | 306 (−5.5%) | 23.1 | 5 min 40 sec |
+| n = 6 | 295 (−8.9%) | 17.7 | 14 min 17 sec |
 
 - The best plan changes with the fight length. In fights of 2 min, n = 2 is best before raids, and n = 1 from Molten Core. In fights of 3 min, n = 3 is best before raids, and n = 2 from Molten Core. In fights of 5 min, n = 3 is best at all tiers.
-- **Unsealed Wrath.** The talent has no Seal cost decrease (W29). With a −20% Seal cost, n = 1 lasts 1 min 51 sec and n = 3 lasts 5 min 48 sec. The best damage in the fight increases by 0.8–2.4% at fresh level 60. See Analysis, Damage.
+- **Unsealed Wrath.** The talent has no Seal cost decrease (W29). With a −20% Seal cost, n = 1 lasts 1 min 49 sec and n = 3 lasts 5 min 40 sec. The best damage in the fight increases by 0.7–2.6% at fresh level 60. See Analysis, Damage.
 - **Reverence.** Reverence is in Holy row 2. A Retribution Paladin needs 7 Holy points for Reverence 2/2. It gives 6.1 MPS at 130 Spirit.
 
 ## 5. What the results mean

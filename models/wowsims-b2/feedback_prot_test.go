@@ -62,6 +62,13 @@ func TestFeedbackRun(t *testing.T) {
 		}
 	}
 	fmt.Printf("PERTARGET %v\n", per)
+	if os.Getenv("FEEDBACK_MANA") != "" {
+		for _, r := range u.Resources {
+			if r.Type == proto.ResourceType_ResourceTypeMana {
+				fmt.Printf("MANA %v events=%.1f gain=%.2f\n", r.Id, float64(r.Events)/3000, r.ActualGain/dur)
+			}
+		}
+	}
 	var casts, hits, crits, miss, dodge, parry, block, crush float64
 	for _, a := range res.EncounterMetrics.Targets[0].Actions {
 		for _, tm := range a.Targets {
