@@ -201,7 +201,7 @@ def shaman(hp=HPG, tank=False, T=180):
     rt_dir = (841 + 0.2*hp)*1.1*k; rt_hot = (805 + 0.5*hp)*1.1*kh
     hw = (1371.5 + 3/3.5*hp)*1.1*1.25*k        # Purification +10%, Healing Way +25% (Forever text)
     ch_j = (506.5 + 2.5/3.5*hp)*1.1             # Chain Heal rank 3: 506.5 average (game files)
-    ch = 2431.2*ch_j/1089.0                     # 2.5 targets, 90% on a Riptide target (DoubleZug)
+    ch = 2431.2*ch_j/1089.0                     # 2.5 targets, 90% on a Riptide target (DoubleZug). In Forever, Chain Heal does not remove the Riptide (player report, 1 November 2026; wowsims removes it)
     n_hst = uses(T, 300, 0)
     hst = (11 + 0.02*hp)*(T/2)*5/n_hst*kh       # Healing Stream Totem: 5 min, 5 targets, each 2 sec
     sp = [Spell("Healing Stream Totem", hst, hst*0.5, 80, 1.5, maxn=lambda TT: n_hst, tank=0.2),
