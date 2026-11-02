@@ -28,7 +28,7 @@ The live version (4 November 2026) changes the three trees. These proposals are 
 | Holy Shield: damage increases with block value (C-P9) | The live tank has 102–118% of the Warrior threat at all gear levels. Shieldsworn doubles the Holy Shield damage |
 | Benediction to Protection row 1 (M-P1) | Divine Intellect now fills that place |
 | Twist of Light: the Echo lasts 10 sec (C-R2) | Twist of Light is removed. Unsealed Wrath stores up to 3 Seal copies for 15 sec: about one Seal change each 10 sec, the goal of the proposal |
-| Measure for Measure: dodges and parries reduce the Judgement cooldown (C-R5) | About +1% damage at all gear levels. With pre-raid gear, Retribution is at the hybrid target (about 96% of the pure average) |
+| Measure for Measure: dodges and parries reduce the Judgement cooldown (C-R5) | About +1% damage at all gear levels. With pre-raid gear, Retribution is at the hybrid target (about 96% of the pure average). Examined again on 2 November 2026: from the front, +3.6% damage and +4.5% tank threat. Hybrid tanks with it (0/25/26, 0/22/29) have about 10% less threat than PS1, because they lose Reckoning 5, Iron Creed 3 and Shieldsworn |
 | Conviction to Retribution row 1 (M-R2) | Conviction stays in row 2 with 3 ranks (6%). A healer now takes Benediction 5 and Conviction 3 |
 | Judgement Echo: a replaced Judgement stays for 40 sec (C2b) | It used the Echo of Twist of Light. Twist of Light is removed |
 | Blessing of Light uses no Blessing slot (C3a) | Blessing of Light is removed |
