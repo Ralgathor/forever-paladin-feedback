@@ -97,6 +97,22 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 - **With buffs, Seal of Righteousness is the best second Seal.** Lean buffs, 5 min: Righteousness 696, Fury 677 (−2.8%), Wisdom 621 (−11%).
 - **Without buffs, Seal of Wisdom is the best second Seal in long fights.** Its copies return mana, thus the Seal changes continue for all of the fight. In a 2 min fight, Wisdom and Righteousness are equal (348 and 345).
 
+**Plans without Seal of Command (wowsims, C1).** "Fury 1 + Righteousness 3" is 1 swing with Seal of Fury, then 3 swings with Seal of Righteousness.
+
+| Plan | Full buffs, 2 min | No buffs and no consumables, 5 min |
+| --- | --- | --- |
+| Righteousness 1 + Command 3 (wowsims rotation) | 956 DPS | 307 DPS |
+| Command only | 809 (−15%) | 292 (−5%) |
+| Fury 1 + Righteousness 3 | 818 (−14%) | 269 (−12%) |
+| Righteousness 1 + Fury 1 | 788 (−18%) | 253 (−18%) |
+| Righteousness 1 + Fury 3 | 775 (−19%) | 259 (−16%) |
+| Righteousness only | 749 (−22%) | 272 (−11%) |
+| Wisdom 1 + Righteousness 3 | 736 (−23%) | 311 (+1%) |
+| Fury only | 691 (−28%) | 239 (−22%) |
+
+- **Each plan without Seal of Command is 14% or more below the wowsims rotation with buffs.** Seal of Command copies are the main value of Unsealed Wrath.
+- **Two Seals give more than one Seal.** Fury 1 + Righteousness 3 is 9% above Righteousness only, because each Fury swing releases 3 Righteousness copies.
+
 - **Spell data.** Unsealed Wrath has a Seal cost effect at 0% (wowsims spell data, spell 1310735). A −20% value, as Twist of Light had, gives 0% in a 2 min fight and +2.6% in a 5 min fight (model). Plan 1 + 3 then lasts 5 min 40 sec.
 
 ## wowsims check

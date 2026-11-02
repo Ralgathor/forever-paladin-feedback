@@ -137,4 +137,15 @@ Light        2 min full 829.8 | 5 min none 240.4
 Justice      2 min full 826.9 | 5 min none 238.9
 Wisdom       2 min full 827.8 | 5 min full 832.9 | 5 min lean 620.6 | 2 min none 348.0 (oom 0.1 s) | 5 min none 350.3 (oom 3.6 s)
 Wisdom r3c3  2 min full 726.5 | 5 min lean 534.8 | 5 min none 302.3
-Command only and Righteousness only: the default APL casts the first Seal again only after a copy of the other, thus these runs are not valid.
+Command only and Righteousness only with fb_conly/fb_ronly are not valid: the default APL casts a Seal again only after a copy of the other. See the fb_only_X runs below.
+
+## 2 November 2026: plans without Seal of Command, C1 (fb_<A><n><B><m>: n swings with A, then m with B; fb_only_X: one Seal)
+R1C3 (default) 2 min full 956.2 | 5 min none 307.3
+only C         2 min full 808.8 | 5 min none 292.4
+F1R3           2 min full 817.8 | 5 min none 269.1
+R1F1           2 min full 787.7 | 5 min none 252.9
+R1F3           2 min full 775.1 | 5 min none 259.1
+only R         2 min full 749.4 | 5 min none 272.3
+W1R3           2 min full 736.0 | 5 min none 310.8
+W1F3           2 min full 664.6 | 5 min none 267.1
+only F         2 min full 691.4 | 5 min none 239.1
