@@ -84,6 +84,8 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 - **Result.** Plan 1 + 3 gives the most damage, with half the Seal casts of plan 1 + 1. A copy of Seal of Command has more value than a copy of Seal of Righteousness. Thus, plan 3 + 1 is the weakest plan with copies.
 - **Mana.** At fresh level 60, plan 1 + 3 lasts for a 3 min fight. In a 5 min fight, plan 3 + 3 is the best: −2.5% (model). From Molten Core, plan 1 + 3 is the best in a 5 min fight. The mana costs 2.0% in Molten Core, 0.7% in Blackwing Lair and 0% in Naxxramas.
 - **The pure average table above uses plan 1 + 3 and no mana limit.** The start value (906) comes from wowsims with the same plan.
+- **Spell data.** Unsealed Wrath has a Seal cost effect at 0% (wowsims spell data, spell 1310735). A −20% value, as Twist of Light had, gives 0% in a 2 min fight and +2.6% in a 5 min fight (model). Plan 1 + 3 then lasts 5 min 40 sec.
+
 **Other Seal pairs (wowsims, C1, plan 1 + 3).** Seal of Command with a second Seal in place of Seal of Righteousness.
 
 | Second Seal | Full buffs, 2 min | No buffs and no consumables, 5 min |
@@ -112,8 +114,6 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 
 - **Each plan without Seal of Command is 14% or more below the wowsims rotation with buffs.** Seal of Command copies are the main value of Unsealed Wrath.
 - **Two Seals give more than one Seal.** Fury 1 + Righteousness 3 is 9% above Righteousness only, because each Fury swing releases 3 Righteousness copies.
-
-- **Spell data.** Unsealed Wrath has a Seal cost effect at 0% (wowsims spell data, spell 1310735). A −20% value, as Twist of Light had, gives 0% in a 2 min fight and +2.6% in a 5 min fight (model). Plan 1 + 3 then lasts 5 min 40 sec.
 
 ## wowsims check
 
