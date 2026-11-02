@@ -7,18 +7,18 @@ This file gives the best damage builds on one target. It uses the live trees and
 | Trees | Case | Build | Points | Code | DPS |
 | --- | --- | --- | --- | --- | --- |
 | Live | Raid | RB1 | 14/6/31 | [`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351) | 910 |
-| Proposed | Raid | RB1 | 14/6/31 | [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 960 |
+| Proposed | Raid | RB1 | 14/6/31 | [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 910 |
 | Live | Fresh 60 | RB1 | 14/6/31 | [`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351) | 303 |
-| Proposed | Fresh 60 | RB1 | 14/6/31 | [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 337 |
+| Proposed | Fresh 60 | RB1 | 14/6/31 | [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 315 |
 
 - **RB1 is the best build in all four cases.** It is the wowsims default build of 1 November and RB1 of Analysis, Builds. The talent search found raid builds with at most +0.6%. These builds are 2–5% worse at fresh 60 (part 2).
 - **"Raid"** is full raid buffs and debuffs, with consumables. **"Fresh 60"** is no buffs, no debuffs and no consumables.
-- **Proposed against live.** The Holy Strike Seal trigger (C1) gives +5.5% in a raid and +6.8% at fresh 60. Reverence 50% (C-H1) adds +4.0% at fresh 60 (more mana), and 0% in a raid. Together: +5.5% in a raid and +11.2% at fresh 60.
+- **Proposed against live.** Only Reverence 50% (C-H1) changes Retribution damage: +4.1% at fresh 60 (more mana), and 0% in a raid.
 - **Stat weights.** In a raid, Expertise rating is the best stat for each point (2.1 Strength). Crit rating and Haste rating are about 1 Strength. At fresh 60, Haste rating and Intellect have more value (part 3).
 
 ## 1. Method
 
-- **Sim.** wowsims Forever, master of 1 November 2026 (commit 895cd67f9), with `models/wowsims-b2/talents.patch`. The proposed trees use the flags C1 and REV50 (Reverence 25/50%, since 2 November). The other kept proposals do not change Retribution damage. The talent search ran before REV50, with Reverence 30%.
+- **Sim.** wowsims Forever, master of 1 November 2026 (commit 895cd67f9), with `models/wowsims-b2/talents.patch`. The proposed trees use the flag REV50 (Reverence 25/50%). The other kept proposals do not change Retribution damage. The talent search ran with earlier flags: Reverence 30% and the Holy Strike Seal trigger (C1, withdrawn on 2 November 2026). The builds and stat weights then ran again with REV50 only.
 - **Fight.** 3 min, one level 63 boss, 3,000 iterations, the same random seed for all runs.
 - **Gear and rotation.** The default Retribution gear set and the default rotation of wowsims Forever. This folder has no gear search.
 - **Talent search.** A hill climb (`models/wowsims-b2/search.py`). Each step tests all moves of 1 point into a talent with damage value, at 1,000 iterations. It keeps the best move. A round with moves of 2 points then tests the best moves at 250 iterations, and the 6 best again at 2,000. The best builds then run at 3,000 iterations. The logs are `search_ret-*.log`.
@@ -39,8 +39,8 @@ This file gives the best damage builds on one target. It uses the live trees and
 | Build | Trees | Code | Raid | Fresh 60 | Change against RB1 |
 | --- | --- | --- | --- | --- | --- |
 | RS1, 12/8/31 | Live | [`b2050150001-503-15233011101301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050150001-503-15233011101301351) | 916 (+0.6%) | 288 (−5.0%) | Reverence 1, Holy Conduit 1, Pursuit of Justice 1, Precision 3, Deflection 1 |
-| RS2, 13/7/31 | Proposed | [`v6p050150002-502-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050150002-502-05233011201301351) | 963 (+0.3%) | — | Reverence 1, Precision 2 |
-| RS3, 12/8/31 | Proposed | [`v6p050050002-503-15233011101301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050050002-503-15233011101301351) | — | 317 (−1.9%) | Reverence 0, Pursuit of Justice 1, Precision 3, Deflection 1 |
+| RS2, 13/7/31 | Proposed | [`v6p050150002-502-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050150002-502-05233011201301351) | 913 (+0.2%) | — | Reverence 1, Precision 2 |
+| RS3, 12/8/31 | Proposed | [`v6p050050002-503-15233011101301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050050002-503-15233011101301351) | — | 296 (−6.2%) | Reverence 0, Pursuit of Justice 1, Precision 3, Deflection 1 |
 
 - **Precision is the only gain in a raid.** The raid buffs fill the mana. Thus, the search moves Reverence points to Precision 3.
 - **At fresh 60, Reverence has value.** With no buffs, RB1 has no mana for 69 sec of the 3 min fight. RS1 has no mana for 88 sec.
@@ -53,19 +53,19 @@ Each stat + a small amount (20 Strength, Agility or Intellect, 40 spell damage o
 
 | Stat | Live, raid | Proposed, raid | Live, fresh 60 |
 | --- | --- | --- | --- |
-| DPS for 1 Strength | 0.50 | 0.53 | 0.23 |
+| DPS for 1 Strength | 0.50 | 0.50 | 0.23 |
 | Strength | 1.00 | 1.00 | 1.00 |
 | Agility | 0.73 | 0.74 | 0.64 |
-| Intellect | 0.61 | 0.60 | 1.49 |
-| Spell damage | 0.80 | 0.79 | 0.82 |
-| Attack Power | 0.41 | 0.42 | 0.44 |
+| Intellect | 0.61 | 0.61 | 1.49 |
+| Spell damage | 0.80 | 0.80 | 0.82 |
+| Attack Power | 0.41 | 0.41 | 0.44 |
 | Hit rating | 0.48 | 0.44 | 0.22 |
 | Crit rating | 1.03 | 1.03 | 0.93 |
-| Haste rating | 1.13 | 0.91 | 2.22 |
-| Expertise rating | 2.06 | 2.15 | 1.02 |
+| Haste rating | 1.13 | 1.13 | 2.22 |
+| Expertise rating | 2.06 | 2.06 | 1.02 |
 
 - **Expertise rating** has the most value for each point in a raid: 2.1 Strength.
-- **Spell damage is 0.8 Strength.** Seals, Judgements, Holy Strike and Consecration use spell damage. The C1 trigger adds more Seal damage.
+- **Spell damage is 0.8 Strength.** Seals, Judgements, Holy Strike and Consecration use spell damage.
 - **Hit rating has a low value with the default gear.** Each point gives less than half of 1 Strength.
 - **At fresh 60, mana limits the damage.** Intellect is 1.5 Strength and Haste rating is 2.2 Strength.
 

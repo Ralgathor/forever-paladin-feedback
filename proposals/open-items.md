@@ -5,7 +5,7 @@ This tab gives the problems to report, the risks to check in tests and the open 
 ## Problems to report to Blizzard
 
 - **Judgement of Fury: the damage hits before the taunt.** The taunt must apply first. Then the Paladin has a small threat lead, not only equal threat.
-- **Holy Strike triggers only some Seals.** It triggers Seal of Light, Justice and Wisdom. It does not trigger Seal of Fury, Righteousness or Command. Holy Strike Seal trigger (C1) makes this consistent for all specs.
+- **Holy Strike triggers only some Seals.** It triggers Seal of Light, Justice and Wisdom. It does not trigger Seal of Fury, Righteousness or Command. Blizzard can confirm if this is a bug or the design.
 
 ## Watch list
 
@@ -16,12 +16,12 @@ These are risks to check in tests. None of them needs a change now. A removed nu
 | W1 | Pursuit of Justice (+15% speed at 10 Retribution points) is better than the boot enchant | Decrease it to 10% if all Paladins take it |
 | W2 | Sacred Duty gives Divine Shield −60 sec and Forbearance −10 sec at 5 Protection points (row 2 in the live trees). This is a PvP dip | Decrease it to −30 sec if all players take it |
 | W5 | Holy is the main dip for Retribution (Seal damage, Holy Conduit). Tanks dip Retribution for Benediction, Conviction and Sanctified Judgement (row 2) | Monitor: each tree still gives the other specs a reason for a dip |
-| W6 | Reckoning: with Shieldsworn, Holy Strike comes each 6 sec. A Protection or hybrid build can store 4 extra attacks and use them in one Hammer of Justice stun. Blocks give a maximum of 1 charge each 1.5 sec | Modeled on the live version (see PvP burst check): the proposals add 3–5% burst, all from Holy Strike Seal trigger (C1). Monitor in the live version |
+| W6 | Reckoning: with Shieldsworn, Holy Strike comes each 6 sec. A Protection or hybrid build can store 4 extra attacks and use them in one Hammer of Justice stun. Blocks give a maximum of 1 charge each 1.5 sec | Modeled on the live version (see PvP burst check): the proposals do not change the burst. Monitor in the live version |
 | W7 | Iron Creed with Shieldsworn is always active: −6%. With Improved Righteous Fury 3/3, a tank has about −14.5% damage taken. Defensive Stance (Warrior) gives −10% | Monitor in raids and PvP. If it is too strong, decrease Improved Righteous Fury |
 | W9 | Templar's Bulwark (an absorb of 100% of health, three times Last Stand) is in row 3 (10 points). This is a strong PvP dip | Monitor |
 | W13 | Light's Vigil: the Illumination text names it. Illumination can return mana for each critical heal of Light's Vigil (up to 5 for each cast) | Keep Illumination at 50% |
 | W14 | The design goal of Holy is the best single-target healer. In the live version, the Paladin is 3–10% above the Druid on one tank, with a 225% critical heal (see Beta test results). With Reverence 50% (C-H1), the Paladin is 12–17% above the Druid, and 14–19% at 900 healing power. In raids, the Paladin is 18–26% below the Druid. This is accepted: raid healing is not the goal of Holy | Compare the healing on one tank in live tests. A lead of more than 20% is too strong |
-| W15 | Retribution in the live version has about 100% of the pure average at fresh level 60, and about 96% in Naxxramas (wowsims of 1 November and model). The hybrid target is 95%. With Holy Strike Seal trigger (C1), it has 105% → 101% | Compare Retribution with the pure average at each gear tier. If Retribution is above the pure average at the raid release, decrease the Sacred Arbiter bonus first (+20% → +10%): C1 then gives 104% → 100% |
+| W15 | Retribution in the live version has about 100% of the pure average at fresh level 60, and about 96% in Naxxramas (wowsims of 1 November and model). The hybrid target is 95% | Compare Retribution with the pure average at each gear tier. If Retribution is above the pure average at the raid release, decrease the Sacred Arbiter bonus first (+20% → +10%): −0.7% damage in wowsims |
 | W16 | Consecration on cooldown gives Retribution more damage than its normal rotation. Consecrated Ground is in Holy row 5 | Mana is the balance. The 95% target is for the normal rotation, without Consecration |
 | W17 | Holy Shock with Iron Creed: Righteous Fury stays active in PvP. With 25 Protection points, the build has Iron Creed, Templar's Bulwark, Holy Shield and Reckoning | Monitor in PvP with W7 and W9 |
 | W18 | Lay on Hands with Devoted Sacrifice (C-P11) on yourself gives up to +550 mana below 1,100 mana (live: below 550). Paladins can use it for mana one time for each boss | If all Holy Paladins use it for mana, Lay on Hands does not restore mana when you are the target |
@@ -48,7 +48,6 @@ These are risks to check in tests. None of them needs a change now. A removed nu
 - [ ] Judgement of Fury: the game files give a third effect of 1,691 + 18% of spell power. Is this bonus threat, the taunt or a server value? If it is bonus threat, it adds about 200 TPS to the Paladin. The model does not use it.
 - [ ] How much block value do Forever shields and tank gear give at each tier? Pre-raid gear gives 108 (Wowhead Forever values). The raid values of the model (140, 180 and 230) are estimates. Forever has no raid shields yet.
 - [ ] What is the healing power coefficient of the Light's Vigil party heal? Do Purification and Healing Way (Shaman) add or multiply?
-- [ ] Holy Strike Seal trigger (C1): what sets the Seal of Command chance? Is it the weapon speed (3.6 sec) or the normalized speed (3.3 sec)?
 - [ ] Does MythicSim include Judgement of the Crusader in its raid debuffs? It changes the Retribution comparison by about 10% (see Analysis, Damage, part 4).
 - [ ] What is the Slam cooldown in Forever? The Arms check in Analysis, Damage, uses one Slam each 3 sec at most.
 - [ ] Does Righteous Fury increase the threat of heals in Forever? The text says "Holy attacks". If yes, a tank can use Flash of Light or Holy Light for threat (see Analysis, Builds).

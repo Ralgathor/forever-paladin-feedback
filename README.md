@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 12 changes and 1 move for the live trees. 4 changes are baseline spell changes (C1, C2, C4, C5). Shoulder the Burden (C-P5) is a new baseline spell. 7 changes are talent changes (C-H1, C-P1, C-P7, C-P11, C-P13, C-P14, C-R3). Devoted Sacrifice (C-P11) and Reach of Law (C-P7) are new talents. One move: Stoicism to row 4, column 4 (M-P2).
+- **Proposals:** 11 changes and 1 move for the live trees. 3 changes are baseline spell changes (C2, C4, C5). Shoulder the Burden (C-P5) is a new baseline spell. 7 changes are talent changes (C-H1, C-P1, C-P7, C-P11, C-P13, C-P14, C-R3). Devoted Sacrifice (C-P11) and Reach of Law (C-P7) are new talents. One move: Stoicism to row 4, column 4 (M-P2).
 - **Adopted proposals:** the live version of 4 November 2026 adopts 6 earlier proposals (C3, the C-H1 move, the C-P5 removal, C-R1, M-H5 and M-R1).
 - **Talent calculator:** you can try the proposals and compare them with the live trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
@@ -13,7 +13,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## IDs
 
-- **C1 to C5 (spell change):** the proposal changes a baseline spell, not a talent. Shoulder the Burden (C-P5) is also a new baseline spell.
+- **C2 to C5 (spell change):** the proposal changes a baseline spell, not a talent. Shoulder the Burden (C-P5) is also a new baseline spell.
 - **C-H, C-P and C-R (talent change):** the proposal changes what a talent does, adds a talent or removes a talent. The letter after C gives the tree: H (Holy), P (Protection), R (Retribution).
 - **M-H, M-P and M-R (move):** the proposal moves a talent to a different row. The talent text does not change.
 - **Alternatives.** C2a is the alternative to C2. C-P11a is the alternative to the Lay on Hands part of C-P11.
@@ -24,7 +24,6 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 **Spell changes**
 
-- **C1 Holy Strike:** Holy Strike triggers your active Seal the same as a melee attack, for all specs (live: only Seal of Light, Justice and Wisdom).
 - **C2 Judgement of the Crusader:** a personal debuff. It does not count against the one-Judgement limit. C2a is the alternative.
 - **C4 Hand of Sacrifice:** up to 825 damage moves to you (live: Blessing of Sacrifice, 55 damage for each hit, no cooldown). Lasts 30 sec, 15 sec cooldown.
 - **C5 Hands:** Blessing of Sacrifice, Protection and Freedom become Hand of Sacrifice, Protection and Freedom. They use no Blessing slot. Each Paladin can have one Hand on a target.

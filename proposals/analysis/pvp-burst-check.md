@@ -6,8 +6,8 @@
 
 ## Short answer
 
-- **The proposals add only 3–5% to the burst.** All of it comes from the Holy Strike Seal trigger (C1): Holy Strike now has a Seal of Command chance.
-- **The largest burst does not change.** It is the "Reckoning bomb" with a two-hand weapon: about 3,630 damage in the live version, 3,740 with the proposals.
+- **The kept proposals do not change the burst.** The Holy Strike Seal trigger (C1) added 3–5%, and it was withdrawn on 2 November 2026.
+- **The largest burst** is the "Reckoning bomb" with a two-hand weapon: about 3,630 damage in the live version.
 - **Reckoning (C-P12) was withdrawn on 2 November 2026.** It did not change the two-hand bomb. With a shield, it gave the 4 charges 1–3 sec sooner (part 3).
 - **No change to the proposals is necessary.** Watch the bomb in the live version (W6, W26).
 
@@ -26,11 +26,12 @@
 | Case | Reckoning bomb, no stored attacks | Reckoning bomb, 4 stored attacks | Unsealed Wrath |
 | --- | --- | --- | --- |
 | Live | 2,070 | 3,630 | 2,400 |
-| Proposed (C1) | 2,180 (+5%) | 3,740 (+3%) | 2,510 (+5%) |
+| Proposed | 2,070 | 3,630 | 2,400 |
+| With C1 (withdrawn) | 2,180 (+5%) | 3,740 (+3%) | 2,510 (+5%) |
 
 - **Each extra attack** does about 390 damage. 4 stored attacks add about 1,560.
-- **C1** gives Holy Strike a Seal of Command chance: about +110 damage.
-- **Unsealed Wrath** stores 3 copies of Seal of Command. A Seal change releases them: about +330. C1 does not change this, because Unsealed Wrath stores copies only from auto attacks.
+- **C1 (withdrawn)** gave Holy Strike a Seal of Command chance: about +110 damage.
+- **Unsealed Wrath** stores 3 copies of Seal of Command. A Seal change releases them: about +330. C1 did not change this, because Unsealed Wrath stores copies only from auto attacks.
 
 ## 3. How fast Reckoning stores 4 attacks
 

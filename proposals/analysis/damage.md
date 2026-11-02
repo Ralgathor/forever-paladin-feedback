@@ -10,8 +10,8 @@ All values are DPS on one level 63 boss. The start values come from wowsims (mas
 
 - **The live Retribution is near the target.** It does 906 DPS in wowsims: 100% of the pure average at fresh 60. In Naxxramas, it is 96% (model), 1 point above the target.
 - **The wowsims update of 1 November** gives Retribution +7% (848 → 906): a new rotation, the Unsealed Wrath fix and new weapon oils.
-- **The Holy Strike Seal trigger (C1) gives +5.3–5.7%.** With C1, Retribution is 105% of the pure average at fresh 60 and 101% in Naxxramas.
-- **C1 puts Retribution 6–10 points above the target.** Keep it for the Seal rule and the tank threat. If C1 is too strong, decrease Sacred Arbiter to +10% (W15).
+- **The Holy Strike Seal trigger (C1) gave +5.3–5.7%.** With C1, Retribution had 105% of the pure average at fresh 60 and 101% in Naxxramas.
+- **C1 is withdrawn (2 November 2026).** It put Retribution 6–10 points above the target, and Sacred Arbiter +10% removed only 0.7 points. The C1 rows below stay for reference.
 - **Retribution increases less with gear than Fury:** ×1.65 against ×1.73 to Naxxramas. Fixed base values in the Paladin spells cause this. No talent change can fix it.
 - **Judgement of the Crusader** adds +9.0% at fresh 60 and +6.0% in Naxxramas.
 
@@ -19,32 +19,32 @@ All values are DPS on one level 63 boss. The start values come from wowsims (mas
 
 MythicSim values (22 October): Warrior 929, Rogue 702, Hunter 1,175, Mage 860, Warlock 879. The pure average is 909. Without the Rogue, it is 961.
 
-- **At fresh 60,** the live Retribution (906) is 100% of the pure average and 98% of Fury. With C1 (957), it is 105% and 103%.
-- **Without the Rogue,** the live version is 94% and C1 is 100%.
+- **At fresh 60,** the live Retribution (906) is 100% of the pure average and 98% of Fury. With C1 (957, withdrawn), it was 105% and 103%.
+- **Without the Rogue,** the live version is 94%. C1 gave 100%.
 
 The increase of Hunter, Mage and Warlock with gear is not known. The table uses ×1.75 to Naxxramas. The method part gives ×1.60 and ×1.90.
 
 | Build | Fresh 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
 | --- | --- | --- | --- | --- | --- |
 | **Live** | **100%** | **99%** | **98%** | **96%** | **96%** |
-| **C1** | **105%** | **104%** | **104%** | **102%** | **101%** |
-| C1, Sacred Arbiter +10% | 104% | 103% | 103% | 101% | 100% |
-| C1, Sacred Arbiter +0% | 103% | 102% | 102% | 100% | 99% |
+| C1 (withdrawn) | 105% | 104% | 104% | 102% | 101% |
+| C1 (withdrawn), Sacred Arbiter +10% | 104% | 103% | 103% | 101% | 100% |
+| C1 (withdrawn), Sacred Arbiter +0% | 103% | 102% | 102% | 100% | 99% |
 | Live, no more spell damage on plate after fresh 60 | 100% | 97% | 94% | 91% | 88% |
-| C1, no more spell damage on plate after fresh 60 | 105% | 102% | 100% | 96% | 93% |
+| C1 (withdrawn), no more spell damage on plate after fresh 60 | 105% | 102% | 100% | 96% | 93% |
 
 - **The live version reaches the target at all gear levels.** In Naxxramas, it is 1 point above.
-- **C1 is 6–10 points above the target.** At fresh 60, Retribution with C1 is 3% above Fury.
-- **Spell damage on plate gear is important.** Without new spell damage on plate items, the live Paladin reaches only 88% in Naxxramas. C1 keeps 93%.
-- **Why keep C1.** It gives one Seal rule for all melee attacks. It also gives the tank threat (see Threat). Retribution reaches the target without it, thus C1 is not a damage need.
-- **The balance lever is Sacred Arbiter (W15).** If raid logs confirm the wowsims level, decrease it to +10%. C1 then gives +4.5%. At +0%, it gives +3.3%.
+- **C1 was 6–10 points above the target.** At fresh 60, Retribution with C1 was 3% above Fury.
+- **Spell damage on plate gear is important.** Without new spell damage on plate items, the live Paladin reaches only 88% in Naxxramas.
+- **Why C1 is withdrawn.** It gave one Seal rule for all melee attacks and +2.6% tank threat. Retribution reaches the target without it, and the tank threat is already above the Warrior (see Threat).
+- **The balance lever is Sacred Arbiter (W15).** If raid logs confirm the wowsims level, decrease it to +10%: −0.7% damage in wowsims. With C1, the gain fell only from +5.5% to +4.5%.
 - **Check again later.** The MythicSim values are from 22 October. The wowsims update can also change the other classes.
 
 ## 2. Where the damage comes from
 
 Fresh 60, raid buffs, 2 min fight, wowsims rotation (plan 1 + 3, model).
 
-| Source | Live | Share | With C1 | Share |
+| Source | Live | Share | With C1 (withdrawn) | Share |
 | --- | --- | --- | --- | --- |
 | Auto attacks | 115 | 35% | 116 | 33% |
 | Seal of Command | 81 | 25% | 96 | 27% |
@@ -55,8 +55,7 @@ Fresh 60, raid buffs, 2 min fight, wowsims rotation (plan 1 + 3, model).
 | **Total** | **332** | | **351 (+5.6%)** | |
 
 - **About 65% of the damage is Holy damage** (67% with C1). Boss armor does not decrease it.
-- **C1 lets Holy Strike trigger the active Seal.** This gives about one extra Seal hit each 10 sec.
-- **C1 costs no mana.**
+- **C1 let Holy Strike trigger the active Seal.** This gave about one extra Seal hit each 10 sec, with no mana cost.
 
 ## 3. Increase with gear
 
@@ -72,7 +71,7 @@ The five gear levels of Threat, part 2. Each level gives 17.5% more stats from g
 
 **Retribution as a % of Fury**
 
-| Gear level | Live | Live, no more spell damage on plate | Live, flatter gear | C1 | C1, no more spell damage on plate | C1, flatter gear |
+| Gear level | Live | Live, no more spell damage on plate | Live, flatter gear | C1 (withdrawn) | C1 (withdrawn), no more spell damage on plate | C1 (withdrawn), flatter gear |
 | --- | --- | --- | --- | --- | --- | --- |
 | Fresh 60 | 98% | 98% | 98% | 103% | 103% | 103% |
 | Pre-raid best | 96% | 94% | 96% | 101% | 99% | 101% |
@@ -106,7 +105,7 @@ Judgement of the Crusader adds 161 Holy damage taken. Each hit receives 161 × i
 | Build | Fresh 60 | Naxxramas |
 | --- | --- | --- |
 | Live | +30 (+9.0%) | +33 (+6.0%) |
-| C1 | +32 (+9.2%) | +35 (+6.1%) |
+| C1 (withdrawn) | +32 (+9.2%) | +35 (+6.1%) |
 
 - **The +161 does not increase with gear.** Thus, its percentage decreases in raids.
 - **Personal Judgement of the Crusader (C2)** lets each Retribution Paladin keep its own Crusader.
@@ -115,13 +114,13 @@ Judgement of the Crusader adds 161 Holy damage taken. Each hit receives 161 × i
 
 The wowsims rotation uses plan 1 + 3: 1 swing with Seal of Righteousness, then 3 swings with Seal of Command. The first swing with the new Seal releases the stored copies. The copies of Seal of Command ignore the 1 sec cooldown of the proc. The mana pool is 3,029 (fresh 60, Blessing of Wisdom).
 
-| Seal plan | wowsims: C1, full buffs, 2 min | Model: damage | Model: mana each sec | Model: mana empty after |
+| Seal plan | wowsims: live, full buffs, 2 min | Model: damage | Model: mana each sec | Model: mana empty after |
 | --- | --- | --- | --- | --- |
-| 1 + 3 (wowsims rotation) | 956 DPS | 100% | 27.8 | 3 min 43 sec |
-| 1 + 2 | −0.7% | 99.2% | 35.6 | 2 min 21 sec |
-| 2 + 2 | −2.4% | 97.5% | 27.8 | 3 min 43 sec |
-| 1 + 1 (a Seal change after each swing) | −3.4% | 97.5% | 51.2 | 1 min 21 sec |
-| 3 + 1 | −6.4% | 94.9% | 27.8 | 3 min 43 sec |
+| 1 + 3 (wowsims rotation) | 906 DPS | 100% | 27.8 | 3 min 43 sec |
+| 1 + 2 | −0.4% | 99.2% | 35.6 | 2 min 21 sec |
+| 2 + 2 | −1.8% | 97.5% | 27.8 | 3 min 43 sec |
+| 1 + 1 (a Seal change after each swing) | −3.0% | 97.5% | 51.2 | 1 min 21 sec |
+| 3 + 1 | −5.9% | 94.9% | 27.8 | 3 min 43 sec |
 | Seal of Command only | — | 85.7% | 10.2 | No limit |
 
 - **Plan 1 + 3 is the best plan.** A copy of Seal of Command has more value than a copy of Seal of Righteousness.
@@ -154,21 +153,22 @@ Default Retribution gear, rotation and consumables. One level 63 boss, 3,000 ite
 | Case | 2 min | 5 min |
 | --- | --- | --- |
 | Live, full buffs | 906 | 914 |
-| C1, full buffs | 956 (+5.6%) | 962 (+5.3%) |
+| C1 (withdrawn), full buffs | 956 (+5.6%) | 962 (+5.3%) |
 | Live, lean buffs | 653 | 660 |
-| C1, lean buffs | 690 (+5.6%) | 696 (+5.5%) |
+| C1 (withdrawn), lean buffs | 690 (+5.6%) | 696 (+5.5%) |
 | Fury Warrior, pre-raid gear | 826 | 821 |
 | Arms Warrior, pre-raid gear | 729 | 723 |
 
-- **C1:** +5.3–5.6% in wowsims, +5.6–5.7% in the model. They agree.
+- **C1 (withdrawn):** +5.3–5.6% in wowsims, +5.6–5.7% in the model. They agree.
 - **No run is out of mana.**
 - **The wowsims update of 1 November,** step by step: 836 → 852 (Unsealed Wrath fix) → 889 (new rotation and presets) → 901 (new weapon oils), in the wowsims test suite.
 - **wowsims Fury.** The live Retribution is 110% of the wowsims Fury, but the two specs have different gear. Thus, this tab compares with the MythicSim Fury.
 
 ## 8. Options that were not kept
 
-- **Burning Zeal (C-R4).** +0.8% at fresh 60 to +1.4% in Naxxramas. Withdrawn: with C1, Retribution is already above the target.
+- **Burning Zeal (C-R4).** +0.8% at fresh 60 to +1.4% in Naxxramas. Withdrawn: the live Retribution is already at the target.
 - **Measure for Measure (C-R5).** About +1% at all gear levels. Withdrawn.
+- **Holy Strike Seal trigger (C1).** +5.3–5.7% at all gear levels. Withdrawn on 2 November 2026: Retribution is already at the target.
 - **Twist of Light (C-R2).** The live version removes it. Unsealed Wrath takes its place.
 
 ## 9. Inputs of the model
@@ -200,7 +200,7 @@ Default Retribution gear, rotation and consumables. One level 63 boss, 3,000 ite
 - Improved Seals ×1.15 (Seals and Judgements). Two-Handed Weapon Specialization ×1.06 (physical only). Conviction +6% critical hit. Vengeance: average +5.4%.
 - Not in the model: Exorcism, Consecration, Retribution Aura.
 
-**Other gear growth cases (live / C1, Naxxramas):** ×1.60 gives 101% / 107%. ×1.90 gives 91% / 96%.
+**Other gear growth cases (live / C1 withdrawn, Naxxramas):** ×1.60 gives 101% / 107%. ×1.90 gives 91% / 96%.
 
 ## 10. Method and limits
 

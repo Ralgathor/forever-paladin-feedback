@@ -1,6 +1,6 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 12 changes and 1 move. The proposals use the live trees of 4 November 2026. The live version adopts 6 earlier proposals, and makes 20 others unnecessary. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same game build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 11 changes and 1 move. The proposals use the live trees of 4 November 2026. The live version adopts 6 earlier proposals, and makes 20 others unnecessary. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same game build as a model.
 
 **Contents**
 
@@ -11,7 +11,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 12 chan
 
 ## How to read this document
 
-- **C1 to C5 (spell change).** These change baseline spells, not talents. Shoulder the Burden (C-P5) is also a new baseline spell.
+- **C2 to C5 (spell change).** These change baseline spells, not talents. Shoulder the Burden (C-P5) is also a new baseline spell.
 - **C-H, C-P and C-R (talent change).** These change what a talent does, add a talent or remove a talent. The letter after C gives the tree: H (Holy), P (Protection), R (Retribution). A change can also move the talent. The text then gives the new row.
 - **M-H, M-P and M-R (move).** These move a talent to a different row. The talent text does not change. No move proposal is open now.
 - **New IDs.** A new proposal takes the next free number of its series. A new proposal never takes the number of a withdrawn proposal.
@@ -29,7 +29,6 @@ This document gives talent proposals for the WoW Forever Paladin. It has 12 chan
 
 | ID | Talent | Tree and row | Live | Proposed |
 | --- | --- | --- | --- | --- |
-| C1 | Holy Strike | Baseline spell | Triggers only Seal of Light, Justice and Wisdom | Triggers your active Seal the same as a melee attack |
 | C2 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
 | C4 | Hand of Sacrifice | Baseline spell | Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown | Up to 825 damage moves to you. Lasts 30 sec, 15 sec cooldown |
 | C5 | Hands: Sacrifice, Protection and Freedom | Baseline spells | Blessings of Sacrifice, Protection and Freedom use a Blessing slot | The spells take the name Hand of. No Blessing slot. One Hand from each Paladin on a target |
