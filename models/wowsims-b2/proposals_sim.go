@@ -48,6 +48,25 @@ func (paladin *Paladin) applySimProposals() {
 			FloatValue: 0.20,
 		})
 	}
+	// C-R5 Measure for Measure (MFM1/MFM2/MFM3): when your target dodges or parries your attack, the remaining
+	// cooldown of your Judgement is reduced by 1/2/3 sec.
+	for rank := 1; rank <= 3; rank++ {
+		if !proposeFlag("MFM" + string(rune('0'+rank))) {
+			continue
+		}
+		cut := time.Duration(rank) * time.Second
+		paladin.MakeProcTriggerAura(core.ProcTrigger{
+			Name:     "C-R5 Measure for Measure" + paladin.Label,
+			Callback: core.CallbackOnSpellHitDealt,
+			ProcMask: core.ProcMaskMelee,
+			Outcome:  core.OutcomeDodge | core.OutcomeParry,
+			Handler: func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
+				if paladin.Judgement != nil && paladin.Judgement.CD.Timer != nil {
+					paladin.Judgement.CD.Reduce(cut)
+				}
+			},
+		})
+	}
 	// W29 option: Unsealed Wrath decreases the Seal cost by 20%.
 	if proposeFlag("UW20") && paladin.Talents.UnsealedWrath {
 		paladin.AddStaticMod(core.SpellModConfig{
