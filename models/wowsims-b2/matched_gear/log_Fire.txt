@@ -1,0 +1,10 @@
+EP {0: 0.0, 1: 0.0, 3: 0.181, 5: 0.548, 7: 0.481, 11: 0.0, 14: 0.0, 15: 0.0, 17: 0.539, 18: 0.246, 19: 0.069, 20: 0.0, 13: 0.097} {0: 0.0, 1: 0.0, 2: 0.0}
+cands {0: 19, 1: 16, 2: 15, 3: 18, 4: 15, 5: 15, 6: 15, 7: 15, 8: 15, 9: 17, 10: 15, 11: 15, 12: 37, 13: 37, 14: 25, 15: 26, 16: 11}
+start 556.9
+  pass0 slot0: Magister's Crown -> Dreadmist Mask 556.9->559.3
+  pass0 slot4: Magister's Robes -> Robe of the Archmage 559.3->570.7
+  pass0 slot5: Magister's Bindings -> Runecloth Cuffs 570.7->573.4
+  pass0 slot6: Magister's Gloves -> Inferno Gloves 573.4->581.6
+FINAL Fire 580.7 +- 0.5
+SET Dreadmist Mask(62) ; Archlight Talisman(60) ; Netherflame Shoulders(47) ; Hide of the Wild(62) ; Robe of the Archmage(62) ; Runecloth Cuffs(57) ; Inferno Gloves(62) ; Belt of the Archmage(62) ; Ghostweave Pants(58) ; Venomspew Footpads(58) ; Jereman's Bauble(61) ; Initiate's Signet of Brilliance(63) ; Cleansed Vilebranch Icon(51) ; Frozen Heart of the Mountain(55) ; Notched Ritual Rib(45) ; Personal Spellbook(55) ; Brilliant Wand(60)
+ILVL 57.6 epics 3

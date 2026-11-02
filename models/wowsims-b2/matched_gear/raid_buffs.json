@@ -1,0 +1,26 @@
+{
+ "DpsWarrior": {
+  "shared": 804.8,
+  "own": 804.8
+ },
+ "Rogue": {
+  "shared": 645.6,
+  "own": 645.6
+ },
+ "Hunter": {
+  "shared": 799.6,
+  "own": 799.6
+ },
+ "Retribution": {
+  "shared": 874.4,
+  "own": 874.4
+ },
+ "Fire": {
+  "shared": 824.0,
+  "own": 824.0
+ },
+ "DemonologyFireBrand": {
+  "shared": 845.6,
+  "own": 845.6
+ }
+}

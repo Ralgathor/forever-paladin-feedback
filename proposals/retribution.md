@@ -42,15 +42,15 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 - **Model.** models/beta-30-oct/retribution_b2.py. It uses the wowsims default Retribution build of 1 November (14/6/31) and the wowsims rotation: plan 1 + 3 (see Mana with Unsealed Wrath).
 - **Start value.** wowsims Forever of 1 November gives 906 DPS at fresh level 60 (848 before the wowsims update). The model gives the increase with gear.
 - **Increase with gear.** Retribution damage increases less with gear than Fury damage: ×1.65 against ×1.73 from fresh level 60 to Naxxramas. Fixed base values of the Seals, Judgement and Holy Strike cause this (see Analysis, Damage, part 3).
-- **Pure average.** Fury and Combat Rogue use the increase of the model. Hunter, Mage and Warlock increase ×1.75 to Naxxramas (the main case of Analysis, Damage, part 1).
+- **Pure average.** wowsims Forever, with the same pre-raid item pool, enchants and consumables for each spec (Analysis, Damage, part 7). Fury and Combat Rogue use the increase of the model. Hunter, Mage and Warlock increase ×1.75 to Naxxramas (the main case of Analysis, Damage, part 1).
 
 | Build | Fresh level 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
 | --- | --- | --- | --- | --- | --- |
-| Live | 100% | 99% | 98% | 96% | 96% |
+| Live | 112% | 111% | 110% | 108% | 107% |
 
-- **Result.** The live version is at the hybrid target (95%) or above it at all gear levels. Thus, Retribution needs no damage proposal.
-- **Balance lever.** If raid logs confirm the wowsims level, decrease Sacred Arbiter to +10% first: −0.7% damage in wowsims (W15).
-- **Other cases.** Hunter, Mage and Warlock ×1.60: live 100–101%. ×1.90: live 91–100%.
+- **Result.** The live version is above the hybrid target (95%) at all gear levels: 17 points at fresh level 60 and 12 points in Naxxramas. Thus, Retribution needs no damage proposal.
+- **Balance lever.** If raid logs confirm the wowsims level, decrease Sacred Arbiter to +10% first: −0.7% damage in wowsims (W15). This change alone does not bring Retribution to 95%.
+- **Other cases.** Hunter, Mage and Warlock ×1.60: live 112–113%. ×1.90: live 102–112%.
 
 ## Mana with Unsealed Wrath (W29)
 

@@ -1,0 +1,14 @@
+{
+ "AsnMuti backstab=true": 565.7,
+ "AsnMuti backstab=false": 315.1,
+ "ComMuti backstab=true": 612.6,
+ "ComMuti backstab=false": 333.4,
+ "ComSS backstab=true": 645.4,
+ "ComSS backstab=false": 605.9,
+ "ComBS backstab=true": 657.2,
+ "ComBS backstab=false": 600.8,
+ "SubHemo backstab=true": 559.2,
+ "SubHemo backstab=false": 608.8,
+ "SubBS backstab=true": 598.2,
+ "SubBS backstab=false": 587.2
+}
