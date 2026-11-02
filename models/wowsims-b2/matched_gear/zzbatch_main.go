@@ -23,6 +23,7 @@ type job struct {
 	Dir   string            `json:"dir"`
 	Bonus map[int]float64   `json:"bonus"`
 	Pseudo map[int]float64  `json:"pseudo"`
+	Own   bool              `json:"own"`
 	Dps   float64           `json:"dps"`
 	Sd    float64           `json:"sd"`
 	Err   string            `json:"err"`
@@ -53,10 +54,12 @@ func one(j *job, ret *proto.RaidSimRequest) {
 		for k, v := range j.Pseudo { us.PseudoStats[k] = v }
 		p.BonusStats = us
 	}
-	r.Raid.Buffs = ret.Raid.Buffs
-	r.Raid.Debuffs = ret.Raid.Debuffs
-	r.Raid.Parties[0].Buffs = ret.Raid.Parties[0].Buffs
-	p.Buffs = ret.Raid.Parties[0].Players[0].Buffs
+	if !j.Own {
+		r.Raid.Buffs = ret.Raid.Buffs
+		r.Raid.Debuffs = ret.Raid.Debuffs
+		r.Raid.Parties[0].Buffs = ret.Raid.Parties[0].Buffs
+		p.Buffs = ret.Raid.Parties[0].Players[0].Buffs
+	}
 	if j.Dur == 0 { j.Dur = 120 }
 	r.Encounter.Duration = j.Dur
 	r.Encounter.DurationVariation = 5
