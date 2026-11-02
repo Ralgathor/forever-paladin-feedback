@@ -110,7 +110,7 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 - **Full buffs** have Mana Spring Totem, Mana Tide Totem and Atiesh. **Lean buffs** have only Gift of the Wild, Battle Shout, Kings, Might and Wisdom.
 
 | Fight | Live | Seal cost −20% |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | 2 min, full buffs | 906 DPS | 0% |
 | 5 min, full buffs | 914 DPS | 0% |
 | 2 min, lean buffs | 653 DPS | 0% |
