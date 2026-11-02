@@ -35,7 +35,7 @@ func TestFeedbackRun(t *testing.T) {
 		Consumables:   cons,
 		TalentsString: talentsOr(UnsealedWrathTalents),
 		Spec:          DefaultSpecOptions,
-		Rotation:      core.GetAplRotation("../../../ui/specs/paladin/retribution/apls", "default").Rotation,
+		Rotation:      core.GetAplRotation("../../../ui/specs/paladin/retribution/apls", envOr("FEEDBACK_APL", "default")).Rotation,
 		BonusStats:    feedbackBonus(),
 		Buffs:         indiv,
 		Profession1:   proto.Profession_Engineering, Profession2: proto.Profession_Blacksmithing,

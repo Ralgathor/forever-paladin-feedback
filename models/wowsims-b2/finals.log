@@ -117,3 +117,15 @@ BUILD prot raid prop -3530110213501531-53233000001 tps=1033 dtps=292 tmi=45.0
 BUILD prot raid prop 05005-3530110213501531-502 tps=1016 dtps=296 tmi=45.7
 BUILD prot raid prop 05005-3530110213201531-5023 tps=1060 dtps=301 tmi=46.2
 BUILD prot raid prop 05005-3530110213301531-5022 tps=1046 dtps=300 tmi=46.1
+
+## 2 November 2026: Unsealed Wrath Seal plans (W29). seal_plans_apl.py, default build, 3,000 iterations
+## Plan rRcC: Seal of Command after R Righteousness copies, Seal of Righteousness after C Command copies.
+default (= r1c3)  2 min full C1 956.2 | 5 min full C1 962.2
+r1c2              2 min full C1 949.1 | 5 min full C1 955.4
+r2c2              2 min full C1 933.5 | 5 min full C1 939.4
+r1c1              2 min full C1 923.9 | 5 min full C1 926.3
+r3c3              2 min full C1 923.2 | 5 min full C1 930.8
+r2c1              2 min full C1 907.7 | 5 min full C1 913.7
+r3c1              2 min full C1 894.5 | 5 min full C1 899.9
+live (no C1), full buffs, 2 min: r1c3 905.9, r2c2 889.8, r1c1 878.6, r3c1 852.8
+no buffs, C1, 2 min: r1c3 345.4 (mana zero 88 s), r2c2 337.9 (84 s), r3c1 332.1 (81 s), r1c1 313.4 (52 s)

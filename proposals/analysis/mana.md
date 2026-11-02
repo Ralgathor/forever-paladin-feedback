@@ -11,7 +11,7 @@ The unit is mana each sec (MPS). A positive value means that the mana increases.
 - **Redoubt (C-P1) gives the tank more mana:** +4.9 to +8.3 MPS, because the tank blocks more.
 - **Consecration on cooldown empties the mana fast:** in 59 sec at fresh 60, and in about 3 min in Naxxramas (with Blessing of Wisdom). Use it against groups, not all the time.
 - **A tank that the boss does not hit loses mana at fresh 60:** −2.7 MPS with Blessing of Wisdom.
-- **Retribution loses mana because it changes Seals often.** The wowsims rotation empties the mana in 1 min 21 sec. Fewer Seal changes cost 1.8–2.6% damage, but the mana lasts 1.7–2.8 times longer.
+- **Retribution loses mana because it changes Seals often.** The wowsims rotation (plan 1 + 3) empties the mana in 3 min 43 sec at fresh 60. In a 5 min fight, plan 3 + 3 costs 2.5% damage, but the mana lasts 8 min 45 sec.
 - **Sanctified Judgement (C-R3) does not change the total at 3/3.** It gives more mana only at ranks 1 and 2.
 
 ## 1. Why mana is a problem
@@ -90,31 +90,31 @@ In the live version, each rank increases the chance (33/66/100%) and the return 
 
 ## 3. Retribution
 
-The wowsims default Retribution build (14/6/31) at fresh 60, with Blessing of Wisdom. The wowsims rotation changes the Seal after each swing: Seal of Righteousness, then Seal of Command.
+The wowsims default Retribution build (14/6/31) at fresh 60, with Blessing of Wisdom. The wowsims rotation uses plan 1 + 3: 1 swing with Seal of Righteousness, then 3 swings with Seal of Command.
 
-- **Mana pool:** 3,029. **Cost:** 51.2 MPS. **Income:** 6.2 MPS, plus 8 MPS from Blessing of Wisdom.
-- **The mana is empty after** 1 min 21 sec (1 min 7 sec without Blessing of Wisdom).
+- **Mana pool:** 3,029. **Cost:** 27.8 MPS. **Income:** 6.2 MPS, plus 8 MPS from Blessing of Wisdom.
+- **The mana is empty after** 3 min 43 sec (2 min 20 sec without Blessing of Wisdom).
 
-**Seal plans.** "n" is the number of swings with Seal of Righteousness before one swing with Seal of Command.
+**Seal plans.** "1 + 3" is 1 swing with Seal of Righteousness, then 3 swings with Seal of Command.
 
 | Plan | DPS (model) | Mana each sec | Time until the mana is empty |
 | --- | --- | --- | --- |
-| Seal of Command only | 285 (−12%) | — | — |
-| n = 1 (wowsims rotation) | 324 | 51.2 | 1 min 21 sec |
-| n = 2 | 318 (−1.8%) | 35.6 | 2 min 21 sec |
-| n = 3 | 316 (−2.6%) | 27.8 | 3 min 43 sec |
-| n = 4 | 306 (−5.5%) | 23.1 | 5 min 40 sec |
-| n = 6 | 295 (−8.9%) | 17.7 | 14 min 17 sec |
+| Seal of Command only | 285 (−14%) | 10.2 | — |
+| 1 + 3 (wowsims rotation) | 332 | 27.8 | 3 min 43 sec |
+| 1 + 2 | 330 (−0.8%) | 35.6 | 2 min 21 sec |
+| 1 + 1 | 324 (−2.5%) | 51.2 | 1 min 21 sec |
+| 3 + 3 | 324 (−2.5%) | 19.9 | 8 min 45 sec |
+| 3 + 1 | 316 (−5.1%) | 27.8 | 3 min 43 sec |
 
-- **The best plan depends on the fight length.** 2 min fights: n = 2 before raids, n = 1 from Molten Core. 3 min fights: n = 3 before raids, n = 2 from Molten Core. 5 min fights: n = 3 at all gear levels.
-- **Unsealed Wrath has no Seal cost decrease (W29).** With −20% Seal cost, n = 1 lasts 1 min 49 sec and n = 3 lasts 5 min 40 sec. The damage in the fight increases by 0.7–2.6% at fresh 60 (see Damage).
+- **The best plan depends on the fight length.** 2 and 3 min fights: plan 1 + 3 at all gear levels. 5 min fights: plan 3 + 3 before raids, plan 1 + 3 from Molten Core.
+- **Unsealed Wrath has no Seal cost decrease (W29).** With −20% Seal cost, plan 1 + 3 lasts 5 min 40 sec. The damage in a 5 min fight increases by 2.6% at fresh 60 (see Damage).
 - **Reverence** needs 7 Holy points for 2/2. It gives 6.1 MPS at 130 Spirit.
 
 ## 4. What the results mean
 
 - **Intellect is a tank stat for the Paladin.** It gives a larger mana pool and a larger Shield Specialization return.
 - **Consecration is for groups of enemies.** On cooldown, it empties the mana in 50 sec to 4 min 26 sec.
-- **Retribution chooses between damage and mana.** Fewer Seal changes cost 1.8–8.9% damage, but the mana lasts 1.7–11 times longer.
+- **Retribution chooses between damage and mana only in long fights.** Plan 1 + 3 gives the most damage. In a 5 min fight at fresh 60, plan 3 + 3 costs 2.5% damage, but the mana lasts 2.4 times longer.
 
 ## 5. Inputs
 

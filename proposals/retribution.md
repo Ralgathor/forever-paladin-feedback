@@ -49,7 +49,7 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 
 ## Retribution against the pure average
 
-- **Model.** models/beta-30-oct/retribution_b2.py. It uses the wowsims default Retribution build of 1 November (14/6/31) and the wowsims rotation: a Seal change after each swing.
+- **Model.** models/beta-30-oct/retribution_b2.py. It uses the wowsims default Retribution build of 1 November (14/6/31) and a Seal change after each swing (plan 1 + 1). The wowsims rotation uses plan 1 + 3 (see Mana with Unsealed Wrath).
 - **Start value.** wowsims Forever of 1 November gives 906 DPS at fresh level 60 (848 before the wowsims update). The model gives the increase with gear.
 - **Increase with gear.** Retribution damage increases less with gear than Fury damage: ×1.63 against ×1.73 from fresh level 60 to Naxxramas. Fixed base values of the Seals, Judgement and Holy Strike cause this (see Analysis, Damage, part 3).
 - **Pure average.** Fury and Combat Rogue use the increase of the model. Hunter, Mage and Warlock increase ×1.75 to Naxxramas (the main case of Analysis, Damage, part 1).
@@ -65,21 +65,26 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 
 ## Mana with Unsealed Wrath (W29)
 
-- **Rotation.** The wowsims rotation casts the other Seal after each swing. Each auto attack then triggers Seal of Righteousness and has a Seal of Command chance. This is one Seal cast for each swing.
-- **Cost.** Unsealed Wrath has no Seal cost decrease. Twist of Light had −20%. With fresh level 60 gear, the rotation uses 51.2 mana each sec. The income is 14.2 mana each sec (Reverence 2/2 and Blessing of Wisdom). The mana pool (3,029) is empty after 1 min 21 sec.
-- **Fewer Seal changes.** The plans below use n swings with Seal of Righteousness, then 1 swing with Seal of Command (fresh level 60, Blessing of Wisdom).
+- **Rotation.** The wowsims rotation casts Seal of Command after 1 swing with Seal of Righteousness. After 3 swings with Seal of Command, it casts Seal of Righteousness again. The first swing with the new Seal releases the stored copies.
+- **Copies of Seal of Command.** Each copy rolls the usual Seal of Command chance. The copies ignore the 1 sec cooldown of the Seal of Command proc (wowsims commit 3989a1237). Thus, 3 copies give 3 chances on one swing.
+- **Seal plans.** "1 + 3" is 1 swing with Seal of Righteousness, then 3 swings with Seal of Command. The wowsims rotation is 1 + 3.
+- **Cost.** Unsealed Wrath has no Seal cost decrease. Twist of Light had −20%. With fresh level 60 gear, plan 1 + 3 uses 27.8 mana each sec. The income is 14.2 mana each sec (Reverence 2/2 and Blessing of Wisdom). The mana pool (3,029) is empty after 3 min 43 sec.
 
-| Seal plan | Damage | Mana each sec | Mana empty after |
-| --- | --- | --- | --- |
-| A Seal change after each swing (n = 1) | 100% | 51.2 | 1 min 21 sec |
-| n = 2 | 98.2% | 35.6 | 2 min 21 sec |
-| n = 3 | 97.4% | 27.8 | 3 min 43 sec |
-| n = 4 | 94.5% | 23.1 | 5 min 40 sec |
-| Seal of Command only | 88% | 10.2 | No limit |
+| Seal plan | wowsims: C1, full buffs, 2 min | Model: damage | Model: mana each sec | Model: mana empty after |
+| --- | --- | --- | --- | --- |
+| 1 + 3 (wowsims rotation) | 956 DPS | 100% | 27.8 | 3 min 43 sec |
+| 1 + 2 | 949 (−0.7%) | 99.2% | 35.6 | 2 min 21 sec |
+| 2 + 2 | 934 (−2.4%) | 97.5% | 27.8 | 3 min 43 sec |
+| 1 + 1 (a Seal change after each swing) | 924 (−3.4%) | 97.5% | 51.2 | 1 min 21 sec |
+| 3 + 3 | 923 (−3.4%) | 97.5% | 19.9 | 8 min 45 sec |
+| 3 + 1 | 895 (−6.4%) | 94.9% | 27.8 | 3 min 43 sec |
+| Seal of Command only | — | 85.7% | 10.2 | No limit |
 
-- **Result.** At fresh level 60, the mana decreases the damage by 2% in a 2 min fight and by 4% in a 5 min fight. With better gear, the mana pool is larger. From Molten Core, a Seal change after each swing is possible for 2 min.
-- **The pure average table above uses no mana limit.** In long fights, Retribution is 2–4 points lower.
-- **Spell data.** Unsealed Wrath has a Seal cost effect at 0% (wowsims spell data, spell 1310735). A −20% value, as Twist of Light had, gives +0.7% damage in a 2 min fight and +2.6% in a 5 min fight (model).
+- **Model columns.** Fresh level 60, Blessing of Wisdom, no consumables.
+- **Result.** Plan 1 + 3 gives the most damage, with half the Seal casts of plan 1 + 1. A copy of Seal of Command has more value than a copy of Seal of Righteousness. Thus, plan 3 + 1 is the weakest plan with copies.
+- **Mana.** At fresh level 60, plan 1 + 3 lasts for a 3 min fight. In a 5 min fight, plan 3 + 3 is the best: −2.5% (model). From Molten Core, plan 1 + 3 is the best in a 5 min fight. The mana costs 2.0% in Molten Core, 0.7% in Blackwing Lair and 0% in Naxxramas.
+- **The pure average table above uses plan 1 + 1 and no mana limit.** The model with plan 1 + 1 is 2.5% below plan 1 + 3. The start value (906) comes from wowsims with plan 1 + 3.
+- **Spell data.** Unsealed Wrath has a Seal cost effect at 0% (wowsims spell data, spell 1310735). A −20% value, as Twist of Light had, gives 0% in a 2 min fight and +2.6% in a 5 min fight (model). Plan 1 + 3 then lasts 5 min 40 sec.
 
 ## wowsims check
 
@@ -94,6 +99,6 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 | 5 min, lean buffs | 660 DPS | +5.5% | 0% |
 
 - **C1.** The sim gives +5.3–5.6%. The model gives +5.3%.
-- **Mana.** No run has zero mana. The wowsims consumables now include Major Mana Potion. The model is lower (1 min 21 sec) because it has no consumables.
-- **Seal cost −20%.** It has no effect in wowsims, because the mana lasts. The model gives +0.7–2.6%.
+- **Mana.** No run has zero mana. The wowsims consumables now include Major Mana Potion. In the model, plan 1 + 3 has zero mana after 3 min 43 sec, because the model has no consumables.
+- **Seal cost −20%.** It has no effect in wowsims, because the mana lasts. The model gives 0–2.6%.
 

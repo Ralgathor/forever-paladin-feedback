@@ -113,20 +113,22 @@ Judgement of the Crusader adds 161 Holy damage taken. Each hit receives 161 × i
 
 ## 5. Mana and the Seal plans
 
-The wowsims rotation changes the Seal after each swing. This costs 51.2 mana each sec. The mana pool is 3,029. "n" is the number of swings with Seal of Righteousness before one swing with Seal of Command.
+The wowsims rotation uses plan 1 + 3: 1 swing with Seal of Righteousness, then 3 swings with Seal of Command. The first swing with the new Seal releases the stored copies. The copies of Seal of Command ignore the 1 sec cooldown of the proc. The mana pool is 3,029 (fresh 60, Blessing of Wisdom).
 
-| Seal plan | Damage | Mana each sec | Mana empty after |
-| --- | --- | --- | --- |
-| n = 1 (wowsims rotation) | 100% | 51.2 | 1 min 21 sec |
-| n = 2 | 98.2% | 35.6 | 2 min 21 sec |
-| n = 3 | 97.4% | 27.8 | 3 min 43 sec |
-| n = 4 | 94.5% | 23.1 | 5 min 40 sec |
-| Seal of Command only | 88% | 10.2 | No limit |
+| Seal plan | wowsims: C1, full buffs, 2 min | Model: damage | Model: mana each sec | Model: mana empty after |
+| --- | --- | --- | --- | --- |
+| 1 + 3 (wowsims rotation) | 956 DPS | 100% | 27.8 | 3 min 43 sec |
+| 1 + 2 | −0.7% | 99.2% | 35.6 | 2 min 21 sec |
+| 2 + 2 | −2.4% | 97.5% | 27.8 | 3 min 43 sec |
+| 1 + 1 (a Seal change after each swing) | −3.4% | 97.5% | 51.2 | 1 min 21 sec |
+| 3 + 1 | −6.4% | 94.9% | 27.8 | 3 min 43 sec |
+| Seal of Command only | — | 85.7% | 10.2 | No limit |
 
-- **At fresh 60, the best plan costs 2% damage** in a 2 min fight and 4% in a 5 min fight. From Molten Core, n = 1 lasts for 2 min.
+- **Plan 1 + 3 is the best plan.** A copy of Seal of Command has more value than a copy of Seal of Righteousness.
+- **At fresh 60, plan 1 + 3 lasts for a 3 min fight.** In a 5 min fight, plan 3 + 3 is the best (−2.5%). In Naxxramas, plan 1 + 3 lasts 5 min.
 - **In wowsims, the mana lasts 5 min,** because the consumables include Major Mana Potion.
-- **A 20% Seal cost decrease on Unsealed Wrath (W29)** gives +0.7% in a 2 min fight and +2.6% in a 5 min fight (model). In wowsims, it gives 0%.
-- The pure average tables use no mana limit.
+- **A 20% Seal cost decrease on Unsealed Wrath (W29)** gives 0% in a 2 min fight and +2.6% in a 5 min fight (model). In wowsims, it gives 0%.
+- **The model tables of this tab use plan 1 + 1 and no mana limit.** Plan 1 + 1 is 2.5% below plan 1 + 3 in the model. The start value (906) comes from wowsims with plan 1 + 3.
 
 ## 6. Stat values
 
