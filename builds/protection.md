@@ -8,11 +8,13 @@ This file gives the best tank builds for the live trees and for the proposed tre
 | --- | --- | --- | --- | --- | --- | --- |
 | Proposed | PT1 | 0/34/17 | [`v6p-3530110213501531-54233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-54233) | 1,012 | 292 | 45.0 |
 | Proposed | PS1 | 0/34/17 | [`v6p-3530110213501531-53233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-53233000001) | 1,033 | 292 | 45.0 |
+| Proposed | PI1 | 10/31/10 | [`v6p05005-3530110213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05005-3530110213201531-5023) | 1,060 | 301 | 46.2 |
 | Live | BS2 | 0/35/16 | [`b2-05302102313501531-52233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2-05302102313501531-52233000001) | 953 | 325 | 55.5 |
 | Live | BT1 | 12/32/7 | [`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) | 928 | 333 | 57.1 |
 | Live | BS1 | 10/31/10 | [`b205005-05302102213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205005-05302102213201531-5023) | 975 | 342 | 58.5 |
 
 - **Proposed: PS1 is PT1 with Sacred Arbiter.** One Benediction point goes to Sacred Arbiter: +2.1% threat, the same damage taken and the same TMI. PT1 is the tank of Analysis, Builds.
+- **Proposed: PI1 is the threat choice.** Divine Strength and Improved Seals give +2.6% threat against PS1, but 3.1% more damage taken and a 2.7% worse TMI.
 - **Live: BS2 is the tank build.** It takes Sacred Arbiter (+2.2% threat) and Sanctified Judgement 3. Against the wowsims default build BT1, it has +2.7% threat, 2.4% less damage taken and a 2.7% better TMI.
 - **Live: BS1 is the threat choice.** It has +2.3% threat against BS2, but 5.1% more damage taken and a 5.2% worse TMI.
 - **Proposed against live.** PT1 has +6.1% threat, 10% less damage taken and a 19% better TMI than BS2. Redoubt (C-P1) removes almost all crushing blows: 1.0% against 11.9%.
@@ -30,7 +32,7 @@ This file gives the best tank builds for the live trees and for the proposed tre
 
 ## 2. Builds
 
-### Proposed: PT1 and PS1
+### Proposed: PT1, PS1 and PI1
 
 [`v6p-3530110213501531-54233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-54233) (0/34/17).
 
