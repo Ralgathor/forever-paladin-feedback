@@ -26,12 +26,12 @@ Income: Reverence 2/2 (30% of Spirit regeneration in casts) 6.2 per sec, Blessin
 import sys
 sys.path.insert(0, sys.argv[1] if len(sys.argv) > 1 else ".")
 import damage_model as M
-# Pure damage classes: wowsims Forever 895cd67f9, same pre-raid item pool for each spec (models/wowsims-b2/matched_gear),
-# wowsims preset enchants, the same consumables for each spec, Ret raid buffs, 2 min, 10,000 iterations. Fury 901.6,
-# Combat Rogue 685.2, Hunter 828.7, Fire Mage 916.1, Demonology Warlock 919.3, Retribution 921.1. Without enchants and
-# consumables: 677.9, 545.1, 673.7, 661.5, 655.1 and 681.8. The values below put them on the scale of RET_SIM (x 906 / 921.1).
-PURE_MATCHED = {"Warrior": 901.6, "Rogue": 685.2, "Hunter": 828.7, "Mage": 916.1, "Warlock": 919.3}
-RET_MATCHED = 921.1
+# Pure damage classes: wowsims Forever 895cd67f9, same pre-raid item pool for each spec (game start and Dire Maul
+# content, models/wowsims-b2/matched_gear), wowsims preset enchants, the same consumables for each spec, Ret raid buffs,
+# 2 min, 10,000 iterations. Fury 804.8, Combat Rogue 645.6, Hunter 799.6, Fire Mage 824.0, Demonology Warlock 845.6,
+# Retribution 874.4. The values below put them on the scale of RET_SIM (x 906 / 874.4).
+PURE_MATCHED = {"Warrior": 804.8, "Rogue": 645.6, "Hunter": 799.6, "Mage": 824.0, "Warlock": 845.6}
+RET_MATCHED = 874.4
 PURE = {k: v * 906 / RET_MATCHED for k, v in PURE_MATCHED.items()}
 RET_SIM = 906                                                                          # wowsims master of 1 November, full buffs, 2 min (the anchor of Analysis, Damage)
 from damage_model import (gear, auto_table, spec_table, vengeance, fury, arms, rogue, TIER_NAMES, CRIT_SPEC, DODGE,

@@ -1,12 +1,11 @@
-EP {0: 0.4, 1: 0.374, 3: 0.0, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.182, 15: 0.0, 17: 0.066, 18: 0.504, 19: 0.429, 20: 0.058, 13: 0.0} {0: 2.3655121364895253, 1: 0.0, 2: 0.0}
-cands {0: 21, 1: 16, 2: 15, 3: 18, 4: 19, 5: 15, 6: 20, 7: 16, 8: 15, 9: 19, 10: 16, 11: 16, 12: 44, 13: 44, 14: 31, 15: 35, 16: 28}
-start 664.2
-  pass0 slot3: Shifting Cloak -> Earthweave Cloak 664.2->668.4
-  pass0 slot4: Dawn Armor -> Timbermaw Tunic 668.4->671.6
-  pass0 slot12: Frozen Heart of the Mountain -> Rune of the Guard Captain 671.6->673.9
-  pass0 slot13: Jewel of the Guard Captain -> Cleansed Vilebranch Medallion 673.9->675.9
-  pass0 slot15: Heartseeker -> Persuader 675.9->678.8
-2026/11/02 16:22:36 running 10000 iterations took 7.510655882s
-FINAL DpsWarrior 677.9 +- 0.5
-SET Lionheart Helm(61) ; Medallion of the Dawn(60) ; Golden Mantle of the Dawn(61) ; Earthweave Cloak(62) ; Timbermaw Tunic(61) ; Deeprock Bracers(62) ; Gauntlets of Heroism(55) ; Zandalar Vindicator's Belt(61) ; Titanic Leggings(60) ; Boots of Heroism(60) ; Protector's Band(63) ; Signet Ring of the Bronze Dragonflight(60) ; Rune of the Guard Captain(51) ; Cleansed Vilebranch Medallion(51) ; Persuader(63) ; Persuader(63) ; The Purifier(60)
-ILVL 59.6 epics 12
+EP {0: 0.325, 1: 0.118, 3: 0.0, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.148, 15: 0.0, 17: 0.206, 18: 0.16, 19: 0.109, 20: 0.022, 13: 0.0} {0: 0.0, 1: 0.0, 2: 0.0}
+cands {0: 20, 1: 15, 2: 15, 3: 18, 4: 19, 5: 15, 6: 19, 7: 16, 8: 15, 9: 19, 10: 16, 11: 16, 12: 38, 13: 38, 14: 39, 15: 34, 16: 20}
+start 560.4
+  pass0 slot1: Artifact Seeker's Pendant -> Horn of Ve'han 560.4->562.8
+  pass0 slot11: White Bone Band -> Initiate's Signet of Brilliance 562.8->565.7
+  pass0 slot14: Belgrom's Hammer -> Frostguard 565.7->583.9
+  pass0 slot15: Ornate Thorium Handaxe -> Heartseeker 583.9->591.3
+  pass1 slot5: Wild Wristguards -> Bladebane Armguards 591.3->593.5
+FINAL DpsWarrior 592.9 +- 0.4
+SET Lionheart Helm(61) ; Horn of Ve'han(61) ; Hermit's Pauldron(61) ; Shifting Cloak(62) ; Dawn Armor(61) ; Bladebane Armguards(49) ; Devilsaur Gauntlets(58) ; Valiant's Waistguard(60) ; Warbear Woolies(57) ; Scalegut Treaders(58) ; Initiate's Signet of Ferocity(63) ; Initiate's Signet of Brilliance(63) ; Frozen Heart of the Mountain(55) ; Cleansed Vilebranch Medallion(51) ; Frostguard(63) ; Heartseeker(63) ; Vicious Throwing Stars(50)
+ILVL 58.6 epics 5

@@ -11,16 +11,19 @@ ARMOR={1:{1,2,3,4},2:{1,2,3,4},3:{1,2,3},4:{1,2},8:{1},9:{1}}
 # melee weapon types allowed (1 axe,2 dagger,3 fist,4 mace,5 offhand,6 polearm,7 shield,8 staff,9 sword)
 WEAP={1:{1,2,3,4,6,8,9},2:{1,4,6,9},3:{1,2,3,6,8,9},4:{2,3,4,9},8:{2,5,8,9},9:{2,5,8,9}}
 RANGED={1:{1,2,3,4},2:{7},3:{1,2,3},4:{1,2,3,4},8:{5},9:{5}}
-RAIDISH={18404,18821,12798,19491,19325,19618,19619,19620,19518,19147,20047,23057,21415,18543,18820,19379,23451,19366}
+RAIDISH={270225,18404,18821,12798,19491,19325,19618,19619,19620,19518,19147,20047,23057,21415,18543,18820,19379,23451,19366}
 PVPREP={509,510,729,730,889,890}
 def ilvl(it): return it['scalingOptions']['0'].get('ilvl',0)
 def pre_raid(it):
+    # Launch content only: Classic items of patch 1.6 or later have item ids 19000-23999 (ZG, PvP rewards, AQ, dungeon set 2, Naxxramas era)
+    if 19000<=it['id']<24000: return False
     if ilvl(it)>63 or it['id'] in RAIDISH or it.get('quality',0)>4 or it.get('quality',0)<2: return False
     if it.get('reqLvl',0)>60: return False
     if any(p in it['name'] for p in PVP): return False
     if it.get('factionRestriction')==2: return False
     for s in (it.get('sources') or [])+atl.get(it['id'],[]):
         if 'pvp' in s or (s.get('rep') or {}).get('repFactionId') in PVPREP: return False
+        if (s.get('rep') or {}).get('repLevel',0)>=7: return False
         dr=s.get('drop')
         if dr and (dr.get('zoneId') in RAID_ZONES or dr.get('npcId') in WORLD_BOSS): return False
     return True

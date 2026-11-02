@@ -46,11 +46,11 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 
 | Build | Fresh level 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
 | --- | --- | --- | --- | --- | --- |
-| Live | 108% | 107% | 107% | 105% | 104% |
+| Live | 112% | 111% | 110% | 108% | 107% |
 
-- **Result.** The live version is above the hybrid target (95%) at all gear levels: 13 points at fresh level 60 and 9 points in Naxxramas. Thus, Retribution needs no damage proposal.
+- **Result.** The live version is above the hybrid target (95%) at all gear levels: 17 points at fresh level 60 and 12 points in Naxxramas. Thus, Retribution needs no damage proposal.
 - **Balance lever.** If raid logs confirm the wowsims level, decrease Sacred Arbiter to +10% first: −0.7% damage in wowsims (W15). This change alone does not bring Retribution to 95%.
-- **Other cases.** Hunter, Mage and Warlock ×1.60: live 108–110%. ×1.90: live 99–108%.
+- **Other cases.** Hunter, Mage and Warlock ×1.60: live 112–113%. ×1.90: live 102–112%.
 
 ## Mana with Unsealed Wrath (W29)
 

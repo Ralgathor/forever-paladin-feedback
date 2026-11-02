@@ -1,11 +1,10 @@
-EP {0: 0.181, 1: 0.297, 3: 0.0, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.164, 15: 0.0, 17: 0.031, 18: 0.223, 19: 0.187, 20: 0.054, 13: 0.0} {0: 2.1114629714973203, 1: 0.0, 2: 0.0}
-cands {0: 19, 1: 16, 2: 15, 3: 18, 4: 15, 5: 15, 6: 16, 7: 15, 8: 15, 9: 17, 10: 16, 11: 16, 12: 44, 13: 44, 14: 30, 15: 34, 16: 28}
-start 529.2
-  pass0 slot4: Darkmantle Tunic -> Dawn Armor 529.2->532.2
-  pass0 slot6: Stormshroud Gloves -> Darkmantle Gloves 532.2->534.5
-  pass0 slot12: Thaelemaches' Talisman -> Cleansed Vilebranch Medallion 534.5->536.8
-  pass0 slot15: Bold Dirk -> Masterwork Stormhammer 536.8->545.0
-2026/11/02 16:25:50 running 10000 iterations took 9.636604868s
-FINAL Rogue 545.1 +- 0.3
-SET Darkmantle Cap(60) ; Beads of Ogre Might(63) ; Zandalar Madcap's Mantle(61) ; Earthweave Cloak(62) ; Dawn Armor(61) ; Forest Stalker's Bracers(55) ; Darkmantle Gloves(55) ; Assassin's Waistguard(60) ; Devilsaur Leggings(60) ; Mongoose Boots(62) ; Signet Ring of the Bronze Dragonflight(60) ; Might of Cenarius(62) ; Cleansed Vilebranch Medallion(51) ; Rune of the Guard Captain(51) ; The Lobotomizer(60) ; Masterwork Stormhammer(63) ; Bloodseeker(63)
-ILVL 59.4 epics 9
+EP {0: 0.083, 1: 0.119, 3: 0.0, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.076, 15: 0.0, 17: 0.119, 18: 0.064, 19: 0.083, 20: 0.01, 13: 0.0} {0: 0.0, 1: 0.0, 2: 0.0}
+cands {0: 18, 1: 15, 2: 15, 3: 18, 4: 15, 5: 15, 6: 16, 7: 15, 8: 15, 9: 17, 10: 16, 11: 16, 12: 38, 13: 38, 14: 38, 15: 33, 16: 20}
+start 483.6
+  pass0 slot0: Blue Suede Hat -> Shadowcraft Cap 483.6->488.6
+  pass0 slot13: Thaelemaches' Talisman -> Molten Heart of the Mountain 488.6->490.6
+  pass0 slot14: Bold Dirk -> Heartseeker 490.6->506.1
+  pass0 slot15: Bold Dirk -> Masterwork Stormhammer 506.1->513.9
+FINAL Rogue 514.1 +- 0.3
+SET Shadowcraft Cap(62) ; Artifact Seeker's Pendant(58) ; Shadowcraft Spaulders(60) ; Shifting Cloak(62) ; Dawn Armor(61) ; Shadowcraft Bracers(57) ; Devilsaur Gauntlets(58) ; Assassin's Waistguard(60) ; Warbear Woolies(57) ; Mongoose Boots(62) ; Initiate's Signet of Ferocity(63) ; White Bone Band(52) ; Cleansed Vilebranch Medallion(51) ; Molten Heart of the Mountain(55) ; Heartseeker(63) ; Masterwork Stormhammer(63) ; Vicious Throwing Stars(50)
+ILVL 58.5 epics 3
