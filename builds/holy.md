@@ -6,21 +6,21 @@ This file gives the best healing build on the live trees, the value of each heal
 
 | Trees | Build | Points | Code | Raid, 3 / 5 / 10 min | One tank, 3 / 5 / 10 min |
 | --- | --- | --- | --- | --- | --- |
-| Proposed | HB2 | 31/12/8 | [`v6p503201150021012512-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p503201150021012512-50122000000000002-0503) | 674 / 570 / 481 | 783 / 677 / 572 |
+| Proposed | HB2 | 31/12/8 | [`v6p50320115202101251-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50320115202101251-50122000000000002-0503) | 664 / 568 / 489 | 768 / 670 / 580 |
 | Live | HB1 | 38/5/8 | [`b250325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b250325115202121251-5-0503) | 629 / 533 / 450 | 732 / 633 / 534 |
 
 - Healing each sec after overhealing, 715 healing power, 225% critical heals (Holy Power 5/5, main hypothesis).
 - In both trees, all healing talents fit in 51 points. Thus, the best healing build takes all of them. The other points give only utility.
-- HB2 heals 7% more than HB1 with Lingering Light (C-H2). It takes Lingering Light in place of the 2 filler points in Holy Conduit. HB2 also takes Devoted Sacrifice (C-P11) and Protection saves in place of Improved Seals and Consecrated Ground.
+- HB2 heals 5–9% more than HB1 with Reverence 50% (C-H1). The gain increases with the fight length. HB2 also takes Devoted Sacrifice (C-P11) and Protection saves in place of Improved Seals and Consecrated Ground.
 - **Stat weights.** MP5 is the best stat for each point in all fight lengths (2.3–3.3 healing power). Intellect is about 1 healing power, crit rating 1.4–1.7 (part 3).
 
 ## 1. Builds
 
 ### Proposed: HB2
 
-[`v6p503201150021012512-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p503201150021012512-50122000000000002-0503) (31/12/8). This is HB2 of Analysis, Builds.
+[`v6p50320115202101251-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50320115202101251-50122000000000002-0503) (31/12/8). This is HB2 of Analysis, Builds.
 
-- Holy: Spiritual Focus 5, Healing Light 3, Reverence 2, Purifying Power 1, Divine Favor, Illumination 5, Infusion of Light 2, Oath of Light, Holy Shock, Boundless Light 2, Lingering Light 2, Holy Power 5, Light's Vigil.
+- Holy: Spiritual Focus 5, Healing Light 3, Reverence 2, Purifying Power 1, Divine Favor, Illumination 5, Infusion of Light 2, Oath of Light, Holy Shock, Boundless Light 2, Holy Conduit 2, Holy Power 5, Light's Vigil.
 - Protection: Divine Intellect 5, Precision 1, Guardian's Favor 2, Sacred Duty 2, Devoted Sacrifice 2.
 - Retribution: Benediction 5, Conviction 3.
 
@@ -30,16 +30,16 @@ This file gives the best healing build on the live trees, the value of each heal
 
 ### Points that the rows force
 
-- Light's Vigil (row 7) needs 30 Holy points in rows 1–6. In the live trees (HB1), Holy Conduit 2/2 fills rows 1–5. It gives only cheaper Consecration, Holy Wrath, Exorcism and Hammer of Wrath. In the proposed trees (HB2), Lingering Light (C-H2) takes these 2 points.
+- Light's Vigil (row 7) needs 30 Holy points in rows 1–6. In both trees, Holy Conduit 2/2 fills rows 1–5. It gives only cheaper Consecration, Holy Wrath, Exorcism and Hammer of Wrath.
 - The 3 Retribution points after Benediction go to Conviction 3/3: +6% critical chance, also more Illumination mana.
 
 ## 2. Value of each talent
 
-The healing without the talent, 5 min fight, against HB1. Lingering Light: against HB2.
+The healing without the talent, 5 min fight, against HB1. Reverence 50%: against HB2.
 
 | Talent | Raid | One tank |
 | --- | --- | --- |
-| Lingering Light 2/2 (C-H2, HB2 only) | −6.5% | −6.5% |
+| Reverence 50% in place of 30% (C-H1, HB2 only) | −6.2% | −5.5% |
 | Reverence 2/2 and Illumination 5/5 (Illumination needs Reverence) | −20.7% | −20.7% |
 | Holy Power 5/5 (225% critical heals) | −15.3% | −15.3% |
 | Illumination 5/5 | −11.9% | −11.9% |
@@ -70,7 +70,7 @@ Each stat + a small amount (40 healing power, Intellect or Spirit, 10 MP5, 14 cr
 
 - **MP5 has the most value in all cases.** Its value increases with the fight length.
 - **Intellect** gives mana and critical chance. In a short fight, the critical chance has more value.
-- **Spirit** has little value: Reverence keeps only 30% of the Spirit regeneration during casts.
+- **Spirit** has little value: Reverence keeps only 30% of the Spirit regeneration during casts. With Reverence 50% (HB2), Spirit is 0.57–0.84 healing power (5 min one tank: 0.60).
 - **Crit rating** gives larger heals (225%) and Illumination mana.
 
 ## 4. Gear

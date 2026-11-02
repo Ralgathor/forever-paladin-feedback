@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 12 changes and 1 move for the live trees. 4 changes are baseline spell changes (C1, C2, C4, C5). Shoulder the Burden (C-P5) is a new baseline spell. 7 changes are talent changes (C-H2, C-P1, C-P7, C-P11, C-P13, C-P14, C-R3). Devoted Sacrifice (C-P11), Reach of Law (C-P7) and Lingering Light (C-H2) are new talents. One move: Stoicism to row 4, column 4 (M-P2).
+- **Proposals:** 12 changes and 1 move for the live trees. 4 changes are baseline spell changes (C1, C2, C4, C5). Shoulder the Burden (C-P5) is a new baseline spell. 7 changes are talent changes (C-H1, C-P1, C-P7, C-P11, C-P13, C-P14, C-R3). Devoted Sacrifice (C-P11) and Reach of Law (C-P7) are new talents. One move: Stoicism to row 4, column 4 (M-P2).
 - **Adopted proposals:** the live version of 4 November 2026 adopts 6 earlier proposals (C3, the C-H1 move, the C-P5 removal, C-R1, M-H5 and M-R1).
 - **Talent calculator:** you can try the proposals and compare them with the live trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
@@ -32,7 +32,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 **Holy**
 
-- **C-H2 Lingering Light (new, row 5):** a critical heal also heals 10/20% of its amount over 6 sec. It gives about +5 points of raid healing, the largest Holy weakness. On one tank, the Paladin is 10–18% above the Druid (225% critical heal), below the 20% limit. At the low case (175%), it gives a first place in fights of 3 and 5 min. It needs 20 Holy points, thus hybrids cannot take it.
+- **C-H1 Reverence 25/50% (live: 15/30%, row 2):** more mana regeneration during casts, as the healer talents of the other classes (50%). Holy heals 5–9% more, most in long fights. On one tank, the Paladin is 12–17% above the Druid (225% critical heal), below the 20% limit. It has no link to critical heals, thus it does not depend on the Holy Power test. Retribution also takes it: +4–5% damage at fresh level 60 without buffs (wowsims), 0% with raid buffs.
 
 **Protection**
 
@@ -51,7 +51,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 | ID | Proposal | What the live version does |
 | --- | --- | --- |
 | C3 | Blessing of Light: removed | Blessing of Light and Greater Blessing of Light are removed. Oath of Light (new Holy talent) gives their bonus on one ally |
-| C-H1 (move) | Reverence to Holy row 2 | Reverence is in row 2. Its values are 15/30% |
+| C-H1 (move) | Reverence to Holy row 2 | Reverence is in row 2. Its values are 15/30%. The 25/50% part is a proposal (C-H1) |
 | C-P5 (removal) | Improved Seal of Fury: removed | Improved Seal of Fury is removed |
 | C-R1 | Conviction: attacks and spells | Conviction gives 2/4/6% critical chance with all spells and attacks |
 | M-H5 | Divine Precision: row 4, no requirement | Divine Precision is in row 4 with no requirement |

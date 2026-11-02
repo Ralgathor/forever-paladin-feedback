@@ -20,7 +20,7 @@ VALUE = {
     "prot": ("ds is rev hc di red pre sd tb ss sj irf ant hsh rec ic shs dsac def ben ij con sanj vin soc sa ths "
              "ven").split(),
 }
-PROP_FLAGS = {"ret": "C1", "prot": "C1,CP1,NOTOUGH"}  # Reckoning (C-P12: RK100,RKICD4) withdrawn on 2 November 2026
+PROP_FLAGS = {"ret": "C1,REV50", "prot": "C1,CP1,NOTOUGH"}  # Reckoning (C-P12: RK100,RKICD4) withdrawn on 2 November 2026
 NOISE = {"ret": 2.0, "prot": 0.004}
 
 def tree(mode):

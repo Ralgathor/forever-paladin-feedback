@@ -2,7 +2,7 @@
 
 **Question.** How well does the Holy Paladin heal against the other healers of Forever: Priest, Druid and Shaman?
 
-The design goal of Holy is a healer for long fights and the best healer on one target. It does not need to be the best raid healer. One Holy talent proposal stays: Lingering Light (C-H2). The other values are for the live Holy Paladin.
+The design goal of Holy is a healer for long fights and the best healer on one target. It does not need to be the best raid healer. One Holy talent proposal stays: Reverence 25/50% (C-H1). The other values are for the live Holy Paladin.
 
 All values are healing each sec after overhealing, at 715 healing power, from the healing model. A critical heal heals for 225% (Holy Power 5/5, main hypothesis since 2 November).
 
@@ -12,9 +12,9 @@ All values are healing each sec after overhealing, at 715 healing power, from th
 - **After a large hit on the tank, the Paladin is first with all cooldowns:** 18% above the Druid in the first 3 sec. With short cooldowns only, it is 2% below the Druid.
 - **In raids, the Paladin is the weakest healer:** 18–26% below the Druid, 8–13% below the Shaman and 34–41% below the Priest. This is accepted, because Holy is not a raid healer first.
 - **Why the Paladin is weak in raids.** Oath of Light helps only one ally. The other healers have strong cooldown heals for the raid: Prayer of Mending, Riptide, Swiftmend and Tranquility.
-- **The Paladin has the least mana.** Reverence keeps only 30% of the Spirit regeneration during casts. The other healers keep 50%.
+- **The Paladin has the least mana.** Reverence keeps only 30% of the Spirit regeneration during casts. The other healers keep 50%. Reverence 50% (C-H1) gives the same 50%.
 - **The one-tank result uses the 225% hypothesis.** Holy Power can change it. At 175%, the Paladin is 1–7% below the Druid. A live test must give the real value (Open items).
-- **Lingering Light (C-H2) is a proposal again (2 November).** On one tank, it gives +10–18% against the Druid at 225%. At 900 healing power, it reaches the 20% limit in fights of 5 min. Reverence 50% (C-H1) stays withdrawn.
+- **Reverence 50% (C-H1) is the Holy proposal (2 November).** It gives +4 to +7 points in raids and +12–17% against the Druid on one tank at 225%. It has no link to critical heals. Lingering Light (C-H2) is withdrawn.
 
 ## 1. Raid healing
 
@@ -82,7 +82,7 @@ The mana for a full fight: mana pool, MP5, Spirit regeneration during casts, pot
 | Paladin | 7,802 | 12.3 | 18,993 | 25,081 | 40,560 |
 
 - **The Paladin has the least mana:** 9% less than the Priest and 23% less than the Druid in fights of 3 min.
-- **The cause is Reverence.** It keeps 30% of the Spirit regeneration during casts. Meditation, Reflection and Mindfulness keep 50%.
+- **The cause is Reverence.** It keeps 30% of the Spirit regeneration during casts. Meditation, Reflection and Mindfulness keep 50%. Reverence 50% (C-H1) fixes this.
 - In raids, a Druid often gives Innervate to a Priest. The table gives it to the Druid.
 
 ## 5. Healing for each mana point
@@ -128,19 +128,20 @@ The Holy Power text says: "increases the critical heal bonus of Holy spells by 5
 
 ## 7. Options examined
 
-Lingering Light (C-H2) is a proposal. The other options are withdrawn (see Withdrawn ideas). The values use 225%.
+Reverence 50% (C-H1) is a proposal. The other options are withdrawn (see Withdrawn ideas). The values use 225%.
 
 | Option | Raid against the Druid, 3 / 5 / 10 min | One tank against the Druid, 3 / 5 / 10 min |
 | --- | --- | --- |
 | Live version | −26% / −23% / −26% | +8% / +10% / +3% |
-| **Lingering Light 2/2 (C-H2, proposal)** | **−21% / −17% / −20%** | **+15% / +18% / +10%** |
-| Reverence 50% (C-H1) | −22% / −18% / −19% | +13% / +17% / +12% |
+| **Reverence 50% (C-H1, proposal)** | **−22% / −18% / −19%** | **+13% / +17% / +12%** |
+| Lingering Light 2/2 (C-H2) | −21% / −17% / −20% | +15% / +18% / +10% |
 | Reverence 50% and Lingering Light 2/2 | −17% / −12% / −14% | +21% / +25% / +20% |
 | Boundless Light also +15% critical chance for Flash of Light | −16% / −8% / −10% | +8% / +10% / +3% |
 | Flash of Light +30% critical chance | −6% / +5% / +8% | +8% / +10% / +3% |
 
-- **C-H1 and C-H2 together** give 20–25% above the Druid on one tank, past the 20% limit. This was the reason to withdraw them on 31 October.
-- **Lingering Light alone** gives +15% / +18% / +10%, below the limit. At 900 healing power, it gives +16% / +20% / +12%: at the limit in fights of 5 min. At 175%, it gives +2% / +5% / −2%.
+- **C-H1 and C-H2 together** give 20–25% above the Druid on one tank, past the 20% limit. This was the reason to withdraw them on 31 October. Only one can stay.
+- **Reverence 50% alone** gives +13% / +17% / +12%, below the limit. At 900 healing power, it gives +14% / +19% / +14%. At 175%, it gives +1% / +5% / +1%.
+- **Lingering Light alone** gives about the same raid gain, but its value grows with the critical heal size. At 225% and at 175%, it gives +7 and +5 points on one tank. Reverence gives +5–9 and +4–8 points. Reverence has no link to critical heals, thus it is the proposal (decision of 2 November).
 - **Boundless Light for Flash of Light** changes only the raid values, because the tank has Oath of Light.
 - **Infusion of Light on all hits (C-H3)** adds nothing in the model, because the Paladin casts almost only Flash of Light.
 

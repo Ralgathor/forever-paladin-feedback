@@ -1,8 +1,8 @@
 """builds/holy.md on the beta of 30 October 2026: the value of each healing talent and the stat weights (model).
 Run: python3 holy_builds_b2.py ../healing
 
-Build HB1/HB2 (Analysis, Builds): all healing talents of the tree, as in healing_b2.py. The proposed trees have no
-Holy talent change, thus HB1 (beta) and HB2 (proposed, with Devoted Sacrifice) heal the same.
+Build HB1/HB2 (Analysis, Builds): all healing talents of the tree, as in healing_b2.py. HB2 (proposed) has Reverence
+25/50% (C-H1, rev=0.50). The talent values and stat weights are for HB1.
 Stat weights: each stat + a small amount, healing per sec after overhealing, divided by the gain of 1 healing power.
 Intellect: +15 mana and +1/60% critical chance for each point (healing_model: 438 Intellect = 7.3%).
 Critical chance: 14 rating = 1%. Spirit: Classic regeneration, 30% during casts (Reverence 2/2). The model has no haste.
@@ -41,9 +41,10 @@ TALENTS = (
 )
 
 if __name__ == "__main__":
-    print("## HB1/HB2, healing power 715: raid | one tank, healing each sec after overhealing")
+    print("## HB1 | HB2 (Reverence 50%), healing power 715: raid | one tank, healing each sec after overhealing")
     for T in (180, 300, 600):
-        print(f"  {T // 60} min: {hps(T, False):.0f} | {hps(T, True):.0f}")
+        print(f"  {T // 60} min: {hps(T, False):.0f} | {hps(T, True):.0f}  ||  "
+              f"{hps(T, False, rev=0.5):.0f} | {hps(T, True, rev=0.5):.0f}")
     print("\n## Value of each talent (5 min): raid | one tank")
     base = {t: hps(300, t) for t in (False, True)}
     # Divine Intellect 5/5: +10% Intellect (438 -> 398 without it)

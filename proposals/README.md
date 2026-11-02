@@ -33,7 +33,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 12 chan
 | C2 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
 | C4 | Hand of Sacrifice | Baseline spell | Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown | Up to 825 damage moves to you. Lasts 30 sec, 15 sec cooldown |
 | C5 | Hands: Sacrifice, Protection and Freedom | Baseline spells | Blessings of Sacrifice, Protection and Freedom use a Blessing slot | The spells take the name Hand of. No Blessing slot. One Hand from each Paladin on a target |
-| C-H2 | Lingering Light (new) | Holy, row 5 | — | 2 ranks: a critical heal also heals 10/20% of its amount over 6 sec |
+| C-H1 | Reverence | Holy, row 2 | 15/30% of the mana regeneration continues during casts | 25/50% |
 | C-P1 | Redoubt | Protection, row 1 | 10% chance when you are hit: +6–30% block | The same. Each Holy Shield cast also starts it |
 | C-P5 | Shoulder the Burden (new) | Baseline spell | — | 50% of the threat of an ally moves to you, 5 min cooldown |
 | C-P7 | Reach of Law (new) | Protection, row 5 | — | 2 ranks, requires Swift Judgement: Judgement and Swift Judgement range +5/10 yards while Seal of Fury is active |
@@ -48,7 +48,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 12 chan
 | ID | Proposal | What the live version does |
 | --- | --- | --- |
 | C3 | Blessing of Light: removed | Blessing of Light and Greater Blessing of Light are removed. Oath of Light (new Holy talent) gives their bonus on one ally |
-| C-H1 (move) | Reverence to Holy row 2 | Reverence is in row 2. Its values are 15/30% |
+| C-H1 (move) | Reverence to Holy row 2 | Reverence is in row 2. Its values are 15/30%. The 25/50% part is a proposal (C-H1) |
 | C-P5 (removal) | Improved Seal of Fury: removed | Improved Seal of Fury is removed |
 | C-R1 | Conviction: attacks and spells | Conviction gives 2/4/6% critical chance with all spells and attacks |
 | M-H5 | Divine Precision: row 4, no requirement | Divine Precision is in row 4 with no requirement |

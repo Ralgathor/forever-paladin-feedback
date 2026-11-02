@@ -11,7 +11,7 @@ The unit is mana each sec (MPS). A positive value means that the mana increases.
 - **Redoubt (C-P1) gives the tank more mana:** +4.9 to +8.3 MPS, because the tank blocks more.
 - **Consecration on cooldown empties the mana fast:** in 59 sec at fresh 60, and in about 3 min in Naxxramas (with Blessing of Wisdom). Use it against groups, not all the time.
 - **A tank that the boss does not hit loses mana at fresh 60:** −2.7 MPS with Blessing of Wisdom.
-- **Retribution loses mana because it changes Seals often.** The wowsims rotation (plan 1 + 3) empties the mana in 3 min 43 sec at fresh 60. In a 5 min fight, plan 3 + 3 costs 2.5% damage, but the mana lasts 8 min 45 sec.
+- **Retribution loses mana because it changes Seals often.** The wowsims rotation (plan 1 + 3) empties the mana in 3 min 43 sec at fresh 60. In a 5 min fight, plan 3 + 3 costs 2.5% damage, but the mana lasts 8 min 45 sec. With Reverence 50% (C-H1), plan 1 + 3 lasts 5 min 20 sec.
 - **Sanctified Judgement (C-R3) does not change the total at 3/3.** It gives more mana only at ranks 1 and 2.
 
 ## 1. Why mana is a problem
@@ -108,7 +108,7 @@ The wowsims default Retribution build (14/6/31) at fresh 60, with Blessing of Wi
 
 - **The best plan depends on the fight length.** 2 and 3 min fights: plan 1 + 3 at all gear levels. 5 min fights: plan 3 + 3 before raids, plan 1 + 3 from Molten Core.
 - **Unsealed Wrath has no Seal cost decrease (W29).** With −20% Seal cost, plan 1 + 3 lasts 5 min 40 sec. The damage in a 5 min fight increases by 2.6% at fresh 60 (see Damage).
-- **Reverence** needs 7 Holy points for 2/2. It gives 6.1 MPS at 130 Spirit.
+- **Reverence** needs 7 Holy points for 2/2. It gives 6.1 MPS at 130 Spirit. With Reverence 50% (C-H1), it gives 10.3 MPS, and plan 1 + 3 lasts 5 min 20 sec (+1.6–2.2 min at all gear levels).
 
 ## 4. What the results mean
 

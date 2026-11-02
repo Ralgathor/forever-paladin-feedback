@@ -9,16 +9,16 @@ This file gives the best damage builds on one target. It uses the live trees and
 | Live | Raid | RB1 | 14/6/31 | [`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351) | 910 |
 | Proposed | Raid | RB1 | 14/6/31 | [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 960 |
 | Live | Fresh 60 | RB1 | 14/6/31 | [`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351) | 303 |
-| Proposed | Fresh 60 | RB1 | 14/6/31 | [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 324 |
+| Proposed | Fresh 60 | RB1 | 14/6/31 | [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 337 |
 
 - **RB1 is the best build in all four cases.** It is the wowsims default build of 1 November and RB1 of Analysis, Builds. The talent search found raid builds with at most +0.6%. These builds are 2–5% worse at fresh 60 (part 2).
 - **"Raid"** is full raid buffs and debuffs, with consumables. **"Fresh 60"** is no buffs, no debuffs and no consumables.
-- **Proposed against live.** The Holy Strike Seal trigger (C1) gives +5.5% in a raid and +6.8% at fresh 60. No other proposal changes the Retribution talents.
+- **Proposed against live.** The Holy Strike Seal trigger (C1) gives +5.5% in a raid and +6.8% at fresh 60. Reverence 50% (C-H1) adds +4.0% at fresh 60 (more mana), and 0% in a raid. Together: +5.5% in a raid and +11.2% at fresh 60.
 - **Stat weights.** In a raid, Expertise rating is the best stat for each point (2.1 Strength). Crit rating and Haste rating are about 1 Strength. At fresh 60, Haste rating and Intellect have more value (part 3).
 
 ## 1. Method
 
-- **Sim.** wowsims Forever, master of 1 November 2026 (commit 895cd67f9), with `models/wowsims-b2/talents.patch`. The proposed trees use the flag C1. The other kept proposals do not change Retribution damage.
+- **Sim.** wowsims Forever, master of 1 November 2026 (commit 895cd67f9), with `models/wowsims-b2/talents.patch`. The proposed trees use the flags C1 and REV50 (Reverence 25/50%, since 2 November). The other kept proposals do not change Retribution damage. The talent search ran before REV50, with Reverence 30%.
 - **Fight.** 3 min, one level 63 boss, 3,000 iterations, the same random seed for all runs.
 - **Gear and rotation.** The default Retribution gear set and the default rotation of wowsims Forever. This folder has no gear search.
 - **Talent search.** A hill climb (`models/wowsims-b2/search.py`). Each step tests all moves of 1 point into a talent with damage value, at 1,000 iterations. It keeps the best move. A round with moves of 2 points then tests the best moves at 250 iterations, and the 6 best again at 2,000. The best builds then run at 3,000 iterations. The logs are `search_ret-*.log`.

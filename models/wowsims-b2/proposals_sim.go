@@ -20,6 +20,11 @@ func proposeFlag(f string) bool {
 }
 
 func (paladin *Paladin) applySimProposals() {
+	// C-H1 Reverence 25/50% (REV50): +10% of the mana regeneration during casts for each rank (live: 15/30%).
+	if proposeFlag("REV50") && paladin.Talents.Reverence > 0 {
+		paladin.PseudoStats.SpiritRegenRateCasting += 0.10 * float64(paladin.Talents.Reverence)
+	}
+
 	// C1: Holy Strike triggers your active Seal the same as a melee attack (Command, Righteousness, Fury).
 	// It stores and consumes no Unsealed Wrath copy.
 	if proposeFlag("C1") {

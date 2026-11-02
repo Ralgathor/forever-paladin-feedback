@@ -7,6 +7,7 @@ The analysis examined these ideas and rejected them. They are not proposals.
 | Earlier proposal (ID) | Why it was withdrawn |
 | --- | --- |
 | Reckoning: 20–100% chance after a block, once each 4 sec (C-P12) | It gave only threat: +3% in wowsims. With Redoubt (C-P1) and C1, the proposed tank already has 109% of the Warrior threat. With C-P12, it had 112%. In raids, the live block trigger (8–40%, once each 1.5 sec) gives about 5 extra attacks each min. This is enough |
+| Lingering Light: critical heals also heal 10/20% of the amount over 6 sec (C-H2) | Replaced by Reverence 50% (C-H1). Lingering Light adds a heal to each critical heal, and Holy Power already increases the critical heals. Thus, its value depends on the Holy Power test. Reverence 50% gives the same raid gain (+4 to +7 points) and has no link to critical heals. With both, the tank lead is 20–25% above the Druid, past the limit |
 
 ## Withdrawn on 31 October 2026: the new live trees
 
@@ -34,7 +35,6 @@ The live version (4 November 2026) changes the three trees. These proposals are 
 | Blessing of Light uses no Blessing slot (C3a) | Blessing of Light is removed |
 | The Blessing of Light bonus goes into the base heals (C3b) | Blessing of Light is removed. Oath of Light gives its bonus on one ally |
 | Infusion of Light: no critical hit necessary, Holy Strike added (C-H3) | No change to sustained healing, because mana limits Holy Light. It added only burst on one tank: 6 sec after a large hit, 10% above the Druid with short cooldowns (live: 2% below, at 225%; at 200%: 6% below). The live version already meets the single-target goal with Divine Favor (decision of 31 October) |
-| Reverence: 25/50% of mana regeneration during casts (C-H1) | The live version moved Reverence to row 2 (adopted). The 25/50% part aimed at the raid gap. Holy is the best single-target healer, and the raid gap is accepted (decision of 31 October). The live version already meets the single-target goal |
 | Healing Light: 10/20/30% (C-H4) | Oath of Light does not change (decision of 31 October). It gives the Blessing of Light bonus on one ally. Healing Light keeps 4/8/12% |
 | Burning Zeal: +10/20% critical damage bonus for Seals, Judgements and Holy Strike (C-R4) | Withdrawn by decision of 31 October. It gave +0.8–1.4% damage (model) and +1.9–2.4% (wowsims). With the wowsims update of 1 November and the wowsims rotation, the live version is at the hybrid target at all gear levels (96% in Naxxramas). C1 alone gives 105% → 101%. Retribution keeps the 44 points of the live version |
 | Boundless Light: also +15/30% critical chance for Flash of Light | Withdrawn by decision of 31 October. Flash of Light is almost all raid casts. Raid healing +36% at 5 min, above the Druid and the Shaman (+15% version: +18%). The tank healing does not change, because the tank has the Oath of Light. **Note for after the Holy Power test:** if a critical heal is 175–200%, examine this idea again. At 200%, Flash of Light +7.5/15% gives the Shaman level (589, Shaman 599, Druid 689). At 175%, it gives back the raid place of 225% |
@@ -49,7 +49,7 @@ The live version (4 November 2026) changes the three trees. These proposals are 
 | Holy Shield +35% or +40% block | With the Redoubt trigger, +30% already gives the same result as the Warrior. +35% is better than the Warrior. +40% also removes critical hits below 440 Defense |
 | Holy Strike critical hits reset Hammer of Wrath | Hammer of Wrath has a 6 sec cooldown, shorter than the 10 sec of Holy Strike. It works only below 20% health: about +1 damage per sec |
 | Champion of the Light adds healing | At 60% of Intellect, it gives the same healing as deep Holy. Holy Paladins then go into Retribution. Possible at 10/20/30%, because Healing Light (C-H4) is too deep for a Retribution hybrid |
-| Sacred Ward (critical heals add a shield) | The same talent as Divine Aegis (Priest). Lingering Light (C-H2) replaces it |
+| Sacred Ward (critical heals add a shield) | The same talent as Divine Aegis (Priest). Lingering Light (C-H2) replaced it, and Lingering Light is now also withdrawn |
 | Other ideas for the new Holy talent (heal splash, aura bonus, Cleanse, Lay on Hands) | Too modern, or utility and not healing |
 | Consecrated Ground in Holy row 3 (live: row 5) | In row 3, Retribution takes it with 12 Holy points. With Consecration on cooldown, Retribution is then 109–118% of the pure average in a 3 min fight (W16). In row 5, only Holy Shock builds reach it, as in the live design. Tanks lose 8–9% threat with Consecration. On each add, they still have about 1.4–1.8 times the threat of the Warrior and the Druid (estimate, 4 mobs) |
 | Steadfast Faith (stun duration) in Protection row 1 | Two talents against crowd control. Other classes have one |
