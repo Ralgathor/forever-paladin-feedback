@@ -13,7 +13,7 @@ All values are healing each sec after overhealing, at 715 healing power, from th
 - **In raids, the Paladin is the weakest healer:** 22–30% below the Druid, 13–17% below the Shaman and 37–44% below the Priest. This is accepted, because Holy is not a raid healer first.
 - **Why the Paladin is weak in raids.** Oath of Light helps only one ally. The other healers have strong cooldown heals for the raid: Prayer of Mending, Riptide, Swiftmend and Tranquility.
 - **The Paladin has the least mana.** Reverence keeps only 30% of the Spirit regeneration during casts. The other healers keep 50%.
-- **Holy Power decides the one-tank result.** At 225%, the Paladin is 3–10% above the Druid. At 175%, it is 1–7% below. A live test must give the real value (Open items).
+- **The one-tank result uses the 200% hypothesis.** Holy Power can change it. At 225%, the Paladin is 3–10% above the Druid. At 175%, it is 1–7% below. A live test must give the real value (Open items).
 - **No Holy proposal for now (decision of 1 November).** Reverence 50% (C-H1) and Lingering Light (C-H2) stay withdrawn until the Holy Power test.
 
 ## 1. Raid healing
