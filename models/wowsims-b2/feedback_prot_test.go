@@ -38,6 +38,17 @@ func TestFeedbackRun(t *testing.T) {
 	}
 	enc := core.MakeSingleTargetEncounter(5)
 	enc.Duration = dur
+	// FEEDBACK_BOSS: "fast" = a swing each 1.2 sec with 60% damage (same damage each sec), "dw" = a boss with two weapons.
+	if v := os.Getenv("FEEDBACK_BOSS"); v != "" {
+		for _, tg := range enc.Targets {
+			if strings.Contains(v, "fast") {
+				tg.SwingSpeed, tg.MinBaseDamage = 1.2, tg.MinBaseDamage*0.6
+			}
+			if strings.Contains(v, "dw") {
+				tg.DualWield = true
+			}
+		}
+	}
 	ntg := 1
 	if v := os.Getenv("FEEDBACK_TARGETS"); v != "" {
 		ntg, _ = strconv.Atoi(v)
