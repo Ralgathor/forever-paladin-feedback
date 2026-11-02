@@ -20,6 +20,7 @@ type job struct {
 	Iters int32             `json:"iters"`
 	Dur   float64           `json:"dur"`
 	Cons  bool              `json:"cons"`
+	Dir   string            `json:"dir"`
 	Bonus map[int]float64   `json:"bonus"`
 	Pseudo map[int]float64  `json:"pseudo"`
 	Dps   float64           `json:"dps"`
@@ -36,7 +37,8 @@ func load(f string) *proto.RaidSimRequest {
 }
 
 func one(j *job, ret *proto.RaidSimRequest) {
-	r := load("/tmp/zzdump/Test" + j.Spec + "-Average-Default.json")
+	d := "/tmp/zzdump"; if j.Dir != "" { d = j.Dir }
+	r := load(d + "/Test" + j.Spec + "-Average-Default.json")
 	p := r.Raid.Parties[0].Players[0]
 	if j.Items != nil { p.Equipment = &proto.EquipmentSpec{Items: j.Items} }
 	if !j.Cons {
