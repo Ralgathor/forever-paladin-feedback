@@ -2,6 +2,12 @@
 
 The analysis examined these ideas and rejected them. They are not proposals.
 
+## Withdrawn on 2 November 2026
+
+| Earlier proposal (ID) | Why it was withdrawn |
+| --- | --- |
+| Reckoning: 20–100% chance after a block, once each 4 sec (C-P12) | It gave only threat: +3% in wowsims. With Redoubt (C-P1) and C1, the proposed tank already has 109% of the Warrior threat. With C-P12, it had 112%. In raids, the live block trigger (8–40%, once each 1.5 sec) gives about 5 extra attacks each min. This is enough |
+
 ## Withdrawn on 31 October 2026: the new live trees
 
 The live version (4 November 2026) changes the three trees. These proposals are now unnecessary, or their place in the tree is gone. The earlier ID stays reserved. The Analysis tabs still use it.

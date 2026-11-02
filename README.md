@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 10 changes for the live trees. 4 changes are baseline spell changes (C1, C2, C4, C5). Shoulder the Burden (C-P5) is a new baseline spell. 5 changes are talent changes (C-P1, C-P11, C-P12, C-P13, C-R3). Devoted Sacrifice (C-P11) is a new talent. No Holy talent change and no move is open now.
+- **Proposals:** 9 changes for the live trees. 4 changes are baseline spell changes (C1, C2, C4, C5). Shoulder the Burden (C-P5) is a new baseline spell. 4 changes are talent changes (C-P1, C-P11, C-P13, C-R3). Devoted Sacrifice (C-P11) is a new talent. No Holy talent change and no move is open now.
 - **Adopted proposals:** the live version of 4 November 2026 adopts 6 earlier proposals (C3, the C-H1 move, the C-P5 removal, C-R1, M-H5 and M-R1).
 - **Talent calculator:** you can try the proposals and compare them with the live trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
@@ -38,7 +38,6 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 - **C-P1 Redoubt:** each Holy Shield cast also starts it. In wowsims, crushing blows decrease from 12.0% to 0.9% of the boss attacks (Warrior: 1.1%).
 - **C-P11 Devoted Sacrifice (new, row 3):** Lay on Hands drains only 75/50% of your current mana (live: all of it). You also take 20/40% less damage from your Hand of Sacrifice. Alternative C-P11a: the spell drains 50% for all Paladins.
-- **C-P12 Reckoning:** 20–100% chance after a block, once each 4 sec (live: 8–40%, once each 1.5 sec). The critical hit trigger does not change.
 - **C-P13 Toughness:** removed. Devoted Sacrifice (C-P11) takes its place in row 3. Protection then has 46 points (live: 49).
 
 **Retribution**
@@ -61,7 +60,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 - **[Proposals](proposals/README.md).** The full document, in one file for each part. For each proposal, it gives the live text, the proposed text, the reason and the model talent from another class. It also gives the analysis, the test results and the open questions.
 - **[Talent calculator](calculator/index.html).** Live version: https://ralgathor.github.io/forever-paladin-feedback/calculator/
   - The calculator opens with the proposed trees of version 6 (31 October 2026). These trees change the live trees. Push **Live** to see the live trees.
-  - A purple tag (C-P1, C-P12…) shows a changed or new talent.
+  - A purple tag (C-P1, C-P11…) shows a changed or new talent.
   - **Build codes.** A code that starts with `v6p` opens a proposed build. A code that starts with `b2` opens a build in the live trees. A code with only digits is a build in the beta trees of 18 October 2026. It opens on the page of that beta: https://ralgathor.github.io/forever-paladin-feedback/calculator/beta1/
   - **Versions.** Use the Version list to open an earlier version of the proposed trees. Versions 1 to 5 use the beta trees of 18 October 2026. Each earlier version has a frozen page. A code of an earlier version opens on its page.
 

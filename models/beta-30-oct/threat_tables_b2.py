@@ -2,7 +2,7 @@
 Run: python3 threat_tables_b2.py ..   (the models folder of the repository)
 
 Beta tank: B2T 0/38/13 (threat_b2.py). Proposed tank: the same talents with the kept proposals:
-Holy Strike Seal trigger (C1), Personal Judgement of the Crusader (C2), Redoubt (C-P1) and Reckoning (C-P12).
+Holy Strike Seal trigger (C1), Personal Judgement of the Crusader (C2), Redoubt (C-P1). Reckoning (C-P12) was withdrawn on 2 November 2026: part 4 still shows its value.
 Toughness removal (C-P13) does not change threat. The Warrior and the Druid come from models/threat/threat_model.py.
 Several targets: the rules of models/threat/multi_target.py, with the Holy Shield of the beta of 30 October.
 """
@@ -14,7 +14,7 @@ import threat_model as T
 import multi_target as MT
 from threat_b2 import paladin_b2, B2T
 
-PROP = ("C1", "CP1", "CP12")
+PROP = ("C1", "CP1")  # Reckoning (C-P12) withdrawn on 2 November 2026
 pct = lambda a, b: f"{a / b:.0%}"
 
 def beta(g, **kw): return paladin_b2(g, **kw)

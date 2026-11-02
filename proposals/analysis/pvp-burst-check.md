@@ -8,7 +8,7 @@
 
 - **The proposals add only 3–5% to the burst.** All of it comes from the Holy Strike Seal trigger (C1): Holy Strike now has a Seal of Command chance.
 - **The largest burst does not change.** It is the "Reckoning bomb" with a two-hand weapon: about 3,630 damage in the live version, 3,740 with the proposals.
-- **Reckoning (C-P12) does not change the two-hand bomb.** With a shield, it gives the 4 charges 1–3 sec sooner. But a one-hand weapon does less damage.
+- **Reckoning (C-P12) was withdrawn on 2 November 2026.** It did not change the two-hand bomb. With a shield, it gave the 4 charges 1–3 sec sooner (part 3).
 - **No change to the proposals is necessary.** Watch the bomb in the live version (W6, W26).
 
 ## 1. Builds
@@ -26,7 +26,7 @@
 | Case | Reckoning bomb, no stored attacks | Reckoning bomb, 4 stored attacks | Unsealed Wrath |
 | --- | --- | --- | --- |
 | Live | 2,070 | 3,630 | 2,400 |
-| Proposed (C1, C-P12) | 2,180 (+5%) | 3,740 (+3%) | 2,510 (+5%) |
+| Proposed (C1) | 2,180 (+5%) | 3,740 (+3%) | 2,510 (+5%) |
 
 - **Each extra attack** does about 390 damage. 4 stored attacks add about 1,560.
 - **C1** gives Holy Strike a Seal of Command chance: about +110 damage.
@@ -38,21 +38,22 @@ Reckoning 5/5, one melee attacker with an attack each 1.5 sec.
 
 | Case | Charges each min | Time to 4 charges |
 | --- | --- | --- |
-| Two-hand weapon, live and C-P12 | 8.0 | 30 sec |
+| Two-hand weapon, live | 8.0 | 30 sec |
 | Shield, 35% block, live | 13.2 | 18 sec |
-| Shield, 35% block, C-P12 | 16.0 | 15 sec |
+| Shield, 35% block, C-P12 (withdrawn) | 16.0 | 15 sec |
 | Shield, 60% block (Redoubt, C-P1), live | 16.6 | 14 sec |
-| Shield, 60% block (Redoubt, C-P1), C-P12 | 18.4 | 13 sec |
+| Shield, 60% block (Redoubt, C-P1), C-P12 (withdrawn) | 18.4 | 13 sec |
 
-- **Two-hand weapon:** no shield, thus no blocks. Only critical hits give charges. C-P12 does not change the bomb.
-- **Shield:** C-P12 gives the 4 charges 1–3 sec sooner. But 4 stored one-hand attacks add only about 1,050 damage, against 1,560 with a two-hand weapon.
+- **Two-hand weapon:** no shield, thus no blocks. Only critical hits give charges.
+- **Shield:** Redoubt (C-P1) gives the 4 charges 4 sec sooner. But 4 stored one-hand attacks add only about 1,050 damage, against 1,560 with a two-hand weapon.
+- **C-P12 (withdrawn)** gave the 4 charges 1–3 sec sooner with a shield.
 
 ## 4. Changes since the check of 18 October
 
 - Two-Handed Weapon Specialization now increases only physical damage. It does not increase Seals, Judgements and the Holy damage of Holy Strike.
 - Conviction 3/3 gives +6% critical chance (26% in the model).
 - Improved Hammer of Justice 3/3 gives a 45 sec cooldown.
-- Reckoning (C-P12) replaces the withdrawn Reckoning proposal (C-P6). The stored attacks still hit on the next auto attack, as in the beta.
+- Reckoning (C-P12) replaced the withdrawn Reckoning proposal (C-P6). C-P12 was also withdrawn on 2 November 2026. Reckoning now works as in the live version.
 
 ## 5. Earlier check: Reckoning (C-P6), beta of 18 October
 
