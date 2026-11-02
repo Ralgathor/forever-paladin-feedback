@@ -2,7 +2,7 @@
 
 The live version changes most of the Holy tree. Oath of Light, Boundless Light and the new Holy Power make the Paladin the best healer on one tank. This is the design goal of Holy. In raids, the Paladin stays below the other healers (see Beta test results). This is accepted, because Holy is not a raid healer first. One Holy proposal stays: Lingering Light (C-H2). The spell changes (C1, C2, C4, C5) also apply to Holy.
 
-- A larger lead on one tank, and a first place in all fight lengths at the low case of Holy Power (Lingering Light, C-H2).
+- About +5 points of raid healing, a safe first place on one tank at the low case of Holy Power, and a tank lead below the 20% limit (Lingering Light, C-H2).
 
 ## Holy layout
 
@@ -24,7 +24,10 @@ The live version changes most of the Holy tree. Oath of Light, Boundless Light a
 - **Proposed text.** "Your non-periodic critical heals also heal the target for 10/20% of the amount over 6 sec. A new critical heal adds to the heal that remains." 2 ranks.
 - **Position.** Row 5, column 4. It needs 20 Holy points. Thus, only a Holy build takes it. A hybrid with 10–14 Holy points (for example Retribution RB1) cannot take it.
 - **Cost for Holy.** None. HB2 had 2 filler points in Holy Conduit, only to open Light's Vigil (row 7). Lingering Light takes these 2 points. Rows 1–4 still give 20 points, and rows 1–6 still give 30.
-- **Problem.** With a 225% critical heal (main hypothesis), the live Paladin is first on one tank in all fight lengths, but only by 3% in fights of 10 min. At a 175% critical heal, the Druid is first in all fight lengths.
+- **Problem.** With a 225% critical heal (main hypothesis), the live Paladin is first on one tank in all fight lengths. Thus, the tank lead is not the reason for C-H2 now. Three reasons stay:
+  - **Raids.** The Paladin is 18–26% below the Druid in raids. This gap is the largest Holy weakness. Lingering Light gives about +5 points.
+  - **Low case.** The 225% value is a hypothesis from the game files. At 175%, the Druid is first on one tank in all fight lengths. Lingering Light then gives the Paladin a first place in fights of 3 and 5 min.
+  - **Limit.** At 225%, the tank lead stays below the 20% limit (W14).
 - **Change.** A critical heal also heals 10/20% of its amount over 6 sec. The heal over time can also be a critical heal.
 - **Model.** Divine Aegis (Priest) and Living Seed (Druid) add an effect to critical heals.
 
