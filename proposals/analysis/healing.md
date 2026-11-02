@@ -2,7 +2,7 @@
 
 **Question.** How well does the Holy Paladin heal against the other healers of Forever: Priest, Druid and Shaman?
 
-The design goal of Holy is a healer for long fights and the best healer on one target. It does not need to be the best raid healer. No Holy talent proposal stays. Thus, the proposed Holy Paladin is the live Holy Paladin.
+The design goal of Holy is a healer for long fights and the best healer on one target. It does not need to be the best raid healer. One Holy talent proposal stays: Lingering Light (C-H2). The other values are for the live Holy Paladin.
 
 All values are healing each sec after overhealing, at 715 healing power, from the healing model. A critical heal heals for 200% (Holy Power 5/5, main hypothesis).
 
@@ -14,7 +14,7 @@ All values are healing each sec after overhealing, at 715 healing power, from th
 - **Why the Paladin is weak in raids.** Oath of Light helps only one ally. The other healers have strong cooldown heals for the raid: Prayer of Mending, Riptide, Swiftmend and Tranquility.
 - **The Paladin has the least mana.** Reverence keeps only 30% of the Spirit regeneration during casts. The other healers keep 50%.
 - **The one-tank result uses the 200% hypothesis.** Holy Power can change it. At 225%, the Paladin is 3–10% above the Druid. At 175%, it is 1–7% below. A live test must give the real value (Open items).
-- **No Holy proposal for now (decision of 1 November).** Reverence 50% (C-H1) and Lingering Light (C-H2) stay withdrawn until the Holy Power test.
+- **Lingering Light (C-H2) is a proposal again (2 November).** On one tank, it gives +4–11% against the Druid at 200%, thus a first place in all fight lengths. At 225%, it gives +10–18%, below the 20% limit. Reverence 50% (C-H1) stays withdrawn.
 
 ## 1. Raid healing
 
@@ -120,20 +120,21 @@ The Holy Power text says: "increases the critical heal bonus of Holy spells by 5
 - **At 175%,** the Druid is first in fights of 3 and 10 min. The design goal is not reached.
 - **The test (Open items):** take Holy Power 5/5, cast Divine Favor, then Holy Light on a target with no Oath of Light. Compare the heal with the tooltip average: 2 times is 200%, 2.25 times is 225%, 1.75 times is 175%.
 
-## 7. Options examined (withdrawn)
+## 7. Options examined
 
-These options are withdrawn (see Withdrawn ideas). The values at 200% are here for a decision after the Holy Power test.
+Lingering Light (C-H2) is a proposal. The other options are withdrawn (see Withdrawn ideas). The values at 200% are here for a decision after the Holy Power test.
 
 | Option | Raid against the Druid, 3 / 5 / 10 min | One tank against the Druid, 3 / 5 / 10 min |
 | --- | --- | --- |
 | Live version | −30% / −27% / −29% | +2% / +5% / −2% |
-| Lingering Light 2/2 (C-H2) | −26% / −22% / −25% | +8% / +11% / +4% |
+| **Lingering Light 2/2 (C-H2, proposal)** | **−26% / −22% / −25%** | **+8% / +11% / +4%** |
 | Reverence 50% (C-H1) | −26% / −22% / −23% | +7% / +11% / +6% |
 | Reverence 50% and Lingering Light 2/2 | −22% / −17% / −18% | +14% / +18% / +13% |
 | Boundless Light also +15% critical chance for Flash of Light | −21% / −15% / −16% | +2% / +5% / −2% |
 | Flash of Light +30% critical chance | −13% / −3% / 0% | +2% / +5% / −2% |
 
-- **C-H1 and C-H2 together** give 13–18% above the Druid on one tank, below the 20% limit. At 225%, they gave 20–25%, past the limit. This was the reason to withdraw them.
+- **C-H1 and C-H2 together** give 13–18% above the Druid on one tank, below the 20% limit. At 225%, they gave 20–25%, past the limit. This was the reason to withdraw them on 31 October.
+- **Lingering Light alone** gives +15% / +18% / +10% at 225% and +2% / +5% / −2% at 175%. It stays below the limit in all three cases. Thus, it is a proposal again.
 - **Boundless Light for Flash of Light** changes only the raid values, because the tank has Oath of Light.
 - **Infusion of Light on all hits (C-H3)** adds nothing in the model, because the Paladin casts almost only Flash of Light.
 

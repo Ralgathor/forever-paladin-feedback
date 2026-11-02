@@ -15,7 +15,7 @@ This tab uses the proposed trees of calculator version 6 (the live version, with
 - **Rule 1 works.** Each tree gives something to two specs, except Holy for the tank. The tank already takes 17 points in Retribution.
 - **Rule 2 works for Holy and Protection.** Retribution row 3 is only for Retribution and PvP.
 - **Rule 3 works.** Most Paladin talents are equal to the talents of other classes. The stronger ones are intentional or Classic values.
-- **The Paladin has the fewest points of all classes:** 138 with the proposals. This is not a problem: the trees have as many talents as the other classes. Fewer ranks leave more points for the dips into other trees.
+- **The Paladin has few points:** 140 with the proposals, between the Rogue (139) and the Mage (143). This is not a problem: the trees have as many talents as the other classes. Fewer ranks leave more points for the dips into other trees.
 
 ## 1. How the other classes use rows 1–3
 
@@ -76,10 +76,10 @@ This tab uses the proposed trees of calculator version 6 (the live version, with
 | Mage | Arcane 49 | Fire 46 | Frost 48 | 143 |
 | Rogue | Assassination 48 | Combat 44 | Subtlety 47 | 139 |
 | **Paladin, live** | Holy 46 | Protection 49 | Retribution 44 | **139** |
-| **Paladin, proposed** | Holy 46 | Protection 48 | Retribution 44 | **138** |
+| **Paladin, proposed** | Holy 48 | Protection 48 | Retribution 44 | **140** |
 
 - **The other classes have 139–150 points** (mean 146). The live Paladin is equal to the Rogue.
-- **With the proposals, the Paladin has 138 points.** Toughness removal (C-P13) deletes 5 ranks. Devoted Sacrifice (C-P11) and Reach of Law (C-P7) add 2 each.
+- **With the proposals, the Paladin has 140 points.** Toughness removal (C-P13) deletes 5 ranks. Devoted Sacrifice (C-P11), Reach of Law (C-P7) and Lingering Light (C-H2) add 2 each.
 - **The small total is not a problem.** Each Paladin tree has 17 or 18 talents, as the other classes. Fewer ranks leave more points for dips: Holy takes 20 points outside its tree, the tank 17 and Retribution 19.
 - **Do not add ranks to reach the other totals.** New ranks become stat filler, as Toughness was.
 
@@ -87,12 +87,12 @@ This tab uses the proposed trees of calculator version 6 (the live version, with
 
 | Tree | Rows 1–7 | Rows 1–3 | Rows 4–6 |
 | --- | --- | --- | --- |
-| Holy | 10 / 12 / 8 / 5 / 5 / 5 / 1 | 30 | **15** |
+| Holy | 10 / 12 / 8 / 5 / 7 / 5 / 1 | 30 | 17 |
 | Protection | 10 / 7 / 8 / 11 / 8 / 3 / 1 | 25 | 22 |
 | Retribution | 10 / 8 / 8 / 6 / 6 / 5 / 1 | 26 | 17 |
 | Mean of the other 24 trees | — | 28.6 | 19.1 |
 
-- **Holy rows 4–6 have only 15 points,** equal to the lowest other tree (Discipline). A deep Holy build takes almost all of them. This causes the 2 filler points of HB2 (Holy Conduit).
+- **Holy rows 4–6 have 17 points** with Lingering Light (C-H2). The live trees have 15, equal to the lowest other tree (Discipline). The 15 points caused 2 filler points in HB2 (Holy Conduit). Lingering Light takes these 2 points.
 - **Protection and Retribution** are in the range of the other trees.
 
 ## 6. Limits

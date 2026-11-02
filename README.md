@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 11 changes and 1 move for the live trees. 4 changes are baseline spell changes (C1, C2, C4, C5). Shoulder the Burden (C-P5) is a new baseline spell. 6 changes are talent changes (C-P1, C-P7, C-P11, C-P13, C-P14, C-R3). Devoted Sacrifice (C-P11) and Reach of Law (C-P7) are new talents. One move: Stoicism to row 4, column 4 (M-P2). No Holy talent change is open now.
+- **Proposals:** 12 changes and 1 move for the live trees. 4 changes are baseline spell changes (C1, C2, C4, C5). Shoulder the Burden (C-P5) is a new baseline spell. 7 changes are talent changes (C-H2, C-P1, C-P7, C-P11, C-P13, C-P14, C-R3). Devoted Sacrifice (C-P11), Reach of Law (C-P7) and Lingering Light (C-H2) are new talents. One move: Stoicism to row 4, column 4 (M-P2).
 - **Adopted proposals:** the live version of 4 November 2026 adopts 6 earlier proposals (C3, the C-H1 move, the C-P5 removal, C-R1, M-H5 and M-R1).
 - **Talent calculator:** you can try the proposals and compare them with the live trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
@@ -32,7 +32,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 **Holy**
 
-- No Holy talent change. Oath of Light, Boundless Light and the new Holy Power make the Paladin the best healer on one tank. The spell changes still apply to Holy.
+- **C-H2 Lingering Light (new, row 5):** a critical heal also heals 10/20% of its amount over 6 sec. With it, the Paladin is first on one tank in all fight lengths (+4–11% against the Druid at a 200% critical heal). It needs 20 Holy points, thus hybrids cannot take it.
 
 **Protection**
 

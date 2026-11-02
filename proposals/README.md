@@ -1,6 +1,6 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 11 changes and 1 move. The proposals use the live trees of 4 November 2026. The live version adopts 6 earlier proposals, and makes 20 others unnecessary. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same game build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 12 changes and 1 move. The proposals use the live trees of 4 November 2026. The live version adopts 6 earlier proposals, and makes 20 others unnecessary. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same game build as a model.
 
 **Contents**
 
@@ -33,6 +33,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 11 chan
 | C2 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
 | C4 | Hand of Sacrifice | Baseline spell | Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown | Up to 825 damage moves to you. Lasts 30 sec, 15 sec cooldown |
 | C5 | Hands: Sacrifice, Protection and Freedom | Baseline spells | Blessings of Sacrifice, Protection and Freedom use a Blessing slot | The spells take the name Hand of. No Blessing slot. One Hand from each Paladin on a target |
+| C-H2 | Lingering Light (new) | Holy, row 5 | — | 2 ranks: a critical heal also heals 10/20% of its amount over 6 sec |
 | C-P1 | Redoubt | Protection, row 1 | 10% chance when you are hit: +6–30% block | The same. Each Holy Shield cast also starts it |
 | C-P5 | Shoulder the Burden (new) | Baseline spell | — | 50% of the threat of an ally moves to you, 5 min cooldown |
 | C-P7 | Reach of Law (new) | Protection, row 5 | — | 2 ranks, requires Swift Judgement: Judgement and Swift Judgement range +5/10 yards while Seal of Fury is active |

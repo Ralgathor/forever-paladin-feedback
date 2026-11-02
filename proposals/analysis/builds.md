@@ -7,7 +7,7 @@ The builds use the proposed trees of calculator version 6 (the live version, wit
 ## Short answer
 
 - **Each spec has a clear main build.** Each role also has real choices: saves, mana and PvP control.
-- **Holy (HB2)** takes Devoted Sacrifice (C-P11) with 12 Protection points. Toughness removal (C-P13) moves Devoted Sacrifice to row 3. Thus, the healer loses no healing talent.
+- **Holy (HB2)** takes Lingering Light (C-H2) and Devoted Sacrifice (C-P11) with 12 Protection points. Toughness removal (C-P13) moves Devoted Sacrifice to row 3. Thus, the healer loses no healing talent.
 - **Protection (PT1)** puts 34 points in Protection for Shieldsworn and all tank talents. The other 17 points go to Retribution rows 1–2.
 - **Retribution (RB1)** needs 31 points for Unsealed Wrath. The other 20 points go to Holy (Improved Seals, Reverence) and Protection (Divine Intellect).
 - **PvP.** Two builds take Swift Judgement and Hammer of Justice each 45 sec: the Reckoning bomb (0/25/26) and an Unsealed Wrath build (0/20/31).
@@ -17,12 +17,12 @@ The builds use the proposed trees of calculator version 6 (the live version, wit
 | Build | Points and code | Healing each sec (raid / one tank, 5 min) | What it gives |
 | --- | --- | --- | --- |
 | HB1. Raid healer, live talents | 38/5/8: [`v6p50325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50325115202121251-5-0503) | 506 / 601 | All healing talents. Divine Intellect 5, Benediction 5, Conviction 3. Improved Seals 5, Holy Conduit 2 and Consecrated Ground 2 fill the rows |
-| **HB2. Raid healer, Devoted Sacrifice** | 31/12/8: [`v6p50320115202101251-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50320115202101251-50122000000000002-0503) | 506 / 601 | All healing talents. Devoted Sacrifice 2/2 (C-P11): Lay on Hands drains only 50% of the mana. Guardian's Favor 2/2 (Hand of Protection each 3 min), Sacred Duty 2/2 (Divine Shield −60 sec), Precision 1 |
+| **HB2. Raid healer, Devoted Sacrifice** | 31/12/8: [`v6p503201150021012512-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p503201150021012512-50122000000000002-0503) | 537 / 638 | All healing talents and Lingering Light 2/2 (C-H2). Devoted Sacrifice 2/2 (C-P11): Lay on Hands drains only 50% of the mana. Guardian's Favor 2/2 (Hand of Protection each 3 min), Sacred Duty 2/2 (Divine Shield −60 sec), Precision 1 |
 
-- **HB2 is the main build with the proposals.** It loses only two damage talents: Improved Seals and Consecrated Ground. The healing does not change.
-- **Holy needs 31 points for Light's Vigil.** Holy Conduit 2/2 fills the rows. It makes only Consecration, Holy Wrath, Exorcism and Hammer of Wrath cheaper.
+- **HB2 is the main build with the proposals.** It loses only two damage talents: Improved Seals and Consecrated Ground. Lingering Light gives +6% healing in raids and on one tank.
+- **Holy needs 31 points for Light's Vigil.** In the live trees, Holy Conduit 2/2 fills the rows. It makes only Consecration, Holy Wrath, Exorcism and Hammer of Wrath cheaper. In the proposed trees, Lingering Light (C-H2) takes these 2 points.
 - **The 3 Retribution points after Benediction** go to Conviction 3/3: +6% critical chance, thus more Illumination mana.
-- **Healing values** use 200% critical heals (Holy Power 5/5, main hypothesis). At 225%: 533 raid and 633 one tank. At 175%: 479 and 568.
+- **Healing values** use 200% critical heals (Holy Power 5/5, main hypothesis). HB2 at 225%: 570 raid and 677 one tank. At 175%: 505 and 600. HB1 at 225%: 533 and 633. At 175%: 479 and 568.
 
 ## 2. Protection
 
@@ -58,7 +58,7 @@ Some builds must put points into talents with little value, to open a deeper row
 
 | Build | Filler points | Cause |
 | --- | --- | --- |
-| Holy healer (HB2) | Holy Conduit 2 | Row 6 needs 25 points in rows 1–5. Without Improved Seals and Consecrated Ground, only 23 of these points help a healer |
+| Holy healer (HB2) | None | Lingering Light (C-H2) takes the 2 points of Holy Conduit. In the live trees (HB1), Holy Conduit 2 is filler: row 6 needs 25 points in rows 1–5 |
 | Raid tank (PT1) | None | Divine Intellect gives mana. Deflection gives parry |
 | Retribution raid (RB1) | Unyielding Faith 1, Pursuit of Justice 2 | Unsealed Wrath needs 30 points in rows 1–6. These 3 points give no damage |
 
