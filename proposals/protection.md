@@ -4,6 +4,7 @@ The live version changes most of the Protection tree. Righteous Fury now increas
 
 - A fix for crushing blows (Redoubt, C-P1). This is the largest difference between the Paladin and the Warrior.
 - A threat transfer for tank swaps and groups (Shoulder the Burden, C-P5, a baseline spell).
+- A ranged pull for dungeons: a longer Judgement range with Seal of Fury (Reach of Law, C-P7).
 - A Lay on Hands that does not drain all the mana, and a Hand of Sacrifice that costs less health (Devoted Sacrifice, C-P11).
 - No talent that gives only armor (Toughness removal, C-P13). Devoted Sacrifice takes its place.
 
@@ -15,12 +16,12 @@ The live version changes most of the Protection tree. Righteous Fury now increas
 | 2 (5) | Precision, Guardian's Favor, Sacred Duty | 7 |
 | 3 (10) | Templar's Bulwark, Improved Hammer of Justice, Shield Specialization, Devoted Sacrifice (C-P11) | 8 |
 | 4 (15) | Swift Judgement, Improved Righteous Fury, Anticipation | 9 |
-| 5 (20) | Stoicism, Holy Shield, Reckoning | 8 |
+| 5 (20) | Reach of Law (C-P7), Holy Shield, Reckoning, Stoicism (M-P2) | 10 |
 | 6 (25) | Iron Creed | 3 |
 | 7 (30) | Shieldsworn | 1 |
 
-- Protection has 46 points (live: 49). The Warrior Protection tree has 50.
-- Toughness removal (C-P13) deletes Toughness (row 3, column 4). Devoted Sacrifice (C-P11) takes its place. All other talents keep their places in the live trees. Row 4, column 4 stays free.
+- Protection has 48 points (live: 49). The Warrior Protection tree has 50.
+- Toughness removal (C-P13) deletes Toughness (row 3, column 4). Devoted Sacrifice (C-P11) takes its place. All other talents, except Stoicism (M-P2), keep their places in the live trees. Row 4, column 4 stays free.
 - Row 2, column 3 is not free. The arrow from Redoubt to Shield Specialization passes through it.
 
 ## C-P1. Redoubt: Holy Shield also starts it
@@ -46,6 +47,22 @@ The live version changes most of the Protection tree. Righteous Fury now increas
 - **Sacred Duty.** Sacred Duty does not decrease the cooldown of Shoulder the Burden. The 5 min cooldown is the final value.
 - **Other specs.** Holy and Retribution also have the spell. The threat goes to the caster, not to a tank. Thus, a Holy or Retribution Paladin only takes the boss with it. The risk is low.
 - **No change.** Righteous Fury, Seal of Fury and its absorb shield stay baseline spells.
+
+## C-P7. Reach of Law (new talent): row 5, column 1
+
+- **Proposed text.** "Increases the range of your Judgement and Swift Judgement by 50/100% while Seal of Fury is active." 2 ranks. Requires Swift Judgement.
+- **Position.** Row 5, column 1, below Swift Judgement. Stoicism moves to row 5, column 4 (Stoicism move, M-P2).
+- **Problem.** In dungeons, the tank must pull enemies from a distance. Judgement of Fury taunts one enemy, but only at 10 yards. The Warrior has Charge in Defensive Stance, and the Druid has Feral Charge. The Paladin has no ranged pull.
+- **Change.** With Reach of Law 2/2, the range is 20 yards (15 yards at 1/2). Swift Judgement gives a second Judgement each min. Thus, the tank has two ranged pulls.
+- **Seal of Fury only.** Seal of Fury is the tank Seal. Retribution PvP builds also take Swift Judgement, but with Seal of Command or Seal of Justice. Thus, the range of their Judgements does not change.
+- **Model.** Arctic Reach (Mage) and Nature's Reach (Druid) give +10/20% range in 2 ranks. Forever talents give a %, thus Reach of Law also gives a %.
+- **Cost.** A dungeon tank takes it for 2 Benediction points: [`v6p-353011021350153102-52233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-353011021350153102-52233). In wowsims, the threat does not change (1,012 each sec), because the raid buffs fill the mana. A raid tank can skip it.
+- **Not in the sim.** wowsims does not model the pull. The value is the range, not damage or threat.
+
+## M-P2. Stoicism move: row 5, column 4
+
+- **Change.** Stoicism moves from row 5, column 1 to row 5, column 4. The ranks and the text do not change.
+- **Why.** Reach of Law (C-P7) takes the place below Swift Judgement, for the prerequisite arrow.
 
 ## C-P11. Devoted Sacrifice (new talent): row 3, column 4
 
@@ -109,7 +126,7 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 - **Balance with Redoubt (C-P1).** With Redoubt (C-P1), the Paladin takes almost the same damage as the Warrior and has a better TMI. Without Toughness, the Paladin is near the Warrior again (see the table).
 - **Druid.** Thick Hide (Druid) gives armor. But the Druid tank cannot block, and armor is its main defense.
 - **Holy and Retribution.** These specs do not take Toughness. Thus, they lose nothing. Holy can now take Devoted Sacrifice (C-P11) with 12 Protection points.
-- **Tank points.** Protection has 46 points. The tank has 5 more points for the other trees, for example Retribution.
+- **Tank points.** Toughness removal frees 5 points. The tank uses them in the other trees, for example Retribution.
 
 **wowsims, 2 min, 3,000 iterations, TMI with a 6 sec window (a lower TMI is better)**
 

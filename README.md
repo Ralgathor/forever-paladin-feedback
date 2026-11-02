@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 9 changes for the live trees. 4 changes are baseline spell changes (C1, C2, C4, C5). Shoulder the Burden (C-P5) is a new baseline spell. 4 changes are talent changes (C-P1, C-P11, C-P13, C-R3). Devoted Sacrifice (C-P11) is a new talent. No Holy talent change and no move is open now.
+- **Proposals:** 10 changes and 1 move for the live trees. 4 changes are baseline spell changes (C1, C2, C4, C5). Shoulder the Burden (C-P5) is a new baseline spell. 5 changes are talent changes (C-P1, C-P7, C-P11, C-P13, C-R3). Devoted Sacrifice (C-P11) and Reach of Law (C-P7) are new talents. One move: Stoicism to row 5, column 4 (M-P2). No Holy talent change is open now.
 - **Adopted proposals:** the live version of 4 November 2026 adopts 6 earlier proposals (C3, the C-H1 move, the C-P5 removal, C-R1, M-H5 and M-R1).
 - **Talent calculator:** you can try the proposals and compare them with the live trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
@@ -37,8 +37,9 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 **Protection**
 
 - **C-P1 Redoubt:** each Holy Shield cast also starts it. In wowsims, crushing blows decrease from 12.0% to 0.9% of the boss attacks (Warrior: 1.1%).
+- **C-P7 Reach of Law (new, row 5, requires Swift Judgement):** +50/100% Judgement range with Seal of Fury, for a 20 yard pull in dungeons. Stoicism moves to row 5, column 4 (M-P2).
 - **C-P11 Devoted Sacrifice (new, row 3):** Lay on Hands drains only 75/50% of your current mana (live: all of it). You also take 20/40% less damage from your Hand of Sacrifice. Alternative C-P11a: the spell drains 50% for all Paladins.
-- **C-P13 Toughness:** removed. Devoted Sacrifice (C-P11) takes its place in row 3. Protection then has 46 points (live: 49).
+- **C-P13 Toughness:** removed. Devoted Sacrifice (C-P11) takes its place in row 3. With Reach of Law (C-P7), Protection has 48 points (live: 49).
 
 **Retribution**
 

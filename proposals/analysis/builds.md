@@ -36,7 +36,7 @@ The builds use the proposed trees of calculator version 6 (the live version, wit
 - **Divine Intellect 3 is necessary.** Row 4 needs 15 points in rows 1–3. With Divine Intellect 2, Swift Judgement is not available.
 - **Toughness removal (C-P13)** frees 5 points. With the 0/38/13 tank of the Analysis model as the start, they go to Deflection 5 and Divine Intellect 1, and Benediction loses 1 point. In the live talents, Deflection 4 in place of Toughness 5 gives the same damage taken (340), but a worse TMI (58.1 against 55.9).
 - **Devoted Sacrifice (C-P11)** is available to a tank for 2 points in place of Deflection. The sim does not model Lay on Hands.
-- **Dungeons.** Dungeon enemies are level 62 or lower and cannot hit with crushing blows. A dungeon tank can move Anticipation points to Stoicism or Guardian's Favor.
+- **Dungeons.** Dungeon enemies are level 62 or lower and cannot hit with crushing blows. A dungeon tank takes Reach of Law (C-P7) 2/2 for 2 Benediction points, for a 20 yard pull: [`v6p-353011021350153102-52233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-353011021350153102-52233) (0/36/15). It can also move Anticipation points to Stoicism or Guardian's Favor.
 
 ## 3. Retribution
 

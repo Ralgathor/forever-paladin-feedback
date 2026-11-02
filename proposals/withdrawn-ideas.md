@@ -24,7 +24,6 @@ The live version (4 November 2026) changes the three trees. These proposals are 
 | Toughness and Divine Strength: removed, Vindication with 5 ranks (C-P3) | The live version fills Protection row 1 with Divine Intellect and moves Toughness to row 3. Vindication has no Attack Power buff now. Toughness removal (C-P13) now removes only Toughness, for the tree of 30 October |
 | Improved Righteous Fury: removed (C-P4) | It depended on the Iron Creed change (C-P2) |
 | Reckoning: charges from block, dodge and parry, released by Holy Strike (C-P6) | The live tank has 101% of the Warrior threat with the same gear. Reckoning is not necessary for threat |
-| Reach of Law: Judgement range +5/10 yards (C-P7) | It requires Swift Judgement. Swift Judgement is now a second Judgement. No free place before row 6. The live tank threat is high, thus the first pull is not a problem |
 | Shield Specialization: mana on each block (C-P8) | Shieldsworn adds a Shield Specialization return on each Holy Strike. The live tank has +15 to +37 mana per sec while it tanks |
 | Holy Shield: damage increases with block value (C-P9) | The live tank has 102–118% of the Warrior threat at all gear levels. Shieldsworn doubles the Holy Shield damage |
 | Benediction to Protection row 1 (M-P1) | Divine Intellect now fills that place |
