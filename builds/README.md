@@ -15,9 +15,9 @@ This folder gives the best build and the stat weights of each spec. It uses the 
 | --- | --- | --- | --- | --- |
 | Holy | Healing each sec, raid, 5 min | 506 | 506 | 0% |
 | Holy | Healing each sec, one tank, 5 min | 601 | 601 | 0% |
-| Protection | Threat each sec | 1,060 | 953 | +11% |
+| Protection | Threat each sec | 1,033 | 953 | +8.4% |
 | Protection | Damage taken each sec | 292 | 325 | −10% |
-| Protection | TMI (lower is better) | 44.8 | 55.5 | −19% |
+| Protection | TMI (lower is better) | 45.0 | 55.5 | −19% |
 | Retribution | DPS, raid | 960 | 910 | +5.5% |
 | Retribution | DPS, fresh 60 | 324 | 303 | +6.8% |
 

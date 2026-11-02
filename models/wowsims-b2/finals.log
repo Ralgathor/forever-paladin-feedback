@@ -95,3 +95,19 @@ WEIGHTS prot raid prop -3530110213501531-54233 base={'dps': 443.5, 'tps': 1038.6
   Dodge rating: dps=-0.140 tps=-0.310 dtps=-0.380 tmi=-0.036
   Parry rating: dps=-0.080 tps=-0.180 dtps=-0.290 tmi=-0.024
   Armor: dps=-0.001 tps=+0.000 dtps=-0.022 tmi=-0.004
+# 2 November 2026: Reckoning (C-P12) withdrawn, proposed flags C1,CP1,NOTOUGH
+BUILD prot raid prop -3530110213501531-54233 {'dps': 428.3, 'tps': 1011.6, 'dtps': 291.7, 'tmi': 44.95, 'crush': 1.0, 'std': 3.77}
+BUILD prot raid prop -3530110213501531-53233000001 {'dps': 434.6, 'tps': 1032.7, 'dtps': 291.7, 'tmi': 44.95, 'crush': 1.0, 'std': 3.77}
+WEIGHTS prot raid prop -3530110213501531-54233 base={'dps': 428.3, 'tps': 1011.6, 'dtps': 291.7, 'tmi': 44.95}
+  Strength: dps=+0.195 tps=+0.315 dtps=-0.015 tmi=-0.003
+  Agility: dps=+0.100 tps=+0.170 dtps=-0.305 tmi=-0.033
+  Stamina: dps=+0.000 tps=+0.000 dtps=+0.000 tmi=-0.105
+  Spell damage: dps=+0.275 tps=+0.735 dtps=-0.015 tmi=-0.003
+  Hit rating: dps=+0.610 tps=+1.390 dtps=+0.010 tmi=+0.001
+  Expertise rating: dps=+0.640 tps=+1.340 dtps=-0.180 tmi=-0.033
+  Defense rating: dps=-0.160 tps=-0.380 dtps=-0.580 tmi=-0.055
+  Block rating: dps=+0.020 tps=+0.050 dtps=+0.030 tmi=+0.002
+  Block value: dps=+0.000 tps=-0.005 dtps=-0.340 tmi=-0.060
+  Dodge rating: dps=-0.130 tps=-0.320 dtps=-0.420 tmi=-0.033
+  Parry rating: dps=-0.080 tps=-0.170 dtps=-0.300 tmi=-0.026
+  Armor: dps=+0.000 tps=+0.000 dtps=-0.023 tmi=-0.004

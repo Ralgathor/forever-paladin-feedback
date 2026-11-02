@@ -28,11 +28,11 @@ The builds use the proposed trees of calculator version 6 (the live version, wit
 
 | Build | Points and code | Threat each sec | Damage taken each sec | TMI | What it gives |
 | --- | --- | --- | --- | --- | --- |
-| **PT1. Raid tank** | 0/34/17: [`v6p-3530110213501531-54233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-54233) | 1,013 | 292 | 45.0 | Protection: Divine Intellect 3, Redoubt 5, Precision 3, Sacred Duty 1, Templar's Bulwark, Shield Specialization 2, Swift Judgement, Improved Righteous Fury 3, Anticipation 5, Holy Shield, Reckoning 5, Iron Creed 3, Shieldsworn. Retribution: Deflection 5, Benediction 4, Improved Judgement 2, Conviction 3, Sanctified Judgement 3 |
+| **PT1. Raid tank** | 0/34/17: [`v6p-3530110213501531-54233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-54233) | 986 | 291 | 45.0 | Protection: Divine Intellect 3, Redoubt 5, Precision 3, Sacred Duty 1, Templar's Bulwark, Shield Specialization 2, Swift Judgement, Improved Righteous Fury 3, Anticipation 5, Holy Shield, Reckoning 5, Iron Creed 3, Shieldsworn. Retribution: Deflection 5, Benediction 4, Improved Judgement 2, Conviction 3, Sanctified Judgement 3 |
 | Live tank, best found (BS2) | 0/35/16 in the live trees: [`b2-05302102313501531-52233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2-05302102313501531-52233000001) | 953 | 325 | 55.5 | Sacred Arbiter and Sanctified Judgement 3, no Holy points. See builds/protection.md |
 | Live tank (reference) | 12/32/7 in the live trees: [`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) | 928 | 333 | 57.1 | The wowsims default tank build, no proposals. Toughness 2 |
 
-- **Values** come from wowsims with Redoubt (C-P1) and Reckoning (C-P12). With the Holy Strike Seal trigger (C1) also, PT1 has 1,039 threat each sec (builds/protection.md).
+- **Values** come from wowsims with Redoubt (C-P1). With the Holy Strike Seal trigger (C1) also, PT1 has 1,012 threat each sec (builds/protection.md).
 - **Divine Intellect 3 is necessary.** Row 4 needs 15 points in rows 1–3. With Divine Intellect 2, Swift Judgement is not available.
 - **Toughness removal (C-P13)** frees 5 points. With the 0/38/13 tank of the Analysis model as the start, they go to Deflection 5 and Divine Intellect 1, and Benediction loses 1 point. In the live talents, Deflection 4 in place of Toughness 5 gives the same damage taken (340), but a worse TMI (58.1 against 55.9).
 - **Devoted Sacrifice (C-P11)** is available to a tank for 2 points in place of Deflection. The sim does not model Lay on Hands.
