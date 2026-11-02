@@ -1,6 +1,6 @@
 # Pure damage specs with the same item pool (2 November 2026)
 
-This run gives the pure average of Analysis, Damage (parts 1, 3 and 7). It replaces the MythicSim values of 22 October.
+This run gives the pure average of Analysis, Damage (parts 1, 3 and 7).
 
 wowsims Forever, master commit `895cd67f9` (the same commit as the other wowsims checks of the beta of 30 October).
 
