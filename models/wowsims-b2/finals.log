@@ -80,3 +80,18 @@ WEIGHTS prot raid beta -05302102313501531-52233000001 base={'dps': 401.9, 'tps':
   Dodge rating: dps=-0.070 tps=-0.130 dtps=-0.380 tmi=-0.019
   Parry rating: dps=-0.050 tps=-0.150 dtps=-0.350 tmi=-0.020
   Armor: dps=+0.000 tps=+0.000 dtps=-0.025 tmi=-0.006
+BUILD prot raid prop -3530110213501531-54233 {'dps': 443.5, 'tps': 1038.6, 'dtps': 291.4, 'tmi': 44.83, 'crush': 1.0, 'std': 3.85}
+BUILD prot raid prop -3530110213501531-53233000001 {'dps': 449.8, 'tps': 1059.8, 'dtps': 291.5, 'tmi': 44.83, 'crush': 1.0, 'std': 3.85}
+WEIGHTS prot raid prop -3530110213501531-54233 base={'dps': 443.5, 'tps': 1038.6, 'dtps': 291.4, 'tmi': 44.83}
+  Strength: dps=+0.210 tps=+0.335 dtps=-0.010 tmi=-0.002
+  Agility: dps=+0.090 tps=+0.150 dtps=-0.315 tmi=-0.031
+  Stamina: dps=+0.000 tps=+0.000 dtps=+0.000 tmi=-0.104
+  Spell damage: dps=+0.280 tps=+0.750 dtps=-0.015 tmi=-0.003
+  Hit rating: dps=+0.630 tps=+1.410 dtps=-0.020 tmi=+0.004
+  Expertise rating: dps=+0.780 tps=+1.630 dtps=-0.080 tmi=-0.014
+  Defense rating: dps=-0.180 tps=-0.390 dtps=-0.510 tmi=-0.046
+  Block rating: dps=+0.010 tps=+0.040 dtps=+0.000 tmi=-0.004
+  Block value: dps=-0.005 tps=+0.000 dtps=-0.335 tmi=-0.059
+  Dodge rating: dps=-0.140 tps=-0.310 dtps=-0.380 tmi=-0.036
+  Parry rating: dps=-0.080 tps=-0.180 dtps=-0.290 tmi=-0.024
+  Armor: dps=-0.001 tps=+0.000 dtps=-0.022 tmi=-0.004

@@ -13,7 +13,7 @@ BUILDS = [
     ("ret", "fresh", "prop", RB1), ("ret", "fresh", "prop", "050050002-503-15233011101301351"),
     ("prot", "raid", "beta", "050050002-05302102213301531-502"), ("prot", "raid", "beta", "05005-05302102213201531-5023"),
     ("prot", "raid", "beta", BS2),
-    ("prot", "raid", "prop", "-3530110213501531-45233"), ("prot", "raid", "prop", "-3530110213501531-44233000001"),
+    ("prot", "raid", "prop", "-3530110213501531-54233"), ("prot", "raid", "prop", "-3530110213501531-53233000001"),
 ]
 # stat index (proto Stat order): name, amount
 RET_STATS = [(0, "Strength", 20), (1, "Agility", 20), (3, "Intellect", 20), (5, "Spell damage", 40),
@@ -24,7 +24,7 @@ PROT_STATS = [(0, "Strength", 20), (1, "Agility", 20), (2, "Stamina", 20), (5, "
               (23, "Block rating", 10), (24, "Block value", 20), (25, "Dodge rating", 10), (26, "Parry rating", 10),
               (28, "Armor", 200)]
 WEIGHTS = [("ret", "raid", "beta", RB1), ("ret", "raid", "prop", RB1), ("ret", "fresh", "beta", RB1),
-           ("prot", "raid", "beta", "050050002-05302102213301531-502"), ("prot", "raid", "beta", BS2), ("prot", "raid", "prop", "-3530110213501531-45233")]
+           ("prot", "raid", "beta", "050050002-05302102213301531-502"), ("prot", "raid", "beta", BS2), ("prot", "raid", "prop", "-3530110213501531-54233")]
 
 def go(spec, case, mode, code, bonus=None):
     return S.run(spec, case, S.decode(code, mode), mode, it=3000, extra={"FEEDBACK_BONUS": bonus} if bonus else None)

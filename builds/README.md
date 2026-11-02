@@ -5,7 +5,7 @@ This folder gives the best build and the stat weights of each spec. It uses the 
 | Spec | File | Best proposed build | Best live build |
 | --- | --- | --- | --- |
 | Holy (healer) | [holy.md](holy.md) | HB2, 31/12/8: [`v6p50320115202101251-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50320115202101251-50122000000000002-0503) | HB1, 38/5/8: [`b250325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b250325115202121251-5-0503) |
-| Protection (tank) | [protection.md](protection.md) | PS1, 0/34/17: [`v6p-3530110213501531-44233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-44233000001) | BS2, 0/35/16: [`b2-05302102313501531-52233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2-05302102313501531-52233000001), or BS1 for more threat |
+| Protection (tank) | [protection.md](protection.md) | PS1, 0/34/17: [`v6p-3530110213501531-53233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-53233000001) | BS2, 0/35/16: [`b2-05302102313501531-52233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2-05302102313501531-52233000001), or BS1 for more threat |
 | Retribution (damage), raid and fresh 60 | [retribution.md](retribution.md) | RB1, 14/6/31: [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | RB1, 14/6/31: [`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351) |
 | Level-up (live) | [level-up.md](level-up.md) | — | Ends at RB1 |
 
@@ -15,9 +15,9 @@ This folder gives the best build and the stat weights of each spec. It uses the 
 | --- | --- | --- | --- | --- |
 | Holy | Healing each sec, raid, 5 min | 506 | 506 | 0% |
 | Holy | Healing each sec, one tank, 5 min | 601 | 601 | 0% |
-| Protection | Threat each sec | 1,062 | 928 | +14% |
-| Protection | Damage taken each sec | 296 | 333 | −11% |
-| Protection | TMI (lower is better) | 45.1 | 57.1 | −21% |
+| Protection | Threat each sec | 1,060 | 953 | +11% |
+| Protection | Damage taken each sec | 292 | 325 | −10% |
+| Protection | TMI (lower is better) | 44.8 | 55.5 | −19% |
 | Retribution | DPS, raid | 960 | 910 | +5.5% |
 | Retribution | DPS, fresh 60 | 324 | 303 | +6.8% |
 
