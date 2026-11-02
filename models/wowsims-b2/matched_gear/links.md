@@ -1,6 +1,6 @@
 # wowsims links (2 November 2026)
 
-The final set of each spec of the second run, with enchants and consumables. Retribution raid buffs and debuffs, a level 63 boss, 2 min. Open a link, then select Simulate. The sim of this commit gives these DPS values: a later wowsims version can give a different DPS.
+The final set of each spec of the second run, with enchants and consumables. The full wowsims test raid buffs and debuffs, a level 63 boss, 2 min. Open a link, then select Simulate. The sim of this commit gives these DPS values: a later wowsims version can give a different DPS.
 
 | Spec | DPS (895cd67f9) | Link |
 | --- | --- | --- |
