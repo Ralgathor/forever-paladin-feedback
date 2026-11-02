@@ -57,7 +57,7 @@ The live version changes most of the Protection tree. Righteous Fury now increas
 - **Change.** With Reach of Law 2/2, the range is 20 yards (15 yards at 1/2). Swift Judgement gives a second Judgement each min. Thus, the tank has two ranged pulls.
 - **Seal of Fury only.** Seal of Fury is the tank Seal. Retribution PvP builds also take Swift Judgement, but with Seal of Command or Seal of Justice. Thus, the range of their Judgements does not change.
 - **Model.** Arctic Reach (Mage) and Nature's Reach (Druid) give +10/20% range in 2 ranks. Hawk Eye (Hunter) gives +2/4/6 yards. Reach of Law gives yards: the range of Judgement is short (10 yards), thus a % gives an unclear value.
-- **Cost.** A dungeon tank takes it for 2 Benediction points: [`v6p-353011021350153102-52233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-353011021350153102-52233). In wowsims, the threat does not change (1,012 each sec), because the raid buffs fill the mana. A raid tank can skip it.
+- **Cost.** A dungeon tank takes it for 2 Benediction points: [`v6p-353011021350153102-52233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-353011021350153102-52233). In wowsims, the threat does not change against PT1 (986 each sec), because the raid buffs fill the mana. A raid tank can skip it.
 - **Not in the sim.** wowsims does not model the pull. The value is the range, not damage or threat.
 
 ## M-P2. Stoicism move: row 4, column 4
@@ -152,7 +152,7 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 
 ## wowsims check
 
-- **Sim.** wowsims Forever, branch paladin/hotfix-113554-port, with the proposals as flags (models/wowsims-b2). The default Protection set: default tank gear, rotation and consumables, talents 12/32/7 with Redoubt 5/5. A level 63 boss attacks the Paladin from the front. Full buffs, 3,000 iterations, 2 min.
+- **Sim.** wowsims Forever of 30 October (branch paladin/hotfix-113554-port), with the proposals as flags (models/wowsims-b2). Crushing blows, in the Analysis tabs, uses master of 1 November and 3 min fights: the results agree. The default Protection set: default tank gear, rotation and consumables, talents 12/32/7 with Redoubt 5/5. A level 63 boss attacks the Paladin from the front. Full buffs, 3,000 iterations, 2 min.
 - **Warrior.** The Protection Warrior of wowsims with its pre-raid set, for comparison. The gear is not the same.
 
 | Case | Block | Crushing blows | Damage taken each sec | Threat each sec |
@@ -164,6 +164,7 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 
 - **Result.** With Redoubt (C-P1), the Paladin takes almost the same damage as the Warrior (+2%). The live Paladin takes 18% more. With 4–20%, 4.8% of the attacks are still crushing blows. Thus, keep Redoubt at 6–30% with the trigger.
 - **Threat.** More blocks give more Holy Shield damage. Thus, threat increases by 6%.
+- **Fast bosses and bosses with two weapons.** Both tanks take more crushing blows. With C-P1, the Paladin stays 0–1.6 points above the Warrior. With 4–20%, it is 1.5–4 points above (Crushing blows, part 3).
 - **5 min fights.** The results are the same: crushing blows 11.9% → 1.1%, damage taken −13%.
 - **Toughness removal (C-P13).** Without Toughness, damage taken increases by 2% (see Toughness removal, C-P13).
 - **Not in the sim.** The sim does not have a threat transfer between tanks or Lay on Hands. Thus, it does not include Shoulder the Burden (C-P5) and Devoted Sacrifice (C-P11). Their values stay as in Analysis.

@@ -27,7 +27,7 @@ This folder gives the best build and the stat weights of each spec. It uses the 
 
 ## Common rules
 
-- **Codes.** All codes load with 51 points. A code that starts with `v6p` opens the proposed trees. A code that starts with `b2` opens the live trees.
+- **Codes.** All build codes load with 51 points. The level-up codes have fewer points, one for each level step. A code that starts with `v6p` opens the proposed trees. A code that starts with `b2` opens the live trees.
 - **Sim.** wowsims Forever, master of 1 November 2026 (commit 895cd67f9), with the proposals as flags (`models/wowsims-b2`). 3 min, one level 63 boss, 3,000 iterations.
 - **Gear.** The default gear set of each spec in wowsims Forever. This folder has no gear search.
 - **Holy.** wowsims Forever has no Holy healing sim. The Holy values come from the healing model (`models/beta-30-oct/healing_b2.py`), with 225% critical heals (Holy Power 5/5, main hypothesis).
