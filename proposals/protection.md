@@ -7,6 +7,7 @@ The live version changes most of the Protection tree. Righteous Fury now increas
 - A ranged pull for dungeons: a longer Judgement range with Seal of Fury (Reach of Law, C-P7).
 - A Lay on Hands that does not drain all the mana, and a Hand of Sacrifice that costs less health (Devoted Sacrifice, C-P11).
 - No talent that gives only armor (Toughness removal, C-P13). Devoted Sacrifice takes its place.
+- No prerequisite for Swift Judgement (C-P14). Templar's Bulwark and Swift Judgement have different uses.
 
 ## Protection layout
 
@@ -15,7 +16,7 @@ The live version changes most of the Protection tree. Righteous Fury now increas
 | 1 (0) | Divine Intellect, Redoubt (C-P1) | 10 |
 | 2 (5) | Precision, Guardian's Favor, Sacred Duty | 7 |
 | 3 (10) | Templar's Bulwark, Improved Hammer of Justice, Shield Specialization, Devoted Sacrifice (C-P11) | 8 |
-| 4 (15) | Swift Judgement, Improved Righteous Fury, Anticipation, Stoicism (M-P2) | 11 |
+| 4 (15) | Swift Judgement (C-P14), Improved Righteous Fury, Anticipation, Stoicism (M-P2) | 11 |
 | 5 (20) | Reach of Law (C-P7), Holy Shield, Reckoning | 8 |
 | 6 (25) | Iron Creed | 3 |
 | 7 (30) | Shieldsworn | 1 |
@@ -141,6 +142,13 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 
 - Threat does not change: 975 each sec with C-P1, with and without Toughness.
 - 3 min fights give the same result: damage taken +1.9%, TMI +2.5%.
+
+## C-P14. Swift Judgement: no prerequisite
+
+- **Change.** Swift Judgement (row 4, column 1) no longer requires Templar's Bulwark (row 3, column 1). The text and the place do not change.
+- **Why.** The two talents have different uses. Templar's Bulwark is a defensive cooldown. Swift Judgement is a second Judgement for pulls and for the PvP stun burst. The arrow makes a build put a point in a talent that it does not use.
+- **Who gains.** Retribution PvP builds take Swift Judgement for the burst, and now keep 1 point. A build with Reach of Law (C-P7) needs only Swift Judgement.
+- **Tanks.** The tank builds keep Templar's Bulwark for the absorb shield. Thus, they do not change.
 
 ## wowsims check
 
