@@ -17,7 +17,7 @@ All values are DPS on one level 63 boss. The start values come from wowsims (mas
 
 ## 1. Against the pure average
 
-wowsims values with the same item pool for each spec, with enchants and consumables (part 7): Fury Warrior 902, Combat Rogue 685, Hunter 829, Fire Mage 916, Demonology Warlock 919. The pure average is 850. Without the Rogue, it is 891. Retribution does 921 in the same runs.
+wowsims values with the same item pool, enchants and consumables for each spec (part 7). Fury Warrior 902, Combat Rogue 685, Hunter 829, Fire Mage 916, Demonology Warlock 919. The pure average is 850. Without the Rogue, it is 891. Retribution does 921 in the same runs.
 
 - **At fresh 60,** the live Retribution is 108% of the pure average and 102% of Fury. With C1 (withdrawn), it was 114% and 108%.
 - **Without the Rogue,** the live version is 103%. C1 gave 109%.

@@ -6,9 +6,9 @@ wowsims Forever, master commit `895cd67f9` (the same commit as the other wowsims
 
 ## Rules (the same for each spec)
 
-- **Item pool.** Uncommon, rare and epic items of item level 63 or lower, for level 60 or lower. No raid drops, no world boss drops (zone and NPC sources in the wowsims data and AtlasLoot), no PvP items, no PvP reputation items, and the raid items of the earlier `GEARFIX` list. No items with random enchantments.
+- **Item pool.** Uncommon, rare and epic items of item level 63 or lower, for level 60 or lower. No raid drops and no world boss drops (zone and NPC sources in the wowsims data and AtlasLoot). No PvP items, no PvP reputation items, and not the raid items of the earlier `GEARFIX` list. No items with random enchantments.
 - **Class.** Each spec keeps its armor and weapon types and its weapon setup (two-handed weapon, two weapons, or weapon and off-hand item).
-- **Search.** Start: the wowsims test set without the items outside the pool (Fury: the `prebis_fury` set). For each slot, the candidates are the best items for the stat values of the spec (measured in the sim), and the items with an effect (all trinkets with an effect). The search keeps the best item for each slot (1,000 iterations, fixed seed) and repeats until no slot changes (3 passes at most). Final value: 10,000 iterations.
+- **Search.** Start: the wowsims test set without the items outside the pool (Fury: the `prebis_fury` set). For each slot, the candidates are the best items for the stat values of the spec (measured in the sim). All items with an effect are also candidates. The search keeps the best item for each slot (1,000 iterations, fixed seed) and repeats until no slot changes (3 passes at most). Final value: 10,000 iterations.
 - **Conditions.** The search runs with no enchants and no consumables. The class weapon items stay (oils, stones, poisons). Retribution raid buffs and debuffs (with Judgement of the Crusader). Level 63 boss, 2 min.
 - **Enchants and consumables (second run).** The sets of the search, with enchants and consumables (`enchants_consumables.py`, see below).
 
@@ -36,6 +36,7 @@ With the consumables of each wowsims preset as they are, Retribution is 112.9% (
 | --- | --- |
 | dump.patch | Patch to `sim/core/test_suite.go`: with `ZZDUMP=<dir>`, each spec test writes its request as JSON |
 | zzbatch_main.go | Batch runner. Copy to `cmd/zzbatch/main.go`, build with `-tags with_db`. It reads the dumped requests from `/tmp/zzdump` (or from the `dir` of the job) |
+| solo.py | Runs each zzbatch job in its own process: `python3 solo.py jobs.json out.json`. Use it for all final values (see below) |
 | opt.py, main.py | Item pool and search: `python3 main.py <Spec>` (Hunter: `EPFULL=1`, see below) |
 | set_*.json | The final set of each spec (item ids, slot order of wowsims) |
 | log_*.txt | Stat values, slot changes and final DPS of each spec |
@@ -44,5 +45,6 @@ With the consumables of each wowsims preset as they are, Retribution is 112.9% (
 | ec_results.json | DPS of the second run (base, ench, cons, both) |
 | links.md, zzlink_main.go | wowsims links to the final set of each spec, and the script that makes them |
 
+- **One job for each process.** zzbatch runs its jobs in parallel in one process. In a batch of different specs and enchants, some results changed by up to 5% (for example Grand Crusader). All values in this folder and in Analysis, Damage come again from `solo.py`, one job for each process. They agree with the batch values.
 - **Hunter.** In the first run, the stat values were all 0, because the start set had no ranged weapon in the pool (`log_Hunter_first_run.txt`, 612.9). The final run measures the stat values on the full test set (`EPFULL=1`).
 - **Limits.** Many Forever items have no source in the game data. Some reputation and crafted items from later content can stay in the pool. The same rule applies to all specs. The search can stop at a local best set.

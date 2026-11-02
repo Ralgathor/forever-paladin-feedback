@@ -83,7 +83,7 @@ The talent icons come from the Wowhead icon server (wow.zamimg.com). If the icon
 - **Model talents.** Each proposal uses a talent from another class in the same game version as a model (Warrior, Druid, Priest, Shaman, Hunter, Mage).
 - **Rules.** The combat and mana values use Classic 1.12 rules when no test gives a different rule.
 - **Estimates.** The burst values are estimates. The Reckoning, threat, mana, healing and damage values come from simple models, not combat logs. Each estimate gives its assumptions and limits.
-- **Other classes.** The healing comparison uses the DoubleZug sheets for the four Forever healers, with the spell values of the Forever spellbook ([model](models/healing/)). The damage comparison uses wowsims Forever runs of all pure damage specs with the same pre-raid item pool ([matched gear](models/wowsims-b2/matched_gear/)), and the damage model for the increase with gear.
+- **Other classes.** The healing comparison uses the DoubleZug sheets for the four Forever healers, with the spell values of the Forever spellbook ([model](models/healing/)). The damage comparison uses wowsims Forever runs of all pure damage specs with the same pre-raid item pool ([matched gear](models/wowsims-b2/matched_gear/)). The damage model gives the increase with gear.
 
 ## Models
 
