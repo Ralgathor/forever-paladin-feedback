@@ -42,6 +42,7 @@ With the consumables of each wowsims preset as they are, Retribution is 112.9% (
 | enchants.json | Enchant ids by slot for each spec (wowsims presets; Mage and Warlock: Balance Druid caster enchants, 2504 on the weapon) |
 | enchants_consumables.py | Second run: writes `/tmp/zzdump_u` (same elixirs and extras for each spec) and the zzbatch jobs |
 | ec_results.json | DPS of the second run (base, ench, cons, both) |
+| links.md, zzlink_main.go | wowsims links to the final set of each spec, and the script that makes them |
 
 - **Hunter.** In the first run, the stat values were all 0, because the start set had no ranged weapon in the pool (`log_Hunter_first_run.txt`, 612.9). The final run measures the stat values on the full test set (`EPFULL=1`).
 - **Limits.** Many Forever items have no source in the game data. Some reputation and crafted items from later content can stay in the pool. The same rule applies to all specs. The search can stop at a local best set.
