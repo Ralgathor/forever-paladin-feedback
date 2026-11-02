@@ -243,7 +243,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
 
   <section class="props" id="compare" aria-labelledby="cmpTitle">
     <h2 id="cmpTitle">Live and proposals compared, by role</h2>
-    <p>This is an overview. The values come from the models of the proposals document, not from combat logs. Level 60, one level 63 boss, unless a card gives a different condition. The proposals document gives the details and the limits of each value.</p>
+    <p>This is an overview. The values come from the models of the proposals document, not from combat logs. Level 60, one level 63 boss, unless a card gives a different condition. A card with only a live value has no proposal. It compares the live Paladin with the other classes. The proposals document gives the details and the limits of each value.</p>
     <div class="rtabs" role="tablist" aria-label="Role" aria-controls="cmpBody">
       <button type="button" role="tab" data-role="heal" aria-selected="true">Healer</button><button type="button" role="tab" data-role="tank" aria-selected="false">Tank</button><button type="button" role="tab" data-role="dps" aria-selected="false">Damage</button><button type="button" role="tab" data-role="pvp" aria-selected="false">PvP</button>
     </div>
@@ -644,15 +644,30 @@ pvp:[
  {t:"Saves and buffs",b:"Blessing of Protection or Freedom replaces Kings or Might from the same Paladin",p:"Hands use no Blessing slot. The target keeps its buff",ids:["C5"],s:"After a save, you do not cast the buff again: no global cooldown and no mana. One Hand from each Paladin on a target."},
  {t:"Swift Judgement in a PvP build",b:"Requires Templar's Bulwark: 1 point in a talent that the build does not use",p:"No prerequisite: the point is free",ids:["C-P14"],s:"Swift Judgement is a second Judgement for pulls and for the stun burst. The tank builds keep Templar's Bulwark."},
 ]};
+// Live values with no proposal: the Paladin against the other classes. These cards show only a live value, after the cards of each role.
+const CMP_LIVE={
+heal:[
+ {t:"Recovery after a large hit",c:"Healing on the tank in the first 3 sec, 715 healing power, all cooldowns",b:"18% above the Druid",bars:[["Paladin, live",7441,"b"],["Druid",6293,"o"],["Shaman",4750,"o"],["Priest",3932,"o"]],s:"After 6 sec: 11% above the Druid. With short cooldowns only: 2% below the Druid. 225% critical heal.",d:"At 175%: 6% below the Druid after 3 sec, 11% below with short cooldowns. Power Word: Shield is not in the bars: it absorbs about 1,100."}
+],
+tank:[
+ {t:"Threat on 3 enemies",c:"wowsims, level 63 enemies, threat per sec on the enemy with the least threat",b:"1.4 times the Druid, 3.2 times the Warrior",bars:[["Paladin, live",249,"b"],["Druid",180,"o"],["Warrior",78,"o"]],s:"Cleave hits 2 targets and Swipe hits 3. Consecration hits all enemies. On 5 enemies, the Paladin has about 3–4 times both.",d:"The proposals add about 1% on groups."}
+],
+dps:[
+ {t:"DPS on one boss",c:"wowsims of 1 November, fresh level 60, full buffs, 2 min",b:"906: 100% of the pure average",s:"Before the wowsims update: 848.",d:"Pure average: Fury, Combat Rogue, Hunter, Mage and Warlock."},
+ {t:"DPS with better gear",c:"Model, % of the pure average",b:"96% in Naxxramas",bars:[["Fresh 60",100,"b","100%"],["Pre-raid",99,"b","99%"],["Molten Core",98,"b","98%"],["Blackwing Lair",96,"b","96%"],["Naxxramas",96,"b","96%"]],s:"The live version is at or above the 95% target at all gear levels. The fixed base values of the Seals, Judgement and Holy Strike cause the decrease."}
+],
+pvp:[
+ {t:"Burst in one stun",c:"Hammer of Justice, 6 sec, Reckoning bomb with a two-hand weapon",b:"About 3,630 damage",s:"The kept proposals do not change the burst. Watch the Reckoning bomb in the live version (W6, W26)."}
+]};
 function renderCompare(role){
   const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
   const card=x=>{
     const mx=x.bars?Math.max(...x.bars.map(b=>b[1])):0;
     const bars=x.bars?`<div class="bars">${x.bars.map(b=>`<span class="lb${b[2]!=="o"?" me":""}">${esc(b[0])}</span><span class="cbar"><i class="${b[2]}" style="width:${(b[1]/mx*100).toFixed(1)}%"></i></span><span class="vl">${esc(b[3]||b[1].toLocaleString("en-US"))}</span>`).join("")}</div>`:"";
     return `<article class="mc"><div><h4>${esc(x.t)}</h4>${x.c?`<div class="cond">${esc(x.c)}</div>`:""}</div>
-<div class="mc-v"><div><small>Live</small><span class="vb${x.big?" big":""}">${esc(x.b)}</span></div><span class="ar" aria-hidden="true">→</span><div><small>Proposed</small><span class="vp${x.big?" big":""}">${esc(x.p)}</span></div></div>
+${x.p?`<div class="mc-v"><div><small>Live</small><span class="vb${x.big?" big":""}">${esc(x.b)}</span></div><span class="ar" aria-hidden="true">→</span><div><small>Proposed</small><span class="vp${x.big?" big":""}">${esc(x.p)}</span></div></div>`:`<div class="mc-v"><div><small>Live</small><span class="vp${x.big?" big":""}">${esc(x.b)}</span></div></div>`}
 ${bars}${x.s?`<p class="sum">${esc(x.s)}</p>`:""}${x.d?`<details><summary>More</summary><p>${esc(x.d)}</p></details>`:""}${x.ids?`<div class="ids">${x.ids.map(i=>`<span class="pid">${i}</span>`).join("")}</div>`:""}</article>`;};
-  document.getElementById("cmpBody").innerHTML=CMP[role].map(card).join("");
+  document.getElementById("cmpBody").innerHTML=CMP[role].concat(CMP_LIVE[role]||[]).map(card).join("");
   document.querySelectorAll(".rtabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.role===role));
 }
 document.querySelectorAll(".rtabs button").forEach(b=>b.addEventListener("click",()=>renderCompare(b.dataset.role)));
