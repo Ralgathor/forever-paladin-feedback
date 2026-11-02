@@ -1,0 +1,9 @@
+# All damage specs, wowsims 895cd67f9, 2 min, Ret raid buffs, 3,000 iterations (2 November 2026)
+# PREBIS=1 NOCONS=1 GEARFIX=1 (Warrior with WARGEAR=prebis_fury: 703.2; test set p1_fury: 448.8)
+TestAffliction 486.9 | TestAfflictionWrack 424.5 | TestArcane 488.7 | TestBalance 495.9 | TestDemonologyFireBrand 576.1
+TestDemonologyShadowBrand 564.3 | TestDestruction 508.6 | TestDpsWarrior 703.2 | TestElemental 405.0 | TestEnhancement 525.3
+TestFFB 442.4 | TestFeralCat 673.6 | TestFire 514.8 | TestFrost 459.2 | TestHunter 642.5 | TestHunterPets 584.5
+TestRetribution 671.8 | TestRogue 565.5 | TestShadowPriest 597.3
+# Pure average (best spec of each pure class): (703.2 + 565.5 + 642.5 + 514.8 + 576.1) / 5 = 600.4
+# SWAP (armor of Ret and Warrior test sets, NOCONS): Ret 571.2, Warrior 561.9
+# Test-suite gear, same buffs, with consumables: Ret 849.0, Warrior 529.3, Rogue 615.4, Hunter 693.7, Fire 781.2, Demonology 775.3

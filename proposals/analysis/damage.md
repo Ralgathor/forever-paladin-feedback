@@ -4,7 +4,7 @@
 
 All values are DPS on one level 63 boss. The start values come from wowsims (master of 1 November 2026). The increase with gear comes from the damage model.
 
-"Pure average" is the average DPS of the best spec of each pure damage class (Warrior, Rogue, Hunter, Mage, Warlock) in MythicSim. The design target for a hybrid class is 95% of the pure average.
+"Pure average" is the average DPS of the best spec of each pure damage class (Warrior, Rogue, Hunter, Mage, Warlock) in MythicSim. The design target for a hybrid class is 95% of the pure average. Players report this target from developer comments. No official text gives the number.
 
 ## Short answer
 
@@ -163,6 +163,28 @@ Default Retribution gear, rotation and consumables. One level 63 boss, 3,000 ite
 - **No run is out of mana.**
 - **The wowsims update of 1 November,** step by step: 836 → 852 (Unsealed Wrath fix) → 889 (new rotation and presets) → 901 (new weapon oils), in the wowsims test suite.
 - **wowsims Fury.** The live Retribution is 110% of the wowsims Fury, but the two specs have different gear. Thus, this tab compares with the MythicSim Fury.
+
+**All damage specs in wowsims (2 November 2026).** Each spec uses its wowsims test character with pre-raid gear: dungeon, quest, craft and early reputation items. No raid or PvP items. The same raid buffs for all, no consumables (poisons and weapon stones from the class stay). 2 min, 3,000 iterations. The pure average is the best spec of each pure class: 600 DPS.
+
+| Spec | DPS | % of the pure average |
+| --- | --- | --- |
+| Fury Warrior | 703 | 117% |
+| Hunter | 643 | 107% |
+| Demonology Warlock | 576 | 96% |
+| Rogue | 566 | 94% |
+| Fire Mage | 515 | 86% |
+| Feral Druid | 674 | 112% |
+| **Retribution, live** | **672** | **112%** |
+| Shadow Priest | 597 | 99% |
+| Enhancement Shaman | 525 | 87% |
+| Balance Druid | 496 | 83% |
+| Elemental Shaman | 405 | 67% |
+
+- **The gear is not the same for each class.** The sets have different quality. Ret in the Warrior armor does 571 (−15%), and the Warrior in the Ret armor does 562 (−20%). Thus, the % values are approximate.
+- **Retribution and Feral are 12% above the pure average.** The other hybrids are at 67–99%. In this sim, no hybrid group is at 95%.
+- **MythicSim gives a lower Retribution level** (100% at fresh 60, part 1). The two sims use different gear and buffs. Live tests give the real answer.
+- **Changes to the test sets.** Fury uses the wowsims pre-raid Fury set, with Dark Iron Destroyer in place of Annihilator (a world drop). The raid and PvP items of the Mage set are replaced with the Warlock choices. The new blue items of Forever (for example Adaptive Combat Assistant) have no source in the game data. All sets keep them.
+- **Files.** `models/wowsims-b2/allspecs_main.go` and `allspecs.log`.
 
 ## 8. Options that were not kept
 

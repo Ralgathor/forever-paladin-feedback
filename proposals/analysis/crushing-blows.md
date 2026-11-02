@@ -8,6 +8,7 @@
 - **The fix.** With Redoubt (C-P1), each Holy Shield cast also starts Redoubt. The two block buffs are then active together. Crushing blows decrease to 1.0%, the same as the Warrior.
 - **The tank takes 13% less damage** with C-P1, and its TMI is better than the Warrior TMI.
 - **Keep Redoubt at 6–30% block.** At 4–20%, 4.9% of the swings are still crushing blows.
+- **Fast bosses and bosses with two weapons** give both tanks more crushing blows. With C-P1, the Paladin stays 0–1.6 points above the Warrior. At 4–20%, it is 1.5–4 points above.
 
 ## 1. Why crushing blows occur
 
@@ -51,6 +52,27 @@ Default tank gear of each class, full buffs, one level 63 boss, 3 min fight.
 - **5 min fights give the same result.** Live 11.9%, C-P1 1.1%, C-P1 with 4–20% 5.1%, Warrior 1.0%.
 - **The Druid takes the most crushing blows,** but its armor and health keep it safe.
 
+**Fast bosses and bosses with two weapons.** The same tanks and 3 min fight. "Fast" is a swing each 1.2 sec with 60% damage, thus the same damage each sec. "Two weapons" adds a second weapon. The Paladin uses the wowsims default tank build (12/32/7), with Toughness removal (C-P13) in the C-P1 columns.
+
+| Boss | Warrior | Paladin, C-P1 | Paladin, C-P1 with 4–20% | Paladin, live |
+| --- | --- | --- | --- | --- |
+| Normal (2.0 sec) | 1.0% | 1.0% | 4.9% | 11.9% |
+| Fast (1.2 sec) | 2.8% | 3.6% | 6.4% | 11.1% |
+| Two weapons | 3.7% | 5.0% | 7.2% | 10.8% |
+| Fast, two weapons | 7.1% | 8.7% | 10.1% | 11.7% |
+
+| Boss | Damage taken each sec: Warrior | Paladin, C-P1 | Paladin, C-P1 with 4–20% | Paladin, live |
+| --- | --- | --- | --- | --- |
+| Normal | 281 | 295 | 319 | 333 |
+| Fast | 270 | 287 | 307 | 313 |
+| Two weapons | 417 | 455 | 480 | 482 |
+| Fast, two weapons | 415 | 454 | 473 | 465 |
+
+- **More swings use the charges faster.** Both tanks then have gaps. The Warrior reaches 3–7% crushing blows, the Paladin with C-P1 4–9%.
+- **C-P1 follows the Warrior.** It is 0–1.6 points above the Warrior with each boss.
+- **4–20% is always worse.** It is 1.5–4 points above the Warrior, and 4 points above on a normal boss.
+- **Against fast bosses with two weapons,** C-P1 gives a small gain: 11.7% → 8.7%. The charges are empty too soon. The Warrior also has 7.1%.
+
 ## 4. Stat targets for the tank
 
 A tank needs two targets against a level 63 boss.
@@ -84,11 +106,11 @@ Both tanks have 440 Defense and 100 Agility. The boss swings each 2 sec. Shield 
 | Paladin with C-P1 | About 100% | 0% at 440 Defense | Only in gaps |
 
 - wowsims gives both tanks 1.0%. Thus, the two tanks are equal.
-- The Warrior gaps depend on the swing speed of the boss. The Paladin gaps depend on when Holy Shield is cast.
+- The Warrior gaps depend on the swing speed of the boss. The Paladin gaps depend on when Holy Shield is cast. With fast bosses or two weapons, both tanks have more gaps (part 3).
 
 ## 6. Method and limits
 
 - **Sim.** wowsims Forever with the proposals as flags (`models/wowsims-b2`). The default tank gear of each class, full buffs, one level 63 boss, 3,000 iterations, 3 min.
 - **Gear.** The wowsims tank sets are pre-raid sets. They do not reach 440 Defense. Thus, the Paladin with C-P1 still has 0.2% critical hits.
-- **One weapon.** The sims use a boss with one weapon. A boss with two weapons uses the charges faster.
+- **Boss.** The main tables use a boss with one weapon and a 2 sec swing. Part 3 also gives fast bosses and bosses with two weapons (`FEEDBACK_BOSS` in `models/wowsims-b2`).
 - **Talents.** The values use the live talents. A change to Holy Shield or Redoubt changes all values.
