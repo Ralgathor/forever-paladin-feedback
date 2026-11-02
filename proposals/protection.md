@@ -51,12 +51,12 @@ The live version changes most of the Protection tree. Righteous Fury now increas
 
 ## C-P7. Reach of Law (new talent): row 5, column 1
 
-- **Proposed text.** "Increases the range of your Judgement and Swift Judgement by 50/100% while Seal of Fury is active." 2 ranks. Requires Swift Judgement.
+- **Proposed text.** "Increases the range of your Judgement and Swift Judgement by 5/10 yards while Seal of Fury is active." 2 ranks. Requires Swift Judgement.
 - **Position.** Row 5, column 1, below Swift Judgement. Stoicism moves to row 4, column 4 (Stoicism move, M-P2).
 - **Problem.** In dungeons, the tank must pull enemies from a distance. Judgement of Fury taunts one enemy, but only at 10 yards. The Warrior has Charge in Defensive Stance, and the Druid has Feral Charge. The Paladin has no ranged pull.
 - **Change.** With Reach of Law 2/2, the range is 20 yards (15 yards at 1/2). Swift Judgement gives a second Judgement each min. Thus, the tank has two ranged pulls.
 - **Seal of Fury only.** Seal of Fury is the tank Seal. Retribution PvP builds also take Swift Judgement, but with Seal of Command or Seal of Justice. Thus, the range of their Judgements does not change.
-- **Model.** Arctic Reach (Mage) and Nature's Reach (Druid) give +10/20% range in 2 ranks. Forever talents give a %, thus Reach of Law also gives a %.
+- **Model.** Arctic Reach (Mage) and Nature's Reach (Druid) give +10/20% range in 2 ranks. Hawk Eye (Hunter) gives +2/4/6 yards. Reach of Law gives yards: the range of Judgement is short (10 yards), thus a % gives an unclear value.
 - **Cost.** A dungeon tank takes it for 2 Benediction points: [`v6p-353011021350153102-52233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-353011021350153102-52233). In wowsims, the threat does not change (1,012 each sec), because the raid buffs fill the mana. A raid tank can skip it.
 - **Not in the sim.** wowsims does not model the pull. The value is the range, not damage or threat.
 

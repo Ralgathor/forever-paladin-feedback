@@ -35,7 +35,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 11 chan
 | C5 | Hands: Sacrifice, Protection and Freedom | Baseline spells | Blessings of Sacrifice, Protection and Freedom use a Blessing slot | The spells take the name Hand of. No Blessing slot. One Hand from each Paladin on a target |
 | C-P1 | Redoubt | Protection, row 1 | 10% chance when you are hit: +6–30% block | The same. Each Holy Shield cast also starts it |
 | C-P5 | Shoulder the Burden (new) | Baseline spell | — | 50% of the threat of an ally moves to you, 5 min cooldown |
-| C-P7 | Reach of Law (new) | Protection, row 5 | — | 2 ranks, requires Swift Judgement: Judgement and Swift Judgement range +50/100% while Seal of Fury is active |
+| C-P7 | Reach of Law (new) | Protection, row 5 | — | 2 ranks, requires Swift Judgement: Judgement and Swift Judgement range +5/10 yards while Seal of Fury is active |
 | M-P2 | Stoicism | Protection | Row 5, column 1 | Row 4, column 4 (move only, for Reach of Law) |
 | C-P11 | Devoted Sacrifice (new) | Protection, row 3 | — | 2 ranks: Lay on Hands drains only 75/50% of your current mana, and you take 20/40% less damage from your Hand of Sacrifice. Alternative C-P11a: the spell drains 50% for all Paladins |
 | C-P13 | Toughness | Protection, row 3 | +2–10% armor from items | Removed. Devoted Sacrifice (C-P11) takes its place |

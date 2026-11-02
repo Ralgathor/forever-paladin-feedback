@@ -37,7 +37,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 **Protection**
 
 - **C-P1 Redoubt:** each Holy Shield cast also starts it. In wowsims, crushing blows decrease from 12.0% to 0.9% of the boss attacks (Warrior: 1.1%).
-- **C-P7 Reach of Law (new, row 5, requires Swift Judgement):** +50/100% Judgement range with Seal of Fury, for a 20 yard pull in dungeons. Stoicism moves to row 4, column 4 (M-P2).
+- **C-P7 Reach of Law (new, row 5, requires Swift Judgement):** +5/10 yards Judgement range with Seal of Fury, for a 20 yard pull in dungeons. Stoicism moves to row 4, column 4 (M-P2).
 - **C-P11 Devoted Sacrifice (new, row 3):** Lay on Hands drains only 75/50% of your current mana (live: all of it). You also take 20/40% less damage from your Hand of Sacrifice. Alternative C-P11a: the spell drains 50% for all Paladins.
 - **C-P13 Toughness:** removed. Devoted Sacrifice (C-P11) takes its place in row 3. With Reach of Law (C-P7), Protection has 48 points (live: 49).
 - **C-P14 Swift Judgement:** no longer requires Templar's Bulwark. The two talents have different uses.

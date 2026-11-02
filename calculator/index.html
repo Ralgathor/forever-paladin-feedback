@@ -331,13 +331,13 @@ const PROPOSED={
 };
 const PROPOSED_NEW=[
  {pid:"C-P11",tree:"prot",key:"dsac",name:"Devoted Sacrifice",tier:3,col:4,ranks:2,rt:["Your Lay on Hands drains only 75% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 20%.","Your Lay on Hands drains only 50% of your remaining Mana, and reduces the damage you take from your Hand of Sacrifice by 40%."],req:null,status:"N",info:""},
- {pid:"C-P7",tree:"prot",key:"rol",name:"Reach of Law",tier:5,col:1,ranks:2,rt:["Increases the range of your Judgement and Swift Judgement by 50% while Seal of Fury is active.","Increases the range of your Judgement and Swift Judgement by 100% while Seal of Fury is active."],req:"sj",status:"N",info:""},
+ {pid:"C-P7",tree:"prot",key:"rol",name:"Reach of Law",tier:5,col:1,ranks:2,rt:["Increases the range of your Judgement and Swift Judgement by 5 yards while Seal of Fury is active.","Increases the range of your Judgement and Swift Judgement by 10 yards while Seal of Fury is active."],req:"sj",status:"N",info:""},
 ];
 // Rows for the proposals table: [id, talent key in proposed trees, talent, tree, today, proposed]
 const PROPOSALS=[
  ["C-P1", "red", "Redoubt", "Protection, row 1", "10% chance when you are hit: +6–30% block", "The same. Each Holy Shield cast also starts it"],
  ["C-P11", "dsac", "Devoted Sacrifice (new)", "Protection, row 3", "—", "2 ranks: Lay on Hands drains only 75/50% of your current mana, and you take 20/40% less damage from your Hand of Sacrifice"],
- ["C-P7", "rol", "Reach of Law (new)", "Protection, row 5", "—", "2 ranks, requires Swift Judgement: Judgement and Swift Judgement range +50/100% while Seal of Fury is active"],
+ ["C-P7", "rol", "Reach of Law (new)", "Protection, row 5", "—", "2 ranks, requires Swift Judgement: Judgement and Swift Judgement range +5/10 yards while Seal of Fury is active"],
  ["M-P2", "sto", "Stoicism", "Protection", "Row 5, column 1", "Row 4, column 4 (move only)"],
  ["C-P13", "tou", "Toughness", "Protection, row 3", "+2–10% armor from items", "Removed. Devoted Sacrifice (C-P11) takes its place"],
  ["C-P14", "sj", "Swift Judgement", "Protection, row 4", "Requires Templar's Bulwark", "No prerequisite"],
@@ -578,8 +578,8 @@ ${dn("The live tree has no place for one more ability talent. The Paladin tank s
 ${dn("This change removes most crushing blows. With Holy Shield and Redoubt 5/5, block from talents can be 60%. In wowsims, crushing blows go from 12.0% to 0.9% of the boss attacks (Warrior: 1.1%).")}</li>
 <li>New Talent: ${t("dsac","Devoted Sacrifice")} (Row 3, Column 4, 2 ranks): Your Lay on Hands drains only 75/50% of your current mana (was all your current mana), and you take 20/40% less damage from your Hand of Sacrifice. ${g("C-P11")}
 ${dn("Lay on Hands has a 20 min cooldown, thus about one cast for each boss. But it drains all your mana, and the drain is largest at full mana. Thus, Paladins use it only at low mana. At 50%, you can use it at any time in a fight. In row 3, Holy takes it with 12 Protection points.")}</li>
-<li>New Talent: ${t("rol","Reach of Law")} (Row 5, Column 1, 2 ranks): While Seal of Fury is active, the range of your Judgement and Swift Judgement increases by 50/100% (10 yards: 15/20 yards). Requires Swift Judgement. ${g("C-P7")}
-${dn("A dungeon pull needs range. Judgement of Fury taunts one enemy at 10 yards. The Warrior has Charge and the Druid has Feral Charge. The Seal of Fury condition keeps the PvP range of the other Judgements. Model talents: Arctic Reach (Mage) and Nature's Reach (Druid).")}</li>
+<li>New Talent: ${t("rol","Reach of Law")} (Row 5, Column 1, 2 ranks): While Seal of Fury is active, the range of your Judgement and Swift Judgement increases by 5/10 yards (from 10 yards to 15/20 yards). Requires Swift Judgement. ${g("C-P7")}
+${dn("A dungeon pull needs range. Judgement of Fury taunts one enemy at 10 yards. The Warrior has Charge and the Druid has Feral Charge. The Seal of Fury condition keeps the PvP range of the other Judgements. Model talents: Arctic Reach (Mage), Nature's Reach (Druid) and Hawk Eye (Hunter, in yards).")}</li>
 <li>${t("sto","Stoicism")} moves to Row 4, Column 4. ${g("M-P2")}
 ${dn("Reach of Law takes the place below Swift Judgement. Stoicism goes to the free place in row 4 and keeps its ranks. It opens at 15 points (was 20).")}</li>
 <li>${t("sj","Swift Judgement")} no longer requires Templar's Bulwark. ${g("C-P14")}
