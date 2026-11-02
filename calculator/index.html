@@ -145,17 +145,17 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
 .sw.b,.cbar i.b{background:repeating-linear-gradient(135deg,var(--muted) 0 3px,color-mix(in srgb,var(--muted) 45%,transparent) 3px 6px)}
 .sw.p,.cbar i.p{background:var(--gold-glow)}
 .sw.o,.cbar i.o{background:color-mix(in srgb,var(--ink) 28%,transparent)}
-.mc-grid{display:grid;align-items:start;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:12px}
+.mc-grid{display:grid;align-items:stretch;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:12px}
 .mc{border:1px solid var(--line);border-radius:6px;padding:12px 14px;background:var(--bg);display:flex;flex-direction:column;gap:8px;min-width:0}
 .mc h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:16px}
 .mc .cond{font-size:12px;color:var(--muted)}
 .mc-v{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:stretch}
 .mc-v>div{display:flex;flex-direction:column;gap:1px;min-width:0}
 .mc-v small{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
-.mc-v .vb{color:var(--muted);font-size:14px;line-height:1.3}
-.mc-v .vp{color:var(--ink);font-weight:700;font-size:15px;line-height:1.3}
+.mc-v .vb{color:var(--muted);font-size:17px;font-weight:500;line-height:1.25}
+.mc-v .vp{color:var(--ink);font-weight:700;font-size:17px;line-height:1.25}
 .mc-v .ar{align-self:center;color:var(--gold);font-size:18px}
-.mc-v .big{font-family:var(--f-mono);font-size:20px;font-weight:500}
+.mc-v .big{font-family:var(--f-mono);font-size:22px;font-weight:500}
 .bars{display:grid;grid-template-columns:minmax(0,max-content) 1fr auto;gap:3px 8px;align-items:center;font-size:12.5px}
 .bars .lb{color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .bars .lb.me{color:var(--ink);font-weight:500}
@@ -163,7 +163,12 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
 .cbar i{position:absolute;inset:0 auto 0 0;border-radius:2px}
 .bars .vl{font-size:12.5px;white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right}
 .mc .sum{margin:0;font-size:13.5px;color:var(--ink);max-width:none}
-.mc .ids{display:flex;flex-wrap:wrap;gap:4px}
+.mc .ids{display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end;flex:0 0 auto;max-width:40%}
+.mc-h{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.mc .lotag{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);border:1px solid var(--line);border-radius:3px;padding:0 5px;white-space:nowrap}
+.mc.lo{border-style:dashed}
+.mc-m{grid-column:1/-1;font-size:13px;font-weight:700;color:var(--ink);border-bottom:1px solid var(--line);padding-bottom:5px;margin-bottom:2px}
+.mc-v{background:color-mix(in srgb,var(--line) 22%,transparent);border-radius:5px;padding:8px 10px}
 .mc .ids .pid{margin:0}
 .mc details{font-size:13px;color:var(--muted)}
 .mc details summary{cursor:pointer;color:var(--muted);font-size:12.5px}
@@ -242,8 +247,8 @@ button:focus-visible,select:focus-visible,input:focus-visible,.tal:focus-visible
   </section>
 
   <section class="props" id="compare" aria-labelledby="cmpTitle">
-    <h2 id="cmpTitle">Live and proposals compared, by role</h2>
-    <p>This is an overview. The values come from the models of the proposals document, not from combat logs. Level 60, one level 63 boss, unless a card gives a different condition. The proposals document gives the details and the limits of each value.</p>
+    <h2 id="cmpTitle">The Paladin compared, by role</h2>
+    <p>A card with Live and Proposed values shows the effect of a proposal. A card with the Live only tag compares the live Paladin with the other classes. The values come from the models and from wowsims, not from combat logs. Level 60, one level 63 boss, unless a card gives a different condition. The proposals document gives the details and the limits of each value.</p>
     <div class="rtabs" role="tablist" aria-label="Role" aria-controls="cmpBody">
       <button type="button" role="tab" data-role="heal" aria-selected="true">Healer</button><button type="button" role="tab" data-role="tank" aria-selected="false">Tank</button><button type="button" role="tab" data-role="dps" aria-selected="false">Damage</button><button type="button" role="tab" data-role="pvp" aria-selected="false">PvP</button>
     </div>
@@ -620,36 +625,57 @@ window.addEventListener("scroll",hideTip,{passive:true});
 // Beta and proposals compared: one card per topic. bars: [label, value, kind b|p|o, shown text?]
 const CMP={
 heal:[
- {t:"Raid healing per sec",c:"715 healing power, 3 min",b:"629",p:"664 (+6%)",big:1,ids:["C-H1"],bars:[["Priest",948,"o"],["Druid",855,"o"],["Shaman",709,"o"],["Paladin, proposed",664,"p"],["Paladin, live",629,"b"]],s:"Live: 26% below the Druid. With Reverence 50%: 22% below (19% in fights of 10 min). This is accepted: Holy is the best single-target healer, not the best raid healer.",d:"Beta of 18 October: 616. Mana is the limit: the best cast plan is almost only Flash of Light."},
- {t:"One tank, healing per sec",c:"715 healing power, 3 min, Oath of Light on the tank",b:"732",p:"768 (+5%)",big:1,ids:["C-H1"],bars:[["Paladin, proposed",768,"p"],["Paladin, live",732,"b"],["Druid",681,"o"],["Shaman",607,"o"],["Priest",606,"o"]],s:"Live: 3–10% above the Druid in all fight lengths (225% critical heal). With Reverence 50%: 12–17% above.",d:"At 175%: live 1–7% below the Druid, with Reverence 50% 1–5% above. At 200%: live 2% below to 7% above. Maximum raw healing per sec: Paladin 1,536, other healers 1,278–1,320."},
- {t:"Recovery after a large hit",c:"First 3–6 sec, against the Druid",b:"11–18% above with Divine Favor, 2% below with short cooldowns",p:"No proposal",s:"225% critical heal. At 175%: 6–7% below with Divine Favor."},
- {t:"Lay on Hands at full mana",b:"Drains all 4,416 mana",p:"Drains 2,208 (50%)",ids:["C-P11"],s:"With Devoted Sacrifice 2/2, the mana is back after 1 min 38 sec (was 3 min 15 sec)."}
+ {t:"Raid healing per sec",m:"Healing per sec, all targets",c:"715 healing power, 3 min",b:"629",p:"664 (+6%)",big:1,ids:["C-H1"],bars:[["Priest",948,"o"],["Druid",855,"o"],["Shaman",709,"o"],["Paladin, proposed",664,"p"],["Paladin, live",629,"b"]],s:"Live: 26% below the Druid. With Reverence 50%: 22% below (19% in fights of 10 min). This is accepted: Holy is the best single-target healer, not the best raid healer.",d:"Beta of 18 October: 616. Mana is the limit: the best cast plan is almost only Flash of Light."},
+ {t:"One tank, healing per sec",m:"Healing per sec on the tank",c:"715 healing power, 3 min, Oath of Light on the tank",b:"732",p:"768 (+5%)",big:1,ids:["C-H1"],bars:[["Paladin, proposed",768,"p"],["Paladin, live",732,"b"],["Druid",681,"o"],["Shaman",607,"o"],["Priest",606,"o"]],s:"Live: 3–10% above the Druid in all fight lengths (225% critical heal). With Reverence 50%: 12–17% above.",d:"At 175%: live 1–7% below the Druid, with Reverence 50% 1–5% above. At 200%: live 2% below to 7% above. Maximum raw healing per sec: Paladin 1,536, other healers 1,278–1,320."},
+ {t:"Lay on Hands at full mana",m:"Mana that Lay on Hands drains",c:"Holy Paladin at full mana (4,416)",b:"4,416 mana lost",p:"2,208 mana lost",ids:["C-P11"],s:"With Devoted Sacrifice 2/2, the mana is back after 1 min 38 sec (was 3 min 15 sec)."}
 ],
 tank:[
- {t:"Crushing blows",c:"wowsims, level 63 boss, 2 min",b:"12.0% of the boss attacks",p:"0.9% (Warrior: 1.1%)",big:1,ids:["C-P1"],s:"Holy Shield also starts Redoubt: up to 60% block. Damage taken −14%, threat +6%.",d:"With Redoubt 4–20%, 4.8% are still crushing blows."},
- {t:"Threat, as a % of the Warrior",c:"Same gear, one boss, no Consecration",b:"118% fresh level 60, 102% Naxxramas",p:"No threat proposals",bars:[["Warrior",100,"o","100%"],["Fresh 60, live",118,"b","118%"],["Naxxramas, live",102,"b","102%"]],s:"The live trees remove the threat gap. With Consecration: 120–142% of the Warrior. See W28.",d:"Beta of 18 October: 63% of the Warrior. wowsims preset tank: 932 threat per sec (was 663)."},
- {t:"Mana of the tank",c:"Mana per sec, Blessing of Wisdom, no Consecration",b:"+14.5 fresh level 60, +36.9 Naxxramas",p:"No mana proposals",bars:[["Fresh 60, live",14.5,"b","+14.5"],["Naxxramas, live",36.9,"b","+36.9"]],s:"Shieldsworn gives Shield Specialization mana from each Holy Strike. Redoubt (C-P1) adds 4.9–8.3 per sec: more blocks.",d:"With Consecration on cooldown: −49.0 per sec at fresh level 60. The mana is zero after 59 sec."},
- {t:"Lay on Hands, tank",c:"Naxxramas, 4,900 mana",b:"The mana is back after 2 min 12 sec",p:"The mana is back after 1 min 6 sec",ids:["C-P11"],s:"Half of the mana stays. The tank keeps its threat."},
- {t:"Pull and group tools",b:"Judgement of Fury: one enemy at 10 yards",p:"Judgement at 20 yards with Seal of Fury (Reach of Law 2/2). Shoulder the Burden (baseline spell, 5 min): 50% of the threat of an ally, on all enemies",ids:["C-P7","C-P5"],s:"Warrior: Challenging Shout. Druid: Challenging Roar."}
+ {t:"Crushing blows",m:"Crushing blows, % of the boss attacks",c:"wowsims, level 63 boss, 2 min",b:"12.0%",p:"0.9%",big:1,ids:["C-P1"],s:"Warrior: 1.1%. Holy Shield also starts Redoubt: up to 60% block. Damage taken −14%, threat +6%.",d:"With Redoubt 4–20%, 4.8% are still crushing blows."},
+ {t:"Damage taken",m:"Damage taken per sec (TMI)",c:"wowsims, default tank gear, full buffs, level 63 boss, 3 min",b:"333 (TMI 57.1)",p:"295 (TMI 45.2)",ids:["C-P1","C-P13"],bars:[["Druid",379,"o"],["Paladin, live",333,"b"],["Paladin, proposed",295,"p"],["Warrior",281,"o"]],s:"Redoubt (C-P1) gives −14% damage taken. Toughness removal (C-P13) adds about 2%. The proposed Paladin takes 5% more damage than the Warrior.",d:"The TMI of the Warrior is 47 and the TMI of the Druid is 39.7."},
+ {t:"Threat against the other tanks",m:"Threat, % of the Warrior / % of the Druid",c:"wowsims, default tank gear, full buffs, level 63 boss, 3 min",b:"100% / 111%",p:"106% / 118%",ids:["C-P1"],bars:[["Paladin, proposed",986,"p","986 per sec"],["Paladin, live",928,"b","928 per sec"],["Warrior",926,"o","926 per sec"],["Druid",835,"o","835 per sec"]],s:"No proposal is for threat. Redoubt (C-P1) gives more Holy Shield blocks: +6% in wowsims. With Consecration: 120–142% of the Warrior. See W28.",d:"Model, same gear, no Consecration. Live: 118% of the Warrior and 134% of the Druid at fresh level 60, 102% and 103% in Naxxramas. The real Druid threat multipliers are not known yet."},
+ {t:"Mana of the tank",m:"Mana per sec: fresh level 60 / Naxxramas",c:"The boss hits the tank. Blessing of Wisdom, no Consecration",b:"+14.5 / +36.9",p:"+19.4 / +45.2",ids:["C-P1"],bars:[["Fresh 60, live",14.5,"b","+14.5"],["Fresh 60, proposed",19.4,"p","+19.4"],["Naxxramas, live",36.9,"b","+36.9"],["Naxxramas, proposed",45.2,"p","+45.2"]],s:"Shieldsworn gives Shield Specialization mana from each Holy Strike. Redoubt (C-P1) adds 4.9–8.3 per sec, because the tank blocks more.",d:"With Consecration on cooldown: −49.0 per sec at fresh level 60. The mana is zero after 59 sec."},
+ {t:"Lay on Hands, tank",m:"Time until the mana is back",c:"Naxxramas, 4,900 mana, the boss hits the tank",b:"2 min 12 sec",p:"1 min 6 sec",ids:["C-P11"],s:"Half of the mana stays. The tank keeps its threat."},
+ {t:"Sanctified Judgement, mana per sec",m:"Mana per sec at rank 1 / 2 / 3",c:"Seal of Fury, 8.5 Judgements each min (Improved Judgement 2/2, Swift Judgement)",b:"1.9 / 7.5 / 17.0",p:"5.7 / 11.3 / 17.0",ids:["C-R3"],bars:[["Rank 1, proposed",5.7,"p","5.7"],["Rank 1, live",1.9,"b","1.9"],["Rank 2, proposed",11.3,"p","11.3"],["Rank 2, live",7.5,"b","7.5"],["Rank 3, both",17.0,"p","17.0"]],s:"Each rank adds 40 mana for each Judgement. Live: rank 1 adds 13, rank 2 adds 40 and rank 3 adds 67. At 3/3, the value does not change.",d:"A 6-point dip (Benediction 5, Sanctified Judgement 1) gives 5.7 mana per sec. Reverence 2/2 gives 6.1 mana per sec for 7 Holy points."},
+ {t:"Pull and group tools",m:"Judgement range / enemies that the tank can pull",c:"Seal of Fury",b:"10 yards, one enemy",p:"20 yards, all enemies",ids:["C-P7","C-P5"],s:"Reach of Law 2/2 gives the range. Shoulder the Burden moves 50% of the threat of an ally to you, on all enemies. Warrior: Charge, Challenging Shout. Druid: Feral Charge, Challenging Roar.",d:"Shoulder the Burden is a baseline spell with a 5 min cooldown."}
+,
+ {t:"Tank Judgement in a raid",m:"Threat, % of the Warrior / % of the Druid",c:"The raid takes the one tank Judgement for Light or Wisdom. Model, same gear, one boss",b:"90% / 98%",p:"101% / 110%",ids:["C2"],bars:[["Paladin, C2 only",661,"p","661 per sec"],["Warrior",653,"o","653 per sec"],["Druid",600,"o","600 per sec"],["Paladin, live, no Crusader",589,"b","589 per sec"]],s:"Live: no Crusader. Proposed: the tank keeps Crusader, about 72 threat per sec, and also applies Light or Wisdom.",d:"The bar shows Personal Judgement of the Crusader (C2) only, without Redoubt (C-P1)."},
+ {t:"Hand of Sacrifice",m:"Damage that moves from the ally to you",c:"A save for the other tank or an ally",b:"55 for each hit",p:"825 in one pool",ids:["C4","C5"],s:"Proposed: lasts 30 sec, 15 sec cooldown, no Blessing slot. Live: no cooldown, but it uses a Blessing slot.",d:"825 is about one third of a Naxxramas boss hit after armor. The value does not change: 15 hits of 55 in one pool. Devoted Sacrifice (C-P11) decreases the damage that moves to you by 20/40%. Power Word: Shield absorbs about 1,100."}],
+dps:[
+ {t:"Mana with Unsealed Wrath",m:"Time until the mana is empty",c:"Fresh level 60, wowsims rotation: 1 swing with Seal of Righteousness, then 3 with Seal of Command",b:"3 min 43 sec",p:"5 min 20 sec",ids:["C-H1"],s:"Model. Proposed: Reverence 50%. This plan gives the most damage. Live: in a 5 min fight, plan 3 + 3 costs 2.5% damage. With Reverence 50%, plan 1 + 3 is the best in all fight lengths. In wowsims, Major Mana Potion makes the mana last 5 min.",d:"Unsealed Wrath has no Seal cost decrease (Twist of Light had −20%)."}
+,
+ {t:"Judgement of the Crusader in a raid",m:"Damage bonus from Crusader, fresh level 60",c:"The raid takes the one Judgement of the Paladin for Light or Wisdom",b:"Lost",p:"+9.0% kept",ids:["C2"],s:"In Naxxramas: +6.0%. With Personal Judgement of the Crusader (C2), each Paladin keeps its own Crusader.",d:"Judgement of the Crusader adds 161 Holy damage taken. With C2, it increases only the damage of its Paladin."}],
+pvp:[
+ {t:"Saves after Lay on Hands",m:"Mana after Lay on Hands at full mana",b:"0 mana",p:"Half of the mana",ids:["C-P11"],s:"Divine Shield, Hand of Protection and Hammer of Justice stay available. See W18."},
+ {t:"Saves and buffs",m:"Kings or Might after a save",c:"Blessing or Hand of Protection or Freedom, from the same Paladin",b:"Buff removed",p:"Buff kept",ids:["C5"],s:"Live: Blessing of Protection or Freedom replaces the buff. Proposed: Hands use no Blessing slot.",d:"After a save, you do not cast the buff again: no global cooldown and no mana. One Hand from each Paladin on a target."},
+ {t:"Swift Judgement in a PvP build",m:"Points in Templar's Bulwark that the build does not use",c:"A PvP build with Swift Judgement",b:"1 point",p:"0 points",ids:["C-P14"],s:"Live: Swift Judgement requires Templar's Bulwark. Proposed: no prerequisite.",d:"Swift Judgement is a second Judgement for pulls and for the stun burst. The tank builds keep Templar's Bulwark."},
+]};
+// Live values with no proposal: the Paladin against the other classes. These cards show only a live value, after the cards of each role.
+const CMP_LIVE={
+heal:[
+ {t:"Recovery after a large hit",m:"Healing on the tank in 3 sec, against the Druid",c:"715 healing power, all cooldowns",b:"+18%",bars:[["Paladin, live",7441,"b"],["Druid",6293,"o"],["Shaman",4750,"o"],["Priest",3932,"o"]],s:"After 6 sec: 11% above the Druid. With short cooldowns only: 2% below the Druid. 225% critical heal.",d:"At 175%: 6% below the Druid after 3 sec, 11% below with short cooldowns. Power Word: Shield is not in the bars: it absorbs about 1,100."}
+],
+tank:[
+ {t:"Threat on 3 enemies",m:"Threat per sec on the enemy with the least threat",c:"wowsims, level 63 enemies",b:"249 per sec",bars:[["Paladin, live",249,"b"],["Druid",180,"o"],["Warrior",78,"o"]],s:"1.4 times the Druid, 3.2 times the Warrior. Cleave hits 2 targets and Swipe hits 3. Consecration hits all enemies. On 5 enemies, the Paladin has about 3–4 times both.",d:"The proposals add about 1% on groups."}
 ],
 dps:[
- {t:"DPS on one boss",c:"wowsims of 1 November, fresh level 60",b:"906",p:"No damage proposal",big:1,s:"Live: 100% of the pure average. Before the wowsims update: 848."},
- {t:"DPS with better gear",c:"Naxxramas, % of the pure average",b:"96%",p:"No damage proposal",s:"The live version is at or above the 95% target at all gear levels. The fixed base values of the Seals, Judgement and Holy Strike did not change."},
- {t:"Mana with Unsealed Wrath",c:"Fresh level 60, wowsims rotation: 1 swing with Seal of Righteousness, then 3 with Seal of Command",b:"Empty after 3 min 43 sec (model)",p:"Empty after 5 min 20 sec (Reverence 50%)",ids:["C-H1"],s:"This plan gives the most damage. Live: in a 5 min fight, plan 3 + 3 costs 2.5% damage. With Reverence 50%, plan 1 + 3 is the best in all fight lengths. In wowsims, Major Mana Potion makes the mana last 5 min.",d:"Unsealed Wrath has no Seal cost decrease (Twist of Light had −20%)."},
- {t:"Sanctified Judgement, rank 1",c:"Seal of Fury, 8.5 Judgements each min",b:"1.9 mana per sec",p:"5.7 mana per sec",ids:["C-R3"],s:"Each rank adds the same value: 40 mana for each Judgement."}
+ {t:"DPS on one boss",m:"Damage per sec",c:"wowsims of 1 November, fresh level 60, full buffs, 2 min",b:"906",s:"100% of the pure average. Before the wowsims update: 848.",d:"Pure average: Fury, Combat Rogue, Hunter, Mage and Warlock."},
+ {t:"DPS with better gear",m:"Damage, % of the pure average",c:"Model, from fresh level 60 to Naxxramas",b:"96% in Naxxramas",bars:[["Fresh 60",100,"b","100%"],["Pre-raid",99,"b","99%"],["Molten Core",98,"b","98%"],["Blackwing Lair",96,"b","96%"],["Naxxramas",96,"b","96%"]],s:"The live version is at or above the 95% target at all gear levels. The fixed base values of the Seals, Judgement and Holy Strike cause the decrease."}
 ],
 pvp:[
- {t:"Saves after Lay on Hands",b:"0 mana: no saves",p:"Half of the mana stays",ids:["C-P11"],s:"Divine Shield, Hand of Protection and Hammer of Justice stay available. See W18."},
+ {t:"Reckoning burst in one stun",m:"Damage in one Hammer of Justice stun (6 sec)",c:"Two-hand weapon, Reckoning 5/5 with 4 stored attacks (the Reckoning bomb)",b:"About 3,630",bars:[["Reckoning build, 4 stored attacks",3630,"b","3,630"],["Unsealed Wrath, 3 stored Command",2400,"b","2,400"],["Reckoning build, 0 stored attacks",2070,"b","2,070"]],s:"Reckoning stores up to 4 extra attacks after critical hits that you take. All stored attacks hit on your next swing: about 390 damage each. The kept proposals do not change this burst. See W6 and W26.",d:"Reckoning build: 0/25/26, two-hand weapon. With 0 stored attacks, it does 2,070 with its normal attacks and spells in the stun. 4 stored attacks add about 1,560. With a shield, Redoubt (C-P1) gives the 4 stored attacks 4 sec sooner (14 sec, against 18 sec). But 4 one-hand attacks add only about 1,050 damage. Unsealed Wrath: 0/20/31 build, no Reckoning. A Seal change releases the 3 stored copies of Seal of Command in the stun: about +330."}
 ]};
 function renderCompare(role){
   const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
   const card=x=>{
     const mx=x.bars?Math.max(...x.bars.map(b=>b[1])):0;
     const bars=x.bars?`<div class="bars">${x.bars.map(b=>`<span class="lb${b[2]!=="o"?" me":""}">${esc(b[0])}</span><span class="cbar"><i class="${b[2]}" style="width:${(b[1]/mx*100).toFixed(1)}%"></i></span><span class="vl">${esc(b[3]||b[1].toLocaleString("en-US"))}</span>`).join("")}</div>`:"";
-    return `<article class="mc"><div><h4>${esc(x.t)}</h4>${x.c?`<div class="cond">${esc(x.c)}</div>`:""}</div>
-<div class="mc-v"><div><small>Live</small><span class="vb${x.big?" big":""}">${esc(x.b)}</span></div><span class="ar" aria-hidden="true">→</span><div><small>Proposed</small><span class="vp${x.big?" big":""}">${esc(x.p)}</span></div></div>
-${bars}${x.s?`<p class="sum">${esc(x.s)}</p>`:""}${x.d?`<details><summary>More</summary><p>${esc(x.d)}</p></details>`:""}${x.ids?`<div class="ids">${x.ids.map(i=>`<span class="pid">${i}</span>`).join("")}</div>`:""}</article>`;};
-  document.getElementById("cmpBody").innerHTML=CMP[role].map(card).join("");
+    const ids=x.ids?`<div class="ids">${x.ids.map(i=>`<span class="pid">${i}</span>`).join("")}</div>`:(x.p?"":`<div class="ids"><span class="lotag">Live only</span></div>`);
+    const mh=x.m?`<div class="mc-m">${esc(x.m)}</div>`:"";
+    const val=x.p?`<div class="mc-v">${mh}<div><small>Live</small><span class="vb${x.big?" big":""}">${esc(x.b)}</span></div><span class="ar" aria-hidden="true">→</span><div><small>Proposed</small><span class="vp${x.big?" big":""}">${esc(x.p)}</span></div></div>`:`<div class="mc-v" style="grid-template-columns:1fr">${mh}<div><small>Live</small><span class="vp${x.big?" big":""}">${esc(x.b)}</span></div></div>`;
+    return `<article class="mc${x.p?"":" lo"}"><div class="mc-h"><div><h4>${esc(x.t)}</h4>${x.c?`<div class="cond">${esc(x.c)}</div>`:""}</div>${ids}</div>
+${val}
+${bars}${x.s?`<p class="sum">${esc(x.s)}</p>`:""}${x.d?`<details><summary>More</summary><p>${esc(x.d)}</p></details>`:""}</article>`;};
+  document.getElementById("cmpBody").innerHTML=CMP[role].concat(CMP_LIVE[role]||[]).map(card).join("");
   document.querySelectorAll(".rtabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.role===role));
 }
 document.querySelectorAll(".rtabs button").forEach(b=>b.addEventListener("click",()=>renderCompare(b.dataset.role)));
