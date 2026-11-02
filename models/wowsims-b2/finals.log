@@ -159,3 +159,22 @@ RESULT dur=120 buffs=full propose="C1" dps=956.2 tto=580.1 oom=0.0
 RESULT dur=120 buffs=full propose="C1,REV50" dps=956.2 tto=727.5 oom=0.0
 RESULT dur=300 buffs=full propose="C1" dps=962.2 tto=1410.9 oom=0.0
 RESULT dur=300 buffs=full propose="C1,REV50" dps=962.9 tto=1550.6 oom=0.0
+
+## Sacred Arbiter +10% / +0% (flags SA10, SA0) against C1, 3,000 iterations (2 November 2026)
+# Retribution RB1 050250002-501-05233011201301351
+beta RESULT dur=120 buffs=full propose="" dps=905.9
+beta RESULT dur=120 buffs=full propose="SA10" dps=899.2
+prop RESULT dur=120 buffs=full propose="REV50" dps=905.9
+prop RESULT dur=120 buffs=full propose="C1,REV50" dps=956.2
+prop RESULT dur=120 buffs=full propose="C1,REV50,SA10" dps=949.5
+prop RESULT dur=120 buffs=full propose="C1,REV50,SA0" dps=942.7
+beta RESULT dur=180 buffs=none propose="" dps=302.8
+beta RESULT dur=180 buffs=none propose="SA10" dps=299.5
+prop RESULT dur=180 buffs=none propose="REV50" dps=315.2
+prop RESULT dur=180 buffs=none propose="C1,REV50" dps=336.6
+prop RESULT dur=180 buffs=none propose="C1,REV50,SA10" dps=333.1
+prop RESULT dur=180 buffs=none propose="C1,REV50,SA0" dps=329.6
+# Protection, 180 sec, threat each sec (Warrior 926)
+BS2 live tps=953.2 | BS2 live SA10 tps=942.7
+PS1 CP1,NOTOUGH tps=1007.3 | PS1 C1,CP1,NOTOUGH tps=1032.7 | PS1 +SA10 tps=1022.3 | PS1 +SA0 tps=1011.9
+PT1 CP1,NOTOUGH tps=986.1 | PT1 C1,CP1,NOTOUGH tps=1011.6
