@@ -88,7 +88,7 @@ This tab uses the proposed trees of calculator version 6 (the live version, with
 | Tree | Rows 1–7 | Rows 1–3 | Rows 4–6 |
 | --- | --- | --- | --- |
 | Holy | 10 / 12 / 8 / 5 / 5 / 5 / 1 | 30 | **15** |
-| Protection | 10 / 7 / 8 / 9 / 10 / 3 / 1 | 25 | 22 |
+| Protection | 10 / 7 / 8 / 11 / 8 / 3 / 1 | 25 | 22 |
 | Retribution | 10 / 8 / 8 / 6 / 6 / 5 / 1 | 26 | 17 |
 | Mean of the other 24 trees | — | 28.6 | 19.1 |
 

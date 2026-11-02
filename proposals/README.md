@@ -36,7 +36,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 10 chan
 | C-P1 | Redoubt | Protection, row 1 | 10% chance when you are hit: +6–30% block | The same. Each Holy Shield cast also starts it |
 | C-P5 | Shoulder the Burden (new) | Baseline spell | — | 50% of the threat of an ally moves to you, 5 min cooldown |
 | C-P7 | Reach of Law (new) | Protection, row 5 | — | 2 ranks, requires Swift Judgement: Judgement and Swift Judgement range +50/100% while Seal of Fury is active |
-| M-P2 | Stoicism | Protection, row 5 | Column 1 | Column 4 (move only, for Reach of Law) |
+| M-P2 | Stoicism | Protection | Row 5, column 1 | Row 4, column 4 (move only, for Reach of Law) |
 | C-P11 | Devoted Sacrifice (new) | Protection, row 3 | — | 2 ranks: Lay on Hands drains only 75/50% of your current mana, and you take 20/40% less damage from your Hand of Sacrifice. Alternative C-P11a: the spell drains 50% for all Paladins |
 | C-P13 | Toughness | Protection, row 3 | +2–10% armor from items | Removed. Devoted Sacrifice (C-P11) takes its place |
 | C-R3 | Sanctified Judgement | Retribution, row 2 | 33/66/100% chance to return 20/40/60% of the Seal cost | 100% chance at all ranks. The return is 20/40/60% of the Seal cost |
