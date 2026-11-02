@@ -572,7 +572,7 @@ ${dn("The live tree has no place for one more ability talent. The Paladin tank s
 <p class="cat"><b>Holy</b></p>
 <ul>
 <li>New Talent: ${t("sw","Lingering Light")} (Row 5, Column 4, 2 ranks): Your critical heals also heal the target for 10/20% of the amount over 6 sec. ${g("C-H2")}
-${dn("In the live trees, the Druid is the best healer on one tank in fights of 10 min. With Lingering Light, the Paladin is first in all fight lengths: 4–11% above the Druid at a 200% critical heal, 10–18% at 225%. Row 5 needs 20 Holy points, thus hybrids cannot take it. It takes the 2 filler points of Holy Conduit.")}</li>
+${dn("With a 225% critical heal, the live Paladin is first on one tank by 3–10%. With Lingering Light, it is 10–18% above the Druid. At a 175% critical heal, the Druid is first, and Lingering Light gives the Paladin a first place in fights of 3 and 5 min. Row 5 needs 20 Holy points, thus hybrids cannot take it. It takes the 2 filler points of Holy Conduit.")}</li>
 </ul>
 
 <p class="cat"><b>Protection</b></p>
@@ -624,9 +624,9 @@ window.addEventListener("scroll",hideTip,{passive:true});
 // Beta and proposals compared: one card per topic. bars: [label, value, kind b|p|o, shown text?]
 const CMP={
 heal:[
- {t:"Raid healing per sec",c:"715 healing power, 3 min",b:"596",p:"635 (+7%)",big:1,ids:["C-H2"],bars:[["Priest",948,"o"],["Druid",855,"o"],["Shaman",709,"o"],["Paladin, proposed",635,"p"],["Paladin, live",596,"b"]],s:"Live: 30% below the Druid. With Lingering Light: 26% below. This is accepted: Holy is the best single-target healer, not the best raid healer.",d:"Beta of 18 October: 616. Mana is the limit: the best cast plan is almost only Flash of Light."},
- {t:"One tank, healing per sec",c:"715 healing power, 3 min, Oath of Light on the tank",b:"695",p:"738 (+6%)",big:1,ids:["C-H2"],bars:[["Paladin, proposed",738,"p"],["Paladin, live",695,"b"],["Druid",681,"o"],["Shaman",607,"o"],["Priest",606,"o"]],s:"Live: 2% below to 7% above the Druid (200% critical heal). The Druid is first in fights of 10 min. With Lingering Light: 4–11% above, first in all fight lengths.",d:"Live at 225% (wowsims): 3–10% above the Druid. At 175%: 1–7% below. With Lingering Light at 225%: 10–18% above. At 175%: 2% below to 5% above. Maximum raw healing per sec: Paladin 1,452, other healers 1,278–1,320."},
- {t:"Recovery after a large hit",c:"First 3–6 sec, against the Druid",b:"2–6% above with Divine Favor, 6–7% below with short cooldowns",p:"No proposal",s:"200% critical heal. At 225%: 11–18% above with Divine Favor."},
+ {t:"Raid healing per sec",c:"715 healing power, 3 min",b:"629",p:"674 (+7%)",big:1,ids:["C-H2"],bars:[["Priest",948,"o"],["Druid",855,"o"],["Shaman",709,"o"],["Paladin, proposed",674,"p"],["Paladin, live",629,"b"]],s:"Live: 26% below the Druid. With Lingering Light: 21% below. This is accepted: Holy is the best single-target healer, not the best raid healer.",d:"Beta of 18 October: 616. Mana is the limit: the best cast plan is almost only Flash of Light."},
+ {t:"One tank, healing per sec",c:"715 healing power, 3 min, Oath of Light on the tank",b:"732",p:"783 (+7%)",big:1,ids:["C-H2"],bars:[["Paladin, proposed",783,"p"],["Paladin, live",732,"b"],["Druid",681,"o"],["Shaman",607,"o"],["Priest",606,"o"]],s:"Live: 3–10% above the Druid in all fight lengths (225% critical heal). With Lingering Light: 10–18% above.",d:"At 175%: live 1–7% below the Druid, with Lingering Light 2% below to 5% above. At 200%: live 2% below to 7% above. Maximum raw healing per sec: Paladin 1,536, other healers 1,278–1,320."},
+ {t:"Recovery after a large hit",c:"First 3–6 sec, against the Druid",b:"11–18% above with Divine Favor, 2% below with short cooldowns",p:"No proposal",s:"225% critical heal. At 175%: 6–7% below with Divine Favor."},
  {t:"Lay on Hands at full mana",b:"Drains all 4,416 mana",p:"Drains 2,208 (50%)",ids:["C-P11"],s:"With Devoted Sacrifice 2/2, the mana is back after 1 min 38 sec (was 3 min 15 sec)."}
 ],
 tank:[

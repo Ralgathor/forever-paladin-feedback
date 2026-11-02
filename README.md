@@ -32,7 +32,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 **Holy**
 
-- **C-H2 Lingering Light (new, row 5):** a critical heal also heals 10/20% of its amount over 6 sec. With it, the Paladin is first on one tank in all fight lengths (+4–11% against the Druid at a 200% critical heal). It needs 20 Holy points, thus hybrids cannot take it.
+- **C-H2 Lingering Light (new, row 5):** a critical heal also heals 10/20% of its amount over 6 sec. With it, the Paladin is 10–18% above the Druid on one tank (225% critical heal), and first in fights of 3 and 5 min at the low case (175%). It needs 20 Holy points, thus hybrids cannot take it.
 
 **Protection**
 

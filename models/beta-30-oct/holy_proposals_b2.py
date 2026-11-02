@@ -6,7 +6,7 @@ import healing_model as H
 from healing_model import Spell, cd_limit, regen_full, solve, priest, druid, shaman, max_hps, HPG, CRIT_BASE, PAL_CRIT, HOT_CRIT, ll_end_pool
 import healing_b2 as B
 
-def pal(hp=HPG, tank=False, oath=None, bonus=1.0, conv=0.06, boundless=0.30, light=1.12, rev=0.30, illum=0.50, bened=0.10, ling=0.0, df_cd=120, infall=False):
+def pal(hp=HPG, tank=False, oath=None, bonus=1.25, conv=0.06, boundless=0.30, light=1.12, rev=0.30, illum=0.50, bened=0.10, ling=0.0, df_cd=120, infall=False):
     if oath is None: oath = tank
     c = CRIT_BASE + PAL_CRIT + conv
     c_hs = c + (0 if oath else boundless)

@@ -2,7 +2,7 @@
 
 The live version changes most of the Holy tree. Oath of Light, Boundless Light and the new Holy Power make the Paladin the best healer on one tank. This is the design goal of Holy. In raids, the Paladin stays below the other healers (see Beta test results). This is accepted, because Holy is not a raid healer first. One Holy proposal stays: Lingering Light (C-H2). The spell changes (C1, C2, C4, C5) also apply to Holy.
 
-- A first place on one tank in all fight lengths, with a 200% critical heal (Lingering Light, C-H2).
+- A larger lead on one tank, and a first place in all fight lengths at the low case of Holy Power (Lingering Light, C-H2).
 
 ## Holy layout
 
@@ -24,7 +24,7 @@ The live version changes most of the Holy tree. Oath of Light, Boundless Light a
 - **Proposed text.** "Your non-periodic critical heals also heal the target for 10/20% of the amount over 6 sec. A new critical heal adds to the heal that remains." 2 ranks.
 - **Position.** Row 5, column 4. It needs 20 Holy points. Thus, only a Holy build takes it. A hybrid with 10–14 Holy points (for example Retribution RB1) cannot take it.
 - **Cost for Holy.** None. HB2 had 2 filler points in Holy Conduit, only to open Light's Vigil (row 7). Lingering Light takes these 2 points. Rows 1–4 still give 20 points, and rows 1–6 still give 30.
-- **Problem.** In the live trees, the Paladin is first on one tank only in fights of 3 and 5 min. In fights of 10 min, the Druid is first. At a 175% critical heal, the Druid is first in all fight lengths.
+- **Problem.** With a 225% critical heal (main hypothesis), the live Paladin is first on one tank in all fight lengths, but only by 3% in fights of 10 min. At a 175% critical heal, the Druid is first in all fight lengths.
 - **Change.** A critical heal also heals 10/20% of its amount over 6 sec. The heal over time can also be a critical heal.
 - **Model.** Divine Aegis (Priest) and Living Seed (Druid) add an effect to critical heals.
 
@@ -32,12 +32,11 @@ The live version changes most of the Holy tree. Oath of Light, Boundless Light a
 
 | Critical heal | Live | Lingering Light 2/2 |
 | --- | --- | --- |
+| **225% (main hypothesis)** | **+8% / +10% / +3%** | **+15% / +18% / +10%** |
+| 200% | +2% / +5% / −2% | +8% / +11% / +4% |
 | 175% | −3% / −1% / −7% | +2% / +5% / −2% |
-| **200% (main hypothesis)** | **+2% / +5% / −2%** | **+8% / +11% / +4%** |
-| 225% | +8% / +10% / +3% | +15% / +18% / +10% |
 
-- **At 200%,** the Paladin is first on one tank in all fight lengths.
-- **At 175%,** Lingering Light gives the values of the live trees at 200%.
 - **At 225%,** the lead stays below the 20% limit (W14). At 900 healing power, it is +20% in fights of 5 min: at the limit.
-- **Raids.** About +4 points: the Paladin stays 22–26% below the Druid.
+- **At 175%,** Lingering Light gives a first place in fights of 3 and 5 min.
+- **Raids.** About +5 points: the Paladin stays 17–21% below the Druid.
 - **Withdrawn on 31 October with Reverence 50% (C-H1).** Together, they gave 20–25% at 225%, past the limit. Alone, Lingering Light stays below the limit. Thus, it is a proposal again (2 November 2026). Reverence 50% stays withdrawn.

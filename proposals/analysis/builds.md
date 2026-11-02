@@ -16,13 +16,13 @@ The builds use the proposed trees of calculator version 6 (the live version, wit
 
 | Build | Points and code | Healing each sec (raid / one tank, 5 min) | What it gives |
 | --- | --- | --- | --- |
-| HB1. Raid healer, live talents | 38/5/8: [`v6p50325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50325115202121251-5-0503) | 506 / 601 | All healing talents. Divine Intellect 5, Benediction 5, Conviction 3. Improved Seals 5, Holy Conduit 2 and Consecrated Ground 2 fill the rows |
-| **HB2. Raid healer, Devoted Sacrifice** | 31/12/8: [`v6p503201150021012512-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p503201150021012512-50122000000000002-0503) | 537 / 638 | All healing talents and Lingering Light 2/2 (C-H2). Devoted Sacrifice 2/2 (C-P11): Lay on Hands drains only 50% of the mana. Guardian's Favor 2/2 (Hand of Protection each 3 min), Sacred Duty 2/2 (Divine Shield −60 sec), Precision 1 |
+| HB1. Raid healer, live talents | 38/5/8: [`v6p50325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50325115202121251-5-0503) | 533 / 633 | All healing talents. Divine Intellect 5, Benediction 5, Conviction 3. Improved Seals 5, Holy Conduit 2 and Consecrated Ground 2 fill the rows |
+| **HB2. Raid healer, Devoted Sacrifice** | 31/12/8: [`v6p503201150021012512-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p503201150021012512-50122000000000002-0503) | 570 / 677 | All healing talents and Lingering Light 2/2 (C-H2). Devoted Sacrifice 2/2 (C-P11): Lay on Hands drains only 50% of the mana. Guardian's Favor 2/2 (Hand of Protection each 3 min), Sacred Duty 2/2 (Divine Shield −60 sec), Precision 1 |
 
-- **HB2 is the main build with the proposals.** It loses only two damage talents: Improved Seals and Consecrated Ground. Lingering Light gives +6% healing in raids and on one tank.
+- **HB2 is the main build with the proposals.** It loses only two damage talents: Improved Seals and Consecrated Ground. Lingering Light gives +7% healing in raids and on one tank.
 - **Holy needs 31 points for Light's Vigil.** In the live trees, Holy Conduit 2/2 fills the rows. It makes only Consecration, Holy Wrath, Exorcism and Hammer of Wrath cheaper. In the proposed trees, Lingering Light (C-H2) takes these 2 points.
 - **The 3 Retribution points after Benediction** go to Conviction 3/3: +6% critical chance, thus more Illumination mana.
-- **Healing values** use 200% critical heals (Holy Power 5/5, main hypothesis). HB2 at 225%: 570 raid and 677 one tank. At 175%: 505 and 600. HB1 at 225%: 533 and 633. At 175%: 479 and 568.
+- **Healing values** use 225% critical heals (Holy Power 5/5, main hypothesis). HB2 at 200%: 537 raid and 638 one tank. At 175%: 505 and 600. HB1 at 200%: 506 and 601. At 175%: 479 and 568.
 
 ## 2. Protection
 
