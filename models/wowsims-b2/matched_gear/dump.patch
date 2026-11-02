@@ -1,0 +1,23 @@
+diff --git a/sim/core/test_suite.go b/sim/core/test_suite.go
+index 57797d7e1c..ab61fd9535 100644
+--- a/sim/core/test_suite.go
++++ b/sim/core/test_suite.go
+@@ -12,6 +12,7 @@ import (
+ 	"github.com/wowsims/forever/sim/core/proto"
+ 	"github.com/wowsims/forever/sim/core/stats"
+ 	"google.golang.org/protobuf/encoding/prototext"
++	"google.golang.org/protobuf/encoding/protojson"
+ )
+ 
+ // Precise enough to detect very small changes to test results, but truncated
+@@ -74,6 +75,10 @@ func (testSuite *IndividualTestSuite) TestStatWeights(testName string, swr *prot
+ 
+ func (testSuite *IndividualTestSuite) TestDPS(testName string, rsr *proto.RaidSimRequest) *proto.RaidSimResult {
+ 	testSuite.testNames = append(testSuite.testNames, testName)
++	if d := os.Getenv("ZZDUMP"); d != "" {
++		b, _ := protojson.Marshal(rsr)
++		os.WriteFile(d+"/"+strings.ReplaceAll(testName, "/", "_")+".json", b, 0644)
++	}
+ 
+ 	result := RunRaidSim(rsr)
+ 	if result.Logs != "" {

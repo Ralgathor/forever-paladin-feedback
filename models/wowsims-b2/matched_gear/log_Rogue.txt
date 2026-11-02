@@ -1,0 +1,11 @@
+EP {0: 0.181, 1: 0.297, 3: 0.0, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.164, 15: 0.0, 17: 0.031, 18: 0.223, 19: 0.187, 20: 0.054, 13: 0.0} {0: 2.1114629714973203, 1: 0.0, 2: 0.0}
+cands {0: 19, 1: 16, 2: 15, 3: 18, 4: 15, 5: 15, 6: 16, 7: 15, 8: 15, 9: 17, 10: 16, 11: 16, 12: 44, 13: 44, 14: 30, 15: 34, 16: 28}
+start 529.2
+  pass0 slot4: Darkmantle Tunic -> Dawn Armor 529.2->532.2
+  pass0 slot6: Stormshroud Gloves -> Darkmantle Gloves 532.2->534.5
+  pass0 slot12: Thaelemaches' Talisman -> Cleansed Vilebranch Medallion 534.5->536.8
+  pass0 slot15: Bold Dirk -> Masterwork Stormhammer 536.8->545.0
+2026/11/02 16:25:50 running 10000 iterations took 9.636604868s
+FINAL Rogue 545.1 +- 0.3
+SET Darkmantle Cap(60) ; Beads of Ogre Might(63) ; Zandalar Madcap's Mantle(61) ; Earthweave Cloak(62) ; Dawn Armor(61) ; Forest Stalker's Bracers(55) ; Darkmantle Gloves(55) ; Assassin's Waistguard(60) ; Devilsaur Leggings(60) ; Mongoose Boots(62) ; Signet Ring of the Bronze Dragonflight(60) ; Might of Cenarius(62) ; Cleansed Vilebranch Medallion(51) ; Rune of the Guard Captain(51) ; The Lobotomizer(60) ; Masterwork Stormhammer(63) ; Bloodseeker(63)
+ILVL 59.4 epics 9

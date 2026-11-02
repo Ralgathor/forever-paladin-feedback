@@ -96,7 +96,7 @@ HEAL_ROWS = [  # (label, model key, wowsims key)
 def rows(m, s):
     out = [("Damage", "Retribution, all proposals against the beta (same talents)", m["ret_gain"], s["ret_gain"], "ratio"),
            ("Damage", "Beta Retribution against Arms, same gear", m["ret_arms"], s["ret_arms"], "ratio"),
-           ("Damage", "Retribution, all proposals, as a % of Fury (model: MythicSim ratio, part 5)", m["ret_fury"], s["ret_fury"], "ratio"),
+           ("Damage", "Retribution, all proposals, as a % of Fury (model: frozen MythicSim ratio of the 18 October analysis)", m["ret_fury"], s["ret_fury"], "ratio"),
            ("Threat", "Proposals, TPS added to the beta Paladin", m["tps_gain"], s["tps_gain"], "tps"),
            ("Threat", "Beta Paladin as a % of the Warrior", m["beta_war"], s["beta_war"], "ratio"),
            ("Threat", "Proposed Paladin as a % of the Warrior", m["prop_war"], s["prop_war"], "ratio")]

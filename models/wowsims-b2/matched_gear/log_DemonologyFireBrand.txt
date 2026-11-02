@@ -1,0 +1,15 @@
+EP {0: 0.0, 1: 0.0, 3: 0.127, 5: 0.662, 7: 0.529, 11: 0.179, 14: 0.0, 15: 0.0, 17: 0.545, 18: 0.236, 19: 0.038, 20: 0.0, 13: 0.02} {0: 0.0, 1: 0.0, 2: 0.0}
+cands {0: 19, 1: 16, 2: 15, 3: 18, 4: 15, 5: 15, 6: 15, 7: 15, 8: 15, 9: 17, 10: 16, 11: 16, 12: 44, 13: 44, 14: 25, 15: 27, 16: 13}
+start 570.4
+  pass0 slot0: Dreadmist Mask -> Deathmist Mask 570.4->577.6
+  pass0 slot1: Beads of Ogre Mojo -> Chains of the Lich 577.6->581.4
+  pass0 slot2: Dreadmist Mantle -> Mantle of the Timbermaw 581.4->589.4
+  pass0 slot5: Dreadmist Bracers -> Rockfury Bracers 589.4->608.8
+  pass0 slot6: Dreadmist Wraps -> Inferno Gloves 608.8->618.7
+  pass0 slot10: Jereman's Bauble -> Watcher's Signet of Brilliance 618.7->621.0
+  pass0 slot12: Cleansed Vilebranch Icon -> Talisman of Ascendance 621.0->642.9
+  pass0 slot15: Truesilver Conduit -> Tome of Fiery Arcana 642.9->655.0
+2026/11/02 16:32:30 running 10000 iterations took 7.358494004s
+FINAL DemonologyFireBrand 655.1 +- 0.3
+SET Deathmist Mask(60) ; Chains of the Lich(60) ; Mantle of the Timbermaw(61) ; Hide of the Wild(62) ; Robe of the Void(62) ; Rockfury Bracers(62) ; Inferno Gloves(62) ; Dreadmist Belt(58) ; Dreadmist Leggings(61) ; Dreadmist Sandals(59) ; Watcher's Signet of Brilliance(60) ; Signet Ring of the Bronze Dragonflight(60) ; Talisman of Ascendance(60) ; Jewel of the Guard Captain(51) ; Notched Ritual Rib(45) ; Tome of Fiery Arcana(60) ; Brilliant Wand(60)
+ILVL 59.0 epics 8

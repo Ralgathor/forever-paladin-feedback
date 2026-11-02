@@ -32,8 +32,6 @@
 - [Kami-labs – Restoration Druid build](https://kami-labs.fr/en/wow-forever/build-druide-restauration-wow-forever/)
 - [Kami-labs – Restoration Shaman build](https://kami-labs.fr/en/wow-forever/build-chaman-restauration-wow-forever/)
 - [The Amazon Basin – Classic Paladin healing spells](https://www.theamazonbasin.com/wiki/index.php/Paladin_Healing_Spells)
-- [MythicSim – WoW Forever DPS tier list](https://mythicsim.com/wow-forever/tier-list)
-- [MythicSim – Retribution Paladin trinkets](https://mythicsim.com/wow-forever/best-trinkets/retribution-paladin)
 - [WoW Forever Tier List – DPS](https://wowforevertierlist.com/tier-list/dps)
 - [LFCarry – Retribution Paladin PvE guide](https://lfcarry.com/guides/wow-forever-retribution-paladin-pve)
 - [Metaforge – Stormcarver](https://metaforge.app/wow-forever/database/weapons/stormcarver)

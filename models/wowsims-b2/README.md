@@ -15,6 +15,7 @@ These files add the proposals to wowsims Forever, master branch (commit `895cd67
 | `FEEDBACK_BOSS` | In the Paladin and Warrior tank tests: `fast` (a swing each 1.2 sec, 60% damage), `dw` (two weapons), or both |
 | `FEEDBACK_TARGETS` | In the three tank tests: the number of targets. Each target hits for 1/3 of the boss. The tests then print the threat on each target |
 | allspecs_main.go, allspecs.log | All damage specs with pre-raid gear and the same buffs (Analysis, Damage, part 7). The file header gives the steps |
+| matched_gear/ | The pure damage specs and Retribution with the same pre-raid item pool: the pure average of Analysis, Damage. See matched_gear/README.md |
 | run.sh | All runs: `./run.sh <wowsims clone>` |
 
 - **Full buffs.** The wowsims test buffs, with Mana Spring Totem, Mana Tide Totem and Atiesh.

@@ -4,8 +4,9 @@
 # it from the written inputs and the Forever spellbook and talents (wowforevertalents.com, build 1.60.1.70450).
 # Where the inputs leave a value open, a comment gives the choice. No value is fitted to the first calculation.
 #
-# The other classes are not compared directly: Analysis, Damage, part 5 uses the MythicSim values. Fury, Arms and
-# Combat Rogue are in the model only for the check with the same gear (part 5) and the increase with gear (part 6).
+# The other classes are not compared directly: the pure average comes from wowsims runs with the same item pool for each
+# spec (models/wowsims-b2/matched_gear). Fury, Arms and Combat Rogue are in the model only for the check with the same
+# gear and the increase with gear.
 
 # ---------------------------------------------------------------- fight (part 2)
 BOSS_ARMOR = 976                 # 3,731 after 5 Sunder Armor and Faerie Fire

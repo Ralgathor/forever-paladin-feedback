@@ -1,0 +1,12 @@
+EP {0: 0.4, 1: 0.374, 3: 0.0, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.182, 15: 0.0, 17: 0.066, 18: 0.504, 19: 0.429, 20: 0.058, 13: 0.0} {0: 2.3655121364895253, 1: 0.0, 2: 0.0}
+cands {0: 21, 1: 16, 2: 15, 3: 18, 4: 19, 5: 15, 6: 20, 7: 16, 8: 15, 9: 19, 10: 16, 11: 16, 12: 44, 13: 44, 14: 31, 15: 35, 16: 28}
+start 664.2
+  pass0 slot3: Shifting Cloak -> Earthweave Cloak 664.2->668.4
+  pass0 slot4: Dawn Armor -> Timbermaw Tunic 668.4->671.6
+  pass0 slot12: Frozen Heart of the Mountain -> Rune of the Guard Captain 671.6->673.9
+  pass0 slot13: Jewel of the Guard Captain -> Cleansed Vilebranch Medallion 673.9->675.9
+  pass0 slot15: Heartseeker -> Persuader 675.9->678.8
+2026/11/02 16:22:36 running 10000 iterations took 7.510655882s
+FINAL DpsWarrior 677.9 +- 0.5
+SET Lionheart Helm(61) ; Medallion of the Dawn(60) ; Golden Mantle of the Dawn(61) ; Earthweave Cloak(62) ; Timbermaw Tunic(61) ; Deeprock Bracers(62) ; Gauntlets of Heroism(55) ; Zandalar Vindicator's Belt(61) ; Titanic Leggings(60) ; Boots of Heroism(60) ; Protector's Band(63) ; Signet Ring of the Bronze Dragonflight(60) ; Rune of the Guard Captain(51) ; Cleansed Vilebranch Medallion(51) ; Persuader(63) ; Persuader(63) ; The Purifier(60)
+ILVL 59.6 epics 12

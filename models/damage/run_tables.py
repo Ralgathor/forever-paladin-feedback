@@ -2,7 +2,9 @@
 import damage_model as M
 from damage_model import gear, retribution, fury, arms, rogue, TIER_NAMES
 
-# MythicSim (part 5): wowsims Forever, beta client 1.60.1.70425. Best spec of each pure damage class.
+# Frozen inputs of the analysis of the beta of 18 October 2026: MythicSim values (beta client 1.60.1.70425), best spec
+# of each pure damage class. The current analysis does not use them: see models/beta-30-oct/retribution_b2.py and
+# models/wowsims-b2/matched_gear (wowsims runs with the same item pool for each spec).
 PURE = {"Warrior": 929, "Rogue": 702, "Hunter": 1175, "Mage": 860, "Warlock": 879}
 RET_BETA_SIM = 847
 

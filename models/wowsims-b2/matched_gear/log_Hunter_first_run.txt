@@ -1,0 +1,14 @@
+EP {0: 0.0, 1: 0.0, 3: 0.0, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.0, 15: 0.0, 17: 0.0, 18: 0.0, 19: 0.0, 20: 0.0, 13: 0.0} {0: 0.0, 1: 0.0, 2: 0.0}
+cands {0: 19, 1: 15, 2: 15, 3: 16, 4: 17, 5: 15, 6: 17, 7: 15, 8: 15, 9: 17, 10: 16, 11: 16, 12: 41, 13: 41, 14: 28, 15: 0, 16: 22}
+start 560.3
+  pass0 slot0: Beaststalker's Cap -> Beastmaster's Cap 560.3->567.3
+  pass0 slot1: Pulsating Crystalline Shard -> Woven Ivy Necklace 567.3->572.1
+  pass0 slot4: Beaststalker's Tunic -> Beastmaster's Tunic 572.1->579.2
+  pass0 slot10: Seafire Band -> Chemist's Ring 579.2->580.5
+  pass0 slot12: Nifty Stopwatch -> Frozen Heart of the Mountain 580.5->586.2
+  pass0 slot14: Legionite Glaive -> Ice Barbed Spear 586.2->596.8
+  pass0 slot16: Massive Longbow -> Bloodseeker 596.8->613.9
+2026/11/02 16:28:48 running 10000 iterations took 8.910850225s
+FINAL Hunter 612.9 +- 0.3
+SET Beastmaster's Cap(60) ; Woven Ivy Necklace(51) ; Beaststalker's Mantle(60) ; Shifting Cloak(62) ; Beastmaster's Tunic(60) ; Beaststalker's Bindings(57) ; Beaststalker's Gloves(59) ; Beaststalker's Belt(58) ; Beaststalker's Pants(61) ; Beaststalker's Boots(59) ; Chemist's Ring(55) ; Coldwater Ring(46) ; Frozen Heart of the Mountain(55) ; Rune of the Guard Captain(51) ; Ice Barbed Spear(63) ; Bloodseeker(63)
+ILVL 57.5 epics 3

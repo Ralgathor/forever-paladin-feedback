@@ -1,0 +1,15 @@
+EP {0: 0.411, 1: 0.274, 3: 0.209, 5: 0.283, 7: 0.0, 11: 0.0, 14: 0.171, 15: 0.0, 17: 0.88, 18: 0.383, 19: 0.357, 20: 0.03, 13: 0.0} {0: 2.4405428576584427, 1: 0.0, 2: 0.0}
+cands {0: 21, 1: 16, 2: 15, 3: 19, 4: 19, 5: 15, 6: 19, 7: 16, 8: 15, 9: 21, 10: 16, 11: 16, 12: 44, 13: 44, 14: 27, 15: 0, 16: 2}
+start 647.9
+  pass0 slot1: Beads of Ogre Might -> Medallion of the Dawn 647.9->652.7
+  pass0 slot2: Hermit's Pauldron -> Mantle of the Timbermaw 652.7->660.5
+  pass0 slot4: Soulforge Breastplate -> Timbermaw Tunic 660.5->664.5
+  pass0 slot5: Rockfury Bracers -> Deeprock Bracers 664.5->666.9
+  pass0 slot9: Soulforge Boots -> Feralheart Boots 666.9->668.8
+  pass0 slot11: Signet Ring of the Bronze Dragonflight -> Watcher's Signet of Brilliance 668.8->670.3
+  pass0 slot12: Everlook Pathcarver -> Talisman of Ascendance 670.3->678.9
+  pass0 slot14: Arcanite Reaper -> The Unstoppable Force 678.9->681.9
+2026/11/02 16:19:33 running 10000 iterations took 10.136122555s
+FINAL Retribution 681.8 +- 0.5
+SET Lionheart Helm(61) ; Medallion of the Dawn(60) ; Mantle of the Timbermaw(61) ; Earthweave Cloak(62) ; Timbermaw Tunic(61) ; Deeprock Bracers(62) ; Soulforge Gauntlets(55) ; Vindicator's Belt(60) ; Titanic Leggings(60) ; Feralheart Boots(60) ; Watcher's Signet of Ferocity(60) ; Watcher's Signet of Brilliance(60) ; Talisman of Ascendance(60) ; Rune of the Guard Captain(51) ; The Unstoppable Force(60) ; Libram of Holy Alacrity(60)
+ILVL 59.6 epics 12

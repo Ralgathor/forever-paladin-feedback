@@ -23,7 +23,7 @@ for lab, kw in (("beta", {}), ("C1", dict(c1=True))):
 b0 = retribution_b2(g)
 print(f"## 5 min fight: {retribution_b2(g, fight=300) / b0 - 1:+.1%}")
 
-print("\n## Against the pure average (MythicSim) at fresh level 60")
+print("\n## Against the pure average (wowsims, same item pool for each spec) at fresh level 60")
 avg = sum(PURE.values()) / len(PURE)
 c1 = RET_SIM * retribution_b2(g, c1=True) / b0
 no_rogue = (avg * 5 - PURE["Rogue"]) / 4
@@ -44,7 +44,7 @@ C = [rogue(gear(t)) for t in range(5)]
 for t, n in enumerate(TIER_NAMES):
     print(f"  {n} | x{R[t] / R[0]:.2f} | x{R254[t] / R254[0]:.2f} | x{F[t] / F[0]:.2f} | x{A[t] / A[0]:.2f} | x{C[t] / C[0]:.2f}")
 start_b, start_c = RET_SIM / PURE["Warrior"], c1 / PURE["Warrior"]
-print("## Retribution as a % of Fury (MythicSim start), beta | C1: Classic steps, spell damage stays, flatter, flatter + stays")
+print("## Retribution as a % of Fury (wowsims start, same item pool), beta | C1: Classic steps, spell damage stays, flatter, flatter + stays")
 for t, n in enumerate(TIER_NAMES):
     row = []
     for st in (start_b, start_c):
@@ -57,7 +57,7 @@ print("## Increase of each source to Naxxramas: " + ", ".join(f"{k} x{s4[k] / s0
 fixed = (0.125 * 178.2 * 1.15 + 0.1 * 0.5 * 93 * 1.2)   # rough: shown as shares below
 tot0 = sum(s0.values())
 print(f"  shares at fresh level 60: auto attacks and Seal of Command {(s0['Auto attacks'] + s0['Seal of Command']) / tot0:.0%}")
-print(f"  Naxxramas: Retribution {RET_SIM * R[4] / R[0] / (800 * A[4] / A[0]):.0%} of Arms, "
+print(f"  Naxxramas: Retribution {retribution_b2(gear(4)) / arms(gear(4)):.0%} of Arms (same gear, model), "
       f"{RET_SIM * R[4] / R[0] / (PURE['Rogue'] * C[4] / C[0]):.0%} of Combat Rogue (beta)")
 
 print("\n## Judgement of the Crusader (fresh level 60 | Naxxramas)")

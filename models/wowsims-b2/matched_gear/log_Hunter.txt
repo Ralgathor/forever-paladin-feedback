@@ -1,0 +1,18 @@
+EP {0: 0.076, 1: 0.523, 3: 0.233, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.07, 15: 0.14, 17: 0.616, 18: 0.466, 19: 0.398, 20: 0.059, 13: 0.0} {0: 0.9593519015901052, 1: 0.0, 2: 1.324218514825145}
+cands {0: 21, 1: 16, 2: 15, 3: 18, 4: 17, 5: 15, 6: 17, 7: 16, 8: 15, 9: 18, 10: 16, 11: 16, 12: 45, 13: 45, 14: 27, 15: 0, 16: 22}
+start 601.5
+  pass0 slot0: Beaststalker's Cap -> Black Dragonscale Helm 601.5->613.6
+  pass0 slot2: Beaststalker's Mantle -> Shadowcraft Spaulders 613.6->619.0
+  pass0 slot3: Shifting Cloak -> Earthweave Cloak 619.0->624.8
+  pass0 slot4: Beaststalker's Tunic -> Dawn Armor 624.8->641.7
+  pass0 slot5: Beaststalker's Bindings -> Forest Stalker's Bracers 641.7->643.4
+  pass0 slot6: Beaststalker's Gloves -> Stormshroud Gloves 643.4->646.8
+  pass0 slot7: Beaststalker's Belt -> Zandalar Predator's Belt 646.8->651.9
+  pass0 slot12: Cleansed Vilebranch Medallion -> Linken's Boomerang 651.9->653.7
+  pass0 slot14: Legionite Glaive -> Arcanite Reaper 653.7->666.8
+  pass1 slot5: Forest Stalker's Bracers -> Beaststalker's Bindings 666.8->671.9
+  pass1 slot11: Band of Earthen Wrath -> Might of Cenarius 671.9->674.6
+2026/11/02 16:37:25 running 10000 iterations took 7.692129931s
+FINAL Hunter 673.7 +- 0.3
+SET Black Dragonscale Helm(61) ; Medallion of the Dawn(60) ; Shadowcraft Spaulders(60) ; Earthweave Cloak(62) ; Dawn Armor(61) ; Beaststalker's Bindings(57) ; Stormshroud Gloves(62) ; Zandalar Predator's Belt(61) ; Beaststalker's Pants(61) ; Beaststalker's Boots(59) ; Signet Ring of the Bronze Dragonflight(60) ; Might of Cenarius(62) ; Linken's Boomerang(56) ; Rune of the Guard Captain(51) ; Arcanite Reaper(63) ; The Purifier(60)
+ILVL 59.8 epics 7

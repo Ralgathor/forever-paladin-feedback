@@ -1,0 +1,13 @@
+EP {0: 0.0, 1: 0.0, 3: 0.225, 5: 0.552, 7: 0.485, 11: 0.0, 14: 0.0, 15: 0.0, 17: 0.57, 18: 0.257, 19: 0.077, 20: 0.0, 13: 0.115} {0: 0.0, 1: 0.0, 2: 0.0}
+cands {0: 19, 1: 16, 2: 15, 3: 18, 4: 15, 5: 15, 6: 15, 7: 15, 8: 15, 9: 17, 10: 16, 11: 16, 12: 44, 13: 44, 14: 25, 15: 27, 16: 13}
+start 585.0
+  pass0 slot0: Magister's Crown -> Deathmist Mask 585.0->594.5
+  pass0 slot4: Magister's Robes -> Robe of the Archmage 594.5->605.4
+  pass0 slot5: Magister's Bindings -> Rockfury Bracers 605.4->621.5
+  pass0 slot6: Magister's Gloves -> Sorcerer's Gloves 621.5->631.3
+  pass0 slot8: Ghostweave Pants -> Magister's Leggings 631.3->633.8
+  pass0 slot12: Jewel of the Guard Captain -> Talisman of Ascendance 633.8->661.8
+2026/11/02 16:30:02 running 10000 iterations took 3.452595938s
+FINAL Fire 661.5 +- 0.5
+SET Deathmist Mask(60) ; Chains of the Lich(60) ; Mantle of the Timbermaw(61) ; Hide of the Wild(62) ; Robe of the Archmage(62) ; Rockfury Bracers(62) ; Sorcerer's Gloves(55) ; Belt of the Archmage(62) ; Magister's Leggings(61) ; Sorcerer's Boots(60) ; Signet Ring of the Bronze Dragonflight(60) ; Watcher's Signet of Brilliance(60) ; Talisman of Ascendance(60) ; Cleansed Vilebranch Icon(51) ; Notched Ritual Rib(45) ; Tome of Fiery Arcana(60) ; Brilliant Wand(60)
+ILVL 58.9 epics 11
