@@ -45,6 +45,6 @@ With the consumables of each wowsims preset as they are, Retribution is 112.9% (
 | ec_results.json | DPS of the second run (base, ench, cons, both) |
 | links.md, zzlink_main.go | wowsims links to the final set of each spec, and the script that makes them |
 
-- **One job for each process.** zzbatch runs its jobs in parallel in one process. In a batch of different specs and enchants, some results changed by up to 5% (for example Grand Crusader). All values in this folder and in Analysis, Damage come again from `solo.py`, one job for each process. They agree with the batch values.
+- **One job for each process.** zzbatch runs its jobs in parallel in one process. In a batch of different specs and enchants, some results changed by up to 3%. All values in this folder and in Analysis, Damage come again from `solo.py`, one job for each process. They agree with the batch values.
 - **Hunter.** In the first run, the stat values were all 0, because the start set had no ranged weapon in the pool (`log_Hunter_first_run.txt`, 612.9). The final run measures the stat values on the full test set (`EPFULL=1`).
 - **Limits.** Many Forever items have no source in the game data. Some reputation and crafted items from later content can stay in the pool. The same rule applies to all specs. The search can stop at a local best set.
