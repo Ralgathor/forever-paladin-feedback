@@ -23,7 +23,16 @@ from threat_model import table, armor_dr, CRUSADER, NORM_1H, HS_THREAT, CONS_EVE
 RF_ALL, RF_HOLY = 1.33, 1.9
 B2T = dict(prec=3, red=5, sj=1, reck=5, ic=3, hsh=1, ij=2, conv=3, shs=1, sanj=3, ben=5, ss=2)
 
-def paladin_b2(g, tal=B2T, crusader=True, consecration=False, detail=False, rf_all=RF_ALL):
+# Kept proposals (threat_tables_b2.py). wowsims Forever, default tank set, 3 min (models/wowsims-b2):
+# block 42.3% (beta) -> 61.6% (Redoubt, C-P1). Reckoning extra attacks each min: 4.9 (beta), 6.3 (C-P1),
+# 9.3 (C-P1 and Reckoning, C-P12).
+CP1_BLOCKS = 61.6 / 42.3
+CP12_EXTRA = 9.3 / 6.3
+
+def paladin_b2(g, tal=B2T, crusader=True, consecration=False, detail=False, rf_all=RF_ALL, prop=()):
+    """prop: kept proposals. "C1": Holy Strike triggers Seal of Fury. "CP1": each Holy Shield cast starts Redoubt
+    (more blocks). "CP12": Reckoning 100% chance after a block, once each 4 sec. Personal Judgement of the Crusader (C2):
+    use crusader=True when the raid needs the Judgement of the tank (the beta then has crusader=False)."""
     t = lambda k: tal.get(k, 0)
     hit = g.hit + 0.01 * t("prec")
     crit = g.crit + 0.02 * t("conv")
@@ -32,7 +41,13 @@ def paladin_b2(g, tal=B2T, crusader=True, consecration=False, detail=False, rf_a
     seals = 1 + 0.03 * t("is")                        # Improved Seals: 3% each rank now
     hs_cd = 6 if t("shs") else 10
     hs_blocks = (1.5 + t("red") / 5) / 10             # beta rule: 2.5 blocks each 10 sec with Redoubt 5/5
+    if "CP1" in prop:
+        hs_blocks = min(0.4, hs_blocks * CP1_BLOCKS)   # 4 charges each 10 sec
     extra = 1.0 / 10 * t("reck") / 5
+    if "CP1" in prop:
+        extra *= 6.3 / 4.9
+    if "CP12" in prop:
+        extra *= CP12_EXTRA
     land_a, f_auto = table(hit, crit, auto=True)
     land_s, f_spec = table(hit, crit, auto=False)
     swings = 1 / g.wspeed
@@ -49,6 +64,8 @@ def paladin_b2(g, tal=B2T, crusader=True, consecration=False, detail=False, rf_a
     src["Auto attacks"] = g.weapon() * (1 - dr) * f_auto * swings * phys
     src["Reckoning attacks"] = g.weapon() * (1 - dr) * f_auto * extra * phys
     hits = land_a * swings + land_a * extra
+    if "C1" in prop:
+        hits += land_s / hs_cd
     src["Seal of Fury"] = (35 + 0.10 * sp) * seals * (1 + max(0.0, crit - CRIT_SUPP)) * holy * hits
     if consecration:
         src["Consecration"] = (312 + 0.336 * sp) * 0.85 * (1 + 0.5 * crit) * holy / CONS_EVERY
@@ -60,8 +77,15 @@ def beta1(g, **kw):
 
 # ---------------------------------------------------------------- mana (mana_model.py costs)
 import mana_model as M
-def mps_b2(mana, mp5, tal=B2T, cons=False, wisdom=False, hit=True, block=0.40):
-    """block: share of the boss swings that are blocks (beta: about 40% with Holy Shield and Redoubt)."""
+# wowsims Forever, default tank set, 3 min (Analysis, Mana): block 42.3% of the boss swings (61.6% with Redoubt, C-P1).
+# Shield Specialization returns from Holy Strike (Shieldsworn): 0.65 for each Holy Strike cast (17.4 of 26.9 casts:
+# the Holy Strike must land while Holy Shield is active).
+BLOCK_B2, BLOCK_CP1, HS_RETURN = 0.423, 0.616, 0.65
+
+# Sanctified Judgement: 60% of the base Seal cost, before talent cost decreases (Beta test results).
+def mps_b2(mana, mp5, tal=B2T, cons=False, wisdom=False, hit=True, block=BLOCK_B2, detail=False):
+    """block: share of the boss swings that are blocks. The 3 sec limit of Shield Specialization skips the next
+    swing (the boss swings each 2 sec): block returns each sec = block / (2 x (1 + block))."""
     t = lambda k: tal.get(k, 0)
     b = 1 - 0.02 * t("ben")
     hs_cd = 6 if t("shs") else 10
@@ -69,15 +93,13 @@ def mps_b2(mana, mp5, tal=B2T, cons=False, wisdom=False, hit=True, block=0.40):
     cost = (M.HOLY_SHIELD / 10 + M.HOLY_STRIKE / hs_cd + M.JUDGEMENT * judgements + M.SEAL_OF_FURY / M.SEAL_TIME) * b
     if cons:
         cost += M.CONSECRATION * b / M.CONS_EVERY
-    income = mp5 / 5 + (M.WISDOM if wisdom else 0)
+    inc = {"mp5": mp5 / 5, "Blessing of Wisdom": M.WISDOM if wisdom else 0.0}
     chance = 0.5 * t("ss")
-    if hit:
-        # blocks: once each 3 sec at most; the boss swings each 2 sec, so at most one block in 2 swings
-        income += mana * 0.04 * chance * min(block / M.SWING, 1 / 3)
-    if t("shs"):
-        income += mana * 0.04 * chance * 0.85 / hs_cd     # 85% of the Holy Strikes land
-    income += M.SEAL_OF_FURY * (2 - b) * 0.2 * t("sanj") * (judgements + t("sj") / 60)
-    return income - cost
+    inc["Shield Specialization, blocks"] = mana * 0.04 * chance * block / (M.SWING * (1 + block)) if hit else 0.0
+    inc["Shield Specialization, Holy Strike"] = mana * 0.04 * chance * HS_RETURN / hs_cd if t("shs") else 0.0
+    inc["Sanctified Judgement"] = M.SEAL_OF_FURY * 0.2 * t("sanj") * (judgements + t("sj") / 60)
+    v = sum(inc.values()) - cost
+    return (v, inc, cost) if detail else v
 
 if __name__ == "__main__":
     g = T.PART1

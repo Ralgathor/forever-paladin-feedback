@@ -21,13 +21,13 @@ The models of the Analysis tabs ran again on the new trees, with no proposal. He
 | --- | --- | --- |
 | Holy, raid (715 and 900 healing power, 3–10 min) | 19–28% below the Druid | 18–26% below the Druid, 8–13% below the Shaman |
 | Holy, one tank | 7–13% below the Druid | 3–12% above the Druid, with Oath of Light on the tank |
-| Holy, after a large hit (3 and 6 sec, all cooldowns) | 18–20% below the Druid | 11–18% above the Druid |
+| Holy, after a large hit (3 and 6 sec, all cooldowns) | 18–20% below the Druid | 9–18% above the Druid |
 | Protection threat, same gear for all tanks | 63% of the Warrior | 101% of the Warrior |
 | Protection threat, fresh level 60 to Naxxramas | 65–74% of the Warrior | 102–118% of the Warrior (120–142% with Consecration) |
-| Protection mana while it tanks, Blessing of Wisdom | +24 to +39 per sec | +26 to +55 per sec |
-| Retribution damage (wowsims test runs) | 824 DPS | 848 DPS (+3%), about 93% of the pure average at fresh level 60 and 89% in Naxxramas (model) |
+| Protection mana while it tanks, Blessing of Wisdom | +24 to +39 per sec | +15 to +37 per sec |
+| Retribution damage (wowsims test runs) | 824 DPS | 848 DPS (+3%). After the wowsims update of 1 November: 906 DPS, about 100% of the pure average at fresh level 60 and 94% in Naxxramas (model) |
 
-- **Holy Power.** The Holy values use a 225% critical heal (wowsims). If the critical heal is 175%, the Paladin is 7% below to 1% above the Druid on one tank.
+- **Holy Power.** The Holy values use a 225% critical heal (main hypothesis, decision of 2 November, as wowsims). The Paladin is 3–10% above the Druid on one tank. At 175%, it is 1–7% below.
 - **Mana.** In raids, mana is still the limit of the Paladin. The best cast plan is almost only Flash of Light.
 - **Righteous Fury.** The +33% and Shieldsworn give most of the threat increase.
 
@@ -79,7 +79,7 @@ The models of the Analysis tabs ran again on the new trees, with no proposal. He
 | Sanctified Judgement | Returns 60% of the base cost of the Seal, before talent cost decreases: 126 mana for Seal of Command with Benediction and Twist of Light | The mana models use 126 |
 | Pursuit of Justice | 15% at 2/2. Better than the 8% boot enchant | On the watch list (W1) |
 | Eye for an Eye | Uses the damage taken after armor and resistance | None |
-| Sacred Arbiter | +20% Holy Strike damage. Refreshes Light, Wisdom, Justice and Crusader | Holy Strike triggers all Seals (C1, spell change) |
+| Sacred Arbiter | +20% Holy Strike damage. Refreshes Light, Wisdom, Justice and Crusader | None |
 | Two-Handed Weapon Specialization | Melee attacks, Seals, Judgements, Holy Strike and the Twist of Light Echo | None. The beta of 30 October moves it to row 4 (adopted) |
 | Vengeance | Multiplies with other % damage. Critical hits from procs add stacks | None |
 | Repentance | Diminishing returns category not tested | None |

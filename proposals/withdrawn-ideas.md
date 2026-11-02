@@ -2,9 +2,17 @@
 
 The analysis examined these ideas and rejected them. They are not proposals.
 
-## Withdrawn on 31 October 2026: the beta of 30 October
+## Withdrawn on 2 November 2026
 
-The beta of 30 October 2026 changes the three trees. These proposals are now unnecessary, or their place in the tree is gone. The earlier ID stays reserved. The Analysis tabs still use it.
+| Earlier proposal (ID) | Why it was withdrawn |
+| --- | --- |
+| Holy Strike triggers your active Seal the same as a melee attack (C1, spell change) | Withdrawn by decision of 2 November 2026. It gave +5.3–5.7% Retribution damage (wowsims and model) and +2.6% tank threat. The live Retribution is already at the pure average: 906 against 909 (wowsims, 2 min, full buffs). With C1, Retribution had 105% at fresh level 60 and 101% in Naxxramas. Sacred Arbiter +10% removed only 0.7 points of the gain. The tank does not need the threat: without C1, PS1 has 1,007 threat each sec (Warrior: 926). The live Seal rule for Holy Strike is in Open items, as a problem to report |
+| Reckoning: 20–100% chance after a block, once each 4 sec (C-P12) | It gave only threat: +3% in wowsims. With Redoubt (C-P1) and the Holy Strike Seal trigger (C1, now withdrawn), the proposed tank had 109% of the Warrior threat. With C-P12, it had 112%. In raids, the live block trigger (8–40%, once each 1.5 sec) gives about 5 extra attacks each min. This is enough |
+| Lingering Light: critical heals also heal 10/20% of the amount over 6 sec (C-H2) | Replaced by Reverence 50% (C-H1). Lingering Light adds a heal to each critical heal, and Holy Power already increases the critical heals. Thus, its value depends on the Holy Power test. Reverence 50% gives the same raid gain (+4 to +7 points) and has no link to critical heals. With both, the tank lead is 20–25% above the Druid, past the limit |
+
+## Withdrawn on 31 October 2026: the new live trees
+
+The live version (4 November 2026) changes the three trees. These proposals are now unnecessary, or their place in the tree is gone. The earlier ID stays reserved. The Analysis tabs still use it.
 
 | Earlier proposal (ID) | Why it was withdrawn |
 | --- | --- |
@@ -12,42 +20,39 @@ The beta of 30 October 2026 changes the three trees. These proposals are now unn
 | Unyielding Faith to Holy row 1 (M-H2) | Unyielding Faith is now in Retribution row 3 |
 | Holy Power to row 5 (M-H3) | Holy Power now increases only the critical heal bonus. A Holy healer needs no filler in the new tree |
 | Consecrated Ground to row 6 (M-H4) | It depended on the Holy Power move (M-H3) |
-| Merciful Light: Holy Shock +50/100% at or below 35% health (C-H5) | After a large hit, the beta Paladin with Divine Favor is now 11–18% above the Druid. Boundless Light uses the place next to Holy Shock |
-| Divine Grace: Divine Favor cooldown −30/60 sec (C-H6) | On one tank, the beta Paladin is now 3–12% above the Druid. Divine Favor is in row 3, column 1: no place for the arrow |
+| Merciful Light: Holy Shock +50/100% at or below 35% health (C-H5) | After a large hit, the live Paladin with Divine Favor is now 11–18% above the Druid (at 225%; at 200%: 2–6%). Boundless Light uses the place next to Holy Shock |
+| Divine Grace: Divine Favor cooldown −30/60 sec (C-H6) | On one tank, the live Paladin is now 3–12% above the Druid (at 225%; at 200%: 2% below to 7% above). Divine Favor is in row 3, column 1: no place for the arrow |
 | Iron Creed while Righteous Fury is active (C-P2) | With Shieldsworn, Holy Strike has a 6 sec cooldown, the same as the Iron Creed duration. Thus, Iron Creed is always active |
-| Toughness and Divine Strength: removed, Vindication with 5 ranks (C-P3) | The beta fills Protection row 1 with Divine Intellect and moves Toughness to row 3. Vindication has no Attack Power buff now. Toughness removal (C-P13) now removes only Toughness, for the tree of 30 October |
+| Toughness and Divine Strength: removed, Vindication with 5 ranks (C-P3) | The live version fills Protection row 1 with Divine Intellect and moves Toughness to row 3. Vindication has no Attack Power buff now. Toughness removal (C-P13) now removes only Toughness, for the tree of 30 October |
 | Improved Righteous Fury: removed (C-P4) | It depended on the Iron Creed change (C-P2) |
-| Reckoning: charges from block, dodge and parry, released by Holy Strike (C-P6) | The beta tank has 101% of the Warrior threat with the same gear. Reckoning is not necessary for threat |
-| Reach of Law: Judgement range +5/10 yards (C-P7) | It requires Swift Judgement. Swift Judgement is now a second Judgement. No free place before row 6. The beta tank threat is high, thus the first pull is not a problem |
-| Shield Specialization: mana on each block (C-P8) | Shieldsworn adds a Shield Specialization return on each Holy Strike. The beta tank has +26 to +55 mana per sec while it tanks |
-| Holy Shield: damage increases with block value (C-P9) | The beta tank has 102–118% of the Warrior threat at all gear levels. Shieldsworn doubles the Holy Shield damage |
+| Reckoning: charges from block, dodge and parry, released by Holy Strike (C-P6) | The live tank has 101% of the Warrior threat with the same gear. Reckoning is not necessary for threat |
+| Shield Specialization: mana on each block (C-P8) | Shieldsworn adds a Shield Specialization return on each Holy Strike. The live tank has +15 to +37 mana per sec while it tanks |
+| Holy Shield: damage increases with block value (C-P9) | The live tank has 102–118% of the Warrior threat at all gear levels. Shieldsworn doubles the Holy Shield damage |
 | Benediction to Protection row 1 (M-P1) | Divine Intellect now fills that place |
 | Twist of Light: the Echo lasts 10 sec (C-R2) | Twist of Light is removed. Unsealed Wrath stores up to 3 Seal copies for 15 sec: about one Seal change each 10 sec, the goal of the proposal |
-| Measure for Measure: dodges and parries reduce the Judgement cooldown (C-R5) | About +1% damage at all gear levels. With pre-raid gear, Retribution is at the hybrid target (about 96% of the pure average) |
+| Measure for Measure: dodges and parries reduce the Judgement cooldown (C-R5) | About +1% damage at all gear levels. With pre-raid gear, Retribution is at the hybrid target (about 96% of the pure average). Examined again on 2 November 2026: from the front, +3.6% damage and +4.5% tank threat. Hybrid tanks with it (0/25/26, 0/22/29) have about 10% less threat than PS1, because they lose Reckoning 5, Iron Creed 3 and Shieldsworn |
 | Conviction to Retribution row 1 (M-R2) | Conviction stays in row 2 with 3 ranks (6%). A healer now takes Benediction 5 and Conviction 3 |
 | Judgement Echo: a replaced Judgement stays for 40 sec (C2b) | It used the Echo of Twist of Light. Twist of Light is removed |
 | Blessing of Light uses no Blessing slot (C3a) | Blessing of Light is removed |
 | The Blessing of Light bonus goes into the base heals (C3b) | Blessing of Light is removed. Oath of Light gives its bonus on one ally |
-| Infusion of Light: no critical hit necessary, Holy Strike added (C-H3) | No change to sustained healing, because mana limits Holy Light. It added only burst on one tank: 6 sec after a large hit, 10% above the Druid with short cooldowns (beta: 2% below). The beta already meets the single-target goal with Divine Favor (decision of 31 October) |
-| Reverence: 25/50% of mana regeneration during casts (C-H1) | The beta moved Reverence to row 2 (adopted). The 25/50% part aimed at the raid gap. Holy is the best single-target healer, and the raid gap is accepted (decision of 31 October). The beta already meets the single-target goal |
-| Lingering Light: a critical heal adds a heal over time of 10/20% (C-H2) | Holy Power makes each critical heal 225%. With Reverence 50% (C-H1), Lingering Light 2/2 gives one tank 20–25% above the Druid, past the 20% limit (W14). It adds the same % in raids and on a tank. Thus, it cannot close the raid gap alone |
-| Healing Light: 10/20/30% (C-H4) | Oath of Light keeps its beta version (decision of 31 October). It gives the Blessing of Light bonus on one ally. Healing Light keeps 4/8/12% |
-| Burning Zeal: +10/20% critical damage bonus for Seals, Judgements and Holy Strike (C-R4) | Withdrawn by decision of 31 October. It gave +0.8–1.3% damage (model) and +1.9–2.4% (wowsims). With Holy Strike Seal trigger (C1) only, Retribution is at the hybrid target until Blackwing Lair and 1 point below it in Naxxramas (94%). Retribution keeps the 44 points of the beta |
+| Infusion of Light: no critical hit necessary, Holy Strike added (C-H3) | No change to sustained healing, because mana limits Holy Light. It added only burst on one tank: 6 sec after a large hit, 10% above the Druid with short cooldowns (live: 2% below, at 225%; at 200%: 6% below). The live version already meets the single-target goal with Divine Favor (decision of 31 October) |
+| Healing Light: 10/20/30% (C-H4) | Oath of Light does not change (decision of 31 October). It gives the Blessing of Light bonus on one ally. Healing Light keeps 4/8/12% |
+| Burning Zeal: +10/20% critical damage bonus for Seals, Judgements and Holy Strike (C-R4) | Withdrawn by decision of 31 October. It gave +0.8–1.4% damage (model) and +1.9–2.4% (wowsims). With the wowsims update of 1 November and the wowsims rotation, the live version is at the hybrid target at all gear levels (96% in Naxxramas). C1 alone gives 105% → 101%. Retribution keeps the 44 points of the live version |
 | Boundless Light: also +15/30% critical chance for Flash of Light | Withdrawn by decision of 31 October. Flash of Light is almost all raid casts. Raid healing +36% at 5 min, above the Druid and the Shaman (+15% version: +18%). The tank healing does not change, because the tank has the Oath of Light. **Note for after the Holy Power test:** if a critical heal is 175–200%, examine this idea again. At 200%, Flash of Light +7.5/15% gives the Shaman level (589, Shaman 599, Druid 689). At 175%, it gives back the raid place of 225% |
 
 ## Earlier withdrawn ideas
 
 | Idea | Why it was rejected |
 | --- | --- |
-| Light's Vigil costs less (for example 50% less, or rank 1 from 730 to about 500 mana) | At 50% of its cost, the Paladin is 11–16% above the Priest and 51–72% above the Shaman in raids (see Analysis, Healing, part 6) |
-| One-Handed Weapon Specialization increases all damage while you have a shield | The beta talent already increases all damage, but not Consecration and Retribution Aura |
+| Light's Vigil costs less (for example 50% less, or rank 1 from 730 to about 500 mana) | At 50% of its cost, the Paladin is 11–16% above the Priest and 51–72% above the Shaman in raids (beta of 18 October, see the history of Analysis, Healing) |
+| One-Handed Weapon Specialization increases all damage while you have a shield | The live talent already increases all damage, but not Consecration and Retribution Aura |
 | Unyielding Faith decreases spell threat | Not necessary: Salvation does not use a Blessing slot now. A threat decrease must not affect Protection |
 | Holy Shield +35% or +40% block | With the Redoubt trigger, +30% already gives the same result as the Warrior. +35% is better than the Warrior. +40% also removes critical hits below 440 Defense |
 | Holy Strike critical hits reset Hammer of Wrath | Hammer of Wrath has a 6 sec cooldown, shorter than the 10 sec of Holy Strike. It works only below 20% health: about +1 damage per sec |
 | Champion of the Light adds healing | At 60% of Intellect, it gives the same healing as deep Holy. Holy Paladins then go into Retribution. Possible at 10/20/30%, because Healing Light (C-H4) is too deep for a Retribution hybrid |
-| Sacred Ward (critical heals add a shield) | The same talent as Divine Aegis (Priest). Lingering Light (C-H2) replaces it |
+| Sacred Ward (critical heals add a shield) | The same talent as Divine Aegis (Priest). Lingering Light (C-H2) replaced it, and Lingering Light is now also withdrawn |
 | Other ideas for the new Holy talent (heal splash, aura bonus, Cleanse, Lay on Hands) | Too modern, or utility and not healing |
-| Consecrated Ground in Holy row 3 (beta: row 5) | In row 3, Retribution takes it with 12 Holy points. With Consecration on cooldown, Retribution is then 109–118% of the pure average in a 3 min fight (W16). In row 5, only Holy Shock builds reach it, as in the beta design. Tanks lose 8–9% threat with Consecration. On each add, they still have about 1.4–1.8 times the threat of the Warrior and the Druid (estimate, 4 mobs) |
+| Consecrated Ground in Holy row 3 (live: row 5) | In row 3, Retribution takes it with 12 Holy points. With Consecration on cooldown, Retribution is then 109–118% of the pure average in a 3 min fight (W16). In row 5, only Holy Shock builds reach it, as in the live design. Tanks lose 8–9% threat with Consecration. On each add, they still have about 1.4–1.8 times the threat of the Warrior and the Druid (estimate, 4 mobs) |
 | Steadfast Faith (stun duration) in Protection row 1 | Two talents against crowd control. Other classes have one |
 | Toughness that also gives Stamina | Toughness and Divine Strength removal (C-P3) deletes Toughness. Sacred Duty already gives Stamina |
 | Hallowed Ground or Shield Specialization in Protection row 1 | Talents only for tanks. Rows 1 and 2 must give something to the other specs (design rule 2) |
@@ -86,42 +91,42 @@ The beta of 30 October 2026 changes the three trees. These proposals are now unn
 | Merge Blessing of Light and Blessing of Wisdom (Blessing of Grace) | Tanks must then choose between Might and Grace. It does not help melee |
 | A Holy aura that gives the Blessing of Light bonus | Aura slots have the same limit as Blessing slots. It competes with Devotion Aura and Concentration Aura |
 | A second Holy talent: +6/12/18% to Holy Light and Flash of Light | The same value as Blessing of Light removal (C3), but two talents for one bonus |
-| Healing Light at 35% (not 30%) | Not proposed now. At 35%, the Paladin is first on one tank by 5–13%. At 30%, it is first by 1–9% (see Analysis, Healing, part 6, and W14) |
-| Sacred Arbiter: Holy Strike always triggers Seal of Command (first version of Holy Strike Seal trigger, C1) | +13% Retribution damage against the beta. Retribution is then above Fury Warrior at fresh level 60 (see Analysis, Damage) |
+| Healing Light at 35% (not 30%) | Not proposed now. At 35%, the Paladin is first on one tank by 5–13%. At 30%, it is first by 1–9% (beta of 18 October, see the history of Analysis, Healing, and W14) |
+| Sacred Arbiter: Holy Strike always triggers Seal of Command (first version of Holy Strike Seal trigger, C1) | +13% Retribution damage against the live trees. Retribution is then above Fury Warrior at fresh level 60 (see Analysis, Damage) |
 | Sacred Arbiter: Holy Strike triggers Seal of Command by chance | A talent that gives only a chance to trigger is weak design. Holy Strike Seal trigger (C1) puts the usual Seal rule in the spell |
 | Holy Strike triggers the active Seal, but not the Twist of Light Echo | One more rule to learn. Holy Strike is a melee attack, and the Echo applies to melee attacks |
-| Sacred Arbiter at +10% (with the Holy Strike Seal trigger, C1) | Only about 1% less damage (4 DPS) at fresh level 60. From Molten Core, Retribution is already below Fury. The beta talent needs no change |
+| Sacred Arbiter at +10% (with the Holy Strike Seal trigger, C1) | Only about 1% less damage (4 DPS) at fresh level 60. From Molten Core, Retribution is already below Fury. The live talent needs no change |
 | Repentance to row 4 (15 points), Sacred Arbiter to row 5 | Not necessary. Holy Strike Seal trigger (C1) does not change Sacred Arbiter, so it stays in row 4. Repentance stays a 20-point talent |
 | Spiritual Focus in row 4 | A Holy healer then needs 3 points of filler in rows 1–3. HB2 (32/14/5) is not possible. In row 2, the healer needs 2 points of filler (see Analysis, Builds, part 7) |
 | Unyielding Faith in row 2, column 3 | Spiritual Focus now uses row 2, column 3. Unyielding Faith (M-H2) moves to row 1, column 2 |
 | A new Improved Lay on Hands talent for the drain | Forever removes this talent. A talent only to remove a penalty is a tax. Devoted Sacrifice (C-P11) also improves Hand of Sacrifice |
-| Improved Hammer of Justice in row 3 | Withdrawn on 26 October 2026. The talent stays in its beta place (row 4). Devoted Sacrifice (C-P11) uses row 3. Hammer of Justice each 45 sec needs 18 Protection points, as in the beta |
-| Swift Judgement in row 3 | Withdrawn on 26 October 2026. The talent stays in its beta place (row 4) with no requirement (Shoulder the Burden, C-P5). Shoulder the Burden (C-P5) takes the row 3 place, and Reach of Law (C-P7) goes to row 5 |
+| Improved Hammer of Justice in row 3 | Withdrawn on 26 October 2026. The talent stays in its live place (row 4). Devoted Sacrifice (C-P11) uses row 3. Hammer of Justice each 45 sec needs 18 Protection points, as in the live version |
+| Swift Judgement in row 3 | Withdrawn on 26 October 2026. The talent stays in its live place (row 4) with no requirement (Shoulder the Burden, C-P5). Shoulder the Burden (C-P5) takes the row 3 place, and Reach of Law (C-P7) goes to row 5 |
 | Lay on Hands with no drain | This is the change of patch 3.0.2 (Wrath of the Lich King), a later expansion. A full heal with no cost each 20 min is too strong |
 | Lay on Hands with a fixed cost (for example 30% of maximum mana) | At low mana, you cannot cast it. A drain of a % of the current mana keeps this use |
-| Holy Shock heals ×2 or ×2.5 | With the proposals, the raid healing is already at the level of the Shaman. On one tank, the Paladin is then first by 7–25% (see Analysis, Healing, part 6) |
-| Holy Shock costs 50% less (now) | The Paladin is then 3–10% above the Shaman in raids, and first on one tank by 5–12% (see Analysis, Healing, part 6) |
-| Light's Vigil heals ×1.25 or ×2 | With the proposals, the Paladin is then 1–38% above the Shaman in raids. Not necessary: the raid healing is already at the level of the Shaman (see Analysis, Healing, part 6) |
-| Illumination returns 75% of the base cost (beta: 50%) | Not necessary in raids: with 50% and the other proposals, the Paladin is about equal to the Shaman (−2% to +5%). At 75%, the Paladin is first on one tank by 9–15%. See W14. If Illumination returns mana for each critical heal of Light's Vigil, 75% puts the Paladin 75–114% above the Shaman (see Analysis, Healing, part 6) |
+| Holy Shock heals ×2 or ×2.5 | With the proposals, the raid healing is already at the level of the Shaman. On one tank, the Paladin is then first by 7–25% (beta of 18 October, see the history of Analysis, Healing) |
+| Holy Shock costs 50% less (now) | The Paladin is then 3–10% above the Shaman in raids, and first on one tank by 5–12% (beta of 18 October, see the history of Analysis, Healing) |
+| Light's Vigil heals ×1.25 or ×2 | With the proposals, the Paladin is then 1–38% above the Shaman in raids. Not necessary: the raid healing is already at the level of the Shaman (beta of 18 October, see the history of Analysis, Healing) |
+| Illumination returns 75% of the base cost (beta: 50%) | Not necessary in raids: with 50% and the other proposals, the Paladin is about equal to the Shaman (−2% to +5%). At 75%, the Paladin is first on one tank by 9–15%. See W14. If Illumination returns mana for each critical heal of Light's Vigil, 75% puts the Paladin 75–114% above the Shaman (beta of 18 October, see the history of Analysis, Healing) |
 | Divine Strength in Protection row 1 (first version of Toughness and Divine Strength removal, C-P3) | A tank receives less than 1 threat per sec for each point. Retribution receives about 1.4 DPS for each point (see Analysis, Builds). Toughness and Divine Strength removal (C-P3) now deletes the talent |
-| Improved Seals with 5 ranks, 3/6/9/12/15% (first version of Improved Seals, M-H1) | With Unyielding Faith in Holy row 1 (M-H2), the 3 beta ranks fill the row |
+| Improved Seals with 5 ranks, 3/6/9/12/15% (first version of Improved Seals, M-H1) | With Unyielding Faith in Holy row 1 (M-H2), the 3 live ranks fill the row |
 | Divine Strength in Retribution row 3 | About 1.4 DPS for each point. A weak 5-point talent only to fill the tree |
 | Sacred Duty with Precision in Protection row 1 | Row 3 loses its save talent, and all PvP builds take Divine Shield −60 sec for 2 points |
 | Unyielding Faith with Precision in Protection row 1 | It works, but Unyielding Faith (M-H2) moves to Holy row 1 |
 | Precision and Redoubt only in Protection row 1 (8 points) | Each row 1 of the other classes has 10 points or more. Holy and Retribution then pay for points that they do not use |
 | Vindication with 5 ranks and the same maximum (+3%) | More points with no more value. +1/2/3/4/5% makes the 5 points useful |
-| Precision and Guardian's Favor in Protection row 1, Holy Conduit in Protection row 2 (Toughness and Divine Strength removal, C-P3, version of 23 October) | Too far from the beta tree. Now Benediction fills the place of Toughness. Precision, Guardian's Favor and Holy Conduit stay in their beta place. Tanks take Holy Conduit with Deflection 5 (7 Retribution points) |
-| Benediction with 3 ranks, 3/6/9% | Benediction (M-P1) moves to Protection row 1. There, Benediction 5 opens row 2 for Holy and Retribution. The 5 beta ranks stay |
+| Precision and Guardian's Favor in Protection row 1, Holy Conduit in Protection row 2 (Toughness and Divine Strength removal, C-P3, version of 23 October) | Too far from the live tree. Now Benediction fills the place of Toughness. Precision, Guardian's Favor and Holy Conduit stay in their live place. Tanks take Holy Conduit with Deflection 5 (7 Retribution points) |
+| Benediction with 3 ranks, 3/6/9% | Benediction (M-P1) moves to Protection row 1. There, Benediction 5 opens row 2 for Holy and Retribution. The 5 live ranks stay |
 | Benediction in Retribution row 2 (second part of the Conviction move, M-R2) | Benediction (M-P1) moves to Protection row 1. Conviction (M-R2) now moves only this talent |
 | Unyielding Faith in Protection row 2 | Resistance to fear fits a defensive tree. But Precision, Guardian's Favor and Anticipation fill Protection row 2, with the Redoubt arrow in column 3. Unyielding Faith stays in Holy row 1 |
-| Guardian's Favor also reduces the Hand of Sacrifice cooldown by 5/10 sec | Withdrawn on 29 October 2026. A 15 sec cooldown for all Paladins (C4) is simpler. All specs have the same Hand of Sacrifice. Guardian's Favor keeps its beta effects |
+| Guardian's Favor also reduces the Hand of Sacrifice cooldown by 5/10 sec | Withdrawn on 29 October 2026. A 15 sec cooldown for all Paladins (C4) is simpler. All specs have the same Hand of Sacrifice. Guardian's Favor keeps its live effects |
 | Hand of Sacrifice with no cooldown (825 pool) | In Divine Shield, the Paladin casts a new pool each global cooldown: about 8 pools (6,600 damage) in 12 sec. In PvP, any spec then protects one ally from about 550 damage per sec. A 15 sec lockout on the target (as Weakened Soul) fixes this, but it adds a new rule. A cooldown is simpler |
-| Guardian's Favor in row 1 of a tree | Guardian's Favor stays in Protection row 2, as in the beta. No other class has a save talent in row 1 |
+| Guardian's Favor in row 1 of a tree | Guardian's Favor stays in Protection row 2, as in the live version. No other class has a save talent in row 1 |
 | Merciful Light on all targets: Holy Shock heals 25/50% more (first version of Merciful Light, C-H5) | Withdrawn on 29 October 2026. The 35% health limit gives a larger bonus (50/100%) when the tank needs it, with no change to raid healing |
 | Devout Light: Flash of Light and Holy Light cost 1–5% less (as Tidal Focus, Shaman) | Divine Grace (C-H6) helps one tank more than the raid. Devout Light gives +5% to +9% on one tank, but also more raid healing |
 | Divine Favor also makes the spell cost no mana (as Inner Focus, Priest) | Divine Grace (C-H6) gives the same one-tank result with a new talent. The free Divine Favor changes the spell for all specs |
 | Holy Reach: +20% range for heals and Light's Vigil | No change to the healing. Utility only |
-| Hallowed Wrath: Holy Shock, Exorcism and Holy Wrath +10/20% against Undead and Demons | Damage for Shockadin and leveling only. No healer value |
+| Hallowed Wrath: Holy Shock, Exorcism and Holy Wrath +10/20% against Undead and Demons | Damage for Shockadin and level-up only. No healer value |
 | Purifying Light: Cleanse also heals for 5/10% of maximum health | No model value. In PvP, Cleanse becomes a fast heal |
 | Sanctity Aura (Classic): +10% Holy damage for the party | 69% of Retribution damage is Holy: +6.9% for the Paladin. Retribution goes to 110% of the pure average at fresh level 60 (W15) |
 | Bane of the Dead: +1/2/3% damage against Undead and Demons (as Monster Slaying, Hunter) | Withdrawn on 29 October 2026. With Burning Zeal (C-R4), Retribution is near 100% of the pure average in Naxxramas. Keep it as an option if tests show Retribution too weak in late raids |

@@ -4,8 +4,10 @@ Run from the repo: python3 healing_b2.py <repo>/models/healing
 
 Changes against the beta of 18 October (healing_model.paladin defaults):
 - No Blessing of Light. Oath of Light on one ally: Holy Light +400, Flash of Light +115, Holy Shock +229 (only there).
-- Holy Power 5/5: no critical chance. The critical heal multiplier x1.5: 150% -> 225% (wowsims and the server rule,
-  aura A_MOD_CRITICAL_HEALING_AMOUNT). The low case reads the text as +50% of the bonus: 175%.
+- Holy Power 5/5: no critical chance. Main case (decision of 2 November): the critical heal is 225% (x1.5 on the full
+  critical heal, bonus 1.25: the wowsims reading of aura A_MOD_CRITICAL_HEALING_AMOUNT, an aura that only Holy Power
+  uses). Low case: 175% (+50% of the bonus, the rule of Ruin and Elemental Fury). 200% (+50 points) was the main case
+  from 1 to 2 November.
 - Boundless Light 2/2: Holy Shock +30% critical chance on an ally with no Oath of Light. bl_fol: the same for Flash of Light (a withdrawn idea, see Withdrawn ideas).
 - Build 38/5/8: Holy (no Divine Strength, no Divine Precision, Purifying Power 1), Divine Intellect 5/5,
   Benediction 5/5, Conviction 3/3 (+6% critical chance, all spells). Reverence 2/2 = 30% (as before).
@@ -69,11 +71,12 @@ TS = (180, 300, 600)
 CASES = (("Paladin, beta 18 Oct", lambda hp, tank: H.paladin(hp, tank=tank)),
          ("Paladin, beta 30 Oct", lambda hp, tank: paladin_b2(hp, tank)),
          ("Paladin, beta 30 Oct, crit 175%", lambda hp, tank: paladin_b2(hp, tank, bonus=0.75)),
-         ("Paladin, beta 30 Oct, crit 200%", lambda hp, tank: paladin_b2(hp, tank, bonus=1.0)),
-         ("Paladin, Boundless Light for Flash of Light +15%, crit 225%", lambda hp, tank: paladin_b2(hp, tank, bl_fol=0.15)),
+         ("Paladin, beta 30 Oct, crit 225%", lambda hp, tank: paladin_b2(hp, tank, bonus=1.25)),
+         ("Paladin, Boundless Light for Flash of Light +15%, crit 225%", lambda hp, tank: paladin_b2(hp, tank, bonus=1.25, bl_fol=0.15)),
          ("Paladin, Boundless Light for Flash of Light +15%, crit 200%", lambda hp, tank: paladin_b2(hp, tank, bonus=1.0, bl_fol=0.15)),
          ("Paladin, Boundless Light for Flash of Light +15%, crit 175%", lambda hp, tank: paladin_b2(hp, tank, bonus=0.75, bl_fol=0.15)),
          ("Paladin, Flash of Light +30%, crit 200%", lambda hp, tank: paladin_b2(hp, tank, bonus=1.0, bl_fol=0.30)),
+         ("Paladin, Flash of Light +30%, crit 225%", lambda hp, tank: paladin_b2(hp, tank, bonus=1.25, bl_fol=0.30)),
          ("Paladin, beta 30 Oct, no Conviction", lambda hp, tank: paladin_b2(hp, tank, conv=0.0)),
          ("Paladin, beta 30 Oct, raid with Oath on all heals (upper limit)", lambda hp, tank: paladin_b2(hp, tank, oath=True)))
 

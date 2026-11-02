@@ -2,6 +2,8 @@
 
 These scripts run the [wowsims Forever](https://github.com/wowsims/forever) simulator with the proposals. They check the Python models of this folder (damage, threat, healing). The Python models give the explanation. wowsims gives a second calculation with the full rules of the game.
 
+**Beta.** These scripts and `proposals.patch` use the beta of 18 October 2026 and the proposed trees of calculator version 5. Some flags are for proposals that the beta of 30 October adopts or that are withdrawn. For the check on the beta of 30 October, see [wowsims-b2](../wowsims-b2/README.md).
+
 ## Setup
 
 Requirements: git, Go 1.25 or later, Python 3, and grpcio-tools (`pip install grpcio-tools`).
@@ -24,8 +26,8 @@ A new wowsims commit can change the results. Change the commit in `setup.sh` onl
 | Script | What it gives | Analysis tab |
 | --- | --- | --- |
 | `run_damage.py` | Retribution against the other damage specs, and the value of each Retribution proposal | Damage, part 10 |
-| `run_threat.py` | Protection against the Warrior and the Druid, with tuned values of Holy Shield and Iron Creed. The best tank builds with their pre-raid gear (`data/tank_path_gear.json`), and groups of 3 and 5 enemies. Epic shields use the Wowhead Forever block value (`WOWHEAD_BV` in `wowsims.py`). `WOWHEAD_BV=0` gives the wowsims values | Threat, parts 7 and 8 |
-| `run_healing.py` | Holy Paladin and Holy Priest, one heal plan each: healing for each point of mana | Healing, part 9 |
+| `run_threat.py` | Protection against the Warrior and the Druid, with tuned values of Holy Shield and Iron Creed. The best tank builds with their pre-raid gear (`data/tank_path_gear.json`), and groups of 3 and 5 enemies. Epic shields use the Wowhead Forever block value (`WOWHEAD_BV` in `wowsims.py`). `WOWHEAD_BV=0` gives the wowsims values | Threat (beta of 18 October, history) |
+| `run_healing.py` | Holy Paladin and Holy Priest, one heal plan each: healing for each point of mana | Healing (beta of 18 October, history) |
 | `tests.py` | One check for each proposal in the patch. The result must show the proposal text | — |
 | `check.py` | The same values from the Python models and from wowsims, and the difference | Damage, Threat, Healing |
 

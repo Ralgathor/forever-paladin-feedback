@@ -5,7 +5,7 @@ This tab gives the problems to report, the risks to check in tests and the open 
 ## Problems to report to Blizzard
 
 - **Judgement of Fury: the damage hits before the taunt.** The taunt must apply first. Then the Paladin has a small threat lead, not only equal threat.
-- **Holy Strike triggers only some Seals.** It triggers Seal of Light, Justice and Wisdom. It does not trigger Seal of Fury, Righteousness or Command. Holy Strike Seal trigger (C1) makes this consistent for all specs.
+- **Holy Strike triggers only some Seals.** It triggers Seal of Light, Justice and Wisdom. It does not trigger Seal of Fury, Righteousness or Command. Blizzard can confirm if this is a bug or the design.
 
 ## Watch list
 
@@ -14,25 +14,25 @@ These are risks to check in tests. None of them needs a change now. A removed nu
 | # | Risk | Action if it occurs |
 | --- | --- | --- |
 | W1 | Pursuit of Justice (+15% speed at 10 Retribution points) is better than the boot enchant | Decrease it to 10% if all Paladins take it |
-| W2 | Sacred Duty gives Divine Shield −60 sec and Forbearance −10 sec at 5 Protection points (beta of 30 October: row 2). This is a PvP dip | Decrease it to −30 sec if all players take it |
+| W2 | Sacred Duty gives Divine Shield −60 sec and Forbearance −10 sec at 5 Protection points (row 2 in the live trees). This is a PvP dip | Decrease it to −30 sec if all players take it |
 | W5 | Holy is the main dip for Retribution (Seal damage, Holy Conduit). Tanks dip Retribution for Benediction, Conviction and Sanctified Judgement (row 2) | Monitor: each tree still gives the other specs a reason for a dip |
-| W6 | Reckoning: with Shieldsworn, Holy Strike comes each 6 sec. A Protection or hybrid build can store 4 extra attacks and use them in one Hammer of Justice stun. Reckoning (C-P12) keeps the critical hit trigger and the storage, and gives a maximum of 1 charge each 4 sec from blocks | Modeled on the beta of 30 October (see PvP burst check): the proposals add 3–5% burst, all from Holy Strike Seal trigger (C1). Reckoning (C-P12) does not change the two-handed bomb. Monitor in the beta |
+| W6 | Reckoning: with Shieldsworn, Holy Strike comes each 6 sec. A Protection or hybrid build can store 4 extra attacks and use them in one Hammer of Justice stun. Blocks give a maximum of 1 charge each 1.5 sec | Modeled on the live version (see PvP burst check): the proposals do not change the burst. Monitor in the live version |
 | W7 | Iron Creed with Shieldsworn is always active: −6%. With Improved Righteous Fury 3/3, a tank has about −14.5% damage taken. Defensive Stance (Warrior) gives −10% | Monitor in raids and PvP. If it is too strong, decrease Improved Righteous Fury |
 | W9 | Templar's Bulwark (an absorb of 100% of health, three times Last Stand) is in row 3 (10 points). This is a strong PvP dip | Monitor |
 | W13 | Light's Vigil: the Illumination text names it. Illumination can return mana for each critical heal of Light's Vigil (up to 5 for each cast) | Keep Illumination at 50% |
-| W14 | The design goal of Holy is the best single-target healer. In the beta of 30 October, the Paladin is 3–12% above the Druid on one tank (see Beta test results). In raids, it is 18–26% below the Druid. This is accepted: raid healing is not the goal of Holy | Compare the healing on one tank in beta tests. A lead of more than 20% is too strong |
-| W15 | Retribution in the beta of 30 October has about 93% of the pure average at fresh level 60, and about 89% in Naxxramas (model). The hybrid target is 95%. With Holy Strike Seal trigger (C1), it has 98% → 94% | Compare Retribution with the pure average at each gear tier. If Retribution is above the pure average at the raid release, decrease the Sacred Arbiter bonus first (+20% → +10%) |
+| W14 | The design goal of Holy is the best single-target healer. In the live version, the Paladin is 3–10% above the Druid on one tank, with a 225% critical heal (see Beta test results). With Reverence 50% (C-H1), the Paladin is 12–17% above the Druid, and 14–19% at 900 healing power. In raids, the Paladin is 18–26% below the Druid. This is accepted: raid healing is not the goal of Holy | Compare the healing on one tank in live tests. A lead of more than 20% is too strong |
+| W15 | Retribution in the live version has about 100% of the pure average at fresh level 60, and about 96% in Naxxramas (wowsims of 1 November and model). The hybrid target is 95% | Compare Retribution with the pure average at each gear tier. If Retribution is above the pure average at the raid release, decrease the Sacred Arbiter bonus first (+20% → +10%): −0.7% damage in wowsims |
 | W16 | Consecration on cooldown gives Retribution more damage than its normal rotation. Consecrated Ground is in Holy row 5 | Mana is the balance. The 95% target is for the normal rotation, without Consecration |
 | W17 | Holy Shock with Iron Creed: Righteous Fury stays active in PvP. With 25 Protection points, the build has Iron Creed, Templar's Bulwark, Holy Shield and Reckoning | Monitor in PvP with W7 and W9 |
-| W18 | Lay on Hands with Devoted Sacrifice (C-P11) on yourself gives up to +550 mana below 1,100 mana (beta: below 550). Paladins can use it for mana one time for each boss | If all Holy Paladins use it for mana, Lay on Hands does not restore mana when you are the target |
+| W18 | Lay on Hands with Devoted Sacrifice (C-P11) on yourself gives up to +550 mana below 1,100 mana (live: below 550). Paladins can use it for mana one time for each boss | If all Holy Paladins use it for mana, Lay on Hands does not restore mana when you are the target |
 | W20 | Hand of Sacrifice (C4) with Divine Shield: the ally takes no damage and the Paladin takes no damage. In PvP, a Paladin can protect two allies for 825 each in one Divine Shield: 1,650 damage | Monitor in PvP. If it is too strong, Divine Shield removes Hand of Sacrifice |
-| W22 | Divine Precision (beta of 30 October) is in Holy row 4 with no requirement: +8% spell hit with 15 Holy points | Monitor: Exorcism, Holy Wrath and Consecration use it |
+| W22 | Divine Precision (live talent) is in Holy row 4 with no requirement: +8% spell hit with 15 Holy points | Monitor: Exorcism, Holy Wrath and Consecration use it |
 | W24 | Holy Shield is in Protection row 5. Holy and Retribution can take it with 20 Protection points | Monitor hybrid builds in PvP |
 | W25 | Shieldsworn: each Holy Strike lets the Paladin block spells for 6 sec. With a Holy Strike each 6 sec, the effect is always active | Monitor in PvP against casters |
 | W26 | Swift Judgement is now a second Judgement with a 1 min cooldown, at 15 Protection points. Two Judgements of Command on a stunned target give a large burst | Monitor in PvP with W6 |
-| W27 | Oath of Light gives a flat value (+400, +115, +229). Forever talents give a %. The value decreases with gear | Decision of 31 October: Oath of Light keeps its beta version. Compare its value with gear in beta tests |
-| W28 | The tank of the beta of 30 October has 101–118% of the Warrior threat, and 120–142% with Consecration (see Beta test results) | Compare tank threat in raids. If it is too high, decrease the Righteous Fury bonus (+33%) first |
-| W29 | Unsealed Wrath has no Seal cost decrease (Twist of Light had −20%). With a Seal change after each swing, the mana is empty after 1 min 22 sec at fresh level 60 (model). In wowsims, it is empty after about 4 min with lean buffs and after 5 min 28 sec with full buffs. Fewer Seal changes cost 2% damage in a 2 min fight and 4% in a 5 min fight (see Retribution, Mana with Unsealed Wrath) | Its spell data has a Seal cost effect at 0%. A −20% value gives +0.8% (2 min) to +2.4% (5 min) damage. Watch the next beta values |
+| W27 | Oath of Light gives a flat value (+400, +115, +229). Forever talents give a %. The value decreases with gear | Decision of 31 October: Oath of Light does not change. Compare its value with gear in live tests |
+| W28 | The tank of the live version has 101–118% of the Warrior threat, and 120–142% with Consecration (see Beta test results) | Compare tank threat in raids. If it is too high, decrease the Righteous Fury bonus (+33%) first |
+| W29 | Unsealed Wrath has no Seal cost decrease (Twist of Light had −20%). With the wowsims rotation (plan 1 + 3), the mana is empty after 3 min 43 sec at fresh level 60 (model). In wowsims of 1 November, the mana lasts 5 min with lean and full buffs, because the consumables include Major Mana Potion. In a 5 min fight at fresh level 60, the mana costs 2.5% damage (see Retribution, Mana with Unsealed Wrath) | Its spell data has a Seal cost effect at 0%. A −20% value gives 0% (2 min) to +2.6% (5 min) damage in the model, and 0% in wowsims. Watch the next patch values |
 
 ## Open questions
 
@@ -48,17 +48,16 @@ These are risks to check in tests. None of them needs a change now. A removed nu
 - [ ] Judgement of Fury: the game files give a third effect of 1,691 + 18% of spell power. Is this bonus threat, the taunt or a server value? If it is bonus threat, it adds about 200 TPS to the Paladin. The model does not use it.
 - [ ] How much block value do Forever shields and tank gear give at each tier? Pre-raid gear gives 108 (Wowhead Forever values). The raid values of the model (140, 180 and 230) are estimates. Forever has no raid shields yet.
 - [ ] What is the healing power coefficient of the Light's Vigil party heal? Do Purification and Healing Way (Shaman) add or multiply?
-- [ ] Holy Strike Seal trigger (C1): what sets the Seal of Command chance? Is it the weapon speed (3.6 sec) or the normalized speed (3.3 sec)?
-- [ ] Does MythicSim include Judgement of the Crusader in its raid debuffs? It changes the Retribution comparison by about 10% (see Analysis, Damage, part 7).
+- [ ] Does MythicSim include Judgement of the Crusader in its raid debuffs? It changes the Retribution comparison by about 10% (see Analysis, Damage, part 4).
 - [ ] What is the Slam cooldown in Forever? The Arms check in Analysis, Damage, uses one Slam each 3 sec at most.
-- [ ] Does Righteous Fury increase the threat of heals in Forever? The text says "Holy attacks". If yes, a tank can use Flash of Light or Holy Light for threat (see Analysis, Builds, part 6).
+- [ ] Does Righteous Fury increase the threat of heals in Forever? The text says "Holy attacks". If yes, a tank can use Flash of Light or Holy Light for threat (see Analysis, Builds).
 - [ ] Hand of Sacrifice (C4): does damage that moves to a Paladin in Divine Shield have no effect in Forever, as in Classic? Does it stop a Polymorph on the Paladin?
 - [ ] Devoted Sacrifice (C-P11): when you cast Lay on Hands on yourself, does the drain occur before the 550 mana? If not, Lay on Hands gives you no mana.
 - [ ] Light's Vigil: the Illumination text names it. Does Illumination return mana one time for each cast, or one time for each critical heal (up to 5)? With Illumination at 50%, it gives +13% to +19% raid healing against the Shaman (W13).
 - [ ] What is the Spirit regeneration formula in Forever? Does Intellect change it? The DoubleZug tests agree with neither the Classic nor the TBC formula.
 - [ ] Can heals start Omen of Clarity for a Druid? Can the Druid use it for Wild Growth? (Druid testers)
 - [ ] How many targets does Prayer of Mending heal in a raid fight? The Priest result depends on it (Priest testers)
-- [ ] Holy Power 5/5 (beta of 30 October): does a critical heal heal for 225% or for 175%? 225% is ×1.5 on the full critical heal (the wowsims value). 175% is +50% of the bonus (the Classic rule of Ice Shards and Ruin). At 225%, Holy is 3–10% above the Druid on one tank. At 175%, it is 7% below to 1% above. **Test:** take Holy Power 5/5. Cast Divine Favor, then Holy Light on a target with no Oath of Light. Compare the heal with the average of the tooltip. 2.25 times the average is 225%. 1.75 times the average is 175%. If the test gives 175–200%, examine Boundless Light for Flash of Light again (see Withdrawn ideas).
+- [ ] Holy Power 5/5 (live talent): does a critical heal heal for 200%, 225% or 175%? The analysis uses 225%: ×1.5 on the full critical heal (decision of 2 November, the wowsims value). Holy Power is the only spell in the game files with its aura (A_MOD_CRITICAL_HEALING_AMOUNT). 175% is +50% of the bonus (the rule of Ruin and Elemental Fury). 200% is +50 points on the 150% critical heal (the main case from 1 to 2 November). At 225%, Holy is 3–10% above the Druid on one tank. At 200%, it is 2% below to 7% above. At 175%, it is 1–7% below. **Test:** take Holy Power 5/5. Cast Divine Favor, then Holy Light on a target with no Oath of Light. Compare the heal with the average of the tooltip. 2 times the average is 200%. 2.25 times the average is 225%. 1.75 times the average is 175%.
 - [ ] Oath of Light gives "up to" +400 to Holy Light. Do the low ranks of Holy Light receive less?
 - [ ] Shieldsworn: does a Holy Strike that misses still trigger Holy Shield and Shield Specialization?
 - [ ] Unsealed Wrath: does Holy Strike store a Seal copy and consume the stored copies? In the wowsims spell data, Unsealed Wrath triggers only on auto attacks (proc flag 0x4). The model uses this. **Test:** turn off auto attack. Cast Seal of Righteousness, then Holy Strike. Cast Seal of Command, turn on auto attack and hit one time. A Seal of Righteousness hit shows that Holy Strike stored a copy.
@@ -69,7 +68,7 @@ These are risks to check in tests. None of them needs a change now. A removed nu
 - [x] Does Judgement of Fury remove your own Judgement of the Crusader? No (player test).
 - [x] Vindication ranks: −67/136/204 Attack Power on the target and +1/2/3% on you.
 - [x] Shield Specialization mana return: 4%.
-- [x] Champion of the Light (beta of 30 October): 5 ranks, 12–60% of Intellect.
+- [x] Champion of the Light (live talent): 5 ranks, 12–60% of Intellect.
 - [x] Spell hit cap: 18%, with no fixed 1% miss.
 - [x] Champion of the Light needs 28 Retribution points for 3/3 (row 6).
 - [x] Level 60 costs (Forever spellbook): Seal of Fury rank 7: 200 mana. Seal of Command: 210. Consecration: 565. Holy Shield rank 3: 240.

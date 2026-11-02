@@ -4,10 +4,12 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"strings"
 	"testing"
 
 	"github.com/wowsims/forever/sim/core"
 	"github.com/wowsims/forever/sim/core/proto"
+	"github.com/wowsims/forever/sim/core/stats"
 )
 
 // FEEDBACK_DUR (sec), PROPOSE flags. Prints DTPS, TPS and the boss attack table on the tank.
@@ -27,6 +29,7 @@ func TestFeedbackRun(t *testing.T) {
 		TalentsString: talents,
 		Spec:          DefaultOptions,
 		Rotation:      core.GetAplRotation("../../../ui/specs/paladin/protection/apls", "default").Rotation,
+		BonusStats:    feedbackBonus(),
 		Buffs:         core.FullTankIndividualBuffs,
 		Profession1:   proto.Profession_Engineering, Profession2: proto.Profession_Enchanting,
 		DistanceFromTarget: 5,
@@ -35,14 +38,51 @@ func TestFeedbackRun(t *testing.T) {
 	}
 	enc := core.MakeSingleTargetEncounter(5)
 	enc.Duration = dur
+	// FEEDBACK_BOSS: "fast" = a swing each 1.2 sec with 60% damage (same damage each sec), "dw" = a boss with two weapons.
+	if v := os.Getenv("FEEDBACK_BOSS"); v != "" {
+		for _, tg := range enc.Targets {
+			if strings.Contains(v, "fast") {
+				tg.SwingSpeed, tg.MinBaseDamage = 1.2, tg.MinBaseDamage*0.6
+			}
+			if strings.Contains(v, "dw") {
+				tg.DualWield = true
+			}
+		}
+	}
+	ntg := 1
+	if v := os.Getenv("FEEDBACK_TARGETS"); v != "" {
+		ntg, _ = strconv.Atoi(v)
+		t0 := core.FreshDefaultTargetConfig()
+		t0.MinBaseDamage *= 1.0 / 3
+		enc.Targets = nil
+		for i := 0; i < ntg; i++ {
+			enc.Targets = append(enc.Targets, t0)
+		}
+	}
 	raid := core.SinglePlayerRaidProto(player, core.FullPartyBuffs, core.FullRaidBuffs, core.FullDebuffs)
 	raid.Tanks = append(raid.Tanks, &proto.UnitReference{Type: proto.UnitReference_Player, Index: 0})
-	rsr := &proto.RaidSimRequest{Raid: raid, Encounter: enc, SimOptions: &proto.SimOptions{Iterations: 3000, RandomSeed: 101}}
+	rsr := &proto.RaidSimRequest{Raid: raid, Encounter: enc, SimOptions: &proto.SimOptions{Iterations: feedbackIter(), RandomSeed: 101}}
 	res := core.RunRaidSim(rsr)
 	if res.Error != nil {
 		t.Fatal(res.Error.Message)
 	}
 	u := res.RaidMetrics.Parties[0].Players[0]
+	per := make([]float64, ntg)
+	for _, a := range u.Actions {
+		for _, tm := range a.Targets {
+			if int(tm.UnitIndex) < ntg {
+				per[tm.UnitIndex] += tm.Threat / float64(feedbackIter()) / dur
+			}
+		}
+	}
+	fmt.Printf("PERTARGET %v\n", per)
+	if os.Getenv("FEEDBACK_MANA") != "" {
+		for _, r := range u.Resources {
+			if r.Type == proto.ResourceType_ResourceTypeMana {
+				fmt.Printf("MANA %v events=%.1f gain=%.2f\n", r.Id, float64(r.Events)/3000, r.ActualGain/dur)
+			}
+		}
+	}
 	var casts, hits, crits, miss, dodge, parry, block, crush float64
 	for _, a := range res.EncounterMetrics.Targets[0].Actions {
 		for _, tm := range a.Targets {
@@ -79,4 +119,28 @@ func TestFeedbackRun(t *testing.T) {
 	fmt.Printf("RESULT dur=%.0f propose=%q tps=%.1f dps=%.1f dtps=%.1f swings=%.1f hit=%.1f%% miss=%.1f%% dodge=%.1f%% parry=%.1f%% block=%.1f%% crit=%.1f%% crush=%.1f%%\n",
 		dur, os.Getenv("PROPOSE"), u.Threat.Avg, u.Dps.Avg, u.Dtps.Avg, all/3000, 100*hits/all, 100*miss/all, 100*dodge/all, 100*parry/all,
 		100*block/all, 100*crits/all, 100*crush/all)
+}
+
+// FEEDBACK_ITER: iterations (default 3000). FEEDBACK_BONUS: bonus stats "index:value,..." (proto Stat order).
+func feedbackIter() int32 {
+	if v := os.Getenv("FEEDBACK_ITER"); v != "" {
+		n, _ := strconv.Atoi(v)
+		return int32(n)
+	}
+	return 3000
+}
+
+func feedbackBonus() *proto.UnitStats {
+	v := os.Getenv("FEEDBACK_BONUS")
+	if v == "" {
+		return nil
+	}
+	st := make([]float64, stats.SimStatsLen)
+	for _, kv := range strings.Split(v, ",") {
+		p := strings.SplitN(kv, ":", 2)
+		i, _ := strconv.Atoi(p[0])
+		x, _ := strconv.ParseFloat(p[1], 64)
+		st[i] += x
+	}
+	return &proto.UnitStats{Stats: st}
 }

@@ -41,7 +41,8 @@ TS=(180,300,600)
 cases=[("Beta 30 Oct",{}),("+ Lingering Light 1/2",dict(ling=0.10)),("+ Lingering Light 2/2",dict(ling=0.20)),
        ("+ Reverence 50%",dict(rev=0.50)),("+ Rev 50% + LL 2/2",dict(rev=0.50,ling=0.20)),("+ Rev 50% + LL 1/2",dict(rev=0.50,ling=0.10)),
        ("+ Rev 50% + LL 2/2 + Infusion all",dict(rev=0.50,ling=0.20,infall=True)),
-       ("175%: beta",dict(bonus=0.75)),("175%: + Rev 50% + LL 2/2",dict(bonus=0.75,rev=0.50,ling=0.20))]
+       ("175%: beta",dict(bonus=0.75)),("175%: + Rev 50% + LL 2/2",dict(bonus=0.75,rev=0.50,ling=0.20)),
+       ("225%: beta",dict(bonus=1.25)),("225%: + Rev 50% + LL 2/2",dict(bonus=1.25,rev=0.50,ling=0.20))]
 for hp in (715,900):
   for tank in (False,True):
     O={T:B.others(hp,T,tank) for T in TS}

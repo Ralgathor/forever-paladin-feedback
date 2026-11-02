@@ -23,7 +23,7 @@ def judgements(n): return n*405*(1 + C)
 def bursts():
     extra = auto(1)
     rows = []
-    for name, c1 in (("Beta", False), ("Proposed (C1, C-P12)", True)):
+    for name, c1 in (("Beta", False), ("Proposed (C1)", True)):
         base = holy_strike(c1) + auto(1.7) + judgements(2)
         uw = holy_strike(c1) + auto(1.7) + judgements(2) + 3*SOC
         rows.append((name, base, base + 4*extra, uw))
@@ -52,5 +52,5 @@ if __name__ == "__main__":
     print("Reckoning 5/5: charges each min, time to 4 charges")
     print("Two-handed (crit trigger only, beta = C-P12): %.1f, %.0f sec" % reckoning(0, 0, 0, shield=False))
     for p in (0.35, 0.60):
-        for name, c, i in (("beta", 0.40, 1.5), ("C-P12", 1.0, 4.0)):
+        for name, c, i in (("beta", 0.40, 1.5), ("C-P12 (withdrawn)", 1.0, 4.0)):
             print(f"Shield, {p:.0%} block, {name}: " + "%.1f, %.0f sec" % reckoning(p, c, i))

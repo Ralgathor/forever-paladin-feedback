@@ -23,7 +23,8 @@ if __name__ == "__main__":
         print("## healing power", hp, "| 3 sec, 6 sec (all cooldowns) | 3 sec, 6 sec (short cooldowns only)")
         cases = [("Priest", R.priest_burst(hp)), ("Druid", R.druid_burst(hp)), ("Shaman", R.shaman_burst(hp)),
                  ("Paladin, beta 18 Oct", R.paladin_burst(hp)), ("Paladin, beta 30 Oct", paladin_burst_b2(hp)),
-                 ("Paladin, beta 30 Oct, crit 175%", paladin_burst_b2(hp, bonus=0.75))]
+                 ("Paladin, beta 30 Oct, crit 175%", paladin_burst_b2(hp, bonus=0.75)),
+                 ("Paladin, beta 30 Oct, crit 225%", paladin_burst_b2(hp, bonus=1.25))]
         for name, case in cases:
             vals = [best(case, W, lc) for lc in (True, False) for W in (3.0, 6.0)]
             print(f"  {name:34s} " + " | ".join(f"{round(v):5d}" for v, _ in vals))

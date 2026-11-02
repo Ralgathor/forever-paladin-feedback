@@ -20,6 +20,24 @@ func proposeFlag(f string) bool {
 }
 
 func (paladin *Paladin) applySimProposals() {
+	// W15 balance lever: Sacred Arbiter Holy Strike bonus +10% (SA10) or +0% (SA0) in place of +20%.
+	if paladin.Talents.SacredArbiter && (proposeFlag("SA10") || proposeFlag("SA0")) {
+		mult := 1.10 / 1.20
+		if proposeFlag("SA0") {
+			mult = 1.0 / 1.20
+		}
+		paladin.AddStaticMod(core.SpellModConfig{
+			Kind:       core.SpellMod_DamageDone_Pct,
+			ClassMask:  SpellMaskHolyStrike,
+			FloatValue: mult - 1,
+		})
+	}
+
+	// C-H1 Reverence 25/50% (REV50): +10% of the mana regeneration during casts for each rank (live: 15/30%).
+	if proposeFlag("REV50") && paladin.Talents.Reverence > 0 {
+		paladin.PseudoStats.SpiritRegenRateCasting += 0.10 * float64(paladin.Talents.Reverence)
+	}
+
 	// C1: Holy Strike triggers your active Seal the same as a melee attack (Command, Righteousness, Fury).
 	// It stores and consumes no Unsealed Wrath copy.
 	if proposeFlag("C1") {
@@ -46,6 +64,25 @@ func (paladin *Paladin) applySimProposals() {
 			ClassMask:  SpellMaskSealProcs | SpellMaskAllJudgements | SpellMaskHolyStrike,
 			Kind:       core.SpellMod_CritMultiplier_Flat,
 			FloatValue: 0.20,
+		})
+	}
+	// C-R5 Measure for Measure (MFM1/MFM2/MFM3): when your target dodges or parries your attack, the remaining
+	// cooldown of your Judgement is reduced by 1/2/3 sec.
+	for rank := 1; rank <= 3; rank++ {
+		if !proposeFlag("MFM" + string(rune('0'+rank))) {
+			continue
+		}
+		cut := time.Duration(rank) * time.Second
+		paladin.MakeProcTriggerAura(core.ProcTrigger{
+			Name:     "C-R5 Measure for Measure" + paladin.Label,
+			Callback: core.CallbackOnSpellHitDealt,
+			ProcMask: core.ProcMaskMelee,
+			Outcome:  core.OutcomeDodge | core.OutcomeParry,
+			Handler: func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
+				if paladin.Judgement != nil && paladin.Judgement.CD.Timer != nil {
+					paladin.Judgement.CD.Reduce(cut)
+				}
+			},
 		})
 	}
 	// W29 option: Unsealed Wrath decreases the Seal cost by 20%.
