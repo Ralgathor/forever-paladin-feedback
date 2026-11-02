@@ -26,7 +26,7 @@ This file gives the best tank builds for the live trees and for the proposed tre
 - **TMI.** The damage intake value of wowsims with a 6 sec window: less is better.
 - **Talent search.** A hill climb (`models/wowsims-b2/search.py`) with moves of 1 point into a talent with tank value, at 1,000 iterations. The score is 40% threat, 20% damage, 20% damage taken and 20% TMI, each against the start build. The best builds then run at 3,000 iterations. The logs are `search_prot*.log`.
 - **Starts.** BT1 and BS2 for the live trees. PT1 for the proposed trees.
-- **Limit of the search.** A move of 1 or 2 points cannot reach a talent in a far row. Sacred Arbiter is in Retribution row 4 and needs 15 Retribution points first. Thus, BS2 is a hand-made start: the search from BS2 found no better move.
+- **Limit of the search.** A move of 1 or 2 points cannot reach a talent in a far row. Sacred Arbiter is in Retribution row 4 and needs 15 Retribution points first. Thus, BS2 is a hand-made start: the search from BS2 found no better move. Improved Seals needs 5 Holy points first, thus the search does not find a Holy dip. PI1 is a hand-made check (part 2).
 
 ## 2. Builds
 
@@ -39,6 +39,7 @@ This file gives the best tank builds for the live trees and for the proposed tre
 - **Dungeon tank** ([`v6p-353011021350153102-52233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-353011021350153102-52233), 0/36/15): Reach of Law 2 in place of Benediction 2. Judgement and Swift Judgement then pull from 20 yards with Seal of Fury. wowsims does not model the pull, and the raid values do not change.
 - **PS1** ([`v6p-3530110213501531-53233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-53233000001)): Benediction 3 and Sacred Arbiter in place of Benediction 4.
 - **Deflection 5, not Benediction 5.** After Improved Judgement, Conviction and Sanctified Judgement, 9 points stay for Deflection and Benediction. One point in Deflection gives 1.3% less damage taken. One point in Benediction gives 0.2% more threat. With Benediction 5 and Deflection 4, PT1 has 1,014 threat each sec, 295 damage taken each sec and a TMI of 45.2.
+- **Improved Seals (PI1, threat choice).** Divine Strength 5 and Improved Seals 5 cost 10 points. The best points to give up, against PS1: 3 Anticipation points, Benediction 3, Sanctified Judgement 3 and Sacred Arbiter. PI1 is 10/31/10, [`v6p05005-3530110213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05005-3530110213201531-5023). Against PS1, it has +2.6% threat (1,060 each sec), but 3.1% more damage taken (301) and a 2.7% worse TMI (46.2). It is the same trade as BS1 in the live trees. Other places cost more: Anticipation 3 gives 1,046 / 300 / 46.1, and Retribution 7 (Deflection 5, Improved Judgement 2) gives 1,016 / 296 / 45.7.
 - **Without the Holy Strike Seal trigger (C1),** PT1 has 986 threat each sec and 291 damage taken each sec. Its TMI is 45.0 (Analysis, Builds).
 
 ### Live: BS2

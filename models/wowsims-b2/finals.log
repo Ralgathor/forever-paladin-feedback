@@ -111,3 +111,9 @@ WEIGHTS prot raid prop -3530110213501531-54233 base={'dps': 428.3, 'tps': 1011.6
   Dodge rating: dps=-0.130 tps=-0.320 dtps=-0.420 tmi=-0.033
   Parry rating: dps=-0.080 tps=-0.170 dtps=-0.300 tmi=-0.026
   Armor: dps=+0.000 tps=+0.000 dtps=-0.023 tmi=-0.004
+# 2 November 2026: Improved Seals dip (hand-made, proposed, raid, 3,000 iterations, scratch script isc.py)
+BUILD prot raid prop -3530110213501531-54233 tps=1012 dtps=292 tmi=45.0
+BUILD prot raid prop -3530110213501531-53233000001 tps=1033 dtps=292 tmi=45.0
+BUILD prot raid prop 05005-3530110213501531-502 tps=1016 dtps=296 tmi=45.7
+BUILD prot raid prop 05005-3530110213201531-5023 tps=1060 dtps=301 tmi=46.2
+BUILD prot raid prop 05005-3530110213301531-5022 tps=1046 dtps=300 tmi=46.1
