@@ -15,7 +15,7 @@ This tab uses the proposed trees of calculator version 6 (the live version, with
 - **Rule 1 works.** Each tree gives something to two specs, except Holy for the tank. The tank already takes 17 points in Retribution.
 - **Rule 2 works for Holy and Protection.** Retribution row 3 is only for Retribution and PvP.
 - **Rule 3 works.** Most Paladin talents are equal to the talents of other classes. The stronger ones are intentional or Classic values.
-- **The Paladin has few points:** 140 with the proposals, between the Rogue (139) and the Mage (143). This is not a problem: the trees have as many talents as the other classes. Fewer ranks leave more points for the dips into other trees.
+- **The Paladin has few points:** 138 with the proposals, 1 below the Rogue (139). This is not a problem: the trees have as many talents as the other classes. Fewer ranks leave more points for the dips into other trees.
 
 ## 1. How the other classes use rows 1–3
 
@@ -56,7 +56,7 @@ This tab uses the proposed trees of calculator version 6 (the live version, with
 | Benediction (instant spells −10%, Retribution row 1) | Convection (−10%, row 1) | Equal |
 | Conviction (+6% critical hit, 3 points, Retribution row 2) | Cruelty, Malice, Lethal Attacks (+5%, 5 points, row 1) | Stronger for each point, but one row deeper |
 | Precision (+3% hit, Protection row 2) | Precision (Rogue, row 2), Elemental Precision (row 1) | Equal |
-| Reverence (15/30%, Holy row 2) | Mindfulness (row 2), Meditation and Reflection (row 3) | Equal row, but weaker: 30% against 50% |
+| Reverence (15/30%, Holy row 2) | Mindfulness (row 2), Meditation and Reflection (row 3) | Equal row, but weaker: 30% against 50%. With Reverence 25/50% (C-H1): equal |
 | Improved Seals (+15% Seals and Judgements, Holy row 2) | Concussion (+5%), Improved Eviscerate (+20%) | Parity |
 | Improved Judgement (−2 sec, 2 points) | Improved Mind Blast (−2.5 sec, 5 points) | Stronger for each point. It is the Classic value |
 | Anticipation (+20 Defense, Protection row 4) | Anticipation (Warrior, row 2) | Weaker: two rows deeper |
@@ -76,7 +76,7 @@ This tab uses the proposed trees of calculator version 6 (the live version, with
 | Mage | Arcane 49 | Fire 46 | Frost 48 | 143 |
 | Rogue | Assassination 48 | Combat 44 | Subtlety 47 | 139 |
 | **Paladin, live** | Holy 46 | Protection 49 | Retribution 44 | **139** |
-| **Paladin, proposed** | Holy 48 | Protection 48 | Retribution 44 | **140** |
+| **Paladin, proposed** | Holy 46 | Protection 48 | Retribution 44 | **138** |
 
 - **The other classes have 139–150 points** (mean 146). The live Paladin is equal to the Rogue.
 - **With the proposals, the Paladin has 138 points.** Toughness removal (C-P13) deletes 5 ranks. Devoted Sacrifice (C-P11) and Reach of Law (C-P7) add 2 each.

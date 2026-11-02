@@ -51,7 +51,7 @@ This file gives the best tank builds for the live trees and for the proposed tre
 - Protection: Redoubt 5, Precision 3, Sacred Duty 2, Templar's Bulwark, Shield Specialization 2, Toughness 3, Swift Judgement, Improved Righteous Fury 3, Anticipation 5, Holy Shield, Reckoning 5, Iron Creed 3, Shieldsworn.
 - Retribution: Deflection 5, Benediction 2, Improved Judgement 2, Conviction 3, Sanctified Judgement 3, Sacred Arbiter.
 - **Sacred Arbiter.** Holy Strike does +20% damage and refreshes the Judgements on the target. With Toughness 4 in its place, the build has 936 threat each sec, 326 damage taken each sec and a TMI of 55.7.
-- **Sanctified Judgement, not Benediction.** With Benediction 5 in place of Benediction 2 and Sanctified Judgement 3, the build has 957 threat each sec, 329 damage taken each sec and a TMI of 56.4. Sanctified Judgement gives more mana, thus Holy Shield is active for a longer time.
+- **Sanctified Judgement, not Benediction.** The build with Benediction 5 in place of Benediction 2 and Sanctified Judgement 3 was tested. It has 957 threat each sec, 329 damage taken each sec and a TMI of 56.4. Sanctified Judgement gives more mana, thus Holy Shield is active for a longer time.
 - **No Holy points.** The 16 Retribution points leave no points for Holy. Divine Strength and Improved Seals give less than Sacred Arbiter and the Protection talents.
 
 ### Live: BT1 and BS1

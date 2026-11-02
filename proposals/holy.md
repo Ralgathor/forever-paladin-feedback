@@ -45,6 +45,6 @@ The live version changes most of the Holy tree. Oath of Light, Boundless Light a
 
 - **Retribution builds take Reverence 2/2.** RB1 has 7 Holy points in rows 1–2. With 50%, RB1 receives 10.3 mana each sec from Reverence (live: 6.2).
 - **The mana lasts 1.6–2.2 min longer** with Blessing of Wisdom. At fresh level 60, plan 1 + 3 lasts 5 min 20 sec (live: 3 min 43 sec).
-- **Damage in fights of 5 min (model, Blessing of Wisdom):** +2.8% at fresh level 60, +3.0% pre-raid, +2.1% in Molten Core, +0.8% in Blackwing Lair, 0% in Naxxramas. Fights of 3 min do not change.
+- **Damage in fights of 5 min (model, Blessing of Wisdom).** Fresh level 60 +2.8%, pre-raid +3.0%, Molten Core +2.1%. Blackwing Lair +0.8%, Naxxramas 0%. Fights of 3 min do not change.
 - **wowsims, RB1 with C1:** no buffs at fresh level 60, +4.0% in 3 min (324 → 337) and +5.4% in 5 min. Full raid buffs: 0% (956 in 2 min, 962 → 963 in 5 min).
 - **This is accepted.** The gain is small and it decreases with gear. Sacred Arbiter +10% stays the balance lever (W15).

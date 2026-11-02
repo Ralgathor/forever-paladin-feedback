@@ -105,11 +105,11 @@ Two values for each spell: raw healing for each mana point · healing for each m
 
 The Holy Power text says: "increases the critical heal bonus of Holy spells by 50%". A normal critical heal heals for 150%. The text has three possible meanings:
 
-- **225% (main hypothesis since 2 November):** ×1.5 on the full critical heal. This is the wowsims reading.
+- **225% (main hypothesis since 2 November):** ×1.5 on the full critical heal. This is the wowsims value.
 - **175% (low case):** +50% of the bonus, the rule of Ruin and Elemental Fury.
 - **200% (main hypothesis from 1 to 2 November):** +50 points on 150%.
 
-**Why 225%.** The game files give Holy Power the aura A_MOD_CRITICAL_HEALING_AMOUNT (+10/20/30/40/50%). No other spell in the Forever files has this aura. All other talents that change the critical size use the critical damage bonus modifier: Ruin, Elemental Fury, Ice Shards, Arcane Mind, Shadowform, Impale, Lethality, Mortal Shots and Vengeance. They give +100% of the bonus: a 200% critical hit.
+**Why 225%.** The game files give Holy Power the aura A_MOD_CRITICAL_HEALING_AMOUNT (+10/20/30/40/50%). No other spell in the Forever files has this aura. All other talents that change the critical size use the critical damage bonus modifier. Examples: Ruin, Elemental Fury, Ice Shards, Arcane Mind, Shadowform, Impale, Lethality, Mortal Shots and Vengeance. They give +100% of the bonus: a 200% critical hit.
 
 - **For 225%.** The designers did not use the usual modifier. In later game versions, the server multiplies the full critical heal by this aura. wowsims does the same.
 - **For 175%.** The tooltip says "critical strike healing bonus". With the Ruin rule and +50%, this gives 175%.

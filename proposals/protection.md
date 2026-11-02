@@ -64,7 +64,7 @@ The live version changes most of the Protection tree. Righteous Fury now increas
 
 - **Change.** Stoicism moves from row 5, column 1 to row 4, column 4. The ranks and the text do not change.
 - **Why.** Reach of Law (C-P7) takes the place below Swift Judgement, for the prerequisite arrow. Row 4, column 4 is free.
-- **Effect.** Stoicism opens at 15 Protection points (was 20). A PvP build gets the stun resistance for 5 fewer points.
+- **Effect.** Stoicism opens at 15 Protection points (was 20). A PvP build receives the stun resistance for 5 fewer points.
 
 ## C-P11. Devoted Sacrifice (new talent): row 3, column 4
 
