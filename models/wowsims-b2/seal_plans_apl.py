@@ -32,3 +32,22 @@ for r in (1, 2, 3):
         set_stacks(apl, "Should refresh SoC", ECHO_RIGHTEOUSNESS, r)
         set_stacks(apl, "Should refresh SoR", ECHO_COMMAND, c)
         json.dump(apl, open(P + f"fb_r{r}c{c}.apl.json", "w"), indent=1)
+
+# Other Seal pairs: fb_r1c3_<X>C puts Seal X in place of Seal of Righteousness (W Wisdom, F Fury, L Light, J Justice).
+SEALS = {"W": (20357, 3, 1328206), "F": (20423, 7, 1311701), "L": (20349, 4, 1328198), "J": (20164, 1, 1311705)}
+src = json.load(open(P + "fb_r1c3.apl.json"))
+for x, (sid, rank, echo) in SEALS.items():
+    apl = copy.deepcopy(src)
+    def swap(o):
+        if isinstance(o, dict):
+            if o.get("spellId") == 20293 and o.get("rank") == 8:
+                o["spellId"], o["rank"] = sid, rank
+            elif o.get("spellId") == ECHO_RIGHTEOUSNESS and "rank" not in o:
+                o["spellId"] = echo
+            for v in o.values():
+                swap(v)
+        elif isinstance(o, list):
+            for v in o:
+                swap(v)
+    swap(apl)
+    json.dump(apl, open(P + f"fb_r1c3_{x}C.apl.json", "w"), indent=1)

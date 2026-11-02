@@ -25,7 +25,7 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 - **Unsealed Wrath.** Unsealed Wrath triggers only on auto attacks (wowsims spell data, spell 1310735). Thus, Holy Strike does not store a Seal copy and does not consume the stored copies. With C1, Holy Strike triggers only the active Seal.
 - **Why the trigger is in the spell.** Holy Strike uses the usual Seal rule. Thus, one rule is true for all melee attacks, with no exceptions.
 - **Protection.** With Shieldsworn, Holy Strike has a 6 sec cooldown. Seal of Fury on each Holy Strike gives more threat. The Threat tables do not include it.
-- **Value (live trees).** Holy Strike Seal trigger (C1) gives Retribution +5.3% damage at all gear tiers (model) and +5.3–5.6% in wowsims. With the beta of 18 October, it gave +11%. Unsealed Wrath already gives both Seals to each auto attack. Thus, Holy Strike adds less now.
+- **Value (live trees).** Holy Strike Seal trigger (C1) gives Retribution +5.6–5.7% damage at all gear tiers (model) and +5.3–5.6% in wowsims. With the beta of 18 October, it gave +11%. Unsealed Wrath already gives both Seals to each auto attack. Thus, Holy Strike adds less now.
 - **Balance.** If Retribution does more damage than the pure damage classes in raids, decrease the Sacred Arbiter bonus first: +20% → +10% (see Watch list, W15).
 
 ## C-R3. Sanctified Judgement: the return always occurs
@@ -49,19 +49,19 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 
 ## Retribution against the pure average
 
-- **Model.** models/beta-30-oct/retribution_b2.py. It uses the wowsims default Retribution build of 1 November (14/6/31) and a Seal change after each swing (plan 1 + 1). The wowsims rotation uses plan 1 + 3 (see Mana with Unsealed Wrath).
+- **Model.** models/beta-30-oct/retribution_b2.py. It uses the wowsims default Retribution build of 1 November (14/6/31) and the wowsims rotation: plan 1 + 3 (see Mana with Unsealed Wrath).
 - **Start value.** wowsims Forever of 1 November gives 906 DPS at fresh level 60 (848 before the wowsims update). The model gives the increase with gear.
-- **Increase with gear.** Retribution damage increases less with gear than Fury damage: ×1.63 against ×1.73 from fresh level 60 to Naxxramas. Fixed base values of the Seals, Judgement and Holy Strike cause this (see Analysis, Damage, part 3).
+- **Increase with gear.** Retribution damage increases less with gear than Fury damage: ×1.65 against ×1.73 from fresh level 60 to Naxxramas. Fixed base values of the Seals, Judgement and Holy Strike cause this (see Analysis, Damage, part 3).
 - **Pure average.** Fury and Combat Rogue use the increase of the model. Hunter, Mage and Warlock increase ×1.75 to Naxxramas (the main case of Analysis, Damage, part 1).
 
 | Build | Fresh level 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
 | --- | --- | --- | --- | --- | --- |
-| Live | 100% | 98% | 97% | 95% | 94% |
-| With C1 | 105% | 104% | 102% | 100% | 99% |
+| Live | 100% | 99% | 98% | 96% | 96% |
+| With C1 | 105% | 104% | 104% | 102% | 101% |
 
-- **Result.** The live version is at the hybrid target (95%) or above it until Blackwing Lair. In Naxxramas, it is 1 point below. With Holy Strike Seal trigger (C1), Retribution is 4–10 points above the target.
-- **Keep C1.** It gives one Seal rule for all melee attacks and the tank threat. If raid logs confirm the wowsims level, decrease Sacred Arbiter to +10% first: C1 then gives 104% → 98% (W15).
-- **Other cases.** Hunter, Mage and Warlock ×1.60: live 100%, C1 105–106%. ×1.90: live 89–100%, C1 94–105%.
+- **Result.** The live version is at the hybrid target (95%) or above it at all gear levels. With Holy Strike Seal trigger (C1), Retribution is 6–10 points above the target.
+- **Keep C1.** It gives one Seal rule for all melee attacks and the tank threat. If raid logs confirm the wowsims level, decrease Sacred Arbiter to +10% first: C1 then gives 104% → 100% (W15).
+- **Other cases.** Hunter, Mage and Warlock ×1.60: live 100–101%, C1 105–107%. ×1.90: live 91–100%, C1 96–105%.
 
 ## Mana with Unsealed Wrath (W29)
 
@@ -83,7 +83,20 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 - **Model columns.** Fresh level 60, Blessing of Wisdom, no consumables.
 - **Result.** Plan 1 + 3 gives the most damage, with half the Seal casts of plan 1 + 1. A copy of Seal of Command has more value than a copy of Seal of Righteousness. Thus, plan 3 + 1 is the weakest plan with copies.
 - **Mana.** At fresh level 60, plan 1 + 3 lasts for a 3 min fight. In a 5 min fight, plan 3 + 3 is the best: −2.5% (model). From Molten Core, plan 1 + 3 is the best in a 5 min fight. The mana costs 2.0% in Molten Core, 0.7% in Blackwing Lair and 0% in Naxxramas.
-- **The pure average table above uses plan 1 + 1 and no mana limit.** The model with plan 1 + 1 is 2.5% below plan 1 + 3. The start value (906) comes from wowsims with plan 1 + 3.
+- **The pure average table above uses plan 1 + 3 and no mana limit.** The start value (906) comes from wowsims with the same plan.
+**Other Seal pairs (wowsims, C1, plan 1 + 3).** Seal of Command with a second Seal in place of Seal of Righteousness.
+
+| Second Seal | Full buffs, 2 min | No buffs and no consumables, 5 min |
+| --- | --- | --- |
+| Righteousness | 956 DPS | 307 DPS (mana empty after 1 min 29 sec) |
+| Fury | 924 (−3.4%) | 284 (−7.6%) |
+| Light | 830 (−13%) | 240 (−22%) |
+| Wisdom | 828 (−13%) | 350 (+14%, the mana lasts) |
+| Justice | 827 (−14%) | 239 (−22%) |
+
+- **With buffs, Seal of Righteousness is the best second Seal.** Lean buffs, 5 min: Righteousness 696, Fury 677 (−2.8%), Wisdom 621 (−11%).
+- **Without buffs, Seal of Wisdom is the best second Seal in long fights.** Its copies return mana, thus the Seal changes continue for all of the fight. In a 2 min fight, Wisdom and Righteousness are equal (348 and 345).
+
 - **Spell data.** Unsealed Wrath has a Seal cost effect at 0% (wowsims spell data, spell 1310735). A −20% value, as Twist of Light had, gives 0% in a 2 min fight and +2.6% in a 5 min fight (model). Plan 1 + 3 then lasts 5 min 40 sec.
 
 ## wowsims check
@@ -98,7 +111,7 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 | 2 min, lean buffs | 653 DPS | +5.6% | 0% |
 | 5 min, lean buffs | 660 DPS | +5.5% | 0% |
 
-- **C1.** The sim gives +5.3–5.6%. The model gives +5.3%.
+- **C1.** The sim gives +5.3–5.6%. The model gives +5.6–5.7%.
 - **Mana.** No run has zero mana. The wowsims consumables now include Major Mana Potion. In the model, plan 1 + 3 has zero mana after 3 min 43 sec, because the model has no consumables.
 - **Seal cost −20%.** It has no effect in wowsims, because the mana lasts. The model gives 0–2.6%.
 

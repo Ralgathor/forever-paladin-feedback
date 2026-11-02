@@ -45,7 +45,7 @@ def stats_b2(g, tal=B2):
     return dict(ap=ap, sd=g["sd"] + 0.12 * t("cotl") * intel, int=intel, hit=min(g["hit"] + 0.01 * t("prec"), MISS), crit=crit,
                 w=g["w2"], speed=SPEED_2H)
 
-def retribution_b2(g, c1=False, bz=0, n=1, tal=B2, fight=FIGHT, detail=False, seal_mult=1.0, crusader=False, plan=(1, 1)):
+def retribution_b2(g, c1=False, bz=0, n=1, tal=B2, fight=FIGHT, detail=False, seal_mult=1.0, crusader=False, plan=(1, 3)):
     """c1: Holy Strike triggers your Seal (C1). bz: Burning Zeal ranks (C-R4, +10% critical damage bonus each).
     plan: (r, c), r swings with Seal of Righteousness, then c swings with Seal of Command. (1, 3) is the wowsims
     default rotation. plan=None: Seal of Command only (no copy is consumed). n is not used (kept for old calls).

@@ -129,3 +129,12 @@ r2c1              2 min full C1 907.7 | 5 min full C1 913.7
 r3c1              2 min full C1 894.5 | 5 min full C1 899.9
 live (no C1), full buffs, 2 min: r1c3 905.9, r2c2 889.8, r1c1 878.6, r3c1 852.8
 no buffs, C1, 2 min: r1c3 345.4 (mana zero 88 s), r2c2 337.9 (84 s), r3c1 332.1 (81 s), r1c1 313.4 (52 s)
+
+## 2 November 2026: other Seal pairs with Seal of Command, plan 1 + 3, C1 (fb_r1c3_<X>C, X in place of Righteousness)
+R (default)  2 min full 956.2 | 5 min full 962.2 | 5 min lean 696.0 | 2 min none 345.4 (oom 28.6 s) | 5 min none 307.3 (tto 88.7 s)
+Fury         2 min full 923.5 | 5 min full 929.8 | 5 min lean 676.6 | 2 min none 328.3 | 5 min none 284.0
+Light        2 min full 829.8 | 5 min none 240.4
+Justice      2 min full 826.9 | 5 min none 238.9
+Wisdom       2 min full 827.8 | 5 min full 832.9 | 5 min lean 620.6 | 2 min none 348.0 (oom 0.1 s) | 5 min none 350.3 (oom 3.6 s)
+Wisdom r3c3  2 min full 726.5 | 5 min lean 534.8 | 5 min none 302.3
+Command only and Righteousness only: the default APL casts the first Seal again only after a copy of the other, thus these runs are not valid.
