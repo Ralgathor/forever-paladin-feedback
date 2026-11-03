@@ -144,7 +144,7 @@ The live version (4 November 2026) changes the three trees. These proposals are 
 | Holy Reach: +20% range for heals and Light's Vigil | No change to the healing. Utility only |
 | Hallowed Wrath: Holy Shock, Exorcism and Holy Wrath +10/20% against Undead and Demons | Damage for Shockadin and level-up only. No healer value |
 | Purifying Light: Cleanse also heals for 5/10% of maximum health | No model value. In PvP, Cleanse becomes a fast heal |
-| Sanctity Aura (Classic): +10% Holy damage for the party | 69% of Retribution damage is Holy: +6.9% for the Paladin. Retribution goes to 117% of the pure average at fresh level 60 (W15) |
+| Sanctity Aura (Classic): +10% Holy damage for the party | 69% of Retribution damage is Holy: +6.9% for the Paladin. Retribution goes to 126% of the pure average at fresh level 60 (W15) |
 | Bane of the Dead: +1/2/3% damage against Undead and Demons (as Monster Slaying, Hunter) | Withdrawn on 29 October 2026. With Burning Zeal (C-R4), Retribution is near 106% of the pure average in Naxxramas. Keep it as an option if tests show Retribution too weak in late raids |
 | Holy Strike cooldown −1/2 sec | +1.4% and +3.2% damage at all gear levels. It adds damage at fresh level 60, where Retribution is already 110% of the pure average |
 | Judgement of Command: the stunned damage (×2) on targets that cannot be stunned | The bonus is a fixed value: +8.2% at fresh level 60, +5.5% in Naxxramas. At 25/50%, +4.1%. The value decreases with gear, against W15 |
