@@ -2,6 +2,12 @@
 
 This project gives player feedback for the Paladin in **World of Warcraft: Forever**. It is not an official project. It is not related to Blizzard Entertainment.
 
+**The three main asks**
+
+1. **Righteous Fury +90% to all threat (C25).** After the development notes of 2 November, the live Paladin tank has 70% of the Warrior threat. With C25, it has 105% (wowsims).
+2. **Redoubt on each Holy Shield cast (C-P1).** Crushing blows go from 12.0% to 0.9% of the boss attacks (wowsims, Warrior 1.1%).
+3. **Reverence 25/50% (C-H1) and a Light's Vigil buff (C-H7).** On one tank, the Paladin goes from 8–15% to 3–7% below the Druid. In raids of 5 and 10 min, from 25–34% to 3–4% below.
+
 ## Contents
 
 - **Proposals:** 13 changes and 1 move for the live trees. 4 changes are baseline spell changes (C2, C4, C5, C25). Shoulder the Burden (C-P5) is a new baseline spell. 8 changes are talent changes (C-H1, C-H7, C-P1, C-P7, C-P11, C-P13, C-P14, C-R3). Devoted Sacrifice (C-P11) and Reach of Law (C-P7) are new talents. One move: Stoicism to row 4, column 4 (M-P2).
@@ -13,50 +19,11 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## IDs
 
-- **C2 to C5 and C25 (spell change):** the proposal changes a baseline spell, not a talent. Shoulder the Burden (C-P5) is also a new baseline spell.
-- **C-H, C-P and C-R (talent change):** the proposal changes what a talent does, adds a talent or removes a talent. The letter after C gives the tree: H (Holy), P (Protection), R (Retribution).
-- **M-H, M-P and M-R (move):** the proposal moves a talent to a different row. The talent text does not change.
-- **Alternatives.** C2a is the alternative to C2. C-P11a is the alternative to the Lay on Hands part of C-P11. C25a is the alternative to C25.
-- **New IDs.** A new proposal takes the next free number of its series. A new proposal never takes the number of a withdrawn proposal.
-- **Names.** The text gives the name first and the ID in parentheses, for example Sanctified Judgement (C-R3).
+C2 to C5 and C25 change baseline spells. C-H, C-P and C-R change, add or remove a talent of the Holy, Protection or Retribution tree. M-H, M-P and M-R move a talent. C2a, C-P11a and C25a are alternatives. The text gives the name first and the ID in parentheses, for example Sanctified Judgement (C-R3). The full rules are in [How to read this document](proposals/README.md#how-to-read-this-document).
 
 ## Changes
 
-**Spell changes**
-
-- **C2 Judgement of the Crusader:** a personal debuff. It does not count against the one-Judgement limit. C2a is the alternative.
-- **C4 Hand of Sacrifice:** up to 825 damage moves to you (live: Blessing of Sacrifice, 55 damage for each hit, no cooldown). Lasts 30 sec, 15 sec cooldown.
-- **C5 Hands:** Blessing of Sacrifice, Protection and Freedom become Hand of Sacrifice, Protection and Freedom. They use no Blessing slot. Each Paladin can have one Hand on a target.
-- **C-P5 Shoulder the Burden (new baseline spell):** 50% of the threat of an ally moves to you. 5 min cooldown. All Paladins can learn it. It has no effect in PvP.
-- **C25 Righteous Fury:** +90% to all threat (live: +33%). The Holy part (+90% more) does not change. The notes of 2 November give the Warrior and the Druid about ×1.44 more threat, and the Paladin no change. With C25, the Paladin has ×1.43. In wowsims, the live tank goes from 69% to 98% of the Warrior threat, and the proposed tank has 105%. Alternative C25a: +80%, the Defensive Stance value.
-
-**Holy**
-
-- **C-H1 Reverence 25/50% (live: 15/30%, row 2):** more mana regeneration during casts, as the healer talents of the other classes (50%). Holy heals 5–9% more, most in long fights. On one tank, the Paladin is 3–7% below the Druid (175% critical heal), and 3–9% above at 225%, below the 20% limit. It has no link to critical heals, thus it does not depend on the Holy Power test. Retribution also takes it: +4–5% damage at fresh level 60 without buffs (wowsims), 0% with raid buffs.
-- **C-H7 Light's Vigil:** a buff in place of a cast on an ally (live: 1,340 mana, two casts for one party heal). Holy Shock, Judgement and Holy Strike give a stack, once each 6 sec, up to 3. The next Holy Shock has no cooldown and uses one stack. On an ally, it also heals the party for 60% of the heal. In raids, the Paladin goes from 37–40% to 7–17% below the Druid (175% critical heal), and 3–14% below with Reverence 50% (C-H1).
-
-**Protection**
-
-- **C-P1 Redoubt:** each Holy Shield cast also starts it. In wowsims, crushing blows decrease from 12.0% to 0.9% of the boss attacks (Warrior: 1.1%).
-- **C-P7 Reach of Law (new, row 5, requires Swift Judgement):** +5/10 yards Judgement range with Seal of Fury, for a 20 yard pull in dungeons. Stoicism moves to row 4, column 4 (M-P2).
-- **C-P11 Devoted Sacrifice (new, row 3):** Lay on Hands drains only 75/50% of your current mana (live: all of it). You also take 20/40% less damage from your Hand of Sacrifice. Alternative C-P11a: the spell drains 50% for all Paladins.
-- **C-P13 Toughness:** removed. Devoted Sacrifice (C-P11) takes its place in row 3. With Reach of Law (C-P7), Protection has 48 points (live: 49).
-- **C-P14 Swift Judgement:** no longer requires Templar's Bulwark. The two talents have different uses.
-
-**Retribution**
-
-- **C-R3 Sanctified Judgement:** each Judgement returns 20/40/60% of the Seal cost (live: a 33/66/100% chance).
-
-**Adopted in the live version (3 November 2026)**
-
-| ID | Proposal | What the live version does |
-| --- | --- | --- |
-| C3 | Blessing of Light: removed | Blessing of Light and Greater Blessing of Light are removed. Oath of Light (new Holy talent) gives their bonus on one ally |
-| C-H1 (move) | Reverence to Holy row 2 | Reverence is in row 2. Its values are 15/30%. The 25/50% part is a proposal (C-H1) |
-| C-P5 (removal) | Improved Seal of Fury: removed | Improved Seal of Fury is removed |
-| C-R1 | Conviction: attacks and spells | Conviction gives 2/4/6% critical chance with all spells and attacks |
-| M-H5 | Divine Precision: row 4, no requirement | Divine Precision is in row 4 with no requirement |
-| M-R1 | Two-Handed Weapon Specialization: row 4 | Two-Handed Weapon Specialization is in row 4 |
+The [Summary](proposals/README.md#summary) gives the live and proposed text of each change, and the six proposals that the live version adopts. Each proposal tab gives the reason, the model talent from another class and the model results.
 
 ## Read and try
 

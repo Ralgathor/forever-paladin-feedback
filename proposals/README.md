@@ -2,6 +2,12 @@
 
 This document gives talent proposals for the WoW Forever Paladin. It has 14 changes and 1 move. The proposals use the live trees of 3 November 2026. The live version adopts 6 earlier proposals, and makes 20 others unnecessary. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same game build as a model.
 
+**The three main asks**
+
+1. **Righteous Fury +90% to all threat (C25).** After the development notes of 2 November, the live Paladin tank has 70% of the Warrior threat. With C25, it has 105% (wowsims).
+2. **Redoubt on each Holy Shield cast (C-P1).** Crushing blows go from 12.0% to 0.9% of the boss attacks (wowsims, Warrior 1.1%).
+3. **Reverence 25/50% (C-H1) and a Light's Vigil buff (C-H7).** On one tank, the Paladin goes from 8–15% to 3–7% below the Druid. In raids of 5 and 10 min, from 25–34% to 3–4% below.
+
 **Contents**
 
 - **This tab:** [How to read this document](#how-to-read-this-document) · [Summary](#summary) · [Design rules](#design-rules)
