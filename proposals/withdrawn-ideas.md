@@ -12,7 +12,7 @@ Light's Vigil (C-H7) is the proposal. The analysis examined these other designs 
 | Light's Vigil releases your active Seal on the party of an ally | Three Seals (Righteousness, Fury, Justice) have no clear party effect. The cast consumes the Seal |
 | Light's Vigil puts a heal over time on the party, Holy Shock ends it for a burst | Small changes in cost give large changes in value. Close to Swiftmend (Druid) |
 | Fulfill the Oath: heals on the Oath of Light target give stacks, Holy Shock uses them for party heals | The raid value depends on how much the Paladin heals one target (+5% to +29% against the Shaman) |
-| 3 charges from critical heals, Judgement and Holy Strike, spent by Holy Shock on party heals | 3 charges spent on a heal are the Holy Power resource of a later expansion. Ranged Paladins receive 5–7% less |
+| 3 charges from critical heals, Judgement and Holy Strike, spent by Holy Shock on party heals | Critical heals give a random number of charges. Ranged Paladins receive 5–7% less |
 | Holy Shock critical heals also give a charge | A loop: one charge gives about 2 Holy Shocks. Holy Shock replaces Flash of Light, and the burst size is random |
 | Your Holy damage heals the party of the Light's Vigil target | The value depends on spell damage from items. Close to a later-expansion healer |
 | On an enemy, Holy Shock with Light's Vigil deals 10% more damage and refunds 75% of its mana cost (first beta text) | Two Holy Shocks one after the other already double the burst. The 10% adds PvP burst, and the refund adds a damage use to a healer talent |

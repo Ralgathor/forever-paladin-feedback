@@ -2,9 +2,9 @@
 Run: python3 light_vigil_ch7.py
 
 Proposed text:
-  Your Holy Shock, Judgement and Holy Strike grant Light's Vigil for 30 sec. This effect cannot occur more than
-  once every 6 sec. While Light's Vigil is active, your next Holy Shock triggers no cooldown and consumes Light's
-  Vigil. On an allied target, Holy Shock also heals the target's party for 35% of the amount healed.
+  Your Holy Shock, Judgement and Holy Strike grant a stack of Light's Vigil for 30 sec. This effect cannot occur
+  more than once every 6 sec. Stacks up to 3 times. While Light's Vigil is active, your next Holy Shock triggers
+  no cooldown and consumes one stack. On an allied target, Holy Shock also heals the target's party for 35% of the amount healed.
 
 Model:
 - A Holy Shock with the buff also triggers the buff again when the 6 sec cooldown is over. Thus the Paladin can use
@@ -14,6 +14,8 @@ Model:
   Holy Shock crit chance (Boundless Light on a target with no Oath of Light). Overhealing 50%, as Wild Growth. No Illumination on
   the party part.
 - On an enemy, the buff only removes the Holy Shock cooldown. This has no healing value.
+- Stacks do not change the fight values (still one stack each 6 sec). burst() gives the group burst with full
+  stacks: Flash of Light or a plain Holy Shock fills the other global cooldowns.
 - Live: Light's Vigil rank 3 + Holy Shock, as in healing_b2.py.
 """
 import sys
@@ -45,6 +47,24 @@ def vs(f, tank, key):
         out.append(solve(f(), T, tank)["eff"]/o - 1)
     return " / ".join(f"{v:+.0%}".replace("-", "−") for v in out)
 
+def burst(stacks=3, W=10, melee=True, hse=3227, hsp=1173, fol=893, chs=205, cfol=123, cj=0.06*1512):
+    """Healing (raw) and mana in W sec, with full stacks at the start. Judgement has no global cooldown."""
+    t, st, icd, hscd, jcd, heal, mana = 0.0, stacks, 0.0, 0.0, 0.0, 0, 0
+    while t < W - 1e-9:
+        if melee and st == 0 and icd <= t and jcd <= t:
+            st += 1; icd = t + 6; jcd = t + 10; mana += cj
+        if st > 0:
+            st -= 1; heal += hse; mana += chs
+            if icd <= t: st += 1; icd = t + 6
+        elif hscd <= t:
+            heal += hsp; mana += chs; hscd = t + 10
+            if icd <= t: st += 1; icd = t + 6
+        else:
+            if t + 1.5 > W + 1e-9: break
+            heal += fol; mana += cfol
+        t += 1.5
+    return heal, mana
+
 if __name__ == "__main__":
     for key in ("Druid", "Shaman"):
         print(f"\nAgainst the {key}, 715 healing power, 3 / 5 / 10 min")
@@ -60,6 +80,8 @@ if __name__ == "__main__":
     base = s.raw/(1 + 5*X)
     print(f"\nEmpowered Holy Shock, raid: {s.raw:.0f} raw ({base:.0f} Holy Shock + 5 x {X*base:.0f}), "
           f"{s.eff/s.cost:.1f} effective healing for each mana point")
-    print(f"10 sec burst: melee (chain of 2, then Judgement or Holy Strike) 3 x {s.raw:.0f} = {3*s.raw:.0f}; "
-          f"ranged (chain of 2, then a plain Holy Shock) {2*s.raw + base:.0f}")
+    print("Group burst with full stacks (raw / mana):")
+    for n in (1, 2, 3, 4):
+        print(f"  {n} stacks: 6 sec {burst(n, 6)[0]:.0f}; 10 sec melee {burst(n, 10)[0]:.0f}, ranged {burst(n, 10, False)[0]:.0f} "
+              f"({burst(n, 10)[1]:.0f} mana)")
     print(f"Casts in 5 min, raid: {solve(k, 300, False)['casts']}")

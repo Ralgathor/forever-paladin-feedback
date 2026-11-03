@@ -55,17 +55,18 @@ The Druid values use the development notes of 2 November 2026 (Bloom, Genesis 10
 ## C-H7. Light's Vigil: a buff on Holy Shock (live: a cast on an ally)
 
 - **Live text.** "Applies Light's Vigil to a friendly target for 30 sec. The caster's next Holy Shock on the target incurs no cooldown and heals the target and their party for 326 to 344. Only one Vigil per Paladin may be active in each party." Rank 1: 730 mana, 40 yd range, 1.5 sec cast, 6 sec cooldown. Rank 3 (level 60): 704 to 744 for each party member, 14.3% of healing power, 1,340 mana.
-- **Proposed text.** "Your Holy Shock, Judgement and Holy Strike grant Light's Vigil for 30 sec. This effect cannot occur more than once every 6 sec. While Light's Vigil is active, your next Holy Shock triggers no cooldown and consumes Light's Vigil. On an allied target, Holy Shock also heals the target's party for 35% of the amount healed."
+- **Proposed text.** "Your Holy Shock, Judgement and Holy Strike grant a stack of Light's Vigil for 30 sec. This effect cannot occur more than once every 6 sec. Stacks up to 3 times. While Light's Vigil is active, your next Holy Shock triggers no cooldown and consumes one stack. On an allied target, Holy Shock also heals the target's party for 35% of the amount healed."
 - **Problem.** Rank 3 costs 1,340 mana, 89% of the base mana. It needs two casts (3 sec) for one party heal. It heals 4.7 for each mana point (Flash of Light: 6.2). In the model, the Paladin casts it only in fights of 3 min. In raids, the Paladin is 30–34% below the Druid and 7–9% below the Shaman.
 - **Model.** Riptide (Shaman capstone) adds a bonus to Chain Heal. Prayer of Mending (Priest capstone) is an efficient group heal with a cooldown. Light's Vigil (C-H7) adds a party heal to Holy Shock, with a cooldown of 6 sec.
-- **Why this design.** One spell (Holy Shock) does the work. The talent keeps the name, the 30 sec, the 6 sec and the "next Holy Shock triggers no cooldown" rule of the live talent. It is a buff, not a resource: it has no stacks. The party heal is a % of the Holy Shock heal, thus it increases with the rank, the level, healing power and critical heals.
+- **Why this design.** One spell (Holy Shock) does the work. The talent keeps the name, the 30 sec, the 6 sec and the "next Holy Shock triggers no cooldown" rule of the live talent. Each stack is one Holy Shock with no cooldown. No spell uses more than one stack, thus the stacks are not a resource for a finisher. The party heal is a % of the Holy Shock heal, thus it increases with the rank, the level, healing power and critical heals.
 
 **How it works**
 
-- Start a fight with Holy Shock, Judgement or Holy Strike. You then have Light's Vigil.
-- A Holy Shock with Light's Vigil also gives Light's Vigil again when the 6 sec cooldown is over. Thus each 6 sec, one Holy Shock heals the party. Holy Shock is enough: ranged and melee Paladins receive the same value.
-- When you keep Light's Vigil after the 6 sec cooldown, you can cast two Holy Shocks one after the other. The first one gives Light's Vigil again, the second one uses it.
-- Light's Vigil does not end an active Holy Shock cooldown. After a plain Holy Shock, the next Holy Shock waits for its cooldown. Judgement has no global cooldown, thus it can give Light's Vigil at once.
+- Start a fight with Holy Shock, Judgement or Holy Strike. You then have one stack of Light's Vigil.
+- Each 6 sec, Holy Shock, Judgement or Holy Strike gives one more stack, up to 3. Each new stack sets the duration to 30 sec again.
+- A Holy Shock with Light's Vigil uses one stack. It also gives a stack when the 6 sec cooldown is over. Thus each 6 sec, one Holy Shock heals the party. Holy Shock is enough: ranged and melee Paladins receive the same value.
+- Planned burst: keep 3 stacks before a raid damage phase. Then four Holy Shocks one after the other heal the party in 4.5 sec. The first one gives the fourth stack.
+- Light's Vigil does not end an active Holy Shock cooldown. After a plain Holy Shock, the next Holy Shock waits for its cooldown. Judgement has no global cooldown, thus it can give a stack at once.
 
 **Healing model, 715 healing power, 3 / 5 / 10 min**
 
@@ -82,8 +83,9 @@ The Druid values use the development notes of 2 November 2026 (Bloom, Genesis 10
 - **One tank.** No change. The party heal goes to 5 players, thus the tank receives only a small part. The one-tank values come from Reverence 50% (C-H1) only.
 - **Cast plan.** About 51 Holy Shocks with Light's Vigil in 5 min (one each 6 sec). Flash of Light stays the main heal.
 - **Healing for each mana point.** A Holy Shock with Light's Vigil heals about 3,230 (raid, before overhealing): 1,170 on the target and 5 × 410 on the party. This is 9.9 healing for each mana point after overhealing. The party heal has 50% overhealing, as Wild Growth: it heals all 5 players, also the players at full health. Prayer of Mending gives 15.7.
-- **Group burst in 10 sec.** In melee, three Holy Shocks with Light's Vigil (two, then Judgement or Holy Strike and one more) heal about 9,700. At range, two Holy Shocks with Light's Vigil and one plain Holy Shock heal about 7,600. Priest: about 15,000 (Prayer of Mending and two Prayer of Healing). Druid: about 11,100 (two Wild Growth). Shaman: about 10,000 (four Chain Heal). Holy is not a group burst healer.
-- **Damage.** The talent has no enemy effect of its own. On an enemy, Light's Vigil only removes the Holy Shock cooldown. Two Holy Shocks one after the other do 1,065 to 1,340 damage (400 to 715 spell damage). Without the talent, one Holy Shock does 533 to 668 in the same time.
+- **Group burst.** With 3 stacks, four Holy Shocks with Light's Vigil heal about 12,900 in 6 sec, for about 820 mana. In 10 sec, with Flash of Light or a plain Holy Shock after them, they heal about 17,300 at all ranges. With 1 stack, about 8,500 in 6 sec. Priest: about 15,000 in 10 sec (Prayer of Mending and two Prayer of Healing). Druid: about 11,100 (two Wild Growth). Shaman: about 10,000 (four Chain Heal). The live talent with a Vigil on 4 parties: about 25,600 in 6 sec, for 4,190 mana.
+- **Stacks before a fight.** Holy Shock out of combat gives stacks. A stack lasts 30 sec, thus the Paladin can start a fight with at most 3 stacks.
+- **Damage.** The talent has no enemy effect of its own. On an enemy, Light's Vigil only removes the Holy Shock cooldown. With 3 stacks, four Holy Shocks one after the other do 2,130 to 2,670 damage in 4.5 sec (400 to 715 spell damage). Without the talent, one Holy Shock does 533 to 668 in the same time.
 - **Other talents.** Spiritual Focus and Illumination name Light's Vigil. With C-H7, Light's Vigil has no cast and no heal of its own, thus the two texts no longer name it. Illumination applies to the Holy Shock heal, not to the party heal.
 - **The value depends on the critical heal size.** The Holy Power test (Open items) gives the real value. With both proposals, the raid values at 175% are 11–13 points lower than at 225%.
 

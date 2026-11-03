@@ -150,7 +150,7 @@ Reverence 50% (C-H1) and Light's Vigil (C-H7) are proposals. The other options a
 - **Lingering Light alone** gives about the same raid gain, but its value grows with the critical heal size. At 225% and at 175%, it gives +7 and +5 points on one tank. Reverence gives +5–8 and +4–8 points. Reverence has no link to critical heals, thus it is the proposal (decision of 2 November).
 - **Boundless Light for Flash of Light** changes only the raid values, because the tank has Oath of Light.
 - **Infusion of Light on all hits (C-H3)** adds nothing in the model, because the Paladin casts almost only Flash of Light.
-- **Light's Vigil (C-H7)** gives +17 to +21 points in raids and no change on one tank. With Reverence 50%, the Paladin is 5% below the Druid in raids of 5 and 10 min, and 14% below in fights of 3 min. The party heal has 50% overhealing, as Wild Growth. Model: `models/beta-30-oct/light_vigil_ch7.py`.
+- **Light's Vigil (C-H7)** gives +17 to +21 points in raids and no change on one tank. With Reverence 50%, the Paladin is 5% below the Druid in raids of 5 and 10 min, and 14% below in fights of 3 min. The party heal has 50% overhealing, as Wild Growth. With 3 stacks, the group burst is about 12,900 in 6 sec and 17,300 in 10 sec. Model: `models/beta-30-oct/light_vigil_ch7.py`.
 
 **Light's Vigil: options examined (3 November)**
 
@@ -158,14 +158,14 @@ The values are raid healing against the Shaman, 225%, 3 / 5 / 10 min, without Re
 
 | Option | Raid against the Shaman | Why not the proposal |
 | --- | --- | --- |
-| **Buff on Holy Shock, 6 sec, party heal 35% (C-H7)** | **+14% / +18% / +21%** | Proposal |
+| **Buff on Holy Shock, 6 sec, 3 stacks, party heal 35% (C-H7)** | **+14% / +18% / +21%** | Proposal |
 | The same, party heal 25% / 30% | +7% / +10% / +11% and +11% / +14% / +16% | Smaller raid value. Decision of 3 November: 35% |
 | The same, 8 sec cooldown, party heal 40% | +11% / +15% / +17% | Fewer and larger heals. Smaller value in fights of 3 min |
 | Live spell, instant, 20 sec cooldown | +11% / +18% / +21% | Still two casts for one party heal |
 | Light's Vigil releases your Seal on the party of an ally (Seal of Light: party heal) | +13% / +20% / +23% (15 sec cooldown) | Three Seals have no model. It consumes the Seal |
 | Heal over time on the party, Holy Shock ends it for a burst | +22% / +20% / +18% (75% cost, 1.5 × the live heal) | Small changes in cost give large changes in value. Close to Swiftmend (Druid) |
 | Stacks from heals on the Oath target, Holy Shock uses them (3 stacks) | +15% / +20% / +18% | The value depends on how much the Paladin heals one target (+5% to +29%) |
-| Charges from critical heals, Judgement and Holy Strike (3 charges) | +20% / +22% / +21% (melee), +13% / +16% / +14% (ranged) | 3 charges spent on a party heal are the Holy Power of a later expansion. Ranged Paladins receive 5–7% less |
+| Charges from critical heals, Judgement and Holy Strike (3 charges) | +20% / +22% / +21% (melee), +13% / +16% / +14% (ranged) | Critical heals give a random number of charges. Ranged Paladins receive 5–7% less |
 | Charges as above, Holy Shock critical heals also give a charge | +23% / +22% / +22% (party heal 20%) | A loop: about 6 Holy Shocks from 3 charges. Holy Shock replaces Flash of Light |
 | Live spell + your Holy damage heals the party of the target | about +10% | The value depends on spell damage from items. Close to a later-expansion healer |
 

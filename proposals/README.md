@@ -33,7 +33,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 12 chan
 | C4 | Hand of Sacrifice | Baseline spell | Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown | Up to 825 damage moves to you. Lasts 30 sec, 15 sec cooldown |
 | C5 | Hands: Sacrifice, Protection and Freedom | Baseline spells | Blessings of Sacrifice, Protection and Freedom use a Blessing slot | The spells take the name Hand of. No Blessing slot. One Hand from each Paladin on a target |
 | C-H1 | Reverence | Holy, row 2 | 15/30% of the mana regeneration continues during casts | 25/50% |
-| C-H7 | Light's Vigil | Holy, row 7 | A cast on an ally (1,340 mana): the next Holy Shock on the ally has no cooldown and heals the party | Holy Shock, Judgement and Holy Strike give a buff for 30 sec, once each 6 sec. With the buff, the next Holy Shock has no cooldown. On an ally, it also heals the party for 35% of the heal |
+| C-H7 | Light's Vigil | Holy, row 7 | A cast on an ally (1,340 mana): the next Holy Shock on the ally has no cooldown and heals the party | Holy Shock, Judgement and Holy Strike give a stack of a buff for 30 sec, once each 6 sec, up to 3 stacks. With the buff, the next Holy Shock has no cooldown and uses one stack. On an ally, it also heals the party for 35% of the heal |
 | C-P1 | Redoubt | Protection, row 1 | 10% chance when you are hit: +6–30% block | The same. Each Holy Shield cast also starts it |
 | C-P5 | Shoulder the Burden (new) | Baseline spell | — | 50% of the threat of an ally moves to you, 5 min cooldown |
 | C-P7 | Reach of Law (new) | Protection, row 5 | — | 2 ranks, requires Swift Judgement: Judgement and Swift Judgement range +5/10 yards while Seal of Fury is active |
