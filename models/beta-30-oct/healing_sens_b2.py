@@ -1,8 +1,9 @@
 """Analysis, Healing: parts 5, 6 and 9 (cost values, Holy Power cases and limits) on the beta of 30 October 2026.
-Run: python3 healing_sens_b2.py ..   (the models folder of the repository)
+Run: python3 healing_sens_b2.py
 NOTES_OFF=1 runs the model without the development notes of 2 November 2026."""
 import os, sys
-base = sys.argv[1] if len(sys.argv) > 1 else ".."
+D = os.path.dirname(os.path.abspath(__file__))
+base = sys.argv[1] if len(sys.argv) > 1 else os.path.join(D, "..")
 sys.path.insert(0, base + "/healing"); sys.path.insert(0, base + "/beta-30-oct"); sys.argv = [sys.argv[0], base + "/healing"]
 import healing_model as H
 if os.environ.get("NOTES_OFF"): H.NOTES_NOV2 = False

@@ -22,8 +22,8 @@ This folder gives the best build and the stat weights of each spec. It uses the 
 | Retribution | DPS, fresh 60 | 315 | 303 | +4.1% |
 
 - **Holy.** Light's Vigil (C-H7) gives the raid healing. Oath of Light 30% (C-H8) gives the one-tank healing. Reverence 50% (C-H1) gives +5–9% healing, more in long fights. HB2 takes Devoted Sacrifice (C-P11) with the free points.
-- **Protection.** Redoubt (C-P1) removes almost all crushing blows and adds threat with more Holy Shield blocks. Righteous Fury (C25) multiplies all threat by 1.42.
-- **Retribution.** Reverence 50% (C-H1) adds mana at fresh 60. In a raid, the proposed and live trees give the same damage.
+- **Protection.** Redoubt (C-P1) removes almost all crushing blows and adds threat with more Holy Shield blocks. Righteous Fury (C25) multiplies all threat by 1.43.
+- **Retribution.** Reverence 50% (C-H1) adds mana at fresh 60. In a raid, the proposed and live trees give the same damage. The 910 DPS use 3 min fights. Analysis, Damage gives 906 DPS with the 2 min wowsims test run, and 981 DPS with build 70755 (3 November 2026).
 
 ## Common rules
 
@@ -36,7 +36,7 @@ This folder gives the best build and the stat weights of each spec. It uses the 
 
 ## Sources
 
-- Damage and tank: talent search and stat weights in wowsims Forever (commit 895cd67f9). Scripts and logs in `models/wowsims-b2` (`search.py`, `finals.py`, `finals.log`).
+- Damage and tank: talent search and stat weights in wowsims Forever (commit 895cd67f9). Scripts and logs in `models/wowsims-b2` (`search.py`, `finals.py`, `logs/finals.log`).
 - Healer: healing model and stat weights (`models/beta-30-oct/holy_builds_b2.py`).
 - Level-up: wowsims Forever (commit 895cd67f9), live talents (`models/wowsims-b2/levelup.py`).
 - The earlier files (trees of 18 October, calculator version 5) are in the history of the repository.

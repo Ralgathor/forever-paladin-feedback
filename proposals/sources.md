@@ -18,6 +18,7 @@
 - [Blizzard – WoW Forever Paladin deep dive](https://news.blizzard.com/en-us/article/24302099/world-of-warcraft-forever-class-deep-dives-paladin)
 - [Blizzard EU forums – WoW Forever Beta Development Notes, updated 15 October](https://eu.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-15-october/631316)
 - [Blizzard forums – WoW Forever Beta Development Notes](https://us.forums.blizzard.com/en/wow/t/wow-classic-forever-beta-patch-notes/2360696)
+- [Blizzard forums – Development Notes, updated 2 November (post of 3 November 2026: class design direction, all changes since 15 October)](https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696/9)
 - [Blizzard forums – No extra Rage on crit has been reverted](https://us.forums.blizzard.com/en/wow/t/warriors-rejoice-no-extra-rage-on-crit-has-been-reverted/2367562)
 - [Icy Veins – WoW Forever reworked Warrior rage](https://www.icy-veins.com/wow-forever/news/wow-forever-just-reworked-warrior-rage-and-players-cant-stop-talking-about-it/)
 - [Kami-labs – Consecration in WoW Forever](https://kami-labs.fr/en/wow-forever/consecration-wow-forever-quatre-cibles/)
@@ -46,3 +47,4 @@
 - [WoW Forever Talents – Shaman spellbook](https://wowforevertalents.com/abilities/shaman/)
 - [wowsims/forever – talent trees of all classes](https://github.com/wowsims/forever/tree/master/ui/sim/talents/trees)
 - [wowsims/forever – Paladin trees of hotfix push 113554 (30 October 2026)](https://github.com/wowsims/forever/blob/paladin/hotfix-113554-port/ui/sim/talents/trees/paladin.json)
+- [wowsims/forever – Paladin changes of build 70755 (hotfix push 113578, 3 November 2026)](https://github.com/wowsims/forever/pull/834)

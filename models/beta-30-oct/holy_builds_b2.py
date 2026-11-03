@@ -1,5 +1,5 @@
 """builds/holy.md on the beta of 30 October 2026: the value of each healing talent and the stat weights (model).
-Run: python3 holy_builds_b2.py ../healing
+Run: python3 holy_builds_b2.py
 
 Build HB1/HB2 (Analysis, Builds): all healing talents of the tree, as in healing_b2.py. HB2 (proposed) has Reverence
 25/50% (C-H1, rev=0.50). The talent values and stat weights are for HB1.
@@ -8,7 +8,8 @@ Intellect: +15 mana and +1/60% critical chance for each point (healing_model: 43
 Critical chance: 14 rating = 1%. Spirit: Classic regeneration, 30% during casts (Reverence 2/2). The model has no haste.
 """
 import sys
-sys.argv = [sys.argv[0], sys.argv[1] if len(sys.argv) > 1 else "../healing"]
+import os; D = os.path.dirname(os.path.abspath(__file__))
+sys.argv = [sys.argv[0], sys.argv[1] if len(sys.argv) > 1 else os.path.join(D, "..", "healing")]
 sys.path.insert(0, sys.argv[1]); sys.path.insert(0, ".")
 import healing_model as H
 import healing_b2 as B

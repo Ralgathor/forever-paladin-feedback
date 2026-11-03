@@ -1,9 +1,10 @@
 """Analysis, Damage, on the beta of 30 October 2026: the tables that retribution_b2.py does not print.
-Run: python3 damage_tables_b2.py ../damage
+Run: python3 damage_tables_b2.py
 Build: the wowsims default Retribution build of 1 November, 14/6/31 (retribution_b2.py). Fury, Arms and Combat Rogue: damage_model.py.
 """
 import sys
-sys.argv = [sys.argv[0], sys.argv[1] if len(sys.argv) > 1 else "../damage"]
+import os; D = os.path.dirname(os.path.abspath(__file__))
+sys.argv = [sys.argv[0], sys.argv[1] if len(sys.argv) > 1 else os.path.join(D, "..", "damage")]
 sys.path.insert(0, sys.argv[1]); sys.path.insert(0, ".")
 import damage_model as M
 from retribution_b2 import retribution_b2, stats_b2, PURE, RET_SIM

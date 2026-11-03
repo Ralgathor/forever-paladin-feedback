@@ -1,6 +1,6 @@
 """Protection Paladin threat and mana on the beta of 30 October 2026 (wowsims Forever, push 113554).
 Uses models/threat/threat_model.py of the repo for the gear, the attack table, the Warrior and the Druid.
-Run: python3 threat_b2.py <repo>/models
+Run: python3 threat_b2.py
 
 Changes against the beta of 18 October (threat_model.paladin(g, TANK_REF, proposed=False, c14=0)):
 - Righteous Fury: x1.33 all threat, and x1.9 more for Holy (multiplicative in wowsims: Holy x2.527).
@@ -15,7 +15,8 @@ Shield Specialization 2, Toughness 5, Swift Judgement, Improved Righteous Fury 3
 Reckoning 5, Iron Creed 3, Shieldsworn; Benediction 5, Improved Judgement 2, Conviction 3, Sanctified Judgement 3.
 """
 import sys
-base = sys.argv[1] if len(sys.argv) > 1 else "."
+import os; D = os.path.dirname(os.path.abspath(__file__))
+base = sys.argv[1] if len(sys.argv) > 1 else os.path.join(D, "..")
 sys.path.insert(0, base + "/threat"); sys.path.insert(0, base + "/mana")
 import threat_model as T
 from threat_model import table, armor_dr, CRUSADER, NORM_1H, HS_THREAT, CONS_EVERY, HIT_FRAC, SWING, CRIT_SUPP

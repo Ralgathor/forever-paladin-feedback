@@ -6,7 +6,7 @@ The design goal of Holy is a healer for long fights and the best healer on one t
 
 All values are healing each sec after overhealing, at 715 healing power, from the healing model. A critical heal heals for 175% (Holy Power 5/5, main hypothesis since 3 November).
 
-The Druid, Shaman and Priest values use the development notes of 2 November 2026. Druid: Gift of the Earthmother is removed, Bloom (new) takes its place, Genesis gives 10% (was 5%), Wild Growth has a 3 sec base cast. Shaman: Riptide has no direct heal, a 12 sec cooldown (was 6 sec) and a 40% lower mana cost. Priest: Binding Heal is removed. The game files of client 1.60.1.70707 do not have these changes yet.
+The Druid, Shaman and Priest values use the development notes of 2 November 2026. Druid: Gift of the Earthmother is removed, Bloom (new) takes its place, Genesis gives 10% (was 5%), Wild Growth has a 3 sec base cast. Shaman: Riptide has no direct heal, a 12 sec cooldown (was 6 sec) and a 40% lower mana cost. Priest: Binding Heal is removed. The game files of client 1.60.1.70755 (3 November 2026) do not have these changes yet.
 
 ## Short answer
 

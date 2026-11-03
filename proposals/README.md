@@ -2,6 +2,12 @@
 
 This document gives talent proposals for the WoW Forever Paladin. It has 14 changes and 1 move. The proposals use the live trees of 4 November 2026. The live version adopts 6 earlier proposals, and makes 20 others unnecessary. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same game build as a model.
 
+**The three main asks**
+
+1. **Righteous Fury +90% to all threat (C25).** After the development notes of 2 November, the live Paladin tank has 70% of the Warrior threat. With C25, it has 105% (wowsims).
+2. **Redoubt on each Holy Shield cast (C-P1).** Crushing blows go from 12.0% to 0.9% of the boss attacks (wowsims, Warrior 1.1%).
+3. **Reverence 25/50% (C-H1) and a Light's Vigil buff (C-H7).** On one tank, the Paladin goes from 8–15% to 3–7% below the Druid. In raids of 5 and 10 min, from 25–34% to 3–4% below.
+
 **Contents**
 
 - **This tab:** [How to read this document](#how-to-read-this-document) · [Summary](#summary) · [Design rules](#design-rules)
@@ -18,7 +24,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 14 chan
 - **Names.** The text gives the name first and the ID in parentheses, for example Sanctified Judgement (C-R3).
 - **C2a** is the alternative to Personal Judgement of the Crusader (C2). **C-P11a** is the alternative to the Lay on Hands part of Devoted Sacrifice (C-P11). **C25a** is the alternative to Righteous Fury (C25).
 - **Withdrawn ideas** have no ID. They are in the [Withdrawn ideas](withdrawn-ideas.md) tab only. A withdrawn proposal shows its earlier ID there, because the Analysis tabs still use it.
-- **Data.** Forever client build 1.60.1.70707, hotfix push 113554 (live version), from the game files in wowsims Forever. Player tests from 19 October 2026 and later. The text tells you when a value comes from an in-game tooltip.
+- **Data.** Forever client build 1.60.1.70755, hotfix push 113578 (live version of 4 November 2026, launch), from the game files in wowsims Forever. Player tests from 19 October 2026 and later. The text tells you when a value comes from an in-game tooltip. The live trees are the trees of the beta of 30 October 2026 (hotfix push 113554). The names b2 and beta-30-oct refer to these trees.
 - **Analysis values.** The Analysis tabs use the live trees. Beta test results gives the first model results for the live trees. A proposal says when its values must be modeled again.
 - **Limits.** These are design proposals. No player has tested them in the game. The combat and mana values use Classic 1.12 rules when no test gives a different rule. Each estimate gives its assumptions.
 - **Calculator.** You can try all proposals in the talent calculator. Use the Live/Proposed button to compare.
@@ -65,6 +71,16 @@ Forever uses five rules for its talent trees. All proposals follow these rules.
 3. **Shared stats are for melee and spells.** Precision gives hit for both. Thundering Strikes (Shaman) gives critical hit for both.
 4. **Each tree has 1-point signature talents** in rows 3 and 4. Each tree ends with a 1-point talent at 30 points.
 5. **The class identity stays.** Holy heals with the Light and is the best single-target healer. It does not need to be the best raid healer. Protection holds the enemy with a shield. Retribution judges with a two-handed weapon and Seals.
+
+### Forever design orientation (development notes of 3 November 2026)
+
+Blizzard gave its class design direction in the development notes of 3 November 2026 (see Sources). The proposals follow it.
+
+- **Headroom.** Blizzard no longer holds each class to a Classic power budget. It raised the damage of most classes and the health of high-level creatures. The comparisons use the Forever values, never Classic budgets.
+- **Balance goal.** The aim is "not perfect numerical equality", but "every class valuable to the groups they join". Forever doubles down on the differences between classes rather than unifying them. Each proposal argues from the Paladin identity, not from parity with another class. A model talent from another class justifies the mechanic, not an equal value.
+- **Later expansions.** Blizzard was "hasty in turning to Burning Crusade- or Wrath-era solutions" and wants designs "that better fit into the Forever combat model". The proposals use no idea from a later expansion.
+- **Tuning freeze.** Except bugs and serious outliers, Blizzard plans no big tuning change until the raids open in December 2026. A large tuning pass follows, from player data. The proposals are input for that pass. The tank threat gap (W28) is a serious outlier: Blizzard removed Blessing of Salvation, gave the Druid Bear Form +115% and gave the Paladin no compensation.
+- **Tank parity.** Righteous Fury is trainable at level 10 "to mirror the level that other Tanks gain access to their tanking stance". Righteous Fury is the Paladin stance. Righteous Fury (C25) uses this.
 
 ### What the other classes have
 

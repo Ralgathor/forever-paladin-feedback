@@ -1,5 +1,5 @@
 """builds/: the 3,000 iteration check of the search builds, and the stat weights (same random seed for all runs).
-Run: python3 finals.py > finals.log. With codes as arguments, only those builds run (append to finals.log). Needs /tmp/bin/rettest and /tmp/bin/prottest (see run.sh)."""
+Run: python3 finals.py > logs/finals.log. With codes as arguments, only those builds run (append to logs/finals.log). Needs /tmp/bin/rettest and /tmp/bin/prottest (see run.sh)."""
 import os
 from concurrent.futures import ThreadPoolExecutor
 import search as S

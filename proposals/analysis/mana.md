@@ -150,7 +150,7 @@ The wowsims default Retribution build (14/6/31) at fresh 60, with Blessing of Wi
 
 - **Scripts.** `models/beta-30-oct/mana_tables_b2.py` (Protection) and `models/beta-30-oct/retribution_b2.py` (Retribution).
 - **Block rate.** It comes from wowsims with the default tank gear. More Defense or block from gear changes it.
-- **Holy Shield rank 4** has no cost yet. The model uses 240 mana (rank 3).
+- **Holy Shield rank 4** has no mana cost in the data yet. The model uses 240 mana (rank 3).
 - **Base mana** 1,512 is the Classic value. It is not confirmed for Forever.
 - **Spirit regeneration** uses the Classic 1.12 formula. Forever did not publish a formula.
 - **Blessing of Wisdom** gives 8 MPS. Judgement of Wisdom on the boss is not in the tables.
