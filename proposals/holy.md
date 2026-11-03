@@ -71,20 +71,20 @@ The Druid values use the development notes of 2 November 2026 (Bloom, Genesis 10
 
 | Critical heal | Case | Live | Light's Vigil (C-H7) | C-H7 and Reverence 50% (C-H1) |
 | --- | --- | --- | --- | --- |
-| **225% (main hypothesis)** | **Raid, against the Druid** | **−34% / −30% / −32%** | **−10% / −1% / 0%** | **−7% / +4% / +5%** |
-| 225% | Raid, against the Shaman | −8% / −7% / −9% | +25% / +30% / +35% | +29% / +37% / +42% |
+| **225% (main hypothesis)** | **Raid, against the Druid** | **−34% / −30% / −32%** | **−17% / −11% / −11%** | **−14% / −5% / −5%** |
+| 225% | Raid, against the Shaman | −8% / −7% / −9% | +14% / +18% / +21% | +19% / +25% / +28% |
 | 225% | One tank, against the Druid | +1% / +3% / −5% | +1% / +3% / −5% | +6% / +9% / +3% |
-| 200% | Raid, against the Druid | −37% / −33% / −36% | −16% / −8% / −7% | −13% / −3% / −2% |
-| 175% | Raid, against the Druid | −40% / −37% / −39% | −22% / −15% / −14% | −19% / −10% / −10% |
-| 175% | Raid, against the Shaman | −18% / −17% / −18% | +8% / +12% / +16% | +12% / +19% / +22% |
+| 200% | Raid, against the Druid | −37% / −33% / −36% | −23% / −17% / −17% | −20% / −12% / −12% |
+| 175% | Raid, against the Druid | −40% / −37% / −39% | −28% / −23% / −23% | −25% / −18% / −18% |
+| 175% | Raid, against the Shaman | −18% / −17% / −18% | −1% / +2% / +4% | +3% / +8% / +10% |
 
-- **Raids.** With both Holy proposals, the Paladin is 4–5% above the Druid in fights of 5 and 10 min, and 7% below in fights of 3 min (225%). It stays below the Priest. At 175%, it is 10–19% below the Druid.
+- **Raids.** With both Holy proposals, the Paladin is 5% below the Druid in fights of 5 and 10 min, and 14% below in fights of 3 min (225%). It stays below the Priest. At 175%, it is 18–25% below the Druid.
 - **One tank.** No change. The party heal goes to 5 players, thus the tank receives only a small part. The one-tank values come from Reverence 50% (C-H1) only.
 - **Cast plan.** About 51 Holy Shocks with Light's Vigil in 5 min (one each 6 sec). Flash of Light stays the main heal.
-- **Healing for each mana point.** A Holy Shock with Light's Vigil heals about 3,230 (raid, before overhealing): 1,170 on the target and 5 × 410 on the party. This is 11.9 healing for each mana point after overhealing. Prayer of Mending gives 15.7.
+- **Healing for each mana point.** A Holy Shock with Light's Vigil heals about 3,230 (raid, before overhealing): 1,170 on the target and 5 × 410 on the party. This is 9.9 healing for each mana point after overhealing. The party heal has 50% overhealing, as Wild Growth: it heals all 5 players, also the players at full health. Prayer of Mending gives 15.7.
 - **Group burst in 10 sec.** In melee, three Holy Shocks with Light's Vigil (two, then Judgement or Holy Strike and one more) heal about 9,700. At range, two Holy Shocks with Light's Vigil and one plain Holy Shock heal about 7,600. Priest: about 15,000 (Prayer of Mending and two Prayer of Healing). Druid: about 11,100 (two Wild Growth). Shaman: about 10,000 (four Chain Heal). Holy is not a group burst healer.
 - **Damage.** The talent has no enemy effect of its own. On an enemy, Light's Vigil only removes the Holy Shock cooldown. Two Holy Shocks one after the other do 1,065 to 1,340 damage (400 to 715 spell damage). Without the talent, one Holy Shock does 533 to 668 in the same time.
 - **Other talents.** Spiritual Focus and Illumination name Light's Vigil. With C-H7, Light's Vigil has no cast and no heal of its own, thus the two texts no longer name it. Illumination applies to the Holy Shock heal, not to the party heal.
-- **The value depends on the critical heal size.** The Holy Power test (Open items) gives the real value. With both proposals, the raid values at 175% are 12–15 points lower than at 225%.
+- **The value depends on the critical heal size.** The Holy Power test (Open items) gives the real value. With both proposals, the raid values at 175% are 11–13 points lower than at 225%.
 
 Model: `models/beta-30-oct/light_vigil_ch7.py`.

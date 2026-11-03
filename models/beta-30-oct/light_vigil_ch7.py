@@ -11,7 +11,7 @@ Model:
   one empowered Holy Shock each 6 sec with no other trigger (melee and ranged are the same). Limit: T/6 + 1.
 - While the buff is active, each Holy Shock is empowered: the plain Holy Shock is not in the cast plan.
 - Party heal: X (35%) of the Holy Shock heal on each of the 5 party members (the target included). It uses the
-  Holy Shock crit chance (Boundless Light on a target with no Oath of Light). Overhealing 30%. No Illumination on
+  Holy Shock crit chance (Boundless Light on a target with no Oath of Light). Overhealing 50%, as Wild Growth. No Illumination on
   the party part.
 - On an enemy, the buff only removes the Holy Shock cooldown. This has no healing value.
 - Live: Light's Vigil rank 3 + Holy Shock, as in healing_b2.py.
@@ -25,7 +25,7 @@ import healing_b2 as B
 TS = (180, 300, 600)
 X = 0.35   # party heal, % of the Holy Shock heal
 
-def ch7(hp=715, tank=False, x=None, icd=6, oh=0.30, bonus=1.25, rev=0.30):
+def ch7(hp=715, tank=False, x=None, icd=6, oh=0.50, bonus=1.25, rev=0.30):
     x = X if x is None else x
     k = B.paladin_b2(hp, tank, bonus=bonus, rev=rev, lv=False)
     hs = [s for s in k["spells"] if s.name == "Holy Shock"][0]
