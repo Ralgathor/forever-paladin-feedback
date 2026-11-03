@@ -18,7 +18,7 @@ Blizzard published the development notes on 3 November 2026 ([Blizzard forums](h
 
 ## Beta trees of 30 October 2026
 
-Hotfix push 113554 (client build 1.60.1.70707) changes the three Paladin trees. Blizzard has not published patch notes for it. The values come from the game files in wowsims Forever (branch `paladin/hotfix-113554-port`, 30 October 2026). Build 70755 (hotfix push 113578, 3 November 2026) keeps these trees. It changes only Two-Handed Weapon Specialization, Vengeance and Holy Shield rank 4 (wowsims master, commit `d97252f2a`). The talent calculator shows these trees in Live mode.
+Hotfix push 113554 (client build 1.60.1.70707) changes the three Paladin trees. Blizzard published the tree changes in the development notes of 3 November 2026 (Sources). The values come from the game files in wowsims Forever (branch `paladin/hotfix-113554-port`, 30 October 2026). Build 70755 (hotfix push 113578, 3 November 2026) keeps these trees. For the Paladin, it changes only Two-Handed Weapon Specialization, Vengeance and Holy Shield rank 4 (wowsims master, commit `d97252f2a`). The talent calculator shows these trees in Live mode.
 
 The proposals now change these trees. The beta adopts six earlier proposals (see Overview). The tables after the model results give player tests of the beta of 18 October.
 
