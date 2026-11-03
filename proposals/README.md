@@ -72,6 +72,16 @@ Forever uses five rules for its talent trees. All proposals follow these rules.
 4. **Each tree has 1-point signature talents** in rows 3 and 4. Each tree ends with a 1-point talent at 30 points.
 5. **The class identity stays.** Holy heals with the Light and is the best single-target healer. It does not need to be the best raid healer. Protection holds the enemy with a shield. Retribution judges with a two-handed weapon and Seals.
 
+### Forever design orientation (development notes of 3 November 2026)
+
+Blizzard gave its class design direction in the development notes of 3 November 2026 (see Sources). The proposals follow it.
+
+- **Headroom.** Blizzard no longer holds each class to a Classic power budget. It raised the damage of most classes and the health of high-level creatures. The comparisons use the Forever values, never Classic budgets.
+- **Balance goal.** The aim is "not perfect numerical equality", but "every class valuable to the groups they join". Forever doubles down on the differences between classes rather than unifying them. Each proposal argues from the Paladin identity, not from parity with another class. A model talent from another class justifies the mechanic, not an equal value.
+- **Later expansions.** Blizzard was "hasty in turning to Burning Crusade- or Wrath-era solutions" and wants designs "that better fit into the Forever combat model". The proposals use no idea from a later expansion.
+- **Tuning freeze.** Except bugs and serious outliers, Blizzard plans no big tuning change until the raids open in December 2026. A large tuning pass follows, from player data. The proposals are input for that pass. The tank threat gap (W28) is a serious outlier: Blizzard removed Blessing of Salvation, gave the Druid Bear Form +115% and gave the Paladin no compensation.
+- **Tank parity.** Righteous Fury is trainable at level 10 "to mirror the level that other Tanks gain access to their tanking stance". Righteous Fury is the Paladin stance. Righteous Fury (C25) uses this.
+
 ### What the other classes have
 
 | Pattern | Other classes | Paladin, live |
