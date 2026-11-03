@@ -35,6 +35,7 @@ The builds use the proposed trees of calculator version 6 (the live version, wit
 | Live tank (reference) | 12/32/7 in the live trees: [`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) | 928 | 333 | 57.1 | The wowsims default tank build, no proposals. Toughness 2 |
 
 - **Values** come from wowsims with Redoubt (C-P1) and Toughness removal (C-P13). The withdrawn Holy Strike Seal trigger (C1) gave PT1 1,012 threat each sec.
+- **Righteous Fury (C25)** multiplies all threat by 1.42. PT1 then has about 1,402 threat each sec, 105% of the Warrior (Analysis, Threat, part 6). The build does not change.
 - **Divine Intellect 3 is necessary.** Row 4 needs 15 points in rows 1–3. With Divine Intellect 2, Swift Judgement is not available.
 - **Toughness removal (C-P13)** frees 5 points. With the 0/38/13 tank of the Analysis model as the start, they go to Deflection 5 and Divine Intellect 1, and Benediction loses 1 point. In the live talents, Deflection 4 in place of Toughness 5 gives the same damage taken (340), but a worse TMI (58.1 against 55.9).
 - **Devoted Sacrifice (C-P11)** is available to a tank for 2 points in place of Deflection. The sim does not model Lay on Hands.

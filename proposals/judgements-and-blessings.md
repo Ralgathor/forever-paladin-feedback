@@ -12,7 +12,7 @@
 - **Change.** Judgement of the Crusader does not count against the one-Judgement limit. But it increases only the Holy damage of the Paladin who applies it.
 - **Precedent.** Improved Seal of the Crusader is now baseline.
 - **Tradeoff.** Other players who do Holy damage do not receive the bonus.
-- **For Protection.** A raid can need the one Judgement of the tank for Light or Wisdom. In the live version, the tank then loses Judgement of the Crusader. With Personal Judgement of the Crusader (C2), the tank keeps it and can also apply Light or Wisdom. Judgement of the Crusader gives a Protection Paladin about +72 TPS (see Analysis, Threat).
+- **For Protection.** A raid can need the one Judgement of the tank for Light or Wisdom. In the live version, the tank then loses Judgement of the Crusader. With Personal Judgement of the Crusader (C2), the tank keeps it and can also apply Light or Wisdom. Judgement of the Crusader gives a Protection Paladin about +72 TPS, and +103 TPS with Righteous Fury (C25) (see Analysis, Threat).
 
 ## Alternatives to Personal Judgement of the Crusader (C2)
 

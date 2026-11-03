@@ -4,20 +4,21 @@ This file gives the best tank builds for the live trees and for the proposed tre
 
 ## Summary
 
-| Trees | Build | Points | Code | Threat each sec | Damage taken each sec | TMI |
-| --- | --- | --- | --- | --- | --- | --- |
-| Proposed | PT1 | 0/34/17 | [`v6p-3530110213501531-54233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-54233) | 986 | 291 | 45.0 |
-| Proposed | PS1 | 0/34/17 | [`v6p-3530110213501531-53233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-53233000001) | 1,007 | 291 | 45.0 |
-| Proposed | PI1 | 10/31/10 | [`v6p05005-3530110213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05005-3530110213201531-5023) | 1,034 | 301 | 46.3 |
-| Live | BS2 | 0/35/16 | [`b2-05302102313501531-52233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2-05302102313501531-52233000001) | 953 | 325 | 55.5 |
-| Live | BT1 | 12/32/7 | [`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) | 928 | 333 | 57.1 |
-| Live | BS1 | 10/31/10 | [`b205005-05302102213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205005-05302102213201531-5023) | 975 | 342 | 58.5 |
+| Trees | Build | Points | Code | Threat each sec | With Righteous Fury (C25) | Damage taken each sec | TMI |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Proposed | PT1 | 0/34/17 | [`v6p-3530110213501531-54233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-54233) | 986 | 1,402 | 291 | 45.0 |
+| Proposed | PS1 | 0/34/17 | [`v6p-3530110213501531-53233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-53233000001) | 1,007 | 1,432 | 291 | 45.0 |
+| Proposed | PI1 | 10/31/10 | [`v6p05005-3530110213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05005-3530110213201531-5023) | 1,034 | 1,471 | 301 | 46.3 |
+| Live | BS2 | 0/35/16 | [`b2-05302102313501531-52233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2-05302102313501531-52233000001) | 953 | — | 325 | 55.5 |
+| Live | BT1 | 12/32/7 | [`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) | 928 | — | 333 | 57.1 |
+| Live | BS1 | 10/31/10 | [`b205005-05302102213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205005-05302102213201531-5023) | 975 | — | 342 | 58.5 |
 
+- **Righteous Fury (C25)** is a baseline spell change, not a talent. It multiplies all threat by 1.42 in wowsims (1.9 ÷ 1.33 on the threat multiplier). Thus, the build order and the stat order do not change. The C25 column uses this multiplier.
 - **Proposed: PS1 is PT1 with Sacred Arbiter.** One Benediction point goes to Sacred Arbiter: +2.1% threat, the same damage taken and the same TMI. PT1 is the tank of Analysis, Builds.
 - **Proposed: PI1 is the threat choice.** Divine Strength and Improved Seals give +2.7% threat against PS1, but 3.5% more damage taken and a 3.0% worse TMI.
 - **Live: BS2 is the tank build.** It takes Sacred Arbiter (+2.2% threat) and Sanctified Judgement 3. Against the wowsims default build BT1, it has +2.7% threat, 2.4% less damage taken and a 2.7% better TMI.
 - **Live: BS1 is the threat choice.** It has +2.3% threat against BS2, but 5.1% more damage taken and a 5.2% worse TMI.
-- **Proposed against live.** PT1 has +3.5% threat, 10% less damage taken and a 19% better TMI than BS2. PS1 has +5.7% threat. Redoubt (C-P1) removes almost all crushing blows: 1.0% against 11.9%.
+- **Proposed against live.** PT1 has +3.5% threat, 10% less damage taken and a 19% better TMI than BS2. PS1 has +5.7% threat. With Righteous Fury (C25), PT1 has +47% threat against BS2. Redoubt (C-P1) removes almost all crushing blows: 1.0% against 11.9%.
 - **Stat weights.** For threat, Expertise rating and Hit rating are the best stats for each point. For survival, Stamina, Defense rating and Block value (proposed trees) are the best (part 3).
 
 ## 1. Method
