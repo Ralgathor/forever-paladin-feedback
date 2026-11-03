@@ -52,7 +52,7 @@ Reckoning 5/5, one melee attacker with an attack each 1.5 sec.
 
 ## 4. Changes since the check of 18 October
 
-- Two-Handed Weapon Specialization now increases only physical damage. It does not increase Seals, Judgements and the Holy damage of Holy Strike.
+- Two-Handed Weapon Specialization increases only physical damage in this check (beta of 30 October). Build 70755 also gives it Holy damage.
 - Conviction 3/3 gives +6% critical chance (26% in the model).
 - Improved Hammer of Justice 3/3 gives a 45 sec cooldown.
 - Reckoning (C-P12) replaced the withdrawn Reckoning proposal (C-P6). C-P12 was also withdrawn on 2 November 2026. Reckoning now works as in the live version.

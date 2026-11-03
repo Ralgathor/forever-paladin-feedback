@@ -145,7 +145,7 @@ Live, raid buffs, 5 min fight (model).
 | 1% hit (up to the cap) | 4.7 |
 
 - **1 spell damage is worth about 1.5 Attack Power.** Plate items with spell damage are good for Retribution, and Warriors do not want them.
-- **Two-Handed Weapon Specialization 3/3** gives +6.5 DPS (+2.0%). It now increases only physical damage.
+- **Two-Handed Weapon Specialization 3/3** gives +6.5 DPS (+2.0%) in the model, on physical damage only. Build 70755 also gives it Holy damage (part 7).
 - For the wowsims stat weights, see builds/retribution.md.
 
 ## 7. Check with wowsims
