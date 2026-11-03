@@ -13,7 +13,7 @@ This file gives the best tank builds for the live trees and for the proposed tre
 | Live | BT1 | 12/32/7 | [`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) | 928 | — | 333 | 57.1 |
 | Live | BS1 | 10/31/10 | [`b205005-05302102213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205005-05302102213201531-5023) | 975 | — | 342 | 58.5 |
 
-- **Righteous Fury (C25)** is a baseline spell change, not a talent. It multiplies all threat by 1.42 in wowsims (1.9 ÷ 1.33 on the threat multiplier). Thus, the build order and the stat order do not change. The C25 column uses this multiplier.
+- **Righteous Fury (C25)** is a baseline spell change, not a talent. It multiplies all threat by 1.43 in wowsims (1.9 ÷ 1.33 on the threat multiplier). Thus, the build order and the stat order do not change. The C25 column uses this multiplier.
 - **Proposed: PS1 is PT1 with Sacred Arbiter.** One Benediction point goes to Sacred Arbiter: +2.1% threat, the same damage taken and the same TMI. PT1 is the tank of Analysis, Builds.
 - **Proposed: PI1 is the threat choice.** Divine Strength and Improved Seals give +2.7% threat against PS1, but 3.5% more damage taken and a 3.0% worse TMI.
 - **Live: BS2 is the tank build.** It takes Sacred Arbiter (+2.2% threat) and Sanctified Judgement 3. Against the wowsims default build BT1, it has +2.7% threat, 2.4% less damage taken and a 2.7% better TMI.

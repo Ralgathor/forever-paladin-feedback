@@ -19,6 +19,7 @@ This file gives the best damage builds on one target. It uses the live trees and
 ## 1. Method
 
 - **Sim.** wowsims Forever, master of 1 November 2026 (commit 895cd67f9), with `models/wowsims-b2/talents.patch`. The proposed trees use the flag REV50 (Reverence 25/50%). The other kept proposals do not change Retribution damage. The talent search ran with earlier flags: Reverence 30% and the Holy Strike Seal trigger (C1, withdrawn on 2 November 2026). The builds and stat weights then ran again with REV50 only.
+- **910 against 906.** This file uses 3 min fights: 910 DPS in a raid. Analysis, Damage uses the 2 min wowsims test run: 906 DPS. Both use the default set and master of 1 November. Build 70755 (3 November 2026) gives 981 DPS in the 2 min run (Beta test results).
 - **Fight.** 3 min, one level 63 boss, 3,000 iterations, the same random seed for all runs.
 - **Gear and rotation.** The default Retribution gear set and the default rotation of wowsims Forever. This folder has no gear search.
 - **Talent search.** A hill climb (`models/wowsims-b2/search.py`). Each step tests all moves of 1 point into a talent with damage value, at 1,000 iterations. It keeps the best move. A round with moves of 2 points then tests the best moves at 250 iterations, and the 6 best again at 2,000. The best builds then run at 3,000 iterations. The logs are `search_ret-*.log`.
