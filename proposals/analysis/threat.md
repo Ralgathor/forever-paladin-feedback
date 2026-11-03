@@ -2,7 +2,7 @@
 
 **Question.** Does the Paladin tank hold a boss and a group as well as the Warrior and the Druid?
 
-All values are threat each sec (TPS). The tanks are level 60 and the boss is level 63. The values come from a model and from wowsims. Part 8 gives the inputs.
+All values are threat each sec (TPS). The tanks are level 60 and the boss is level 63. The values come from a model and from wowsims. Part 9 gives the inputs.
 
 The Warrior and Druid values use the development notes of 2 November 2026. Defensive Stance gives +80% threat (was +30%) and Defiance 7/13/20% (was 5/10/15%). Bear Form and Dire Bear Form give +115% (was +50%). The game files of client 1.60.1.70707 still have the earlier values. A test on the live realms must confirm the new values.
 
@@ -15,6 +15,8 @@ The Warrior and Druid values use the development notes of 2 November 2026. Defen
 - **The proposals add threat, but they are not for threat.** Redoubt (C-P1) gives more blocks, thus more Holy Shield damage. Together with Toughness removal (C-P13), they give +6% in wowsims: 74% of the Warrior.
 - **Two threat proposals were withdrawn on 2 November 2026.** The Holy Strike Seal trigger (C1) and Reckoning (C-P12) each added +3% in wowsims. They do not close the gap.
 - **Judgement of the Crusader is important.** It gives the tank about 72 TPS. In the live version, the raid can need the tank Judgement for Light or Wisdom. The tank then has 62% of the Warrior threat. With Personal Judgement of the Crusader (C2), the tank keeps Crusader.
+- **At the pull, the Paladin has the best burst threat, but only with a Fury opener** (part 8). The Paladin casts Seal of Fury and Holy Shield before the pull. Two Judgements of Fury and Holy Strike then hit at 0 sec. The Paladin then has 110% of the Warrior threat after 3 sec and 86% after 10 sec. With the wowsims default opener, it has 51% after 3 sec.
+- **In its best short windows, the Paladin has about 60% of the Warrior** (part 8). The Warrior has large spikes from Shield Slam, Revenge and Heroic Strike critical hits.
 - **Against 3 or more enemies, the Paladin still holds the group well.** On the enemy with the least threat, it has 2.2–2.6 times the Warrior threat. It has the Druid threat on 3 enemies and 2 times the Druid threat on 5 enemies.
 - **The Druid values are not certain.** The real Druid threat multipliers are not known yet (part 2).
 
@@ -211,7 +213,87 @@ Values are TPS on all targets. Without Consecration, the proposed Paladin has 83
 
 **Conclusion.** Against 3 or more enemies, the Paladin holds the extra enemies better than the Warrior, and as well as the Druid on 3 enemies. The total threat is lower. The problem is the main target (parts 1 and 6).
 
-## 8. Inputs of the model
+## 8. Burst threat
+
+This part compares the threat in the first seconds of a pull and in the best short windows of a fight. A damage dealer pulls the boss when it has more threat than the tank. At the start of a pull, and after a large threat spike, this can occur before the sustained values of part 6 apply.
+
+**Setup.** wowsims, as in part 6: default tank gear, full buffs, one level 63 boss from the front, 3 min fight, 3,000 iterations. A recorder adds the threat on the boss in steps of 0.1 sec. The Warrior and Druid values have the multipliers of the notes of 2 November.
+
+- **Warrior.** Default rotation, 0 rage at the pull. Bloodrage and a rage potion at −1.5 sec. No Goblin Sapper Charge, because the Paladin and Druid rotations do not use it.
+- **Druid.** Default rotation, 25 rage at the pull.
+- **Boss armor.** The boss has no armor debuff at the pull. Only a Warrior (Sunder Armor) or a Rogue (Expose Armor) can apply it. wowsims adds 1 Sunder Armor stack each 1.5 sec, thus 5 stacks at 6 sec.
+
+**The Paladin openers**
+
+| Opener | Before the pull | First casts |
+| --- | --- | --- |
+| wowsims default | Seal of the Crusader at −1.5 sec | 0 sec: Judgement of the Crusader, then Seal of Fury. 1.5 sec: Swift Judgement (Judgement of Fury), Consecration. 3 sec: Holy Shield. 4.5 sec: Holy Strike |
+| Fury opener | Seal of Fury at −3 sec, Holy Shield at −1.5 sec | 0 sec: Judgement of Fury, Swift Judgement, Holy Strike (with the Shieldsworn Holy Shield hit). 1.5 sec: Consecration. Then the default order |
+
+Judgement and Swift Judgement are not on the global cooldown, thus both hit at 0 sec. The Fury opener does not use Judgement of the Crusader. The raid debuffs of the sim already have it, thus the 3 min threat decreases by only 1%.
+
+**Threat in the first seconds** (threat on the boss, % of the Warrior)
+
+| Tank | First 1.5 sec | First 3 sec | First 6 sec | First 10 sec | First 20 sec | 3 min (TPS) |
+| --- | --- | --- | --- | --- | --- | --- |
+| Warrior | 2,008 (100%) | 4,718 (100%) | 7,123 (100%) | 13,151 (100%) | 26,848 (100%) | 1,332 (100%) |
+| Druid | 2,413 (120%) | 4,336 (92%) | 6,752 (95%) | 10,911 (83%) | 24,031 (90%) | 1,192 (90%) |
+| Paladin, live, wowsims opener | 577 (29%) | 2,418 (51%) | 5,335 (75%) | 8,778 (67%) | 18,344 (68%) | 925 (69%) |
+| Paladin, live, Fury opener | 4,251 (212%) | 5,211 (110%) | 6,670 (94%) | 11,364 (86%) | 20,424 (76%) | 916 (69%) |
+| Paladin, proposed, wowsims opener | 577 (29%) | 2,418 (51%) | 5,501 (77%) | 9,164 (70%) | 19,274 (72%) | 985 (74%) |
+| Paladin, proposed, Fury opener | 4,332 (216%) | 5,388 (114%) | 7,004 (98%) | 11,939 (91%) | 21,503 (80%) | 977 (73%) |
+
+- **With the wowsims default opener, the Paladin starts slowly.** The first global cooldown goes to Judgement of the Crusader. Holy Shield starts at 3 sec, and Holy Strike at 4.5 sec.
+- **With the Fury opener, the Paladin has the best start of the three tanks.** About 3,500 threat hits the boss at 0 sec: two Judgements of Fury (about 1,770), Holy Strike (about 1,100) and the Shieldsworn Holy Shield hit (about 600).
+- **The lead does not last.** After 10 sec, the Fury opener has 86% of the Warrior. After 30 sec, it has 69%, the sustained gap of part 6.
+- **The Warrior and the Druid need rage first.** The Warrior starts with 0 rage. Its threat increases fast from 2 sec, when the boss hits give rage. The Druid uses its 25 rage at once, and then it waits for rage.
+- **Boss armor helps the Paladin.** In the first 6 sec, the boss has less than 5 Sunder Armor stacks. This decreases Warrior and Druid physical damage. Most Paladin threat is Holy damage, thus boss armor does not decrease it.
+- **With one Judgement at 0 sec,** Swift Judgement hits at 1.5 sec. Only the first 1.5 sec change: 3,204 threat (160%) in place of 4,251. From 3 sec, the two openers have the same threat.
+
+**Bad pulls** (threat on the 10% worst fights, % of the Warrior on its 10% worst fights)
+
+| Tank | First 3 sec | First 6 sec | First 10 sec |
+| --- | --- | --- | --- |
+| Warrior | 1,396 (100%) | 3,576 (100%) | 8,131 (100%) |
+| Druid | 2,100 (150%) | 3,872 (108%) | 7,028 (86%) |
+| Paladin, live, wowsims opener | 1,667 (119%) | 3,739 (105%) | 6,775 (83%) |
+| Paladin, live, Fury opener | 3,657 (262%) | 4,939 (138%) | 9,032 (111%) |
+| Paladin, proposed, Fury opener | 3,801 (272%) | 5,255 (147%) | 9,636 (119%) |
+
+- **The Warrior has the worst bad pulls.** When its first attacks miss or the boss attacks miss it, it has no rage. Its threat after 3 sec decreases to 30% of its mean.
+- **A bad pull costs the Paladin less.** Judgement of Fury cannot be dodged or parried. Holy Shield and Seal of Fury cannot miss.
+
+**Best short windows** (the highest threat in a window at any time in the 3 min fight, % of the Warrior)
+
+| Tank | Best 3 sec | Best 6 sec | Best 10 sec | Best 3 sec ÷ mean 3 sec |
+| --- | --- | --- | --- | --- |
+| Warrior | 12,736 (100%) | 16,449 (100%) | 24,054 (100%) | ×3.1 |
+| Druid | 10,143 (80%) | 14,948 (91%) | 20,855 (87%) | ×2.9 |
+| Paladin, live, wowsims opener | 7,238 (57%) | 9,800 (60%) | 14,751 (61%) | ×2.6 |
+| Paladin, live, Fury opener | 7,152 (56%) | 9,619 (58%) | 14,530 (60%) | ×2.6 |
+| Paladin, proposed, wowsims opener | 7,480 (59%) | 10,208 (62%) | 15,364 (64%) | ×2.5 |
+| Paladin, proposed, Fury opener | 7,409 (58%) | 10,024 (61%) | 15,145 (63%) | ×2.5 |
+
+- **The Paladin has no threat cooldown.** Its best windows come from Holy Strike, Judgement and Holy Shield in the same 3 sec, with critical hits. The Warrior adds Shield Slam, Revenge and Heroic Strike critical hits to the rage from boss hits.
+- **The best-window gap is larger than the sustained gap:** about 60% against 69–74%. Thus the Paladin has a smaller margin against a large threat spike from a damage dealer.
+
+**Warrior variants**
+
+| Warrior | First 1.5 sec | First 3 sec | First 6 sec | First 10 sec |
+| --- | --- | --- | --- | --- |
+| Default (above) | 2,008 | 4,718 | 7,123 | 13,151 |
+| Charge at −0.5 sec, 20 yards (Vanguard) | 1,739 (−13%) | 4,304 (−9%) | 7,382 (+4%) | 13,663 (+4%) |
+| Goblin Sapper Charge | 2,933 (+46%) | 5,489 (+16%) | 8,390 (+18%) | 14,520 (+10%) |
+
+- **Charge does not increase the Warrior burst.** Charge gives 15 rage, but this rage gives no threat. The Charge stun also delays the first boss swings, thus the Warrior receives less rage from boss hits.
+- **Against the Warrior with Charge,** the proposed Paladin with the Fury opener has 125%, 95% and 87% after 3, 6 and 10 sec.
+- **Charge in combat.** With Vanguard, the Warrior can charge in Defensive Stance. The Vanguard Charge row in the game files still has the "not in combat" attribute. Thus the Warrior can charge only at the pull. A test in the game must confirm this.
+
+**Tank swaps.** Shoulder the Burden (C-P5) moves 50% of the threat of an ally to the Paladin. After 30 sec, the Warrior has about 40,000 threat. Shoulder the Burden on the Warrior then gives the Paladin about 20,000 threat at once. This is 2.7 times the best 3 sec Paladin window. It does not help at the pull, because no ally has threat yet.
+
+**Conclusion.** The Paladin can hold the boss at the pull better than the Warrior and the Druid, but only with a Fury opener. The default opener of wowsims gives it half of the Warrior threat in the first 3 sec. After 10 sec, the sustained gap of part 6 returns. In short windows later in the fight, the Paladin has about 60% of the Warrior.
+
+## 9. Inputs of the model
 
 **All tanks**
 
@@ -267,7 +349,7 @@ Values are TPS on all targets. Without Consecration, the proposed Paladin has 83
 - Reckoning (C-P12), withdrawn: extra attacks ×1.48.
 - Holy Strike Seal trigger (C1), withdrawn: each Holy Strike that lands also triggers Seal of Fury.
 
-## 9. Method and limits
+## 10. Method and limits
 
 - **Scripts.** `models/beta-30-oct/threat_tables_b2.py` for the model. `models/wowsims-b2` for wowsims Forever (master commit 895cd67f9, game files of hotfix push 113554), 3,000 iterations. The Warrior and Druid wowsims values are scaled to the multipliers of the notes of 2 November (part 6).
 - **Holy Shield blocks.** The model gives Redoubt (C-P1) too many blocks. Use the wowsims value.
@@ -275,5 +357,6 @@ Values are TPS on all targets. Without Consecration, the proposed Paladin has 83
 - **Gear.** The model gives all tanks the same gear. wowsims gives each class its default set.
 - **Righteous Fury.** The values use the wowsims rule: the two multipliers multiply (×2.527). If they add, Holy threat is ×2.23, and the Paladin has about 10% less threat.
 - **Holy Shield rank 4** has no cost or level yet in the game files. The model uses its 221 damage.
+- **Burst threat (part 8).** `models/wowsims-b2/burst-threat.patch` adds the threat recorder. `run.sh` gives the runs. The openers are sim rotations. A player can use a different opener.
 - **Groups model.** Trash has no Sunder Armor or Faerie Fire. Demoralizing Shout, Demoralizing Roar and tab targets are not in the model.
 - The earlier version of this tab (trees of 18 October) is in the history of the repository.

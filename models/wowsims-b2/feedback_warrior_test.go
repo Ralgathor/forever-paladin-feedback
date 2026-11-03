@@ -27,12 +27,18 @@ func TestFeedbackRun(t *testing.T) {
 		Consumables:   DefaultConsumables,
 		TalentsString: talents,
 		Spec:          DefaultOptions,
-		Rotation:      core.GetAplRotation("../../../ui/specs/warrior/protection/apls", "default").Rotation,
+		Rotation:      core.GetAplRotation("../../../ui/specs/warrior/protection/apls", warApl()).Rotation,
 		Buffs:         core.FullTankIndividualBuffs,
 		Profession1:   proto.Profession_Engineering, Profession2: proto.Profession_Blacksmithing,
 		DistanceFromTarget: 0,
 		HealingModel:       &proto.HealingModel{BurstWindow: 6},
 		InFrontOfTarget:    true,
+	}
+	if os.Getenv("FEEDBACK_NOENG") != "" {
+		player.Profession1 = proto.Profession_Mining
+	}
+	if os.Getenv("FEEDBACK_CHARGE") != "" {
+		player.DistanceFromTarget = 20
 	}
 	enc := core.MakeSingleTargetEncounter(5)
 	enc.Duration = dur
@@ -60,7 +66,33 @@ func TestFeedbackRun(t *testing.T) {
 	raid := core.SinglePlayerRaidProto(player, core.FullPartyBuffs, core.FullRaidBuffs, core.FullDebuffs)
 	raid.Tanks = append(raid.Tanks, &proto.UnitReference{Type: proto.UnitReference_Player, Index: 0})
 	rsr := &proto.RaidSimRequest{Raid: raid, Encounter: enc, SimOptions: &proto.SimOptions{Iterations: 3000, RandomSeed: 101}}
+	if os.Getenv("FEEDBACK_BURST") != "" {
+		enc.DurationVariation = 0 // the burst windows need the same fight length
+		core.BurstStart()
+	}
+	if os.Getenv("FEEDBACK_LOG") != "" {
+		rsr.SimOptions.Debug = true
+		rsr.SimOptions.Iterations = 1
+	}
 	res := core.RunRaidSim(rsr)
+	if os.Getenv("FEEDBACK_LOG") != "" {
+		fmt.Println(res.Logs)
+	}
+	if os.Getenv("FEEDBACK_SRC") != "" {
+		for _, a := range res.RaidMetrics.Parties[0].Players[0].Actions {
+			thr, casts := 0.0, 0.0
+			for _, tm := range a.Targets {
+				thr += tm.Threat
+				casts += float64(tm.Casts)
+			}
+			if thr != 0 {
+				fmt.Printf("SRC %v threat=%.1f casts=%.2f\n", a.Id, thr/float64(rsr.SimOptions.Iterations), casts/float64(rsr.SimOptions.Iterations))
+			}
+		}
+	}
+	if os.Getenv("FEEDBACK_BURST") != "" {
+		core.BurstReport(os.Getenv("FEEDBACK_BURST"), int(rsr.SimOptions.Iterations), []float64{1.5, 3, 4.5, 6, 8, 10, 15, 20, 30}, []float64{3, 6, 10})
+	}
 	if res.Error != nil {
 		t.Fatal(res.Error.Message)
 	}
@@ -98,4 +130,11 @@ func TestFeedbackRun(t *testing.T) {
 	fmt.Printf("RESULT dur=%.0f propose=%q tps=%.1f dps=%.1f dtps=%.1f swings=%.1f hit=%.1f%% miss=%.1f%% dodge=%.1f%% parry=%.1f%% block=%.1f%% crit=%.1f%% crush=%.1f%%\n",
 		dur, os.Getenv("PROPOSE"), u.Threat.Avg, u.Dps.Avg, u.Dtps.Avg, all/3000, 100*hits/all, 100*miss/all, 100*dodge/all, 100*parry/all,
 		100*block/all, 100*crits/all, 100*crush/all)
+}
+
+func warApl() string {
+	if os.Getenv("FEEDBACK_CHARGE") != "" {
+		return "charge"
+	}
+	return "default"
 }

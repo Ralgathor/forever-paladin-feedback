@@ -8,6 +8,9 @@ git checkout -q 895cd67f9
 git apply "$D/talents.patch" || true
 git apply "$D/notes-2-november.patch" || true
 git apply "$D/threat-options.patch" || true
+git apply "$D/burst-threat.patch" || true
+cp "$D/furyopen.apl.json" "$D/furyopen1.apl.json" ui/specs/paladin/protection/apls/
+cp "$D/charge.apl.json" ui/specs/warrior/protection/apls/
 cp "$D/proposals_sim.go" sim/paladin/
 cp "$D/feedback_run_test.go" "$D/feedback_levelup_test.go" sim/paladin/retribution/
 cp "$D/feedback_prot_test.go" sim/paladin/protection/feedback_run_test.go
@@ -60,3 +63,15 @@ go test -tags with_db -c -o /tmp/wardps .
 for s in fury arms; do for d in 120 300; do
   FEEDBACK_DUR=$d FEEDBACK_SPEC=$s FEEDBACK_GEAR=prebis /tmp/wardps -test.run TestFeedbackDps -test.v | grep RESULT
 done; done
+# Analysis, Threat, part 8: burst threat, 3 min, threat on the boss in steps of 0.1 sec (BURST lines).
+# Paladin openers: default (wowsims), furyopen (Fury opener, two Judgements at 0 sec), furyopen1 (one Judgement at 0 sec)
+cd ../../paladin/protection
+for a in default furyopen furyopen1; do for p in "" CP1; do
+  FEEDBACK_APL=$a FEEDBACK_DUR=180 FEEDBACK_BURST="pal_${a}_${p:-live}" PROPOSE=$p /tmp/prottest -test.run TestFeedbackRun -test.v | grep -E "BURST|RESULT"
+done; done
+cd ../../warrior/protection
+FEEDBACK_NOENG=1 FEEDBACK_DUR=180 FEEDBACK_BURST=war /tmp/wartest -test.run TestFeedbackRun -test.v | grep -E "BURST|RESULT"
+FEEDBACK_NOENG=1 FEEDBACK_CHARGE=1 FEEDBACK_DUR=180 FEEDBACK_BURST=war_charge /tmp/wartest -test.run TestFeedbackRun -test.v | grep -E "BURST|RESULT"
+FEEDBACK_DUR=180 FEEDBACK_BURST=war_sapper /tmp/wartest -test.run TestFeedbackRun -test.v | grep -E "BURST|RESULT"
+cd ../../druid/feralbear
+FEEDBACK_DUR=180 FEEDBACK_BURST=bear /tmp/beartest -test.run TestFeedbackBear -test.v | grep -E "BURST|RESULT"

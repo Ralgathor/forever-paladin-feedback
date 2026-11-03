@@ -18,9 +18,14 @@ These files add the proposals to wowsims Forever, master branch (commit `895cd67
 | matched_gear/ | The pure damage specs and Retribution with the same pre-raid item pool: the pure average of Analysis, Damage. See matched_gear/README.md |
 | notes-2-november.patch | Flags for the development notes of 2 November 2026: `N2H` (Two-Handed Weapon Specialization also increases Holy damage by 2/4/6%) and `V5` (Vengeance stacks up to 5 times). Apply after talents.patch. Result (default Retribution set, full buffs, 2 min): live 905.9 DPS, `N2H` 938.7, `V5` 946.3, both 980.8 |
 | threat-options.patch | Threat options for the gap after the notes of 2 November 2026 (Analysis, Threat), off by default. `PROPOSE=CP9`: Holy Shield adds block value × `CP9_BV` (default 2.0) to each hit (C-P9, withdrawn on 31 October). `HS_THREAT`: the Holy Shield threat multiplier (live 1.2). `CP6_ICD`: the C-P6 limit on blocks, dodges and parries in sec (default 4). Apply after talents.patch. Result (3 min, with `CP1`, Warrior 1,338 TPS after the notes): `CP1` 986, `CP9` at 1.0 1,089, at 2.0 1,192; `HS_THREAT` 2.0 1,120, 2.25 1,162, 2.5 1,203; `CP6A` with `CP6_ICD` 4 1,029, 2 1,108, 1 1,137; `HS_THREAT=2.0` with `CP9` at 1.0 1,292 |
+| burst-threat.patch | Analysis, Threat, part 8. A threat recorder in the core: with `FEEDBACK_BURST=<label>`, the three tank tests print the threat on the boss after 1.5, 3, 4.5, 6, 8, 10, 15, 20 and 30 sec (mean, 10% and 90% of the fights) and the best 3, 6 and 10 sec windows of the fight. The fight length is then fixed. Apply after threat-options.patch |
+| furyopen.apl.json, furyopen1.apl.json | Paladin Fury openers for part 8 (`FEEDBACK_APL=furyopen`): Seal of Fury at −3 sec and Holy Shield at −1.5 sec, then Judgement of Fury, Swift Judgement and Holy Strike at 0 sec. `furyopen1`: Swift Judgement at 1.5 sec |
+| charge.apl.json | Warrior default rotation with Charge at −0.5 sec from 20 yards (`FEEDBACK_CHARGE=1`) |
+| `FEEDBACK_NOENG` | In the Warrior tank test: no Engineering, thus no Goblin Sapper Charge |
+| `FEEDBACK_LOG`, `FEEDBACK_SRC` | In the three tank tests: the combat log of one fight, or the threat of each spell |
 | run.sh | All runs: `./run.sh <wowsims clone>` |
 
 - **Full buffs.** The wowsims test buffs, with Mana Spring Totem, Mana Tide Totem and Atiesh.
 - **Lean buffs.** Gift of the Wild, Battle Shout, Kings, Might and Wisdom only.
-- The results are in Retribution, wowsims check, in Protection, wowsims check, in Analysis, Threat, parts 7 and 8, in Analysis, Crushing blows, and in Analysis, Damage, part 9.
+- The results are in Retribution, wowsims check, in Protection, wowsims check, in Analysis, Threat, parts 6, 7 and 8, in Analysis, Crushing blows, and in Analysis, Damage, part 9.
 - Protection, wowsims check still has the 2 min runs of commit db28d84a8. The 3 min runs of master give almost the same values (Analysis, Crushing blows).

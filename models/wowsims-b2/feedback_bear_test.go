@@ -48,7 +48,33 @@ func TestFeedbackBear(t *testing.T) {
 	raid := core.SinglePlayerRaidProto(player, core.FullPartyBuffs, core.FullRaidBuffs, core.FullDebuffs)
 	raid.Tanks = append(raid.Tanks, &proto.UnitReference{Type: proto.UnitReference_Player, Index: 0})
 	rsr := &proto.RaidSimRequest{Raid: raid, Encounter: enc, SimOptions: &proto.SimOptions{Iterations: 3000, RandomSeed: 101}}
+	if os.Getenv("FEEDBACK_BURST") != "" {
+		enc.DurationVariation = 0 // the burst windows need the same fight length
+		core.BurstStart()
+	}
+	if os.Getenv("FEEDBACK_LOG") != "" {
+		rsr.SimOptions.Debug = true
+		rsr.SimOptions.Iterations = 1
+	}
 	res := core.RunRaidSim(rsr)
+	if os.Getenv("FEEDBACK_LOG") != "" {
+		fmt.Println(res.Logs)
+	}
+	if os.Getenv("FEEDBACK_SRC") != "" {
+		for _, a := range res.RaidMetrics.Parties[0].Players[0].Actions {
+			thr, casts := 0.0, 0.0
+			for _, tm := range a.Targets {
+				thr += tm.Threat
+				casts += float64(tm.Casts)
+			}
+			if thr != 0 {
+				fmt.Printf("SRC %v threat=%.1f casts=%.2f\n", a.Id, thr/float64(rsr.SimOptions.Iterations), casts/float64(rsr.SimOptions.Iterations))
+			}
+		}
+	}
+	if os.Getenv("FEEDBACK_BURST") != "" {
+		core.BurstReport(os.Getenv("FEEDBACK_BURST"), int(rsr.SimOptions.Iterations), []float64{1.5, 3, 4.5, 6, 8, 10, 15, 20, 30}, []float64{3, 6, 10})
+	}
 	if res.Error != nil {
 		t.Fatal(res.Error.Message)
 	}
