@@ -190,7 +190,7 @@ Reverence 50% (C-H1) is a proposal. The other options are withdrawn (see Withdra
 - **Swiftmend.** A player test shows that it does not remove the heal over time. If it does, the Druid gives 935 in raids and 657 on one tank.
 - **Nature's Splendor** needs 11 Balance points. Without it, the Druid gives 836 in raids and 677 on one tank.
 - **Bloom.** The model gives Bloom to each Rejuvenation and Regrowth that ends at its full duration, with the critical chance of the Druid. The value of Bloom depends on the Spirit of the Druid (386 in the model).
-- **Chain Heal** keeps the Riptide bonus of the DoubleZug sheet (90% of the heals on a Riptide target), also when the raid plan casts no Riptide. This gives the Shaman a little too much.
+- **Chain Heal** keeps the Riptide bonus of the DoubleZug sheet: 90% of the heals land on a Riptide target. The model keeps it also when the raid plan casts no Riptide. This gives the Shaman a little too much.
 - **Classic tick rule.** With no critical ticks, the Paladin is 7–8% below the Shaman and 27–31% below the Druid in raids. On one tank, it is 2% below to 5% above the Druid.
 - **Overhealing** values are estimates. They change with the raid and the healer tasks.
 - **Oath of Light.** The model puts all tank heals on the Oath target. With two tanks, only one has the Oath.
