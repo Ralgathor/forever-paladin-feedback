@@ -15,6 +15,7 @@ Light's Vigil (C-H7) is the proposal. The analysis examined these other designs 
 | 3 charges from critical heals, Judgement and Holy Strike, spent by Holy Shock on party heals | 3 charges spent on a heal are the Holy Power resource of a later expansion. Ranged Paladins receive 5–7% less |
 | Holy Shock critical heals also give a charge | A loop: one charge gives about 2 Holy Shocks. Holy Shock replaces Flash of Light, and the burst size is random |
 | Your Holy damage heals the party of the Light's Vigil target | The value depends on spell damage from items. Close to a later-expansion healer |
+| On an enemy, Holy Shock with Light's Vigil deals 10% more damage and refunds 75% of its mana cost (first beta text) | Two Holy Shocks one after the other already double the burst. The 10% adds PvP burst, and the refund adds a damage use to a healer talent |
 | Standard of the Light, Swear a New Oath, Cleansing Light, Overflowing Light, Last Rites, Kneel in Vigil | Not modeled. Light's Vigil (C-H7) keeps the live talent and its name. Last Rites and Kneel in Vigil are close to Guardian Spirit and Tranquility |
 
 ## Withdrawn on 2 November 2026

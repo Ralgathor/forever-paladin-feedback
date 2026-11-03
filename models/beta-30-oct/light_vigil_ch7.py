@@ -4,8 +4,7 @@ Run: python3 light_vigil_ch7.py
 Proposed text:
   Your Holy Shock, Judgement and Holy Strike grant Light's Vigil for 30 sec. This effect cannot occur more than
   once every 6 sec. While Light's Vigil is active, your next Holy Shock triggers no cooldown and consumes Light's
-  Vigil. On an enemy target, Holy Shock deals 10% increased damage and refunds 75% of its mana cost. On an allied
-  target, Holy Shock also heals the target's party for 35% of the amount healed.
+  Vigil. On an allied target, Holy Shock also heals the target's party for 35% of the amount healed.
 
 Model:
 - A Holy Shock with the buff also triggers the buff again when the 6 sec cooldown is over. Thus the Paladin can use
@@ -14,7 +13,7 @@ Model:
 - Party heal: X (35%) of the Holy Shock heal on each of the 5 party members (the target included). It uses the
   Holy Shock crit chance (Boundless Light on a target with no Oath of Light). Overhealing 30%. No Illumination on
   the party part.
-- The enemy part (damage, mana return) has no healing value. It is not in this model.
+- On an enemy, the buff only removes the Holy Shock cooldown. This has no healing value.
 - Live: Light's Vigil rank 3 + Holy Shock, as in healing_b2.py.
 """
 import sys
