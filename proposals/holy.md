@@ -89,7 +89,7 @@ The Druid values use the development notes of 2 November 2026 (Bloom, Genesis 10
 - **Stacks before a fight.** Holy Shock out of combat gives stacks. A stack lasts 30 sec, thus the Paladin can start a fight with at most 3 stacks.
 - **Damage.** The talent has no enemy effect of its own. On an enemy, Light's Vigil only removes the Holy Shock cooldown. In one Hammer of Justice stun, three or four Holy Shocks do 1,640 to 2,880 damage (400 to 715 spell damage). Without the talent, one Holy Shock does 550 to 720. Holy Power does not change damage. See Analysis, PvP burst check, part 6, and W30.
 - **Hybrid builds.** With 31 Holy points, Holy Shock on an enemy each 6 sec gives +36 to +48 damage each sec (live: each 10 sec). The build has no Unsealed Wrath and no Champion of the Light. Thus it stays below Retribution (RB1: 910) in raids. See Analysis, Builds.
-- **Other talents.** Spiritual Focus and Illumination name Light's Vigil. With C-H7, Light's Vigil has no cast and no heal of its own, thus the two texts no longer name it. Illumination applies to the Holy Shock heal, not to the party heal.
+- **Other talents.** Spiritual Focus and Illumination name Light's Vigil. With C-H7, Light's Vigil has no cast and no heal of its own, thus that part of the two texts has no effect. The two talents keep their live text. Illumination applies to the Holy Shock heal, not to the party heal.
 - **The value depends on the critical heal size.** The Holy Power test (Open items) gives the real value. With both proposals, the raid values at 225% are 13–16 points higher than at 175%.
 
 Model: `models/beta-30-oct/light_vigil_ch7.py`.
