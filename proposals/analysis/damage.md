@@ -215,7 +215,7 @@ Default Retribution gear, rotation and consumables. One level 63 boss, 3,000 ite
 - **The gear is not the same for each class.** The sets have different quality: Retribution has 7 epic items, the Hunter and the Warlock have 1. Ret in the Warrior armor does 571 (−15%), and the Warrior in the Ret armor does 562 (−20%). Thus, parts 1 and 3 use the same item pool run above.
 - **Retribution and Feral are 12% above the pure average.** The other hybrids are at 67–99%. In this sim, no hybrid group is at 95%.
 - **Changes to the test sets.** Fury uses the wowsims pre-raid Fury set, with Dark Iron Destroyer in place of Annihilator (a world drop). The raid and PvP items of the Mage set are replaced with the Warlock choices. The new blue items of Forever (for example Adaptive Combat Assistant) have no source in the game data. All sets keep them.
-- **Files.** `models/wowsims-b2/allspecs_main.go` and `allspecs.log`.
+- **Files.** `models/wowsims-b2/go/allspecs_main.go` and `logs/allspecs.log`.
 
 ## 8. Options that were not kept
 

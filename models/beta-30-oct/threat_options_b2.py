@@ -2,7 +2,7 @@
 Run: python3 threat_options_b2.py
 
 All rows have Redoubt (C-P1). The model gives Holy Shield too many hits, thus each gain over C-P1 is scaled by
-CAL (0.55): the ratio of the wowsims gain to the model gain with the same gear (models/wowsims-b2/threat-options.patch).
+CAL (0.55): the ratio of the wowsims gain to the model gain with the same gear (models/wowsims-b2/patches/threat-options.patch).
 HS: the Holy Shield threat multiplier (live 1.2). CP9: Holy Shield adds this x block value to each hit (C-P9).
 """
 import sys

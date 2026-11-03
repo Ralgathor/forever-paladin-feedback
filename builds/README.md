@@ -36,7 +36,7 @@ This folder gives the best build and the stat weights of each spec. It uses the 
 
 ## Sources
 
-- Damage and tank: talent search and stat weights in wowsims Forever (commit 895cd67f9). Scripts and logs in `models/wowsims-b2` (`search.py`, `finals.py`, `finals.log`).
+- Damage and tank: talent search and stat weights in wowsims Forever (commit 895cd67f9). Scripts and logs in `models/wowsims-b2` (`search.py`, `finals.py`, `logs/finals.log`).
 - Healer: healing model and stat weights (`models/beta-30-oct/holy_builds_b2.py`).
 - Level-up: wowsims Forever (commit 895cd67f9), live talents (`models/wowsims-b2/levelup.py`).
 - The earlier files (trees of 18 October, calculator version 5) are in the history of the repository.

@@ -5,18 +5,18 @@ set -e
 W="$1"; D="$(cd "$(dirname "$0")" && pwd)"
 cd "$W"
 git checkout -q 895cd67f9
-git apply "$D/talents.patch" || true
-git apply "$D/notes-2-november.patch" || true
-git apply "$D/threat-options.patch" || true
-git apply "$D/burst-threat.patch" || true
-cp "$D/furyopen.apl.json" "$D/furyopen1.apl.json" ui/specs/paladin/protection/apls/
-cp "$D/charge.apl.json" ui/specs/warrior/protection/apls/
-cp "$D/proposals_sim.go" sim/paladin/
-cp "$D/feedback_run_test.go" "$D/feedback_levelup_test.go" sim/paladin/retribution/
-cp "$D/feedback_prot_test.go" sim/paladin/protection/feedback_run_test.go
-cp "$D/feedback_warrior_test.go" sim/warrior/protection/feedback_run_test.go
-cp "$D/feedback_bear_test.go" sim/druid/feralbear/
-cp "$D/feedback_warrior_dps_test.go" sim/warrior/dps/feedback_dps_test.go
+git apply "$D/patches/talents.patch" || true
+git apply "$D/patches/notes-2-november.patch" || true
+git apply "$D/patches/threat-options.patch" || true
+git apply "$D/patches/burst-threat.patch" || true
+cp "$D/apl/furyopen.apl.json" "$D/apl/furyopen1.apl.json" ui/specs/paladin/protection/apls/
+cp "$D/apl/charge.apl.json" ui/specs/warrior/protection/apls/
+cp "$D/go/proposals_sim.go" sim/paladin/
+cp "$D/go/feedback_run_test.go" "$D/go/feedback_levelup_test.go" sim/paladin/retribution/
+cp "$D/go/feedback_prot_test.go" sim/paladin/protection/feedback_run_test.go
+cp "$D/go/feedback_warrior_test.go" sim/warrior/protection/feedback_run_test.go
+cp "$D/go/feedback_bear_test.go" sim/druid/feralbear/
+cp "$D/go/feedback_warrior_dps_test.go" sim/warrior/dps/feedback_dps_test.go
 GRPC_PROTO="$(python3 -c 'import grpc_tools, os; print(os.path.join(os.path.dirname(grpc_tools.__file__), "_proto"))')"
 python3 -m grpc_tools.protoc -I=./proto -I="$GRPC_PROTO" \
   --go_opt=Mgoogle/protobuf/descriptor.proto=google.golang.org/protobuf/types/descriptorpb --go_out=./sim/core ./proto/*.proto

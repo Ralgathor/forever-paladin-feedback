@@ -165,7 +165,7 @@ if __name__ == "__main__":
     spec, case = ("prot", "raid") if case_arg.startswith("prot") else ("ret", case_arg.split("-")[1])
     mode = "prop" if case_arg.endswith("-prop") else "beta"
     starts = sys.argv[2:]
-    with open(os.path.join(HERE, f"search_{case_arg}.log"), "a") as log:
+    with open(os.path.join(HERE, "logs", f"search_{case_arg}.log"), "a") as log:
         finals = []
         for s in starts:
             b, ref = climb(spec, case, mode, s, log)
