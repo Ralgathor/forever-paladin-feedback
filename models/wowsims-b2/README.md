@@ -1,6 +1,6 @@
 # wowsims check on the beta of 30 October
 
-These files add the proposals to wowsims Forever, master branch (commit `895cd67f9`, 1 November 2026). They run the default Retribution set: default gear, rotation and consumables (with Major Mana Potion), build 14/6/31. The earlier runs used branch `paladin/hotfix-113554-port` (commit `db28d84a8`) with the build 14/5/32.
+These files add the proposals to wowsims Forever, master branch (commit `895cd67f9`, 1 November 2026). They run the default Retribution set: default gear, rotation and consumables (with Major Mana Potion), build 14/6/31. The earlier runs used branch `paladin/hotfix-113554-port` (commit `db28d84a8`) with the build 14/5/32. Build 70755 (3 November 2026, master commit `d97252f2a`) adds the two Retribution changes that `notes-2-november.patch` gives as flags.
 
 | File | What it does |
 | --- | --- |

@@ -46,3 +46,4 @@
 - [WoW Forever Talents – Shaman spellbook](https://wowforevertalents.com/abilities/shaman/)
 - [wowsims/forever – talent trees of all classes](https://github.com/wowsims/forever/tree/master/ui/sim/talents/trees)
 - [wowsims/forever – Paladin trees of hotfix push 113554 (30 October 2026)](https://github.com/wowsims/forever/blob/paladin/hotfix-113554-port/ui/sim/talents/trees/paladin.json)
+- [wowsims/forever – Paladin changes of build 70755 (hotfix push 113578, 3 November 2026)](https://github.com/wowsims/forever/pull/834)

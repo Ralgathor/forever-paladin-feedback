@@ -4,7 +4,7 @@
 
 All values are threat each sec (TPS). The tanks are level 60 and the boss is level 63. The values come from a model and from wowsims. The proposed values include Righteous Fury +90% (C25). Part 9 compares C25 alone with the alternative C25a (+80%). Part 10 gives the inputs.
 
-The Warrior and Druid values use the development notes of 2 November 2026. Defensive Stance gives +80% threat (was +30%) and Defiance 7/13/20% (was 5/10/15%). Bear Form and Dire Bear Form give +115% (was +50%). The game files of client 1.60.1.70707 still have the earlier values. A test on the live realms must confirm the new values.
+The Warrior and Druid values use the development notes of 2 November 2026. Defensive Stance gives +80% threat (was +30%) and Defiance 7/13/20% (was 5/10/15%). Bear Form and Dire Bear Form give +115% (was +50%). The game files of client 1.60.1.70755 (3 November 2026) still have the earlier values. A test on the live realms must confirm the new values.
 
 ## Short answer
 
@@ -152,7 +152,7 @@ The design goal is a Paladin tank with the threat of the Warrior. The beta of 30
 
 wowsims Forever plays the fight with the full rules of the game. Each class has its default tank gear. Full buffs, one level 63 boss from the front, 3 min fight. The Paladin has the wowsims default tank build (12/32/7) with Redoubt 5/5.
 
-wowsims has the threat values of client 1.60.1.70707. The Warrior and Druid TPS below are the wowsims values × 1.445 (Warrior: 2.16 ÷ 1.495) and × 1.433 (Druid: 2.15 ÷ 1.5). The stance and form multipliers apply to all threat, thus this gives the same result as a new run.
+wowsims has the threat values of client 1.60.1.70755 (the same as 70707). The Warrior and Druid TPS below are the wowsims values × 1.445 (Warrior: 2.16 ÷ 1.495) and × 1.433 (Druid: 2.15 ÷ 1.5). The stance and form multipliers apply to all threat, thus this gives the same result as a new run.
 
 | Tank | TPS (% of the Warrior) | Damage taken each sec | TMI | Crushing blows |
 | --- | --- | --- | --- | --- |
@@ -454,7 +454,7 @@ The Warrior has 1,338 and the Druid 1,197.
 **Warrior**
 
 - Talents: Defiance 3/3, Bastion 5/5, Improved Revenge 3/3, Shield Specialization 5/5, Master of Defense 2/2, Improved Sunder Armor 3/3, Focused Rage 3/3, Improved Heroic Strike 3/3.
-- Defensive Stance ×1.8 threat and −10% damage. Defiance ×1.2 threat with a shield. Bastion +10% damage with a shield. (Notes of 2 November 2026. Client 1.60.1.70707: ×1.3 and ×1.15.)
+- Defensive Stance ×1.8 threat and −10% damage. Defiance ×1.2 threat with a shield. Bastion +10% damage with a shield. (Notes of 2 November 2026. Client 1.60.1.70755: ×1.3 and ×1.15.)
 - Revenge rank 6: 138–168 + 28% of Attack Power, +60%. Threat = damage × 2.25.
 - Shield Slam rank 4: 640–670 + block value. Threat = damage (the real multiplier is not known).
 - Heroic Strike rank 9: +157 damage. Threat = damage + 152.4 (wowsims).
@@ -466,7 +466,7 @@ The Warrior has 1,338 and the Druid 1,197.
 **Druid**
 
 - Talents: Ferocity 5/5, Savage Fury 2/2, Feral Instinct 3/3, Sharpened Claws 2/2, Predatory Strikes 3/3, Blood Frenzy 2/2, Natural Reaction 5/5.
-- Threat: Bear Form ×2.15 (notes of 2 November 2026; client 1.60.1.70707: ×1.5), Maul ×1.75, Primal Bite ×3, Swipe ×1.75 (player data). wowsims uses Bear Form only. The ability multipliers are not verified.
+- Threat: Bear Form ×2.15 (notes of 2 November 2026; client 1.60.1.70755: ×1.5), Maul ×1.75, Primal Bite ×3, Swipe ×1.75 (player data). wowsims uses Bear Form only. The ability multipliers are not verified.
 - Primal Bite is now the Feral talent in row 7 (31 points). The model keeps it in the rotation.
 - Each swing: weapon DPS + Attack Power ÷ 14, with a 2.5 sec swing. Predatory Strikes +90 Attack Power.
 - Maul rank 7: +128 damage, +10%, 10 rage. Primal Bite rank 4: weapon damage + 77, 15 rage, 6 sec cooldown. Lacerate rank 3: 15 rage, a stack bleed.
@@ -498,7 +498,7 @@ The Warrior has 1,338 and the Druid 1,197.
 - **Druid multipliers.** The real values are not known (see Open items).
 - **Gear.** The model gives all tanks the same gear. wowsims gives each class its default set.
 - **Righteous Fury.** The values use the wowsims rule: the two multipliers multiply (×2.527). If they add, Holy threat is ×2.23, and the Paladin has about 10% less threat.
-- **Holy Shield rank 4** has no cost or level yet in the game files. The model uses its 221 damage.
+- **Holy Shield rank 4** is a level 60 spell since build 70755. The model uses its 221 damage.
 - **Righteous Fury (C25).** The `C25` flag of `proposals_sim.go` multiplies all Paladin threat by 1.9 ÷ 1.33. `RF_ALL` sets the value. The sim tank always has Righteous Fury, thus a fixed multiplier gives the same result.
 - **Burst threat (part 8).** `models/wowsims-b2/burst-threat.patch` adds the threat recorder. `run.sh` gives the runs. The openers are sim rotations. A player can use a different opener.
 - **Groups model.** Trash has no Sunder Armor or Faerie Fire. Demoralizing Shout, Demoralizing Roar and tab targets are not in the model.

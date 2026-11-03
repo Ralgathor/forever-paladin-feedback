@@ -28,7 +28,7 @@ Light's Vigil (C-H7) is the proposal. The analysis examined these other designs 
 
 ## Withdrawn on 31 October 2026: the new live trees
 
-The live version (4 November 2026) changes the three trees. These proposals are now unnecessary, or their place in the tree is gone. The earlier ID stays reserved. The Analysis tabs still use it.
+The live version (3 November 2026) changes the three trees. These proposals are now unnecessary, or their place in the tree is gone. The earlier ID stays reserved. The Analysis tabs still use it.
 
 | Earlier proposal (ID) | Why it was withdrawn |
 | --- | --- |

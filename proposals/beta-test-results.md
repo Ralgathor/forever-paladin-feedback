@@ -2,12 +2,12 @@
 
 ## Development notes of 2 November 2026
 
-Blizzard published the development notes on 3 November 2026 ([Blizzard forums](https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696/9)). They give all changes since 15 October. Most Paladin changes are the beta trees of 30 October (next section). The changes in this table are not in the game files of client 1.60.1.70707 yet. A test on the live realms must confirm them.
+Blizzard published the development notes on 3 November 2026 ([Blizzard forums](https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696/9)). They give all changes since 15 October. Most Paladin changes are the beta trees of 30 October (next section). Client build 1.60.1.70755 (hotfix push 113578, 3 November 2026) has the two Retribution changes. The other changes in this table are not in its game files yet. A test on the live realms must confirm them.
 
-| Change in the notes | Game files (1.60.1.70707) | Result |
+| Change in the notes | Game files (1.60.1.70755) | Result |
 | --- | --- | --- |
-| Two-Handed Weapon Specialization: +2/4/6% Holy and Physical damage | Physical damage only | Retribution +3.6% in wowsims (905.9 → 938.7 DPS, full buffs, 2 min) |
-| Vengeance: stacks up to 5 times | 3 stacks (1/2/3% Holy and Physical damage for each stack) | Retribution +4.5% in wowsims (946.3 DPS). With the Two-Handed Weapon Specialization change: +8.3% (980.8 DPS). This is about 121% of the pure average (W15) |
+| Two-Handed Weapon Specialization: +2/4/6% Holy and Physical damage | In the game files since build 70755 | Retribution +3.6% in wowsims (905.9 → 938.7 DPS, full buffs, 2 min) |
+| Vengeance: stacks up to 5 times | In the game files since build 70755 | Retribution +4.5% in wowsims (946.3 DPS). With the Two-Handed Weapon Specialization change: +8.3% (980.8 DPS). This is about 121% of the pure average (W15) |
 | Warrior: Defensive Stance +80% threat (was +30%), Defiance 7/13/20% (was 5/10/15%) | +30%, 15% | The live Paladin tank has 70% of the Warrior threat with the same gear (was 101%), and 71–82% from fresh level 60 to Naxxramas (W28, Analysis, Threat) |
 | Druid: Bear Form and Dire Bear Form +115% threat (was +50%) | +50% | The live Paladin tank has 77% of the Druid threat with the same gear (was 110%) |
 | Druid: Gift of the Earthmother removed, Bloom (new), Genesis 10%, Wild Growth 3 sec cast | Earthmother, 5%, no Bloom | Holy on one tank: 1–5% above the Druid in fights of 3 and 5 min, 3–5% below in fights of 10 min (was 3–12% above). Raid: 25–34% below the Druid (was 18–26%) (W14, Analysis, Healing) |
@@ -18,7 +18,7 @@ Blizzard published the development notes on 3 November 2026 ([Blizzard forums](h
 
 ## Beta trees of 30 October 2026
 
-Hotfix push 113554 (client build 1.60.1.70707) changes the three Paladin trees. Blizzard has not published patch notes for it. The values come from the game files in wowsims Forever (branch `paladin/hotfix-113554-port`, 30 October 2026). The talent calculator shows these trees in Beta mode.
+Hotfix push 113554 (client build 1.60.1.70707) changes the three Paladin trees. Blizzard has not published patch notes for it. The values come from the game files in wowsims Forever (branch `paladin/hotfix-113554-port`, 30 October 2026). Build 70755 (hotfix push 113578, 3 November 2026) keeps these trees. It changes only Two-Handed Weapon Specialization, Vengeance and Holy Shield rank 4 (wowsims master, commit `d97252f2a`). The talent calculator shows these trees in Live mode.
 
 The proposals now change these trees. The beta adopts six earlier proposals (see Overview). The tables after the model results give player tests of the beta of 18 October.
 
@@ -27,7 +27,7 @@ The proposals now change these trees. The beta adopts six earlier proposals (see
 | Holy | New: Oath of Light (row 4) and Boundless Light (row 5). Removed: Voice of Truth. Holy Power now increases the critical heal bonus of Holy spells by 10–50%. Light's Vigil now heals only. Reverence (2 ranks, 15/30%) goes to row 2. Divine Precision (2 ranks, 4/8%) goes to row 4 with no requirement. Holy Conduit comes from Retribution. Divine Intellect goes to Protection. Unyielding Faith goes to Retribution |
 | Protection | New: Stoicism (row 5) and Shieldsworn (row 7). Removed: Improved Seal of Fury and One-Handed Weapon Specialization. Holy Shield goes to row 5. Redoubt gives 6–30% block. Iron Creed has 3 ranks. Shield Specialization has 2 ranks. Swift Judgement is now a second Judgement with a 1 min cooldown. Toughness goes to row 3 |
 | Retribution | New: Turn Evil (row 5) and Unsealed Wrath (row 7). Removed: Twist of Light and Instrument of Law. Conviction (3 ranks, 2/4/6%) now applies to all spells and attacks. Two-Handed Weapon Specialization goes to row 4. It increases all Physical damage and decreases threat. Champion of the Light has 5 ranks and decreases the cast time of Hammer of Wrath. Vindication does not increase your Attack Power now |
-| Spells | Blessing of Light, Greater Blessing of Light, Salvation and Greater Blessing of Salvation are removed. Righteous Fury also increases all threat by 33%. The Judgement of Fury taunt lasts 3 sec (was 4 sec). Holy Shield rank 1 does 75 damage (was 110). Rank 4 (221 damage) has no cost or level yet. Light's Vigil has a 40 yd range (was 20 yd) |
+| Spells | Blessing of Light, Greater Blessing of Light, Salvation and Greater Blessing of Salvation are removed. Righteous Fury also increases all threat by 33%. The Judgement of Fury taunt lasts 3 sec (was 4 sec). Holy Shield rank 1 does 75 damage (was 110). Rank 4 (221 damage, 4 charges) is a level 60 spell since build 70755. Its mana cost is not in the data yet. Light's Vigil has a 40 yd range (was 20 yd) |
 
 ### Model results on the beta of 30 October
 
