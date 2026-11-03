@@ -24,7 +24,7 @@ The builds use the proposed trees of calculator version 6 (the live version, wit
 - **Holy needs 31 points for Light's Vigil.** Holy Conduit 2/2 fills the rows. It makes only Consecration, Holy Wrath, Exorcism and Hammer of Wrath cheaper.
 - **The 3 Retribution points after Benediction** go to Conviction 3/3: +6% critical chance, thus more Illumination mana.
 - **Healing values** use 175% critical heals (Holy Power 5/5, main hypothesis since 3 November). HB2 at 200%: 785 raid and 636 one tank. At 225%: 843 and 670. HB1 at 200%: 748 and 601. At 225%: 804 and 633.
-- **Hybrid builds with Light's Vigil (C-H7).** A build with 31 Holy points casts Holy Shock on an enemy each 6 sec (live: each 10 sec). This gives +36 to +48 damage each sec, for about 34 mana each sec. The build has no Unsealed Wrath and no Champion of the Light. Thus it stays far below RB1 (910) in raids. The risk is the PvP burst: three or four Holy Shocks in one stun (PvP burst check, part 6, and W30).
+- **Hybrid builds with Light's Vigil (C-H7).** A build with 31 Holy points casts Holy Shock on an enemy each 6 sec (live: each 10 sec). This gives +36 to +48 damage each sec, for about 49 mana each sec (live: 29). Illumination returns no mana on damage. The build has no Unsealed Wrath and no Champion of the Light. Thus it stays far below RB1 (910) in raids. The risk is the PvP burst: three or four Holy Shocks in one stun (PvP burst check, part 6, and W30).
 
 ## 2. Protection
 

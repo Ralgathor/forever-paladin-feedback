@@ -81,7 +81,7 @@ if __name__ == "__main__":
             for tank in (False, True):
                 print(f"| {n} | {'One tank' if tank else 'Raid'} | {vs(lambda: live(tank=tank, bonus=b), tank, key)} | "
                       f"{vs(lambda: ch7(tank=tank, bonus=b), tank, key)} | {vs(lambda: ch7(tank=tank, bonus=b, rev=0.5), tank, key)} |")
-    print("\nParty heal % and cooldown, raid against the Druid | the Shaman, 175%")
+    print("\nParty heal % and cooldown, raid with Reverence 50%, against the Druid | the Shaman, 175%")
     for icd, x in ((6, 0.35), (6, 0.50), (6, 0.60), (6, 0.70), (8, 0.60), (8, 0.70)):
         print(f"  {icd} sec, {x:.0%}: {vs(lambda: ch7(x=x, icd=icd, rev=0.5), False, 'Druid')} | {vs(lambda: ch7(x=x, icd=icd, rev=0.5), False, 'Shaman')}")
     k = ch7(); s = [s for s in k["spells"] if s.name.startswith("Holy Shock")][0]
