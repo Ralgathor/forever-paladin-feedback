@@ -1,6 +1,6 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 12 changes and 1 move. The proposals use the live trees of 4 November 2026. The live version adopts 6 earlier proposals, and makes 20 others unnecessary. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same game build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 13 changes and 1 move. The proposals use the live trees of 4 November 2026. The live version adopts 6 earlier proposals, and makes 20 others unnecessary. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same game build as a model.
 
 **Contents**
 
@@ -11,12 +11,12 @@ This document gives talent proposals for the WoW Forever Paladin. It has 12 chan
 
 ## How to read this document
 
-- **C2 to C5 (spell change).** These change baseline spells, not talents. Shoulder the Burden (C-P5) is also a new baseline spell.
+- **C2 to C5 and C25 (spell change).** These change baseline spells, not talents. Shoulder the Burden (C-P5) is also a new baseline spell.
 - **C-H, C-P and C-R (talent change).** These change what a talent does, add a talent or remove a talent. The letter after C gives the tree: H (Holy), P (Protection), R (Retribution). A change can also move the talent. The text then gives the new row.
 - **M-H, M-P and M-R (move).** These move a talent to a different row. The talent text does not change. No move proposal is open now.
 - **New IDs.** A new proposal takes the next free number of its series. A new proposal never takes the number of a withdrawn proposal.
 - **Names.** The text gives the name first and the ID in parentheses, for example Sanctified Judgement (C-R3).
-- **C2a** is the alternative to Personal Judgement of the Crusader (C2). **C-P11a** is the alternative to the Lay on Hands part of Devoted Sacrifice (C-P11).
+- **C2a** is the alternative to Personal Judgement of the Crusader (C2). **C-P11a** is the alternative to the Lay on Hands part of Devoted Sacrifice (C-P11). **C25a** is the alternative to Righteous Fury (C25).
 - **Withdrawn ideas** have no ID. They are in the [Withdrawn ideas](withdrawn-ideas.md) tab only. A withdrawn proposal shows its earlier ID there, because the Analysis tabs still use it.
 - **Data.** Forever client build 1.60.1.70707, hotfix push 113554 (live version), from the game files in wowsims Forever. Player tests from 19 October 2026 and later. The text tells you when a value comes from an in-game tooltip.
 - **Analysis values.** The Analysis tabs use the live trees. Beta test results gives the first model results for the live trees. A proposal says when its values must be modeled again.
@@ -32,6 +32,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 12 chan
 | C2 | Judgement of the Crusader | Baseline spell | Uses the one Judgement of the Paladin | Personal debuff. It does not count against the one-Judgement limit |
 | C4 | Hand of Sacrifice | Baseline spell | Blessing of Sacrifice: 55 damage for each hit moves to you. No cooldown | Up to 825 damage moves to you. Lasts 30 sec, 15 sec cooldown |
 | C5 | Hands: Sacrifice, Protection and Freedom | Baseline spells | Blessings of Sacrifice, Protection and Freedom use a Blessing slot | The spells take the name Hand of. No Blessing slot. One Hand from each Paladin on a target |
+| C25 | Righteous Fury | Baseline spell | All threat +33%, Holy threat +90% more | All threat +90%, Holy threat +90% more. Alternative C25a: all threat +80% |
 | C-H1 | Reverence | Holy, row 2 | 15/30% of the mana regeneration continues during casts | 25/50% |
 | C-H7 | Light's Vigil | Holy, row 7 | A cast on an ally (1,340 mana): the next Holy Shock on the ally has no cooldown and heals the party | Holy Shock, Judgement and Holy Strike give a stack of a buff for 30 sec, once each 6 sec, up to 3 stacks. With the buff, the next Holy Shock has no cooldown and uses one stack. On an ally, it also heals the party for 60% of the heal |
 | C-P1 | Redoubt | Protection, row 1 | 10% chance when you are hit: +6–30% block | The same. Each Holy Shield cast also starts it |

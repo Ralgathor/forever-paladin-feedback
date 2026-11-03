@@ -75,3 +75,11 @@ FEEDBACK_NOENG=1 FEEDBACK_CHARGE=1 FEEDBACK_DUR=180 FEEDBACK_BURST=war_charge /t
 FEEDBACK_DUR=180 FEEDBACK_BURST=war_sapper /tmp/wartest -test.run TestFeedbackRun -test.v | grep -E "BURST|RESULT"
 cd ../../druid/feralbear
 FEEDBACK_DUR=180 FEEDBACK_BURST=bear /tmp/beartest -test.run TestFeedbackBear -test.v | grep -E "BURST|RESULT"
+# Righteous Fury (C25): all threat +90% (RF_ALL=1.80 gives the alternative C25a, +80%). Sustained, groups and burst.
+cd ../../paladin/protection
+for p in C25 CP1,C25; do
+  FEEDBACK_DUR=180 PROPOSE=$p /tmp/prottest -test.run TestFeedbackRun -test.v | grep RESULT
+  RF_ALL=1.80 FEEDBACK_DUR=180 PROPOSE=$p /tmp/prottest -test.run TestFeedbackRun -test.v | grep RESULT
+  for n in 3 5; do FEEDBACK_DUR=180 FEEDBACK_TARGETS=$n PROPOSE=$p /tmp/prottest -test.run TestFeedbackRun -test.v | grep PERTARGET; done
+  FEEDBACK_APL=furyopen FEEDBACK_DUR=180 FEEDBACK_BURST="pal_furyopen_$p" PROPOSE=$p /tmp/prottest -test.run TestFeedbackRun -test.v | grep -E "BURST|RESULT"
+done

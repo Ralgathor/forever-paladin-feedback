@@ -11,7 +11,7 @@ The Warrior and Druid values use the development notes of 2 November 2026. Defen
 - **No. After the development notes of 2 November 2026, the Paladin tank has less threat than the Warrior and the Druid.** The notes give the Warrior ×1.44 and the Druid ×1.43 more threat. This replaces Blessing of Salvation (1 ÷ 0.7 = ×1.43). The Paladin received ×1.33 from Righteous Fury in the beta of 30 October, and no more on 2 November.
 - **With the same gear, the live Paladin has 70% of the Warrior threat** in the model and 69% in wowsims. Before the notes, it had 101% and 100%.
 - **From fresh 60 to Naxxramas, the live Paladin has 71–82% of the Warrior threat.** With Consecration on cooldown, it has 83–98%, but the mana does not last (see Mana).
-- **A Righteous Fury bonus of about +90% to all threat gives the Warrior threat again** (live: +33%). The model gives +62% at fresh 60 and +88% in Naxxramas. wowsims gives +92%. This is not a proposal yet.
+- **Righteous Fury (C25) gives the Warrior threat again:** +90% to all threat (live: +33%). In wowsims, the live Paladin then has 98% of the Warrior threat, and 105% with Redoubt (C-P1). The model needs +62% at fresh 60 and +88% in Naxxramas.
 - **The proposals add threat, but they are not for threat.** Redoubt (C-P1) gives more blocks, thus more Holy Shield damage. Together with Toughness removal (C-P13), they give +6% in wowsims: 74% of the Warrior.
 - **Two threat proposals were withdrawn on 2 November 2026.** The Holy Strike Seal trigger (C1) and Reckoning (C-P12) each added +3% in wowsims. They do not close the gap.
 - **Judgement of the Crusader is important.** It gives the tank about 72 TPS. In the live version, the raid can need the tank Judgement for Light or Wisdom. The tank then has 62% of the Warrior threat. With Personal Judgement of the Crusader (C2), the tank keeps Crusader.
@@ -141,7 +141,8 @@ The design goal is a Paladin tank with the threat of the Warrior. The beta of 30
 - **Why the gap.** Blessing of Salvation decreased the threat of the damage dealers by 30%. Blizzard removed it and gave the tanks about ×1.43 (1 ÷ 0.7). The Paladin received ×1.33 from Righteous Fury in the beta of 30 October. But the Paladin needed this ×1.33 to reach the Warrior before the notes.
 - **The proposals add 6% in wowsims,** all from Redoubt (C-P1). The proposed tank has 74% of the Warrior threat.
 - **The Holy Strike Seal trigger (C1) and Reckoning (C-P12) were withdrawn.** Each added only +3% in wowsims. They do not close the gap.
-- **One fix: a larger Righteous Fury bonus.** The Paladin needs about ×1.44 on all threat. Righteous Fury +33% → about +90% to all threat gives this. The model gives +62% at fresh 60 and +88% in Naxxramas. wowsims gives +92%. This is a baseline spell, thus the talent rule (a % only) is not necessary. It is not a proposal yet.
+- **One fix: Righteous Fury (C25).** The Paladin needs about ×1.44 on all threat. C25 changes the first part of Righteous Fury from +33% to +90% to all threat: ×1.43. The model needs +62% at fresh 60 and +88% in Naxxramas. wowsims needs +92%. This is a baseline spell, thus the talent rule (a % only) is not necessary.
+- **With C25, the model gives 101–117% of the Warrior threat** from Naxxramas to fresh 60. Before the notes, the live Paladin had 101–118%.
 - **The gear is not the same.** wowsims gives each class its default tank set. A Warrior with better gear can make the gap larger.
 - **Live tests give the real answer.** First, confirm the new Defensive Stance and Bear Form values on the live realms. Then compare the tanks with the same gear in real fights.
 
@@ -159,12 +160,16 @@ wowsims has the threat values of client 1.60.1.70707. The Warrior and Druid TPS 
 | Paladin, C1 (withdrawn) | 954 (71%) | 332 | 57.1 | 11.9% |
 | Paladin, Redoubt (C-P1) | 986 (74%) | 288 | 44.0 | 1.0% |
 | **Paladin, all kept proposals (with Toughness removal, C-P13)** | **986 (74%)** | **295** | **45.2** | **1.0%** |
+| Paladin, Righteous Fury (C25) | 1,316 (98%) | 333 | 57.1 | 11.9% |
+| Paladin, C25 and Redoubt (C-P1) | 1,401 (105%) | 288 | 44.0 | 1.0% |
+| Paladin, C25a (+80%) | 1,247 (93%) | 333 | 57.1 | 11.9% |
 
 - **The live Paladin has about 70% of the Warrior threat.** The model (70%) and wowsims (69%) agree. Before the notes of 2 November, they gave 101% and 100%.
 - **The proposals add less in wowsims:** +58 TPS (+6%) against +96 TPS (+15%) in the model. Both values come from Redoubt. The model gives too many Holy Shield blocks.
 - **C1 (withdrawn) agrees:** +26 in wowsims, +25 in the model.
 - **Reckoning (C-P12), withdrawn.** With C1, it gave +27 more in wowsims (1,038 TPS, 78%) and +20 in the model.
 - **Toughness removal (C-P13)** does not change threat. Damage taken increases by 2%.
+- **Righteous Fury (C25)** multiplies all Paladin threat by 1.42 in wowsims. Damage taken does not change. With the alternative C25a (+80%), the live tank has 93%, and 99% with Redoubt (C-P1).
 - **The Druid row checks the order, not the level,** because each class has different gear.
 
 ## 7. Groups of enemies
@@ -198,6 +203,7 @@ This part compares the tanks against 3 and 5 enemies.
 - **The proposals change almost nothing on groups:** +1%. On extra targets, all Holy Shield charges are already used in the live version.
 - **The fifth enemy has less Paladin threat** because Consecration gives its full damage to 4 enemies only.
 - **The Warrior** holds only 2 targets well: Cleave hits 2 targets. **The Druid** holds only 3: Swipe hits 3 targets.
+- **With Righteous Fury (C25),** all Paladin values are ×1.42. On 3 targets: 1,301 / 352 / 353, total 2,006 (Warrior 1,682). On 5 targets: total 2,427 (Warrior 2,065).
 
 **Model result.** The model gives a larger Paladin lead: 115–149% of the stronger of the two other tanks on all targets. The model lead is too large. In the model, trash hits for only 1/3 of a boss hit, thus the Warrior and the Druid receive little rage.
 
@@ -246,6 +252,7 @@ Judgement and Swift Judgement are not on the global cooldown, thus both hit at 0
 - **With the wowsims default opener, the Paladin starts slowly.** The first global cooldown goes to Judgement of the Crusader. Holy Shield starts at 3 sec, and Holy Strike at 4.5 sec.
 - **With the Fury opener, the Paladin has the best start of the three tanks.** About 3,500 threat hits the boss at 0 sec: two Judgements of Fury (about 1,770), Holy Strike (about 1,100) and the Shieldsworn Holy Shield hit (about 600).
 - **The lead does not last.** After 10 sec, the Fury opener has 86% of the Warrior. After 30 sec, it has 69%, the sustained gap of part 6.
+- **With Righteous Fury (C25),** the live Paladin with the Fury opener has 7,407 (157%), 9,478 (133%) and 16,128 (123%) after 3, 6 and 10 sec. With Redoubt (C-P1): 7,646 (162%), 9,944 (140%) and 16,927 (129%).
 - **The Warrior and the Druid need rage first.** The Warrior starts with 0 rage. Its threat increases fast from 2 sec, when the boss hits give rage. The Druid uses its 25 rage at once, and then it waits for rage.
 - **Boss armor helps the Paladin.** In the first 6 sec, the boss has less than 5 Sunder Armor stacks. This decreases Warrior and Druid physical damage. Most Paladin threat is Holy damage, thus boss armor does not decrease it.
 - **With one Judgement at 0 sec,** Swift Judgement hits at 1.5 sec. Only the first 1.5 sec change: 3,204 threat (160%) in place of 4,251. From 3 sec, the two openers have the same threat.
@@ -276,6 +283,7 @@ Judgement and Swift Judgement are not on the global cooldown, thus both hit at 0
 
 - **The Paladin has no threat cooldown.** Its best windows come from Holy Strike, Judgement and Holy Shield in the same 3 sec, with critical hits. The Warrior adds Shield Slam, Revenge and Heroic Strike critical hits to the rage from boss hits.
 - **The best-window gap is larger than the sustained gap:** about 60% against 69–74%. Thus the Paladin has a smaller margin against a large threat spike from a damage dealer.
+- **With Righteous Fury (C25),** the best 3, 6 and 10 sec windows are 10,084 (79%), 13,736 (84%) and 20,663 (86%). With Redoubt (C-P1): 82%, 86% and 89%.
 
 **Warrior variants**
 
@@ -357,6 +365,7 @@ Judgement and Swift Judgement are not on the global cooldown, thus both hit at 0
 - **Gear.** The model gives all tanks the same gear. wowsims gives each class its default set.
 - **Righteous Fury.** The values use the wowsims rule: the two multipliers multiply (×2.527). If they add, Holy threat is ×2.23, and the Paladin has about 10% less threat.
 - **Holy Shield rank 4** has no cost or level yet in the game files. The model uses its 221 damage.
+- **Righteous Fury (C25).** The `C25` flag of `proposals_sim.go` multiplies all Paladin threat by 1.9 ÷ 1.33. `RF_ALL` sets the value. The sim tank always has Righteous Fury, thus a fixed multiplier gives the same result.
 - **Burst threat (part 8).** `models/wowsims-b2/burst-threat.patch` adds the threat recorder. `run.sh` gives the runs. The openers are sim rotations. A player can use a different opener.
 - **Groups model.** Trash has no Sunder Armor or Faerie Fire. Demoralizing Shout, Demoralizing Roar and tab targets are not in the model.
 - The earlier version of this tab (trees of 18 October) is in the history of the repository.

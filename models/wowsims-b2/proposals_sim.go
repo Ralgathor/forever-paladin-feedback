@@ -21,6 +21,16 @@ func proposeFlag(f string) bool {
 }
 
 func (paladin *Paladin) applySimProposals() {
+	// C25 Righteous Fury: all threat +90% (RF_ALL, default 1.90) in place of +33%. The Holy part (+90% more) does not change.
+	// The sim tank always has Righteous Fury, thus a static multiplier gives the same result.
+	if proposeFlag("C25") {
+		rf := 1.90
+		if v, err := strconv.ParseFloat(os.Getenv("RF_ALL"), 64); err == nil {
+			rf = v
+		}
+		paladin.PseudoStats.ThreatMultiplier *= rf / 1.33
+	}
+
 	// W15 balance lever: Sacred Arbiter Holy Strike bonus +10% (SA10) or +0% (SA0) in place of +20%.
 	if paladin.Talents.SacredArbiter && (proposeFlag("SA10") || proposeFlag("SA0")) {
 		mult := 1.10 / 1.20
