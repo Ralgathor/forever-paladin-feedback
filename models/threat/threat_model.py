@@ -195,7 +195,8 @@ BOSS_MISS = 0.05                         # boss swings that miss the tank (not d
 # Warrior: Forever spellbook and talents (wowforevertalents.com, client 1.60.1.70450). Assumed Protection build:
 # Defiance 3/3, Bastion 5/5, Improved Revenge 3/3, Shield Specialization 5/5, Master of Defense 2/2,
 # Improved Sunder Armor 3/3, Focused Rage 3/3 and Improved Heroic Strike 3/3.
-WAR_STANCE = 1.3 * 1.15                  # Defensive Stance x Defiance 3/3 (+15% with a shield)
+WAR_STANCE = 1.8 * 1.2                   # Defensive Stance x Defiance 3/3 (+20% with a shield). Development notes of
+                                         # 2 November 2026: 80% (was 30%) and 7/13/20% (was 5/10/15%). Client 1.60.1.70707: x1.3 x1.15
 WAR = dict(dmg=0.9 * 1.10,               # Defensive Stance -10% damage, Bastion +10% damage with a shield
            revenge=153, revenge_ap=0.28, revenge_mult=1.6,  # rank 6: 138-168, 28% AP (player sheet), Improved Revenge +60%
            revenge_cd=5, revenge_cost=5 - 3,                # Focused Rage
@@ -244,7 +245,7 @@ def warrior(g, slam_mult=1.0, detail=False):
 
 # Druid: Forever spellbook, talents and player data. Assumed Feral build: Ferocity 5/5, Savage Fury 2/2,
 # Feral Instinct 3/3, Sharpened Claws 2/2, Predatory Strikes 3/3, Blood Frenzy 2/2 and Natural Reaction 5/5.
-BEAR = 1.5                               # Bear Form threat
+BEAR = 2.15                              # Bear Form threat: +115% (development notes of 2 November 2026, was +50%)
 DRU = dict(crit=0.12,                    # 6% from gear + Sharpened Claws 6%
            ap=1.5 * 60,                  # Predatory Strikes: +150% of the level as Attack Power
            maul_bonus=128, maul_mult=1.75, maul_cost=15 - 5,          # rank 7, Ferocity
@@ -261,7 +262,7 @@ DRU = dict(crit=0.12,                    # 6% from gear + Sharpened Claws 6%
            enrage=30 / 60,               # Enrage: 10 rage + 20 over 10 sec, 1 min cooldown (-27% base armor: not in the model)
            crush=0.15)                   # no block: crushing blows at the full rate (Analysis, Crushing blows)
 
-DRU_WOWSIMS = dict(maul_mult=1.0, bite_mult=1.0, swipe_mult=1.0)   # wowsims Forever: Bear Form x1.5 only
+DRU_WOWSIMS = dict(maul_mult=1.0, bite_mult=1.0, swipe_mult=1.0)   # wowsims Forever: Bear Form only, no ability multipliers
 
 def druid(g, detail=False, mults=None):
     """Primal Bite and Faerie Fire on cooldown, Maul with the spare rage, then Lacerate in the other global cooldowns

@@ -1,0 +1,31 @@
+diff --git a/sim/paladin/talents_retribution.go b/sim/paladin/talents_retribution.go
+index c1a27f8..948a3d7 100644
+--- a/sim/paladin/talents_retribution.go
++++ b/sim/paladin/talents_retribution.go
+@@ -7,6 +7,7 @@ import (
+ 	"github.com/wowsims/forever/sim/core/buffs"
+ 	"github.com/wowsims/forever/sim/core/dbcenums"
+ 	"github.com/wowsims/forever/sim/core/spelldata"
++	"github.com/wowsims/forever/sim/core/stats"
+ )
+ 
+ func (paladin *Paladin) registerRetributionTalents() {
+@@ -232,6 +233,9 @@ func (paladin *Paladin) applyTwoHandedWeaponSpecialization() {
+ 
+ 	spelldata.ParseStatic(&paladin.Character,
+ 		spellData.TwoHandedWeaponSpecialization.Rank(paladin.Talents.TwoHandedWeaponSpecialization))
++	if proposeFlag("N2H") { // notes of 2 November 2026: Holy damage too
++		paladin.PseudoStats.SchoolDamageDealtMultiplier[stats.SchoolIndexHoly] *= 1 + 0.02*float64(paladin.Talents.TwoHandedWeaponSpecialization)
++	}
+ }
+ 
+ // Vengeance - Increases your Physical and Holy damage dealt by 1/2/3% for 30 sec after landing a
+@@ -254,7 +258,7 @@ func (paladin *Paladin) applyVengeance() {
+ 		Label:     "Vengeance" + paladin.Label,
+ 		ActionID:  core.ActionID{SpellID: rank.ID},
+ 		Duration:  rank.Duration(),
+-		MaxStacks: int32(rank.MaxStack),
++		MaxStacks: core.TernaryInt32(proposeFlag("V5"), 5, int32(rank.MaxStack)),
+ 		OnGain: func(_ *core.Aura, _ *core.Simulation) {
+ 			damageMod.Activate()
+ 		},

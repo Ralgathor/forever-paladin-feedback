@@ -145,8 +145,11 @@ def druid_burst(hp=HPG):
     c = 0.183; k = 1 + 0.5*c; kh = k if H.HOT_CRIT else 1.0
     # Nature's Splendor: Rejuvenation 15 sec, Regrowth 27 sec. Gift of the Earthmother: 1 sec global cooldown
     # for Rejuvenation and Swiftmend. Genesis: +5% periodic healing.
-    rej0 = (776*15/12 + 1.0*hp)*1.1*1.15*1.05; rej = rej0*kh
-    rg_dir = (1021 + 0.286*hp)*1.1*(1 + 0.5*(c + 0.5)); rg_hot0 = (994 + 0.497*hp)*27/21*1.1*1.05; rg_hot = rg_hot0*kh
+    # Development notes of 2 November 2026 (H.NOTES_NOV2): no Gift of the Earthmother (1.5 sec global cooldown),
+    # Genesis +10%. Bloom heals only when a heal over time ends: not in a 3 or 6 sec window.
+    gen = 1.10 if H.NOTES_NOV2 else 1.05; gcd_e = GCD if H.NOTES_NOV2 else 1.0
+    rej0 = (776*15/12 + 1.0*hp)*1.1*1.15*gen; rej = rej0*kh
+    rg_dir = (1021 + 0.286*hp)*1.1*(1 + 0.5*(c + 0.5)); rg_hot0 = (994 + 0.497*hp)*27/21*1.1*gen; rg_hot = rg_hot0*kh
     ht = (2934.8 + 1.1*(hp - 715))*k
     sm_rej = rej0*k                     # Swiftmend: the full Rejuvenation, a direct heal (can be critical)
     sm_rg = rg_hot0*k                   # or the full Regrowth heal over time
@@ -157,8 +160,8 @@ def druid_burst(hp=HPG):
         return p_rej*sm_rej + (1 - p_rej)*p_rg*sm_rg
     sp = [B("Healing Touch", 3.0, ht),
           B("Regrowth", 2.0, rg_dir, rg_hot, 27),
-          B("Rejuvenation", 1.0, 0, rej, 15),
-          B("Swiftmend", 1.0, 0, cd="short", fn=swiftmend),
+          B("Rejuvenation", gcd_e, 0, rej, 15),
+          B("Swiftmend", gcd_e, 0, cd="short", fn=swiftmend),
           B("Nature's Swiftness + Healing Touch", 1.5, ht, cd="long")]
     def needs(seq):   # a new Regrowth or Rejuvenation replaces the old one
         names = [x.name for x in seq]
@@ -172,7 +175,7 @@ def shaman_burst(hp=HPG):
     rt_hot = (805 + 0.5*hp)*1.1*kh
     sp = [B("Healing Wave", 2.5, hw),
           B("Lesser Healing Wave", 1.5, (820 + 1.5/3.5*hp)*1.1*k),
-          B("Riptide", GCD, (841 + 0.2*hp)*1.1*k, rt_hot, 15, cd="short"),
+          B("Riptide", GCD, 0.0 if H.NOTES_NOV2 else (841 + 0.2*hp)*1.1*k, rt_hot, 15, cd="short"),   # notes of 2 November: no direct heal
           B("Chain Heal (on the tank, after Riptide)", 2.5, (506.5 + 2.5/3.5*hp)*1.1*1.25*k),
           B("Nature's Swiftness + Healing Wave", 1.5, hw, cd="long")]
     pre = [("Riptide", rt_hot/15, 15), ("Healing Stream Totem", (11 + 0.02*hp)*kh/2, None)]

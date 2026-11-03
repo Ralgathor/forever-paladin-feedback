@@ -16,6 +16,7 @@ These files add the proposals to wowsims Forever, master branch (commit `895cd67
 | `FEEDBACK_TARGETS` | In the three tank tests: the number of targets. Each target hits for 1/3 of the boss. The tests then print the threat on each target |
 | allspecs_main.go, allspecs.log | All damage specs with pre-raid gear and the same buffs (Analysis, Damage, part 7). The file header gives the steps |
 | matched_gear/ | The pure damage specs and Retribution with the same pre-raid item pool: the pure average of Analysis, Damage. See matched_gear/README.md |
+| notes-2-november.patch | Flags for the development notes of 2 November 2026: `N2H` (Two-Handed Weapon Specialization also increases Holy damage by 2/4/6%) and `V5` (Vengeance stacks up to 5 times). Apply after talents.patch. Result (default Retribution set, full buffs, 2 min): live 905.9 DPS, `N2H` 938.7, `V5` 946.3, both 980.8 |
 | run.sh | All runs: `./run.sh <wowsims clone>` |
 
 - **Full buffs.** The wowsims test buffs, with Mana Spring Totem, Mana Tide Totem and Atiesh.

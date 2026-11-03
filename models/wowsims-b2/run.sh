@@ -6,6 +6,7 @@ W="$1"; D="$(cd "$(dirname "$0")" && pwd)"
 cd "$W"
 git checkout -q 895cd67f9
 git apply "$D/talents.patch" || true
+git apply "$D/notes-2-november.patch" || true
 cp "$D/proposals_sim.go" sim/paladin/
 cp "$D/feedback_run_test.go" "$D/feedback_levelup_test.go" sim/paladin/retribution/
 cp "$D/feedback_prot_test.go" sim/paladin/protection/feedback_run_test.go
@@ -17,6 +18,10 @@ python3 -m grpc_tools.protoc -I=./proto -I="$GRPC_PROTO" \
   --go_opt=Mgoogle/protobuf/descriptor.proto=google.golang.org/protobuf/types/descriptorpb --go_out=./sim/core ./proto/*.proto
 cd sim/paladin/retribution
 go test -tags with_db -c -o /tmp/rettest .
+# Development notes of 2 November 2026: N2H, V5 (full buffs, 2 min)
+for p in N2H V5 N2H,V5; do
+  FEEDBACK_DUR=120 FEEDBACK_BUFFS=full PROPOSE=$p /tmp/rettest -test.run TestFeedbackRun -test.v | grep RESULT
+done
 for b in full lean; do for d in 120 300; do for p in "" C1 UW20; do
   FEEDBACK_DUR=$d FEEDBACK_BUFFS=$b PROPOSE=$p /tmp/rettest -test.run TestFeedbackRun -test.v | grep RESULT
 done; done; done

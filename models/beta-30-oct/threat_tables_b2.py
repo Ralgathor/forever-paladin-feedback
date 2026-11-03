@@ -73,7 +73,7 @@ if __name__ == "__main__":
 
     print("\n## Part 3: flatter gear, proposed % of the Warrior (of the Druid)")
     for name, ts in (("Gear as in part 2", T.TIERS), ("Flatter, boss as part 2", T.flatter(False)), ("Flatter, flatter boss", T.flatter(True))):
-        print(f"  {name}: " + " | ".join(f"{t.name}: {pct(prop(t), T.warrior(t))} ({pct(prop(t), T.druid(t))}); beta {pct(beta(t), T.warrior(t))}" for t in ts))
+        print(f"  {name}: " + " | ".join(f"{t.name}: {pct(prop(t), T.warrior(t))} ({pct(prop(t), T.druid(t))}); beta {pct(beta(t), T.warrior(t))} ({pct(beta(t), T.druid(t))})" for t in ts))
 
     print("\n## Part 8: several targets, Paladin with Consecration. all (one extra)")
     for n in (1, 3, 5):
