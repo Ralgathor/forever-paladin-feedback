@@ -571,3 +571,13 @@ RESULT fury prebis dur=300 dps=800.0
 ### F | FEEDBACK_DUR=300 FEEDBACK_SPEC=arms FEEDBACK_GEAR=prebis
 RESULT arms prebis dur=300 dps=765.9
 --- PASS: TestFeedbackDps (10.36s)
+
+# Holy, Effect on Retribution: Reverence 25/50% (REV50), RB1 default build, commit d97252f2a
+RESULT dur=180 buffs=none propose="" dps=315.2 tto=88.8 oom=68.9
+RESULT dur=180 buffs=none propose="REV50" dps=328.4 tto=97.7 oom=60.0
+RESULT dur=300 buffs=none propose="" dps=300.4 tto=88.8 oom=154.7
+RESULT dur=300 buffs=none propose="REV50" dps=316.2 tto=97.7 oom=131.1
+RESULT dur=300 buffs=full propose="" dps=949.2 tto=1275.9 oom=0.0
+RESULT dur=300 buffs=full propose="REV50" dps=949.1 tto=1623.4 oom=0.0
+RESULT dur=120 buffs=full propose="" dps=937.9 tto=554.1 oom=0.0
+RESULT dur=120 buffs=full propose="REV50" dps=937.9 tto=685.8 oom=0.0

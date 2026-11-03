@@ -50,7 +50,7 @@ The Druid values use the development notes of 2 November 2026 (Bloom, Genesis 10
 - **Retribution builds take Reverence 2/2.** RB1 has 7 Holy points in rows 1–2. With 50%, RB1 receives 10.3 mana each sec from Reverence (live: 6.2).
 - **The mana lasts 1.6–2.2 min longer** with Blessing of Wisdom. At fresh level 60, plan 1 + 3 lasts 5 min 20 sec (live: 3 min 43 sec).
 - **Damage in fights of 5 min (model, Blessing of Wisdom).** Fresh level 60 +2.8%, pre-raid +3.0%, Molten Core +2.1%. Blackwing Lair +0.8%, Naxxramas 0%. Fights of 3 min do not change.
-- **wowsims, RB1:** no buffs at fresh level 60, +4.1% in 3 min (303 → 315) and +5.2% in 5 min (288 → 303). Full raid buffs: 0% (906 in 2 min, 914 in 5 min).
+- **wowsims, RB1:** no buffs at fresh level 60, +4.2% in 3 min (315 → 328) and +5.3% in 5 min (300 → 316). Full raid buffs: 0% (938 in 2 min, 949 in 5 min).
 - **This is accepted.** The gain is small and it decreases with gear. Sacred Arbiter +10% stays the balance lever (W15).
 
 ## C-H7. Light's Vigil: a buff on Holy Shock (live: a cast on an ally)
