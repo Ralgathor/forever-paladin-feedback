@@ -2,7 +2,7 @@
 
 **Question.** How well does the Holy Paladin heal against the other healers of Forever: Priest, Druid and Shaman?
 
-The design goal of Holy is a healer for long fights and the best healer on one target. It does not need to be the best raid healer. One Holy talent proposal stays: Reverence 25/50% (C-H1). The other values are for the live Holy Paladin.
+The design goal of Holy is a healer for long fights and the best healer on one target. It does not need to be the best raid healer. Two Holy talent proposals stay: Reverence 25/50% (C-H1) and Light's Vigil (C-H7). The other values are for the live Holy Paladin.
 
 All values are healing each sec after overhealing, at 715 healing power, from the healing model. A critical heal heals for 225% (Holy Power 5/5, main hypothesis since 2 November).
 
@@ -17,7 +17,8 @@ The Druid, Shaman and Priest values use the development notes of 2 November 2026
 - **Why the Druid gains.** Bloom heals for 100% of Spirit each time a Rejuvenation or Regrowth ends, and Genesis now gives +10%. These gains are larger than the loss of Gift of the Earthmother.
 - **The Paladin has the least mana.** Reverence keeps only 30% of the Spirit regeneration during casts. The other healers keep 50%. Reverence 50% (C-H1) gives the same 50%.
 - **The one-tank result uses the 225% hypothesis.** Holy Power can change it. At 175%, the Paladin is 8–15% below the Druid. A live test must give the real value (Open items).
-- **Reverence 50% (C-H1) is the Holy proposal (2 November).** It gives +3 to +5 points in raids. On one tank, the Paladin is then 3–9% above the Druid at 225%. It has no link to critical heals. Lingering Light (C-H2) is withdrawn.
+- **Light's Vigil (C-H7) is the raid proposal (3 November).** A Holy Shock with the buff also heals the party for 35% of the heal, once each 6 sec. Raid: +24 to +32 points. With Reverence 50% (C-H1), the Paladin is 4–5% above the Druid in raids of 5 and 10 min (225%). No change on one tank.
+- **Reverence 50% (C-H1) is the Holy proposal for mana (2 November).** It gives +3 to +5 points in raids. On one tank, the Paladin is then 3–9% above the Druid at 225%. It has no link to critical heals. Lingering Light (C-H2) is withdrawn.
 
 ## 1. Raid healing
 
@@ -131,12 +132,14 @@ The Holy Power text says: "increases the critical heal bonus of Holy spells by 5
 
 ## 7. Options examined
 
-Reverence 50% (C-H1) is a proposal. The other options are withdrawn (see Withdrawn ideas). The values use 225%.
+Reverence 50% (C-H1) and Light's Vigil (C-H7) are proposals. The other options are withdrawn (see Withdrawn ideas). The values use 225%.
 
 | Option | Raid against the Druid, 3 / 5 / 10 min | One tank against the Druid, 3 / 5 / 10 min |
 | --- | --- | --- |
 | Live version | −34% / −30% / −32% | +1% / +3% / −5% |
 | **Reverence 50% (C-H1, proposal)** | **−30% / −25% / −27%** | **+6% / +9% / +3%** |
+| **Light's Vigil (C-H7, proposal)** | **−10% / −1% / 0%** | **+1% / +3% / −5%** |
+| **Reverence 50% and Light's Vigil (C-H1 and C-H7)** | **−7% / +4% / +5%** | **+6% / +9% / +3%** |
 | Lingering Light 2/2 (C-H2) | −29% / −25% / −28% | +8% / +10% / +2% |
 | Reverence 50% and Lingering Light 2/2 | −25% / −20% / −21% | +13% / +16% / +10% |
 | Boundless Light also +15% critical chance for Flash of Light | −24% / −17% / −18% | +1% / +3% / −5% |
@@ -147,6 +150,24 @@ Reverence 50% (C-H1) is a proposal. The other options are withdrawn (see Withdra
 - **Lingering Light alone** gives about the same raid gain, but its value grows with the critical heal size. At 225% and at 175%, it gives +7 and +5 points on one tank. Reverence gives +5–8 and +4–8 points. Reverence has no link to critical heals, thus it is the proposal (decision of 2 November).
 - **Boundless Light for Flash of Light** changes only the raid values, because the tank has Oath of Light.
 - **Infusion of Light on all hits (C-H3)** adds nothing in the model, because the Paladin casts almost only Flash of Light.
+- **Light's Vigil (C-H7)** gives +24 to +32 points in raids and no change on one tank. With Reverence 50%, the Paladin is 4–5% above the Druid in raids of 5 and 10 min, and 7% below in fights of 3 min. Model: `models/beta-30-oct/light_vigil_ch7.py`.
+
+**Light's Vigil: options examined (3 November)**
+
+The values are raid healing against the Shaman, 225%, 3 / 5 / 10 min, without Reverence 50%. Live: −8% / −7% / −9%.
+
+| Option | Raid against the Shaman | Why not the proposal |
+| --- | --- | --- |
+| **Buff on Holy Shock, 6 sec, party heal 35% (C-H7)** | **+25% / +30% / +35%** | Proposal |
+| The same, party heal 25% / 30% | +14% / +18% / +21% and +20% / +24% / +28% | Smaller raid value. Decision of 3 November: 35% |
+| The same, 8 sec cooldown, party heal 40% | +20% / +26% / +29% | Fewer and larger heals. Smaller value in fights of 3 min |
+| Live spell, instant, 20 sec cooldown | +11% / +18% / +21% | Still two casts for one party heal |
+| Light's Vigil releases your Seal on the party of an ally (Seal of Light: party heal) | +13% / +20% / +23% (15 sec cooldown) | Three Seals have no model. It consumes the Seal |
+| Heal over time on the party, Holy Shock ends it for a burst | +22% / +20% / +18% (75% cost, 1.5 × the live heal) | Small changes in cost give large changes in value. Close to Swiftmend (Druid) |
+| Stacks from heals on the Oath target, Holy Shock uses them (3 stacks) | +15% / +20% / +18% | The value depends on how much the Paladin heals one target (+5% to +29%) |
+| Charges from critical heals, Judgement and Holy Strike (3 charges) | +20% / +22% / +21% (melee), +13% / +16% / +14% (ranged) | 3 charges spent on a party heal are the Holy Power of a later expansion. Ranged Paladins receive 5–7% less |
+| Charges as above, Holy Shock critical heals also give a charge | +23% / +22% / +22% (party heal 20%) | A loop: about 6 Holy Shocks from 3 charges. Holy Shock replaces Flash of Light |
+| Live spell + your Holy damage heals the party of the target | about +10% | The value depends on spell damage from items. Close to a later-expansion healer |
 
 ## 8. Inputs of the model
 
