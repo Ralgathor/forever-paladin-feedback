@@ -22,7 +22,7 @@ This folder gives the best build and the stat weights of each spec. It uses the 
 | Retribution | DPS, fresh 60 | 315 | 303 | +4.1% |
 
 - **Holy.** Reverence 50% (C-H1) gives +5–9% healing, more in long fights. HB2 takes Devoted Sacrifice (C-P11) with the free points.
-- **Protection.** Redoubt (C-P1) removes almost all crushing blows and adds threat with more Holy Shield blocks.
+- **Protection.** Redoubt (C-P1) removes almost all crushing blows and adds threat with more Holy Shield blocks. Righteous Fury (C25) multiplies all threat by 1.42.
 - **Retribution.** Reverence 50% (C-H1) adds mana at fresh 60. In a raid, the proposed and live trees give the same damage.
 
 ## Common rules
