@@ -1,9 +1,10 @@
 # Holy
 
-The live version changes most of the Holy tree. Oath of Light, Boundless Light and the new Holy Power make the Paladin the best healer on one tank. This is the design goal of Holy. In raids, the Paladin stays below the other healers (see Beta test results). Holy is not a raid healer first, but the live Light's Vigil does not work as a group heal. Two Holy proposals stay: Reverence 25/50% (C-H1) and a new Light's Vigil (C-H7). The spell changes (C2, C4, C5) also apply to Holy.
+The live version changes most of the Holy tree. Oath of Light, Boundless Light and the new Holy Power give the Paladin its single-target healing. The design goal of Holy is the best healer on one tank. At a 175% critical heal, the Druid has this place (W14). In raids, the Paladin stays below the other healers (see Beta test results). Holy is not a raid healer first, but the live Light's Vigil does not work as a group heal. Three Holy proposals stay: Reverence 25/50% (C-H1), a new Light's Vigil (C-H7) and Oath of Light 30% (C-H8). The spell changes (C2, C4, C5) also apply to Holy.
 
 - More mana in long fights: Reverence keeps 50% of the mana regeneration during casts, as the healer talents of the other classes (Reverence, C-H1).
 - A capstone that Holy uses: Light's Vigil becomes a buff on Holy Shock. Each 6 sec, one Holy Shock also heals the party of the target (Light's Vigil, C-H7).
+- The best healer on one tank: Oath of Light gives 30% more healing on its target, in place of flat values (Oath of Light, C-H8).
 
 ## Holy layout
 
@@ -12,7 +13,7 @@ The live version changes most of the Holy tree. Oath of Light, Boundless Light a
 | 1 (0) | Spiritual Focus, Divine Strength | 10 |
 | 2 (5) | Healing Light, Reverence (C-H1), Improved Seals, Purifying Power | 12 |
 | 3 (10) | Divine Favor, Illumination, Holy Conduit | 8 |
-| 4 (15) | Divine Precision, Infusion of Light, Oath of Light | 5 |
+| 4 (15) | Divine Precision, Infusion of Light, Oath of Light (C-H8) | 5 |
 | 5 (20) | Consecrated Ground, Holy Shock, Boundless Light | 5 |
 | 6 (25) | Holy Power | 5 |
 | 7 (30) | Light's Vigil (C-H7) | 1 |
@@ -39,7 +40,7 @@ The live version changes most of the Holy tree. Oath of Light, Boundless Light a
 The Druid values use the development notes of 2 November 2026 (Bloom, Genesis 10%, no Gift of the Earthmother). See Analysis, Healing.
 
 - **HB2 heals 6–9% more than HB1.** The gain increases with the fight length: +5.5% / +6.5% / +8.7% in raids.
-- **At 175% (main hypothesis),** the Druid stays first on one tank, but the gap decreases by 4–8 points. The Druid is then the best healer on one target. This is not the design goal of Holy (W14).
+- **At 175% (main hypothesis),** the Druid stays first on one tank, but the gap decreases by 4–8 points. The Druid is then the best healer on one target. This is not the design goal of Holy (W14). Oath of Light (C-H8) gives the first place to the Paladin.
 - **At 225%,** Reverence gives the Paladin the first place on one tank in all fight lengths. At 900 healing power, it is +7% / +10% / +5%. The lead stays far below the 20% limit (W14).
 - **Raids.** About +3 to +5 points: the Paladin stays 33–37% below the Druid. Light's Vigil (C-H7) gives the raid healing.
 - **Only one Holy healing talent.** Before the notes of 2 November 2026, a second healing talent gave a tank lead past the 20% limit. Now it gives 10–16% (see Analysis, Healing, part 7). Reverence 50% is a proposal again since 2 November 2026.
@@ -58,7 +59,7 @@ The Druid values use the development notes of 2 November 2026 (Bloom, Genesis 10
 - **Proposed text.** "Your Holy Shock, Judgement and Holy Strike grant Light's Vigil for 30 sec, stacking up to 3 times. May only occur once every 6 sec. Casting Holy Shock consumes one stack, causing that Holy Shock to incur no cooldown and, when cast on an ally, to heal each member of the target's party for 60% of the amount healed."
 - **Problem.** Rank 3 costs 1,340 mana, 89% of the base mana. It needs two casts (3 sec) for one party heal. It heals 4.7 for each mana point (Flash of Light: 6.2). In the model, the Paladin casts it only in fights of 3 min. In raids, the Paladin is 37–40% below the Druid and 17–18% below the Shaman.
 - **Model.** Riptide (Shaman capstone) adds a bonus to Chain Heal. Prayer of Mending (Priest capstone) is an efficient group heal with a cooldown. Light's Vigil (C-H7) adds a party heal to Holy Shock, with a cooldown of 6 sec.
-- **Why this design.** One spell (Holy Shock) does the work. The talent keeps the name, the 30 sec, the 6 sec and the "next Holy Shock triggers no cooldown" rule of the live talent. Each stack is one Holy Shock with no cooldown. No spell uses more than one stack, thus the stacks are not a resource for a finisher. The party heal is a % of the Holy Shock heal, thus it increases with the rank, the level, healing power and critical heals.
+- **Why this design.** One spell (Holy Shock) does the work. The talent keeps the name, the 30 sec, the 6 sec and the "next Holy Shock triggers no cooldown" rule of the live talent. Each stack is one Holy Shock with no cooldown. No spell uses more than one stack, thus the stacks are not a resource for a finisher. The party heal is a % of the Holy Shock heal, thus it increases with the rank, the level, healing power and critical heals. The text uses the pattern of Unsealed Wrath (Retribution capstone): first the spells that give a stack and the stack limit, then the spell that consumes a stack and its effect.
 
 **How it works**
 
@@ -81,7 +82,7 @@ The Druid values use the development notes of 2 November 2026 (Bloom, Genesis 10
 
 - **Raids.** With both Holy proposals, the Paladin is 3–4% below the Druid in fights of 5 and 10 min, and 14% below in fights of 3 min (175%). It stays 13–15% below the Priest.
 - **Party heal 60%.** The value comes from the 175% hypothesis (decision of 3 November). At 35%, the Paladin is 18–25% below the Druid. At 70%, it is above the Druid in fights of 5 and 10 min. If the Holy Power test gives 225%, decrease the party heal to 35%: the Paladin is then 5% below the Druid in fights of 5 and 10 min.
-- **One tank.** No change. The party heal goes to 5 players, thus the tank receives only a small part. The one-tank values come from Reverence 50% (C-H1) only. At 175%, the Druid stays first on one tank (W14).
+- **One tank.** No change. The party heal goes to 5 players, thus the tank receives only a small part. The one-tank values come from Reverence 50% (C-H1) only. At 175%, the Druid stays first on one tank (W14). Oath of Light (C-H8) gives the first place to the Paladin.
 - **Cast plan.** About 51 Holy Shocks with Light's Vigil in 5 min (one each 6 sec). Flash of Light stays the main heal.
 - **Healing for each mana point.** A Holy Shock with Light's Vigil heals about 3,940 (raid, before overhealing): 985 on the target and 5 × 590 on the party. This is 11.3 healing for each mana point after overhealing. The party heal has 50% overhealing, as Wild Growth: it heals all 5 players, also the players at full health. Prayer of Mending gives 15.7.
 - **Group burst.** With 3 stacks, four Holy Shocks with Light's Vigil heal about 15,800 in 6 sec, for about 820 mana. In 10 sec, with Flash of Light or a plain Holy Shock after them, they heal about 20,700 at all ranges. With 1 stack, about 9,700 in 6 sec. Priest: about 15,000 in 10 sec (Prayer of Mending and two Prayer of Healing). Druid: about 11,100 (two Wild Growth). Shaman: about 10,000 (four Chain Heal). The live talent with a Vigil on 4 parties: about 22,900 in 6 sec, for 4,190 mana.
@@ -93,3 +94,36 @@ The Druid values use the development notes of 2 November 2026 (Bloom, Genesis 10
 - **The value depends on the critical heal size.** The Holy Power test (Open items) gives the real value. With both proposals, the raid values at 225% are 13–16 points higher than at 175%.
 
 Model: `models/beta-30-oct/light_vigil_ch7.py`.
+
+## C-H8. Oath of Light: 30% (live: +400 / +115 / +229)
+
+- **Live text.** "Swear an Oath to protect target ally for 5 min, increasing the healing of your Holy Light on them by up to 400, your Flash of Light by up to 115, and your Holy Shock by up to 229. Only one Oath of Light may be sworn by the Paladin at any one time." 1 point, row 4.
+- **Proposed text.** "Swear an Oath to protect target ally for 5 min, increasing the healing of your Holy Light, Flash of Light and Holy Shock on them by 30%. Only one Oath of Light may be sworn by the Paladin at any one time."
+- **Problem.** At a 175% critical heal, the Druid is the best healer on one tank. With Reverence 50% (C-H1), the Paladin is 3–7% below the Druid (W14). Also, the flat values give a smaller % with better gear. At 715 healing power, they give Holy Light +19%, Flash of Light +19% and Holy Shock +37%. At 900, they give +18%, +17% and +32%. Forever talents give a % (W27).
+- **Model.** Spiritual Healing (Priest) and Purification (Shaman) increase the heals by a %. Oath of Light gives a larger %, on one ally only.
+- **Why this talent.** Oath of Light is the single-target talent of Holy. It helps only one ally, thus the raid healing does not change. Light's Vigil (C-H7) stays the raid talent, and Oath of Light becomes the tank talent. A % also gives the same bonus to all ranks of Holy Light (the live text says "up to 400").
+
+**Healing model, one tank, 715 healing power, with Reverence 50% (C-H1) and Light's Vigil (C-H7), 3 / 5 / 10 min**
+
+| Critical heal | Oath of Light | Against the Druid | Against the Shaman | Against the Priest |
+| --- | --- | --- | --- | --- |
+| 175% (main hypothesis) | Live | −5% / −3% / −7% | +17% / +23% / +25% | +14% / +18% / +18% |
+| **175% (main hypothesis)** | **30% (C-H8)** | **+4% / +7% / +2%** | **+28% / +34% / +37%** | **+25% / +29% / +29%** |
+| 225% | Live | +6% / +9% / +3% | +31% / +37% / +39% | +27% / +31% / +31% |
+| 225% | 30% | +16% / +19% / +13% | +43% / +50% / +52% | +39% / +43% / +44% |
+| 225% | 20% (the 225% value) | +7% / +10% / +4% | +32% / +38% / +40% | +28% / +32% / +33% |
+
+- **At 175% (main hypothesis),** the Paladin is first on one tank in all fight lengths: 2–7% above the Druid. At 900 healing power, it is +7% / +11% / +6%. This is the design goal of Holy, below the 20% limit (W14).
+- **Why 30%.** It is the only value of the model that puts the Paladin above the Druid in all fight lengths at 175%. 25% gives the Druid level (0% / +3% / −2%). 35% gives +5% to +11%, and +15% at 900 healing power.
+- **The value for 225%.** At 225%, 30% gives 13–19% above the Druid at 715 healing power, and 17–23% at 900. This is past the 20% limit. If the Holy Power test gives 225%, decrease the value to 20%. The tank healing is then near the live value: 4–10% above the Druid (900: 8–14%).
+- **Without Reverence 50% (C-H1),** the Paladin is 7% below to 1% above the Druid at 175%.
+- **Raids.** No change. The model gives no raid heal to the Oath target.
+- **Recovery after a large hit (175%).** With all cooldowns, the Druid is 1–2% above the Paladin (live: 8%). With short cooldowns only, the Paladin is 18% above the Druid after 3 sec (live: 11%). At 225%, 30% gives 18–24% above the Druid with all cooldowns, and 20% gives 9–14%.
+- **Maximum.** The raw healing each sec for 30 sec on one tank is 1,493 (live: 1,368, Druid: 1,312).
+- **Shaman and Priest.** On one tank, the Paladin is 25–37% above them (live: 14–25%). The Druid is the healer to compare, because it is the best single-target healer of the other classes.
+- **PvP.** The Paladin can put the Oath on itself. At 300 to 900 healing power, Holy Shock receives +151 to +237 (live: +256). Thus the instant self-heal decreases. Holy Light receives +603 to +747 (live: +448), and Flash of Light +147 to +233 (live: +129). An enemy can interrupt the 2.5 sec cast of Holy Light.
+- **Gear.** The bonus increases with healing power, as the healing talents of the other classes.
+- **Healing Light and Oath of Light.** The model multiplies the two % (×1.12 × 1.30). If the game adds them (+42%), the Paladin is +2% / +4% / −1% against the Druid at 175%, and +10% to +16% at 225%. A live test gives the rule (Open items).
+- **Builds.** On one tank, HB2 heals 755 / 658 / 571 (live Oath of Light: 690 / 602 / 522). Oath of Light gives 23% of the HB2 healing on one tank (live: 16% of HB1).
+
+Model: `models/beta-30-oct/oath_light_ch8.py`.

@@ -13,15 +13,15 @@ This folder gives the best build and the stat weights of each spec. It uses the 
 
 | Spec | Measure | Proposed | Live | Proposed against live |
 | --- | --- | --- | --- | --- |
-| Holy | Healing each sec, raid, 5 min | 568 | 533 | +6.6% |
-| Holy | Healing each sec, one tank, 5 min | 670 | 633 | +5.8% |
+| Holy | Healing each sec, raid, 5 min | 728 | 479 | +52% |
+| Holy | Healing each sec, one tank, 5 min | 658 | 568 | +16% |
 | Protection | Threat each sec | 1,007 | 953 | +5.7% |
 | Protection | Damage taken each sec | 291 | 325 | −10% |
 | Protection | TMI (lower is better) | 45.0 | 55.5 | −19% |
 | Retribution | DPS, raid | 910 | 910 | 0% |
 | Retribution | DPS, fresh 60 | 315 | 303 | +4.1% |
 
-- **Holy.** Reverence 50% (C-H1) gives +5–9% healing, more in long fights. HB2 takes Devoted Sacrifice (C-P11) with the free points.
+- **Holy.** Light's Vigil (C-H7) gives the raid healing. Oath of Light 30% (C-H8) gives the one-tank healing. Reverence 50% (C-H1) gives +5–9% healing, more in long fights. HB2 takes Devoted Sacrifice (C-P11) with the free points.
 - **Protection.** Redoubt (C-P1) removes almost all crushing blows and adds threat with more Holy Shield blocks. Righteous Fury (C25) multiplies all threat by 1.42.
 - **Retribution.** Reverence 50% (C-H1) adds mana at fresh 60. In a raid, the proposed and live trees give the same damage.
 

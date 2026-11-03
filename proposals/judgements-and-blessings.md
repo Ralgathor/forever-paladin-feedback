@@ -31,7 +31,7 @@
 
 - **Adopted.** The live version removes Blessing of Light and Greater Blessing of Light, as Blessing of Light removal (C3) asked. C3 is no longer a proposal.
 - **Oath of Light.** The live version adds Oath of Light, a Holy row 4 talent. It gives the Blessing of Light bonus (+400 Holy Light, +115 Flash of Light) and +229 Holy Shock, on one ally only.
-- **Oath of Light stays.** Oath of Light does not change. Healing Light keeps 4/8/12%.
+- **Oath of Light: a %.** Oath of Light (C-H8) gives 30% more healing to Holy Light, Flash of Light and Holy Shock on its target, in place of the flat values (see Holy). Healing Light keeps 4/8/12%.
 
 ## C4. Hand of Sacrifice: a damage pool
 
