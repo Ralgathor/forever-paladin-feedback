@@ -1,6 +1,6 @@
 # Forever Paladin Talent Proposals
 
-This document gives talent proposals for the WoW Forever Paladin. It has 13 changes and 1 move. The proposals use the live trees of 4 November 2026. The live version adopts 6 earlier proposals, and makes 20 others unnecessary. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same game build as a model.
+This document gives talent proposals for the WoW Forever Paladin. It has 14 changes and 1 move. The proposals use the live trees of 4 November 2026. The live version adopts 6 earlier proposals, and makes 20 others unnecessary. The proposals follow the rules that Forever uses for the other classes. Each proposal uses a talent from another class in the same game build as a model.
 
 **Contents**
 
@@ -35,6 +35,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 13 chan
 | C25 | Righteous Fury | Baseline spell | All threat +33%, Holy threat +90% more | All threat +90%, Holy threat +90% more. Alternative C25a: all threat +80% |
 | C-H1 | Reverence | Holy, row 2 | 15/30% of the mana regeneration continues during casts | 25/50% |
 | C-H7 | Light's Vigil | Holy, row 7 | A cast on an ally (1,340 mana): the next Holy Shock on the ally has no cooldown and heals the party | Holy Shock, Judgement and Holy Strike give a stack of a buff for 30 sec, once each 6 sec, up to 3 stacks. With the buff, the next Holy Shock has no cooldown and uses one stack. On an ally, it also heals each party member for 60% of the heal |
+| C-H8 | Oath of Light | Holy, row 4 | On one ally: Holy Light +400, Flash of Light +115, Holy Shock +229 | On one ally: Holy Light, Flash of Light and Holy Shock +30%. With a 225% critical heal: +20% |
 | C-P1 | Redoubt | Protection, row 1 | 10% chance when you are hit: +6–30% block | The same. Each Holy Shield cast also starts it |
 | C-P5 | Shoulder the Burden (new) | Baseline spell | — | 50% of the threat of an ally moves to you, 5 min cooldown |
 | C-P7 | Reach of Law (new) | Protection, row 5 | — | 2 ranks, requires Swift Judgement: Judgement and Swift Judgement range +5/10 yards while Seal of Fury is active |

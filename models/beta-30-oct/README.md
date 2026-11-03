@@ -11,6 +11,7 @@ These scripts run the models of the Analysis tabs on the beta trees of 30 Octobe
 | threat_tables_b2.py | `python3 threat_tables_b2.py ..` | All tables of Analysis, Threat: beta and proposed Paladin, gear tiers, flatter gear and groups of enemies |
 | holy_proposals_b2.py | `python3 holy_proposals_b2.py` | Reverence 50% (C-H1, proposal since 2 November) and Lingering Light (C-H2, withdrawn) against the Druid: raid and one tank |
 | light_vigil_ch7.py | `python3 light_vigil_ch7.py` | Light's Vigil (C-H7): raid and one tank against the Druid and the Shaman, with and without Reverence 50% (C-H1). Party heal % and cooldown options, group burst |
+| oath_light_ch8.py | `python3 oath_light_ch8.py` | Oath of Light (C-H8): 20/25/30/35% in place of the flat values, with C-H1 and C-H7. One tank against the Druid, the Shaman and the Priest, raid, maximum, recovery after a large hit and the Oath bonus by healing power |
 | retribution_b2.py | `python3 retribution_b2.py ../damage` | Retribution with Unsealed Wrath: Holy Strike Seal trigger (C1, withdrawn on 2 November 2026), Burning Zeal (C-R4), Seal plans and mana (W29), against the pure average. Start value: wowsims of 1 November (906 DPS), build 14/6/31 |
 | damage_tables_b2.py | `python3 damage_tables_b2.py ../damage` | Analysis, Damage: stats, sources, increase with gear, % of Fury, the C1 review, Judgement of the Crusader and stat values |
 | pvp_burst_b2.py | `python3 pvp_burst_b2.py` | PvP burst in one Hammer of Justice stun, and Reckoning charges in PvP (W6), beta and proposed |

@@ -2,7 +2,7 @@
 
 **Question.** How well does the Holy Paladin heal against the other healers of Forever: Priest, Druid and Shaman?
 
-The design goal of Holy is a healer for long fights and the best healer on one target. It does not need to be the best raid healer. Two Holy talent proposals stay: Reverence 25/50% (C-H1) and Light's Vigil (C-H7). The other values are for the live Holy Paladin.
+The design goal of Holy is a healer for long fights and the best healer on one target. It does not need to be the best raid healer. Three Holy talent proposals stay: Reverence 25/50% (C-H1), Light's Vigil (C-H7) and Oath of Light 30% (C-H8). The other values are for the live Holy Paladin.
 
 All values are healing each sec after overhealing, at 715 healing power, from the healing model. A critical heal heals for 175% (Holy Power 5/5, main hypothesis since 3 November).
 
@@ -19,6 +19,7 @@ The Druid, Shaman and Priest values use the development notes of 2 November 2026
 - **The results use the 175% hypothesis.** Holy Power can change them. At 225%, the Paladin is 5% below to 3% above the Druid on one tank. A live test must give the real value (Open items).
 - **Light's Vigil (C-H7) is the raid proposal (3 November).** A Holy Shock with the buff also heals the party for 60% of the heal, once each 6 sec. Raid: +23 to +32 points. With Reverence 50% (C-H1), the Paladin is 3–4% below the Druid in raids of 5 and 10 min. No change on one tank.
 - **Reverence 50% (C-H1) is the Holy proposal for mana (2 November).** It gives +3 to +5 points in raids. On one tank, the Paladin is then 3–7% below the Druid. It has no link to critical heals. Lingering Light (C-H2) is withdrawn.
+- **Oath of Light 30% (C-H8) is the one-tank proposal (3 November).** It gives 30% to Holy Light, Flash of Light and Holy Shock on the Oath target, in place of the flat values. With Reverence 50% and Light's Vigil, the Paladin is 2–7% above the Druid on one tank. No change in raids. At 225%, the value is 20%.
 
 ## 1. Raid healing
 
@@ -53,6 +54,7 @@ Only the heals on the tank. The tank has Oath of Light. "Maximum" is the raw hea
 - **The Paladin mana is the limit,** most in fights of 10 min. Reverence 50% (C-H1) decreases the gap to 3–7%. The Druid stays first.
 - **The Paladin maximum is the highest:** 2–4% above the Druid.
 - **The cast plan is almost only Flash of Light,** with Divine Favor and Holy Light each 2 min.
+- **Oath of Light 30% (C-H8)** with Reverence 50% gives 755 / 658 / 571 (Druid 725 / 617 / 562): 2–7% above the Druid. At 900 healing power, it is 6–11% above. The maximum is 1,493. See part 7.
 
 ## 3. Recovery after a large hit
 
@@ -72,6 +74,7 @@ Before the hit, each healer heals the tank as usual. Thus, its heals over time a
 - **With short cooldowns only, the Paladin is first:** 11% above the Druid after 3 sec, 1% after 6 sec. Without Gift of the Earthmother, Rejuvenation and Swiftmend use the full 1.5 sec global cooldown. Bloom does not help in 6 sec.
 - **The Paladin is 16% or more above the Shaman and the Priest** after 6 sec, with all cooldowns.
 - **At 225%,** the Paladin is first with all cooldowns: 16% above the Druid after 3 sec, 10% after 6 sec.
+- **Oath of Light 30% (C-H8), 175%:** 6,334 / 10,034 with all cooldowns (1–2% below the Druid) and 4,595 / 8,294 with short cooldowns only (18% and 8% above the Druid).
 - Power Word: Shield is not in the table. It absorbs about 1,100 damage.
 
 ## 4. Mana
@@ -132,7 +135,7 @@ The Holy Power text says: "increases the critical heal bonus of Holy spells by 5
 
 ## 7. Options examined
 
-Reverence 50% (C-H1) and Light's Vigil (C-H7) are proposals. The other options are withdrawn (see Withdrawn ideas). The values use 175%.
+Reverence 50% (C-H1), Light's Vigil (C-H7) and Oath of Light 30% (C-H8) are proposals. The other options are withdrawn (see Withdrawn ideas). The values use 175%.
 
 | Option | Raid against the Druid, 3 / 5 / 10 min | One tank against the Druid, 3 / 5 / 10 min |
 | --- | --- | --- |
@@ -140,6 +143,9 @@ Reverence 50% (C-H1) and Light's Vigil (C-H7) are proposals. The other options a
 | **Reverence 50% (C-H1, proposal)** | **−37% / −33% / −34%** | **−5% / −3% / −7%** |
 | **Light's Vigil (C-H7, proposal)** | **−17% / −9% / −7%** | **−9% / −8% / −15%** |
 | **Reverence 50% and Light's Vigil (C-H1 and C-H7)** | **−14% / −4% / −3%** | **−5% / −3% / −7%** |
+| **Oath of Light 30% (C-H8, proposal)** | **−40% / −37% / −39%** | **−1% / +1% / −7%** |
+| **All three Holy proposals (C-H1, C-H7 and C-H8)** | **−14% / −4% / −3%** | **+4% / +7% / +2%** |
+| Oath of Light 20% / 25% / 35%, with C-H1 and C-H7 | −14% / −4% / −3% | −4% / −2% / −6%, +0% / +3% / −2%, +8% / +11% / +5% |
 | Lingering Light 2/2 (C-H2) | −37% / −34% / −36% | −4% / −3% / −10% |
 | Reverence 50% and Lingering Light 2/2 | −34% / −29% / −30% | +0% / +3% / −2% |
 | Boundless Light also +15% critical chance for Flash of Light | −34% / −28% / −29% | −9% / −8% / −15% |
@@ -151,6 +157,7 @@ Reverence 50% (C-H1) and Light's Vigil (C-H7) are proposals. The other options a
 - **Boundless Light for Flash of Light** changes only the raid values, because the tank has Oath of Light.
 - **Infusion of Light on all hits (C-H3)** adds nothing in the model, because the Paladin casts almost only Flash of Light.
 - **Light's Vigil (C-H7)** gives +23 to +32 points in raids and no change on one tank. With Reverence 50%, the Paladin is 3–4% below the Druid in raids of 5 and 10 min, and 14% below in fights of 3 min. The party heal has 50% overhealing, as Wild Growth. With 3 stacks, the group burst is about 15,800 in 6 sec and 20,700 in 10 sec. Divine Favor on the first Holy Shock adds about 6%.
+- **Oath of Light 30% (C-H8)** is the only value of the model that puts the Paladin above the Druid on one tank in all fight lengths at 175%. At 900 healing power, it gives +7% / +11% / +6%. At 225%, it gives +13% to +19% (900: +17% to +23%), past the 20% limit. Thus at 225%, the value is 20%: +4% to +10% (900: +8% to +14%). Oath of Light helps only one ally, thus the raid values do not change. Model: `models/beta-30-oct/oath_light_ch8.py`.
 - **The party heal of 60% depends on 175%.** At 225%, a 60% party heal with Reverence 50% puts the Paladin 11–13% above the Druid in raids of 5 and 10 min. Then 35% gives the Druid level again (5% below). Model: `models/beta-30-oct/light_vigil_ch7.py`.
 
 **Light's Vigil: options examined (3 November)**
@@ -184,7 +191,7 @@ The values are raid healing against the Shaman, 3 / 5 / 10 min, without Reverenc
 
 - Holy: Healing Light 3/3 (+12%), Reverence 2/2, Illumination 5/5, Divine Favor, Holy Shock, Holy Power 5/5, Boundless Light 2/2, Light's Vigil, Purifying Power 1.
 - Divine Intellect 5/5, Benediction 5/5, Conviction 3/3 (+6% critical chance). Base spell critical chance 3.5% (game files).
-- Oath of Light on one ally: Holy Light +400, Flash of Light +115, Holy Shock +229.
+- Oath of Light on one ally: Holy Light +400, Flash of Light +115, Holy Shock +229. Oath of Light (C-H8): +30% to the three heals, on the full heal.
 - Boundless Light 2/2: Holy Shock +30% critical chance on an ally with no Oath of Light.
 - Light's Vigil rank 3: 1,340 mana. The next Holy Shock heals each party member for 684–724.
 
@@ -205,7 +212,7 @@ The values are raid healing against the Shaman, 3 / 5 / 10 min, without Reverenc
 ## 9. Method and limits
 
 - **Source.** The model uses the method of the DoubleZug sheets for the Forever healers. Three reviews corrected it (22 October 2026). A check against the game files in wowsims Forever (23 October 2026) corrected the Paladin critical chance, Regrowth and Chain Heal.
-- **Scripts.** `models/healing/healing_model.py` (Priest, Druid, Shaman, solver; `NOTES_NOV2` gives the notes of 2 November), `models/beta-30-oct/healing_b2.py` (Paladin), `recovery_b2.py` (part 3), `holy_proposals_b2.py` (part 7), `healing_sens_b2.py` (parts 5, 6 and 9).
+- **Scripts.** `models/healing/healing_model.py` (Priest, Druid, Shaman, solver; `NOTES_NOV2` gives the notes of 2 November), `models/beta-30-oct/healing_b2.py` (Paladin), `recovery_b2.py` (part 3), `holy_proposals_b2.py` (part 7), `healing_sens_b2.py` (parts 5, 6 and 9), `light_vigil_ch7.py` and `oath_light_ch8.py` (part 7).
 - **Holy Power** is the largest open question (part 6). The model uses 175%.
 - **Prayer of Mending.** The model gives it 5 targets. With 3 targets, the raid Priest gives 777, not 939.
 - **Omen of Clarity.** With 2 free Wild Growth casts each min, the raid Druid gives 1,031, not 946.
