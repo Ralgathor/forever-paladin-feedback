@@ -10,7 +10,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 13 changes and 1 move for the live trees. 4 changes are baseline spell changes (C2, C4, C5, C25). Shoulder the Burden (C-P5) is a new baseline spell. 8 changes are talent changes (C-H1, C-H7, C-P1, C-P7, C-P11, C-P13, C-P14, C-R3). Devoted Sacrifice (C-P11) and Reach of Law (C-P7) are new talents. One move: Stoicism to row 4, column 4 (M-P2).
+- **Proposals:** 14 changes and 1 move for the live trees. 4 changes are baseline spell changes (C2, C4, C5, C25). Shoulder the Burden (C-P5) is a new baseline spell. 9 changes are talent changes (C-H1, C-H7, C-H8, C-P1, C-P7, C-P11, C-P13, C-P14, C-R3). Devoted Sacrifice (C-P11) and Reach of Law (C-P7) are new talents. One move: Stoicism to row 4, column 4 (M-P2).
 - **Adopted proposals:** the live version of 4 November 2026 adopts 6 earlier proposals (C3, the C-H1 move, the C-P5 removal, C-R1, M-H5 and M-R1). It also makes 20 other proposals unnecessary ([Withdrawn ideas](proposals/withdrawn-ideas.md)).
 - **Talent calculator:** you can try the proposals and compare them with the live trees.
 - **Analysis:** crushing blows, threat (with burst threat at the pull), PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
