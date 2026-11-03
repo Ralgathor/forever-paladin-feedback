@@ -2,9 +2,9 @@
 Run: python3 light_vigil_ch7.py
 
 Proposed text:
-  Your Holy Shock, Judgement and Holy Strike grant you Light's Vigil for 30 sec. Stacks up to 3 times. May only
-  occur once every 6 sec. Light's Vigil causes your next Holy Shock to incur no cooldown and, when cast on allies,
-  to heal the target's party for 60% of the amount healed. Each Holy Shock expends one Light's Vigil.
+  Your Holy Shock, Judgement and Holy Strike grant Light's Vigil for 30 sec, stacking up to 3 times. May only occur
+  once every 6 sec. Casting Holy Shock consumes one stack, causing that Holy Shock to incur no cooldown and, when cast
+  on an ally, to heal the target's party for 60% of the amount healed.
 
 Model:
 - A Holy Shock with the buff also triggers the buff again when the 6 sec cooldown is over. Thus the Paladin can use
