@@ -31,7 +31,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 **Holy**
 
-- **C-H1 Reverence 25/50% (live: 15/30%, row 2):** more mana regeneration during casts, as the healer talents of the other classes (50%). Holy heals 5–9% more, most in long fights. On one tank, the Paladin is 12–17% above the Druid (225% critical heal), below the 20% limit. It has no link to critical heals, thus it does not depend on the Holy Power test. Retribution also takes it: +4–5% damage at fresh level 60 without buffs (wowsims), 0% with raid buffs.
+- **C-H1 Reverence 25/50% (live: 15/30%, row 2):** more mana regeneration during casts, as the healer talents of the other classes (50%). Holy heals 5–9% more, most in long fights. On one tank, the Paladin is 3–7% below the Druid (175% critical heal), and 3–9% above at 225%, below the 20% limit. It has no link to critical heals, thus it does not depend on the Holy Power test. Retribution also takes it: +4–5% damage at fresh level 60 without buffs (wowsims), 0% with raid buffs.
 
 **Protection**
 

@@ -1,12 +1,12 @@
 """Recovery after a large hit on one tank (repo models/healing/recovery.py), beta of 30 October 2026.
-The Paladin has Oath of Light on the tank (no Boundless Light), Holy Power 5/5 (critical heal 225%), Conviction 3/3.
+The Paladin has Oath of Light on the tank (no Boundless Light), Holy Power 5/5 (critical heal 175%, main case since 3 November), Conviction 3/3.
 Run: python3 recovery_b2.py <repo>/models/healing"""
 import sys
 sys.path.insert(0, sys.argv[1] if len(sys.argv) > 1 else ".")
 import recovery as R
 from recovery import B, GCD, best, HPG, CRIT_BASE, PAL_CRIT
 
-def paladin_burst_b2(hp=HPG, bonus=1.25, conv=0.06, light=1.12):
+def paladin_burst_b2(hp=HPG, bonus=0.75, conv=0.06, light=1.12):
     c = CRIT_BASE + PAL_CRIT + conv
     fol = (308 + 115 + 1.5/3.5*hp) * light
     hl = (1580 + 400 + 2.5/3.5*hp) * light

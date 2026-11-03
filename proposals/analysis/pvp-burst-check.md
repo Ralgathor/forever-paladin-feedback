@@ -10,6 +10,7 @@
 - **The largest burst** is the "Reckoning bomb" with a two-hand weapon: about 3,630 damage in the live version.
 - **Reckoning (C-P12) was withdrawn on 2 November 2026.** It did not change the two-hand bomb. With a shield, it gave the 4 charges 1–3 sec sooner (part 3).
 - **No change to the proposals is necessary.** Watch the bomb in the live version (W6, W26).
+- **Light's Vigil (C-H7) adds a Holy Shock burst.** With 3 stacks, three Holy Shocks hit in one stun: 1,640–2,160 damage. A fourth one at the end of the stun gives 2,180–2,880. Live: one Holy Shock, 550–720. The burst is ready each 18 sec, with no setup. This is accepted for now: watch it in PvP (W30, part 6).
 
 ## 1. Builds
 
@@ -72,7 +73,24 @@ This check was for the withdrawn proposal C-P6. C-P6 released the stored attacks
 - The error of this estimate is about ±25%: 2,270–3,780.
 - Swift Judgement gave about 18% of the burst. When it was on cooldown, the C-P6 total was about 2,490.
 
-## 6. Method and limits
+## 6. Light's Vigil (C-H7) on an enemy
+
+On an enemy, Light's Vigil removes the Holy Shock cooldown. It does not change the Holy Shock damage. Thus each stack gives one more Holy Shock in a burst.
+
+| Case | Holy Shocks in one stun | Holy Shock damage |
+| --- | --- | --- |
+| Live (10 sec cooldown) | 1 | 550–720 |
+| C-H7, 3 stacks | 3 | 1,640–2,160 |
+| C-H7, 3 stacks, a fourth Holy Shock as the stun ends | 4 | 2,180–2,880 |
+
+- **Inputs.** Holy Shock: 348 + 42.9% of spell damage, 400 to 715 spell damage, 10–20% critical hit chance, ×1.5 damage on a critical hit. Holy Power changes only heals.
+- **Order.** Hammer of Justice uses the first global cooldown. Then three Holy Shocks land in the stun. The first Holy Shock gives a fourth stack when the 6 sec limit is over.
+- **Against the Retribution bursts.** The Reckoning bomb does 3,630, Unsealed Wrath 2,400 and the bomb with no stored attacks 2,070. Four Holy Shocks with auto attacks and a Judgement reach the level of the Reckoning bomb.
+- **Differences.** The Holy Shock burst has no setup. It is ready each 18 sec (3 stacks), and Holy Shock has a range of 20 yd. The Reckoning bomb needs 4 stored attacks.
+- **Decision of 3 November.** Light's Vigil keeps its effect on enemies. Watch the burst in PvP (W30). If it is too strong, the next Holy Shock incurs no cooldown only when cast on allies. This change gives no healing loss.
+- **Model.** `models/beta-30-oct/light_vigil_ch7.py` gives the healing burst. The damage values are estimates.
+
+## 7. Method and limits
 
 - **Model.** `models/beta-30-oct/pvp_burst_b2.py`. The values are estimates, not a simulation.
 - **Inputs of the earlier check.** Two-hand weapon: 3.5 sec, 300 damage for each swing. About 1.7 auto attacks during the stun. 25% critical hit chance, ×2 damage. Armor removes 30% of physical damage. Vengeance is not in the model. Seal of Command: 7 procs each min (41% for each swing), each 70% of weapon damage as Holy damage. Judgement of Command on a stunned target: 388–422.

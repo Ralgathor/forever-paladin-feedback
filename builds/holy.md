@@ -6,13 +6,13 @@ This file gives the best healing build on the live trees, the value of each heal
 
 | Trees | Build | Points | Code | Raid, 3 / 5 / 10 min | One tank, 3 / 5 / 10 min |
 | --- | --- | --- | --- | --- | --- |
-| Proposed | HB2 | 31/12/8 | [`v6p50320115202101251-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50320115202101251-50122000000000002-0503) | 664 / 568 / 489 | 768 / 670 / 580 |
-| Live | HB1 | 38/5/8 | [`b250325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b250325115202121251-5-0503) | 629 / 533 / 450 | 732 / 633 / 534 |
+| Proposed | HB2 | 31/12/8 | [`v6p50320115202101251-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50320115202101251-50122000000000002-0503) | 814 / 728 / 647 | 690 / 602 / 522 |
+| Live | HB1 | 38/5/8 | [`b250325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b250325115202121251-5-0503) | 563 / 479 / 404 | 658 / 568 / 480 |
 
-- Healing each sec after overhealing, 715 healing power, 225% critical heals (Holy Power 5/5, main hypothesis).
+- Healing each sec after overhealing, 715 healing power, 175% critical heals (Holy Power 5/5, main hypothesis since 3 November).
 - In both trees, all healing talents fit in 51 points. Thus, the best healing build takes all of them. The other points give only utility.
-- HB2 heals 5–9% more than HB1 with Reverence 50% (C-H1). The gain increases with the fight length. HB2 also takes Devoted Sacrifice (C-P11) and Protection saves in place of Improved Seals and Consecrated Ground.
-- **Stat weights.** MP5 is the best stat for each point in all fight lengths (2.3–3.3 healing power). Intellect is about 1 healing power, crit rating 1.4–1.7 (part 3).
+- HB2 heals 45–60% more than HB1 in raids, with Light's Vigil (C-H7) and Reverence 50% (C-H1). On one tank, it heals 5–9% more, from Reverence 50% only. The gain increases with the fight length. HB2 also takes Devoted Sacrifice (C-P11) and Protection saves in place of Improved Seals and Consecrated Ground.
+- **Stat weights.** MP5 is the best stat for each point in all fight lengths (2.3–3.3 healing power). Intellect is 0.7–1.3 healing power, crit rating 1.1–1.4 (part 3).
 
 ## 1. Builds
 
@@ -39,20 +39,20 @@ The healing without the talent, 5 min fight, against HB1. Reverence 50%: against
 
 | Talent | Raid | One tank |
 | --- | --- | --- |
-| Reverence 50% in place of 30% (C-H1, HB2 only) | −6.2% | −5.5% |
-| Reverence 2/2 and Illumination 5/5 (Illumination needs Reverence) | −20.7% | −20.7% |
-| Holy Power 5/5 (225% critical heals) | −15.3% | −15.3% |
-| Illumination 5/5 | −11.9% | −11.9% |
+| Reverence 50% in place of 30% (C-H1, HB2 only) | −6.1% | −5.6% |
+| Reverence 2/2 and Illumination 5/5 (Illumination needs Reverence) | −21.0% | −21.0% |
+| Illumination 5/5 | −12.0% | −12.0% |
 | Healing Light 3/3 | −10.7% | −10.7% |
-| Conviction 3/3 | −7.7% | −7.7% |
-| Divine Intellect 5/5 | −2.7% | −2.7% |
-| Divine Favor | −2.6% | −2.7% |
+| Conviction 3/3 | −6.0% | −6.0% |
+| Holy Power 5/5 (175% critical heals) | −5.7% | −5.7% |
+| Divine Intellect 5/5 | −2.6% | −2.6% |
+| Divine Favor | −1.9% | −2.0% |
 | Benediction 5/5 | 0% | 0% |
 | Boundless Light 2/2 | 0% | 0% |
 | Light's Vigil | 0% | 0% |
 
-- **Mana talents give the most.** Reverence and Illumination together give 21% of the healing. Holy Power gives 15% (11% at 200%).
-- **Holy Shock, Boundless Light and Light's Vigil give 0%.** The best spell plan does not cast them: they heal the least for each mana point. Holy Shock has value when you move.
+- **Mana talents give the most.** Reverence and Illumination together give 21% of the healing. Holy Power gives 6% (15% at 225%).
+- **Holy Shock, Boundless Light and Light's Vigil give 0%.** The best spell plan does not cast them: they heal the least for each mana point. Holy Shock has value when you move. In the proposed trees, Light's Vigil (C-H7) gives HB1 +44% in raids at 5 min (479 → 692).
 - **Benediction gives 0%** because the plan casts no instant spell. It has value with Holy Shock and Seals.
 
 ## 3. Stat weights
@@ -61,17 +61,17 @@ Each stat + a small amount (40 healing power, Intellect or Spirit, 10 MP5, 14 cr
 
 | Stat | Raid, 3 min | Raid, 5 min | Raid, 10 min | One tank, 5 min |
 | --- | --- | --- | --- | --- |
-| Healing each sec for 1 healing power | 0.368 | 0.357 | 0.301 | 0.357 |
+| Healing each sec for 1 healing power | 0.331 | 0.322 | 0.272 | 0.322 |
 | Healing power | 1.00 | 1.00 | 1.00 | 1.00 |
-| Intellect | 1.38 | 0.94 | 0.75 | 1.02 |
-| Spirit | 0.35 | 0.38 | 0.61 | 0.42 |
-| MP5 | 2.31 | 2.48 | 3.31 | 2.65 |
-| Crit rating | 1.71 | 1.41 | 1.41 | 1.67 |
+| Intellect | 1.28 | 0.86 | 0.67 | 0.94 |
+| Spirit | 0.34 | 0.38 | 0.61 | 0.42 |
+| MP5 | 2.28 | 2.45 | 3.33 | 2.66 |
+| Crit rating | 1.35 | 1.09 | 1.09 | 1.29 |
 
 - **MP5 has the most value in all cases.** Its value increases with the fight length.
 - **Intellect** gives mana and critical chance. In a short fight, the critical chance has more value.
-- **Spirit** has little value: Reverence keeps only 30% of the Spirit regeneration during casts. With Reverence 50% (HB2), Spirit is 0.57–0.84 healing power (5 min one tank: 0.60).
-- **Crit rating** gives larger heals (225%) and Illumination mana.
+- **Spirit** has little value: Reverence keeps only 30% of the Spirit regeneration during casts. With Reverence 50% (HB2), Spirit has more value.
+- **Crit rating** gives larger heals (175%) and Illumination mana.
 
 ## 4. Gear
 
@@ -80,5 +80,5 @@ This folder has no new gear search for Holy. wowsims Forever has no Holy healing
 ## 5. Limits
 
 - The values come from a model, not from combat logs. The model uses fixed overhealing for each spell.
-- The model uses 225% critical heals (Holy Power 5/5, decision of 2 November). The live test of Holy Power can change these values (see Open items).
+- The model uses 175% critical heals (Holy Power 5/5, decision of 3 November). The live test of Holy Power can change these values (see Open items).
 - The earlier values (trees of 18 October) are in the history of the repository.
