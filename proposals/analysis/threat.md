@@ -251,7 +251,7 @@ Judgement and Swift Judgement are not on the global cooldown, thus both hit at 0
 | Paladin, proposed, Fury opener | 4,656 (232%) | 7,646 (162%) | 9,944 (140%) | 16,927 (129%) | 30,433 (113%) | 1,388 (104%) |
 
 - **With the wowsims default opener, the Paladin starts slowly.** The first global cooldown goes to Judgement of the Crusader. Holy Shield starts at 3 sec, and Holy Strike at 4.5 sec.
-- **With the Fury opener, the Paladin has the best start of the three tanks.** About 3,500 threat hits the boss at 0 sec: two Judgements of Fury (about 1,770), Holy Strike (about 1,100) and the Shieldsworn Holy Shield hit (about 600).
+- **With the Fury opener, the Paladin has the best start of the three tanks.** About 3,500 threat hits the boss at 0 sec. Two Judgements of Fury give about 1,770, Holy Strike about 1,100 and the Shieldsworn Holy Shield hit about 600.
 - **The live lead does not last.** After 10 sec, the live Fury opener has 86% of the Warrior. After 30 sec, it has 69%, the sustained gap of part 6.
 - **The proposed Paladin keeps the lead.** With the Fury opener, it has 129% of the Warrior after 10 sec and 113% after 20 sec. In the first 3 sec, all of the gain comes from Righteous Fury (C25). Redoubt starts after the first blocks.
 - **The Warrior and the Druid need rage first.** The Warrior starts with 0 rage. Its threat increases fast from 2 sec, when the boss hits give rage. The Druid uses its 25 rage at once, and then it waits for rage.

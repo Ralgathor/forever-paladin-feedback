@@ -75,11 +75,17 @@ FEEDBACK_NOENG=1 FEEDBACK_CHARGE=1 FEEDBACK_DUR=180 FEEDBACK_BURST=war_charge /t
 FEEDBACK_DUR=180 FEEDBACK_BURST=war_sapper /tmp/wartest -test.run TestFeedbackRun -test.v | grep -E "BURST|RESULT"
 cd ../../druid/feralbear
 FEEDBACK_DUR=180 FEEDBACK_BURST=bear /tmp/beartest -test.run TestFeedbackBear -test.v | grep -E "BURST|RESULT"
-# Righteous Fury (C25): all threat +90% (RF_ALL=1.80 gives the alternative C25a, +80%). Sustained, groups and burst.
+# Analysis, Threat, parts 1 to 9: Righteous Fury (C25, RF_ALL=1.90) and the alternative C25a (RF_ALL=1.80).
+# One boss, groups (1, 3 and 5 targets) and burst (default and Fury openers).
 cd ../../paladin/protection
-for p in C25 CP1,C25; do
-  FEEDBACK_DUR=180 PROPOSE=$p /tmp/prottest -test.run TestFeedbackRun -test.v | grep RESULT
-  RF_ALL=1.80 FEEDBACK_DUR=180 PROPOSE=$p /tmp/prottest -test.run TestFeedbackRun -test.v | grep RESULT
-  for n in 3 5; do FEEDBACK_DUR=180 FEEDBACK_TARGETS=$n PROPOSE=$p /tmp/prottest -test.run TestFeedbackRun -test.v | grep PERTARGET; done
-  FEEDBACK_APL=furyopen FEEDBACK_DUR=180 FEEDBACK_BURST="pal_furyopen_$p" PROPOSE=$p /tmp/prottest -test.run TestFeedbackRun -test.v | grep -E "BURST|RESULT"
+for rf in 1.90 1.80; do
+  for p in C25 CP1,C25 CP1,NOTOUGH,C25; do
+    RF_ALL=$rf FEEDBACK_DUR=180 PROPOSE=$p /tmp/prottest -test.run TestFeedbackRun -test.v | grep -E "RESULT|TMI"
+  done
+  for p in C25 CP1,C25; do
+    for n in 1 3 5; do RF_ALL=$rf FEEDBACK_DUR=180 FEEDBACK_TARGETS=$n PROPOSE=$p /tmp/prottest -test.run TestFeedbackRun -test.v | grep PERTARGET; done
+    for a in default furyopen; do
+      RF_ALL=$rf FEEDBACK_APL=$a FEEDBACK_DUR=180 FEEDBACK_BURST="pal_${a}_${rf}_$p" PROPOSE=$p /tmp/prottest -test.run TestFeedbackRun -test.v | grep -E "BURST|RESULT"
+    done
+  done
 done

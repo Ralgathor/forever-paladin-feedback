@@ -27,5 +27,5 @@ These files add the proposals to wowsims Forever, master branch (commit `895cd67
 
 - **Full buffs.** The wowsims test buffs, with Mana Spring Totem, Mana Tide Totem and Atiesh.
 - **Lean buffs.** Gift of the Wild, Battle Shout, Kings, Might and Wisdom only.
-- The results are in Retribution, wowsims check, in Protection, wowsims check, in Analysis, Threat, parts 6, 7 and 8, in Analysis, Crushing blows, and in Analysis, Damage, part 9.
+- The results are in Retribution and Protection (wowsims check). They are also in Analysis: Threat (parts 6 to 9), Crushing blows and Damage (part 9).
 - Protection, wowsims check still has the 2 min runs of commit db28d84a8. The 3 min runs of master give almost the same values (Analysis, Crushing blows).
