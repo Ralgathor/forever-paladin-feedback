@@ -13,7 +13,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 13 chan
 
 - **C2 to C5 and C25 (spell change).** These change baseline spells, not talents. Shoulder the Burden (C-P5) is also a new baseline spell.
 - **C-H, C-P and C-R (talent change).** These change what a talent does, add a talent or remove a talent. The letter after C gives the tree: H (Holy), P (Protection), R (Retribution). A change can also move the talent. The text then gives the new row.
-- **M-H, M-P and M-R (move).** These move a talent to a different row. The talent text does not change. No move proposal is open now.
+- **M-H, M-P and M-R (move).** These move a talent to a different row. The talent text does not change. Stoicism (M-P2) is the only open move.
 - **New IDs.** A new proposal takes the next free number of its series. A new proposal never takes the number of a withdrawn proposal.
 - **Names.** The text gives the name first and the ID in parentheses, for example Sanctified Judgement (C-R3).
 - **C2a** is the alternative to Personal Judgement of the Crusader (C2). **C-P11a** is the alternative to the Lay on Hands part of Devoted Sacrifice (C-P11). **C25a** is the alternative to Righteous Fury (C25).
