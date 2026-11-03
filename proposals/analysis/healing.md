@@ -103,8 +103,9 @@ Two values for each spell: raw healing for each mana point · healing for each m
 | Shaman | Healing Stream Totem: 160 · 80. Riptide: 7.0 · 5.3 | Chain Heal 7.5 · 5.6. Healing Wave 6.0 · 4.8. Lesser Healing Wave 4.1 · 3.5 |
 | Paladin, raid (no Oath) | Divine Favor and Holy Light: 10.5 · 8.4. Light's Vigil and Holy Shock: 5.5 · 4.2. Holy Shock: 4.8 · 4.1 | Flash of Light 6.6 · 5.6. Holy Light 4.7 · 3.8 |
 | Paladin, tank with Oath | Divine Favor and Holy Light: 12.5 · 10.0. Light's Vigil and Holy Shock: 5.4 · 4.1. Holy Shock: 4.4 · 3.8 | Flash of Light 7.8 · 6.6. Holy Light 5.7 · 4.5 |
+| Paladin, tank with Oath of Light 30% (C-H8) | Divine Favor and Holy Light: 13.6 · 10.9 | Flash of Light 8.5 · 7.3. Holy Light 6.2 · 4.9 |
 
-- **On the tank, Flash of Light** heals 7.8 for each mana point. The Druid heals over time give 8.3–8.6 with Bloom.
+- **On the tank, Flash of Light** heals 7.8 for each mana point. The Druid heals over time give 8.3–8.6 with Bloom. With Oath of Light 30% (C-H8), Flash of Light gives 8.5.
 - **In raids, Flash of Light (6.6) is about equal** to Greater Heal and Healing Wave. Chain Heal (7.5) and the Druid heals over time (8.3–8.6 with Bloom) cost less for each heal. The Priest also has a strong cooldown heal: in fights of 3 min, Prayer of Mending gives 43% of the Priest healing. Swiftmend gives 13% of the Druid healing.
 - **Riptide is now weaker.** It has no direct heal. In raids, the Shaman cast plan uses Chain Heal and no Riptide.
 - **Divine Favor and Holy Light** is the most efficient Paladin heal, but only once each 2 min.
@@ -224,5 +225,6 @@ The values are raid healing against the Shaman, 3 / 5 / 10 min, without Reverenc
 - **Classic tick rule.** With no critical ticks, the Paladin is 16–17% below the Shaman and 35–38% below the Druid in raids. On one tank, it is 5–12% below the Druid.
 - **Overhealing** values are estimates. They change with the raid and the healer tasks.
 - **Oath of Light.** The model puts all tank heals on the Oath target. With two tanks, only one has the Oath.
+- **Oath of Light 30% (C-H8) and Healing Light.** The model multiplies the two: ×1.12 × 1.30 on the Oath target. If the game adds them (+42%), 30% has the value of 26.8%. The Paladin is then +2% / +4% / −1% against the Druid on one tank at 175% (900 healing power: +4% / +8% / +3%).
 - **Light's Vigil.** The model gives the Paladin a full party of 5.
 - **No wowsims check.** wowsims Forever has no Holy heal rotation and no Druid or Shaman heals. The earlier check (beta of 18 October) found the Paladin model within −4.3% to +5.3% of wowsims.

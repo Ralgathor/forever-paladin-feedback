@@ -123,5 +123,7 @@ Model: `models/beta-30-oct/light_vigil_ch7.py`.
 - **Shaman and Priest.** On one tank, the Paladin is 25–37% above them (live: 14–25%). The Druid is the healer to compare, because it is the best single-target healer of the other classes.
 - **PvP.** The Paladin can put the Oath on itself. At 300 to 900 healing power, Holy Shock receives +151 to +237 (live: +256). Thus the instant self-heal decreases. Holy Light receives +603 to +747 (live: +448), and Flash of Light +147 to +233 (live: +129). An enemy can interrupt the 2.5 sec cast of Holy Light.
 - **Gear.** The bonus increases with healing power, as the healing talents of the other classes.
+- **Healing Light and Oath of Light.** The model multiplies the two % (×1.12 × 1.30). If the game adds them (+42%), the Paladin is +2% / +4% / −1% against the Druid at 175%, and +10% to +16% at 225%. A live test gives the rule (Open items).
+- **Builds.** On one tank, HB2 heals 755 / 658 / 571 (live Oath of Light: 690 / 602 / 522). Oath of Light gives 23% of the HB2 healing on one tank (live: 16% of HB1).
 
 Model: `models/beta-30-oct/oath_light_ch8.py`.

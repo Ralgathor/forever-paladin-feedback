@@ -96,3 +96,30 @@ if __name__ == "__main__":
         base = [(b + x*hp)*1.12 for b, x in ((1580, 2.5/3.5), (308, 1.5/3.5), (320, 1.5/3.5))]
         print(f"  {hp}: live +{400*1.12:.0f} | +{115*1.12:.0f} | +{229*1.12:.0f}; 30%: " + " | ".join(f"+{0.3*v:.0f}" for v in base)
               + "; 20%: " + " | ".join(f"+{0.2*v:.0f}" for v in base))
+
+def build_hps(p, rev, bonus, T, hp=715):
+    """One tank, Light's Vigil (C-H7). p: Oath % (None: live flat; "none": no Oath bonus). rev 0.5: HB2, 0.3: HB1."""
+    if p == "none":
+        B.paladin_b2 = lambda hp=715, tank=False, **k: ORIG(hp, tank, **dict(k, oath=False, boundless=0.0) if tank else k)
+    else:
+        B.paladin_b2 = oath_pct(p)
+    try: return solve(L.ch7(hp=hp, tank=True, bonus=bonus, rev=rev), T, True)["eff"]
+    finally: B.paladin_b2 = ORIG
+
+if __name__ == "__main__":
+    print("\nBuilds, one tank, 3 / 5 / 10 min, with C-H8 (Analysis, Builds and builds/holy.md)")
+    for b, bn in ((0.75, "175%"), (1.0, "200%"), (1.25, "225%")):
+        print(f"  {bn}: HB2 " + " / ".join(f"{build_hps(0.30, 0.5, b, T):.0f}" for T in TS)
+              + ", HB1 " + " / ".join(f"{build_hps(0.30, 0.3, b, T):.0f}" for T in TS))
+    for n, rev, p in (("HB1, live Oath of Light", 0.3, None), ("HB2, Oath of Light 30% (C-H8)", 0.5, 0.30)):
+        a, z = build_hps(p, rev, 0.75, 300), build_hps("none", rev, 0.75, 300)
+        print(f"  Talent value, {n}, one tank 5 min: {z/a - 1:+.1%}")
+    add = (1.12 + 0.30)/1.12 - 1
+    print(f"\nIf Healing Light and Oath of Light add (+42%, not x1.12 x1.30): same as a {add:.1%} Oath. One tank against the Druid:")
+    for hp in (715, 900):
+        for b, bn in ((0.75, "175%"), (1.25, "225%")):
+            print(f"  {hp}, {bn}: " + " / ".join(pc(hps(add, hp, T, bonus=b)/B.others(hp, T, True)['Druid'] - 1) for T in TS))
+    B.paladin_b2 = oath_pct(0.30); k = L.ch7(tank=True, rev=0.5); B.paladin_b2 = ORIG
+    print("\nHealing for each mana point on the tank with C-H8 (raw · after overhealing):")
+    for s in k["spells"]:
+        if not s.name.startswith("Holy Shock"): print(f"  {s.name}: {s.raw/s.cost:.1f} · {s.eff/s.cost:.1f}")
