@@ -1,0 +1,20 @@
+diff --git a/sim/paladin/holy_shield.go b/sim/paladin/holy_shield.go
+index a33f30e..1055b53 100644
+--- a/sim/paladin/holy_shield.go
++++ b/sim/paladin/holy_shield.go
+@@ -27,9 +27,13 @@ func (paladin *Paladin) registerHolyShield(_ int32, rank *spelldata.Spell) {
+ 	procConfig.ClassSpellMask = SpellMaskHolyShieldProc
+ 	procConfig.Flags &^= core.SpellFlagHelpful // The row's first effect is the block chance on the paladin.
+ 	procConfig.BonusCoefficient = damageEffect.Coeff()
+-	procConfig.ThreatMultiplier = 1.2 // The tooltip's 20% additional threat.
++	procConfig.ThreatMultiplier = holyShieldThreat() // The tooltip's 20% additional threat (HS_THREAT for tests).
+ 	procConfig.ApplyEffects = func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
+-		spell.CalcAndDealDamage(sim, target, damage, spell.OutcomeMagicHit)
++		bonus := 0.0
++		if proposeFlag("CP9") { // C-P9: + block value x multiplier (CP9_BV, default 2.0)
++			bonus = cp9BlockValueMult() * paladin.BlockDamageReduction()
++		}
++		spell.CalcAndDealDamage(sim, target, damage+bonus, spell.OutcomeMagicHit)
+ 	}
+ 	procSpell := paladin.RegisterSpell(procConfig)
+ 

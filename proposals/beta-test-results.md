@@ -1,5 +1,21 @@
 # Beta test results
 
+## Development notes of 2 November 2026
+
+Blizzard published the development notes on 3 November 2026 ([Blizzard forums](https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696/9)). They give all changes since 15 October. Most Paladin changes are the beta trees of 30 October (next section). The changes in this table are not in the game files of client 1.60.1.70707 yet. A test on the live realms must confirm them.
+
+| Change in the notes | Game files (1.60.1.70707) | Result |
+| --- | --- | --- |
+| Two-Handed Weapon Specialization: +2/4/6% Holy and Physical damage | Physical damage only | Retribution +3.6% in wowsims (905.9 → 938.7 DPS, full buffs, 2 min) |
+| Vengeance: stacks up to 5 times | 3 stacks (1/2/3% Holy and Physical damage for each stack) | Retribution +4.5% in wowsims (946.3 DPS). With the Two-Handed Weapon Specialization change: +8.3% (980.8 DPS). This is about 121% of the pure average (W15) |
+| Warrior: Defensive Stance +80% threat (was +30%), Defiance 7/13/20% (was 5/10/15%) | +30%, 15% | The live Paladin tank has 70% of the Warrior threat with the same gear (was 101%), and 71–82% from fresh level 60 to Naxxramas (W28, Analysis, Threat) |
+| Druid: Bear Form and Dire Bear Form +115% threat (was +50%) | +50% | The live Paladin tank has 77% of the Druid threat with the same gear (was 110%) |
+| Druid: Gift of the Earthmother removed, Bloom (new), Genesis 10%, Wild Growth 3 sec cast | Earthmother, 5%, no Bloom | Holy on one tank: 1–5% above the Druid in fights of 3 and 5 min, 3–5% below in fights of 10 min (was 3–12% above). Raid: 25–34% below the Druid (was 18–26%) (W14, Analysis, Healing) |
+| Shaman: Riptide has no direct heal, 12 sec cooldown, −40% mana | Direct heal, 6 sec | Holy in raids: 7–10% below the Shaman (was 8–13%). On one tank: 25–32% above |
+| Priest: Binding Heal removed (Holy Binding in its place) | Binding Heal | Raid Priest −1% |
+| Most other classes: more damage. Retribution has only the two changes above | — | The pure average must run again when wowsims has the new values (W15) |
+| Warrior: Slam 15 sec cooldown, Improved Slam −2.5/5 sec | — | Answers the Slam open question |
+
 ## Beta trees of 30 October 2026
 
 Hotfix push 113554 (client build 1.60.1.70707) changes the three Paladin trees. Blizzard has not published patch notes for it. The values come from the game files in wowsims Forever (branch `paladin/hotfix-113554-port`, 30 October 2026). The talent calculator shows these trees in Beta mode.
@@ -27,7 +43,7 @@ The models of the Analysis tabs ran again on the new trees, with no proposal. He
 | Protection mana while it tanks, Blessing of Wisdom | +24 to +39 per sec | +15 to +37 per sec |
 | Retribution damage (wowsims test runs) | 824 DPS | 848 DPS (+3%). After the wowsims update of 1 November: 906 DPS. This is about 112% of the pure average at fresh level 60 and 107% in Naxxramas (wowsims and model) |
 
-- **Holy Power.** The Holy values use a 225% critical heal (main hypothesis, decision of 2 November, as wowsims). The Paladin is 3–10% above the Druid on one tank. At 175%, it is 1–7% below.
+- **Holy Power.** The Holy values use a 225% critical heal (main hypothesis, decision of 2 November, as wowsims). The Paladin is 3–10% above the Druid on one tank. At 175%, it is 1–7% below. With the Druid changes of the notes of 2 November: 5% below to 5% above at 225%, 8–15% below at 175%.
 - **Mana.** In raids, mana is still the limit of the Paladin. The best cast plan is almost only Flash of Light.
 - **Righteous Fury.** The +33% and Shieldsworn give most of the threat increase.
 

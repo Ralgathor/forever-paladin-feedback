@@ -29,9 +29,12 @@ B2T = dict(prec=3, red=5, sj=1, reck=5, ic=3, hsh=1, ij=2, conv=3, shs=1, sanj=3
 CP1_BLOCKS = 61.6 / 42.3
 CP12_EXTRA = 9.3 / 6.3
 
+CP9_BV = 2.0  # Holy Shield (C-P9, withdrawn on 31 October 2026): block value multiplier
+
 def paladin_b2(g, tal=B2T, crusader=True, consecration=False, detail=False, rf_all=RF_ALL, prop=()):
     """prop: kept proposals. "C1": Holy Strike triggers Seal of Fury. "CP1": each Holy Shield cast starts Redoubt
-    (more blocks). "CP12": Reckoning 100% chance after a block, once each 4 sec. Personal Judgement of the Crusader (C2):
+    (more blocks). "CP12": Reckoning 100% chance after a block, once each 4 sec. "CP9": Holy Shield adds
+    200% of block value to each hit (CP9_BV), also on the Shieldsworn trigger. Personal Judgement of the Crusader (C2):
     use crusader=True when the raid needs the Judgement of the tank (the beta then has crusader=False)."""
     t = lambda k: tal.get(k, 0)
     hit = g.hit + 0.01 * t("prec")
@@ -54,7 +57,8 @@ def paladin_b2(g, tal=B2T, crusader=True, consecration=False, detail=False, rf_a
     src = {}
     if t("hsh"):
         rate = hs_blocks + (land_s / hs_cd if t("shs") else 0)
-        src["Holy Shield"] = (221 + 0.08 * sp) * holy * HS_THREAT * rate
+        bv = CP9_BV * g.bv if "CP9" in prop else 0.0
+        src["Holy Shield"] = (221 + 0.08 * sp + bv) * holy * HS_THREAT * rate
     _, f_jud = table(hit, crit, auto=False, dodge=0.0, parry=0.0)
     jud = (160 + 0.429 * sp) * seals * f_jud
     src["Judgement of Fury"] = jud * holy * (1 / (10 - t("ij")) + t("sj") / 60)

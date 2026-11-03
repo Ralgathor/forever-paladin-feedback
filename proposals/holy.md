@@ -31,15 +31,17 @@ The live version changes most of the Holy tree. Oath of Light, Boundless Light a
 
 | Critical heal | One tank, live | One tank, Reverence 50% | Raid, live | Raid, Reverence 50% |
 | --- | --- | --- | --- | --- |
-| **225% (main hypothesis)** | **+8% / +10% / +3%** | **+13% / +17% / +12%** | **−26% / −23% / −26%** | **−22% / −18% / −19%** |
-| 200% | +2% / +5% / −2% | +7% / +11% / +6% | −30% / −27% / −29% | −26% / −22% / −23% |
-| 175% | −3% / −1% / −7% | +1% / +5% / +1% | −34% / −31% / −33% | −30% / −26% / −27% |
+| **225% (main hypothesis)** | **+1% / +3% / −5%** | **+6% / +9% / +3%** | **−34% / −30% / −32%** | **−30% / −25% / −27%** |
+| 200% | −4% / −3% / −10% | +1% / +3% / −2% | −37% / −33% / −36% | −33% / −29% / −30% |
+| 175% | −9% / −8% / −15% | −5% / −3% / −7% | −40% / −37% / −39% | −37% / −33% / −34% |
+
+The Druid values use the development notes of 2 November 2026 (Bloom, Genesis 10%, no Gift of the Earthmother). See Analysis, Healing.
 
 - **HB2 heals 6–9% more than HB1.** The gain increases with the fight length: +5.6% / +6.6% / +8.6% in raids.
-- **At 225%,** the tank lead stays below the 20% limit (W14). At 900 healing power, it is +14% / +19% / +14%.
-- **At 175%,** Reverence gives a first place on one tank in all fight lengths.
-- **Raids.** About +4 to +7 points: the Paladin stays 18–22% below the Druid.
-- **Only one Holy healing talent.** With a second healing talent, the tank lead passes the 20% limit (see Analysis, Healing, part 7). Reverence 50% is a proposal again since 2 November 2026.
+- **At 225%,** Reverence gives the Paladin the first place on one tank in all fight lengths. Without it, the Druid is first in fights of 10 min. At 900 healing power, it is +7% / +10% / +5%. The lead stays far below the 20% limit (W14).
+- **At 175%,** the Druid stays first on one tank, but the gap decreases by 4–8 points.
+- **Raids.** About +3 to +5 points: the Paladin stays 25–30% below the Druid.
+- **Only one Holy healing talent.** Before the notes of 2 November 2026, a second healing talent gave a tank lead past the 20% limit. Now it gives 10–16% (see Analysis, Healing, part 7). Reverence 50% is a proposal again since 2 November 2026.
 
 ## Effect on Retribution
 

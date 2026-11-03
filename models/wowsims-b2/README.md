@@ -16,6 +16,8 @@ These files add the proposals to wowsims Forever, master branch (commit `895cd67
 | `FEEDBACK_TARGETS` | In the three tank tests: the number of targets. Each target hits for 1/3 of the boss. The tests then print the threat on each target |
 | allspecs_main.go, allspecs.log | All damage specs with pre-raid gear and the same buffs (Analysis, Damage, part 7). The file header gives the steps |
 | matched_gear/ | The pure damage specs and Retribution with the same pre-raid item pool: the pure average of Analysis, Damage. See matched_gear/README.md |
+| notes-2-november.patch | Flags for the development notes of 2 November 2026: `N2H` (Two-Handed Weapon Specialization also increases Holy damage by 2/4/6%) and `V5` (Vengeance stacks up to 5 times). Apply after talents.patch. Result (default Retribution set, full buffs, 2 min): live 905.9 DPS, `N2H` 938.7, `V5` 946.3, both 980.8 |
+| threat-options.patch | Threat options for the gap after the notes of 2 November 2026 (Analysis, Threat), off by default. `PROPOSE=CP9`: Holy Shield adds block value × `CP9_BV` (default 2.0) to each hit (C-P9, withdrawn on 31 October). `HS_THREAT`: the Holy Shield threat multiplier (live 1.2). `CP6_ICD`: the C-P6 limit on blocks, dodges and parries in sec (default 4). Apply after talents.patch. Result (3 min, with `CP1`, Warrior 1,338 TPS after the notes): `CP1` 986, `CP9` at 1.0 1,089, at 2.0 1,192; `HS_THREAT` 2.0 1,120, 2.25 1,162, 2.5 1,203; `CP6A` with `CP6_ICD` 4 1,029, 2 1,108, 1 1,137; `HS_THREAT=2.0` with `CP9` at 1.0 1,292 |
 | run.sh | All runs: `./run.sh <wowsims clone>` |
 
 - **Full buffs.** The wowsims test buffs, with Mana Spring Totem, Mana Tide Totem and Atiesh.

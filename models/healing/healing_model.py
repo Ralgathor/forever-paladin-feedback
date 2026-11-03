@@ -23,6 +23,13 @@ HOT_CRIT = True    # heals over time can be critical heals in Forever (each tick
 MP5 = 117          # 40 gear + 25 Mana Spring + 40 Wisdom + 12 mana oil
 POT = 1800         # one major mana potion, 2 min cooldown
 TIDE = 1160        # Mana Tide Totem (4 x 290 over 12 sec), 5 min cooldown
+# Development notes of 2 November 2026 (not in the game files of client 1.60.1.70707). True: use them.
+# Druid: Gift of the Earthmother removed (Rejuvenation and Swiftmend use the 1.5 sec global cooldown), Bloom in its
+# place (row 3: a heal for 100% of Spirit when Rejuvenation or Regrowth ends at its full duration), Genesis 10%
+# (was 5%), Wild Growth 3 sec base cast (2.5 sec with Naturalist 5/5). Shaman: Riptide has no direct heal,
+# 12 sec cooldown (was 6), mana cost -40%. Priest: Binding Heal removed (Holy Binding heals only the Priest:
+# not counted).
+NOTES_NOV2 = True
 
 def uses(T, cd, dur=0.0):
     """Number of uses of a cooldown in a fight of T sec. The first use is at 0.
@@ -132,7 +139,7 @@ def priest(hp_gear=HPG, tank=False):
       # Prayer of Mending: direct heal, 5 targets, 10 sec cooldown. The tank gets one of the 5 heals.
       S("Prayer of Mending (5 targets)", 5*869.105, 5*0.491, True, 257, 1.5, 0.15, maxn=cd_limit(10, 1.5), tank=0.2),
       # Binding Heal: half heals the Priest. The DoubleZug sheet casts it 2 times each min.
-      S("Binding Heal", 2544.9, 0.934, True, 342, 1.5, 0.25, maxn=lambda T: round(2*T/60), tank=0.5),
+      S("Binding Heal", 2544.9, 0.934, True, 342, 1.5, 0.25, maxn=lambda T: 0 if NOTES_NOV2 else round(2*T/60), tank=0.5),
       # Inner Focus: no cost, +25% critical chance. Both the base heal and the coefficient use this multiplier.
       S("Inner Focus + Prayer of Healing", 5*886.9*k_if/k, 5*0.315*k_if/k, True, 0, 3.0, 0.35, maxn=cd_limit(180, 3.0), tank=0.2),
       # Greater Heal rank 5: (1,960 + 85.7% of healing power) x1.10 from talents (game files; the DoubleZug value is 9% less).
@@ -148,7 +155,7 @@ def priest(hp_gear=HPG, tank=False):
                 extra=None, spells=sp, groups={}, crit=c)
 
 # ---------------------------------------------------------------- Druid
-def druid(hp=HPG, tank=False, ooc_wg=0, sm_consumes=False):
+def druid(hp=HPG, tank=False, ooc_wg=0, sm_consumes=False, splendor=True):
     c = 0.183; k = 1 + 0.5*c
     kh = k if HOT_CRIT else 1.0                 # heals over time: critical ticks in Forever
     # Talents (DoubleZug build): Gift of Nature +10% healing, Improved Rejuvenation +15%, Genesis +5% periodic
@@ -156,11 +163,16 @@ def druid(hp=HPG, tank=False, ooc_wg=0, sm_consumes=False):
     # Rejuvenation, Swiftmend and Wild Growth), Nature's Splendor (Rejuvenation +3 sec, Regrowth +6 sec).
     # Rejuvenation rank 11: 776 over 12 sec, 360 mana, coefficient 0.8. With Nature's Splendor: 15 sec, the
     # same ticks: 970 and coefficient 1.0.
-    rej0 = (776*15/12 + 1.0*hp)*1.1*1.15*1.05
+    gen = 1.10 if NOTES_NOV2 else 1.05          # Genesis 5/5
+    gcd = 1.5 if NOTES_NOV2 else 1.0            # no Gift of the Earthmother after the notes of 2 November
+    wg_time = 2.5 if NOTES_NOV2 else 1.0        # Wild Growth: 3 sec - 0.5 (Naturalist 5/5)
+    bloom = 386*k if NOTES_NOV2 else 0.0        # Bloom: 100% of Spirit (386) when the heal over time ends
+    rej_t, rg_t = (15, 27) if splendor else (12, 21)   # Nature's Splendor: +3 sec and +6 sec
+    rej0 = (776*rej_t/12 + 0.8*rej_t/12*hp)*1.1*1.15*gen
     rej = rej0*kh
     # Regrowth rank 9: 965-1077 direct (coefficient 0.286), 994 over 21 sec (0.497), 525 mana (game files).
     # With Nature's Splendor: 27 sec, 1,278 and coefficient 0.798.
-    rg_dir = (1021 + 0.286*hp)*1.1; rg_hot0 = (994 + 0.497*hp)*27/21*1.1*1.05; rg_hot = rg_hot0*kh
+    rg_dir = (1021 + 0.286*hp)*1.1; rg_hot0 = (994 + 0.497*hp)*rg_t/21*1.1*gen; rg_hot = rg_hot0*kh
     rg_dir_c = rg_dir*(1 + 0.5*(c + 0.5))
     rg = rg_dir_c + rg_hot
     # Swiftmend (Forever text): heals for the full periodic value of the Rejuvenation or Regrowth on the target.
@@ -169,24 +181,24 @@ def druid(hp=HPG, tank=False, ooc_wg=0, sm_consumes=False):
     if sm_consumes: sm -= 0.5*(rej if tank else rg_hot)  # if it removes the heal over time (half of it is left)
     sp = [
       Spell("Tranquility", (9115.6 + 1.8*(hp-715))*kh, (9115.6 + 1.8*(hp-715))*kh*0.6, 833, 10.0, maxn=cd_limit(120, 10.0), tank=0.2),
-      Spell("Swiftmend", sm, sm*0.8, 249, 1.0, maxn=cd_limit(15, 1.0)),
+      Spell("Swiftmend", sm, sm*0.8, 249, gcd, maxn=cd_limit(15, gcd)),
       Spell("Healing Touch", (2934.8 + 1.1*(hp-715))*k, (2934.8 + 1.1*(hp-715))*k*0.8, 680, 3.0),
     ]
-    wg = (4854.4 + 1.305*(hp-715))*kh           # heal over time: critical ticks in Forever
+    wg = (4854.4 + 1.305*(hp-715))*kh*gen/1.05  # heal over time: critical ticks in Forever
     if tank:
-        sp.append(Spell("Rejuvenation (one at a time)", rej, rej*0.75, 360, 1.0, maxn=lambda T: math.floor(T/15)))
+        sp.append(Spell("Rejuvenation (one at a time)", rej + bloom, (rej + bloom)*0.75, 360, gcd, maxn=lambda T: math.floor(T/rej_t)))
         # Regrowth kept for 27 sec, or recast: the new one replaces the heal over time after 2 sec
-        sp.append(Spell("Regrowth (kept 27 sec)", rg, rg*0.75, 525, 2.0, groups=(("rg_slot", 27),)))
-        rr = rg_dir_c + rg_hot*2/27
+        sp.append(Spell(f"Regrowth (kept {rg_t} sec)", rg + bloom, (rg + bloom)*0.75, 525, 2.0, groups=(("rg_slot", rg_t),)))
+        rr = rg_dir_c + rg_hot*2/rg_t
         sp.append(Spell("Regrowth (recast)", rr, rr*0.75, 525, 2.0, groups=(("rg_slot", 2),)))
         groups = {"rg_slot": lambda T: T}
     else:
-        sp += [Spell("Regrowth", rg, rg*0.75, 525, 2.0),
-               Spell("Rejuvenation", rej, rej*0.75, 360, 1.0),
-               Spell("Wild Growth", wg, wg*0.5, 1050, 1.0, maxn=cd_limit(6, 1.0), tank=0.2)]
+        sp += [Spell("Regrowth", rg + bloom, (rg + bloom)*0.75, 525, 2.0),
+               Spell("Rejuvenation", rej + bloom, (rej + bloom)*0.75, 360, gcd),
+               Spell("Wild Growth", wg, wg*0.5, 1050, wg_time, maxn=cd_limit(6, wg_time), tank=0.2)]
         groups = {}
     if ooc_wg:
-        sp.append(Spell("Wild Growth (free, Omen of Clarity)", wg, wg*0.5, 0, 1.0,
+        sp.append(Spell("Wild Growth (free, Omen of Clarity)", wg, wg*0.5, 0, wg_time,
                         maxn=lambda T: round(ooc_wg*T/60), tank=0.2))
     regen = regen_full("dru", 386)
     innerv = lambda T: uses(T, 360, 20) * 20 * (5*regen - 0.5*regen)   # Innervate on itself
@@ -198,7 +210,8 @@ def shaman(hp=HPG, tank=False, T=180):
     c = 0.243; k = 1 + 0.5*c
     kh = k if HOT_CRIT else 1.0                 # heals over time: critical ticks in Forever
     # Riptide rank 3: direct 799-883 (coefficient 0.2), 805 over 15 sec (0.5). Purification x1.1.
-    rt_dir = (841 + 0.2*hp)*1.1*k; rt_hot = (805 + 0.5*hp)*1.1*kh
+    rt_dir = 0.0 if NOTES_NOV2 else (841 + 0.2*hp)*1.1*k; rt_hot = (805 + 0.5*hp)*1.1*kh
+    rt_cd = 12 if NOTES_NOV2 else 6; rt_cost = 341*0.6 if NOTES_NOV2 else 341   # notes of 2 November
     hw = (1371.5 + 3/3.5*hp)*1.1*1.25*k        # Purification +10%, Healing Way +25% (Forever text)
     ch_j = (506.5 + 2.5/3.5*hp)*1.1             # Chain Heal rank 3: 506.5 average (game files)
     ch = 2431.2*ch_j/1089.0                     # 2.5 targets, 90% on a Riptide target (DoubleZug). In Forever, Chain Heal does not remove the Riptide (player report, 1 November 2026; wowsims removes it)
@@ -209,13 +222,13 @@ def shaman(hp=HPG, tank=False, T=180):
           Spell("Lesser Healing Wave", (820 + 1.5/3.5*hp)*1.1*k, (820 + 1.5/3.5*hp)*1.1*k*0.85, 380*0.95 - 24.7, 1.5)]
     if tank:
         # Riptide on one tank: kept 15 sec (full heal over time), or recast each 6 sec (6/15 of it)
-        r1 = rt_dir + rt_hot; r2 = rt_dir + rt_hot*6/15
-        sp += [Spell("Riptide (kept 15 sec)", r1, r1*0.75, 341, 1.5, groups=(("rt_cd", 1), ("rt_slot", 15))),
-               Spell("Riptide (recast)", r2, r2*0.75, 341, 1.5, groups=(("rt_cd", 1), ("rt_slot", 6)))]
-        groups = {"rt_cd": lambda T: uses(T, 6, 1.5), "rt_slot": lambda T: T}
+        r1 = rt_dir + rt_hot; r2 = rt_dir + rt_hot*rt_cd/15
+        sp += [Spell("Riptide (kept 15 sec)", r1, r1*0.75, rt_cost, 1.5, groups=(("rt_cd", 1), ("rt_slot", 15))),
+               Spell("Riptide (recast)", r2, r2*0.75, rt_cost, 1.5, groups=(("rt_cd", 1), ("rt_slot", rt_cd)))]
+        groups = {"rt_cd": lambda T: uses(T, rt_cd, 1.5), "rt_slot": lambda T: T}
     else:
         r = rt_dir + rt_hot
-        sp += [Spell("Riptide", r, r*0.75, 341, 1.5, maxn=cd_limit(6, 1.5)),
+        sp += [Spell("Riptide", r, r*0.75, rt_cost, 1.5, maxn=cd_limit(rt_cd, 1.5)),
                Spell("Chain Heal (2.5 targets, on a Riptide target)", ch, ch*0.75, 333.7, 2.5)]
         groups = {}
     return dict(cls="Shaman", pool=1520 - 280 + 15*438, regen=regen_full("sha", 336), castfrac=0.5,

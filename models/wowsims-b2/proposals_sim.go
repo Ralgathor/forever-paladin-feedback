@@ -2,6 +2,7 @@ package paladin
 
 import (
 	"os"
+	"strconv"
 	"strings"
 	"time"
 
@@ -122,7 +123,7 @@ func (paladin *Paladin) applyReckoningCP6(stored *core.Aura, gain func(*core.Sim
 			Callback:   core.CallbackOnSpellHitTaken,
 			Outcome:    core.OutcomeBlock | core.OutcomeDodge | core.OutcomeParry,
 			ProcChance: chance,
-			ICD:        4 * time.Second,
+			ICD:        cp6ICD(),
 			Handler:    gain,
 		})
 		paladin.MakeProcTriggerAura(core.ProcTrigger{
@@ -170,4 +171,25 @@ func (paladin *Paladin) applyReckoningCP6(stored *core.Aura, gain func(*core.Sim
 		swing.ActionID = swing.ActionID.WithTag(tag)
 		extraAttack = paladin.GetOrRegisterSpell(swing)
 	})
+}
+
+func cp9BlockValueMult() float64 {
+	if v, err := strconv.ParseFloat(os.Getenv("CP9_BV"), 64); err == nil {
+		return v
+	}
+	return 2.0
+}
+
+func cp6ICD() time.Duration {
+	if v, err := strconv.ParseFloat(os.Getenv("CP6_ICD"), 64); err == nil {
+		return time.Duration(v * float64(time.Second))
+	}
+	return 4 * time.Second
+}
+
+func holyShieldThreat() float64 {
+	if v, err := strconv.ParseFloat(os.Getenv("HS_THREAT"), 64); err == nil {
+		return v
+	}
+	return 1.2
 }
