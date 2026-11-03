@@ -172,7 +172,8 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 | Paladin, C25a (+80%) | 1,247 | 93% | 104% |
 | Paladin, C25a and Redoubt (C-P1) | 1,328 | 99% | 111% |
 
-- **Gear levels (model).** With C25, the live Paladin has 117% of the Warrior threat at fresh level 60 and 101% in Naxxramas. Before the notes, it had 118% and 101%.
+- **Gear levels (model).** With C25, the live Paladin has 117% of the Warrior threat at fresh level 60 and 101% in Naxxramas. Before the notes, it had 118% and 101%. With C25a, it has 111% and 96%.
+- **All threat cases.** Analysis, Threat, part 9 gives parts 1 to 8 again with C25 and C25a.
 - **Pull.** With a Fury opener, the Paladin has 157% of the Warrior threat after 3 sec and 123% after 10 sec. In its best short windows, it has 79–86% of the Warrior (live: 56–60%).
 - **Groups.** On 3 enemies, the Paladin total is 2,006 threat each sec. The Warrior has 1,682 and the Druid 1,561. On the enemy with the least threat, the Paladin has 3.1 times the Warrior threat.
 - **Other specs.** Holy and Retribution use Righteous Fury only to tank. In PvP, threat has no effect.
