@@ -4,10 +4,10 @@ Run from the repo: python3 healing_b2.py <repo>/models/healing
 
 Changes against the beta of 18 October (healing_model.paladin defaults):
 - No Blessing of Light. Oath of Light on one ally: Holy Light +400, Flash of Light +115, Holy Shock +229 (only there).
-- Holy Power 5/5: no critical chance. Main case (decision of 2 November): the critical heal is 225% (x1.5 on the full
-  critical heal, bonus 1.25: the wowsims reading of aura A_MOD_CRITICAL_HEALING_AMOUNT, an aura that only Holy Power
-  uses). Low case: 175% (+50% of the bonus, the rule of Ruin and Elemental Fury). 200% (+50 points) was the main case
-  from 1 to 2 November.
+- Holy Power 5/5: no critical chance. Main case (decision of 3 November): the critical heal is 175% (bonus 0.75:
+  +50% of the bonus, the rule of Ruin and Elemental Fury). High case: 225% (x1.5 on the full critical heal, bonus 1.25:
+  the wowsims reading of aura A_MOD_CRITICAL_HEALING_AMOUNT, an aura that only Holy Power uses; the main case on
+  2 November). 200% (+50 points) was the main case from 1 to 2 November.
 - Boundless Light 2/2: Holy Shock +30% critical chance on an ally with no Oath of Light. bl_fol: the same for Flash of Light (a withdrawn idea, see Withdrawn ideas).
 - Build 38/5/8: Holy (no Divine Strength, no Divine Precision, Purifying Power 1), Divine Intellect 5/5,
   Benediction 5/5, Conviction 3/3 (+6% critical chance, all spells). Reverence 2/2 = 30% (as before).
@@ -18,7 +18,7 @@ sys.path.insert(0, sys.argv[1] if len(sys.argv) > 1 else ".")
 import healing_model as H
 from healing_model import Spell, cd_limit, regen_full, solve, priest, druid, shaman, budget, max_hps, HPG, CRIT_BASE, PAL_CRIT
 
-def paladin_b2(hp=HPG, tank=False, oath=None, bonus=1.25, conv=0.06, boundless=0.30, light=1.12, rev=0.30,
+def paladin_b2(hp=HPG, tank=False, oath=None, bonus=0.75, conv=0.06, boundless=0.30, light=1.12, rev=0.30,
                illum=0.50, bened=0.10, lv=True, df_cd=120, bl_fol=0.0):
     """oath: Oath of Light on the healed target (default: True on one tank, False in the raid).
     bonus: critical heal bonus (0.5 = no Holy Power, 1.25 = Holy Power 5/5 with the server rule)."""

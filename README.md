@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 ## Contents
 
-- **Proposals:** 11 changes and 1 move for the live trees. 3 changes are baseline spell changes (C2, C4, C5). Shoulder the Burden (C-P5) is a new baseline spell. 7 changes are talent changes (C-H1, C-P1, C-P7, C-P11, C-P13, C-P14, C-R3). Devoted Sacrifice (C-P11) and Reach of Law (C-P7) are new talents. One move: Stoicism to row 4, column 4 (M-P2).
+- **Proposals:** 12 changes and 1 move for the live trees. 3 changes are baseline spell changes (C2, C4, C5). Shoulder the Burden (C-P5) is a new baseline spell. 8 changes are talent changes (C-H1, C-H7, C-P1, C-P7, C-P11, C-P13, C-P14, C-R3). Devoted Sacrifice (C-P11) and Reach of Law (C-P7) are new talents. One move: Stoicism to row 4, column 4 (M-P2).
 - **Adopted proposals:** the live version of 4 November 2026 adopts 6 earlier proposals (C3, the C-H1 move, the C-P5 removal, C-R1, M-H5 and M-R1).
 - **Talent calculator:** you can try the proposals and compare them with the live trees.
 - **Analysis:** crushing blows, threat, PvP burst, mana, healing, damage, builds and tree balance, each with its model and limits.
@@ -31,7 +31,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 **Holy**
 
-- **C-H1 Reverence 25/50% (live: 15/30%, row 2):** more mana regeneration during casts, as the healer talents of the other classes (50%). Holy heals 5–9% more, most in long fights. On one tank, the Paladin is 12–17% above the Druid (225% critical heal), below the 20% limit. It has no link to critical heals, thus it does not depend on the Holy Power test. Retribution also takes it: +4–5% damage at fresh level 60 without buffs (wowsims), 0% with raid buffs.
+- **C-H1 Reverence 25/50% (live: 15/30%, row 2):** more mana regeneration during casts, as the healer talents of the other classes (50%). Holy heals 5–9% more, most in long fights. On one tank, the Paladin is 3–7% below the Druid (175% critical heal), and 3–9% above at 225%, below the 20% limit. It has no link to critical heals, thus it does not depend on the Holy Power test. Retribution also takes it: +4–5% damage at fresh level 60 without buffs (wowsims), 0% with raid buffs.
 
 **Protection**
 

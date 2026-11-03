@@ -43,7 +43,7 @@ The models of the Analysis tabs ran again on the new trees, with no proposal. He
 | Protection mana while it tanks, Blessing of Wisdom | +24 to +39 per sec | +15 to +37 per sec |
 | Retribution damage (wowsims test runs) | 824 DPS | 848 DPS (+3%). After the wowsims update of 1 November: 906 DPS. This is about 112% of the pure average at fresh level 60 and 107% in Naxxramas (wowsims and model) |
 
-- **Holy Power.** The Holy values use a 225% critical heal (main hypothesis, decision of 2 November, as wowsims). The Paladin is 3–10% above the Druid on one tank. At 175%, it is 1–7% below. With the Druid changes of the notes of 2 November: 5% below to 5% above at 225%, 8–15% below at 175%.
+- **Holy Power.** The Holy values use a 175% critical heal (main hypothesis, decision of 3 November, the general view of the players). Before the notes of 2 November, the Paladin was 1–7% below the Druid on one tank at 175%, and 3–10% above at 225%. With the Druid changes of the notes of 2 November: 8–15% below at 175%, 5% below to 5% above at 225%.
 - **Mana.** In raids, mana is still the limit of the Paladin. The best cast plan is almost only Flash of Light.
 - **Righteous Fury.** The +33% and Shieldsworn give most of the threat increase.
 

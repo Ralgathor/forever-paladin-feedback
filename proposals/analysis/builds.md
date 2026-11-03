@@ -16,13 +16,15 @@ The builds use the proposed trees of calculator version 6 (the live version, wit
 
 | Build | Points and code | Healing each sec (raid / one tank, 5 min) | What it gives |
 | --- | --- | --- | --- |
-| HB1. Raid healer, live talents | 38/5/8: [`v6p50325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50325115202121251-5-0503) | 533 / 633 | All healing talents. Divine Intellect 5, Benediction 5, Conviction 3. Improved Seals 5, Holy Conduit 2 and Consecrated Ground 2 fill the rows |
-| **HB2. Raid healer, Devoted Sacrifice** | 31/12/8: [`v6p50320115202101251-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50320115202101251-50122000000000002-0503) | 568 / 670 | All healing talents, with Reverence 50% (C-H1). Devoted Sacrifice 2/2 (C-P11): Lay on Hands drains only 50% of the mana. Guardian's Favor 2/2 (Hand of Protection each 3 min), Sacred Duty 2/2 (Divine Shield −60 sec), Precision 1 |
+| HB1. Raid healer, live talents | 38/5/8: [`v6p50325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50325115202121251-5-0503) | 692 / 568 | All healing talents. Divine Intellect 5, Benediction 5, Conviction 3. Improved Seals 5, Holy Conduit 2 and Consecrated Ground 2 fill the rows |
+| **HB2. Raid healer, Devoted Sacrifice** | 31/12/8: [`v6p50320115202101251-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50320115202101251-50122000000000002-0503) | 728 / 602 | All healing talents, with Reverence 50% (C-H1) and Light's Vigil (C-H7). Devoted Sacrifice 2/2 (C-P11): Lay on Hands drains only 50% of the mana. Guardian's Favor 2/2 (Hand of Protection each 3 min), Sacred Duty 2/2 (Divine Shield −60 sec), Precision 1 |
 
-- **HB2 is the main build with the proposals.** It loses only two damage talents: Improved Seals and Consecrated Ground. Reverence 50% gives +6–7% healing in fights of 5 min, and +9% in fights of 10 min.
+- **HB2 is the main build with the proposals.** It loses only two damage talents: Improved Seals and Consecrated Ground. Reverence 50% gives +5–6% healing in fights of 5 min, and +5–9% in fights of 10 min.
+- **Both builds take Light's Vigil (C-H7).** In the proposed trees, it gives the raid healing: HB1 heals 692 in raids, against 479 with the live talent.
 - **Holy needs 31 points for Light's Vigil.** Holy Conduit 2/2 fills the rows. It makes only Consecration, Holy Wrath, Exorcism and Hammer of Wrath cheaper.
 - **The 3 Retribution points after Benediction** go to Conviction 3/3: +6% critical chance, thus more Illumination mana.
-- **Healing values** use 225% critical heals (Holy Power 5/5, main hypothesis). HB2 at 200%: 537 raid and 638 one tank. At 175%: 505 and 600. HB1 at 200%: 506 and 601. At 175%: 479 and 568.
+- **Healing values** use 175% critical heals (Holy Power 5/5, main hypothesis since 3 November). HB2 at 200%: 785 raid and 636 one tank. At 225%: 843 and 670. HB1 at 200%: 748 and 601. At 225%: 804 and 633.
+- **Hybrid builds with Light's Vigil (C-H7).** A build with 31 Holy points casts Holy Shock on an enemy each 6 sec (live: each 10 sec). This gives +36 to +48 damage each sec, for about 49 mana each sec (live: 29). Illumination returns no mana on damage. The build has no Unsealed Wrath and no Champion of the Light. Thus it stays far below RB1 (910) in raids. The risk is the PvP burst: three or four Holy Shocks in one stun (PvP burst check, part 6, and W30).
 
 ## 2. Protection
 

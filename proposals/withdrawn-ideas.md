@@ -2,6 +2,22 @@
 
 The analysis examined these ideas and rejected them. They are not proposals.
 
+## Light's Vigil options, 3 November 2026
+
+Light's Vigil (C-H7) is the proposal. The analysis examined these other designs for the Holy capstone. See Analysis, Healing, part 7.
+
+| Idea | Why it was withdrawn |
+| --- | --- |
+| Light's Vigil with a lower cost and an instant cast, 20 sec cooldown | Two casts for one party heal stay. Raid +11% to +21% against the Shaman (225% critical heal) |
+| Light's Vigil releases your active Seal on the party of an ally | Three Seals (Righteousness, Fury, Justice) have no clear party effect. The cast consumes the Seal |
+| Light's Vigil puts a heal over time on the party, Holy Shock ends it for a burst | Small changes in cost give large changes in value. Close to Swiftmend (Druid) |
+| Fulfill the Oath: heals on the Oath of Light target give stacks, Holy Shock uses them for party heals | The raid value depends on how much the Paladin heals one target (+5% to +29% against the Shaman, 225% critical heal) |
+| 3 charges from critical heals, Judgement and Holy Strike, spent by Holy Shock on party heals | Critical heals give a random number of charges. Ranged Paladins receive 5–7% less |
+| Holy Shock critical heals also give a charge | A loop: one charge gives about 2 Holy Shocks. Holy Shock replaces Flash of Light, and the burst size is random |
+| Your Holy damage heals the party of the Light's Vigil target | The value depends on spell damage from items. Close to a later-expansion healer |
+| On an enemy, Holy Shock with Light's Vigil deals 10% more damage and refunds 75% of its mana cost (first beta text) | Three or four Holy Shocks one after the other already give a large burst (PvP burst check, part 6). The 10% adds PvP burst, and the refund adds a damage use to a healer talent |
+| Standard of the Light, Swear a New Oath, Cleansing Light, Overflowing Light, Last Rites, Kneel in Vigil | Not modeled. Light's Vigil (C-H7) keeps the live talent and its name. Last Rites and Kneel in Vigil are close to Guardian Spirit and Tranquility |
+
 ## Withdrawn on 2 November 2026
 
 | Earlier proposal (ID) | Why it was withdrawn |
