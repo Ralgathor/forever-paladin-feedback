@@ -51,7 +51,7 @@ Only the heals on the tank. The tank has Oath of Light. "Maximum" is the raw hea
 | **Paladin, live version** | **658** | **568** | **480** | **720** | **628** | **530** | **1,368** | **1,441** |
 
 - **The Druid is first in all fight lengths** (Paladin −8% to −15% at 715, −6% to −13% at 900). The goal (W14) is the best single-target healer, with a lead of 20% or less.
-- **The Paladin mana is the limit,** most in fights of 10 min. Reverence 50% (C-H1) decreases the gap to 3–7%. The Druid stays first.
+- **The Paladin mana is the limit,** most in fights of 10 min. Reverence 50% (C-H1) decreases the gap to 3–7%. With Reverence 50% alone, the Druid stays first.
 - **The Paladin maximum is the highest:** 2–4% above the Druid.
 - **The cast plan is almost only Flash of Light,** with Divine Favor and Holy Light each 2 min.
 - **Oath of Light 30% (C-H8)** with Reverence 50% gives 755 / 658 / 571 (Druid 725 / 617 / 562): 2–7% above the Druid. At 900 healing power, it is 6–11% above. The maximum is 1,493. See part 7.
