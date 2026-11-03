@@ -102,7 +102,7 @@ Two values for each spell: raw healing for each mana point · healing for each m
 | Paladin, tank with Oath | Divine Favor and Holy Light: 12.5 · 10.0. Light's Vigil and Holy Shock: 5.4 · 4.1. Holy Shock: 4.4 · 3.8 | Flash of Light 7.8 · 6.6. Holy Light 5.7 · 4.5 |
 
 - **On the tank, Flash of Light** heals 7.8 for each mana point. The Druid heals over time give 8.3–8.6 with Bloom.
-- **In raids, Flash of Light (6.6) is about equal** to Greater Heal and Healing Wave, but below Chain Heal (7.5) and the Druid heals over time. But the Priest has a strong cooldown heal: in fights of 3 min, Prayer of Mending gives 43% of the Priest healing. Swiftmend gives 13% of the Druid healing. The Druid heals over time now cost less for each heal than Flash of Light (8.3–8.6 with Bloom).
+- **In raids, Flash of Light (6.6) is about equal** to Greater Heal and Healing Wave. Chain Heal (7.5) and the Druid heals over time (8.3–8.6 with Bloom) cost less for each heal. The Priest also has a strong cooldown heal: in fights of 3 min, Prayer of Mending gives 43% of the Priest healing. Swiftmend gives 13% of the Druid healing.
 - **Riptide is now weaker.** It has no direct heal. In raids, the Shaman cast plan uses Chain Heal and no Riptide.
 - **Divine Favor and Holy Light** is the most efficient Paladin heal, but only once each 2 min.
 
