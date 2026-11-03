@@ -18,7 +18,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 14 chan
 - **Names.** The text gives the name first and the ID in parentheses, for example Sanctified Judgement (C-R3).
 - **C2a** is the alternative to Personal Judgement of the Crusader (C2). **C-P11a** is the alternative to the Lay on Hands part of Devoted Sacrifice (C-P11). **C25a** is the alternative to Righteous Fury (C25).
 - **Withdrawn ideas** have no ID. They are in the [Withdrawn ideas](withdrawn-ideas.md) tab only. A withdrawn proposal shows its earlier ID there, because the Analysis tabs still use it.
-- **Data.** Forever client build 1.60.1.70755, hotfix push 113578 (live version of 3 November 2026), from the game files in wowsims Forever. Player tests from 19 October 2026 and later. The text tells you when a value comes from an in-game tooltip.
+- **Data.** Forever client build 1.60.1.70755, hotfix push 113578 (live version of 3 November 2026), from the game files in wowsims Forever. Player tests from 19 October 2026 and later. The text tells you when a value comes from an in-game tooltip. The live trees are the trees of the beta of 30 October 2026 (hotfix push 113554). The names b2 and beta-30-oct refer to these trees.
 - **Analysis values.** The Analysis tabs use the live trees. Beta test results gives the first model results for the live trees. A proposal says when its values must be modeled again.
 - **Limits.** These are design proposals. No player has tested them in the game. The combat and mana values use Classic 1.12 rules when no test gives a different rule. Each estimate gives its assumptions.
 - **Calculator.** You can try all proposals in the talent calculator. Use the Live/Proposed button to compare.

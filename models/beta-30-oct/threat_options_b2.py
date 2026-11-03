@@ -1,12 +1,13 @@
 """Threat options after the development notes of 2 November 2026 (not proposals yet): % of the Warrior at each tier.
-Run: python3 threat_options_b2.py ..   (the models folder of the repository)
+Run: python3 threat_options_b2.py
 
 All rows have Redoubt (C-P1). The model gives Holy Shield too many hits, thus each gain over C-P1 is scaled by
 CAL (0.55): the ratio of the wowsims gain to the model gain with the same gear (models/wowsims-b2/threat-options.patch).
 HS: the Holy Shield threat multiplier (live 1.2). CP9: Holy Shield adds this x block value to each hit (C-P9).
 """
 import sys
-base = sys.argv[1] if len(sys.argv) > 1 else ".."
+import os; D = os.path.dirname(os.path.abspath(__file__))
+base = sys.argv[1] if len(sys.argv) > 1 else os.path.join(D, "..")
 for d in ("mana", "threat", "beta-30-oct"):
     sys.path.insert(0, f"{base}/{d}")
 import threat_model as T

@@ -81,6 +81,7 @@ The talent icons come from the Wowhead icon server (wow.zamimg.com). If the icon
 ## Method
 
 - **Data.** Forever client build 1.60.1.70755, hotfix push 113578 (live version of 3 November 2026). The talent data comes from the game files in wowsims Forever (master branch, commit `d97252f2a`, 3 November 2026). The model runs use commit `895cd67f9` (1 November 2026), with the two Retribution changes of build 70755 as flags. Player tests give the talent behavior.
+- **Live and beta.** The live trees are the trees of hotfix push 113554, first on the beta of 30 October 2026. The names beta of 30 October, the code prefix b2 and the folder models/beta-30-oct refer to these trees.
 - **Development notes of 2 November 2026.** The notes give Defensive Stance +80% threat and Bear Form +115%. They also change the Druid heals and increase the damage of most classes, Retribution included. The Threat, Healing and Damage values use them. Build 70755 has the two Retribution changes: Two-Handed Weapon Specialization +2/4/6% Holy damage and Vengeance 5 stacks. The Warrior and Druid threat values are not in the game files yet ([Beta test results](proposals/beta-test-results.md)).
 - **Critical heals.** The Holy values use a 175% critical heal with Holy Power 5/5 (decision of 3 November). Some tables also give 200% and 225%. A test in the game must confirm the value ([Open items](proposals/open-items.md)).
 - **Earlier data.** The Analysis tabs use the live trees. The values of the beta of 18 October 2026 (client build 1.60.1.70450) are in Beta test results and in the history of the repository.
@@ -93,13 +94,15 @@ The talent icons come from the Wowhead icon server (wow.zamimg.com). If the icon
 
 | Folder | What it holds | Trees |
 | --- | --- | --- |
-| [models/healing](models/healing/) | Healing model (linear program) and recovery after a large hit (Monte Carlo) | Beta (18 October) |
-| [models/threat](models/threat/) | Threat model, one enemy and groups of enemies | Beta (18 October) |
-| [models/damage](models/damage/) | Retribution damage model | Beta (18 October) |
-| [models/mana](models/mana/) | Protection mana model, one boss | Beta (18 October) |
-| [models/wowsims](models/wowsims/) | wowsims Forever check of the proposals (calculator version 5) | Beta (18 October) |
-| [models/beta-30-oct](models/beta-30-oct/) | The models of the Analysis tabs on the new trees | Live (30 October) |
-| [models/wowsims-b2](models/wowsims-b2/) | wowsims Forever check of the kept proposals, burst threat, Righteous Fury (C25), all damage specs, the builds and the level-up order | Live (30 October) |
+| [models/healing](models/healing/) | Healing model (linear program) and recovery after a large hit (Monte Carlo). The engine of the beta-30-oct scripts | Engine |
+| [models/threat](models/threat/) | Threat model, one enemy and groups of enemies. The engine of the beta-30-oct scripts | Engine |
+| [models/damage](models/damage/) | Retribution damage model. The engine of the beta-30-oct scripts | Engine |
+| [models/mana](models/mana/) | Protection mana model, one boss. The engine of the beta-30-oct scripts | Engine |
+| [models/wowsims](models/wowsims/) | wowsims Forever check of the proposals (calculator version 5) | Beta of 18 October |
+| [models/beta-30-oct](models/beta-30-oct/) | The models of the Analysis tabs on the live trees. Run each script with no argument | Live |
+| [models/wowsims-b2](models/wowsims-b2/) | wowsims Forever check of the kept proposals, burst threat, Righteous Fury (C25), all damage specs, the builds and the level-up order | Live |
+
+The Python models need numpy and scipy: `pip install -r requirements.txt`. The engine folders hold the model code of the beta of 18 October 2026. The beta-30-oct scripts import them and give the values of the Analysis tabs.
 
 ## Feedback
 

@@ -1,8 +1,9 @@
 """Recovery after a large hit on one tank (repo models/healing/recovery.py), beta of 30 October 2026.
 The Paladin has Oath of Light on the tank (no Boundless Light), Holy Power 5/5 (critical heal 175%, main case since 3 November), Conviction 3/3.
-Run: python3 recovery_b2.py <repo>/models/healing"""
+Run: python3 recovery_b2.py"""
 import sys
-sys.path.insert(0, sys.argv[1] if len(sys.argv) > 1 else ".")
+import os; D = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, sys.argv[1] if len(sys.argv) > 1 else os.path.join(D, "..", "healing"))
 import recovery as R
 from recovery import B, GCD, best, HPG, CRIT_BASE, PAL_CRIT
 

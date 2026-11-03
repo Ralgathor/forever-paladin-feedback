@@ -96,4 +96,4 @@ if __name__ == "__main__":
     for b, n in ((0.75, "175%"), (1.25, "225%")):
         a, d = burst(3, 6, bonus=b)[0], burst(3, 6, bonus=b, df=True)[0]
         print(f"  {n}: 6 sec {a:.0f} -> {d:.0f} ({d/a-1:+.0%}); 10 sec {burst(3, 10, bonus=b)[0]:.0f} -> {burst(3, 10, bonus=b, df=True)[0]:.0f}")
-    print(f"Casts in 5 min, raid: {solve(k, 300, False)['casts']}")
+    print("Casts in 5 min, raid:", {a: round(float(v), 1) for a, v in solve(k, 300, False)['casts'].items()})

@@ -1,6 +1,6 @@
 """Retribution on the beta of 30 October 2026 (wowsims Forever, branch paladin/hotfix-113554-port, push 113554).
 Uses models/damage/damage_model.py of the repo (gear tiers, hit tables, Vengeance, Fury, Arms, Rogue).
-Run from the repo: python3 retribution_b2.py <repo>/models/damage
+Run: python3 retribution_b2.py
 
 Build (wowsims default Retribution build of 1 November, 050250002-501-05233011201301351, 14/6/31):
 - Holy: Divine Strength 5/5 (+10% Strength), Reverence 2/2, Improved Seals 5/5 (+15% Seals and Judgements),
@@ -24,7 +24,8 @@ the base cost of the judged Seal. Holy Strike 20. Hammer of Wrath 425 x0.60.
 Income: Reverence 2/2 (30% of Spirit regeneration in casts) 6.2 per sec, Blessing of Wisdom 8 per sec.
 """
 import sys
-sys.path.insert(0, sys.argv[1] if len(sys.argv) > 1 else ".")
+import os; D = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, sys.argv[1] if len(sys.argv) > 1 else os.path.join(D, "..", "damage"))
 import damage_model as M
 # Pure damage classes: wowsims Forever 895cd67f9, same pre-raid item pool for each spec (game start and Dire Maul
 # content, models/wowsims-b2/matched_gear), wowsims preset enchants, the same consumables for each spec, Ret raid buffs,

@@ -1,5 +1,5 @@
 """Analysis, Threat, on the beta of 30 October 2026: all tables of the tab.
-Run: python3 threat_tables_b2.py ..   (the models folder of the repository)
+Run: python3 threat_tables_b2.py
 
 Beta tank: B2T 0/38/13 (threat_b2.py). Proposed tank: the same talents with the kept proposals:
 Personal Judgement of the Crusader (C2), Redoubt (C-P1). The Holy Strike Seal trigger (C1) and Reckoning (C-P12) were withdrawn on 2 November 2026: part 4 still shows their values.
@@ -7,7 +7,8 @@ Toughness removal (C-P13) does not change threat. The Warrior and the Druid come
 Several targets: the rules of models/threat/multi_target.py, with the Holy Shield of the beta of 30 October.
 """
 import sys
-base = sys.argv[1] if len(sys.argv) > 1 else ".."
+import os; D = os.path.dirname(os.path.abspath(__file__))
+base = sys.argv[1] if len(sys.argv) > 1 else os.path.join(D, "..")
 sys.argv = [sys.argv[0], base]
 sys.path.insert(0, base + "/threat"); sys.path.insert(0, base + "/beta-30-oct")
 import threat_model as T

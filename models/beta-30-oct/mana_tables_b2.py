@@ -1,11 +1,12 @@
 """Analysis, Mana, on the beta of 30 October 2026: the Protection tables.
-Run: python3 mana_tables_b2.py ..   (the models folder of the repository)
+Run: python3 mana_tables_b2.py
 
 Tank build B2T 0/38/13 (threat_b2.py). Proposed: the same talents with Redoubt (C-P1): 61.6% block (wowsims).
 Sanctified Judgement (C-R3) does not change the return at 3/3. Costs and gear tiers: models/mana/mana_model.py.
 """
 import sys
-base = sys.argv[1] if len(sys.argv) > 1 else ".."
+import os; D = os.path.dirname(os.path.abspath(__file__))
+base = sys.argv[1] if len(sys.argv) > 1 else os.path.join(D, "..")
 sys.argv = [sys.argv[0], base]
 sys.path.insert(0, base + "/threat"); sys.path.insert(0, base + "/mana"); sys.path.insert(0, base + "/beta-30-oct")
 import mana_model as M

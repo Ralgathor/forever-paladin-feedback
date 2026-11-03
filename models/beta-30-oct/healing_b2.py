@@ -1,6 +1,6 @@
 """Holy Paladin on the beta of 30 October 2026 (wowsims Forever, branch paladin/hotfix-113554-port, push 113554).
 Uses models/healing/healing_model.py of the repo for the Priest, the Druid, the Shaman and the solver.
-Run from the repo: python3 healing_b2.py <repo>/models/healing
+Run: python3 healing_b2.py
 
 Changes against the beta of 18 October (healing_model.paladin defaults):
 - No Blessing of Light. Oath of Light on one ally: Holy Light +400, Flash of Light +115, Holy Shock +229 (only there).
@@ -14,7 +14,8 @@ Changes against the beta of 18 October (healing_model.paladin defaults):
 - Light's Vigil rank 3: no change in cost or heal (only the range, 20 -> 40 yd).
 """
 import sys
-sys.path.insert(0, sys.argv[1] if len(sys.argv) > 1 else ".")
+import os; D = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, sys.argv[1] if len(sys.argv) > 1 else os.path.join(D, "..", "healing"))
 import healing_model as H
 from healing_model import Spell, cd_limit, regen_full, solve, priest, druid, shaman, budget, max_hps, HPG, CRIT_BASE, PAL_CRIT
 
