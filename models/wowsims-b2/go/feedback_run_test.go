@@ -10,6 +10,7 @@ import (
 	"github.com/wowsims/forever/sim/core"
 	"github.com/wowsims/forever/sim/core/proto"
 	"github.com/wowsims/forever/sim/core/stats"
+	googleproto "google.golang.org/protobuf/proto"
 )
 
 // FEEDBACK_DUR (sec), FEEDBACK_BUFFS (full|lean), PROPOSE flags. Prints DPS, time to OOM and sec OOM.
@@ -25,9 +26,9 @@ func TestFeedbackRun(t *testing.T) {
 		indiv = &proto.IndividualBuffs{GreaterBlessingOfKings: true, GreaterBlessingOfWisdom: 1, GreaterBlessingOfMight: 1}
 	}
 	if os.Getenv("FEEDBACK_BOOKTOTEMS") != "" { // rank 2: the Ruins of Ahn'Qiraj book ranks of Strength of Earth and Grace of Air
-		rb := *raid
+		rb := googleproto.Clone(raid).(*proto.RaidBuffs)
 		rb.StrengthOfEarthTotem, rb.GraceOfAirTotem = 2, 2
-		raid = &rb
+		raid = rb
 	}
 	debuffs, cons := core.FullDebuffs, DefaultConsumables
 	if os.Getenv("FEEDBACK_BUFFS") == "none" { // fresh level 60: no buffs, no debuffs, no consumables
