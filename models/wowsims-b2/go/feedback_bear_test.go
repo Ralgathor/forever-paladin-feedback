@@ -8,6 +8,7 @@ import (
 
 	"github.com/wowsims/forever/sim/core"
 	"github.com/wowsims/forever/sim/core/proto"
+	"google.golang.org/protobuf/encoding/protojson"
 )
 
 func TestFeedbackBear(t *testing.T) {
@@ -55,6 +56,10 @@ func TestFeedbackBear(t *testing.T) {
 	if os.Getenv("FEEDBACK_LOG") != "" {
 		rsr.SimOptions.Debug = true
 		rsr.SimOptions.Iterations = 1
+	}
+	if d := os.Getenv("FEEDBACK_DUMP"); d != "" { // the request as JSON, for the wowsims links of sets/ (models/wowsims-b2/sets)
+		b, _ := protojson.Marshal(rsr)
+		os.WriteFile(d, b, 0644)
 	}
 	res := core.RunRaidSim(rsr)
 	if os.Getenv("FEEDBACK_LOG") != "" {

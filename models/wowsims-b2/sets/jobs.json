@@ -1,0 +1,7 @@
+[
+ {"name":"Protection Paladin","file":"prot.json","path":"paladin/protection"},
+ {"name":"Protection Warrior","file":"war.json","path":"warrior/protection"},
+ {"name":"Bear Druid","file":"bear.json","path":"druid/feralbear"},
+ {"name":"Retribution","file":"ret.json","path":"paladin/retribution"},
+ {"name":"Shockadin","file":"shock.json","path":"paladin/retribution"}
+]

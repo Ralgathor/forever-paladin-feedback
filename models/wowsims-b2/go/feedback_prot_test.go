@@ -10,6 +10,7 @@ import (
 	"github.com/wowsims/forever/sim/core"
 	"github.com/wowsims/forever/sim/core/proto"
 	"github.com/wowsims/forever/sim/core/stats"
+	"google.golang.org/protobuf/encoding/protojson"
 )
 
 // FEEDBACK_DUR (sec), PROPOSE flags. Prints DTPS, TPS and the boss attack table on the tank.
@@ -69,6 +70,10 @@ func TestFeedbackRun(t *testing.T) {
 	if os.Getenv("FEEDBACK_LOG") != "" {
 		rsr.SimOptions.Debug = true
 		rsr.SimOptions.Iterations = 1
+	}
+	if d := os.Getenv("FEEDBACK_DUMP"); d != "" { // the request as JSON, for the wowsims links of sets/ (models/wowsims-b2/sets)
+		b, _ := protojson.Marshal(rsr)
+		os.WriteFile(d, b, 0644)
 	}
 	res := core.RunRaidSim(rsr)
 	if os.Getenv("FEEDBACK_LOG") != "" {

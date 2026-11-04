@@ -52,7 +52,7 @@ The builds use the proposed trees of calculator version 6 (the live version, wit
 
 - **Raid DPS** comes from wowsims, 3 min, full buffs. The wowsims rotation is made for RB1. Thus, the values of RB2 and RB3 are approximate.
 - **The Holy points give RB1 the most.** Improved Seals gives +15% on Seals and Judgements, and Reverence gives mana. Without Holy points (RB2), raid DPS is 7% lower.
-- **SB1 uses the wowsims Holy Shock set** (spell damage gear) and its rotation. Thus, its DPS against RB1 is approximate. Holy Shock gives SB1 +11%.
+- **SB1 uses the [wowsims Holy Shock set](https://ralgathor.github.io/forever-paladin-feedback/sets/build-shockadin.html)** (spell damage gear) and its rotation. Thus, its DPS against RB1 is approximate. Holy Shock gives SB1 +11%.
 - **C1 (withdrawn) gave +5–6%** in RB1 and RB2. The C1 flag does not run with RB3 on commit d97252f2a.
 - **The earlier wowsims build** (14/5/32, [`v6p050250002-5-05233301101301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-5-05233301101301351)) gives 929 (977 with C1). Precision 1 in place of Vindication gives RB1 +1.6%.
 - **PvP burst** values come from PvP burst check. The kept proposals do not change them.
@@ -69,7 +69,7 @@ Some builds must put points into talents with little value, to open a deeper row
 
 ## 5. Method and limits
 
-- **Protection and Retribution:** wowsims Forever (master commit d97252f2a of 3 November, game files of client 1.60.1.70755, 3,000 iterations, 3 min, full buffs). The Shockadin (SB1): commit 6ee3c30f35 of 4 November, with the Light's Vigil flag CH7 (builds/shockadin.md).
+- **Protection and Retribution:** wowsims Forever (master commit d97252f2a of 3 November, game files of client 1.60.1.70755, 3,000 iterations, 3 min, full buffs). The Shockadin (SB1): commit 6ee3c30f35 of 4 November, with the Light's Vigil flag CH7 (builds/shockadin.md). Gear: the default sets of wowsims Forever, [Protection Paladin](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-protection-paladin.html), [Retribution](https://ralgathor.github.io/forever-paladin-feedback/sets/build-retribution.html) (RB1) and [Holy Shock](https://ralgathor.github.io/forever-paladin-feedback/sets/build-shockadin.html) (SB1).
 - **Holy:** the healing model (`models/beta-30-oct/healing_b2.py`, 715 healing power, 5 min). The live test of Holy Power can change the Holy values (see Open items).
 - **PvP:** the PvP burst model (`models/beta-30-oct/pvp_burst_b2.py`), one Hammer of Justice stun.
 - wowsims does not model Lay on Hands, Shoulder the Burden (C-P5) or Hand of Sacrifice (C4).
