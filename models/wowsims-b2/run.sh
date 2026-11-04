@@ -1,10 +1,10 @@
 #!/bin/sh
-# Checks on wowsims Forever, master branch (commit d97252f2a, 3 November 2026, game files of client 1.60.1.70755).
+# Checks on wowsims Forever, master branch (commit 6ee3c30f35, 4 November 2026, game files of client 1.60.1.70755).
 # Usage: ./run.sh <wowsims clone>. Needs Go 1.25, Python 3 with grpcio-tools, protoc-gen-go v1.36.10.
 set -e
 W="$1"; D="$(cd "$(dirname "$0")" && pwd)"
 cd "$W"
-git checkout -q d97252f2a
+git checkout -q 6ee3c30f35
 git apply "$D/patches/talents.patch" || true
 git apply "$D/patches/notes-2-november.patch" || true
 git apply "$D/patches/threat-options.patch" || true
@@ -23,7 +23,7 @@ python3 -m grpc_tools.protoc -I=./proto -I="$GRPC_PROTO" \
 cd sim/paladin/retribution
 go test -tags with_db -c -o /tmp/rettest .
 # Development notes of 2 November 2026: the N2H and V5 flags are for commit 895cd67f9 only.
-# Commit d97252f2a has both changes in the game data. Book ranks of Strength of Earth Totem and Grace of Air Totem:
+# Commits d97252f2a and 6ee3c30f35 have both changes in the game data. Book ranks of Strength of Earth Totem and Grace of Air Totem:
 FEEDBACK_BOOKTOTEMS=1 FEEDBACK_DUR=120 FEEDBACK_BUFFS=full /tmp/rettest -test.run TestFeedbackRun -test.v | grep RESULT
 for b in full lean; do for d in 120 300; do for p in "" C1 UW20; do
   FEEDBACK_DUR=$d FEEDBACK_BUFFS=$b PROPOSE=$p /tmp/rettest -test.run TestFeedbackRun -test.v | grep RESULT
@@ -43,7 +43,7 @@ go test -tags with_db -c -o /tmp/wartest .
 FEEDBACK_DUR=120 /tmp/wartest -test.run TestFeedbackRun -test.v | grep RESULT
 # Analysis, Threat, parts 7 and 8: 3 min, 1, 3 and 5 targets (each target hits for 1/3 of the boss when FEEDBACK_TARGETS is set)
 cd ../../paladin/protection
-# The C1 flag panics in this test on commit d97252f2a. The C1 and C-P12 (RK100) values come from commit 895cd67f9.
+# The C1 flag panics in this test on commits d97252f2a and 6ee3c30f35. The C1 and C-P12 (RK100) values come from commit 895cd67f9.
 for p in "" CP1 CP1,NOTOUGH; do
   FEEDBACK_DUR=180 PROPOSE=$p /tmp/prottest -test.run TestFeedbackRun -test.v | grep -E "RESULT|TMI"
 done

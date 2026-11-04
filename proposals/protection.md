@@ -163,18 +163,18 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 
 | Case | Threat each sec | % of the Warrior | % of the Druid |
 | --- | --- | --- | --- |
-| Warrior | 1,311 | 100% | 112% |
-| Druid | 1,175 | 90% | 100% |
-| Paladin, live | 980 | 75% | 83% |
-| **Paladin, Righteous Fury (C25)** | **1,394** | **106%** | **119%** |
-| Paladin, C25 and Redoubt (C-P1) | 1,500 | 114% | 128% |
-| Paladin, C25a (+80%) | 1,321 | 101% | 112% |
-| Paladin, C25a and Redoubt (C-P1) | 1,422 | 108% | 121% |
+| Warrior | 1,311 | 100% | 108% |
+| Druid | 1,213 | 93% | 100% |
+| Paladin, live | 980 | 75% | 81% |
+| **Paladin, Righteous Fury (C25)** | **1,394** | **106%** | **115%** |
+| Paladin, C25 and Redoubt (C-P1) | 1,500 | 114% | 124% |
+| Paladin, C25a (+80%) | 1,321 | 101% | 109% |
+| Paladin, C25a and Redoubt (C-P1) | 1,422 | 108% | 117% |
 
 - **Gear levels (model).** With C25, the live Paladin has 117% of the Warrior threat at fresh level 60 and 101% in Naxxramas. Before the notes, it had 118% and 101%. With C25a, it has 111% and 96%.
 - **All threat cases.** Analysis, Threat, part 9 gives parts 1 to 8 again with C25 and C25a.
 - **Pull.** With a Fury opener, the Paladin has 168% of the Warrior threat after 3 sec and 132% after 10 sec. In its best short windows, it has 87–93% of the Warrior (live: 61–66%).
-- **Groups.** On 3 enemies, the Paladin total is 2,126 threat each sec. The Warrior has 1,647 and the Druid 1,536. On the enemy with the least threat, the Paladin has 3.5 times the Warrior threat.
+- **Groups.** On 3 enemies, the Paladin total is 2,126 threat each sec. The Warrior has 1,647 and the Druid 1,567. On the enemy with the least threat, the Paladin has 3.5 times the Warrior threat.
 - **Other specs.** Holy and Retribution use Righteous Fury only to tank. In PvP, threat has no effect.
 - **Alternative C25a.** +80% to all threat, the value of Defensive Stance. The live tank then has 101% of the Warrior threat in wowsims, and 108% with Redoubt (C-P1). The model gives 95% (Analysis, Threat, part 9).
 - **First, a live test.** The Warrior and Druid values come from the notes, not from the game files. The live realms must confirm them before this change (W28).

@@ -2,7 +2,7 @@
 
 This run gives the pure average of Analysis, Damage (parts 1, 3 and 7).
 
-The item search ran on wowsims Forever, master commit `895cd67f9` (1 November 2026). On 3 November 2026, the same sets ran again on master commit `d97252f2a` (game files of client 1.60.1.70755). The results below come from that commit.
+The item search ran on wowsims Forever, master commit `895cd67f9` (1 November 2026). On 3 November 2026, the same sets ran again on master commit `d97252f2a` (game files of client 1.60.1.70755), and on 4 November on master commit `6ee3c30f35` (the hotfix 113578 ports of the Warrior, Rogue and Hunter). The results below come from commit `6ee3c30f35`.
 
 ## Rules (the same for each spec)
 
@@ -16,17 +16,18 @@ The item search ran on wowsims Forever, master commit `895cd67f9` (1 November 20
 
 | Spec | No enchants, no consumables | Enchants | Consumables | Both | Average item level | Epic items |
 | --- | --- | --- | --- | --- | --- | --- |
-| Fury Warrior | 576.3 | 645.3 | 718.7 | 787.9 | 58.6 | 5 |
-| Hunter | 616.9 | 667.9 | 707.7 | 761.2 | 59.2 | 4 |
+| Fury Warrior | 613.1 | 686.2 | 761.9 | 836.6 | 58.6 | 5 |
+| Hunter | 706.2 | 763.7 | 822.2 | 887.0 | 59.2 | 4 |
 | Fire Mage | 583.5 | 632.4 | 772.1 | 823.9 | 57.6 | 3 |
 | Demonology Warlock | 588.4 | 642.0 | 787.7 | 844.8 | 57.0 | 3 |
-| Combat Rogue | 503.2 | 534.9 | 602.2 | 634.4 | 58.5 | 3 |
-| Pure average | 573.7 | 624.5 | 717.7 | 770.4 | | |
-| Retribution (live) | 667.1 (116.3%) | 715.5 (114.6%) | 853.3 (118.9%) | 906.5 (117.7%) | 59.1 | 5 |
+| Combat Rogue | 527.3 | 562.8 | 630.3 | 666.4 | 58.5 | 3 |
+| Pure average | 603.7 | 657.4 | 754.8 | 811.7 | | |
+| Retribution (live) | 667.1 (110.5%) | 715.5 (108.8%) | 853.3 (113.0%) | 906.5 (111.7%) | 59.1 | 5 |
 
-Without the Rogue (both): 804.5, Retribution 112.7%. Retribution against Fury (both): 115.1%.
+Without the Rogue (both): 848.1, Retribution 106.9%. Retribution against Fury (both): 108.4%.
 
-- **Against commit 895cd67f9.** Retribution +3.7% (874.4 → 906.5): Vengeance 5 stacks and Holy damage on Two-Handed Weapon Specialization. The pure specs lose 0–5%. wowsims now uses the trainer ranks of Strength of Earth Totem and Grace of Air Totem in the raid buffs. It also uses the trainer ranks of the Hunter spells. On commit 895cd67f9, the pure average was 783.9 and Retribution 111.5% (`ec_results_895cd67f9.json`).
+- **Against commit d97252f2a (3 November).** The hotfix 113578 ports give Fury +6.2% (787.9 → 836.6), Combat Rogue +5.0% (634.4 → 666.4) and Hunter +16.5% (761.2 → 887.0). Mage, Warlock and Retribution do not change. On commit d97252f2a, the pure average was 770.4 and Retribution 117.7% (`ec_results_d97252f2a.json`).
+- **Commit d97252f2a against commit 895cd67f9.** Retribution +3.7% (874.4 → 906.5): Vengeance 5 stacks and Holy damage on Two-Handed Weapon Specialization. The pure specs lose 0–5%. wowsims now uses the trainer ranks of Strength of Earth Totem and Grace of Air Totem in the raid buffs. It also uses the trainer ranks of the Hunter spells. On commit 895cd67f9, the pure average was 783.9 and Retribution 111.5% (`ec_results_895cd67f9.json`).
 
 With the consumables of each wowsims preset as they are, Retribution was 116.3% (both, commit 895cd67f9). The presets are not equal: Retribution has 9 elixirs, the Rogue has none. Thus, the second run gives the same elixirs and extras to all specs.
 
@@ -46,7 +47,7 @@ With the consumables of each wowsims preset as they are, Retribution was 116.3% 
 | log_*.txt | Stat values, slot changes and final DPS of each spec |
 | enchants.json | Enchant ids by slot for each spec (wowsims presets; Mage and Warlock: Balance Druid caster enchants, 2504 on the weapon) |
 | enchants_consumables.py | Second run: writes `/tmp/zzdump_u` (same elixirs and extras for each spec) and the zzbatch jobs |
-| ec_results.json | DPS of the second run on commit d97252f2a (base, ench, cons, both). `ec_results_895cd67f9.json`: the same on commit 895cd67f9 |
+| ec_results.json | DPS of the second run on commit 6ee3c30f35 (base, ench, cons, both). `ec_results_d97252f2a.json` and `ec_results_895cd67f9.json`: the same on commits d97252f2a and 895cd67f9 |
 | links.md, zzlink_main.go | wowsims links to the final set of each spec, and the script that makes them |
 
 - **One job for each process.** zzbatch runs its jobs in parallel in one process. In a batch of different specs and enchants, some results changed by up to 3%. All values in this folder and in Analysis, Damage come again from `solo.py`, one job for each process. They agree with the batch values.
