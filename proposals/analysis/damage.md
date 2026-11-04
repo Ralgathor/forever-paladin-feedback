@@ -176,8 +176,8 @@ Default Retribution gear, rotation and consumables. One level 63 boss, 3,000 ite
 | C1 (withdrawn), full buffs | 990 (+5.6%) | 1,000 (+5.3%) |
 | Live, lean buffs | 682 | 693 |
 | C1 (withdrawn), lean buffs | 720 (+5.6%) | 730 (+5.4%) |
-| Fury Warrior, pre-raid gear | 865 | 858 |
-| Arms Warrior, pre-raid gear | 814 | 810 |
+| Fury Warrior, pre-raid gear | 865 | 860 |
+| Arms Warrior, pre-raid gear | 826 | 824 |
 
 - **C1 (withdrawn):** +5.3–5.6% in wowsims, +5.6–5.7% in the model. They agree.
 - **No run is out of mana.**
