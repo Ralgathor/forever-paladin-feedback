@@ -18,10 +18,11 @@ BUILDS = [
 ]
 SB1 = "05025210221021--0523330110130033"  # the wowsims Holy Shock build (HolyShockTalents)
 SB2 = "05025211222021051--052323010013"   # 31 Holy points with Light's Vigil (C-H7)
+SB3 = "15325210222121201--052330002013"   # 32/0/19 hybrid healer: Light's Vigil, Oath of Light, Boundless Light, no Holy Power
 SF1 = "0502521022102--0523330110130034"    # fresh 60 climb, live trees: no Holy Shock, Champion of the Light 4
 SF2 = "0502520122102--0523330110130034"    # fresh 60 climb, proposed trees: also Illumination 1 for Divine Favor
 SHOCK_BUILDS = [("shock", case, mode, code) for case in ("raid", "fresh") for mode in ("beta", "prop")
-                for code in (SB1, SB2, SF1, SF2)]
+                for code in (SB1, SB2, SB3, SF1, SF2)]
 SHOCK_WEIGHTS = [("shock", "raid", "beta", SB1), ("shock", "raid", "prop", SB1), ("shock", "fresh", "beta", SB1),
                  ("shock", "raid", "prop", SB2)]
 # stat index (proto Stat order): name, amount

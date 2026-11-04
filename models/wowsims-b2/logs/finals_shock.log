@@ -54,3 +54,10 @@ WEIGHTS shock raid prop 05025211222021051--052323010013 base={'dps': 756.2}
   Crit rating: dps=+0.380
   Haste rating: dps=+0.300
   Expertise rating: dps=+0.350
+# SB3 (added on 4 November 2026, same settings, 3,000 iterations)
+BUILD shock raid beta 15325210222121201--052330002013 {'dps': 693.7, 'oom': 0.0}
+BUILD shock raid prop 15325210222121201--052330002013 {'dps': 757.6, 'oom': 0.0}
+BUILD shock raid prop-REV50-only 15325210222121201--052330002013 {'dps': 693.3, 'oom': 0.0}
+BUILD shock fresh beta 15325210222121201--052330002013 {'dps': 243.8, 'oom': 101.7}
+BUILD shock fresh prop 15325210222121201--052330002013 {'dps': 261.7, 'oom': 123.1}
+BUILD shock fresh prop-REV50-only 15325210222121201--052330002013 {'dps': 259.6, 'oom': 99.4}
