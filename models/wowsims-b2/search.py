@@ -1,10 +1,11 @@
 """Talent search in wowsims Forever for builds/ (trees of 30 October 2026).
 
 Run: python3 search.py <case> [start code ...]. Needs the test binaries of run.sh in /tmp (rettest, prottest).
-Cases: ret-raid, ret-fresh, prot (beta trees), and the same with -prop (proposed trees of calculator version 6).
+Cases: ret-raid, ret-fresh, shock-raid, shock-fresh, prot (beta trees), and the same with -prop (proposed trees of
+calculator version 6). The shock cases use the wowsims Holy Shock set, rotation and consumables (FEEDBACK_SHOCK=1).
 The trees (ranks, rows, requirements) come from trees.json: the talent data of calculator/index.html.
 
-A hill climb: each step tests all 1-point moves to a talent with value for the spec, at 1,000 iterations, and keeps
+A hill climb: each step tests all 1-point moves to a talent with value for the spec, at 1,000 iterations (SEARCH_ITER), and keeps
 the best move. It stops when no move gains more than the noise limit. The best builds then run at 3,000 iterations.
 """
 import json, os, subprocess, sys
@@ -13,15 +14,18 @@ from concurrent.futures import ThreadPoolExecutor
 HERE = os.path.dirname(os.path.abspath(__file__))
 TREES = json.load(open(os.path.join(HERE, "trees.json")))
 BIN = {"ret": os.environ.get("RETTEST", "/tmp/rettest"), "prot": os.environ.get("PROTTEST", "/tmp/prottest")}
-DIRS = {"ret": "sim/paladin/retribution", "prot": "sim/paladin/protection"}
+BIN["shock"] = BIN["ret"]
+DIRS = {"ret": "sim/paladin/retribution", "prot": "sim/paladin/protection", "shock": "sim/paladin/retribution"}
 WOWSIMS = os.environ.get("WOWSIMS", "/tmp/wowsims-forever")
 VALUE = {
     "ret": "ds rev is pp hc dp cg hs di pre ben ij con sanj soc sa ths rep ven cotl uw".split(),
+    "shock": "ds rev is pp df ill hc dp iol cg hs hp lv di pre ben ij con sanj vin soc poj sa ths rep ven cotl uw".split(),
     "prot": ("ds is rev hc di red pre sd tb ss sj irf ant hsh rec ic shs dsac def ben ij con sanj vin soc sa ths "
              "ven").split(),
 }
-PROP_FLAGS = {"ret": "REV50", "prot": "CP1,NOTOUGH"}  # withdrawn on 2 November 2026: Reckoning (C-P12: RK100,RKICD4) and the Holy Strike Seal trigger (C1)
-NOISE = {"ret": 2.0, "prot": 0.004}
+PROP_FLAGS = {"ret": "REV50", "prot": "CP1,NOTOUGH", "shock": "REV50,CH7"}  # withdrawn on 2 November 2026: Reckoning (C-P12: RK100,RKICD4) and the Holy Strike Seal trigger (C1)
+NOISE = {"ret": 2.0, "prot": 0.004, "shock": 2.0}
+STEP_ITER = int(os.environ.get("SEARCH_ITER", "1000"))  # iterations of each climb step
 
 def tree(mode):
     return TREES["prop" if mode == "prop" else "beta"]
@@ -70,6 +74,8 @@ def run(spec, case, b, mode, it=1000, extra=None):
                PROPOSE=PROP_FLAGS[spec] if mode == "prop" else "")
     if case == "fresh":
         env["FEEDBACK_BUFFS"] = "none"
+    if spec == "shock":
+        env["FEEDBACK_SHOCK"] = "1"
     env.update(extra or {})
     out = subprocess.run([BIN[spec], "-test.run", "TestFeedbackRun", "-test.v"], cwd=os.path.join(WOWSIMS, DIRS[spec]),
                          env=env, capture_output=True, text=True).stdout
@@ -88,7 +94,7 @@ def run(spec, case, b, mode, it=1000, extra=None):
     return r
 
 def score(spec, r, ref):
-    if spec == "ret":
+    if spec in ("ret", "shock"):
         return r["dps"]
     return (0.4 * r["tps"] / ref["tps"] + 0.2 * r["dps"] / ref["dps"] + 0.2 * ref["dtps"] / r["dtps"]
             + 0.2 * ref["tmi"] / r["tmi"])
@@ -130,7 +136,7 @@ def batch(spec, case, mode, cands, it):
 def climb(spec, case, mode, start, log):
     b = decode(start, mode)
     assert valid(b, mode) and sum(b.values()) == 51, start
-    ref = run(spec, case, b, mode)
+    ref = run(spec, case, b, mode, it=STEP_ITER)
     cur = score(spec, ref, ref)
     seen = {encode(b, mode)}
     two_done = os.environ.get("SEARCH_2PT", "1") == "0"   # one 2-point round for each climb at most
@@ -138,7 +144,7 @@ def climb(spec, case, mode, start, log):
     while True:
         cands = [n for n in moves(b, spec, mode) if encode(n, mode) not in seen]
         seen.update(encode(n, mode) for n in cands)
-        res = batch(spec, case, mode, cands, 1000)
+        res = batch(spec, case, mode, cands, STEP_ITER)
         best = max(zip(cands, res), key=lambda x: score(spec, x[1], ref), default=None)
         if (best is None or score(spec, best[1], ref) <= cur + NOISE[spec]) and two_done:
             break
@@ -162,7 +168,7 @@ def climb(spec, case, mode, start, log):
 
 if __name__ == "__main__":
     case_arg = sys.argv[1]
-    spec, case = ("prot", "raid") if case_arg.startswith("prot") else ("ret", case_arg.split("-")[1])
+    spec, case = ("prot", "raid") if case_arg.startswith("prot") else tuple(case_arg.split("-")[:2])
     mode = "prop" if case_arg.endswith("-prop") else "beta"
     starts = sys.argv[2:]
     with open(os.path.join(HERE, "logs", f"search_{case_arg}.log"), "a") as log:

@@ -49,6 +49,36 @@ func (paladin *Paladin) applySimProposals() {
 		paladin.PseudoStats.SpiritRegenRateCasting += 0.10 * float64(paladin.Talents.Reverence)
 	}
 
+	// C-H7 Light's Vigil (CH7), the enemy part: Holy Shock, Judgement and Holy Strike give a stack for 30 sec, once each
+	// 6 sec, up to 3 stacks. A Holy Shock cast uses one stack and then incurs no cooldown. The party heal is not modeled.
+	if proposeFlag("CH7") && paladin.Talents.LightsVigil {
+		stacks := paladin.RegisterAura(core.Aura{
+			Label:     "CH7 Light's Vigil stacks" + paladin.Label,
+			ActionID:  core.ActionID{SpellID: 1311595, Tag: 7},
+			Duration:  30 * time.Second,
+			MaxStacks: 3,
+		})
+		icd := core.Cooldown{Timer: paladin.NewTimer(), Duration: 6 * time.Second}
+		core.MakePermanent(paladin.RegisterAura(core.Aura{
+			Label: "CH7 Light's Vigil trigger" + paladin.Label,
+			OnCastComplete: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell) {
+				if spell.Matches(SpellMaskHolyShock) && stacks.IsActive() && stacks.GetStacks() > 0 {
+					stacks.RemoveStack(sim)
+					spell.CD.Reset()
+					if spell.SharedCD.Timer != nil {
+						spell.SharedCD.Reset()
+					}
+				}
+				if !spell.Matches(SpellMaskHolyShock|SpellMaskJudgement|SpellMaskHolyStrike) || !icd.IsReady(sim) {
+					return
+				}
+				icd.Use(sim)
+				stacks.Activate(sim)
+				stacks.AddStack(sim)
+			},
+		}))
+	}
+
 	// C1: Holy Strike triggers your active Seal the same as a melee attack (Command, Righteousness, Fury).
 	// It stores and consumes no Unsealed Wrath copy.
 	if proposeFlag("C1") {

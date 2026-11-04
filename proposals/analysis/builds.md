@@ -24,7 +24,7 @@ The builds use the proposed trees of calculator version 6 (the live version, wit
 - **Holy needs 31 points for Light's Vigil.** Holy Conduit 2/2 fills the rows. It makes only Consecration, Holy Wrath, Exorcism and Hammer of Wrath cheaper.
 - **The 3 Retribution points after Benediction** go to Conviction 3/3: +6% critical chance, thus more Illumination mana.
 - **Healing values** use 175% critical heals (Holy Power 5/5, main hypothesis since 3 November). HB2 at 200%: 785 raid and 696 one tank. At 225%: 843 and 733. HB1 at 200%: 748 and 658. At 225%: 804 and 693. The one-tank values use Oath of Light 30% (C-H8). With the live Oath of Light, HB2 gives 602 and HB1 568 on one tank.
-- **Hybrid builds with Light's Vigil (C-H7).** A build with 31 Holy points casts Holy Shock on an enemy each 6 sec (live: each 10 sec). This gives +36 to +48 damage each sec, for about 49 mana each sec (live: 29). Illumination returns no mana on damage. The build has no Unsealed Wrath and no Champion of the Light. Thus it stays far below RB1 (910) in raids. The risk is the PvP burst: three or four Holy Shocks in one stun (PvP burst check, part 6, and W30).
+- **Hybrid builds with Light's Vigil (C-H7).** A build with 31 Holy points casts Holy Shock on an enemy each 6 sec (live: each 10 sec). The model gives +36 to +48 damage each sec, for about 49 mana each sec (live: 29). Illumination returns no mana on damage. In wowsims, Light's Vigil gives this build +9.4% in a raid (691 → 756 DPS, builds/shockadin.md). Without Vengeance and Unsealed Wrath, it stays below the Shockadin SB1 (23/0/28, 852 DPS) and RB1 (944). The risk is the PvP burst: three or four Holy Shocks in one stun (PvP burst check, part 6, and W30).
 
 ## 2. Protection
 
@@ -47,10 +47,12 @@ The builds use the proposed trees of calculator version 6 (the live version, wit
 | --- | --- | --- | --- | --- |
 | **RB1. Raid** | 14/6/31: [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 944 (996) | — | The wowsims default build. Holy: Divine Strength 5, Reverence 2, Improved Seals 5, Holy Conduit 2. Protection: Divine Intellect 5, Precision 1. Retribution: Unsealed Wrath, Champion of the Light 5, Vengeance 3, Two-Handed Weapon Specialization 3, Sacred Arbiter, Seal of Command, Repentance, Unyielding Faith 1, Pursuit of Justice 2 |
 | RB2. PvP, Unsealed Wrath | 0/20/31: [`v6p-50322130101000002-05233001211301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-50322130101000002-05233001211301351) | 876 (921) | About 2,400 | Swift Judgement and Improved Hammer of Justice 3/3 (Hammer of Justice each 45 sec). Guardian's Favor, Sacred Duty, Devoted Sacrifice. Eye for an Eye 1. No Holy points |
+| SB1. Shockadin (Holy Shock) | 23/0/28: [`v6p05025210221021--0523330110130033`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05025210221021--0523330110130033) | 852 (—) | — | The wowsims Holy Shock build. Holy: Holy Shock, Divine Favor, Improved Seals 5, Consecrated Ground 2. Retribution: Vengeance 3, Champion of the Light 3, Two-Handed Weapon Specialization 3, Sacred Arbiter, Seal of Command. No Unsealed Wrath. See builds/shockadin.md |
 | RB3. PvP, Reckoning bomb | 0/25/26: [`v6p-50322130101005002-052330012213013`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-50322130101005002-052330012213013) | 680 (—) | About 2,070; with 4 stored attacks about 3,630 | Reckoning 5/5, Swift Judgement, Improved Hammer of Justice 3/3, Devoted Sacrifice. Eye for an Eye 2, Repentance, Vengeance 3. No Unsealed Wrath and no Champion of the Light |
 
 - **Raid DPS** comes from wowsims, 3 min, full buffs. The wowsims rotation is made for RB1. Thus, the values of RB2 and RB3 are approximate.
 - **The Holy points give RB1 the most.** Improved Seals gives +15% on Seals and Judgements, and Reverence gives mana. Without Holy points (RB2), raid DPS is 7% lower.
+- **SB1 uses the wowsims Holy Shock set** (spell damage gear) and its rotation. Thus, its DPS against RB1 is approximate. Holy Shock gives SB1 +11%.
 - **C1 (withdrawn) gave +5–6%** in RB1 and RB2. The C1 flag does not run with RB3 on commit d97252f2a.
 - **The earlier wowsims build** (14/5/32, [`v6p050250002-5-05233301101301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-5-05233301101301351)) gives 929 (977 with C1). Precision 1 in place of Vindication gives RB1 +1.6%.
 - **PvP burst** values come from PvP burst check. The kept proposals do not change them.
@@ -67,7 +69,7 @@ Some builds must put points into talents with little value, to open a deeper row
 
 ## 5. Method and limits
 
-- **Protection and Retribution:** wowsims Forever (master commit d97252f2a of 3 November, game files of client 1.60.1.70755, 3,000 iterations, 3 min, full buffs).
+- **Protection and Retribution:** wowsims Forever (master commit d97252f2a of 3 November, game files of client 1.60.1.70755, 3,000 iterations, 3 min, full buffs). The Shockadin (SB1): commit 6ee3c30f35 of 4 November, with the Light's Vigil flag CH7 (builds/shockadin.md).
 - **Holy:** the healing model (`models/beta-30-oct/healing_b2.py`, 715 healing power, 5 min). The live test of Holy Power can change the Holy values (see Open items).
 - **PvP:** the PvP burst model (`models/beta-30-oct/pvp_burst_b2.py`), one Hammer of Justice stun.
 - wowsims does not model Lay on Hands, Shoulder the Burden (C-P5) or Hand of Sacrifice (C4).
