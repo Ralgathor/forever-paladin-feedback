@@ -126,7 +126,7 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 
 - **Change.** Remove Toughness (row 3, column 4, 5 ranks: +2–10% armor from items). Devoted Sacrifice (C-P11) takes its place.
 - **Why.** Toughness gives only a stat. The Protection Warrior of Forever has no armor talent.
-- **Balance with Redoubt (C-P1).** With the item pool tank sets, Redoubt (C-P1) decreases the damage gap to the Warrior from 24% to 9%. Without Toughness, the gap is 12% (see the table). With the default sets of wowsims, the Paladin with C-P1 took almost the same damage as the Warrior and had a better TMI.
+- **Balance with Redoubt (C-P1).** With the item pool tank sets, Redoubt (C-P1) decreases the damage gap to the Warrior from 28% to 13%. Without Toughness, the gap is 15% (see the table). With the default sets of wowsims, the Paladin with C-P1 took almost the same damage as the Warrior and had a better TMI.
 - **Druid.** Thick Hide (Druid) gives armor. But the Druid tank cannot block, and armor is its main defense.
 - **Holy and Retribution.** These specs do not take Toughness. Thus, they lose nothing. Holy can now take Devoted Sacrifice (C-P11) with 12 Protection points.
 - **Tank points.** Toughness removal frees 5 points. The tank uses them in the other trees, for example Retribution.
@@ -139,7 +139,7 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 | Paladin, live, no Toughness | 391 (+2%) | 70.3 (+2.4%) |
 | Paladin, Redoubt (C-P1) | 339 | 55.3 |
 | Paladin, C-P1 and C-P13 | 346 (+2%) | 56.7 (+2.5%) |
-| Warrior | 310 | 43 |
+| Warrior | 300 | 41 |
 
 - Threat does not change: 1,107 each sec with C-P1, with and without Toughness.
 - With the default sets: live 338 (TMI 57.5), C-P1 292 (44.4), C-P1 and C-P13 299 (45.6), Warrior 286 (47).
@@ -164,20 +164,20 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 
 | Case | Threat each sec | % of the Warrior | % of the Druid |
 | --- | --- | --- | --- |
-| Warrior | 1,440 | 100% | 129% |
-| Druid | 1,116 | 78% | 100% |
+| Warrior | 1,448 | 100% | 130% |
+| Druid | 1,116 | 77% | 100% |
 | Paladin, live | 1,029 | 71% | 92% |
-| **Paladin, Righteous Fury (C25)** | **1,463** | **102%** | **131%** |
+| **Paladin, Righteous Fury (C25)** | **1,463** | **101%** | **131%** |
 | Paladin, C25 and Redoubt (C-P1) | 1,575 | 109% | 141% |
 | Paladin, C25a (+80%) | 1,387 | 96% | 124% |
-| Paladin, C25a and Redoubt (C-P1) | 1,493 | 104% | 134% |
+| Paladin, C25a and Redoubt (C-P1) | 1,493 | 103% | 134% |
 
 - **Gear levels (model).** With C25, the live Paladin has 117% of the Warrior threat at fresh level 60 and 101% in Naxxramas. Before the notes, it had 118% and 101%. With C25a, it has 111% and 96%.
 - **All threat cases.** Analysis, Threat, part 9 gives parts 1 to 8 again with C25 and C25a.
-- **Pull.** With a Fury opener, the Paladin has 132% of the Warrior threat after 3 sec and 109% after 10 sec. In its best short windows, it has 80–93% of the Warrior (live: 56–65%).
-- **Groups.** On 3 enemies, the Paladin total is 2,177 threat each sec. The Warrior has 1,849 and the Druid 1,491. On the enemy with the least threat, the Paladin has 3.0 times the Warrior threat.
+- **Pull.** With a Fury opener, the Paladin has 131% of the Warrior threat after 3 sec and 108% after 10 sec. In its best short windows, it has 79–92% of the Warrior (live: 55–64%).
+- **Groups.** On 3 enemies, the Paladin total is 2,177 threat each sec. The Warrior has 1,866 and the Druid 1,491. On the enemy with the least threat, the Paladin has 3.0 times the Warrior threat.
 - **Other specs.** Holy and Retribution use Righteous Fury only to tank. In PvP, threat has no effect.
-- **Alternative C25a.** +80% to all threat, the value of Defensive Stance. The live tank then has 96% of the Warrior threat in wowsims, and 104% with Redoubt (C-P1). The model gives 95% (Analysis, Threat, part 9).
+- **Alternative C25a.** +80% to all threat, the value of Defensive Stance. The live tank then has 96% of the Warrior threat in wowsims, and 103% with Redoubt (C-P1). The model gives 95% (Analysis, Threat, part 9).
 - **First, a live test.** The Warrior and Druid values come from the notes, not from the game files. The live realms must confirm them before this change (W28).
 
 ## wowsims check
@@ -190,12 +190,12 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 | Paladin, live | 41.8% | 11.8% | 384 | 1,029 |
 | Paladin, Redoubt (C-P1) | 63.1% | 1.1% | 339 (−12%) | 1,107 (+8%) |
 | Paladin, C-P1 with 4–20% | 54.2% | 7.8% | 375 (−2%) | 1,079 (+5%) |
-| Warrior | 54.9% | 1.0% | 310 | 996 |
+| Warrior | 53.4% | 1.0% | 300 | 1,002 |
 
-- **Result.** With Redoubt (C-P1), the Paladin has the crushing blows of the Warrior. It still takes 9% more damage than the Warrior. The live Paladin takes 24% more. With 4–20%, 7.8% of the attacks are still crushing blows. Thus, keep Redoubt at 6–30% with the trigger.
+- **Result.** With Redoubt (C-P1), the Paladin has the crushing blows of the Warrior. It still takes 13% more damage than the Warrior. The live Paladin takes 28% more. With 4–20%, 7.8% of the attacks are still crushing blows. Thus, keep Redoubt at 6–30% with the trigger.
 - **Default sets.** With the default sets of wowsims, the Paladin with C-P1 took 2% more damage than the Warrior (live: 18% more).
 - **Threat.** More blocks give more Holy Shield damage. Thus, threat increases by 8%. The Warrior value has the threat multipliers of the game files (Defensive Stance +30%).
-- **Fast bosses and bosses with two weapons.** Both tanks take more crushing blows. With C-P1, the Paladin stays 0.1–1.1 points above the Warrior. With 4–20%, it is 3.5–6.9 points above (Crushing blows, part 3).
+- **Fast bosses and bosses with two weapons.** Both tanks take more crushing blows. With C-P1, the Paladin stays 0.1–1.2 points above the Warrior. With 4–20%, it is 3.6–6.9 points above (Crushing blows, part 3).
 - **5 min fights.** The results are the same: crushing blows 11.8% → 1.3%, damage taken −11%.
 - **Toughness removal (C-P13).** Without Toughness, damage taken increases by 2% (see Toughness removal, C-P13).
 - **Not in the sim.** The sim does not have a threat transfer between tanks or Lay on Hands. Thus, it does not include Shoulder the Burden (C-P5) and Devoted Sacrifice (C-P11). Their values stay as in Analysis.

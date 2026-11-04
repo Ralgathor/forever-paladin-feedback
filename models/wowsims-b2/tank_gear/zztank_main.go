@@ -53,6 +53,9 @@ func main() {
 				it := &proto.ItemSpec{Id: id}
 				if i < len(old) && old[i] != nil && id != 0 {
 					it.Enchant = old[i].Enchant
+					if old[i].Id == id { // the same item: keep its random suffix
+						it.RandomSuffix = old[i].RandomSuffix
+					}
 				}
 				items = append(items, it)
 			}

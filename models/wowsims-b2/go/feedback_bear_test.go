@@ -121,6 +121,9 @@ func feedbackItems(eq *proto.EquipmentSpec) *proto.EquipmentSpec {
 		it := &proto.ItemSpec{Id: int32(id)}
 		if i < len(eq.Items) && eq.Items[i] != nil && id != 0 {
 			it.Enchant = eq.Items[i].Enchant
+			if eq.Items[i].Id == it.Id { // the same item: keep its random suffix
+				it.RandomSuffix = eq.Items[i].RandomSuffix
+			}
 		}
 		out.Items = append(out.Items, it)
 	}
