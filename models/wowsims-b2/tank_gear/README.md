@@ -15,13 +15,13 @@ The wowsims default tank sets have raid, PvP and reputation items. The sets of t
 1. Dump the request of each tank test with `FEEDBACK_DUMP` (feedback_prot_test.go, feedback_warrior_test.go, feedback_bear_test.go, `FEEDBACK_DUR=180`).
 2. Copy `zztank_main.go` to `cmd/zztank/main.go` in the wowsims clone and build it: `go build -tags with_db -o /tmp/zztank ./cmd/zztank`.
 3. Run `python3 search_tank.py <prot|war|bear|shock> <dump>`. For each item that is not in the pool, it takes the 12 pool items of the same slot with the best tank stat sum. Each candidate runs in the full set, 1,000 iterations. The search keeps the candidate with the best score, slot by slot. The score is 40% threat, 20% damage, 20% damage taken and 20% TMI, each against the default set. No item is used two times. The enchants do not change. An item of the default set keeps its random suffix (for example Hyperion Helm of the Warrior). The final set runs with 3,000 iterations.
-4. Run `./run_pool.sh <wowsims clone>`. It runs all tank jobs of `../logs/checks_8298ab833.log` again with the new sets (`FEEDBACK_ITEMS`). The output is `../logs/checks_8298ab833_pool.log`.
+4. Run `./run_pool.sh <wowsims clone>`. It runs all tank jobs of `../logs/checks_8298ab833.log` again with the new sets (`FEEDBACK_ITEMS`), on master commit 9a8624af9. The output is `../logs/checks_9a8624af9_pool.log`. The Paladin has the tank consumables of `feedbackConsumables` (`../go/feedback_prot_test.go`).
 
 `set_*.json` has the 17 item ids of each set. `log_*.txt` has the search output.
 
 ## Survival sets
 
-`TANK_SCORE=survival python3 search_tank.py <prot|war|bear> <dump>` uses the same method with a survival score: 40% threat, 30% damage taken and 30% TMI, each against the default set. The dump must have the default set (no `FEEDBACK_ITEMS`). The sets are `set_*_surv.json`, the search output `log_*_surv.txt`. `./run_pool.sh <wowsims clone> surv` runs all tank jobs with these sets: `../logs/checks_8298ab833_pool_surv.log`. `TANK_SET=surv python3 ../finals.py <codes>` runs the Protection builds with the Paladin survival set: `../logs/finals_surv.log`.
+`TANK_SCORE=survival python3 search_tank.py <prot|war|bear> <dump>` uses the same method with a survival score: 40% threat, 30% damage taken and 30% TMI, each against the default set. The dump must have the default set (no `FEEDBACK_ITEMS`). The sets are `set_*_surv.json`, the search output `log_*_surv.txt`. `./run_pool.sh <wowsims clone> surv` runs all tank jobs with these sets: `../logs/checks_9a8624af9_pool_surv.log`. `TANK_SET=surv python3 ../finals.py <codes>` runs the Protection builds with the Paladin survival set: `../logs/finals_surv.log`.
 
 | Tank | Items that differ from the threat set (threat set → survival set) |
 | --- | --- |
@@ -29,11 +29,13 @@ The wowsims default tank sets have raid, PvP and reputation items. The sets of t
 | Protection Warrior | Horn of Ve'han → Artifact Seeker's Pendant, Legplates of Valor → Enriched Thorium Leggings, Volunteer's Lucky Seal → Smotts' Compass, Greatflank Flayer → Bagh Nakh |
 | Bear Druid | Warden's Leather Bracers → Elven Chain Wristguards, Cleansed Vilebranch Medallion → Enriched Seal |
 
-| Tank | Threat set: threat / damage taken / TMI | Survival set: threat / damage taken / TMI |
+| Tank (master 9a8624af9) | Threat set: threat / damage taken / TMI | Survival set: threat / damage taken / TMI |
 | --- | --- | --- |
-| Protection Paladin, live | 1,029.3 / 383.8 / 68.6 | 976.4 / 373.9 / 57.7 |
-| Protection Warrior | 1,002.1 / 299.7 / 41 | 956.8 / 292.4 / 41 |
-| Bear Druid | 779.0 / 393.3 / 43.9 | 763.9 / 392.5 / 42.7 |
+| Protection Paladin, live | 1,136.9 / 342.7 / 54.0 | 1,081.0 / 333.1 / 45.8 |
+| Protection Warrior | 1,447.7 / 299.7 / 41 | 1,382.3 / 292.4 / 41 |
+| Bear Druid | 1,754.7 / 393.3 / 43.9 | 1,717.9 / 392.5 / 42.7 |
+
+The sets were searched on master 8298ab833, with the Paladin without consumables. The items do not change on master 9a8624af9.
 
 ## Shockadin set
 
@@ -50,7 +52,7 @@ The wowsims default tank sets have raid, PvP and reputation items. The sets of t
 
 ## Results (wowsims master 8298ab833, 3 min, 3,000 iterations)
 
-Threat each sec without the multipliers of the notes of 2 November. The analysis multiplies the Warrior threat by 1.445 and the Druid threat by 1.433.
+These are the results of the search, on master 8298ab833, before the hotfixes of 4 November and with the Paladin without consumables. Threat each sec without the multipliers of the notes of 2 November. The values of master 9a8624af9 are in the table of Survival sets.
 
 | Tank | Default set: threat / damage taken / TMI | Item pool set: threat / damage taken / TMI |
 | --- | --- | --- |
@@ -58,7 +60,7 @@ Threat each sec without the multipliers of the notes of 2 November. The analysis
 | Protection Warrior | 964.7 / 286.1 / 47 | 1,002.1 / 299.7 / 41 |
 | Bear Druid | 846.6 / 382.6 / 40.0 | 779.0 / 393.3 / 43.9 |
 
-- **With the multipliers,** the Warrior has 1,448, the Druid 1,116 (77% of the Warrior) and the live Paladin 1,029 (71%). With the default sets: 1,394, 1,213 (87%) and 980 (70%).
+- **On master 9a8624af9** (native multipliers, Paladin tank consumables), the Warrior has 1,448, the Druid 1,755 (121% of the Warrior) and the live Paladin 1,137 (79%).
 - **Shockadin:** 851.4 DPS with the default set, 839.9 with the item pool set (−1.4%).
 - **The Druid loses the most.** Its default set has the most PvP and reputation items.
 - **The search is greedy.** It changes one slot at a time and keeps the other items. A full search of all slots together can give a slightly better set.

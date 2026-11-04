@@ -26,7 +26,7 @@ func TestFeedbackRun(t *testing.T) {
 	player := &proto.Player{
 		Name: "Prot", Race: proto.Race_RaceHuman, Class: proto.Class_ClassPaladin,
 		Equipment:     feedbackItems(core.GetGearSet("../../../ui/specs/paladin/protection/gear_sets", "default").GearSet),
-		Consumables:   DefaultConsumables,
+		Consumables:   feedbackConsumables(),
 		TalentsString: talents,
 		Spec:          DefaultOptions,
 		Rotation:      core.GetAplRotation("../../../ui/specs/paladin/protection/apls", feedbackApl()).Rotation,
@@ -203,4 +203,26 @@ func feedbackItems(eq *proto.EquipmentSpec) *proto.EquipmentSpec {
 		out.Items = append(out.Items, it)
 	}
 	return out
+}
+
+// feedbackConsumables: wowsims has no Protection Paladin consumable preset (DefaultConsumables is only a
+// Demonic Rune). The tank comparison gives the Paladin the same number of tank consumables as the Protection
+// Warrior test (ui/specs/warrior/protection/presets.ts), with Paladin choices: Greater Arcane Elixir in place of
+// Winterfall Firewater, and Brilliant Wizard Oil in place of the Dense Sharpening Stone. Checked on the survival
+// set with C-P1 (3,000 iterations): these give the most threat of the mixes tested.
+// FEEDBACK_CONSUMES=default keeps the Demonic Rune only (the runs before 4 November evening).
+func feedbackConsumables() *proto.ConsumesSpec {
+	if os.Getenv("FEEDBACK_CONSUMES") == "default" {
+		return DefaultConsumables
+	}
+	return &proto.ConsumesSpec{
+		OffensivePotId: 250943, // Major Frenzy Potion
+		FoodId:         20452,  // Smoked Desert Dumplings
+		ExplosiveId:    260817, // EZ-Thro Dark Bomb
+		MhImbueId:      20749,  // Brilliant Wizard Oil
+		ConjuredId:     9421,   // Major Healthstone
+		// Elixir of Ferocity, Greater Arcane Elixir, Elixir of the Mongoose, Elixir of Greater Defense, Elixir of the Phalanx
+		ElixirIds: []int32{250350, 13454, 13452, 13445, 250329},
+		ExtraIds:  []int32{10646, 17048}, // Goblin Sapper Charge, Rumsey Rum
+	}
 }
