@@ -139,7 +139,7 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 | Paladin, live, no Toughness | 345 (+2%) | 59.0 (+2.7%) |
 | Paladin, Redoubt (C-P1) | 292 | 44.4 |
 | Paladin, C-P1 and C-P13 | 299 (+2%) | 45.6 (+2.7%) |
-| Warrior, pre-raid | 285 | 48 |
+| Warrior, pre-raid | 286 | 47 |
 
 - Threat does not change: 1,054 each sec with C-P1, with and without Toughness.
 

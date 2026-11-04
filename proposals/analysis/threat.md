@@ -294,8 +294,7 @@ Judgement and Swift Judgement are not on the global cooldown, thus both hit at 0
 | Default, commit 6ee3c30f35 | 1,968 | 4,609 | 6,962 | 12,881 |
 | Charge at −0.5 sec, 20 yards (Vanguard), commit 6ee3c30f35 | 1,711 (−13%) | 4,213 (−9%) | 7,223 (+4%) | 13,354 (+4%) |
 
-- **The Charge rotation does not run on commit 8298ab833.** The Warrior does almost no attacks. Thus, the Charge row comes from commit 6ee3c30f35, and its % compare it with the default Warrior of that commit.
-- **Charge does not increase the Warrior burst.** Charge gives 15 rage, but this rage gives no threat. The Charge stun also delays the first boss swings, thus the Warrior receives less rage from boss hits.
+- **Charge does not increase the Warrior burst.** Charge gives 15 rage, but this rage gives no threat. The Charge stun also delays the first boss swings, thus the Warrior receives less rage from boss hits. The Charge rotation does not run on commit 8298ab833: the Warrior does almost no attacks. Thus, the Charge row comes from commit 6ee3c30f35, and its % compare it with the default Warrior of that commit.
 - **Against the Warrior with Charge (commit 6ee3c30f35),** the proposed Paladin with the Fury opener has 192%, 147% and 136% after 3, 6 and 10 sec.
 - **Charge in combat.** With Vanguard, the Warrior can charge in Defensive Stance. The Vanguard Charge row in the game files still has the "not in combat" attribute. Thus the Warrior can charge only at the pull. A test in the game must confirm this.
 
