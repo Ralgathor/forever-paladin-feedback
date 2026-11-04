@@ -14,3 +14,4 @@ The final set of each spec, with enchants and consumables (the "Both" column of 
 `zzlink_main.go` makes these links (copy to `cmd/zzlink/main.go`). It also decodes each link and runs it again as a check. The check on commit 8298ab833 gives the same values ±0.1%.
 
 The links of 2 November (commit 895cd67f9) had the same items. Only the consumables changed: the shared elixir list takes the elixirs of the new Warlock preset.
+- **Short links.** `sets/` at the root of the repository has one page for each set. Each page opens the wowsims link: https://ralgathor.github.io/forever-paladin-feedback/sets/
