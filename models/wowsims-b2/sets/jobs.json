@@ -1,4 +1,7 @@
 [
+ {"name":"Protection Paladin, item pool","file":"pool_prot.json","path":"paladin/protection"},
+ {"name":"Protection Warrior, item pool","file":"pool_war.json","path":"warrior/protection"},
+ {"name":"Bear Druid, item pool","file":"pool_bear.json","path":"druid/feralbear"},
  {"name":"Protection Paladin","file":"prot.json","path":"paladin/protection"},
  {"name":"Protection Warrior","file":"war.json","path":"warrior/protection"},
  {"name":"Bear Druid","file":"bear.json","path":"druid/feralbear"},

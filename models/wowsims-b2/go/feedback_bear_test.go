@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"strings"
 	"testing"
 
 	"github.com/wowsims/forever/sim/core"
@@ -18,7 +19,7 @@ func TestFeedbackBear(t *testing.T) {
 	dur, _ := strconv.ParseFloat(os.Getenv("FEEDBACK_DUR"), 64)
 	player := &proto.Player{
 		Name: "Bear", Race: proto.Race_RaceNightElf, Class: proto.Class_ClassDruid,
-		Equipment:     core.GetGearSet("../../../ui/specs/druid/feralbear/gear_sets", "default").GearSet,
+		Equipment:     feedbackItems(core.GetGearSet("../../../ui/specs/druid/feralbear/gear_sets", "default").GearSet),
 		Consumables:   DefaultConsumables,
 		TalentsString: DefaultTalents,
 		Spec:          DefaultSpecOptions,
@@ -105,4 +106,23 @@ func TestFeedbackBear(t *testing.T) {
 		tmi = u.Tmi.Avg
 	}
 	fmt.Printf("RESULT druid dur=%.0f tps=%.1f dtps=%.1f tmi=%.2f crush=%.1f%%\n", dur, u.Threat.Avg, u.Dtps.Avg, tmi, 100*crush/casts)
+}
+
+// feedbackItems: FEEDBACK_ITEMS is a comma list of 17 item ids (0 = empty slot), for example the pool sets of
+// tank_gear/. The enchants of the default set stay on their slots.
+func feedbackItems(eq *proto.EquipmentSpec) *proto.EquipmentSpec {
+	v := os.Getenv("FEEDBACK_ITEMS")
+	if v == "" {
+		return eq
+	}
+	out := &proto.EquipmentSpec{}
+	for i, s := range strings.Split(v, ",") {
+		id, _ := strconv.Atoi(strings.TrimSpace(s))
+		it := &proto.ItemSpec{Id: int32(id)}
+		if i < len(eq.Items) && eq.Items[i] != nil && id != 0 {
+			it.Enchant = eq.Items[i].Enchant
+		}
+		out.Items = append(out.Items, it)
+	}
+	return out
 }

@@ -4,6 +4,9 @@ The `sets/` pages at the root of the repository open these sets in wowsims Forev
 
 | Page | Sim | Check on commit 8298ab833 |
 | --- | --- | --- |
+| tank-pool-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_prot.json | 1,029.3 threat per sec |
+| tank-pool-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_war.json | 996.4 threat per sec (×1.445 = 1,440) |
+| tank-pool-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_bear.json | 779.0 threat per sec (×1.433 = 1,116) |
 | tank-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180` | 980.1 threat per sec |
 | tank-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180` | 964.7 threat per sec (×1.445 = 1,394) |
 | tank-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180` | 846.6 threat per sec (×1.433 = 1,213) |
@@ -13,7 +16,7 @@ The `sets/` pages at the root of the repository open these sets in wowsims Forev
 Steps:
 
 1. Set up wowsims as in `../run.sh`, on master commit 8298ab833.
-2. Run each test of the table with `FEEDBACK_DUMP=<dir>/<file>.json` and no `PROPOSE` flag. The file names are in `jobs.json`.
+2. Run each test of the table with `FEEDBACK_DUMP=<dir>/<file>.json` and no `PROPOSE` flag. For the item pool tank sets, also set `FEEDBACK_ITEMS`. The file names are in `jobs.json`.
 3. Copy `zzsets_main.go` to `cmd/zzsets/main.go` and run `go run -tags with_db ./cmd/zzsets <dir> jobs.json`. It prints the links. It also decodes each link and runs it again: the values of the table come from these runs.
 
 The links have the live talents and no proposal. wowsims gives the Warrior and the Druid threat without the multipliers of the development notes of 2 November.

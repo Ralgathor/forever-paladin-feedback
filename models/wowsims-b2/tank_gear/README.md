@@ -1,0 +1,42 @@
+# Item pool tank sets (4 November 2026)
+
+The tank sets of Analysis, Threat, parts 5 to 9, and Protection. Each set obeys the item pool rules of the damage sets (`../matched_gear/opt.py`, `pre_raid`):
+
+- No raid drops.
+- No items of the Zul'Gurub and Ahn'Qiraj patches (item ids 19000 to 23999).
+- No PvP items.
+- No Revered or Exalted reputation items.
+- Item level 63 or lower.
+
+The wowsims default tank sets have raid, PvP and reputation items. The sets of this folder replace these items. The wowsims links are on the [sets page](https://ralgathor.github.io/forever-paladin-feedback/sets/).
+
+## Method
+
+1. Dump the request of each tank test with `FEEDBACK_DUMP` (feedback_prot_test.go, feedback_warrior_test.go, feedback_bear_test.go, `FEEDBACK_DUR=180`).
+2. Copy `zztank_main.go` to `cmd/zztank/main.go` in the wowsims clone and build it: `go build -tags with_db -o /tmp/zztank ./cmd/zztank`.
+3. Run `python3 search_tank.py <prot|war|bear> <dump>`. For each item that is not in the pool, it takes the 12 pool items of the same slot with the best tank stat sum. Each candidate runs in the full set, 1,000 iterations. The search keeps the candidate with the best score, slot by slot. The score is 40% threat, 20% damage, 20% damage taken and 20% TMI, each against the default set. No item is used two times. The enchants do not change. The final set runs with 3,000 iterations.
+4. Run `./run_pool.sh <wowsims clone>`. It runs all tank jobs of `../logs/checks_8298ab833.log` again with the new sets (`FEEDBACK_ITEMS`). The output is `../logs/checks_8298ab833_pool.log`.
+
+`set_*.json` has the 17 item ids of each set. `log_*.txt` has the search output.
+
+## Sets
+
+| Tank | Replaced items | New items |
+| --- | --- | --- |
+| Protection Paladin | Premier Chevalier Shoulders, Heavy Thorium Gauntlets, Soulforge Belt, Depleted Thorium Sabatons, Ring of Awareness, Arena Grand Master, Defender's Grip Stabilizer, Dark Iron Destroyer, Force Reactive Disk, Libram of Fervor | Lightforge Spaulders, Lightforge Gauntlets, Vindicator's Belt, Warder's Sabatons, Initiate's Signet of Vigilance, Cleansed Vilebranch Icon, Cleansed Vilebranch Medallion, Grave Scepter, Antique Bulwark, Libram of Holy Alacrity |
+| Protection Warrior | Beads of Ogre Might, Belt of Heroism, Hyperion Legplates, Commander's Boots, Ring of Awareness, Defender's Grip Stabilizer, Annihilator, Archstrike Bow | Horn of Ve'han, Valiant's Waistguard, Legplates of Valor, Boots of Valor, Initiate's Signet of Vigilance, Smotts' Compass, Greatflank Flayer, Gorewood Bow |
+| Bear Druid | Amulet of the Darkmoon, Theramore Pauldrons, Premier Knight-Captain's Beasthide Bracers, Timbermaw Brawlers, Sentinel's Leather Pants, Dunestalker's Boots, Signet Ring of the Bronze Dragonflight, Heavy Dark Iron Ring, Stormpike Insignia Rank 6, Rune of the Guard Captain, Premier Grand Marshal's Battle Hammer | Artifact Seeker's Pendant, Warden's Leather Shoulders, Warden's Leather Bracers, Warden's Leather Gauntlets, Warbear Woolies, Warden's Leather Boots, Ring of Protection, Initiate's Signet of Vigilance, Glimmering Mithril Insignia, Cleansed Vilebranch Medallion, Enchanted Battlehammer |
+
+## Results (wowsims master 8298ab833, 3 min, 3,000 iterations)
+
+Threat each sec without the multipliers of the notes of 2 November. The analysis multiplies the Warrior threat by 1.445 and the Druid threat by 1.433.
+
+| Tank | Default set: threat / damage taken / TMI | Item pool set: threat / damage taken / TMI |
+| --- | --- | --- |
+| Protection Paladin, live | 980.1 / 337.9 / 57.5 | 1,029.3 / 383.8 / 68.6 |
+| Protection Warrior | 964.7 / 286.1 / 47 | 996.4 / 310.1 / 43 |
+| Bear Druid | 846.6 / 382.6 / 40.0 | 779.0 / 393.3 / 43.9 |
+
+- **With the multipliers,** the Warrior has 1,440, the Druid 1,116 (78% of the Warrior) and the live Paladin 1,029 (71%). With the default sets: 1,394, 1,213 (87%) and 980 (70%).
+- **The Druid loses the most.** Its default set has the most PvP and reputation items.
+- **The search is greedy.** It changes one slot at a time and keeps the other items. A full search of all slots together can give a slightly better set.

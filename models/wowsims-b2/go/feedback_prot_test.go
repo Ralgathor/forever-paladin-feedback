@@ -25,7 +25,7 @@ func TestFeedbackRun(t *testing.T) {
 	}
 	player := &proto.Player{
 		Name: "Prot", Race: proto.Race_RaceHuman, Class: proto.Class_ClassPaladin,
-		Equipment:     core.GetGearSet("../../../ui/specs/paladin/protection/gear_sets", "default").GearSet,
+		Equipment:     feedbackItems(core.GetGearSet("../../../ui/specs/paladin/protection/gear_sets", "default").GearSet),
 		Consumables:   DefaultConsumables,
 		TalentsString: talents,
 		Spec:          DefaultOptions,
@@ -181,4 +181,23 @@ func feedbackApl() string {
 		return v
 	}
 	return "default"
+}
+
+// feedbackItems: FEEDBACK_ITEMS is a comma list of 17 item ids (0 = empty slot), for example the pool sets of
+// tank_gear/. The enchants of the default set stay on their slots.
+func feedbackItems(eq *proto.EquipmentSpec) *proto.EquipmentSpec {
+	v := os.Getenv("FEEDBACK_ITEMS")
+	if v == "" {
+		return eq
+	}
+	out := &proto.EquipmentSpec{}
+	for i, s := range strings.Split(v, ",") {
+		id, _ := strconv.Atoi(strings.TrimSpace(s))
+		it := &proto.ItemSpec{Id: int32(id)}
+		if i < len(eq.Items) && eq.Items[i] != nil && id != 0 {
+			it.Enchant = eq.Items[i].Enchant
+		}
+		out.Items = append(out.Items, it)
+	}
+	return out
 }
