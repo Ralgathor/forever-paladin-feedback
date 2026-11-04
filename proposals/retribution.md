@@ -40,7 +40,7 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 ## Retribution against the pure average
 
 - **Model.** models/beta-30-oct/retribution_b2.py. It uses the wowsims default Retribution build of 1 November (14/6/31) and the wowsims rotation: plan 1 + 3 (see Mana with Unsealed Wrath).
-- **Start value.** wowsims Forever of 1 November gives 906 DPS at fresh level 60 (848 before the wowsims update). The model gives the increase with gear. Build 70755 (3 November 2026) adds 5 Vengeance stacks and Holy damage to Two-Handed Weapon Specialization: 981 DPS (Beta test results, W15). The tables of this tab use 906.
+- **Start value.** wowsims Forever master commit 6ee3c30f35 (4 November 2026, game files of client 1.60.1.70755) gives 938 DPS at fresh level 60. Build 70755 adds 5 Vengeance stacks and Holy damage to Two-Handed Weapon Specialization: +3.5% against 906 DPS on 1 November (Beta test results, W15). The model gives the increase with gear. The pure average table uses 938. The Seal plan tables below use the runs of 1 November (906).
 - **Increase with gear.** Retribution damage increases less with gear than Fury damage: ×1.65 against ×1.73 from fresh level 60 to Naxxramas. Fixed base values of the Seals, Judgement and Holy Strike cause this (see Analysis, Damage, part 3).
 - **Pure average.** wowsims Forever, with the same pre-raid item pool, enchants and consumables for each spec (Analysis, Damage, part 7). Fury and Combat Rogue use the increase of the model. Hunter, Mage and Warlock increase ×1.75 to Naxxramas (the main case of Analysis, Damage, part 1).
 
@@ -50,7 +50,7 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 
 - **Result.** The live version is above the hybrid target (95%) at all gear levels: 17 points at fresh level 60 and 12 points in Naxxramas. Thus, Retribution needs no damage proposal.
 - **Balance lever.** If raid logs confirm the wowsims level, decrease Sacred Arbiter to +10% first: −0.7% damage in wowsims (W15). This change alone does not bring Retribution to 95%.
-- **Other cases.** Hunter, Mage and Warlock ×1.60: live 112–113%. ×1.90: live 102–112%.
+- **Other cases.** Hunter, Mage and Warlock ×1.60: live 112–114%. ×1.90: live 102–112%.
 
 ## Mana with Unsealed Wrath (W29)
 
@@ -106,15 +106,15 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 
 ## wowsims check
 
-- **Sim.** wowsims Forever, master of 1 November, with the proposals as flags (models/wowsims-b2). Default gear, rotation, consumables and build (14/6/31), 3,000 iterations.
+- **Sim.** wowsims Forever, master commit d97252f2a (game files of client 1.60.1.70755), with the proposals as flags (models/wowsims-b2). Default gear, rotation, consumables and build (14/6/31), 3,000 iterations.
 - **Full buffs** have Mana Spring Totem, Mana Tide Totem and Atiesh. **Lean buffs** have only Gift of the Wild, Battle Shout, Kings, Might and Wisdom.
 
 | Fight | Live | Seal cost −20% |
 | --- | --- | --- |
-| 2 min, full buffs | 906 DPS | 0% |
-| 5 min, full buffs | 914 DPS | 0% |
-| 2 min, lean buffs | 653 DPS | 0% |
-| 5 min, lean buffs | 660 DPS | 0% |
+| 2 min, full buffs | 938 DPS | 0% |
+| 5 min, full buffs | 949 DPS | 0% |
+| 2 min, lean buffs | 682 DPS | 0% |
+| 5 min, lean buffs | 693 DPS | 0% |
 
 - **Mana.** No run has zero mana. The wowsims consumables now include Major Mana Potion. In the model, plan 1 + 3 has zero mana after 3 min 43 sec, because the model has no consumables.
 - **Seal cost −20%.** It has no effect in wowsims, because the mana lasts. The model gives 0–2.6%.

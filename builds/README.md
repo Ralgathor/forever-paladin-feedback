@@ -15,20 +15,20 @@ This folder gives the best build and the stat weights of each spec. It uses the 
 | --- | --- | --- | --- | --- |
 | Holy | Healing each sec, raid, 5 min | 728 | 479 | +52% |
 | Holy | Healing each sec, one tank, 5 min | 658 | 568 | +16% |
-| Protection | Threat each sec | 1,007 | 953 | +5.7% |
-| Protection | Damage taken each sec | 291 | 325 | −10% |
-| Protection | TMI (lower is better) | 45.0 | 55.5 | −19% |
-| Retribution | DPS, raid | 910 | 910 | 0% |
-| Retribution | DPS, fresh 60 | 315 | 303 | +4.1% |
+| Protection | Threat each sec | 1,076 | 1,006 | +7.0% |
+| Protection | Damage taken each sec | 295 | 331 | −11% |
+| Protection | TMI (lower is better) | 45.3 | 56.3 | −19% |
+| Retribution | DPS, raid | 944 | 944 | 0% |
+| Retribution | DPS, fresh 60 | 328 | 315 | +4.2% |
 
 - **Holy.** Light's Vigil (C-H7) gives the raid healing. Oath of Light 30% (C-H8) gives the one-tank healing. Reverence 50% (C-H1) gives +5–9% healing, more in long fights. HB2 takes Devoted Sacrifice (C-P11) with the free points.
 - **Protection.** Redoubt (C-P1) removes almost all crushing blows and adds threat with more Holy Shield blocks. Righteous Fury (C25) multiplies all threat by 1.43.
-- **Retribution.** Reverence 50% (C-H1) adds mana at fresh 60. In a raid, the proposed and live trees give the same damage. The 910 DPS use 3 min fights. Analysis, Damage gives 906 DPS with the 2 min wowsims test run, and 981 DPS with build 70755 (3 November 2026).
+- **Retribution.** Reverence 50% (C-H1) adds mana at fresh 60. In a raid, the proposed and live trees give the same damage. The 944 DPS use 3 min fights. Analysis, Damage gives 938 DPS with the 2 min wowsims test run.
 
 ## Common rules
 
 - **Codes.** All build codes load with 51 points. The level-up codes show the points at a lower level. A code that starts with `v6p` opens the proposed trees. A code that starts with `b2` opens the live trees.
-- **Sim.** wowsims Forever, master of 1 November 2026 (commit 895cd67f9), with the proposals as flags (`models/wowsims-b2`). 3 min, one level 63 boss, 3,000 iterations.
+- **Sim.** wowsims Forever, master of 3 November 2026 (commit d97252f2a, game files of client 1.60.1.70755), with the proposals as flags (`models/wowsims-b2`). 3 min, one level 63 boss, 3,000 iterations.
 - **Gear.** The default gear set of each spec in wowsims Forever. This folder has no gear search.
 - **Holy.** wowsims Forever has no Holy healing sim. The Holy values come from the healing model (`models/beta-30-oct/healing_b2.py`), with 175% critical heals (Holy Power 5/5, main hypothesis).
 - **Stat weights.** Each stat changes by a small amount, with the same random seed for all runs. The reference stat is 1.00: healing power for Holy, Strength for Retribution. For Protection, the table gives the change for each point.
@@ -36,7 +36,7 @@ This folder gives the best build and the stat weights of each spec. It uses the 
 
 ## Sources
 
-- Damage and tank: talent search and stat weights in wowsims Forever (commit 895cd67f9). Scripts and logs in `models/wowsims-b2` (`search.py`, `finals.py`, `logs/finals.log`).
+- Damage and tank: talent search in wowsims Forever (commit 895cd67f9), builds and stat weights again on commit d97252f2a (the same values on commit 6ee3c30f35 of 4 November). Scripts and logs in `models/wowsims-b2` (`search.py`, `finals.py`, `logs/finals.log`).
 - Healer: healing model and stat weights (`models/beta-30-oct/holy_builds_b2.py`).
 - Level-up: wowsims Forever (commit 895cd67f9), live talents (`models/wowsims-b2/levelup.py`).
 - The earlier files (trees of 18 October, calculator version 5) are in the history of the repository.

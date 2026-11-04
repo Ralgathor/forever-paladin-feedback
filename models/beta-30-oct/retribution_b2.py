@@ -27,14 +27,17 @@ import sys
 import os; D = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, sys.argv[1] if len(sys.argv) > 1 else os.path.join(D, "..", "damage"))
 import damage_model as M
-# Pure damage classes: wowsims Forever 895cd67f9, same pre-raid item pool for each spec (game start and Dire Maul
-# content, models/wowsims-b2/matched_gear), wowsims preset enchants, the same consumables for each spec, Ret raid buffs,
-# 2 min, 10,000 iterations. Fury 804.8, Combat Rogue 645.6, Hunter 799.6, Fire Mage 824.0, Demonology Warlock 845.6,
-# Retribution 874.4. The values below put them on the scale of RET_SIM (x 906 / 874.4).
-PURE_MATCHED = {"Warrior": 804.8, "Rogue": 645.6, "Hunter": 799.6, "Mage": 824.0, "Warlock": 845.6}
-RET_MATCHED = 874.4
-PURE = {k: v * 906 / RET_MATCHED for k, v in PURE_MATCHED.items()}
-RET_SIM = 906                                                                          # wowsims master of 1 November, full buffs, 2 min (the anchor of Analysis, Damage)
+# Pure damage classes: wowsims Forever 6ee3c30f35 (4 November 2026, game files of client 1.60.1.70755), same pre-raid
+# item pool for each spec (game start and Dire Maul content, models/wowsims-b2/matched_gear), wowsims preset enchants,
+# the same consumables for each spec, Ret raid buffs, 2 min, 10,000 iterations. Fury 836.6, Combat Rogue 666.4,
+# Hunter 887.0, Fire Mage 823.9, Demonology Warlock 844.8, Retribution 906.5. The values below put them on the scale of
+# RET_SIM (x 938 / 906.5).
+# Commit d97252f2a (3 November): Fury 787.9, Rogue 634.4, Hunter 761.2, Mage 823.9, Warlock 844.8, Retribution 906.5.
+# Commit 895cd67f9 (1 November): Fury 804.8, Rogue 645.6, Hunter 799.6, Mage 824.0, Warlock 845.6, Retribution 874.4.
+PURE_MATCHED = {"Warrior": 836.6, "Rogue": 666.4, "Hunter": 887.0, "Mage": 823.9, "Warlock": 844.8}
+RET_MATCHED = 906.5
+RET_SIM = 938                                                                          # wowsims master 6ee3c30f35 and d97252f2a, full buffs, 2 min (the anchor of Analysis, Damage; 906 on 1 November)
+PURE = {k: v * RET_SIM / RET_MATCHED for k, v in PURE_MATCHED.items()}
 from damage_model import (gear, auto_table, spec_table, vengeance, fury, arms, rogue, TIER_NAMES, CRIT_SPEC, DODGE,
                           EXECUTE, FIGHT, KINGS, MOTW, MIGHT, SHOUT, NORM_2H, SPEED_2H, DR, MISS)
 

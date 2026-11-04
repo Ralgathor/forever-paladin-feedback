@@ -1,0 +1,264 @@
+BUILD ret raid beta 050250002-501-05233011201301351 {'dps': 910.2, 'oom': 0.0}
+BUILD ret raid beta 050150001-503-15233011101301351 {'dps': 915.7, 'oom': 0.0}
+BUILD ret raid prop 050250002-501-05233011201301351 {'dps': 960.2, 'oom': 0.0}
+BUILD ret raid prop 050150002-502-05233011201301351 {'dps': 962.8, 'oom': 0.0}
+BUILD ret fresh beta 050250002-501-05233011201301351 {'dps': 302.8, 'oom': 68.9}
+BUILD ret fresh beta 050150001-503-15233011101301351 {'dps': 287.6, 'oom': 87.7}
+BUILD ret fresh prop 050250002-501-05233011201301351 {'dps': 323.5, 'oom': 69.0}
+BUILD ret fresh prop 050050002-503-15233011101301351 {'dps': 317.4, 'oom': 76.9}
+BUILD prot raid beta 050050002-05302102213301531-502 {'dps': 391.8, 'tps': 927.6, 'dtps': 333.4, 'tmi': 57.09, 'crush': 11.9, 'std': 6.91}
+BUILD prot raid beta 05005-05302102213201531-5023 {'dps': 412.4, 'tps': 974.9, 'dtps': 342.1, 'tmi': 58.45, 'crush': 11.9, 'std': 6.97}
+BUILD prot raid prop -3530110213501531-45233 {'dps': 444.6, 'tps': 1040.9, 'dtps': 295.6, 'tmi': 45.12, 'crush': 1.0, 'std': 3.7}
+BUILD prot raid prop -3530110213501531-44233000001 {'dps': 450.9, 'tps': 1062.2, 'dtps': 295.6, 'tmi': 45.12, 'crush': 1.0, 'std': 3.7}
+WEIGHTS ret raid beta 050250002-501-05233011201301351 base={'dps': 910.2}
+  Strength: dps=+0.495
+  Agility: dps=+0.360
+  Intellect: dps=+0.300
+  Spell damage: dps=+0.397
+  Attack power: dps=+0.205
+  Hit rating: dps=+0.240
+  Crit rating: dps=+0.510
+  Haste rating: dps=+0.560
+  Expertise rating: dps=+1.020
+WEIGHTS ret raid prop 050250002-501-05233011201301351 base={'dps': 960.2}
+  Strength: dps=+0.525
+  Agility: dps=+0.390
+  Intellect: dps=+0.315
+  Spell damage: dps=+0.417
+  Attack power: dps=+0.220
+  Hit rating: dps=+0.230
+  Crit rating: dps=+0.540
+  Haste rating: dps=+0.480
+  Expertise rating: dps=+1.130
+WEIGHTS ret fresh beta 050250002-501-05233011201301351 base={'dps': 302.8}
+  Strength: dps=+0.225
+  Agility: dps=+0.145
+  Intellect: dps=+0.335
+  Spell damage: dps=+0.185
+  Attack power: dps=+0.100
+  Hit rating: dps=+0.050
+  Crit rating: dps=+0.210
+  Haste rating: dps=+0.500
+  Expertise rating: dps=+0.230
+WEIGHTS prot raid beta 050050002-05302102213301531-502 base={'dps': 391.8, 'tps': 927.6, 'dtps': 333.4, 'tmi': 57.09}
+  Strength: dps=+0.195 tps=+0.310 dtps=-0.010 tmi=-0.002
+  Agility: dps=+0.175 tps=+0.340 dtps=-0.320 tmi=-0.041
+  Stamina: dps=+0.000 tps=+0.000 dtps=+0.005 tmi=-0.140
+  Spell damage: dps=+0.263 tps=+0.697 dtps=-0.015 tmi=-0.003
+  Hit rating: dps=+0.520 tps=+1.200 dtps=-0.060 tmi=-0.025
+  Expertise rating: dps=+0.610 tps=+1.240 dtps=-0.240 tmi=-0.041
+  Defense rating: dps=-0.010 tps=-0.040 dtps=-0.760 tmi=-0.120
+  Block rating: dps=+0.200 tps=+0.490 dtps=-0.100 tmi=-0.035
+  Block value: dps=+0.000 tps=+0.000 dtps=-0.230 tmi=-0.028
+  Dodge rating: dps=-0.020 tps=-0.050 dtps=-0.390 tmi=-0.045
+  Parry rating: dps=+0.000 tps=-0.010 dtps=-0.300 tmi=-0.030
+  Armor: dps=+0.000 tps=+0.000 dtps=-0.025 tmi=-0.006
+WEIGHTS prot raid prop -3530110213501531-45233 base={'dps': 444.6, 'tps': 1040.9, 'dtps': 295.6, 'tmi': 45.12}
+  Strength: dps=+0.210 tps=+0.340 dtps=-0.015 tmi=-0.002
+  Agility: dps=+0.085 tps=+0.145 dtps=-0.310 tmi=-0.029
+  Stamina: dps=+0.000 tps=+0.000 dtps=+0.000 tmi=-0.105
+  Spell damage: dps=+0.280 tps=+0.752 dtps=-0.018 tmi=-0.003
+  Hit rating: dps=+0.620 tps=+1.380 dtps=-0.060 tmi=+0.008
+  Expertise rating: dps=+0.730 tps=+1.510 dtps=-0.160 tmi=-0.014
+  Defense rating: dps=-0.180 tps=-0.390 dtps=-0.550 tmi=-0.043
+  Block rating: dps=+0.010 tps=+0.030 dtps=+0.000 tmi=+0.000
+  Block value: dps=-0.005 tps=+0.000 dtps=-0.345 tmi=-0.059
+  Dodge rating: dps=-0.150 tps=-0.310 dtps=-0.440 tmi=-0.031
+  Parry rating: dps=-0.070 tps=-0.150 dtps=-0.300 tmi=-0.021
+  Armor: dps=-0.001 tps=+0.000 dtps=-0.024 tmi=-0.004
+BUILD prot raid beta -05302102313501531-52233000001 {'dps': 401.9, 'tps': 953.2, 'dtps': 325.4, 'tmi': 55.54, 'crush': 11.9, 'std': 6.56}
+WEIGHTS prot raid beta -05302102313501531-52233000001 base={'dps': 401.9, 'tps': 953.2, 'dtps': 325.4, 'tmi': 55.54}
+  Strength: dps=+0.195 tps=+0.325 dtps=-0.010 tmi=-0.001
+  Agility: dps=+0.105 tps=+0.185 dtps=-0.325 tmi=-0.028
+  Stamina: dps=+0.000 tps=+0.000 dtps=+0.000 tmi=-0.136
+  Spell damage: dps=+0.260 tps=+0.695 dtps=-0.015 tmi=-0.003
+  Hit rating: dps=+0.450 tps=+1.020 dtps=-0.140 tmi=-0.003
+  Expertise rating: dps=+0.620 tps=+1.320 dtps=-0.160 tmi=-0.018
+  Defense rating: dps=-0.100 tps=-0.230 dtps=-0.720 tmi=-0.087
+  Block rating: dps=+0.190 tps=+0.390 dtps=-0.100 tmi=+0.024
+  Block value: dps=+0.000 tps=-0.005 dtps=-0.235 tmi=-0.029
+  Dodge rating: dps=-0.070 tps=-0.130 dtps=-0.380 tmi=-0.019
+  Parry rating: dps=-0.050 tps=-0.150 dtps=-0.350 tmi=-0.020
+  Armor: dps=+0.000 tps=+0.000 dtps=-0.025 tmi=-0.006
+BUILD prot raid prop -3530110213501531-54233 {'dps': 443.5, 'tps': 1038.6, 'dtps': 291.4, 'tmi': 44.83, 'crush': 1.0, 'std': 3.85}
+BUILD prot raid prop -3530110213501531-53233000001 {'dps': 449.8, 'tps': 1059.8, 'dtps': 291.5, 'tmi': 44.83, 'crush': 1.0, 'std': 3.85}
+WEIGHTS prot raid prop -3530110213501531-54233 base={'dps': 443.5, 'tps': 1038.6, 'dtps': 291.4, 'tmi': 44.83}
+  Strength: dps=+0.210 tps=+0.335 dtps=-0.010 tmi=-0.002
+  Agility: dps=+0.090 tps=+0.150 dtps=-0.315 tmi=-0.031
+  Stamina: dps=+0.000 tps=+0.000 dtps=+0.000 tmi=-0.104
+  Spell damage: dps=+0.280 tps=+0.750 dtps=-0.015 tmi=-0.003
+  Hit rating: dps=+0.630 tps=+1.410 dtps=-0.020 tmi=+0.004
+  Expertise rating: dps=+0.780 tps=+1.630 dtps=-0.080 tmi=-0.014
+  Defense rating: dps=-0.180 tps=-0.390 dtps=-0.510 tmi=-0.046
+  Block rating: dps=+0.010 tps=+0.040 dtps=+0.000 tmi=-0.004
+  Block value: dps=-0.005 tps=+0.000 dtps=-0.335 tmi=-0.059
+  Dodge rating: dps=-0.140 tps=-0.310 dtps=-0.380 tmi=-0.036
+  Parry rating: dps=-0.080 tps=-0.180 dtps=-0.290 tmi=-0.024
+  Armor: dps=-0.001 tps=+0.000 dtps=-0.022 tmi=-0.004
+# 2 November 2026: Reckoning (C-P12) withdrawn, proposed flags C1,CP1,NOTOUGH
+BUILD prot raid prop -3530110213501531-54233 {'dps': 428.3, 'tps': 1011.6, 'dtps': 291.7, 'tmi': 44.95, 'crush': 1.0, 'std': 3.77}
+BUILD prot raid prop -3530110213501531-53233000001 {'dps': 434.6, 'tps': 1032.7, 'dtps': 291.7, 'tmi': 44.95, 'crush': 1.0, 'std': 3.77}
+WEIGHTS prot raid prop -3530110213501531-54233 base={'dps': 428.3, 'tps': 1011.6, 'dtps': 291.7, 'tmi': 44.95}
+  Strength: dps=+0.195 tps=+0.315 dtps=-0.015 tmi=-0.003
+  Agility: dps=+0.100 tps=+0.170 dtps=-0.305 tmi=-0.033
+  Stamina: dps=+0.000 tps=+0.000 dtps=+0.000 tmi=-0.105
+  Spell damage: dps=+0.275 tps=+0.735 dtps=-0.015 tmi=-0.003
+  Hit rating: dps=+0.610 tps=+1.390 dtps=+0.010 tmi=+0.001
+  Expertise rating: dps=+0.640 tps=+1.340 dtps=-0.180 tmi=-0.033
+  Defense rating: dps=-0.160 tps=-0.380 dtps=-0.580 tmi=-0.055
+  Block rating: dps=+0.020 tps=+0.050 dtps=+0.030 tmi=+0.002
+  Block value: dps=+0.000 tps=-0.005 dtps=-0.340 tmi=-0.060
+  Dodge rating: dps=-0.130 tps=-0.320 dtps=-0.420 tmi=-0.033
+  Parry rating: dps=-0.080 tps=-0.170 dtps=-0.300 tmi=-0.026
+  Armor: dps=+0.000 tps=+0.000 dtps=-0.023 tmi=-0.004
+# 2 November 2026: Improved Seals dip (hand-made, proposed, raid, 3,000 iterations, scratch script isc.py)
+BUILD prot raid prop -3530110213501531-54233 tps=1012 dtps=292 tmi=45.0
+BUILD prot raid prop -3530110213501531-53233000001 tps=1033 dtps=292 tmi=45.0
+BUILD prot raid prop 05005-3530110213501531-502 tps=1016 dtps=296 tmi=45.7
+BUILD prot raid prop 05005-3530110213201531-5023 tps=1060 dtps=301 tmi=46.2
+BUILD prot raid prop 05005-3530110213301531-5022 tps=1046 dtps=300 tmi=46.1
+
+## 2 November 2026: Unsealed Wrath Seal plans (W29). seal_plans_apl.py, default build, 3,000 iterations
+## Plan rRcC: Seal of Command after R Righteousness copies, Seal of Righteousness after C Command copies.
+default (= r1c3)  2 min full C1 956.2 | 5 min full C1 962.2
+r1c2              2 min full C1 949.1 | 5 min full C1 955.4
+r2c2              2 min full C1 933.5 | 5 min full C1 939.4
+r1c1              2 min full C1 923.9 | 5 min full C1 926.3
+r3c3              2 min full C1 923.2 | 5 min full C1 930.8
+r2c1              2 min full C1 907.7 | 5 min full C1 913.7
+r3c1              2 min full C1 894.5 | 5 min full C1 899.9
+live (no C1), full buffs, 2 min: r1c3 905.9, r2c2 889.8, r1c1 878.6, r3c1 852.8
+no buffs, C1, 2 min: r1c3 345.4 (mana zero 88 s), r2c2 337.9 (84 s), r3c1 332.1 (81 s), r1c1 313.4 (52 s)
+
+## 2 November 2026: other Seal pairs with Seal of Command, plan 1 + 3, C1 (fb_r1c3_<X>C, X in place of Righteousness)
+R (default)  2 min full 956.2 | 5 min full 962.2 | 5 min lean 696.0 | 2 min none 345.4 (oom 28.6 s) | 5 min none 307.3 (tto 88.7 s)
+Fury         2 min full 923.5 | 5 min full 929.8 | 5 min lean 676.6 | 2 min none 328.3 | 5 min none 284.0
+Light        2 min full 829.8 | 5 min none 240.4
+Justice      2 min full 826.9 | 5 min none 238.9
+Wisdom       2 min full 827.8 | 5 min full 832.9 | 5 min lean 620.6 | 2 min none 348.0 (oom 0.1 s) | 5 min none 350.3 (oom 3.6 s)
+Wisdom r3c3  2 min full 726.5 | 5 min lean 534.8 | 5 min none 302.3
+Command only and Righteousness only with fb_conly/fb_ronly are not valid: the default APL casts a Seal again only after a copy of the other. See the fb_only_X runs below.
+
+## 2 November 2026: plans without Seal of Command, C1 (fb_<A><n><B><m>: n swings with A, then m with B; fb_only_X: one Seal)
+R1C3 (default) 2 min full 956.2 | 5 min none 307.3
+only C         2 min full 808.8 | 5 min none 292.4
+F1R3           2 min full 817.8 | 5 min none 269.1
+R1F1           2 min full 787.7 | 5 min none 252.9
+R1F3           2 min full 775.1 | 5 min none 259.1
+only R         2 min full 749.4 | 5 min none 272.3
+W1R3           2 min full 736.0 | 5 min none 310.8
+W1F3           2 min full 664.6 | 5 min none 267.1
+only F         2 min full 691.4 | 5 min none 239.1
+
+## Reverence 25/50% (C-H1, flag REV50), RB1 050250002-501-05233011201301351, proposed trees, 3,000 iterations (2 November 2026)
+RESULT dur=180 buffs=none propose="C1" dps=323.5 tto=88.7 oom=69.0
+RESULT dur=180 buffs=none propose="C1,REV50" dps=336.6 tto=97.5 oom=60.1
+RESULT dur=300 buffs=none propose="C1" dps=307.3 tto=88.7 oom=155.0
+RESULT dur=300 buffs=none propose="C1,REV50" dps=324.0 tto=97.5 oom=131.2
+RESULT dur=120 buffs=full propose="C1" dps=956.2 tto=580.1 oom=0.0
+RESULT dur=120 buffs=full propose="C1,REV50" dps=956.2 tto=727.5 oom=0.0
+RESULT dur=300 buffs=full propose="C1" dps=962.2 tto=1410.9 oom=0.0
+RESULT dur=300 buffs=full propose="C1,REV50" dps=962.9 tto=1550.6 oom=0.0
+
+## Sacred Arbiter +10% / +0% (flags SA10, SA0) against C1, 3,000 iterations (2 November 2026)
+# Retribution RB1 050250002-501-05233011201301351
+beta RESULT dur=120 buffs=full propose="" dps=905.9
+beta RESULT dur=120 buffs=full propose="SA10" dps=899.2
+prop RESULT dur=120 buffs=full propose="REV50" dps=905.9
+prop RESULT dur=120 buffs=full propose="C1,REV50" dps=956.2
+prop RESULT dur=120 buffs=full propose="C1,REV50,SA10" dps=949.5
+prop RESULT dur=120 buffs=full propose="C1,REV50,SA0" dps=942.7
+beta RESULT dur=180 buffs=none propose="" dps=302.8
+beta RESULT dur=180 buffs=none propose="SA10" dps=299.5
+prop RESULT dur=180 buffs=none propose="REV50" dps=315.2
+prop RESULT dur=180 buffs=none propose="C1,REV50" dps=336.6
+prop RESULT dur=180 buffs=none propose="C1,REV50,SA10" dps=333.1
+prop RESULT dur=180 buffs=none propose="C1,REV50,SA0" dps=329.6
+# Protection, 180 sec, threat each sec (Warrior 926)
+BS2 live tps=953.2 | BS2 live SA10 tps=942.7
+PS1 CP1,NOTOUGH tps=1007.3 | PS1 C1,CP1,NOTOUGH tps=1032.7 | PS1 +SA10 tps=1022.3 | PS1 +SA0 tps=1011.9
+PT1 CP1,NOTOUGH tps=986.1 | PT1 C1,CP1,NOTOUGH tps=1011.6
+
+## C1 withdrawn (2 November 2026): proposed builds again, flags ret REV50, prot CP1,NOTOUGH, 3,000 iterations
+BUILD ret raid prop 050250002-501-05233011201301351 {'dps': 910.3, 'oom': 0.0}
+BUILD ret raid prop 050150002-502-05233011201301351 {'dps': 912.5, 'oom': 0.0}
+BUILD ret fresh prop 050250002-501-05233011201301351 {'dps': 315.2, 'oom': 60.0}
+BUILD ret fresh prop 050050002-503-15233011101301351 {'dps': 295.7, 'oom': 76.8}
+BUILD prot raid prop -3530110213501531-54233 {'dps': 418.1, 'tps': 986.1, 'dtps': 291.3, 'tmi': 44.96, 'crush': 1.0}
+BUILD prot raid prop -3530110213501531-53233000001 {'dps': 424.5, 'tps': 1007.3, 'dtps': 291.3, 'tmi': 44.96, 'crush': 1.0}
+BUILD prot raid prop -3530110213501531-45233 {'dps': 419.4, 'tps': 989.2, 'dtps': 295.4, 'tmi': 45.26, 'crush': 1.0}
+BUILD prot raid prop 05005-3530110213501531-502 {'dps': 414.6, 'tps': 989.7, 'dtps': 295.5, 'tmi': 45.77, 'crush': 1.0}
+BUILD prot raid prop 05005-3530110213201531-5023 {'dps': 436.8, 'tps': 1034.4, 'dtps': 301.4, 'tmi': 46.3, 'crush': 1.0}
+BUILD prot raid prop 05005-3530110213301531-5022 {'dps': 429.7, 'tps': 1020.0, 'dtps': 299.5, 'tmi': 46.11, 'crush': 1.0}
+WEIGHTS ret raid prop 050250002-501-05233011201301351 base={'dps': 910.3}
+  Strength: dps=+0.495
+  Agility: dps=+0.365
+  Intellect: dps=+0.300
+  Spell damage: dps=+0.398
+  Attack power: dps=+0.205
+  Hit rating: dps=+0.220
+  Crit rating: dps=+0.510
+  Haste rating: dps=+0.560
+  Expertise rating: dps=+1.020
+WEIGHTS prot raid prop -3530110213501531-54233 base={'dps': 418.1, 'tps': 986.1, 'dtps': 291.3, 'tmi': 44.96}
+  Strength: dps=+0.200 tps=+0.320 dtps=-0.015 tmi=-0.003
+  Agility: dps=+0.065 tps=+0.110 dtps=-0.285 tmi=-0.031
+  Stamina: dps=+0.000 tps=+0.000 dtps=+0.000 tmi=-0.105
+  Spell damage: dps=+0.263 tps=+0.700 dtps=-0.015 tmi=-0.003
+  Hit rating: dps=+0.600 tps=+1.370 dtps=+0.020 tmi=-0.007
+  Expertise rating: dps=+0.630 tps=+1.280 dtps=-0.170 tmi=-0.024
+  Defense rating: dps=-0.190 tps=-0.420 dtps=-0.500 tmi=-0.052
+  Block rating: dps=+0.020 tps=+0.010 dtps=+0.040 tmi=+0.006
+  Block value: dps=+0.000 tps=+0.005 dtps=-0.335 tmi=-0.059
+  Dodge rating: dps=-0.150 tps=-0.330 dtps=-0.370 tmi=-0.034
+  Parry rating: dps=-0.060 tps=-0.150 dtps=-0.240 tmi=-0.024
+  Armor: dps=+0.000 tps=+0.000 dtps=-0.023 tmi=-0.004
+# RB1 Reverence alone (REV50): beta / prop
+  fresh 300 sec: 287.9 / 302.9 (oom 154.7 / 131.1)
+  full 300 sec: 913.9 / 913.7; full 120 sec: 905.9 / 905.9
+# Protection default tank build (12/32/7), 180 sec: CP1 tps=985.7 dtps=288.4 tmi=43.99 | CP1,NOTOUGH tps=985.6 dtps=294.7 tmi=45.16 | C1,CP1,NOTOUGH tps=1010.9 dtps=294.5 tmi=45.16
+# Groups, CP1,NOTOUGH: 3 targets 916.7/252.7/252.4 (total 1,422) | 5 targets 911.7/223.9/224.2/223.9/127.6 (total 1,712)
+## Seal plans, live trees (no flags), RB1 default APLs (seal_plans_apl.py), 3,000 iterations
+fb_F1R3 120 full dps=791.2 oom=0.0
+fb_F1R3 300 none dps=256.1 oom=153.7
+fb_R1F1 120 full dps=764.2 oom=0.0
+fb_R1F1 300 none dps=240.9 oom=197.4
+fb_R1F3 120 full dps=752.8 oom=0.0
+fb_R1F3 300 none dps=247.3 oom=153.5
+fb_W1R3 120 full dps=712.1 oom=0.0
+fb_W1R3 300 none dps=297.2 oom=32.5
+fb_only_C 120 full dps=756.8 oom=0.0
+fb_only_C 300 none dps=269.7 oom=66.3
+fb_only_F 120 full dps=670.6 oom=0.0
+fb_only_F 300 none dps=229.6 oom=81.3
+fb_only_R 120 full dps=717.4 oom=0.0
+fb_only_R 300 none dps=254.5 oom=81.3
+fb_r1c1 120 full dps=878.6 oom=0.0
+fb_r1c2 120 full dps=902.2 oom=0.0
+fb_r1c3 120 full dps=905.9 oom=0.0
+fb_r1c3 120 none dps=323.1 oom=28.5
+fb_r1c3 300 lean dps=659.5 oom=0.0
+fb_r1c3 300 none dps=287.9 oom=154.7
+fb_r1c3_FC 120 full dps=877.1 oom=0.0
+fb_r1c3_FC 120 none dps=309.1 oom=28.6
+fb_r1c3_FC 300 lean dps=644.0 oom=0.0
+fb_r1c3_FC 300 none dps=267.9 oom=154.9
+fb_r1c3_JC 120 full dps=788.6 oom=0.0
+fb_r1c3_JC 300 none dps=226.9 oom=156.0
+fb_r1c3_LC 120 full dps=788.3 oom=0.0
+fb_r1c3_LC 300 none dps=228.2 oom=158.3
+fb_r1c3_WC 120 full dps=788.6 oom=0.0
+fb_r1c3_WC 120 none dps=331.6 oom=0.1
+fb_r1c3_WC 300 lean dps=592.4 oom=0.0
+fb_r1c3_WC 300 none dps=332.7 oom=5.1
+fb_r2c2 120 full dps=889.8 oom=0.0
+fb_r3c1 120 full dps=852.8 oom=0.0
+fb_r3c3 120 full dps=882.9 oom=0.0
+
+## Fast and two-weapon bosses (FEEDBACK_BOSS), 180 sec, 3,000 iterations (2 November 2026)
+# fast = a swing each 1.2 sec with 60% damage. dw = two weapons. Crushing blows as % of the boss swings.
+# Paladin default tank build 12/32/7: live | CP1,NOTOUGH (Redoubt 6-30%) | CP1,NOTOUGH,RD20 (Redoubt 4-20%) | Warrior
+normal   crush 11.9% | 1.0% | 4.9% | 1.0%    dtps 333 | 295 | 319 | 281   TMI 57.1 | 45.2 | 54.2 | 47
+fast     crush 11.1% | 3.6% | 6.4% | 2.8%    dtps 313 | 287 | 307 | 270   TMI 45.9 | 40.8 | 45.1 | 40
+dw       crush 10.8% | 5.0% | 7.2% | 3.7%    dtps 482 | 455 | 480 | 417   TMI 77.9 | 72.0 | 78.1 | 69
+fast,dw  crush 11.7% | 8.7% | 10.1% | 7.1%   dtps 465 | 454 | 473 | 415   TMI 66.2 | 64.8 | 67.7 | 60

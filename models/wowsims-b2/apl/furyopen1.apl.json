@@ -49,7 +49,7 @@
    "action": {
     "castSpell": {
      "spellId": {
-      "spellId": 20928,
+      "spellId": 1239570,
       "rank": 3
      }
     }
@@ -201,7 +201,7 @@
    "action": {
     "castSpell": {
      "spellId": {
-      "spellId": 20928,
+      "spellId": 1239570,
       "rank": 3
      }
     }
