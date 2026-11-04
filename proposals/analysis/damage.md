@@ -43,6 +43,22 @@ The increase of Hunter, Mage and Warlock with gear is not known. The table uses 
 - **The balance lever is Sacred Arbiter (W15).** If raid logs confirm the wowsims level, decrease it to +10%: −0.7% damage in wowsims. This change alone does not bring Retribution to 95%. With C1, the gain fell only from +5.5% to +4.5%.
 - **Check again later.** The pure average uses wowsims of 4 November. The Warrior, Rogue and Hunter have the changes of hotfix 113578. The Mage and Warlock changes of the development notes are not in wowsims yet (W15).
 
+**DPS of each class.** The start values keep the ratio to Retribution of the same item pool runs (part 7), with Retribution at 938. The increase comes from the model. Hunter, Mage and Warlock use ×1.75.
+
+| Spec | Fresh 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
+| --- | --- | --- | --- | --- | --- |
+| **Retribution, live** | **938 (112%)** | **1,050 (111%)** | **1,206 (110%)** | **1,351 (108%)** | **1,551 (107%)** |
+| Hunter | 918 (109%) | 1,037 (109%) | 1,210 (110%) | 1,383 (111%) | 1,606 (111%) |
+| Demonology Warlock | 874 (104%) | 987 (104%) | 1,153 (105%) | 1,317 (105%) | 1,530 (106%) |
+| Fury Warrior | 866 (103%) | 985 (104%) | 1,126 (103%) | 1,297 (104%) | 1,497 (103%) |
+| Fire Mage | 853 (101%) | 963 (102%) | 1,124 (103%) | 1,285 (103%) | 1,492 (103%) |
+| **Pure average** | **840** | **948** | **1,095** | **1,251** | **1,447** |
+| Combat Rogue | 690 (82%) | 770 (81%) | 864 (79%) | 972 (78%) | 1,109 (77%) |
+
+- **Retribution is first at fresh 60,** 2% above the Hunter. From Molten Core, the Hunter is first.
+- **The Rogue decreases the pure average.** Without the Rogue, the pure average is 878 at fresh 60 (848 in the item pool run).
+- **The calculator Damage cards show these values.**
+
 ## 2. Where the damage comes from
 
 Fresh 60, raid buffs, 2 min fight, wowsims rotation (plan 1 + 3, model).
