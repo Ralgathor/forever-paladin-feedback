@@ -13,7 +13,7 @@ import (
 	googleproto "google.golang.org/protobuf/proto"
 )
 
-// FEEDBACK_DUR (sec), FEEDBACK_BUFFS (full|lean), PROPOSE flags. Prints DPS, time to OOM and sec OOM.
+// FEEDBACK_DUR (sec), FEEDBACK_BUFFS (full|lean|none), FEEDBACK_SHOCK (Holy Shock build), PROPOSE flags. Prints DPS, time to OOM and sec OOM.
 func TestFeedbackRun(t *testing.T) {
 	if os.Getenv("FEEDBACK_DUR") == "" {
 		t.Skip()
@@ -31,20 +31,32 @@ func TestFeedbackRun(t *testing.T) {
 		raid = rb
 	}
 	debuffs, cons := core.FullDebuffs, DefaultConsumables
+	gear, apl, talents := "default", envOr("FEEDBACK_APL", "default"), UnsealedWrathTalents
+	var swap *proto.ItemSwap
+	if os.Getenv("FEEDBACK_SHOCK") != "" { // the wowsims shockadinSuite: Holy Shock set, item swap set, APL and consumables
+		gear, apl, talents = "holy_shock", "holy_shock", HolyShockTalents
+		swap = core.GetItemSwapGearSet("../../../ui/specs/paladin/retribution/gear_sets", "holy_shock_item_swap").ItemSwap
+		c := googleproto.Clone(DefaultConsumables).(*proto.ConsumesSpec)
+		c.ElixirIds[0] = 8423  // Cerebral Cortex Compound
+		c.SwapMhImbueId = 3829 // Frost Oil
+		cons = c
+	}
 	if os.Getenv("FEEDBACK_BUFFS") == "none" { // fresh level 60: no buffs, no debuffs, no consumables
 		raid, party, indiv = &proto.RaidBuffs{}, &proto.PartyBuffs{}, &proto.IndividualBuffs{}
 		debuffs, cons = &proto.Debuffs{}, &proto.ConsumesSpec{}
 	}
 	player := &proto.Player{
 		Name: "Ret", Race: proto.Race_RaceHuman, Class: proto.Class_ClassPaladin,
-		Equipment:     core.GetGearSet("../../../ui/specs/paladin/retribution/gear_sets", "default").GearSet,
-		Consumables:   cons,
-		TalentsString: talentsOr(UnsealedWrathTalents),
-		Spec:          DefaultSpecOptions,
-		Rotation:      core.GetAplRotation("../../../ui/specs/paladin/retribution/apls", envOr("FEEDBACK_APL", "default")).Rotation,
-		BonusStats:    feedbackBonus(),
-		Buffs:         indiv,
-		Profession1:   proto.Profession_Engineering, Profession2: proto.Profession_Blacksmithing,
+		Equipment:      core.GetGearSet("../../../ui/specs/paladin/retribution/gear_sets", gear).GearSet,
+		Consumables:    cons,
+		TalentsString:  talentsOr(talents),
+		Spec:           DefaultSpecOptions,
+		Rotation:       core.GetAplRotation("../../../ui/specs/paladin/retribution/apls", apl).Rotation,
+		ItemSwap:       swap,
+		EnableItemSwap: swap != nil,
+		BonusStats:     feedbackBonus(),
+		Buffs:          indiv,
+		Profession1:    proto.Profession_Engineering, Profession2: proto.Profession_Blacksmithing,
 		DistanceFromTarget: 25,
 	}
 	enc := core.MakeSingleTargetEncounter(5)
