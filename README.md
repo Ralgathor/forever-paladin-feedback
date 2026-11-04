@@ -4,7 +4,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 **The three main asks**
 
-1. **Righteous Fury +90% to all threat (C25).** After the development notes of 2 November, the live Paladin tank has 70% of the Warrior threat in the model and 75% in wowsims. With C25 and Redoubt (C-P1), it has 114% (wowsims, C25 alone 106%).
+1. **Righteous Fury +90% to all threat (C25).** After the development notes of 2 November, the live Paladin tank has 70% of the Warrior threat in the model and in wowsims. With C25 and Redoubt (C-P1), it has 108% (wowsims, C25 alone 100%).
 2. **Redoubt on each Holy Shield cast (C-P1).** Crushing blows go from 11.9% to 1.0% of the boss attacks (wowsims, Warrior 1.0%).
 3. **Reverence 25/50% (C-H1) and a Light's Vigil buff (C-H7).** On one tank, the Paladin goes from 8–15% to 3–7% below the Druid. In raids of 5 and 10 min, from 25–34% to 3–4% below.
 
@@ -55,7 +55,7 @@ The talent icons come from the Wowhead icon server (wow.zamimg.com). If the icon
 - **Model talents.** Each proposal uses a talent from another class in the same game version as a model (Warrior, Druid, Priest, Shaman, Hunter, Mage).
 - **Rules.** The combat and mana values use Classic 1.12 rules when no test gives a different rule.
 - **Estimates.** The burst values are estimates. The Reckoning, threat, mana, healing and damage values come from simple models, not combat logs. Each estimate gives its assumptions and limits.
-- **Other classes.** The healing comparison uses the DoubleZug sheets for the four Forever healers, with the spell values of the Forever spellbook ([model](models/healing/)). The damage comparison uses wowsims Forever runs of all pure damage specs with the same pre-raid item pool ([matched gear](models/wowsims-b2/matched_gear/)). The damage model gives the increase with gear.
+- **Other classes.** The healing comparison uses the DoubleZug sheets for the four Forever healers, with the spell values of the Forever spellbook ([model](models/healing/)). The damage comparison uses wowsims Forever runs of all pure damage specs with the same pre-raid item pool ([matched gear](models/wowsims-b2/matched_gear/), [wowsims links to each set](https://ralgathor.github.io/forever-paladin-feedback/sets/)). The damage model gives the increase with gear.
 
 ## Models
 

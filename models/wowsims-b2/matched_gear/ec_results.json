@@ -1,27 +1,27 @@
 {
  "DpsWarrior": {
-  "base": 613.1,
-  "ench": 686.2,
-  "cons": 761.9,
-  "both": 836.6
+  "base": 611.4,
+  "ench": 685.1,
+  "cons": 763.0,
+  "both": 839.2
  },
  "Rogue": {
-  "base": 527.3,
-  "ench": 562.8,
-  "cons": 630.3,
-  "both": 666.4
+  "base": 530.9,
+  "ench": 566.8,
+  "cons": 635.1,
+  "both": 671.6
  },
  "Hunter": {
-  "base": 706.2,
-  "ench": 763.7,
-  "cons": 822.2,
-  "both": 887.0
+  "base": 684.0,
+  "ench": 740.2,
+  "cons": 794.8,
+  "both": 855.6
  },
  "Retribution": {
   "base": 667.1,
   "ench": 715.5,
-  "cons": 853.3,
-  "both": 906.5
+  "cons": 855.2,
+  "both": 908.3
  },
  "Fire": {
   "base": 583.5,
@@ -30,9 +30,9 @@
   "both": 823.9
  },
  "DemonologyFireBrand": {
-  "base": 588.4,
-  "ench": 642.0,
-  "cons": 787.7,
-  "both": 844.8
+  "base": 588.9,
+  "ench": 642.5,
+  "cons": 799.3,
+  "both": 856.3
  }
 }

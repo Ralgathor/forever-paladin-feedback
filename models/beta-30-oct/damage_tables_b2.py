@@ -94,3 +94,14 @@ for lab, kw, gk in cases:
     base = [retribution_b2(gear(t, **gk)) for t in range(5)]
     row = [RET_SIM * base[t] / base[0] * retribution_b2(gear(t, **gk), **kw) / base[t] / pure[t] for t in range(5)]
     print(f"  {lab}: " + " | ".join(f"{r:.0%}" for r in row))
+
+print("\n## DPS of each class from fresh level 60 to Naxxramas (calculator, Damage cards; Hunter, Mage and Warlock x1.75)")
+ret = [retribution_b2(gear(t)) for t in range(5)]
+cls = {"Fury Warrior": [PURE["Warrior"] * F[t] for t in range(5)],
+       "Combat Rogue": [PURE["Rogue"] * C[t] for t in range(5)]}
+for k, n in (("Hunter", "Hunter"), ("Mage", "Fire Mage"), ("Warlock", "Demonology Warlock")):
+    cls[n] = [PURE[k] * (1 + 0.75 * shape[t]) for t in range(5)]
+cls["Pure average"] = pure
+cls["Retribution, live"] = [RET_SIM * ret[t] / ret[0] for t in range(5)]
+for n, v in sorted(cls.items(), key=lambda kv: -kv[1][0]):
+    print(f"  {n}: " + " | ".join(f"{x:.0f} ({x / pure[t]:.0%})" for t, x in enumerate(v)))
