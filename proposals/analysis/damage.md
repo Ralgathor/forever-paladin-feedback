@@ -8,10 +8,11 @@ All values are DPS on one level 63 boss. The start values come from wowsims (mas
 
 ## Short answer
 
-- **The live Retribution is above the target.** It does 938 DPS in wowsims: 112% of the pure average at fresh 60. In Naxxramas, it is 108% (model), 13 points above the target.
-- **Build 70755 gives Retribution +3.5% in wowsims (906 → 938).** Vengeance stacks up to 5 times, and Two-Handed Weapon Specialization also increases Holy damage. The pure classes lose 0–5% in the same update (part 7).
+- **The live Retribution is above the target.** It does 910 DPS in wowsims with the item pool set: 112% of the pure average at fresh 60. In Naxxramas, it is 108% (model), 13 points above the target.
+- **Build 70755 gives Retribution +3.5% in wowsims (default set: 906 → 938).** Vengeance stacks up to 5 times, and Two-Handed Weapon Specialization also increases Holy damage. The pure classes lose 0–5% in the same update (part 7).
 - **The hotfix 113578 ports of 4 November give the pure classes +5–17% in wowsims.** Fury +6%, Combat Rogue +5%, Hunter +17%. The pure average goes from 770 to 812, and Retribution from 118% to 112% (part 7).
 - **wowsims master 8298ab833 (4 November, later) changes the pure classes by −3.5% to +1.4%.** Hunter −3.5% (new reaction times), Demonology Warlock +1.4% (patch of 3 November and new elixirs), Combat Rogue +0.8%, Fury +0.3%. The pure average goes from 812 to 809. Retribution stays at 112%.
+- **wowsims master 9a8624af9 (4 November, evening) changes only Fury: +0.2%** (839 → 841, one Reckless Swings before the pull). The pure average stays at 809.6 (809.3 before), and Retribution at 112.2%. The model tables keep the values of commit 8298ab833: the change is less than 1 point of rounding.
 - **The wowsims update of 1 November** gives Retribution +7% (848 → 906): a new rotation, the Unsealed Wrath fix and new weapon oils.
 - **The Holy Strike Seal trigger (C1) gave +5.3–5.7%.** With C1, Retribution has 119% of the pure average at fresh 60 and 114% in Naxxramas.
 - **C1 is withdrawn (2 November 2026).** It puts Retribution 19–24 points above the target, and Sacred Arbiter +10% removed only 0.7 points. The C1 rows below stay for reference.
@@ -24,7 +25,7 @@ wowsims values with the same item pool, enchants and consumables for each spec (
 
 - **At fresh 60,** the live Retribution is 112% of the pure average and 108% of Fury. With C1 (withdrawn), it is 119% and 114%.
 - **Without the Rogue,** the live version is 108%. C1 gives 114%.
-- **The tables use ratios.** Retribution (938, full buffs and consumables) is the start value. The other classes keep their ratio to Retribution in the same item pool runs.
+- **The tables use ratios.** Retribution (910, item pool set, full buffs and consumables, 2 min) is the start value. The other classes keep their ratio to Retribution in the same item pool runs.
 
 The increase of Hunter, Mage and Warlock with gear is not known. The table uses ×1.75 to Naxxramas. The method part gives ×1.60 and ×1.90.
 
@@ -42,22 +43,22 @@ The increase of Hunter, Mage and Warlock with gear is not known. The table uses 
 - **Spell damage on plate gear is important.** Without new spell damage on plate items, the live Paladin has only 99% in Naxxramas.
 - **Why C1 is withdrawn.** It gave one Seal rule for all melee attacks and +2.6% tank threat. Retribution reaches the target without it, and Righteous Fury (C25) already gives the tank the Warrior threat (see Threat).
 - **The balance lever is Sacred Arbiter (W15).** If raid logs confirm the wowsims level, decrease it to +10%: −0.7% damage in wowsims. This change alone does not bring Retribution to 95%. With C1, the gain fell only from +5.5% to +4.5%.
-- **Check again later.** The pure average uses wowsims master 8298ab833 of 4 November. The Warrior, Rogue and Hunter have the changes of hotfix 113578, and the Warlock has the patch of 3 November. The Mage changes of the development notes are not in wowsims yet (W15).
+- **Check again later.** The pure average uses wowsims master 8298ab833 of 4 November (master 9a8624af9: the same values, Fury +0.2%). The Warrior, Rogue and Hunter have the changes of hotfix 113578, and the Warlock has the patch of 3 November. The Mage changes of the development notes are not in wowsims yet (W15).
 
-**DPS of each class.** The start values keep the ratio to Retribution of the same item pool runs (part 7), with Retribution at 938. The increase comes from the model. Hunter, Mage and Warlock use ×1.75.
+**DPS of each class.** The start values keep the ratio to Retribution of the same item pool runs (part 7), with Retribution at 910. The increase comes from the model. Hunter, Mage and Warlock use ×1.75.
 
 | Spec | Fresh 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
 | --- | --- | --- | --- | --- | --- |
-| **Retribution, live** | **938 (112%)** | **1,050 (111%)** | **1,206 (111%)** | **1,351 (109%)** | **1,551 (108%)** |
-| Demonology Warlock | 884 (106%) | 999 (106%) | 1,166 (107%) | 1,333 (107%) | 1,548 (108%) |
-| Hunter | 884 (106%) | 998 (106%) | 1,165 (107%) | 1,332 (107%) | 1,546 (107%) |
-| Fury Warrior | 867 (104%) | 986 (104%) | 1,128 (103%) | 1,299 (104%) | 1,499 (104%) |
-| Fire Mage | 851 (102%) | 961 (102%) | 1,122 (103%) | 1,282 (103%) | 1,489 (103%) |
-| **Pure average** | **836** | **944** | **1,090** | **1,245** | **1,439** |
-| Combat Rogue | 694 (83%) | 774 (82%) | 869 (80%) | 978 (79%) | 1,116 (78%) |
+| **Retribution, live** | **910 (112%)** | **1,019 (111%)** | **1,170 (111%)** | **1,310 (109%)** | **1,505 (108%)** |
+| Demonology Warlock | 858 (106%) | 969 (106%) | 1,131 (107%) | 1,293 (107%) | 1,501 (108%) |
+| Hunter | 857 (106%) | 968 (106%) | 1,130 (107%) | 1,292 (107%) | 1,500 (107%) |
+| Fury Warrior | 841 (104%) | 956 (104%) | 1,094 (103%) | 1,260 (104%) | 1,454 (104%) |
+| Fire Mage | 825 (102%) | 932 (102%) | 1,088 (103%) | 1,244 (103%) | 1,445 (103%) |
+| **Pure average** | **811** | **915** | **1,057** | **1,208** | **1,397** |
+| Combat Rogue | 673 (83%) | 751 (82%) | 843 (80%) | 949 (79%) | 1,083 (78%) |
 
 - **Retribution is first at all gear levels.** At fresh 60, it is 6% above the Warlock and the Hunter. In Naxxramas, the three are within 0.3%.
-- **The Rogue decreases the pure average.** Without the Rogue, the pure average is 871 at fresh 60 (844 in the item pool run).
+- **The Rogue decreases the pure average.** Without the Rogue, the pure average is 845 at fresh 60 (844 in the item pool run).
 - **The calculator Damage cards show these values.**
 
 ## 2. Where the damage comes from
@@ -136,18 +137,18 @@ The wowsims rotation uses plan 1 + 3: 1 swing with Seal of Righteousness, then 3
 
 | Seal plan | wowsims: live, full buffs, 2 min | Model: damage | Model: mana each sec | Model: mana empty after |
 | --- | --- | --- | --- | --- |
-| 1 + 3 (wowsims rotation) | 906 DPS | 100% | 27.8 | 3 min 43 sec |
-| 1 + 2 | −0.4% | 99.2% | 35.6 | 2 min 21 sec |
-| 2 + 2 | −1.8% | 97.5% | 27.8 | 3 min 43 sec |
+| 1 + 3 (wowsims rotation) | 910 DPS | 100% | 27.8 | 3 min 43 sec |
+| 1 + 2 | −0.6% | 99.2% | 35.6 | 2 min 21 sec |
+| 2 + 2 | −1.9% | 97.5% | 27.8 | 3 min 43 sec |
 | 1 + 1 (a Seal change after each swing) | −3.0% | 97.5% | 51.2 | 1 min 21 sec |
-| 3 + 1 | −5.9% | 94.9% | 27.8 | 3 min 43 sec |
+| 3 + 1 | −5.3% | 94.9% | 27.8 | 3 min 43 sec |
 | Seal of Command only | — | 85.7% | 10.2 | No limit |
 
 - **Plan 1 + 3 is the best plan.** A copy of Seal of Command has more value than a copy of Seal of Righteousness.
 - **At fresh 60, plan 1 + 3 lasts for a 3 min fight.** In a 5 min fight, plan 3 + 3 is the best (−2.5%). In Naxxramas, plan 1 + 3 lasts 5 min.
 - **In wowsims, the mana lasts 5 min,** because the consumables include Major Mana Potion.
 - **A 20% Seal cost decrease on Unsealed Wrath (W29)** gives 0% in a 2 min fight and +2.6% in a 5 min fight (model). In wowsims, it gives 0%.
-- **The model tables of this tab use plan 1 + 3 and no mana limit.** The start value (906) comes from wowsims with the same plan.
+- **The model tables of this tab use plan 1 + 3 and no mana limit.** The start value (910) comes from wowsims with the same plan.
 
 ## 6. Stat values
 
@@ -168,24 +169,24 @@ Live, raid buffs, 5 min fight (model).
 
 ## 7. Check with wowsims
 
-Default Retribution gear, rotation and consumables. One level 63 boss, 3,000 iterations. "Lean buffs" is a small set of buffs.
+Item pool Retribution set (part 7) with the default enchants, rotation and consumables. Fury and Arms: the wowsims pre-raid sets. One level 63 boss, 3,000 iterations. "Lean buffs" is a small set of buffs.
 
 | Case | 2 min | 5 min |
 | --- | --- | --- |
-| Live, full buffs | 938 | 949 |
-| C1 (withdrawn), full buffs | 990 (+5.6%) | 1,000 (+5.3%) |
-| Live, lean buffs | 682 | 693 |
-| C1 (withdrawn), lean buffs | 720 (+5.6%) | 730 (+5.4%) |
+| Live, full buffs | 910 | 919 |
+| C1 (withdrawn), full buffs | 957 (+5.1%) | 966 (+5.1%) |
+| Live, lean buffs | 666 | 675 |
+| C1 (withdrawn), lean buffs | 703 (+5.4%) | 711 (+5.3%) |
 | Fury Warrior, pre-raid gear | 865 | 860 |
 | Arms Warrior, pre-raid gear | 826 | 824 |
 
-- **C1 (withdrawn):** +5.3–5.6% in wowsims, +5.6–5.7% in the model. They agree.
-- **No run is out of mana.**
+- **C1 (withdrawn):** +5.1–5.4% in wowsims, +5.6–5.7% in the model. They agree.
+- **Almost no run is out of mana.** Only the 5 min run with lean buffs has no mana, for 0.2 sec.
 - **The wowsims update of 1 November,** step by step: 836 → 852 (Unsealed Wrath fix) → 889 (new rotation and presets) → 901 (new weapon oils), in the wowsims test suite.
-- **Build 70755 (master commit d97252f2a, 3 November).** The live Retribution increases from 906 to 938 (+3.5%). The two test flags on master of 1 November gave 981 (+8.3%), thus the game data gives less. wowsims now also uses the trainer ranks of Strength of Earth Totem and Grace of Air Totem in the raid buffs. With the Ruins of Ahn'Qiraj book ranks, Retribution has 949.
+- **Build 70755 (master commit d97252f2a, 3 November).** With the default set, the live Retribution increases from 906 to 938 (+3.5%). The two test flags on master of 1 November gave 981 (+8.3%), thus the game data gives less. wowsims now also uses the trainer ranks of Strength of Earth Totem and Grace of Air Totem in the raid buffs. With the Ruins of Ahn'Qiraj book ranks, Retribution has 949 (item pool set: 920).
 - **Master commit 6ee3c30f35 (4 November).** The Paladin values do not change. The hotfix 113578 ports give Fury +7% in the wowsims pre-raid set (807 → 865) and Arms +5% (773 → 814).
 - **Master commit 8298ab833 (4 November, later).** The Paladin values do not change. Fury stays at 865 in the wowsims pre-raid set, and Arms goes to 826 (+1.5%).
-- **wowsims Fury.** With the wowsims test sets, the live Retribution is 108% of Fury, but the two sets have different quality. With the same item pool, enchants and consumables, it is also 108% of Fury (see below).
+- **wowsims Fury.** Against the wowsims Fury pre-raid set, the item pool Retribution is 105% of Fury, but the two sets have different quality. With the same item pool, enchants and consumables, it is 108% of Fury (see below).
 
 **Same item pool for each spec (search of 2 November 2026, values of 4 November).** This run gives the pure average of parts 1 and 3. All specs take their items from one pre-raid pool. The best set for each spec comes from a search in wowsims of 1 November. On 4 November, the same sets ran again on master commits 6ee3c30f35 and 8298ab833. The values below come from commit 8298ab833. The item database of this commit adds no item to the pool.
 
@@ -208,9 +209,10 @@ Default Retribution gear, rotation and consumables. One level 63 boss, 3,000 ite
 
 - **Set links.** Each link opens the final set of the spec in wowsims, with enchants, consumables, raid buffs and the fight. Select Simulate to run it. A later wowsims version can give a different DPS. All six links: [item pool sets](https://ralgathor.github.io/forever-paladin-feedback/sets/).
 - **Master commit 8298ab833 (later on 4 November) changes the pure classes again.** Against commit 6ee3c30f35 (both columns): Hunter −3.5% (new reaction times), Demonology Warlock +1.4% (patch of 3 November and the elixirs of its new preset), Combat Rogue +0.8%, Fury +0.3%, Mage 0%. Retribution +0.2% (the new elixirs). On commit 6ee3c30f35, the pure average was 812 and Retribution 906 (112%).
+- **Master commit 9a8624af9 (evening of 4 November).** Fury +0.2% (839.2 → 840.7): Fury casts one Reckless Swings before the pull. The other specs and Retribution do not change. The pure average is 809.6, and Retribution 112.2% (108.0% of Fury). The table keeps the values of commit 8298ab833.
 - **The hotfix 113578 ports of 4 November change the pure classes.** Against the run of 3 November (both columns): Fury +6.2%, Combat Rogue +5.0%, Hunter +16.5%, Mage and Warlock 0%. Retribution 0%. On 3 November, the pure average was 770 and Retribution 906 (118%).
 - **Build 70755 changed the pure classes too (3 November).** Against the run of 1 November (both columns): Fury −2.1%, Hunter −4.8%, Combat Rogue −1.7%, Mage and Warlock 0%. Retribution +3.7%. wowsims now uses the trainer ranks of the totems and of the Hunter spells, not the Ruins of Ahn'Qiraj book ranks. On 1 November, the pure average was 784 and Retribution 874 (112%).
-- **Parts 1 and 3 use the last column.** The start value of the model (938) has full buffs and consumables. Thus, the other classes need the same.
+- **Parts 1 and 3 use the last column.** The start value of the model (910, the same set with the Retribution test buffs) has full buffs and consumables. Thus, the other classes need the same.
 - **Enchants decrease the Retribution lead by 2 points.** The physical enchants help Fury most.
 - **Consumables increase the Retribution lead by 2 points.** Retribution uses physical elixirs and spell elixirs. A pure class uses only one of the two groups.
 - **The two together give +1 point:** 112% of the pure average, and 108% of Fury.
@@ -284,7 +286,7 @@ Default Retribution gear, rotation and consumables. One level 63 boss, 3,000 ite
 
 - **Scripts.** `models/beta-30-oct/retribution_b2.py` (model) and `damage_tables_b2.py` (tables). wowsims tests in `models/wowsims-b2`. Other classes: wowsims with the same item pool (part 7) and `models/damage` (increase with gear of Fury, Arms and Combat Rogue).
 - The model calculates averages. It is not a full simulation.
-- The model keeps the rules of 30 October: Vengeance 3 stacks, and Two-Handed Weapon Specialization on physical damage only. The start value (938) has the changes of build 70755. Thus, the increase with gear is an estimate.
+- The model keeps the rules of 30 October: Vengeance 3 stacks, and Two-Handed Weapon Specialization on physical damage only. The start value (910) has the changes of build 70755. Thus, the increase with gear is an estimate.
 - Not confirmed: the critical hit decrease against a boss, and the Seal of Righteousness value with a 3.6 sec weapon.
 - The Fury and Combat Rogue rotations and talents are assumptions. Arms uses the wowsims rotation.
 - The gear levels are estimates with Classic steps. The Forever raid items are not known.

@@ -40,7 +40,7 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 ## Retribution against the pure average
 
 - **Model.** models/beta-30-oct/retribution_b2.py. It uses the wowsims default Retribution build of 1 November (14/6/31) and the wowsims rotation: plan 1 + 3 (see Mana with Unsealed Wrath).
-- **Start value.** wowsims Forever master commits 6ee3c30f35 and 8298ab833 (4 November 2026, game files of client 1.60.1.70755) give 938 DPS at fresh level 60. Build 70755 adds 5 Vengeance stacks and Holy damage to Two-Handed Weapon Specialization: +3.5% against 906 DPS on 1 November (Beta test results, W15). The model gives the increase with gear. The pure average table uses 938. The six item pool sets open in wowsims from the [item pool sets](https://ralgathor.github.io/forever-paladin-feedback/sets/) page. The Seal plan tables below use the runs of 1 November (906).
+- **Start value.** wowsims Forever master commit 8298ab833 (4 November 2026, game files of client 1.60.1.70755) gives 910 DPS at fresh level 60, with the item pool Retribution set (the set of the pure average, Analysis, Damage, part 7). With the wowsims default set, it gives 938. Build 70755 adds 5 Vengeance stacks and Holy damage to Two-Handed Weapon Specialization: +3.5% with the default set against 906 DPS on 1 November (Beta test results, W15). The model gives the increase with gear. The pure average table uses 910. The six item pool sets open in wowsims from the [item pool sets](https://ralgathor.github.io/forever-paladin-feedback/sets/) page. The Seal plan tables below use the same item pool set.
 - **Increase with gear.** Retribution damage increases less with gear than Fury damage: ×1.65 against ×1.73 from fresh level 60 to Naxxramas. Fixed base values of the Seals, Judgement and Holy Strike cause this (see Analysis, Damage, part 3).
 - **Pure average.** wowsims Forever, with the same pre-raid item pool, enchants and consumables for each spec (Analysis, Damage, part 7). Fury and Combat Rogue use the increase of the model. Hunter, Mage and Warlock increase ×1.75 to Naxxramas (the main case of Analysis, Damage, part 1).
 
@@ -61,61 +61,61 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 
 | Seal plan | wowsims: full buffs, 2 min | Model: damage | Model: mana each sec | Model: mana empty after |
 | --- | --- | --- | --- | --- |
-| 1 + 3 (wowsims rotation) | 906 DPS | 100% | 27.8 | 3 min 43 sec |
-| 1 + 2 | 902 (−0.4%) | 99.2% | 35.6 | 2 min 21 sec |
-| 2 + 2 | 890 (−1.8%) | 97.5% | 27.8 | 3 min 43 sec |
-| 1 + 1 (a Seal change after each swing) | 879 (−3.0%) | 97.5% | 51.2 | 1 min 21 sec |
-| 3 + 3 | 883 (−2.5%) | 97.5% | 19.9 | 8 min 45 sec |
-| 3 + 1 | 853 (−5.9%) | 94.9% | 27.8 | 3 min 43 sec |
+| 1 + 3 (wowsims rotation) | 910 DPS | 100% | 27.8 | 3 min 43 sec |
+| 1 + 2 | 905 (−0.6%) | 99.2% | 35.6 | 2 min 21 sec |
+| 2 + 2 | 893 (−1.9%) | 97.5% | 27.8 | 3 min 43 sec |
+| 1 + 1 (a Seal change after each swing) | 883 (−3.0%) | 97.5% | 51.2 | 1 min 21 sec |
+| 3 + 3 | 886 (−2.6%) | 97.5% | 19.9 | 8 min 45 sec |
+| 3 + 1 | 862 (−5.3%) | 94.9% | 27.8 | 3 min 43 sec |
 | Seal of Command only | — | 85.7% | 10.2 | No limit |
 
 - **Model columns.** Fresh level 60, Blessing of Wisdom, no consumables.
 - **Result.** Plan 1 + 3 gives the most damage, with half the Seal casts of plan 1 + 1. A copy of Seal of Command has more value than a copy of Seal of Righteousness. Thus, plan 3 + 1 is the weakest plan with copies.
 - **Mana.** At fresh level 60, plan 1 + 3 lasts for a 3 min fight. In a 5 min fight, plan 3 + 3 is the best: −2.5% (model). From Molten Core, plan 1 + 3 is the best in a 5 min fight. The mana costs 2.0% in Molten Core, 0.7% in Blackwing Lair and 0% in Naxxramas. With Reverence 50% (C-H1), plan 1 + 3 lasts 5 min 20 sec at fresh level 60. It is then the best plan at all gear levels.
-- **The pure average table above uses plan 1 + 3 and no mana limit.** The start value (906) comes from wowsims with the same plan.
+- **The pure average table above uses plan 1 + 3 and no mana limit.** The start value (910) comes from wowsims with the same plan.
 - **Spell data.** Unsealed Wrath has a Seal cost effect at 0% (wowsims spell data, spell 1310735). A −20% value, as Twist of Light had, gives 0% in a 2 min fight and +2.6% in a 5 min fight (model). Plan 1 + 3 then lasts 5 min 40 sec.
 
 **Other Seal pairs (wowsims, plan 1 + 3).** Seal of Command with a second Seal in place of Seal of Righteousness.
 
 | Second Seal | Full buffs, 2 min | No buffs and no consumables, 5 min |
 | --- | --- | --- |
-| Righteousness | 906 DPS | 288 DPS (mana empty after 1 min 29 sec) |
-| Fury | 877 (−3.2%) | 268 (−6.9%) |
-| Light | 788 (−13%) | 228 (−21%) |
-| Wisdom | 789 (−13%) | 333 (+16%, the mana lasts) |
-| Justice | 789 (−13%) | 227 (−21%) |
+| Righteousness | 910 DPS | 287 DPS (mana empty after 1 min 2 sec) |
+| Fury | 883 (−3.0%) | 267 (−7.1%) |
+| Light | 795 (−13%) | 217 (−24%) |
+| Wisdom | 793 (−13%) | 332 (+16%, mana empty after 3 min 46 sec) |
+| Justice | 793 (−13%) | 222 (−23%) |
 
-- **With buffs, Seal of Righteousness is the best second Seal.** Lean buffs, 5 min: Righteousness 660, Fury 644 (−2.4%), Wisdom 592 (−10%).
-- **Without buffs, Seal of Wisdom is the best second Seal in long fights.** Its copies return mana, thus the Seal changes continue for all of the fight. In a 2 min fight, Wisdom is 3% above Righteousness (332 and 323).
+- **With buffs, Seal of Righteousness is the best second Seal.** Lean buffs, 5 min: Righteousness 675, Fury 659 (−2.4%), Wisdom 607 (−10%).
+- **Without buffs, Seal of Wisdom is the best second Seal in long fights.** Its copies return mana, thus the Seal changes continue for all of the fight. In a 2 min fight, Wisdom is 9% above Righteousness (342 and 313).
 
 **Plans without Seal of Command (wowsims).** "Fury 1 + Righteousness 3" is 1 swing with Seal of Fury, then 3 swings with Seal of Righteousness.
 
 | Plan | Full buffs, 2 min | No buffs and no consumables, 5 min |
 | --- | --- | --- |
-| Righteousness 1 + Command 3 (wowsims rotation) | 906 DPS | 288 DPS |
-| Command only | 757 (−16%) | 270 (−6%) |
-| Fury 1 + Righteousness 3 | 791 (−13%) | 256 (−11%) |
-| Righteousness 1 + Fury 1 | 764 (−16%) | 241 (−16%) |
-| Righteousness 1 + Fury 3 | 753 (−17%) | 247 (−14%) |
-| Righteousness only | 717 (−21%) | 255 (−12%) |
-| Wisdom 1 + Righteousness 3 | 712 (−21%) | 297 (+3%) |
-| Fury only | 671 (−26%) | 230 (−20%) |
+| Righteousness 1 + Command 3 (wowsims rotation) | 910 DPS | 287 DPS |
+| Fury 1 + Righteousness 3 | 801 (−12%) | 242 (−16%) |
+| Righteousness 1 + Fury 1 | 771 (−15%) | 232 (−19%) |
+| Command only | 767 (−16%) | 241 (−16%) |
+| Righteousness 1 + Fury 3 | 760 (−16%) | 237 (−17%) |
+| Righteousness only | 729 (−20%) | 233 (−19%) |
+| Wisdom 1 + Righteousness 3 | 723 (−21%) | 295 (+3%) |
+| Fury only | 679 (−25%) | 209 (−27%) |
 
-- **Each plan without Seal of Command is 13% or more below the wowsims rotation with buffs.** Seal of Command copies are the main value of Unsealed Wrath.
+- **Each plan without Seal of Command is 12% or more below the wowsims rotation with buffs.** Seal of Command copies are the main value of Unsealed Wrath.
 - **Two Seals give more than one Seal.** Fury 1 + Righteousness 3 is 10% above Righteousness only, because each Fury swing releases 3 Righteousness copies.
 
 ## wowsims check
 
-- **Sim.** wowsims Forever, master commit d97252f2a (game files of client 1.60.1.70755), with the proposals as flags (models/wowsims-b2). Default gear, rotation, consumables and build (14/6/31), 3,000 iterations.
+- **Sim.** wowsims Forever, master commit 8298ab833 (game files of client 1.60.1.70755), with the proposals as flags (models/wowsims-b2). The item pool Retribution set, with the default enchants, rotation, consumables and build (14/6/31), 3,000 iterations. The Seal plans use the APLs of `seal_plans_apl.py` (`logs/seal_plans_8298ab833_pool.log`).
 - **Full buffs** have Mana Spring Totem, Mana Tide Totem and Atiesh. **Lean buffs** have only Gift of the Wild, Battle Shout, Kings, Might and Wisdom.
 
 | Fight | Live | Seal cost −20% |
 | --- | --- | --- |
-| 2 min, full buffs | 938 DPS | 0% |
-| 5 min, full buffs | 949 DPS | 0% |
-| 2 min, lean buffs | 682 DPS | 0% |
-| 5 min, lean buffs | 693 DPS | 0% |
+| 2 min, full buffs | 910 DPS | 0% |
+| 5 min, full buffs | 919 DPS | 0% |
+| 2 min, lean buffs | 666 DPS | 0% |
+| 5 min, lean buffs | 675 DPS | +0.1% |
 
-- **Mana.** No run has zero mana. The wowsims consumables now include Major Mana Potion. In the model, plan 1 + 3 has zero mana after 3 min 43 sec, because the model has no consumables.
+- **Mana.** Only the 5 min run with lean buffs has zero mana, for 0.2 sec. The wowsims consumables now include Major Mana Potion. In the model, plan 1 + 3 has zero mana after 3 min 43 sec, because the model has no consumables.
 - **Seal cost −20%.** It has no effect in wowsims, because the mana lasts. The model gives 0–2.6%.
 

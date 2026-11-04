@@ -69,6 +69,16 @@ def valid(b, mode):
             return False
     return True
 
+HERE = os.path.dirname(os.path.abspath(__file__))
+def pool_ids(spec):  # the item pool set of each spec (FEEDBACK_ITEMS); FEEDBACK_GEAR=default keeps the wowsims default set
+    # TANK_SET=surv: the survival tank set (tank_gear/set_prot_surv.json) in place of the threat tank set
+    f = {"ret": "matched_gear/set_Retribution.json", "prot": "tank_gear/set_prot.json", "shock": "tank_gear/set_shock.json"}[spec]
+    if spec == "prot" and os.environ.get("TANK_SET") == "surv":
+        f = "tank_gear/set_prot_surv.json"
+    d = json.load(open(os.path.join(HERE, f)))
+    ids = [x.get("id", 0) for x in d["items"]] if isinstance(d, dict) else d
+    return ",".join(str(i) for i in (ids + [0] * 17)[:17])
+
 def run(spec, case, b, mode, it=1000, extra=None):
     env = dict(os.environ, FEEDBACK_DUR="180", FEEDBACK_ITER=str(it), FEEDBACK_TALENTS=sim_string(b, mode),
                PROPOSE=PROP_FLAGS[spec] if mode == "prop" else "")
@@ -76,6 +86,8 @@ def run(spec, case, b, mode, it=1000, extra=None):
         env["FEEDBACK_BUFFS"] = "none"
     if spec == "shock":
         env["FEEDBACK_SHOCK"] = "1"
+    if os.environ.get("FEEDBACK_GEAR") != "default":
+        env["FEEDBACK_ITEMS"] = pool_ids(spec)
     env.update(extra or {})
     out = subprocess.run([BIN[spec], "-test.run", "TestFeedbackRun", "-test.v"], cwd=os.path.join(WOWSIMS, DIRS[spec]),
                          env=env, capture_output=True, text=True).stdout

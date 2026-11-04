@@ -26,6 +26,7 @@ The item search ran on wowsims Forever, master commit `895cd67f9` (1 November 20
 
 Without the Rogue (both): 843.8, Retribution 107.7%. Retribution against Fury (both): 108.2%. wowsims links to each set: `links.md`.
 
+- **Commit 9a8624af9 (evening of 4 November) against commit 8298ab833.** Fury +0.2% (839.2 → 840.7, base 611.4 → 612.6, enchants 685.1 → 685.6, consumables 763.0 → 765.3): one Reckless Swings before the pull. The other specs do not change. Pure average (both) 809.6, Retribution 112.2%, 108.0% of Fury. `ec_results.json` has these values. The table above and `ec_results_8298ab833.json` keep the values of commit 8298ab833.
 - **Against commit 6ee3c30f35 (earlier on 4 November).** Hunter −3.5% (887.0 → 855.6), Demonology Warlock +1.4% (844.8 → 856.3), Combat Rogue +0.8% (666.4 → 671.6), Fury +0.3% (836.6 → 839.2), Mage 0%. Retribution +0.2% (906.5 → 908.3). The Warlock and Retribution changes come from the consumables: the shared elixir list takes the elixirs of the new Warlock preset. On commit 6ee3c30f35, the pure average was 811.7 and Retribution 111.7% (`ec_results_6ee3c30f35.json`).
 
 - **Commit 6ee3c30f35 against commit d97252f2a (3 November).** The hotfix 113578 ports give Fury +6.2% (787.9 → 836.6), Combat Rogue +5.0% (634.4 → 666.4) and Hunter +16.5% (761.2 → 887.0). Mage, Warlock and Retribution do not change. On commit d97252f2a, the pure average was 770.4 and Retribution 117.7% (`ec_results_d97252f2a.json`).
@@ -33,7 +34,7 @@ Without the Rogue (both): 843.8, Retribution 107.7%. Retribution against Fury (b
 
 With the consumables of each wowsims preset as they are, Retribution was 116.3% (both, commit 895cd67f9). The presets are not equal: Retribution has 9 elixirs, the Rogue has none. Thus, the second run gives the same elixirs and extras to all specs.
 
-`models/beta-30-oct/retribution_b2.py` uses the "Both" column. It puts the values on the scale of the Retribution start value (938, full buffs and consumables): each pure spec × 938 / 908.3.
+`models/beta-30-oct/retribution_b2.py` uses the "Both" column. It puts the values on the scale of the Retribution start value (910, the item pool set with the Retribution test buffs, full buffs and consumables): each pure spec × 910 / 908.3.
 
 **First pool (replaced).** The first search let in later items: Zul'Gurub, Ahn'Qiraj and Argent Dawn reputation items, dungeon set 2, battleground weapons and trinkets. With it, the pure average was 850.2 and Retribution 108.3% (both). The sets of that run are in `first_pool/`.
 
@@ -49,7 +50,7 @@ With the consumables of each wowsims preset as they are, Retribution was 116.3% 
 | log_*.txt | Stat values, slot changes and final DPS of each spec |
 | enchants.json | Enchant ids by slot for each spec (wowsims presets; Mage and Warlock: Balance Druid caster enchants, 2504 on the weapon) |
 | enchants_consumables.py | Second run: writes `/tmp/zzdump_u` (same elixirs and extras for each spec) and the zzbatch jobs |
-| ec_results.json | DPS of the second run on commit 8298ab833 (base, ench, cons, both). `ec_results_6ee3c30f35.json`, `ec_results_d97252f2a.json` and `ec_results_895cd67f9.json`: the same on the earlier commits |
+| ec_results.json | DPS of the second run on commit 9a8624af9 (base, ench, cons, both). `ec_results_8298ab833.json`, `ec_results_6ee3c30f35.json`, `ec_results_d97252f2a.json` and `ec_results_895cd67f9.json`: the same on the earlier commits |
 | links.md, zzlink_main.go | wowsims links to the final set of each spec, and the script that makes them |
 
 - **One job for each process.** zzbatch runs its jobs in parallel in one process. In a batch of different specs and enchants, some results changed by up to 3%. All values in this folder and in Analysis, Damage come again from `solo.py`, one job for each process. They agree with the batch values.

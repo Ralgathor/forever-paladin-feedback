@@ -48,7 +48,7 @@ func TestFeedbackRun(t *testing.T) {
 	}
 	player := &proto.Player{
 		Name: "Ret", Race: proto.Race_RaceHuman, Class: proto.Class_ClassPaladin,
-		Equipment:      core.GetGearSet("../../../ui/specs/paladin/retribution/gear_sets", gear).GearSet,
+		Equipment:      feedbackItems(core.GetGearSet("../../../ui/specs/paladin/retribution/gear_sets", gear).GearSet),
 		Consumables:    cons,
 		TalentsString:  talentsOr(talents),
 		Spec:           DefaultSpecOptions,
@@ -116,4 +116,25 @@ func envOr(k, d string) string {
 		return v
 	}
 	return d
+}
+
+// FEEDBACK_ITEMS: 17 item ids (0 = empty slot) in place of the items of the set. The enchants of each slot stay. An item of the set keeps its random suffix.
+func feedbackItems(eq *proto.EquipmentSpec) *proto.EquipmentSpec {
+	v := os.Getenv("FEEDBACK_ITEMS")
+	if v == "" {
+		return eq
+	}
+	out := &proto.EquipmentSpec{}
+	for i, s := range strings.Split(v, ",") {
+		id, _ := strconv.Atoi(strings.TrimSpace(s))
+		it := &proto.ItemSpec{Id: int32(id)}
+		if i < len(eq.Items) && eq.Items[i] != nil && id != 0 {
+			it.Enchant = eq.Items[i].Enchant
+			if eq.Items[i].Id == it.Id { // the same item: keep its random suffix
+				it.RandomSuffix = eq.Items[i].RandomSuffix
+			}
+		}
+		out.Items = append(out.Items, it)
+	}
+	return out
 }

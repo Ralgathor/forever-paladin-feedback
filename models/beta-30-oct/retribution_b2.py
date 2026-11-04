@@ -31,13 +31,13 @@ import damage_model as M
 # item pool for each spec (game start and Dire Maul content, models/wowsims-b2/matched_gear), wowsims preset enchants,
 # the same consumables for each spec, Ret raid buffs, 2 min, 10,000 iterations. Fury 839.2, Combat Rogue 671.6,
 # Hunter 855.6, Fire Mage 823.9, Demonology Warlock 856.3, Retribution 908.3. The values below put them on the scale of
-# RET_SIM (x 938 / 908.3).
+# RET_SIM (x 910 / 908.3).
 # Commit 6ee3c30f35 (4 November): Fury 836.6, Rogue 666.4, Hunter 887.0, Mage 823.9, Warlock 844.8, Retribution 906.5.
 # Commit d97252f2a (3 November): Fury 787.9, Rogue 634.4, Hunter 761.2, Mage 823.9, Warlock 844.8, Retribution 906.5.
 # Commit 895cd67f9 (1 November): Fury 804.8, Rogue 645.6, Hunter 799.6, Mage 824.0, Warlock 845.6, Retribution 874.4.
 PURE_MATCHED = {"Warrior": 839.2, "Rogue": 671.6, "Hunter": 855.6, "Mage": 823.9, "Warlock": 856.3}
 RET_MATCHED = 908.3
-RET_SIM = 938                                                                          # wowsims master 8298ab833, 6ee3c30f35 and d97252f2a, full buffs, 2 min (the anchor of Analysis, Damage; 906 on 1 November)
+RET_SIM = 910                                                                          # wowsims master 8298ab833, item pool Retribution set (matched_gear/set_Retribution.json), full buffs, 2 min (the anchor of Analysis, Damage; default set: 938, 906 on 1 November)
 PURE = {k: v * RET_SIM / RET_MATCHED for k, v in PURE_MATCHED.items()}
 from damage_model import (gear, auto_table, spec_table, vengeance, fury, arms, rogue, TIER_NAMES, CRIT_SPEC, DODGE,
                           EXECUTE, FIGHT, KINGS, MOTW, MIGHT, SHOUT, NORM_2H, SPEED_2H, DR, MISS)
