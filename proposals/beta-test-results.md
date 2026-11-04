@@ -13,7 +13,7 @@ Blizzard published the development notes on 3 November 2026 ([Blizzard forums](h
 | Druid: Gift of the Earthmother removed, Bloom (new), Genesis 10%, Wild Growth 3 sec cast | Earthmother, 5%, no Bloom | Holy on one tank: 1–5% above the Druid in fights of 3 and 5 min, 3–5% below in fights of 10 min (was 3–12% above). Raid: 25–34% below the Druid (was 18–26%) (W14, Analysis, Healing) |
 | Shaman: Riptide has no direct heal, 12 sec cooldown, −40% mana | Direct heal, 6 sec | Holy in raids: 7–10% below the Shaman (was 8–13%). On one tank: 25–32% above |
 | Priest: Binding Heal removed (Holy Binding in its place) | Binding Heal | Raid Priest −1% |
-| Most other classes: more damage. Retribution has only the two changes above | — | wowsims master commit 6ee3c30f35 (4 November 2026) has the Warrior, Rogue and Hunter changes: the pure average goes from 770 to 812, and Retribution from 118% to 112%. The Mage and Warlock changes are not in wowsims yet (W15) |
+| Most other classes: more damage. Retribution has only the two changes above | — | wowsims master commit 6ee3c30f35 (4 November 2026) has the Warrior, Rogue and Hunter changes: the pure average goes from 770 to 812, and Retribution from 118% to 112%. Master commit 8298ab833 (later on 4 November) adds the Warlock patch of 3 November: the pure average is 809, Retribution stays at 112%. The Mage changes are not in wowsims yet (W15) |
 | Warrior: Slam 15 sec cooldown, Improved Slam −2.5/5 sec | — | Answers the Slam open question |
 
 ## Beta trees of 30 October 2026
