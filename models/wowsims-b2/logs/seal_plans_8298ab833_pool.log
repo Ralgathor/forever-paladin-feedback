@@ -1,0 +1,72 @@
+# wowsims Forever master 8298ab833, item pool Retribution set. APLs of seal_plans_apl.py.
+### FEEDBACK_APL=fb_r1c3 FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=910.2 tto=451.0 oom=0.0
+### FEEDBACK_APL=fb_r1c2 FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=905.0 tto=562.9 oom=0.0
+### FEEDBACK_APL=fb_r2c2 FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=892.7 tto=463.9 oom=0.0
+### FEEDBACK_APL=fb_r1c1 FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=883.3 tto=366.2 oom=0.0
+### FEEDBACK_APL=fb_r3c3 FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=886.3 tto=492.7 oom=0.0
+### FEEDBACK_APL=fb_r3c1 FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=862.4 tto=481.0 oom=0.0
+### FEEDBACK_APL=fb_r1c3 FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=910.2 tto=451.0 oom=0.0
+### FEEDBACK_APL=fb_r1c3 FEEDBACK_DUR=300 FEEDBACK_BUFFS=none
+RESULT dur=300 buffs=none propose="" dps=287.0 tto=62.4 oom=168.7
+### FEEDBACK_APL=fb_F1C3 FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=882.9 tto=453.0 oom=0.0
+### FEEDBACK_APL=fb_F1C3 FEEDBACK_DUR=300 FEEDBACK_BUFFS=none
+RESULT dur=300 buffs=none propose="" dps=266.5 tto=62.5 oom=168.4
+### FEEDBACK_APL=fb_L1C3 FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=795.0 tto=453.7 oom=0.0
+### FEEDBACK_APL=fb_L1C3 FEEDBACK_DUR=300 FEEDBACK_BUFFS=none
+RESULT dur=300 buffs=none propose="" dps=216.9 tto=61.4 oom=171.7
+### FEEDBACK_APL=fb_W1C3 FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=793.3 tto=2231.9 oom=0.0
+### FEEDBACK_APL=fb_W1C3 FEEDBACK_DUR=300 FEEDBACK_BUFFS=none
+RESULT dur=300 buffs=none propose="" dps=331.7 tto=226.3 oom=26.8
+### FEEDBACK_APL=fb_J1C3 FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=793.1 tto=446.8 oom=0.0
+### FEEDBACK_APL=fb_J1C3 FEEDBACK_DUR=300 FEEDBACK_BUFFS=none
+RESULT dur=300 buffs=none propose="" dps=221.6 tto=62.9 oom=167.0
+### FEEDBACK_APL=fb_onlyC FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=767.4 tto=953.5 oom=0.0
+### FEEDBACK_APL=fb_onlyC FEEDBACK_DUR=300 FEEDBACK_BUFFS=none
+RESULT dur=300 buffs=none propose="" dps=241.4 tto=88.2 oom=121.0
+### FEEDBACK_APL=fb_F1R3 FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=801.4 tto=496.0 oom=0.0
+### FEEDBACK_APL=fb_F1R3 FEEDBACK_DUR=300 FEEDBACK_BUFFS=none
+RESULT dur=300 buffs=none propose="" dps=242.4 tto=62.5 oom=183.1
+### FEEDBACK_APL=fb_R1F1 FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=771.4 tto=305.7 oom=0.0
+### FEEDBACK_APL=fb_R1F1 FEEDBACK_DUR=300 FEEDBACK_BUFFS=none
+RESULT dur=300 buffs=none propose="" dps=232.1 tto=39.2 oom=214.4
+### FEEDBACK_APL=fb_R1F3 FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=760.1 tto=490.2 oom=0.0
+### FEEDBACK_APL=fb_R1F3 FEEDBACK_DUR=300 FEEDBACK_BUFFS=none
+RESULT dur=300 buffs=none propose="" dps=237.3 tto=62.4 oom=183.2
+### FEEDBACK_APL=fb_onlyR FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=729.3 tto=732.9 oom=0.0
+### FEEDBACK_APL=fb_onlyR FEEDBACK_DUR=300 FEEDBACK_BUFFS=none
+RESULT dur=300 buffs=none propose="" dps=232.9 tto=84.4 oom=118.0
+### FEEDBACK_APL=fb_W1R3 FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=722.6 tto=1564.9 oom=0.0
+### FEEDBACK_APL=fb_W1R3 FEEDBACK_DUR=300 FEEDBACK_BUFFS=none
+RESULT dur=300 buffs=none propose="" dps=295.3 tto=130.5 oom=55.1
+### FEEDBACK_APL=fb_onlyF FEEDBACK_DUR=120 FEEDBACK_BUFFS=full
+RESULT dur=120 buffs=full propose="" dps=678.6 tto=731.7 oom=0.0
+### FEEDBACK_APL=fb_onlyF FEEDBACK_DUR=300 FEEDBACK_BUFFS=none
+RESULT dur=300 buffs=none propose="" dps=209.4 tto=84.4 oom=118.0
+### FEEDBACK_APL=fb_r1c3 FEEDBACK_DUR=300 FEEDBACK_BUFFS=lean
+RESULT dur=300 buffs=lean propose="" dps=674.7 tto=393.6 oom=0.2
+### FEEDBACK_APL=fb_F1C3 FEEDBACK_DUR=300 FEEDBACK_BUFFS=lean
+RESULT dur=300 buffs=lean propose="" dps=658.5 tto=395.0 oom=0.3
+### FEEDBACK_APL=fb_W1C3 FEEDBACK_DUR=300 FEEDBACK_BUFFS=lean
+RESULT dur=300 buffs=lean propose="" dps=607.2 tto=2203.5 oom=0.0
+### FEEDBACK_APL=fb_r1c3 FEEDBACK_DUR=120 FEEDBACK_BUFFS=none
+RESULT dur=120 buffs=none propose="" dps=312.5 tto=62.4 oom=43.3
+### FEEDBACK_APL=fb_W1C3 FEEDBACK_DUR=120 FEEDBACK_BUFFS=none
+RESULT dur=120 buffs=none propose="" dps=341.9 tto=142.8 oom=1.8
+DONE

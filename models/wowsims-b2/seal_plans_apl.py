@@ -1,53 +1,53 @@
 """Seal plan rotations for the Unsealed Wrath check (W29). Run from the wowsims clone after run.sh.
-Writes ui/specs/paladin/retribution/apls/fb_r<R>c<C>.apl.json: the default APL, but Seal of Command after R
-copies of Seal of Righteousness and Seal of Righteousness after C copies of Seal of Command. The default APL is
-fb_r1c3. Run a plan: FEEDBACK_APL=fb_r1c1 FEEDBACK_DUR=120 PROPOSE=C1 /tmp/rettest -test.run TestFeedbackRun -test.v
+Writes ui/specs/paladin/retribution/apls/fb_*.apl.siml from the default APL (default.apl.siml):
+- fb_r<R>c<C>: Seal of Command after R copies of Seal of Righteousness, Seal of Righteousness after C copies of
+  Seal of Command. The default APL is fb_r1c3.
+- fb_<A><R><B><C>: the same with Seal A in place of Seal of Righteousness and Seal B in place of Seal of Command
+  (R Righteousness, C Command, F Fury, W Wisdom, L Light, J Justice), for example fb_W1C3 or fb_F1R3.
+- fb_only<X>: Seal X only, cast again when it ends.
+Run a plan: FEEDBACK_APL=fb_r1c1 FEEDBACK_DUR=120 /tmp/rettest -test.run TestFeedbackRun -test.v
 """
-import copy, json, sys
+import sys
 W = sys.argv[1] if len(sys.argv) > 1 else "/tmp/wowsims-forever"
 P = W + "/ui/specs/paladin/retribution/apls/"
-ECHO_COMMAND, ECHO_RIGHTEOUSNESS = 1311703, 1311704
-base = json.load(open(P + "default.apl.json"))
+base = open(P + "default.apl.siml").read()
+# cast name, aura name (highest rank), copy aura name
+SEAL = {"R": ("seal_of_righteousness", "seal_of_righteousness_20293", "echo_of_righteousness"),
+        "C": ("seal_of_command", "seal_of_command_20920", "echo_of_command"),
+        "F": ("seal_of_fury", "seal_of_fury_20423_tag0", "echo_of_fury"),
+        "W": ("seal_of_wisdom", "seal_of_wisdom_20357", "echo_of_wisdom"),
+        "L": ("seal_of_light", "seal_of_light_20349", "echo_of_light"),
+        "J": ("seal_of_justice", "seal_of_justice", "echo_of_justice")}
+SOC_STACKS = "aura(echo_of_righteousness).num_stacks(include_reaction_time=true) >= 1"
+SOR_STACKS = "aura(echo_of_command).num_stacks(include_reaction_time=true) == 3"
+assert SOC_STACKS in base and SOR_STACKS in base
 
-def set_stacks(apl, name, echo, n):
-    def walk(o):
-        if isinstance(o, dict):
-            cmp = o.get("cmp")
-            if cmp and "auraNumStacks" in cmp.get("lhs", {}):
-                cmp["op"] = "OpGe"
-                cmp["lhs"]["auraNumStacks"]["auraId"]["spellId"] = echo
-                cmp["rhs"] = {"const": {"val": str(n)}}
-            for x in o.values():
-                walk(x)
-        elif isinstance(o, list):
-            for x in o:
-                walk(x)
-    for v in apl["valueVariables"]:
-        if v["name"] == name:
-            walk(v["value"])
+def plan(a, r, b, c):
+    """Seal b (role of Seal of Command) after r copies of Seal a; Seal a (role of Righteousness) after c copies of b."""
+    t = base.replace(SOC_STACKS, "@A_ECHO@ >= %d" % r).replace(SOR_STACKS, "@B_ECHO@ >= %d" % c)
+    t = (t.replace("aura(seal_of_command_20920)", "@B_AURA@").replace("aura(seal_of_righteousness_20293)", "@A_AURA@")
+          .replace("cast seal_of_command", "@B_CAST@").replace("cast seal_of_righteousness", "@A_CAST@"))
+    for k, s in (("A", SEAL[a]), ("B", SEAL[b])):
+        t = (t.replace("@%s_ECHO@" % k, "aura(%s).num_stacks(include_reaction_time=true)" % s[2])
+              .replace("@%s_AURA@" % k, "aura(%s)" % s[1]).replace("@%s_CAST@" % k, "cast " + s[0]))
+    return t
 
+def only(x):
+    t = plan(x, 1, x, 1)
+    i = t.index("var ${Should refresh SoC} ="); j = t.index("var ${Judge realism protection}")
+    cast, aura, _ = SEAL[x]
+    return (t[:i] + "var ${Should refresh SoC} =\n    (aura(%s).is_inactive or aura(%s).is_active and aura(%s).remaining_time <= auto_time_to_next(main_hand_auto))\n    and $judge_realism_protection\nvar ${Should refresh SoR} = false\n" % (aura, aura, aura) + t[j:])
+
+out = {}
 for r in (1, 2, 3):
     for c in (1, 2, 3):
-        apl = copy.deepcopy(base)
-        set_stacks(apl, "Should refresh SoC", ECHO_RIGHTEOUSNESS, r)
-        set_stacks(apl, "Should refresh SoR", ECHO_COMMAND, c)
-        json.dump(apl, open(P + f"fb_r{r}c{c}.apl.json", "w"), indent=1)
-
-# Other Seal pairs: fb_r1c3_<X>C puts Seal X in place of Seal of Righteousness (W Wisdom, F Fury, L Light, J Justice).
-SEALS = {"W": (20357, 3, 1328206), "F": (20423, 7, 1311701), "L": (20349, 4, 1328198), "J": (20164, 1, 1311705)}
-src = json.load(open(P + "fb_r1c3.apl.json"))
-for x, (sid, rank, echo) in SEALS.items():
-    apl = copy.deepcopy(src)
-    def swap(o):
-        if isinstance(o, dict):
-            if o.get("spellId") == 20293 and o.get("rank") == 8:
-                o["spellId"], o["rank"] = sid, rank
-            elif o.get("spellId") == ECHO_RIGHTEOUSNESS and "rank" not in o:
-                o["spellId"] = echo
-            for v in o.values():
-                swap(v)
-        elif isinstance(o, list):
-            for v in o:
-                swap(v)
-    swap(apl)
-    json.dump(apl, open(P + f"fb_r1c3_{x}C.apl.json", "w"), indent=1)
+        out["fb_r%dc%d" % (r, c)] = plan("R", r, "C", c)
+for x in "FLWJ":
+    out["fb_%s1C3" % x] = plan(x, 1, "C", 3)
+for name, p in (("F1R3", ("F", 1, "R", 3)), ("R1F1", ("R", 1, "F", 1)), ("R1F3", ("R", 1, "F", 3)), ("W1R3", ("W", 1, "R", 3))):
+    out["fb_" + name] = plan(*p)
+for x in "CRF":
+    out["fb_only" + x] = only(x)
+for n, t in out.items():
+    open(P + n + ".apl.siml", "w").write(t)
+print(len(out), "APLs")

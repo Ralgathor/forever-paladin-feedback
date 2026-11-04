@@ -6,7 +6,7 @@ Blizzard published the development notes on 3 November 2026 ([Blizzard forums](h
 
 | Change in the notes | Game files (1.60.1.70755) | Result |
 | --- | --- | --- |
-| Two-Handed Weapon Specialization: +2/4/6% Holy and Physical damage | In the game files since build 70755 | With the Vengeance change: Retribution +3.5% in wowsims master commit d97252f2a (906 → 938 DPS, full buffs, 2 min). This is about 112% of the pure average (W15) |
+| Two-Handed Weapon Specialization: +2/4/6% Holy and Physical damage | In the game files since build 70755 | With the Vengeance change: Retribution +3.5% in wowsims master commit d97252f2a (default set: 906 → 938 DPS, full buffs, 2 min; item pool set on commit 8298ab833: 910). This is about 112% of the pure average (W15) |
 | Vengeance: stacks up to 5 times | In the game files since build 70755 | See the row above. On master of 1 November, the two test flags gave +8.3% (981 DPS). The game data of build 70755 gives less |
 | Warrior: Defensive Stance +80% threat (was +30%), Defiance 7/13/20% (was 5/10/15%) | +30%, 15% | The live Paladin tank has 70% of the Warrior threat with the same gear in the model (was 101%), and 71% in wowsims with the item pool tank sets, and 71–82% from fresh level 60 to Naxxramas (W28, Analysis, Threat) |
 | Druid: Bear Form and Dire Bear Form +115% threat (was +50%) | +50% | The live Paladin tank has 77% of the Druid threat with the same gear in the model and 92% in wowsims with the item pool tank sets (was 110%) |
@@ -41,7 +41,7 @@ The models of the Analysis tabs ran again on the new trees, with no proposal. He
 | Protection threat, same gear for all tanks | 63% of the Warrior | 101% of the Warrior |
 | Protection threat, fresh level 60 to Naxxramas | 65–74% of the Warrior | 102–118% of the Warrior (120–142% with Consecration) |
 | Protection mana while it tanks, Blessing of Wisdom | +24 to +39 per sec | +15 to +37 per sec |
-| Retribution damage (wowsims test runs) | 824 DPS | 848 DPS (+3%). After the wowsims update of 1 November: 906 DPS. With build 70755 (wowsims master commit d97252f2a): 938 DPS. This is about 112% of the pure average at fresh level 60 and 107% in Naxxramas (wowsims of 4 November and model) |
+| Retribution damage (wowsims test runs) | 824 DPS | 848 DPS (+3%). After the wowsims update of 1 November: 906 DPS. With build 70755 (wowsims master commit d97252f2a): 938 DPS (default set). With the item pool set (commit 8298ab833): 910 DPS. This is about 112% of the pure average at fresh level 60 and 107% in Naxxramas (wowsims of 4 November and model) |
 
 - **Holy Power.** The Holy values use a 175% critical heal (main hypothesis, decision of 3 November, the general view of the players). Before the notes of 2 November, the Paladin was 1–7% below the Druid on one tank at 175%, and 3–10% above at 225%. With the Druid changes of the notes of 2 November: 8–15% below at 175%, 5% below to 5% above at 225%.
 - **Mana.** In raids, mana is still the limit of the Paladin. The best cast plan is almost only Flash of Light.

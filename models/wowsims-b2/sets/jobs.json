@@ -5,6 +5,6 @@
  {"name":"Protection Paladin","file":"prot.json","path":"paladin/protection"},
  {"name":"Protection Warrior","file":"war.json","path":"warrior/protection"},
  {"name":"Bear Druid","file":"bear.json","path":"druid/feralbear"},
- {"name":"Retribution","file":"ret.json","path":"paladin/retribution"},
- {"name":"Shockadin","file":"shock.json","path":"paladin/retribution"}
+ {"name":"Retribution, item pool","file":"ret_pool.json","path":"paladin/retribution"},
+ {"name":"Shockadin, item pool","file":"shock_pool.json","path":"paladin/retribution"}
 ]
