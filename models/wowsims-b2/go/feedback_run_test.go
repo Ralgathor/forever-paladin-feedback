@@ -10,6 +10,7 @@ import (
 	"github.com/wowsims/forever/sim/core"
 	"github.com/wowsims/forever/sim/core/proto"
 	"github.com/wowsims/forever/sim/core/stats"
+	"google.golang.org/protobuf/encoding/protojson"
 	googleproto "google.golang.org/protobuf/proto"
 )
 
@@ -65,6 +66,10 @@ func TestFeedbackRun(t *testing.T) {
 		Raid:       core.SinglePlayerRaidProto(player, party, raid, debuffs),
 		Encounter:  enc,
 		SimOptions: &proto.SimOptions{Iterations: feedbackIter(), RandomSeed: 101},
+	}
+	if d := os.Getenv("FEEDBACK_DUMP"); d != "" { // the request as JSON, for the wowsims links of sets/ (models/wowsims-b2/sets)
+		b, _ := protojson.Marshal(rsr)
+		os.WriteFile(d, b, 0644)
 	}
 	res := core.RunRaidSim(rsr)
 	if res.Error != nil {

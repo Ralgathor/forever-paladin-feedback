@@ -1,9 +1,10 @@
 <!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Item pool sets</title>
+<title>wowsims sets</title>
 <style>body{font:16px/1.5 system-ui,sans-serif;max-width:40em;margin:2em auto;padding:0 16px}</style>
-<h1>Item pool sets</h1>
+<h1>wowsims sets</h1>
+<h2>Item pool sets (damage)</h2>
 <p>The final set of each spec in Analysis, Damage, part 7: the same pre-raid item pool, enchants and consumables for each spec. Each link opens the set in wowsims Forever with the raid buffs and the fight (level 63 boss, 2 min). Select Simulate to run it. The values in the analysis come from wowsims master commit 8298ab833 (4 November 2026). A later wowsims version can give a different DPS.</p>
 <ul>
 <li><a href="fury-warrior.html">Fury Warrior</a></li>
@@ -13,4 +14,17 @@
 <li><a href="demonology-warlock.html">Demonology Warlock</a></li>
 <li><a href="retribution.html">Retribution</a></li>
 </ul>
-<p>Source: <a href="https://github.com/Ralgathor/forever-paladin-feedback/tree/main/models/wowsims-b2/matched_gear">models/wowsims-b2/matched_gear</a>.</p>
+<h2>Default tank sets (threat)</h2>
+<p>The sets of Analysis, Threat, parts 5 to 9, and Protection: the default tank set of each class in wowsims Forever, the default talents and rotation, full buffs, one level 63 boss in front of the tank, 3 min. wowsims gives the Warrior and the Druid threat without the multipliers of the notes of 2 November. The analysis multiplies the Warrior threat by 1.445 and the Druid threat by 1.433.</p>
+<ul>
+<li><a href="tank-protection-paladin.html">Protection Paladin</a> (live: 980 threat per sec)</li>
+<li><a href="tank-protection-warrior.html">Protection Warrior</a> (965 threat per sec, 1,394 with the multiplier)</li>
+<li><a href="tank-bear-druid.html">Bear Druid</a> (847 threat per sec, 1,213 with the multiplier)</li>
+</ul>
+<h2>Builds sets</h2>
+<p>The sets of the Builds tab: the default Retribution set (RB1) and the Holy Shock set (SB1) of wowsims Forever, full buffs, one level 63 boss, 3 min. The Protection builds use the Protection Paladin tank set above. Holy has no wowsims healing sim, thus no link.</p>
+<ul>
+<li><a href="build-retribution.html">Retribution</a> (944 DPS)</li>
+<li><a href="build-shockadin.html">Shockadin</a> (851 DPS)</li>
+</ul>
+<p>Source: <a href="https://github.com/Ralgathor/forever-paladin-feedback/tree/main/models/wowsims-b2/matched_gear">models/wowsims-b2/matched_gear</a> (item pool sets) and <a href="https://github.com/Ralgathor/forever-paladin-feedback/tree/main/models/wowsims-b2/sets">models/wowsims-b2/sets</a> (tank and builds sets).</p>

@@ -150,7 +150,7 @@ The design goal is a Paladin tank with the threat of the Warrior. The beta of 30
 
 ## 6. Check with wowsims
 
-wowsims Forever plays the fight with the full rules of the game. Each class has its default tank gear. Full buffs, one level 63 boss from the front, 3 min fight. The Paladin has the wowsims default tank build (12/32/7) with Redoubt 5/5.
+wowsims Forever plays the fight with the full rules of the game. Each class has its default tank gear: [Protection Paladin](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-protection-paladin.html), [Protection Warrior](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-protection-warrior.html) and [Bear Druid](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-bear-druid.html) sets. Full buffs, one level 63 boss from the front, 3 min fight. The Paladin has the wowsims default tank build (12/32/7) with Redoubt 5/5.
 
 wowsims Forever master commit 6ee3c30f35 (4 November 2026) has the game data of client 1.60.1.70755. This data has Holy Shield rank 4 (221 damage, 4 charges). The Paladin and Warrior values are the same as on commit d97252f2a (3 November). The Druid has the Feral changes of 4 November: +3% threat. On commit 8298ab833 (4 November 2026), the Warrior has +6.4% threat. The Paladin and Druid values do not change. The table uses commit 8298ab833. The Warrior and Druid TPS below are the wowsims values × 1.445 (Warrior: 2.16 ÷ 1.495) and × 1.433 (Druid: 2.15 ÷ 1.5). The stance and form multipliers apply to all threat, thus this gives the same result as a new run.
 
