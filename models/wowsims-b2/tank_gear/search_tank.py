@@ -43,6 +43,8 @@ def run(sets, iters):
     return res
 def score(r, ref):
     if tank == 'shock': return r['dps'] / ref['dps']  # Shockadin: damage only
+    if os.environ.get('TANK_SCORE') == 'survival':  # survival first: 40% threat, 30% damage taken, 30% TMI
+        return 0.4 * r['tps'] / ref['tps'] + 0.3 * ref['dtps'] / r['dtps'] + 0.3 * ref['tmi'] / r['tmi']
     return 0.4 * r['tps'] / ref['tps'] + 0.2 * r['dps'] / ref['dps'] + 0.2 * ref['dtps'] / r['dtps'] + 0.2 * ref['tmi'] / r['tmi']
 def name(i): return by[i]['name'] if i in by else '-'
 ref = run([start], 1000)[0]

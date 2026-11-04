@@ -19,6 +19,7 @@ The Warrior and Druid values use the development notes of 2 November 2026. Defen
 - **At the pull, the proposed Paladin has the best burst threat, but only with a Fury opener** (part 8). The Paladin casts Seal of Fury and Holy Shield before the pull. Two Judgements of Fury and Holy Strike then hit at 0 sec. The live Paladin then has 173% of the Warrior threat after 1.5 sec, 92% after 3 sec and 76% after 10 sec. The proposed Paladin has 140% after 3 sec and 118% after 10 sec. With the wowsims default opener, the live Paladin has 40% after 3 sec.
 - **In its best short windows, the live Paladin has 55–64% of the Warrior** (part 8). The proposed Paladin has 82–96%. The Warrior has large spikes from Shield Slam, Revenge and Heroic Strike critical hits.
 - **Against 3 or more enemies, the Paladin still holds the group well.** On the enemy with the least threat, the live Paladin has 2.1 times the Warrior threat. The proposed Paladin has 3.0 times. With the proposals, its total threat is 111–117% of the Warrior.
+- **Threat sets and survival sets give the same threat order** (part 6). With the survival sets, the live Paladin has 71% of the Warrior and the proposed Paladin 109%. The Paladin TMI decreases from 68.6 to 57.7, but it still takes 28% more damage than the Warrior.
 - **The wowsims tank sets obey the item pool rules** (part 6): no raid drops, no Zul'Gurub or Ahn'Qiraj items, no PvP items, no Revered or Exalted reputation items, item level 63 or lower. The wowsims default sets had these items. With the default sets, the live Paladin had 70% of the Warrior and the Druid had 87%. Now the Druid has 77%.
 - **The Druid values are not certain.** The real Druid threat multipliers are not known yet (part 2).
 
@@ -153,12 +154,12 @@ The design goal is a Paladin tank with the threat of the Warrior. The beta of 30
 
 wowsims Forever plays the fight with the full rules of the game. Full buffs, one level 63 boss from the front, 3 min fight. The Paladin has the wowsims default tank build (12/32/7) with Redoubt 5/5.
 
-**Tank sets.** Each class has a tank set from the item pool of Analysis, Damage, part 7: [Protection Paladin](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-pool-protection-paladin.html), [Protection Warrior](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-pool-protection-warrior.html) and [Bear Druid](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-pool-bear-druid.html) sets.
+**Tank sets.** Each class has two tank sets from the item pool of Analysis, Damage, part 7: a threat set and a survival set. Threat sets: [Protection Paladin](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-pool-protection-paladin.html), [Protection Warrior](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-pool-protection-warrior.html) and [Bear Druid](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-pool-bear-druid.html). Survival sets: [Protection Paladin](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-surv-protection-paladin.html), [Protection Warrior](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-surv-protection-warrior.html) and [Bear Druid](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-surv-bear-druid.html).
 
 - **Item pool rules.** No raid drops. No items of the Zul'Gurub and Ahn'Qiraj patches (item ids 19000 to 23999). No PvP items. No Revered or Exalted reputation items. Item level 63 or lower.
-- **Search.** The search starts from the wowsims default tank set of each class. It replaces each item that is not in the pool. For each slot, it runs the 12 best pool items for the tank stats in wowsims, 1,000 iterations each. It keeps the item with the best tank score: 40% threat, 20% damage, 20% damage taken and 20% TMI. The final set runs with 3,000 iterations. The enchants do not change. Scripts: `models/wowsims-b2/tank_gear`.
+- **Search.** The search starts from the wowsims default tank set of each class. It replaces each item that is not in the pool. For each slot, it runs the 12 best pool items for the tank stats in wowsims, 1,000 iterations each. It keeps the item with the best tank score. Threat set: 40% threat, 20% damage, 20% damage taken and 20% TMI. Survival set: 40% threat, 30% damage taken and 30% TMI. The final set runs with 3,000 iterations. The enchants do not change. Scripts: `models/wowsims-b2/tank_gear`.
 - **Replaced items.** Paladin: 10 items, for example Arena Grand Master, Force Reactive Disk and Dark Iron Destroyer. Warrior: 8 items, for example Annihilator, Hyperion Legplates and Ring of Awareness. Druid: 11 items, for example the PvP bracers, the Stormpike Insignia, Timbermaw Brawlers and the Premier Grand Marshal's Battle Hammer.
-- **The default sets** of wowsims have raid, PvP and reputation items. The [default sets](https://ralgathor.github.io/forever-paladin-feedback/sets/) page keeps their links. The Builds tab uses the default Protection Paladin set.
+- **The default sets** of wowsims have raid, PvP and reputation items. The [default sets](https://ralgathor.github.io/forever-paladin-feedback/sets/) page keeps their links. The Builds tab uses the two item pool Protection Paladin sets.
 
 wowsims Forever master commit 8298ab833 (4 November 2026) has the game data of client 1.60.1.70755. This data has Holy Shield rank 4 (221 damage, 4 charges). The Warrior and Druid TPS below are the wowsims values × 1.445 (Warrior: 2.16 ÷ 1.495) and × 1.433 (Druid: 2.15 ÷ 1.5). The stance and form multipliers apply to all threat, thus this gives the same result as a new run.
 
@@ -182,7 +183,23 @@ wowsims Forever master commit 8298ab833 (4 November 2026) has the game data of c
 - **Toughness removal (C-P13)** does not change threat. Damage taken increases by 2%.
 - **The Druid row checks the order, not the level.** All sets come from the same item pool, but each class uses different items.
 
-**Other fights (wowsims, 3 min, item pool sets).** TPS, % of the Warrior in brackets. "Fast" is a swing each 1.2 sec with 60% damage, thus the same damage each sec. "Two weapons" is a boss with a second weapon. The 5 min row has C-P1 only: Toughness removal (C-P13) does not change threat.
+**Survival sets.** The same runs with the survival set of each class. The Warrior and Druid TPS have the same multipliers.
+
+| Tank | TPS (% of the Warrior) | Damage taken each sec | TMI | Crushing blows |
+| --- | --- | --- | --- | --- |
+| Warrior | 1,383 (100%) | 292 | 41 | 0.9% |
+| Druid | 1,095 (79%) | 393 | 42.7 | 15.1% |
+| Paladin, live | 976 (71%) | 374 | 57.7 | 11.7% |
+| Paladin, Redoubt (C-P1) | 1,058 (77%) | 333 | 47.9 | 1.0% |
+| Paladin, Righteous Fury (C25) | 1,389 (100%) | 374 | 57.7 | 11.7% |
+| **Paladin, all kept proposals (C-P1, C-P13, C25)** | **1,505 (109%)** | **340** | **49.1** | **1.0%** |
+
+- **The threat order does not change.** The Paladin loses 5% threat with its survival set (1,029 → 976), and the Warrior loses 4%. The Paladin keeps 71% (live) and 109% (all kept proposals) of the Warrior.
+- **The Paladin TMI decreases the most:** 68.6 → 57.7 (live) and 56.7 → 49.1 (all kept proposals). The Warrior TMI stays at 41.
+- **The damage taken gap does not change.** The live Paladin takes 28% more damage than the Warrior, and 16% more with all kept proposals (C-P1 only: 14%). The Warrior dodges more (22.5% against 11.7%), and the boss has 2.9% critical hits on the live Paladin (Warrior: 0.1%). The item pool has few Defense and dodge items for the Paladin.
+- **C25a (+80%)** gives 95% of the Warrior (live) and 103% with C-P1 (threat sets: 96% and 103%).
+
+**Other fights (wowsims, 3 min, item pool threat sets).** TPS, % of the Warrior in brackets. "Fast" is a swing each 1.2 sec with 60% damage, thus the same damage each sec. "Two weapons" is a boss with a second weapon. The 5 min row has C-P1 only: Toughness removal (C-P13) does not change threat.
 
 | Boss | Warrior | Paladin, live | Paladin, C-P1 and C-P13 | Paladin, all kept proposals (×1.43) |
 | --- | --- | --- | --- | --- |
@@ -516,10 +533,10 @@ The Warrior has 1,448 and the Druid 1,116 (commit 8298ab833).
 
 ## 11. Method and limits
 
-- **Scripts.** `models/beta-30-oct/threat_tables_b2.py` for the model. `models/wowsims-b2` for wowsims Forever (master commit 8298ab833 of 4 November 2026, game files of client 1.60.1.70755 and hotfix push 113578), 3,000 iterations. `models/wowsims-b2/tank_gear/run_pool.sh` gives the runs with the item pool tank sets. The withdrawn ideas C1 and C-P12 use the runs of master commit 895cd67f9 (1 November). The Warrior and Druid wowsims values are scaled to the multipliers of the notes of 2 November (part 6).
+- **Scripts.** `models/beta-30-oct/threat_tables_b2.py` for the model. `models/wowsims-b2` for wowsims Forever (master commit 8298ab833 of 4 November 2026, game files of client 1.60.1.70755 and hotfix push 113578), 3,000 iterations. `models/wowsims-b2/tank_gear/run_pool.sh` gives the runs with the item pool threat sets (`logs/checks_8298ab833_pool.log`), and with the argument `surv` the runs with the survival sets (`logs/checks_8298ab833_pool_surv.log`). The withdrawn ideas C1 and C-P12 use the runs of master commit 895cd67f9 (1 November). The Warrior and Druid wowsims values are scaled to the multipliers of the notes of 2 November (part 6).
 - **Holy Shield blocks.** The model gives Redoubt (C-P1) too many blocks. Use the wowsims value.
 - **Druid multipliers.** The real values are not known (see Open items).
-- **Gear.** The model gives all tanks the same gear. wowsims gives each class a tank set from the item pool of Analysis, Damage, part 7 (part 6). `models/wowsims-b2/tank_gear` has the search and the sets.
+- **Gear.** The model gives all tanks the same gear. wowsims gives each class a threat set and a survival set from the item pool of Analysis, Damage, part 7 (part 6). Parts 7 to 9 use the threat sets. `models/wowsims-b2/tank_gear` has the search and the sets.
 - **Righteous Fury.** The values use the wowsims rule: the two multipliers multiply (×2.527). If they add, Holy threat is ×2.23, and the Paladin has about 10% less threat.
 - **Holy Shield rank 4** is a level 60 spell since build 70755. The model uses its 221 damage.
 - **Righteous Fury (C25).** The `C25` flag of `proposals_sim.go` multiplies all Paladin threat by 1.9 ÷ 1.33. `RF_ALL` sets the value. The sim tank always has Righteous Fury, thus a fixed multiplier gives the same result.

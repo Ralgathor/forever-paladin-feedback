@@ -36,6 +36,7 @@ The builds use the proposed trees of calculator version 6 (the live version, wit
 
 - **Values** come from wowsims with Redoubt (C-P1) and Toughness removal (C-P13), on master commit 8298ab833 (Holy Shield rank 4), with the item pool tank set (Analysis, Threat, part 6). The withdrawn Holy Strike Seal trigger (C1) gave PT1 1,012 threat each sec on 1 November (Holy Shield rank 3).
 - **Righteous Fury (C25)** multiplies all threat by 1.43. PT1 then has about 1,564 threat each sec, 108% of the Warrior (Analysis, Threat, part 6). The build does not change.
+- **Survival set.** The table uses the item pool threat set. With the item pool survival set, PT1 has 1,055 threat each sec, 330 damage taken each sec and a TMI of 46.2. BS2 has 997, 366 and 56.4, and the live reference 976, 374 and 57.7. The build order does not change (builds/protection.md).
 - **Divine Intellect 3 is necessary.** Row 4 needs 15 points in rows 1–3. With Divine Intellect 2, Swift Judgement is not available.
 - **Toughness removal (C-P13)** frees 5 points. With the 0/38/13 tank of the Analysis model as the start, they go to Deflection 5 and Divine Intellect 1, and Benediction loses 1 point. Live talents, 1 November: Deflection 4 in place of Toughness 5 gave the same damage taken (340), but a worse TMI (58.1 against 55.9).
 - **Devoted Sacrifice (C-P11)** is available to a tank for 2 points in place of Deflection. The sim does not model Lay on Hands.
@@ -69,7 +70,7 @@ Some builds must put points into talents with little value, to open a deeper row
 
 ## 5. Method and limits
 
-- **Protection, Retribution and Shockadin:** wowsims Forever (master commit 8298ab833 of 4 November, game files of client 1.60.1.70755, 3,000 iterations, 3 min, full buffs), with the Light's Vigil flag CH7 for SB1 (builds/shockadin.md). Gear: the item pool sets, the same item pool as Analysis, Damage and Threat: [Protection Paladin](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-pool-protection-paladin.html), [Retribution](https://ralgathor.github.io/forever-paladin-feedback/sets/build-retribution.html) (RB1) and [Shockadin](https://ralgathor.github.io/forever-paladin-feedback/sets/build-shockadin.html) (SB1).
+- **Protection, Retribution and Shockadin:** wowsims Forever (master commit 8298ab833 of 4 November, game files of client 1.60.1.70755, 3,000 iterations, 3 min, full buffs), with the Light's Vigil flag CH7 for SB1 (builds/shockadin.md). Gear: the item pool sets, the same item pool as Analysis, Damage and Threat: [Protection Paladin](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-pool-protection-paladin.html) (threat set; [survival set](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-surv-protection-paladin.html)), [Retribution](https://ralgathor.github.io/forever-paladin-feedback/sets/build-retribution.html) (RB1) and [Shockadin](https://ralgathor.github.io/forever-paladin-feedback/sets/build-shockadin.html) (SB1).
 - **Holy:** the healing model (`models/beta-30-oct/healing_b2.py`, 715 healing power, 5 min). The live test of Holy Power can change the Holy values (see Open items).
 - **PvP:** the PvP burst model (`models/beta-30-oct/pvp_burst_b2.py`), one Hammer of Justice stun.
 - wowsims does not model Lay on Hands, Shoulder the Burden (C-P5) or Hand of Sacrifice (C4).

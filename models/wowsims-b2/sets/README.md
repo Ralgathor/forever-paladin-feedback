@@ -7,6 +7,9 @@ The `sets/` pages at the root of the repository open these sets in wowsims Forev
 | tank-pool-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_prot.json | 1,029.3 threat per sec |
 | tank-pool-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_war.json | 1,002.1 threat per sec (×1.445 = 1,448) |
 | tank-pool-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_bear.json | 779.0 threat per sec (×1.433 = 1,116) |
+| tank-surv-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_prot_surv.json | 976.4 threat per sec |
+| tank-surv-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_war_surv.json | 956.8 threat per sec (×1.445 = 1,383) |
+| tank-surv-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_bear_surv.json | 763.9 threat per sec (×1.433 = 1,095) |
 | tank-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180` | 980.1 threat per sec |
 | tank-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180` | 964.7 threat per sec (×1.445 = 1,394) |
 | tank-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180` | 846.6 threat per sec (×1.433 = 1,213) |

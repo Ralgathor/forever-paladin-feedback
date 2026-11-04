@@ -126,7 +126,7 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 
 - **Change.** Remove Toughness (row 3, column 4, 5 ranks: +2–10% armor from items). Devoted Sacrifice (C-P11) takes its place.
 - **Why.** Toughness gives only a stat. The Protection Warrior of Forever has no armor talent.
-- **Balance with Redoubt (C-P1).** With the item pool tank sets, Redoubt (C-P1) decreases the damage gap to the Warrior from 28% to 13%. Without Toughness, the gap is 15% (see the table). With the default sets of wowsims, the Paladin with C-P1 took almost the same damage as the Warrior and had a better TMI.
+- **Balance with Redoubt (C-P1).** With the item pool tank sets, Redoubt (C-P1) decreases the damage gap to the Warrior from 28% to 13%. Without Toughness, the gap is 15% (see the table). With the item pool survival sets, the gap goes from 28% to 14% (16% without Toughness), and the TMI is 48 against 41 (Analysis, Threat, part 6). With the default sets of wowsims, the Paladin with C-P1 took almost the same damage as the Warrior and had a better TMI.
 - **Druid.** Thick Hide (Druid) gives armor. But the Druid tank cannot block, and armor is its main defense.
 - **Holy and Retribution.** These specs do not take Toughness. Thus, they lose nothing. Holy can now take Devoted Sacrifice (C-P11) with 12 Protection points.
 - **Tank points.** Toughness removal frees 5 points. The tank uses them in the other trees, for example Retribution.

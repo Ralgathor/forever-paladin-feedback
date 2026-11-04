@@ -1,0 +1,49 @@
+# wowsims Forever master 8298ab833, survival tank set (search.py: TANK_SET=surv, FEEDBACK_ITEMS of tank_gear/set_prot_surv.json), 3 min, 3,000 iterations.
+BUILD prot raid beta 050050002-05302102213301531-502 {'dps': 393.8, 'tps': 976.4, 'dtps': 373.9, 'tmi': 57.72, 'crush': 11.7, 'std': 6.51}
+BUILD prot raid beta 05005-05302102213201531-5023 {'dps': 412.5, 'tps': 1022.1, 'dtps': 383.6, 'tmi': 59.36, 'crush': 11.7, 'std': 6.78}
+BUILD prot raid beta -05302102313501531-52233000001 {'dps': 401.3, 'tps': 997.1, 'dtps': 365.8, 'tmi': 56.43, 'crush': 11.8, 'std': 6.4}
+BUILD prot raid prop -3530110213501531-54233 {'dps': 424.3, 'tps': 1055.0, 'dtps': 329.5, 'tmi': 46.16, 'crush': 1.0, 'std': 3.84}
+BUILD prot raid prop -3530110213501531-53233000001 {'dps': 430.3, 'tps': 1075.1, 'dtps': 329.5, 'tmi': 46.17, 'crush': 1.0, 'std': 3.84}
+WEIGHTS prot raid beta 050050002-05302102213301531-502 base={'dps': 393.8, 'tps': 976.4, 'dtps': 373.9, 'tmi': 57.72}
+  Strength: dps=+0.215 tps=+0.345 dtps=-0.010 tmi=-0.002
+  Agility: dps=+0.135 tps=+0.275 dtps=-0.360 tmi=-0.037
+  Stamina: dps=+0.005 tps=+0.005 dtps=-0.005 tmi=-0.131
+  Spell damage: dps=+0.270 tps=+0.718 dtps=-0.017 tmi=-0.003
+  Hit rating: dps=+0.520 tps=+1.260 dtps=+0.090 tmi=+0.001
+  Expertise rating: dps=+0.610 tps=+1.330 dtps=-0.180 tmi=-0.049
+  Defense rating: dps=+0.020 tps=+0.070 dtps=-0.690 tmi=-0.092
+  Block rating: dps=+0.290 tps=+0.790 dtps=-0.060 tmi=-0.041
+  Block value: dps=+0.000 tps=+0.000 dtps=-0.235 tmi=-0.025
+  Dodge rating: dps=-0.020 tps=-0.060 dtps=-0.420 tmi=-0.033
+  Parry rating: dps=+0.040 tps=+0.080 dtps=-0.300 tmi=-0.020
+  Armor: dps=+0.000 tps=+0.001 dtps=-0.030 tmi=-0.006
+WEIGHTS prot raid beta -05302102313501531-52233000001 base={'dps': 401.3, 'tps': 997.1, 'dtps': 365.8, 'tmi': 56.43}
+  Strength: dps=+0.210 tps=+0.345 dtps=-0.010 tmi=-0.001
+  Agility: dps=+0.110 tps=+0.220 dtps=-0.350 tmi=-0.043
+  Stamina: dps=+0.000 tps=-0.005 dtps=-0.005 tmi=-0.127
+  Spell damage: dps=+0.267 tps=+0.715 dtps=-0.015 tmi=-0.003
+  Hit rating: dps=+0.430 tps=+1.040 dtps=+0.000 tmi=-0.006
+  Expertise rating: dps=+0.560 tps=+1.240 dtps=-0.200 tmi=-0.046
+  Defense rating: dps=-0.050 tps=-0.110 dtps=-0.840 tmi=-0.130
+  Block rating: dps=+0.200 tps=+0.510 dtps=-0.060 tmi=-0.014
+  Block value: dps=+0.000 tps=+0.000 dtps=-0.235 tmi=-0.025
+  Dodge rating: dps=-0.050 tps=-0.100 dtps=-0.380 tmi=-0.035
+  Parry rating: dps=+0.000 tps=+0.010 dtps=-0.260 tmi=-0.010
+  Armor: dps=+0.000 tps=+0.000 dtps=-0.030 tmi=-0.006
+WEIGHTS prot raid prop -3530110213501531-54233 base={'dps': 424.3, 'tps': 1055.0, 'dtps': 329.5, 'tmi': 46.16}
+  Strength: dps=+0.210 tps=+0.335 dtps=-0.015 tmi=-0.002
+  Agility: dps=+0.065 tps=+0.080 dtps=-0.360 tmi=-0.046
+  Stamina: dps=+0.000 tps=-0.005 dtps=+0.005 tmi=-0.099
+  Spell damage: dps=+0.270 tps=+0.723 dtps=-0.015 tmi=-0.002
+  Hit rating: dps=+0.450 tps=+1.140 dtps=+0.050 tmi=+0.004
+  Expertise rating: dps=+0.630 tps=+1.390 dtps=-0.010 tmi=-0.015
+  Defense rating: dps=-0.160 tps=-0.440 dtps=-0.630 tmi=-0.081
+  Block rating: dps=+0.030 tps=+0.080 dtps=-0.050 tmi=-0.039
+  Block value: dps=+0.000 tps=+0.005 dtps=-0.350 tmi=-0.054
+  Dodge rating: dps=-0.080 tps=-0.230 dtps=-0.440 tmi=-0.058
+  Parry rating: dps=-0.050 tps=-0.140 dtps=-0.310 tmi=-0.048
+  Armor: dps=+0.000 tps=+0.000 dtps=-0.026 tmi=-0.004
+# Extra builds (same settings, 3,000 iterations): PI1, PT1 with Benediction 5 and Deflection 4, B2T
+BUILD prot raid prop 05005-3530110213201531-5023 {'dps': 442.7, 'tps': 1103.0, 'dtps': 351.4, 'tmi': 51.64, 'crush': 1.0}
+BUILD prot raid prop -3530110213501531-45233 {'dps': 424.9, 'tps': 1055.5, 'dtps': 339.0, 'tmi': 48.6, 'crush': 1.0}
+BUILD prot raid beta -25301102513501531-05233 {'dps': 395.6, 'tps': 977.0, 'dtps': 382.6, 'tmi': 56.72, 'crush': 12.1}

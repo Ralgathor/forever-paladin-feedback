@@ -6,7 +6,7 @@
 
 - **The problem.** In the live version, a raid boss hits the Paladin with a crushing blow on 11.8% of its swings. A crushing blow does 150% damage. The Warrior takes crushing blows on only 1.0% of the swings.
 - **The fix.** With Redoubt (C-P1), each Holy Shield cast also starts Redoubt. The two block buffs are then active together. Crushing blows decrease to 1.1%, almost the same as the Warrior (1.0%).
-- **The tank takes 12% less damage** with C-P1. With the item pool tank sets, it still takes 13% more damage than the Warrior, and its TMI is higher (55 against 41).
+- **The tank takes 12% less damage** with C-P1. With the item pool tank sets, it still takes 13% more damage than the Warrior, and its TMI is higher (55 against 41). With the survival sets, the gap is 14% and the TMI 48 against 41.
 - **Keep Redoubt at 6–30% block.** At 4–20%, 7.8% of the swings are still crushing blows.
 - **Fast bosses and bosses with two weapons** give both tanks more crushing blows. With C-P1, the Paladin stays 0.1–1.2 points above the Warrior. At 4–20%, it is 3.6–6.9 points above.
 
@@ -37,7 +37,7 @@ Redoubt (C-P1) uses the Warrior method. It removes crushing blows with block. Th
 
 ## 3. Results in wowsims
 
-Item pool tank set of each class (Analysis, Threat, part 6), full buffs, one level 63 boss, 3 min fight. The Paladin has Holy Shield rank 4 (build 70755).
+Item pool threat set of each class (Analysis, Threat, part 6), full buffs, one level 63 boss, 3 min fight. The Paladin has Holy Shield rank 4 (build 70755).
 
 | Tank | Block | Crushing blows | Damage taken each sec | TMI |
 | --- | --- | --- | --- | --- |
@@ -53,6 +53,22 @@ Item pool tank set of each class (Analysis, Threat, part 6), full buffs, one lev
 - **With the default sets** of wowsims (raid, PvP and reputation items), the Paladin with C-P1 took 2% more damage than the Warrior, and its TMI was better (44.4 against 47). Live: 338 damage taken each sec, 11.9% crushing blows. C-P1: 292 and 1.0%.
 - **5 min fights give the same result.** Live 11.8%, C-P1 1.3%, C-P1 with 4–20% 7.9%, Warrior 1.0%.
 - **The Druid takes the most crushing blows,** but its armor and health keep it safe.
+
+**Survival sets.** The same runs with the item pool survival set of each class (Analysis, Threat, part 6).
+
+| Tank | Block | Crushing blows | Damage taken each sec | TMI |
+| --- | --- | --- | --- | --- |
+| Paladin, live | 41.6% | 11.7% | 374 | 57.7 |
+| **Paladin, Redoubt (C-P1)** | **63.3%** | **1.0%** | **333 (−11%)** | **47.9** |
+| Paladin, C-P1 with Redoubt 4–20% | 54.0% | 8.5% | 365 (−2%) | 56.2 |
+| Paladin, Redoubt 4–20% without C-P1 | 39.6% | 13.5% | 382 (+2%) | 59.3 |
+| Warrior | 52.2% | 0.9% | 292 | 41 |
+| Druid | 0% | 15.1% | 393 | 42.7 |
+
+- **The crushing blows do not change with the set.** C-P1 gives 1.0% (Warrior: 0.9%).
+- **The Paladin TMI decreases:** 47.9 with C-P1 (threat set: 55.3). The Warrior stays at 41.
+- **The damage taken gap stays.** With C-P1, the Paladin takes 14% more damage than the Warrior (live: 28% more).
+- **Fast bosses and bosses with two weapons** give the same result as the table below. C-P1 is 0.1–1.4 points above the Warrior. With 4–20%, the Paladin is 4.2–7.6 points above.
 
 **Fast bosses and bosses with two weapons.** The same tanks and 3 min fight. "Fast" is a swing each 1.2 sec with 60% damage, thus the same damage each sec. "Two weapons" adds a second weapon. The Paladin uses the wowsims default tank build (12/32/7), with Toughness removal (C-P13) in the C-P1 columns.
 

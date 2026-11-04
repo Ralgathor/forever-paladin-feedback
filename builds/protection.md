@@ -21,6 +21,22 @@ This file gives the best tank builds for the live trees and for the proposed tre
 - **Proposed against live.** PT1 has +5.3% threat, 9% less damage taken and an 18% better TMI than BS2. PS1 has +7.1% threat. With Righteous Fury (C25), PT1 has +50% threat against BS2. Redoubt (C-P1) removes almost all crushing blows: 1.1% against 11.8%.
 - **Stat weights.** For threat, Expertise rating is the best stat for each point, then spell damage. For survival, Stamina, Defense rating and Block value (proposed trees) are the best (part 3).
 
+**Survival set.** The table above uses the item pool threat set. The same builds with the item pool survival set ([wowsims link](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-surv-protection-paladin.html), Analysis, Threat, part 6):
+
+| Trees | Build | Threat each sec | With Righteous Fury (C25) | Damage taken each sec | TMI |
+| --- | --- | --- | --- | --- | --- |
+| Proposed | PT1 | 1,055 | 1,500 | 330 | 46.2 |
+| Proposed | PS1 | 1,075 | 1,529 | 330 | 46.2 |
+| Proposed | PI1 | 1,103 | 1,569 | 351 | 51.6 |
+| Live | BS2 | 997 | — | 366 | 56.4 |
+| Live | BT1 | 976 | — | 374 | 57.7 |
+| Live | BS1 | 1,022 | — | 384 | 59.4 |
+
+- **The build order does not change.** All builds have 4–5% less threat and a 13–16% better TMI than with the threat set.
+- **PI1 against PS1:** +2.6% threat, 6.6% more damage taken and a 12% worse TMI.
+- **PT1 against BS2:** +5.8% threat, 10% less damage taken and an 18% better TMI.
+- **Stat weights** with the survival set (`models/wowsims-b2/logs/finals_surv.log`). For threat, Expertise rating is still the best stat, but Hit rating is second: the survival set has less Hit. For survival, Stamina and Defense rating stay the best.
+
 ## 1. Method
 
 - **Sim.** wowsims Forever, master of 4 November 2026 (commit 8298ab833, game files of client 1.60.1.70755, Holy Shield rank 4), with `models/wowsims-b2/patches/talents.patch`. The proposed trees use the flags of all kept proposals: Redoubt (C-P1) and Toughness removal (C-P13). The talent search ran on master of 1 November (commit 895cd67f9), with the Holy Strike Seal trigger (C1), withdrawn on 2 November 2026. The builds and stat weights then ran again on commit 8298ab833 without it, with the item pool set.

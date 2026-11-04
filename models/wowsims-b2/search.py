@@ -71,7 +71,10 @@ def valid(b, mode):
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 def pool_ids(spec):  # the item pool set of each spec (FEEDBACK_ITEMS); FEEDBACK_GEAR=default keeps the wowsims default set
+    # TANK_SET=surv: the survival tank set (tank_gear/set_prot_surv.json) in place of the threat tank set
     f = {"ret": "matched_gear/set_Retribution.json", "prot": "tank_gear/set_prot.json", "shock": "tank_gear/set_shock.json"}[spec]
+    if spec == "prot" and os.environ.get("TANK_SET") == "surv":
+        f = "tank_gear/set_prot_surv.json"
     d = json.load(open(os.path.join(HERE, f)))
     ids = [x.get("id", 0) for x in d["items"]] if isinstance(d, dict) else d
     return ",".join(str(i) for i in (ids + [0] * 17)[:17])

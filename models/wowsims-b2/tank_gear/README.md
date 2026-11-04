@@ -1,6 +1,6 @@
 # Item pool tank sets (4 November 2026)
 
-The tank sets of Analysis, Threat, parts 5 to 9, and Protection. Each set obeys the item pool rules of the damage sets (`../matched_gear/opt.py`, `pre_raid`):
+The tank sets of Analysis, Threat, parts 5 to 9, and Protection: a threat set and a survival set for each class (see Survival sets). Each set obeys the item pool rules of the damage sets (`../matched_gear/opt.py`, `pre_raid`):
 
 - No raid drops.
 - No items of the Zul'Gurub and Ahn'Qiraj patches (item ids 19000 to 23999).
@@ -18,6 +18,22 @@ The wowsims default tank sets have raid, PvP and reputation items. The sets of t
 4. Run `./run_pool.sh <wowsims clone>`. It runs all tank jobs of `../logs/checks_8298ab833.log` again with the new sets (`FEEDBACK_ITEMS`). The output is `../logs/checks_8298ab833_pool.log`.
 
 `set_*.json` has the 17 item ids of each set. `log_*.txt` has the search output.
+
+## Survival sets
+
+`TANK_SCORE=survival python3 search_tank.py <prot|war|bear> <dump>` uses the same method with a survival score: 40% threat, 30% damage taken and 30% TMI, each against the default set. The dump must have the default set (no `FEEDBACK_ITEMS`). The sets are `set_*_surv.json`, the search output `log_*_surv.txt`. `./run_pool.sh <wowsims clone> surv` runs all tank jobs with these sets: `../logs/checks_8298ab833_pool_surv.log`. `TANK_SET=surv python3 ../finals.py <codes>` runs the Protection builds with the Paladin survival set: `../logs/finals_surv.log`.
+
+| Tank | Items that differ from the threat set (threat set → survival set) |
+| --- | --- |
+| Protection Paladin | Lightforge Gauntlets → Warder's Gloves, Vindicator's Belt → Redeemer's Waistcord, Warder's Sabatons → Lightforge Boots, Cleansed Vilebranch Icon → Volunteer's Lucky Seal, Cleansed Vilebranch Medallion → Enriched Seal, Grave Scepter → Elderwild Construction Hammer, Antique Bulwark → Sacred Protector |
+| Protection Warrior | Horn of Ve'han → Artifact Seeker's Pendant, Legplates of Valor → Enriched Thorium Leggings, Volunteer's Lucky Seal → Smotts' Compass, Greatflank Flayer → Bagh Nakh |
+| Bear Druid | Warden's Leather Bracers → Elven Chain Wristguards, Cleansed Vilebranch Medallion → Enriched Seal |
+
+| Tank | Threat set: threat / damage taken / TMI | Survival set: threat / damage taken / TMI |
+| --- | --- | --- |
+| Protection Paladin, live | 1,029.3 / 383.8 / 68.6 | 976.4 / 373.9 / 57.7 |
+| Protection Warrior | 1,002.1 / 299.7 / 41 | 956.8 / 292.4 / 41 |
+| Bear Druid | 779.0 / 393.3 / 43.9 | 763.9 / 392.5 / 42.7 |
 
 ## Shockadin set
 
