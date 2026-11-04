@@ -47,16 +47,16 @@ func TestFeedbackRun(t *testing.T) {
 	}
 	player := &proto.Player{
 		Name: "Ret", Race: proto.Race_RaceHuman, Class: proto.Class_ClassPaladin,
-		Equipment:     core.GetGearSet("../../../ui/specs/paladin/retribution/gear_sets", gear).GearSet,
-		Consumables:   cons,
-		TalentsString: talentsOr(talents),
-		Spec:          DefaultSpecOptions,
-		Rotation:      core.GetAplRotation("../../../ui/specs/paladin/retribution/apls", apl).Rotation,
+		Equipment:      core.GetGearSet("../../../ui/specs/paladin/retribution/gear_sets", gear).GearSet,
+		Consumables:    cons,
+		TalentsString:  talentsOr(talents),
+		Spec:           DefaultSpecOptions,
+		Rotation:       core.GetAplRotation("../../../ui/specs/paladin/retribution/apls", apl).Rotation,
 		ItemSwap:       swap,
 		EnableItemSwap: swap != nil,
-		BonusStats:    feedbackBonus(),
-		Buffs:         indiv,
-		Profession1:   proto.Profession_Engineering, Profession2: proto.Profession_Blacksmithing,
+		BonusStats:     feedbackBonus(),
+		Buffs:          indiv,
+		Profession1:    proto.Profession_Engineering, Profession2: proto.Profession_Blacksmithing,
 		DistanceFromTarget: 25,
 	}
 	enc := core.MakeSingleTargetEncounter(5)

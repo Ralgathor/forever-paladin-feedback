@@ -11,7 +11,7 @@ This file gives the Holy Shock damage build ("Shockadin") on one target. It uses
 | Live | Fresh 60 | SB1 | 23/0/28 | [`b205025210221021--0523330110130033`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205025210221021--0523330110130033) | 290 | 92% |
 | Proposed | Fresh 60 | SB1 | 23/0/28 | [`v6p05025210221021--0523330110130033`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05025210221021--0523330110130033) | 304 | 93% |
 
-- **SB1 is the best Holy Shock build in all four cases.** It is the wowsims Holy Shock build (`HolyShockTalents`). The talent search found no move of 1 point with more than +2 DPS in a raid.
+- **SB1 is the best Holy Shock build found.** It is the wowsims Holy Shock build (`HolyShockTalents`). In a raid, the talent search found no move of 1 point with more than +2 DPS. At fresh 60, the search removes Holy Shock (part 2).
 - **SB1 is 90% of Retribution (RB1) in a raid.** RB1 has 944 DPS in a raid, 315 (live) and 328 (proposed) at fresh 60. The two builds use different gear sets (part 1). Thus, the % is approximate.
 - **Holy Shock gives +11% in a raid.** Without Holy Shock and with Champion of the Light 4 (SF1), the damage is 765 in a raid. At fresh 60, SF1 has more damage than SB1: Holy Shock costs too much mana without buffs (part 2).
 - **Proposed against live.** Reverence 50% (C-H1) gives +4.9% at fresh 60 (more mana), and 0% in a raid. Light's Vigil (C-H7) gives a build with 31 Holy points +9.4%, but this build stays 11% below SB1 (part 2).
@@ -47,7 +47,7 @@ This file gives the Holy Shock damage build ("Shockadin") on one target. It uses
 | SF2, 22/0/29 | Proposed | [`v6p0502520122102--0523330110130034`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p0502520122102--0523330110130034) | 765 (−10%) | 325 (+6.9%) | No Holy Shock. Illumination 1 in place of Divine Favor, Champion of the Light 4 |
 
 - **Light's Vigil (C-H7) adds damage, but not enough.** It gives SB2 +65 DPS in a raid (+9.4%): one Holy Shock each 6 sec, in place of each 10 sec. SB2 has no Vengeance and no Champion of the Light, thus it stays 11% below SB1. The talent search from SB2 at fresh 60 moved the Light's Vigil point to other talents at its second step.
-- **At fresh 60, Holy Shock costs too much mana.** The search moved the Holy Shock point to Champion of the Light. SF1 is a Retribution build with the Holy Shock set, not a Shockadin. With Holy Shock, the Paladin uses its mana in 70 sec (SB1) in place of 127 sec (SF1).
+- **At fresh 60, Holy Shock costs too much mana.** The search moved the Holy Shock point to Champion of the Light. SF1 is a Retribution build with the Holy Shock set, not a Shockadin. In the search runs, SB1 has no mana after 70 sec, and SF1 after 127 sec.
 - **The search did not find a better Shockadin.** In a raid, no move of 1 point from SB1 gave more than +2 DPS, in the live and in the proposed trees.
 
 ## 3. Stat weights
