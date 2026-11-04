@@ -45,11 +45,11 @@ Default tank gear of each class, full buffs, one level 63 boss, 3 min fight. The
 | **Paladin, Redoubt (C-P1)** | **62.2%** | **1.0%** | **292 (−14%)** | **44.4** |
 | Paladin, C-P1 with Redoubt 4–20% | 55.3% | 5.5% | 319 (−6%) | 53.7 |
 | Paladin, Redoubt 4–20% without C-P1 | 40.9% | 13.0% | 344 (+2%) | 59.1 |
-| Warrior | 49.9% | 1.0% | 285 | 48 |
+| Warrior | 49.9% | 1.0% | 286 | 47 |
 | Druid | 0% | 15.0% | 383 | 40.0 |
 
 - **C-P1 puts the Paladin at the Warrior level.** Both have 1.0% crushing blows. The Paladin takes 2% more damage than the Warrior, but its TMI is better.
-- **5 min fights give the same result.** Live 11.9%, C-P1 1.1%, C-P1 with 4–20% 5.7%, Warrior 1.0%.
+- **5 min fights give the same result.** Live 11.9%, C-P1 1.1%, C-P1 with 4–20% 5.7%, Warrior 0.9%.
 - **The Druid takes the most crushing blows,** but its armor and health keep it safe.
 
 **Fast bosses and bosses with two weapons.** The same tanks and 3 min fight. "Fast" is a swing each 1.2 sec with 60% damage, thus the same damage each sec. "Two weapons" adds a second weapon. The Paladin uses the wowsims default tank build (12/32/7), with Toughness removal (C-P13) in the C-P1 columns.
@@ -57,16 +57,16 @@ Default tank gear of each class, full buffs, one level 63 boss, 3 min fight. The
 | Boss | Warrior | Paladin, C-P1 | Paladin, C-P1 with 4–20% | Paladin, live |
 | --- | --- | --- | --- | --- |
 | Normal (2.0 sec) | 1.0% | 1.0% | 5.5% | 11.9% |
-| Fast (1.2 sec) | 2.8% | 3.7% | 6.9% | 11.0% |
-| Two weapons | 3.7% | 5.0% | 7.7% | 10.9% |
+| Fast (1.2 sec) | 3.0% | 3.7% | 6.9% | 11.0% |
+| Two weapons | 3.8% | 5.0% | 7.7% | 10.9% |
 | Fast, two weapons | 7.2% | 8.8% | 10.3% | 11.8% |
 
 | Boss | Damage taken each sec: Warrior | Paladin, C-P1 | Paladin, C-P1 with 4–20% | Paladin, live |
 | --- | --- | --- | --- | --- |
-| Normal | 285 | 299 | 325 | 338 |
-| Fast | 275 | 291 | 313 | 317 |
-| Two weapons | 423 | 462 | 488 | 488 |
-| Fast, two weapons | 423 | 461 | 481 | 471 |
+| Normal | 286 | 299 | 325 | 338 |
+| Fast | 276 | 291 | 313 | 317 |
+| Two weapons | 425 | 462 | 488 | 488 |
+| Fast, two weapons | 424 | 461 | 481 | 471 |
 
 - **More swings use the charges faster.** Both tanks then have gaps. The Warrior reaches 3–7% crushing blows, the Paladin with C-P1 4–9%.
 - **C-P1 follows the Warrior.** It is 0–1.6 points above the Warrior with each boss.

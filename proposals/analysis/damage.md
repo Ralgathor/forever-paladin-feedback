@@ -40,7 +40,7 @@ The increase of Hunter, Mage and Warlock with gear is not known. The table uses 
 - **The live version is above the target at all gear levels.** It is 17 points above at fresh 60 and 13 points above in Naxxramas.
 - **C1 is 19–24 points above the target.** At fresh 60, Retribution with C1 is 14% above Fury.
 - **Spell damage on plate gear is important.** Without new spell damage on plate items, the live Paladin has only 99% in Naxxramas.
-- **Why C1 is withdrawn.** It gave one Seal rule for all melee attacks and +2.6% tank threat. Retribution reaches the target without it, and the tank threat is already above the Warrior (see Threat).
+- **Why C1 is withdrawn.** It gave one Seal rule for all melee attacks and +2.6% tank threat. Retribution reaches the target without it, and Righteous Fury (C25) already gives the tank the Warrior threat (see Threat).
 - **The balance lever is Sacred Arbiter (W15).** If raid logs confirm the wowsims level, decrease it to +10%: −0.7% damage in wowsims. This change alone does not bring Retribution to 95%. With C1, the gain fell only from +5.5% to +4.5%.
 - **Check again later.** The pure average uses wowsims master 8298ab833 of 4 November. The Warrior, Rogue and Hunter have the changes of hotfix 113578, and the Warlock has the patch of 3 November. The Mage changes of the development notes are not in wowsims yet (W15).
 
