@@ -1,4 +1,4 @@
-# Item pool tank sets (4 November 2026)
+# Item pool tank sets (4 November 2026, new search on 6 November)
 
 The tank sets of Analysis, Threat, parts 5 to 9, and Protection: a threat set and a survival set for each class (see Survival sets). Each set obeys the item pool rules of the damage sets (`../matched_gear/opt.py`, `pre_raid`):
 
@@ -8,7 +8,9 @@ The tank sets of Analysis, Threat, parts 5 to 9, and Protection: a threat set an
 - No Revered or Exalted reputation items.
 - Item level 63 or lower.
 
-The wowsims default tank sets have raid, PvP and reputation items. The sets of this folder replace these items. The wowsims links are on the [sets page](https://ralgathor.github.io/forever-paladin-feedback/sets/).
+The wowsims default tank sets have raid, PvP and reputation items. The sets of this folder replace these items.
+
+**New search (6 November 2026).** Master commit `df57e2571` (hotfix push 113693) adds 2,447 items to the database. The search ran again for all tank sets and the Shockadin set on this commit, with the same rules and steps. Only the Warrior threat set changes: Scarlet Kris (a new dagger, item level 63, no source in the game data) replaces Greatflank Flayer. The Warrior threat increases by 3.8% (1,447.7 → 1,503.0). The other sets give the same items and the same values. The Paladin survival search changed the belt (Warder's Waistguard in place of Redeemer's Waistcord) by less than the run noise (+0.3% score), with no new item. Thus, the Paladin survival set stays. `log_war.txt` has the new Warrior search, `log_war_8298ab833.txt` the search of 4 November. The Warrior runs on commit df57e2571: `../logs/checks_df57e2571_pool.log`. The wowsims links are on the [sets page](https://ralgathor.github.io/forever-paladin-feedback/sets/).
 
 ## Method
 
@@ -26,13 +28,13 @@ The wowsims default tank sets have raid, PvP and reputation items. The sets of t
 | Tank | Items that differ from the threat set (threat set → survival set) |
 | --- | --- |
 | Protection Paladin | Lightforge Gauntlets → Warder's Gloves, Vindicator's Belt → Redeemer's Waistcord, Warder's Sabatons → Lightforge Boots, Cleansed Vilebranch Icon → Volunteer's Lucky Seal, Cleansed Vilebranch Medallion → Enriched Seal, Grave Scepter → Elderwild Construction Hammer, Antique Bulwark → Sacred Protector |
-| Protection Warrior | Horn of Ve'han → Artifact Seeker's Pendant, Legplates of Valor → Enriched Thorium Leggings, Volunteer's Lucky Seal → Smotts' Compass, Greatflank Flayer → Bagh Nakh |
+| Protection Warrior | Horn of Ve'han → Artifact Seeker's Pendant, Legplates of Valor → Enriched Thorium Leggings, Volunteer's Lucky Seal → Smotts' Compass, Scarlet Kris → Bagh Nakh |
 | Bear Druid | Warden's Leather Bracers → Elven Chain Wristguards, Cleansed Vilebranch Medallion → Enriched Seal |
 
-| Tank (master 9a8624af9) | Threat set: threat / damage taken / TMI | Survival set: threat / damage taken / TMI |
+| Tank (master 9a8624af9; Warrior threat set: df57e2571) | Threat set: threat / damage taken / TMI | Survival set: threat / damage taken / TMI |
 | --- | --- | --- |
 | Protection Paladin, live | 1,136.9 / 342.7 / 54.0 | 1,081.0 / 333.1 / 45.8 |
-| Protection Warrior | 1,447.7 / 299.7 / 41 | 1,382.3 / 292.4 / 41 |
+| Protection Warrior | 1,503.0 / 305.8 / 43 | 1,382.3 / 292.4 / 41 |
 | Bear Druid | 1,754.7 / 393.3 / 43.9 | 1,717.9 / 392.5 / 42.7 |
 
 The sets were searched on master 8298ab833, with the Paladin without consumables. The items do not change on master 9a8624af9.
@@ -46,7 +48,7 @@ The sets were searched on master 8298ab833, with the Paladin without consumables
 | Tank | Replaced items | New items |
 | --- | --- | --- |
 | Protection Paladin | Premier Chevalier Shoulders, Heavy Thorium Gauntlets, Soulforge Belt, Depleted Thorium Sabatons, Ring of Awareness, Arena Grand Master, Defender's Grip Stabilizer, Dark Iron Destroyer, Force Reactive Disk, Libram of Fervor | Lightforge Spaulders, Lightforge Gauntlets, Vindicator's Belt, Warder's Sabatons, Initiate's Signet of Vigilance, Cleansed Vilebranch Icon, Cleansed Vilebranch Medallion, Grave Scepter, Antique Bulwark, Libram of Holy Alacrity |
-| Protection Warrior | Beads of Ogre Might, Belt of Heroism, Hyperion Legplates, Commander's Boots, Ring of Awareness, Defender's Grip Stabilizer, Annihilator, Archstrike Bow | Horn of Ve'han, Valiant's Waistguard, Legplates of Valor, Boots of Valor, Initiate's Signet of Vigilance, Volunteer's Lucky Seal, Greatflank Flayer, Gorewood Bow |
+| Protection Warrior | Beads of Ogre Might, Belt of Heroism, Hyperion Legplates, Commander's Boots, Ring of Awareness, Defender's Grip Stabilizer, Annihilator, Archstrike Bow | Horn of Ve'han, Valiant's Waistguard, Legplates of Valor, Boots of Valor, Initiate's Signet of Vigilance, Volunteer's Lucky Seal, Scarlet Kris (Greatflank Flayer until 6 November), Gorewood Bow |
 | Bear Druid | Amulet of the Darkmoon, Theramore Pauldrons, Premier Knight-Captain's Beasthide Bracers, Timbermaw Brawlers, Sentinel's Leather Pants, Dunestalker's Boots, Signet Ring of the Bronze Dragonflight, Heavy Dark Iron Ring, Stormpike Insignia Rank 6, Rune of the Guard Captain, Premier Grand Marshal's Battle Hammer | Artifact Seeker's Pendant, Warden's Leather Shoulders, Warden's Leather Bracers, Warden's Leather Gauntlets, Warbear Woolies, Warden's Leather Boots, Ring of Protection, Initiate's Signet of Vigilance, Glimmering Mithril Insignia, Cleansed Vilebranch Medallion, Enchanted Battlehammer |
 | Shockadin | Blessed Band of Light, Channeler's Ring, Jewel of the Guard Captain, Adaptive Combat Assistant, Libram of Law | Initiate's Signet of Ferocity, Initiate's Signet of Brilliance, Cleansed Vilebranch Icon, Frozen Heart of the Mountain, Libram of Holy Alacrity |
 
@@ -60,7 +62,7 @@ These are the results of the search, on master 8298ab833, before the hotfixes of
 | Protection Warrior | 964.7 / 286.1 / 47 | 1,002.1 / 299.7 / 41 |
 | Bear Druid | 846.6 / 382.6 / 40.0 | 779.0 / 393.3 / 43.9 |
 
-- **On master 9a8624af9** (native multipliers, Paladin tank consumables), the Warrior has 1,448, the Druid 1,755 (121% of the Warrior) and the live Paladin 1,137 (79%).
+- **On master 9a8624af9** (native multipliers, Paladin tank consumables), the Warrior had 1,448, the Druid 1,755 (121% of the Warrior) and the live Paladin 1,137 (79%). On master df57e2571, the Warrior has 1,503 with Scarlet Kris. The Druid then has 117% of the Warrior and the live Paladin 76%.
 - **Shockadin:** 851.4 DPS with the default set, 839.9 with the item pool set (−1.4%).
 - **The Druid loses the most.** Its default set has the most PvP and reputation items.
 - **The search is greedy.** It changes one slot at a time and keeps the other items. A full search of all slots together can give a slightly better set.
