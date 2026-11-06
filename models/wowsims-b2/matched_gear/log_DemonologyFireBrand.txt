@@ -1,10 +1,7 @@
-EP {0: 0.0, 1: 0.0, 3: 0.133, 5: 0.656, 7: 0.524, 11: 0.178, 14: 0.0, 15: 0.0, 17: 0.534, 18: 0.223, 19: 0.064, 20: 0.0, 13: 0.029} {0: 0.0, 1: 0.0, 2: 0.0}
-cands {0: 19, 1: 16, 2: 15, 3: 18, 4: 15, 5: 15, 6: 15, 7: 15, 8: 15, 9: 17, 10: 15, 11: 15, 12: 37, 13: 37, 14: 25, 15: 26, 16: 11}
-start 560.2
-  pass0 slot0: Dreadmist Mask -> Spellpower Goggles Xtreme Plus 560.2->565.4
-  pass0 slot5: Dreadmist Bracers -> Runecloth Cuffs 565.4->568.5
-  pass0 slot6: Dreadmist Wraps -> Inferno Gloves 568.5->578.6
-  pass0 slot7: Dreadmist Belt -> Belt of the Archmage 578.6->589.6
-FINAL DemonologyFireBrand 589.1 +- 0.3
-SET Spellpower Goggles Xtreme Plus(54) ; Archlight Talisman(60) ; Dreadmist Mantle(60) ; Hide of the Wild(62) ; Robe of the Void(62) ; Runecloth Cuffs(57) ; Inferno Gloves(62) ; Belt of the Archmage(62) ; Dreadmist Leggings(61) ; Dreadmist Sandals(59) ; Jereman's Bauble(61) ; Band of the Unicorn(48) ; Cleansed Vilebranch Icon(51) ; Frozen Heart of the Mountain(55) ; Notched Ritual Rib(45) ; Truesilver Conduit(50) ; Brilliant Wand(60)
-ILVL 57.0 epics 3
+EP {0: 0.0, 1: 0.0, 3: 0.186, 5: 0.67, 7: 0.536, 11: 0.142, 14: 0.0, 15: 0.0, 17: 0.735, 18: 0.289, 19: 0.133, 20: 0.0, 13: 0.063} {0: 0.0, 1: 0.0, 2: 0.0}
+cands {0: 19, 1: 16, 2: 15, 3: 18, 4: 15, 5: 15, 6: 15, 7: 15, 8: 15, 9: 17, 10: 15, 11: 15, 12: 41, 13: 41, 14: 26, 15: 27, 16: 12}
+start 588.9
+  pass0 slot15: Truesilver Conduit -> Lapidis Tankard of Tidesippe 588.9->593.5
+FINAL DemonologyFireBrand 593.2 +- 0.3
+SET Spellpower Goggles Xtreme Plus(54) ; Archlight Talisman(60) ; Dreadmist Mantle(60) ; Hide of the Wild(62) ; Robe of the Void(62) ; Runecloth Cuffs(57) ; Inferno Gloves(62) ; Belt of the Archmage(62) ; Dreadmist Leggings(61) ; Dreadmist Sandals(59) ; Jereman's Bauble(61) ; Band of the Unicorn(48) ; Cleansed Vilebranch Icon(51) ; Frozen Heart of the Mountain(55) ; Notched Ritual Rib(45) ; Lapidis Tankard of Tidesippe(59) ; Brilliant Wand(60)
+ILVL 57.5 epics 3

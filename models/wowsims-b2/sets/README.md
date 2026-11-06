@@ -1,11 +1,11 @@
-# wowsims links of the tank and builds sets (4 November 2026)
+# wowsims links of the tank and builds sets (4 November 2026, Warrior item pool set: 6 November)
 
 The `sets/` pages at the root of the repository open these sets in wowsims Forever: https://ralgathor.github.io/forever-paladin-feedback/sets/
 
 | Page | Sim | Check on commit 9a8624af9 (tanks) or 8298ab833 (builds) |
 | --- | --- | --- |
 | tank-pool-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_prot.json | 1,136.9 threat per sec |
-| tank-pool-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_war.json | 1,447.7 threat per sec |
+| tank-pool-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_war.json | 1,503.0 threat per sec (commit df57e2571) |
 | tank-pool-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_bear.json | 1,754.7 threat per sec |
 | tank-surv-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_prot_surv.json | 1,081.0 threat per sec |
 | tank-surv-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_war_surv.json | 1,382.3 threat per sec |
@@ -21,5 +21,7 @@ Steps:
 1. Set up wowsims as in `../run.sh`, on master commit 9a8624af9 with `../patches/talents-9a8624af9.patch` (see `../tank_gear/run_pool.sh`).
 2. Run each test of the table with `FEEDBACK_DUMP=<dir>/<file>.json` and no `PROPOSE` flag. For the item pool sets, also set `FEEDBACK_ITEMS`. The file names are in `jobs.json`.
 3. Copy `zzsets_main.go` to `cmd/zzsets/main.go` and run `go run -tags with_db ./cmd/zzsets <dir> jobs.json`. It prints the links. It also decodes each link and runs it again: the values of the table come from these runs.
+
+On 6 November 2026, the Warrior item pool set changed (Scarlet Kris, `../tank_gear/README.md`). Its link comes from master commit df57e2571 with the same steps. The other links do not change.
 
 The links have the live talents and no proposal. On commit 9a8624af9, wowsims gives the Warrior and the Druid the threat multipliers of the hotfixes of 4 November (Defensive Stance +80%, Defiance 20%, Bear Form +115%). The Paladin links have the tank consumables of `feedbackConsumables` (`../go/feedback_prot_test.go`).

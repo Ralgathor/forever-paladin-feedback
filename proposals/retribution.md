@@ -42,15 +42,15 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 - **Model.** models/beta-30-oct/retribution_b2.py. It uses the wowsims default Retribution build of 1 November (14/6/31) and the wowsims rotation: plan 1 + 3 (see Mana with Unsealed Wrath).
 - **Start value.** wowsims Forever master commit 8298ab833 (4 November 2026, game files of client 1.60.1.70755) gives 910 DPS at fresh level 60, with the item pool Retribution set (the set of the pure average, Analysis, Damage, part 7). With the wowsims default set, it gives 938. Build 70755 adds 5 Vengeance stacks and Holy damage to Two-Handed Weapon Specialization: +3.5% with the default set against 906 DPS on 1 November (Beta test results, W15). The model gives the increase with gear. The pure average table uses 910. The six item pool sets open in wowsims from the [item pool sets](https://ralgathor.github.io/forever-paladin-feedback/sets/) page. The Seal plan tables below use the same item pool set.
 - **Increase with gear.** Retribution damage increases less with gear than Fury damage: ×1.65 against ×1.73 from fresh level 60 to Naxxramas. Fixed base values of the Seals, Judgement and Holy Strike cause this (see Analysis, Damage, part 3).
-- **Pure average.** wowsims Forever, with the same pre-raid item pool, enchants and consumables for each spec (Analysis, Damage, part 7). Fury and Combat Rogue use the increase of the model. Hunter, Mage and Warlock increase ×1.75 to Naxxramas (the main case of Analysis, Damage, part 1).
+- **Pure average.** wowsims Forever, with the same pre-raid item pool, enchants and consumables for each spec (Analysis, Damage, part 7). The pure sets come from a new search on master commit df57e2571 (6 November 2026). This commit adds 2,447 items. Fury and Combat Rogue use the increase of the model. Hunter, Mage and Warlock increase ×1.75 to Naxxramas (the main case of Analysis, Damage, part 1).
 
 | Build | Fresh level 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
 | --- | --- | --- | --- | --- | --- |
-| Live | 112% | 111% | 111% | 109% | 108% |
+| Live | 111% | 110% | 110% | 108% | 107% |
 
-- **Result.** The live version is above the hybrid target (95%) at all gear levels: 17 points at fresh level 60 and 13 points in Naxxramas. Thus, Retribution needs no damage proposal.
+- **Result.** The live version is above the hybrid target (95%) at all gear levels: 16 points at fresh level 60 and 12 points in Naxxramas. Thus, Retribution needs no damage proposal.
 - **Balance lever.** If raid logs confirm the wowsims level, decrease Sacred Arbiter to +10% first: −0.7% damage in wowsims (W15). This change alone does not bring Retribution to 95%.
-- **Other cases.** Hunter, Mage and Warlock ×1.60: live 112–114%. ×1.90: live 102–112%.
+- **Other cases.** Hunter, Mage and Warlock ×1.60: live 111–113%. ×1.90: live 101–111%.
 
 ## Mana with Unsealed Wrath (W29)
 

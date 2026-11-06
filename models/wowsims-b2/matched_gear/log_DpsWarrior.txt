@@ -1,11 +1,10 @@
-EP {0: 0.325, 1: 0.118, 3: 0.0, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.148, 15: 0.0, 17: 0.206, 18: 0.16, 19: 0.109, 20: 0.022, 13: 0.0} {0: 0.0, 1: 0.0, 2: 0.0}
-cands {0: 20, 1: 15, 2: 15, 3: 18, 4: 19, 5: 15, 6: 19, 7: 16, 8: 15, 9: 19, 10: 16, 11: 16, 12: 38, 13: 38, 14: 39, 15: 34, 16: 20}
-start 560.4
-  pass0 slot1: Artifact Seeker's Pendant -> Horn of Ve'han 560.4->562.8
-  pass0 slot11: White Bone Band -> Initiate's Signet of Brilliance 562.8->565.7
-  pass0 slot14: Belgrom's Hammer -> Frostguard 565.7->583.9
-  pass0 slot15: Ornate Thorium Handaxe -> Heartseeker 583.9->591.3
-  pass1 slot5: Wild Wristguards -> Bladebane Armguards 591.3->593.5
-FINAL DpsWarrior 592.9 +- 0.4
-SET Lionheart Helm(61) ; Horn of Ve'han(61) ; Hermit's Pauldron(61) ; Shifting Cloak(62) ; Dawn Armor(61) ; Bladebane Armguards(49) ; Devilsaur Gauntlets(58) ; Valiant's Waistguard(60) ; Warbear Woolies(57) ; Scalegut Treaders(58) ; Initiate's Signet of Ferocity(63) ; Initiate's Signet of Brilliance(63) ; Frozen Heart of the Mountain(55) ; Cleansed Vilebranch Medallion(51) ; Frostguard(63) ; Heartseeker(63) ; Vicious Throwing Stars(50)
-ILVL 58.6 epics 5
+EP {0: 0.569, 1: 0.521, 3: 0.0, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.259, 15: 0.0, 17: 0.452, 18: 0.655, 19: 0.431, 20: 0.083, 13: 0.0} {0: 3.0097341920432314, 1: 0.8085539785414312, 2: 0.0}
+cands {0: 20, 1: 16, 2: 15, 3: 18, 4: 19, 5: 15, 6: 19, 7: 16, 8: 15, 9: 19, 10: 16, 11: 16, 12: 41, 13: 41, 14: 30, 15: 36, 16: 23}
+start 612.3
+  pass0 slot4: Dawn Armor -> Timbermaw Tunic 612.3->614.3
+  pass0 slot14: Frostguard -> Bagh Nakh 614.3->619.1
+  pass0 slot16: Vicious Throwing Stars -> Skypierce Javelin 619.1->620.5
+  pass1 slot5: Bladebane Armguards -> Deepfury Bracers 620.5->622.3
+FINAL DpsWarrior 620.8 +- 0.4
+SET Lionheart Helm(61) ; Horn of Ve'han(61) ; Hermit's Pauldron(61) ; Shifting Cloak(62) ; Timbermaw Tunic(61) ; Deepfury Bracers(55) ; Devilsaur Gauntlets(58) ; Valiant's Waistguard(60) ; Warbear Woolies(57) ; Scalegut Treaders(58) ; Initiate's Signet of Ferocity(63) ; Initiate's Signet of Brilliance(63) ; Frozen Heart of the Mountain(55) ; Cleansed Vilebranch Medallion(51) ; Bagh Nakh(63) ; Heartseeker(63) ; Skypierce Javelin(45)
+ILVL 58.6 epics 4
