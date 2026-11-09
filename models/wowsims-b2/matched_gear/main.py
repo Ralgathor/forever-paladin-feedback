@@ -19,7 +19,7 @@ def fits(it,slot):
         return t==13 and it.get('handType') in (2,3) and it.get('weaponType') not in (5,7)
     return t==14
 items=[{'id':x['id']} if x.get('id') and x['id'] in by and pre_raid(by[x['id']]) and not x.get('randomSuffix') else {} for x in start]
-# SEED=<set file>: start from that set (the run of 6 November 2026 starts from the sets of sets_9a8624af9/, the run of 8 November from sets_df57e2571/)
+# SEED=<set file>: start from that set (the run of 6 November 2026 starts from the sets of sets_9a8624af9/, the run of 8 November from sets_df57e2571/, the run of 9 November from sets_ae9b8c23a/)
 if os.environ.get('SEED'): items=[{'id':x['id']} if x.get('id') else {} for x in json.load(open(os.environ['SEED']))['items']]
 log=open(f'/tmp/ms/log_{spec}.txt','w')
 def P(*a):

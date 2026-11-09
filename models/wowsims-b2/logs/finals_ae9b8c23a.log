@@ -1,0 +1,93 @@
+# wowsims Forever master ae9b8c23a (hotfixes of 7 and 8 November), item pool sets (search.py: FEEDBACK_ITEMS of matched_gear/set_Retribution.json and tank_gear/set_prot.json), 3 min, 3,000 iterations. Protection: tank consumables (feedbackConsumables). The runs of 4 November: logs/finals_9a8624af9.log.
+BUILD ret raid beta 050250002-501-05233011201301351 {'dps': 948.6, 'oom': 0.0}
+BUILD ret raid beta 050150001-503-15233011101301351 {'dps': 950.2, 'oom': 0.0}
+BUILD ret raid prop 050250002-501-05233011201301351 {'dps': 948.0, 'oom': 0.0}
+BUILD ret raid prop 050150002-502-05233011201301351 {'dps': 950.5, 'oom': 0.0}
+BUILD ret fresh beta 050250002-501-05233011201301351 {'dps': 305.1, 'oom': 87.8}
+BUILD ret fresh beta 050150001-503-15233011101301351 {'dps': 296.2, 'oom': 95.6}
+BUILD ret fresh prop 050250002-501-05233011201301351 {'dps': 302.5, 'oom': 88.5}
+BUILD ret fresh prop 050050002-503-15233011101301351 {'dps': 296.7, 'oom': 94.1}
+BUILD prot raid beta 050050002-05302102213301531-502 {'dps': 490.6, 'tps': 1228.5, 'dtps': 329.2, 'tmi': 48.95, 'crush': 6.6, 'std': 6.03}
+BUILD prot raid beta 05005-05302102213201531-5023 {'dps': 512.2, 'tps': 1277.5, 'dtps': 333.4, 'tmi': 49.5, 'crush': 7.0, 'std': 6.17}
+BUILD prot raid beta -05302102313501531-52233000001 {'dps': 494.9, 'tps': 1241.9, 'dtps': 319.8, 'tmi': 47.52, 'crush': 5.9, 'std': 5.71}
+BUILD prot raid prop -3530110213501531-54233 {'dps': 495.7, 'tps': 1240.1, 'dtps': 303.1, 'tmi': 41.66, 'crush': 1.0, 'std': 3.85}
+BUILD prot raid prop -3530110213501531-53233000001 {'dps': 502.8, 'tps': 1263.8, 'dtps': 303.1, 'tmi': 41.66, 'crush': 1.0, 'std': 3.85}
+WEIGHTS ret raid beta 050250002-501-05233011201301351 base={'dps': 948.6}
+  Strength: dps=+0.520
+  Agility: dps=+0.385
+  Intellect: dps=+0.320
+  Spell damage: dps=+0.412
+  Attack power: dps=+0.215
+  Hit rating: dps=+0.210
+  Crit rating: dps=+0.540
+  Haste rating: dps=+0.220
+  Expertise rating: dps=+1.030
+WEIGHTS ret raid prop 050250002-501-05233011201301351 base={'dps': 948.0}
+  Strength: dps=+0.520
+  Agility: dps=+0.385
+  Intellect: dps=+0.320
+  Spell damage: dps=+0.412
+  Attack power: dps=+0.215
+  Hit rating: dps=+0.230
+  Crit rating: dps=+0.540
+  Haste rating: dps=+0.300
+  Expertise rating: dps=+1.040
+WEIGHTS ret fresh beta 050250002-501-05233011201301351 base={'dps': 305.1}
+  Strength: dps=+0.225
+  Agility: dps=+0.145
+  Intellect: dps=+0.240
+  Spell damage: dps=+0.182
+  Attack power: dps=+0.102
+  Hit rating: dps=+0.100
+  Crit rating: dps=+0.220
+  Haste rating: dps=-0.060
+  Expertise rating: dps=+0.320
+WEIGHTS prot raid beta 050050002-05302102213301531-502 base={'dps': 490.6, 'tps': 1228.5, 'dtps': 329.2, 'tmi': 48.95}
+  Strength: dps=+0.200 tps=+0.330 dtps=-0.025 tmi=-0.003
+  Agility: dps=+0.120 tps=+0.225 dtps=-0.445 tmi=-0.046
+  Stamina: dps=+0.000 tps=+0.000 dtps=+0.000 tmi=-0.109
+  Spell damage: dps=+0.312 tps=+0.830 dtps=-0.020 tmi=-0.003
+  Hit rating: dps=+0.350 tps=+0.880 dtps=+0.010 tmi=-0.004
+  Expertise rating: dps=+0.720 tps=+1.610 dtps=-0.090 tmi=-0.032
+  Defense rating: dps=-0.100 tps=-0.260 dtps=-0.970 tmi=-0.140
+  Block rating: dps=+0.190 tps=+0.530 dtps=-0.400 tmi=-0.085
+  Block value: dps=+0.000 tps=+0.000 dtps=-0.310 tmi=-0.039
+  Dodge rating: dps=-0.060 tps=-0.170 dtps=-0.540 tmi=-0.038
+  Parry rating: dps=-0.020 tps=-0.050 dtps=-0.390 tmi=-0.019
+  Armor: dps=+0.000 tps=+0.000 dtps=-0.025 tmi=-0.005
+WEIGHTS prot raid beta -05302102313501531-52233000001 base={'dps': 494.9, 'tps': 1241.9, 'dtps': 319.8, 'tmi': 47.52}
+  Strength: dps=+0.205 tps=+0.345 dtps=-0.010 tmi=-0.001
+  Agility: dps=+0.145 tps=+0.295 dtps=-0.370 tmi=-0.049
+  Stamina: dps=+0.005 tps=+0.005 dtps=+0.005 tmi=-0.106
+  Spell damage: dps=+0.308 tps=+0.820 dtps=-0.015 tmi=-0.003
+  Hit rating: dps=+0.340 tps=+0.850 dtps=+0.010 tmi=+0.009
+  Expertise rating: dps=+0.750 tps=+1.680 dtps=-0.190 tmi=-0.037
+  Defense rating: dps=-0.030 tps=-0.080 dtps=-0.880 tmi=-0.139
+  Block rating: dps=+0.300 tps=+0.750 dtps=-0.330 tmi=-0.078
+  Block value: dps=+0.000 tps=+0.000 dtps=-0.310 tmi=-0.040
+  Dodge rating: dps=+0.000 tps=+0.000 dtps=-0.510 tmi=-0.068
+  Parry rating: dps=+0.020 tps=+0.040 dtps=-0.400 tmi=-0.062
+  Armor: dps=+0.000 tps=+0.000 dtps=-0.025 tmi=-0.005
+WEIGHTS prot raid prop -3530110213501531-54233 base={'dps': 495.7, 'tps': 1240.1, 'dtps': 303.1, 'tmi': 41.66}
+  Strength: dps=+0.200 tps=+0.325 dtps=-0.015 tmi=-0.002
+  Agility: dps=+0.085 tps=+0.150 dtps=-0.330 tmi=-0.034
+  Stamina: dps=+0.000 tps=+0.000 dtps=-0.005 tmi=-0.089
+  Spell damage: dps=+0.303 tps=+0.805 dtps=-0.018 tmi=-0.002
+  Hit rating: dps=+0.320 tps=+0.830 dtps=+0.000 tmi=-0.005
+  Expertise rating: dps=+0.700 tps=+1.610 dtps=-0.210 tmi=-0.047
+  Defense rating: dps=-0.210 tps=-0.510 dtps=-0.590 tmi=-0.060
+  Block rating: dps=+0.010 tps=+0.030 dtps=+0.010 tmi=-0.008
+  Block value: dps=+0.000 tps=+0.000 dtps=-0.355 tmi=-0.054
+  Dodge rating: dps=-0.150 tps=-0.350 dtps=-0.410 tmi=-0.040
+  Parry rating: dps=-0.080 tps=-0.220 dtps=-0.350 tmi=-0.028
+  Armor: dps=+0.000 tps=+0.000 dtps=-0.023 tmi=-0.004
+# Extra builds (same settings, 3,000 iterations): PI1, PT1 with Benediction 5 and Deflection 4, B2T (Analysis model tank), RB1/RB2/RB3/14-5-32 with the withdrawn C1
+BUILD prot raid prop 05005-3530110213201531-5023 {'dps': 520.8, 'tps': 1302.8, 'dtps': 307.9, 'tmi': 41.94, 'crush': 1.1}
+BUILD prot raid prop -3530110213501531-45233 {'dps': 496.6, 'tps': 1242.5, 'dtps': 307.4, 'tmi': 41.94, 'crush': 1.0}
+BUILD prot raid beta -25301102513501531-05233 {'dps': 489.6, 'tps': 1222.1, 'dtps': 345.5, 'tmi': 49.61, 'crush': 9.5}
+BUILD ret raid prop-C1 050250002-501-05233011201301351 {'dps': 996.2, 'oom': 0.0}
+BUILD ret raid prop -50322130101000002-05233001211301351 {'dps': 868.3, 'oom': 7.4}
+BUILD ret raid prop-C1 -50322130101000002-05233001211301351 {'dps': 911.8, 'oom': 7.3}
+BUILD ret raid prop -50322130101005002-052330012213013 {'dps': 693.5, 'oom': 0.0}
+BUILD ret raid prop 050250002-5-05233301101301351 {'dps': 931.7, 'oom': 0.0}
+BUILD ret raid prop-C1 050250002-5-05233301101301351 {'dps': 980.4, 'oom': 0.0}

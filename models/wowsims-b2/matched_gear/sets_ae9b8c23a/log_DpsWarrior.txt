@@ -1,0 +1,12 @@
+EP {0: 0.564, 1: 0.506, 3: 0.0, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.256, 15: 0.0, 17: 0.639, 18: 0.699, 19: 0.391, 20: 0.085, 13: 0.0} {0: 2.931295208883978, 1: 0.8027066125343936, 2: 0.0}
+cands {0: 20, 1: 16, 2: 15, 3: 20, 4: 21, 5: 15, 6: 19, 7: 17, 8: 16, 9: 21, 10: 17, 11: 17, 12: 61, 13: 61, 14: 30, 15: 37, 16: 32}
+start 622.3
+  pass0 slot1: Horn of Ve'han -> Sentimental Locket 622.3->623.8
+  pass0 slot3: Shifting Cloak -> Cape of the Black Baron 623.8->628.0
+  pass0 slot11: Initiate's Signet of Brilliance -> Magni's Will 628.0->632.1
+  pass0 slot12: Frozen Heart of the Mountain -> Hand of Justice 632.1->644.6
+  pass0 slot15: Heartseeker -> Mirah's Song 644.6->649.2
+  pass1 slot5: Deepfury Bracers -> Warpwood Bracers 649.2->650.7
+FINAL DpsWarrior 650.8 +- 0.5
+SET Lionheart Helm(61) ; Sentimental Locket(54) ; Hermit's Pauldron(61) ; Cape of the Black Baron(63) ; Timbermaw Tunic(61) ; Warpwood Bracers(57) ; Devilsaur Gauntlets(58) ; Valiant's Waistguard(60) ; Warbear Woolies(57) ; Scalegut Treaders(58) ; Initiate's Signet of Ferocity(63) ; Magni's Will(60) ; Hand of Justice(58) ; Cleansed Vilebranch Medallion(51) ; Bagh Nakh(63) ; Mirah's Song(61) ; Skypierce Javelin(45)
+ILVL 58.3 epics 3

@@ -1,0 +1,10 @@
+EP {0: 0.256, 1: 0.448, 3: 0.0, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.233, 15: 0.0, 17: 0.438, 18: 0.369, 19: 0.285, 20: 0.077, 13: 0.0} {0: 2.277039064695464, 1: 0.7559727757291398, 2: 0.0}
+cands {0: 19, 1: 16, 2: 15, 3: 19, 4: 16, 5: 15, 6: 16, 7: 15, 8: 16, 9: 20, 10: 17, 11: 17, 12: 61, 13: 61, 14: 32, 15: 35, 16: 32}
+start 562.5
+  pass0 slot3: Shifting Cloak -> Cape of the Black Baron 562.5->566.3
+  pass0 slot11: White Bone Band -> Blackstone Ring 566.3->569.8
+  pass0 slot12: Cleansed Vilebranch Medallion -> Hand of Justice 569.8->579.3
+  pass0 slot16: Vicious Throwing Stars -> Precisely Calibrated Boomstick 579.3->581.6
+FINAL Rogue 580.2 +- 0.3
+SET Shadowcraft Cap(62) ; Artifact Seeker's Pendant(58) ; Shadowcraft Spaulders(60) ; Cape of the Black Baron(63) ; Dawn Armor(61) ; Shadowcraft Bracers(57) ; Devilsaur Gauntlets(58) ; Assassin's Waistguard(60) ; Warbear Woolies(57) ; Mongoose Boots(62) ; Initiate's Signet of Ferocity(63) ; Blackstone Ring(54) ; Hand of Justice(58) ; Molten Heart of the Mountain(55) ; Bagh Nakh(63) ; Masterwork Stormhammer(63) ; Precisely Calibrated Boomstick(48)
+ILVL 58.9 epics 3

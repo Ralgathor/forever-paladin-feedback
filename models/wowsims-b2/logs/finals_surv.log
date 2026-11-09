@@ -1,49 +1,9 @@
-# wowsims Forever master ae9b8c23a (hotfixes of 7 and 8 November), survival tank set (search.py: TANK_SET=surv, FEEDBACK_ITEMS of tank_gear/set_prot_surv.json), 3 min, 3,000 iterations. Tank consumables (feedbackConsumables). The runs of 4 November: logs/finals_surv_9a8624af9.log.
-BUILD prot raid beta 050050002-05302102213301531-502 {'dps': 480.2, 'tps': 1204.1, 'dtps': 317.6, 'tmi': 45.5, 'crush': 5.6, 'std': 5.6}
-BUILD prot raid beta 05005-05302102213201531-5023 {'dps': 500.4, 'tps': 1249.2, 'dtps': 320.4, 'tmi': 46.01, 'crush': 5.9, 'std': 5.46}
-BUILD prot raid beta -05302102313501531-52233000001 {'dps': 485.7, 'tps': 1219.9, 'dtps': 307.7, 'tmi': 43.99, 'crush': 4.8, 'std': 5.45}
-BUILD prot raid prop -3530110213501531-54233 {'dps': 485.8, 'tps': 1216.3, 'dtps': 295.0, 'tmi': 39.44, 'crush': 0.9, 'std': 3.52}
-BUILD prot raid prop -3530110213501531-53233000001 {'dps': 492.7, 'tps': 1239.6, 'dtps': 295.0, 'tmi': 39.44, 'crush': 0.9, 'std': 3.52}
-WEIGHTS prot raid beta 050050002-05302102213301531-502 base={'dps': 480.2, 'tps': 1204.1, 'dtps': 317.6, 'tmi': 45.5}
-  Strength: dps=+0.210 tps=+0.345 dtps=-0.010 tmi=-0.002
-  Agility: dps=+0.170 tps=+0.345 dtps=-0.435 tmi=-0.050
-  Stamina: dps=+0.000 tps=+0.000 dtps=+0.000 tmi=-0.098
-  Spell damage: dps=+0.310 tps=+0.825 dtps=-0.018 tmi=-0.003
-  Hit rating: dps=+0.540 tps=+1.370 dtps=+0.040 tmi=+0.006
-  Expertise rating: dps=+0.670 tps=+1.490 dtps=-0.170 tmi=-0.029
-  Defense rating: dps=+0.010 tps=+0.040 dtps=-0.990 tmi=-0.141
-  Block rating: dps=+0.300 tps=+0.750 dtps=-0.410 tmi=-0.073
-  Block value: dps=+0.000 tps=+0.000 dtps=-0.310 tmi=-0.040
-  Dodge rating: dps=+0.020 tps=+0.000 dtps=-0.550 tmi=-0.052
-  Parry rating: dps=+0.010 tps=-0.010 dtps=-0.370 tmi=-0.033
-  Armor: dps=+0.000 tps=+0.000 dtps=-0.024 tmi=-0.004
-WEIGHTS prot raid beta -05302102313501531-52233000001 base={'dps': 485.7, 'tps': 1219.9, 'dtps': 307.7, 'tmi': 43.99}
-  Strength: dps=+0.205 tps=+0.345 dtps=-0.010 tmi=-0.002
-  Agility: dps=+0.135 tps=+0.275 dtps=-0.390 tmi=-0.044
-  Stamina: dps=+0.000 tps=+0.000 dtps=+0.000 tmi=-0.096
-  Spell damage: dps=+0.305 tps=+0.815 dtps=-0.015 tmi=-0.003
-  Hit rating: dps=+0.520 tps=+1.320 dtps=+0.020 tmi=-0.009
-  Expertise rating: dps=+0.580 tps=+1.330 dtps=-0.140 tmi=-0.018
-  Defense rating: dps=-0.090 tps=-0.200 dtps=-0.960 tmi=-0.132
-  Block rating: dps=+0.180 tps=+0.520 dtps=-0.490 tmi=-0.089
-  Block value: dps=+0.000 tps=+0.000 dtps=-0.310 tmi=-0.041
-  Dodge rating: dps=-0.060 tps=-0.150 dtps=-0.540 tmi=-0.051
-  Parry rating: dps=-0.040 tps=-0.130 dtps=-0.410 tmi=-0.041
-  Armor: dps=+0.001 tps=+0.000 dtps=-0.024 tmi=-0.004
-WEIGHTS prot raid prop -3530110213501531-54233 base={'dps': 485.8, 'tps': 1216.3, 'dtps': 295.0, 'tmi': 39.44}
-  Strength: dps=+0.200 tps=+0.325 dtps=-0.015 tmi=-0.002
-  Agility: dps=+0.060 tps=+0.070 dtps=-0.305 tmi=-0.031
-  Stamina: dps=-0.005 tps=-0.005 dtps=-0.005 tmi=-0.082
-  Spell damage: dps=+0.300 tps=+0.800 dtps=-0.017 tmi=-0.002
-  Hit rating: dps=+0.420 tps=+1.040 dtps=+0.020 tmi=+0.001
-  Expertise rating: dps=+0.580 tps=+1.270 dtps=-0.140 tmi=-0.026
-  Defense rating: dps=-0.240 tps=-0.620 dtps=-0.530 tmi=-0.054
-  Block rating: dps=-0.020 tps=-0.050 dtps=-0.030 tmi=-0.006
-  Block value: dps=+0.000 tps=+0.000 dtps=-0.350 tmi=-0.053
-  Dodge rating: dps=-0.170 tps=-0.420 dtps=-0.360 tmi=-0.033
-  Parry rating: dps=-0.140 tps=-0.360 dtps=-0.290 tmi=-0.028
-  Armor: dps=+0.000 tps=+0.000 dtps=-0.022 tmi=-0.004
-# Extra builds (same settings, 3,000 iterations): PI1, PT1 with Benediction 5 and Deflection 4, B2T
-BUILD prot raid prop 05005-3530110213201531-5023 {'dps': 509.2, 'tps': 1274.8, 'dtps': 300.5, 'tmi': 39.88, 'crush': 1.0}
-BUILD prot raid prop -3530110213501531-45233 {'dps': 486.8, 'tps': 1218.9, 'dtps': 300.1, 'tmi': 39.96, 'crush': 1.0}
-BUILD prot raid beta -25301102513501531-05233 {'dps': 479.7, 'tps': 1198.8, 'dtps': 333.9, 'tmi': 46.56, 'crush': 8.5}
+# wowsims Forever master 9f254e8d8 (hotfix push 113823 and the Windfury Totem rule of 8 November), survival tank set (search.py: TANK_SET=surv, FEEDBACK_ITEMS of tank_gear/set_prot_surv.json), 3 min, 3,000 iterations. Tank consumables (feedbackConsumables). The runs of 8 November: logs/finals_surv_ae9b8c23a.log.
+BUILD prot raid beta 050050002-05302102213301531-502 {'dps': 465.8, 'tps': 1172.7, 'dtps': 316.6, 'tmi': 45.51, 'crush': 5.7, 'std': 5.59}
+BUILD prot raid beta 05005-05302102213201531-5023 {'dps': 484.4, 'tps': 1213.7, 'dtps': 320.5, 'tmi': 46.14, 'crush': 6.1, 'std': 5.65}
+BUILD prot raid beta -05302102313501531-52233000001 {'dps': 470.9, 'tps': 1188.1, 'dtps': 307.0, 'tmi': 43.97, 'crush': 4.9, 'std': 5.42}
+BUILD prot raid prop -3530110213501531-54233 {'dps': 470.4, 'tps': 1183.4, 'dtps': 295.0, 'tmi': 39.45, 'crush': 0.9, 'std': 3.58}
+BUILD prot raid prop -3530110213501531-53233000001 {'dps': 477.4, 'tps': 1206.7, 'dtps': 295.0, 'tmi': 39.45, 'crush': 0.9, 'std': 3.58}
+BUILD prot raid prop 05005-3530110213201531-5023 {'dps': 494.1, 'tps': 1241.2, 'dtps': 299.7, 'tmi': 39.78, 'crush': 0.9, 'std': 3.65}
+BUILD prot raid prop -3530110213501531-45233 {'dps': 471.8, 'tps': 1186.5, 'dtps': 298.6, 'tmi': 39.7, 'crush': 0.9, 'std': 3.55}
+BUILD prot raid beta -25301102513501531-05233 {'dps': 465.0, 'tps': 1167.7, 'dtps': 333.3, 'tmi': 46.38, 'crush': 8.6, 'std': 5.27}
