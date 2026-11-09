@@ -40,17 +40,17 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 ## Retribution against the pure average
 
 - **Model.** models/beta-30-oct/retribution_b2.py. It uses the wowsims default Retribution build of 1 November (14/6/31) and the wowsims rotation: plan 1 + 3 (see Mana with Unsealed Wrath).
-- **Start value.** wowsims Forever master commit 8298ab833 (4 November 2026, game files of client 1.60.1.70755) gives 910 DPS at fresh level 60, with the item pool Retribution set (the set of the pure average, Analysis, Damage, part 7). With the wowsims default set, it gives 938. Build 70755 adds 5 Vengeance stacks and Holy damage to Two-Handed Weapon Specialization: +3.5% with the default set against 906 DPS on 1 November (Beta test results, W15). The model gives the increase with gear. The pure average table uses 910. The six item pool sets open in wowsims from the [item pool sets](https://ralgathor.github.io/forever-paladin-feedback/sets/) page. The Seal plan tables below use the same item pool set.
+- **Start value.** wowsims Forever master commit ae9b8c23a (8 November 2026, game files of client 1.60.1.70862 and the hotfixes of 7 and 8 November) gives 939 DPS at fresh level 60, with the item pool Retribution set (the set of the pure average, Analysis, Damage, part 7). With the wowsims default set, it gave 938 on 4 November. Build 70755 adds 5 Vengeance stacks and Holy damage to Two-Handed Weapon Specialization: +3.5% with the default set against 906 DPS on 1 November (Beta test results, W15). The model gives the increase with gear. The pure average table uses 939. The six item pool sets open in wowsims from the [item pool sets](https://ralgathor.github.io/forever-paladin-feedback/sets/) page. The Seal plan tables below come from commit 8298ab833 with the item pool set of 4 November (910 DPS).
 - **Increase with gear.** Retribution damage increases less with gear than Fury damage: ×1.65 against ×1.73 from fresh level 60 to Naxxramas. Fixed base values of the Seals, Judgement and Holy Strike cause this (see Analysis, Damage, part 3).
-- **Pure average.** wowsims Forever, with the same pre-raid item pool, enchants and consumables for each spec (Analysis, Damage, part 7). The pure sets come from a new search on master commit df57e2571 (6 November 2026). This commit adds 2,447 items. Fury and Combat Rogue use the increase of the model. Hunter, Mage and Warlock increase ×1.75 to Naxxramas (the main case of Analysis, Damage, part 1).
+- **Pure average.** wowsims Forever, with the same pre-raid item pool, enchants and consumables for each spec (Analysis, Damage, part 7). The pure sets come from a new search on master commit ae9b8c23a (8 November 2026). This commit adds 362 pool items for a Paladin. Fury and Combat Rogue use the increase of the model. Hunter, Mage and Warlock increase ×1.75 to Naxxramas (the main case of Analysis, Damage, part 1).
 
 | Build | Fresh level 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
 | --- | --- | --- | --- | --- | --- |
-| Live | 111% | 110% | 110% | 108% | 107% |
+| Live | 109% | 108% | 107% | 105% | 104% |
 
-- **Result.** The live version is above the hybrid target (95%) at all gear levels: 16 points at fresh level 60 and 12 points in Naxxramas. Thus, Retribution needs no damage proposal.
+- **Result.** The live version is above the hybrid target (95%) at all gear levels: 14 points at fresh level 60 and 9 points in Naxxramas. Thus, Retribution needs no damage proposal.
 - **Balance lever.** If raid logs confirm the wowsims level, decrease Sacred Arbiter to +10% first: −0.7% damage in wowsims (W15). This change alone does not bring Retribution to 95%.
-- **Other cases.** Hunter, Mage and Warlock ×1.60: live 111–113%. ×1.90: live 101–111%.
+- **Other cases.** Hunter, Mage and Warlock ×1.60: live 109–111%. ×1.90: live 99–109%.
 
 ## Mana with Unsealed Wrath (W29)
 
@@ -72,7 +72,7 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 - **Model columns.** Fresh level 60, Blessing of Wisdom, no consumables.
 - **Result.** Plan 1 + 3 gives the most damage, with half the Seal casts of plan 1 + 1. A copy of Seal of Command has more value than a copy of Seal of Righteousness. Thus, plan 3 + 1 is the weakest plan with copies.
 - **Mana.** At fresh level 60, plan 1 + 3 lasts for a 3 min fight. In a 5 min fight, plan 3 + 3 is the best: −2.5% (model). From Molten Core, plan 1 + 3 is the best in a 5 min fight. The mana costs 2.0% in Molten Core, 0.7% in Blackwing Lair and 0% in Naxxramas. With Reverence 50% (C-H1), plan 1 + 3 lasts 5 min 20 sec at fresh level 60. It is then the best plan at all gear levels.
-- **The pure average table above uses plan 1 + 3 and no mana limit.** The start value (910) comes from wowsims with the same plan.
+- **The pure average table above uses plan 1 + 3 and no mana limit.** The start value (939) comes from wowsims with the same plan.
 - **Spell data.** Unsealed Wrath has a Seal cost effect at 0% (wowsims spell data, spell 1310735). A −20% value, as Twist of Light had, gives 0% in a 2 min fight and +2.6% in a 5 min fight (model). Plan 1 + 3 then lasts 5 min 40 sec.
 
 **Other Seal pairs (wowsims, plan 1 + 3).** Seal of Command with a second Seal in place of Seal of Righteousness.
@@ -106,16 +106,16 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 
 ## wowsims check
 
-- **Sim.** wowsims Forever, master commit 8298ab833 (game files of client 1.60.1.70755), with the proposals as flags (models/wowsims-b2). The item pool Retribution set, with the default enchants, rotation, consumables and build (14/6/31), 3,000 iterations. The Seal plans use the APLs of `seal_plans_apl.py` (`logs/seal_plans_8298ab833_pool.log`).
+- **Sim.** wowsims Forever, master commit ae9b8c23a (game files of client 1.60.1.70862 and the hotfixes of 7 and 8 November), with the proposals as flags (models/wowsims-b2). The item pool Retribution set of 8 November, with the default enchants, rotation, consumables and build (14/6/31), 3,000 iterations (`logs/checks_ae9b8c23a_pool.log`). The Seal plans ran on master commit 8298ab833 with the set of 4 November. They use the APLs of `seal_plans_apl.py` (`logs/seal_plans_8298ab833_pool.log`).
 - **Full buffs** have Mana Spring Totem, Mana Tide Totem and Atiesh. **Lean buffs** have only Gift of the Wild, Battle Shout, Kings, Might and Wisdom.
 
 | Fight | Live | Seal cost −20% |
 | --- | --- | --- |
-| 2 min, full buffs | 910 DPS | 0% |
-| 5 min, full buffs | 919 DPS | 0% |
-| 2 min, lean buffs | 666 DPS | 0% |
-| 5 min, lean buffs | 675 DPS | +0.1% |
+| 2 min, full buffs | 939 DPS | 0% |
+| 5 min, full buffs | 952 DPS | 0% |
+| 2 min, lean buffs | 686 DPS | 0% |
+| 5 min, lean buffs | 697 DPS | 0% |
 
-- **Mana.** Only the 5 min run with lean buffs has zero mana, for 0.2 sec. The wowsims consumables now include Major Mana Potion. In the model, plan 1 + 3 has zero mana after 3 min 43 sec, because the model has no consumables.
+- **Mana.** Only the 5 min run with lean buffs has zero mana, for 0.9 sec. The wowsims consumables now include Major Mana Potion. In the model, plan 1 + 3 has zero mana after 3 min 43 sec, because the model has no consumables.
 - **Seal cost −20%.** It has no effect in wowsims, because the mana lasts. The model gives 0–2.6%.
 

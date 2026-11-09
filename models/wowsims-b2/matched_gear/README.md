@@ -1,10 +1,12 @@
-# Pure damage specs with the same item pool (2 November 2026, new search on 6 November)
+# Pure damage specs with the same item pool (2 November 2026, new searches on 6 and 8 November)
 
 This run gives the pure average of Analysis, Damage (parts 1, 3 and 7).
 
 The item search ran on wowsims Forever, master commit `895cd67f9` (1 November 2026). On 3 November 2026, the same sets ran again on master commit `d97252f2a` (game files of client 1.60.1.70755), on 4 November on master commit `6ee3c30f35` (the hotfix 113578 ports of the Warrior, Rogue and Hunter), and later on 4 November on master commit `8298ab833` (the Warlock patch of 3 November, new Hunter reaction times, Rogue rotation tuning). The item database of commit `8298ab833` adds no item to the pool: only two low-level items and the End of Beta event items. wowsims denies these items.
 
-**New search (6 November 2026).** Master commit `df57e2571` (hotfix push 113693, client 1.60.1.70790) adds 2,447 items to the database. 241 of them obey the pool rules for a Paladin and have item level 45 or higher. The same commit halves the Natural flasks: 30 Stamina and 2% (was 60 Stamina and 4–5%). The Fury, Rogue and Hunter runs use Flask of Natural Aggression. The search ran again on this commit for all six specs. Each search starts from the set of 4 November (`sets_9a8624af9/`, `SEED` in main.py), with the same rules and steps. The results below come from commit `df57e2571`.
+**New search (6 November 2026).** Master commit `df57e2571` (hotfix push 113693, client 1.60.1.70790) adds 2,447 items to the database. 241 of them obey the pool rules for a Paladin and have item level 45 or higher. The same commit halves the Natural flasks: 30 Stamina and 2% (was 60 Stamina and 4–5%). The Fury, Rogue and Hunter runs use Flask of Natural Aggression. The search ran again on this commit for all six specs. Each search starts from the set of 4 November (`sets_9a8624af9/`, `SEED` in main.py), with the same rules and steps. The sets of 6 November and their logs are in `sets_df57e2571/`, their values in `ec_results_df57e2571.json`.
+
+**New search (8 November 2026).** Master commit `ae9b8c23a` (hotfixes of 7 and 8 November, client 1.60.1.70862) adds 362 items that obey the pool rules for a Paladin, for example Hand of Justice and Cape of the Black Baron. The same commit makes Attack Power on gear also give ranged Attack Power (Hunter). The search ran again on this commit for all six specs. Each search starts from the set of 6 November (`sets_df57e2571/`, `SEED` in main.py), with the same rules and steps. The results below come from commit `ae9b8c23a`.
 
 ## Rules (the same for each spec)
 
@@ -18,15 +20,19 @@ The item search ran on wowsims Forever, master commit `895cd67f9` (1 November 20
 
 | Spec | No enchants, no consumables | Enchants | Consumables | Both | Average item level | Epic items |
 | --- | --- | --- | --- | --- | --- | --- |
-| Hunter | 711.6 | 770.7 | 809.6 | 872.7 | 59.5 | 4 |
-| Demonology Warlock | 593.2 | 648.0 | 804.7 | 862.5 | 57.5 | 3 |
-| Fury Warrior | 620.8 | 693.5 | 755.7 | 828.5 | 58.6 | 4 |
-| Fire Mage | 590.1 | 640.2 | 763.8 | 815.6 | 57.1 | 3 |
-| Combat Rogue | 560.7 | 600.8 | 661.8 | 706.2 | 58.5 | 3 |
-| Pure average | 615.3 | 670.6 | 759.1 | 817.1 | | |
-| Retribution (live) | 667.1 (108.4%) | 715.5 (106.7%) | 855.2 (112.7%) | 908.3 (111.2%) | 59.1 | 5 |
+| Demonology Warlock | 643.9 | 699.1 | 862.9 | 921.6 | 59.2 | 3 |
+| Hunter | 741.8 | 796.2 | 843.6 | 901.6 | 60.0 | 3 |
+| Fire Mage | 648.4 | 699.3 | 835.0 | 888.2 | 58.8 | 3 |
+| Fury Warrior | 650.8 | 725.5 | 789.5 | 863.8 | 58.3 | 3 |
+| Combat Rogue | 580.2 | 621.8 | 684.3 | 730.4 | 58.9 | 3 |
+| Pure average | 653.0 | 708.4 | 803.1 | 861.1 | | |
+| Retribution (live) | 689.0 (105.5%) | 740.1 (104.5%) | 880.6 (109.7%) | 936.6 (108.8%) | 59.3 | 4 |
 
-Without the Rogue (both): 844.8, Retribution 107.5%. Retribution against Fury (both): 109.6%. wowsims links to each set: `links.md`.
+Without the Rogue (both): 893.8, Retribution 104.8%. Retribution against Fury (both): 108.4%. wowsims links to each set: `links.md`.
+
+- **Commit ae9b8c23a (8 November) against commit df57e2571 (both).** Fire Mage +8.9% (815.6 → 888.2), Demonology Warlock +6.9% (862.5 → 921.6), Fury +4.3% (828.5 → 863.8), Combat Rogue +3.4% (706.2 → 730.4), Hunter +3.3% (872.7 → 901.6). Retribution +3.1% (908.3 → 936.6). Pure average 817.1 → 861.1, Retribution 111.2% → 108.8%.
+- **Two causes (8 November).** With the sets of 6 November on commit ae9b8c23a (`ec_results_ae9b8c23a_old_sets.json`), only the Hunter changes: +1.8% (872.7 → 888.5), from the ranged Attack Power. The pure average is then 820.4, and Retribution 110.7%. The new items give the rest.
+- **Set changes (8 November).** Hand of Justice and Cape of the Black Baron: Fury, Combat Rogue, Hunter and Retribution. Fury also takes Sentimental Locket, Warpwood Bracers, Magni's Will and Mirah's Song. Combat Rogue: Blackstone Ring and Precisely Calibrated Boomstick. Hunter: Hermit's Pauldron and Tarnished Elven Ring. Fire Mage and Demonology Warlock: Crimson Felt Hat, Songstone of Ironforge, Maiden's Circle, Eye of the Beast, Second Wind, Arbiter's Blade and Lord Sakrasis' Scepter. The Fire Mage also takes Rotgrip Mantle and Magister's Leggings. Hermit's Pauldron and Magister's Leggings were in the pool before. All other items are new in the database.
 
 - **Commit df57e2571 (6 November) against commit 9a8624af9 (both).** The Retribution set does not change: 908.3. Combat Rogue +5.2% (671.6 → 706.2), Hunter +2.0% (855.6 → 872.7), Demonology Warlock +0.7% (856.3 → 862.5), Fury −1.5% (840.7 → 828.5), Fire Mage −1.0% (823.9 → 815.6). Pure average 809.6 → 817.1, Retribution 112.2% → 111.2%.
 - **Two causes.** With the sets of 4 November on commit df57e2571 (`ec_results_df57e2571_old_sets.json`), the flask change alone gives Fury −1.9%, Hunter −1.9% and Rogue −1.2%. The pure average is then 801.7, and Retribution 113.3%. The new sets give +1.9% to the pure average.
@@ -42,7 +48,7 @@ Without the Rogue (both): 844.8, Retribution 107.5%. Retribution against Fury (b
 
 With the consumables of each wowsims preset as they are, Retribution was 116.3% (both, commit 895cd67f9). The presets are not equal: Retribution has 9 elixirs, the Rogue has none. Thus, the second run gives the same elixirs and extras to all specs.
 
-`models/beta-30-oct/retribution_b2.py` uses the "Both" column. It puts the values on the scale of the Retribution start value (910, the item pool set with the Retribution test buffs, full buffs and consumables): each pure spec × 910 / 908.3.
+`models/beta-30-oct/retribution_b2.py` uses the "Both" column. It puts the values on the scale of the Retribution start value (939, the item pool set with the Retribution test buffs, full buffs and consumables): each pure spec × 939 / 936.6.
 
 **First pool (replaced).** The first search let in later items: Zul'Gurub, Ahn'Qiraj and Argent Dawn reputation items, dungeon set 2, battleground weapons and trinkets. With it, the pure average was 850.2 and Retribution 108.3% (both). The sets of that run are in `first_pool/`.
 
@@ -58,7 +64,7 @@ With the consumables of each wowsims preset as they are, Retribution was 116.3% 
 | log_*.txt | Stat values, slot changes and final DPS of each spec |
 | enchants.json | Enchant ids by slot for each spec (wowsims presets; Mage and Warlock: Balance Druid caster enchants, 2504 on the weapon) |
 | enchants_consumables.py | Second run: writes `/tmp/zzdump_u` (same elixirs and extras for each spec) and the zzbatch jobs |
-| ec_results.json | DPS of the second run on commit df57e2571 (base, ench, cons, both). `ec_results_9a8624af9.json`, `ec_results_8298ab833.json`, `ec_results_6ee3c30f35.json`, `ec_results_d97252f2a.json` and `ec_results_895cd67f9.json`: the same on the earlier commits |
+| ec_results.json | DPS of the second run on commit ae9b8c23a (base, ench, cons, both). `ec_results_df57e2571.json`, `ec_results_9a8624af9.json`, `ec_results_8298ab833.json`, `ec_results_6ee3c30f35.json`, `ec_results_d97252f2a.json` and `ec_results_895cd67f9.json`: the same on the earlier commits |
 | links.md, zzlink_main.go | wowsims links to the final set of each spec, and the script that makes them |
 
 - **One job for each process.** zzbatch runs its jobs in parallel in one process. In a batch of different specs and enchants, some results changed by up to 3%. All values in this folder and in Analysis, Damage come again from `solo.py`, one job for each process. They agree with the batch values.

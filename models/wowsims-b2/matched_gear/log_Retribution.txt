@@ -1,6 +1,8 @@
 EP {0: 0.456, 1: 0.303, 3: 0.236, 5: 0.311, 7: 0.0, 11: 0.0, 14: 0.187, 15: 0.0, 17: 0.151, 18: 0.425, 19: 0.466, 20: 0.033, 13: 0.0} {0: 2.6651356292236867, 1: 0.0, 2: 0.0}
-cands {0: 20, 1: 16, 2: 15, 3: 19, 4: 19, 5: 15, 6: 19, 7: 16, 8: 15, 9: 19, 10: 16, 11: 16, 12: 41, 13: 41, 14: 27, 15: 0, 16: 2}
+cands {0: 20, 1: 18, 2: 15, 3: 20, 4: 21, 5: 15, 6: 19, 7: 17, 8: 16, 9: 21, 10: 17, 11: 17, 12: 61, 13: 61, 14: 34, 15: 0, 16: 2}
 start 668.5
-FINAL Retribution 667.1 +- 0.5
-SET Lionheart Helm(61) ; Horn of Ve'han(61) ; Lightforge Spaulders(60) ; Hide of the Wild(62) ; Timbermaw Tunic(61) ; Skirmisher's Mail Bracers(50) ; Storm Gauntlets(59) ; Vindicator's Belt(60) ; Pristine Scorpid Leggings(61) ; Hippogryph Hide Boots(55) ; Initiate's Signet of Ferocity(63) ; Initiate's Signet of Brilliance(63) ; Everlook Pathcarver(55) ; Cleansed Vilebranch Medallion(51) ; Arcanite Reaper(63) ; Libram of Holy Alacrity(60)
-ILVL 59.1 epics 5
+  pass0 slot3: Hide of the Wild -> Cape of the Black Baron 668.5->670.2
+  pass0 slot12: Everlook Pathcarver -> Hand of Justice 670.2->691.2
+FINAL Retribution 689.0 +- 0.6
+SET Lionheart Helm(61) ; Horn of Ve'han(61) ; Lightforge Spaulders(60) ; Cape of the Black Baron(63) ; Timbermaw Tunic(61) ; Skirmisher's Mail Bracers(50) ; Storm Gauntlets(59) ; Vindicator's Belt(60) ; Pristine Scorpid Leggings(61) ; Hippogryph Hide Boots(55) ; Initiate's Signet of Ferocity(63) ; Initiate's Signet of Brilliance(63) ; Hand of Justice(58) ; Cleansed Vilebranch Medallion(51) ; Arcanite Reaper(63) ; Libram of Holy Alacrity(60)
+ILVL 59.3 epics 4

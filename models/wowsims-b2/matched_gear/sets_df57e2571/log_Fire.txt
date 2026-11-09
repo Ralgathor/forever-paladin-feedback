@@ -1,0 +1,8 @@
+EP {0: 0.0, 1: 0.0, 3: 0.345, 5: 0.596, 7: 0.524, 11: 0.0, 14: 0.0, 15: 0.0, 17: 0.749, 18: 0.356, 19: 0.097, 20: 0.0, 13: 0.152} {0: 0.0, 1: 0.0, 2: 0.0}
+cands {0: 19, 1: 16, 2: 15, 3: 18, 4: 15, 5: 15, 6: 15, 7: 15, 8: 15, 9: 17, 10: 15, 11: 15, 12: 41, 13: 41, 14: 26, 15: 27, 16: 12}
+start 584.5
+  pass0 slot15: Personal Spellbook -> Lapidis Tankard of Tidesippe 584.5->588.2
+  pass1 slot0: Dreadmist Mask -> Red Mageweave Headband 588.2->590.2
+FINAL Fire 590.1 +- 0.4
+SET Red Mageweave Headband(48) ; Archlight Talisman(60) ; Netherflame Shoulders(47) ; Hide of the Wild(62) ; Robe of the Archmage(62) ; Runecloth Cuffs(57) ; Inferno Gloves(62) ; Belt of the Archmage(62) ; Ghostweave Pants(58) ; Venomspew Footpads(58) ; Jereman's Bauble(61) ; Initiate's Signet of Brilliance(63) ; Cleansed Vilebranch Icon(51) ; Frozen Heart of the Mountain(55) ; Notched Ritual Rib(45) ; Lapidis Tankard of Tidesippe(59) ; Brilliant Wand(60)
+ILVL 57.1 epics 3

@@ -1,0 +1,7 @@
+EP {0: 0.235, 1: 0.413, 3: 0.0, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.213, 15: 0.0, 17: 0.409, 18: 0.344, 19: 0.217, 20: 0.071, 13: 0.0} {0: 1.9597419373092066, 1: 0.7601056364869692, 2: 0.0}
+cands {0: 19, 1: 16, 2: 15, 3: 18, 4: 15, 5: 15, 6: 16, 7: 15, 8: 15, 9: 18, 10: 16, 11: 16, 12: 41, 13: 41, 14: 30, 15: 32, 16: 23}
+start 531.8
+  pass0 slot14: Heartseeker -> Bagh Nakh 531.8->562.4
+FINAL Rogue 560.7 +- 0.3
+SET Shadowcraft Cap(62) ; Artifact Seeker's Pendant(58) ; Shadowcraft Spaulders(60) ; Shifting Cloak(62) ; Dawn Armor(61) ; Shadowcraft Bracers(57) ; Devilsaur Gauntlets(58) ; Assassin's Waistguard(60) ; Warbear Woolies(57) ; Mongoose Boots(62) ; Initiate's Signet of Ferocity(63) ; White Bone Band(52) ; Cleansed Vilebranch Medallion(51) ; Molten Heart of the Mountain(55) ; Bagh Nakh(63) ; Masterwork Stormhammer(63) ; Vicious Throwing Stars(50)
+ILVL 58.5 epics 3

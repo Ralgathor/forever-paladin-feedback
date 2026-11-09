@@ -6,40 +6,40 @@ This file gives the best tank builds for the live trees and for the proposed tre
 
 | Trees | Build | Points | Code | Threat each sec | With Righteous Fury (C25) | Damage taken each sec | TMI |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Proposed | PT1 | 0/34/17 | [`v6p-3530110213501531-54233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-54233) | 1,197 | 1,703 | 302 | 43.6 |
-| Proposed | PS1 | 0/34/17 | [`v6p-3530110213501531-53233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-53233000001) | 1,219 | 1,735 | 302 | 43.6 |
-| Proposed | PI1 | 10/31/10 | [`v6p05005-3530110213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05005-3530110213201531-5023) | 1,258 | 1,790 | 307 | 43.9 |
-| Live | BS2 | 0/35/16 | [`b2-05302102313501531-52233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2-05302102313501531-52233000001) | 1,150 | — | 335 | 53.1 |
-| Live | BT1 | 12/32/7 | [`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) | 1,137 | — | 343 | 54.0 |
-| Live | BS1 | 10/31/10 | [`b205005-05302102213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205005-05302102213201531-5023) | 1,180 | — | 345 | 54.1 |
+| Proposed | PT1 | 0/34/17 | [`v6p-3530110213501531-54233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-54233) | 1,240 | 1,765 | 303 | 41.7 |
+| Proposed | PS1 | 0/34/17 | [`v6p-3530110213501531-53233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-53233000001) | 1,264 | 1,799 | 303 | 41.7 |
+| Proposed | PI1 | 10/31/10 | [`v6p05005-3530110213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05005-3530110213201531-5023) | 1,303 | 1,854 | 308 | 41.9 |
+| Live | BS2 | 0/35/16 | [`b2-05302102313501531-52233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2-05302102313501531-52233000001) | 1,242 | — | 320 | 47.5 |
+| Live | BT1 | 12/32/7 | [`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) | 1,229 | — | 329 | 49.0 |
+| Live | BS1 | 10/31/10 | [`b205005-05302102213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205005-05302102213201531-5023) | 1,278 | — | 333 | 49.5 |
 
-- **Righteous Fury (C25)** is a baseline spell change, not a talent. It multiplies all threat by 1.42 in wowsims (1.9 ÷ 1.33 on the threat multiplier, 1,722 ÷ 1,210 in the C25 run of Analysis, Threat, part 6). Thus, the build order and the stat order do not change. The C25 column uses this multiplier.
+- **Righteous Fury (C25)** is a baseline spell change, not a talent. It multiplies all threat by 1.42 in wowsims (1.9 ÷ 1.33 on the threat multiplier, 1,782 ÷ 1,252 in the C25 run of Analysis, Threat, part 6). Thus, the build order and the stat order do not change. The C25 column uses this multiplier.
 - **Proposed: PS1 is PT1 with Sacred Arbiter.** One Benediction point goes to Sacred Arbiter: +1.9% threat, the same damage taken and the same TMI. PT1 is the tank of Analysis, Builds.
-- **Proposed: PI1 is the threat choice.** Divine Strength and Improved Seals give +3.2% threat against PS1, but 1.6% more damage taken and a 0.7% worse TMI.
-- **Live: BS2 is the tank build.** It takes Sacred Arbiter and Sanctified Judgement 3. Against the wowsims default build BT1, it has +1.1% threat, 2.2% less damage taken and a 1.8% better TMI.
-- **Live: BS1 is the threat choice.** It has +2.6% threat against BS2, but 2.9% more damage taken and a 2.0% worse TMI.
-- **Proposed against live.** PT1 has +4.1% threat, 10% less damage taken and an 18% better TMI than BS2. PS1 has +6.0% threat. With Righteous Fury (C25), PT1 has +48% threat against BS2. Redoubt (C-P1) removes almost all crushing blows: 1.2% against 11.9%.
-- **Stat weights.** For threat, Expertise rating is the best stat for each point, then spell damage. For survival, Stamina, Defense rating and Block value (proposed trees) are the best (part 3).
+- **Proposed: PI1 is the threat choice.** Divine Strength and Improved Seals give +3.1% threat against PS1, but 1.6% more damage taken and a 0.7% worse TMI.
+- **Live: BS2 is the tank build.** It takes Sacred Arbiter and Sanctified Judgement 3. Against the wowsims default build BT1, it has +1.1% threat, 2.9% less damage taken and a 2.9% better TMI.
+- **Live: BS1 is the threat choice.** It has +2.9% threat against BS2, but 4.3% more damage taken and a 4.2% worse TMI.
+- **Proposed against live.** PT1 has the threat of BS2 (−0.1%), 5% less damage taken and a 12% better TMI. PS1 has +1.8% threat. With Righteous Fury (C25), PT1 has +42% threat against BS2. Redoubt (C-P1) removes almost all crushing blows: 1.0% against 5.9%. Argent Defender (a shield of the hotfixes of 7 and 8 November) gives the live builds more block, thus the gap is smaller than on 4 November.
+- **Stat weights.** For threat, Expertise rating is the best stat for each point, then Hit rating and spell damage. For survival, Stamina, Defense rating and Block value (proposed trees) are the best (part 3).
 
 **Survival set.** The table above uses the item pool threat set. The same builds with the item pool survival set ([wowsims link](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-surv-protection-paladin.html), Analysis, Threat, part 6):
 
 | Trees | Build | Threat each sec | With Righteous Fury (C25) | Damage taken each sec | TMI |
 | --- | --- | --- | --- | --- | --- |
-| Proposed | PT1 | 1,148 | 1,635 | 292 | 36.7 |
-| Proposed | PS1 | 1,172 | 1,668 | 292 | 36.7 |
-| Proposed | PI1 | 1,201 | 1,709 | 296 | 36.9 |
-| Live | BS2 | 1,099 | — | 326 | 44.9 |
-| Live | BT1 | 1,081 | — | 333 | 45.8 |
-| Live | BS1 | 1,112 | — | 335 | 46.0 |
+| Proposed | PT1 | 1,216 | 1,731 | 295 | 39.4 |
+| Proposed | PS1 | 1,240 | 1,764 | 295 | 39.4 |
+| Proposed | PI1 | 1,275 | 1,814 | 301 | 39.9 |
+| Live | BS2 | 1,220 | — | 308 | 44.0 |
+| Live | BT1 | 1,204 | — | 318 | 45.5 |
+| Live | BS1 | 1,249 | — | 320 | 46.0 |
 
-- **The build order does not change.** All builds have 4–6% less threat and a 15–16% better TMI than with the threat set.
-- **PI1 against PS1:** +2.5% threat, 1.4% more damage taken and a 0.6% worse TMI.
-- **PT1 against BS2:** +4.5% threat, 11% less damage taken and an 18% better TMI.
-- **Stat weights** with the survival set (`models/wowsims-b2/logs/finals_surv.log`). For threat, Expertise rating is still the best stat, but Hit rating is second: the survival set has less Hit. For survival, Stamina and Defense rating stay the best.
+- **The build order does not change.** All builds have 2% less threat and a 5–7% better TMI than with the threat set.
+- **PI1 against PS1:** +2.8% threat, 1.9% more damage taken and a 1.1% worse TMI.
+- **PT1 against BS2:** the same threat (−0.3%), 4% less damage taken and a 10% better TMI.
+- **Stat weights** with the survival set (`models/wowsims-b2/logs/finals_surv.log`). For threat, Expertise rating is still the best stat, then Hit rating. For survival, Stamina and Defense rating stay the best.
 
 ## 1. Method
 
-- **Sim.** wowsims Forever, master of 4 November 2026 (commit 9a8624af9, game files of client 1.60.1.70755 and the hotfixes of 4 November, Holy Shield rank 4), with `models/wowsims-b2/patches/talents-9a8624af9.patch`. The proposed trees use the flags of all kept proposals: Redoubt (C-P1) and Toughness removal (C-P13). The talent search ran on master of 1 November (commit 895cd67f9), with the Holy Strike Seal trigger (C1), withdrawn on 2 November 2026. The builds and stat weights then ran again on commit 9a8624af9 without it, with the item pool set and tank consumables.
+- **Sim.** wowsims Forever, master of 8 November 2026 (commit ae9b8c23a, game files of client 1.60.1.70862 and the hotfixes of 7 and 8 November, Holy Shield rank 4), with the patches of `models/wowsims-b2/patches`. The proposed trees use the flags of all kept proposals: Redoubt (C-P1) and Toughness removal (C-P13). The talent search ran on master of 1 November (commit 895cd67f9), with the Holy Strike Seal trigger (C1), withdrawn on 2 November 2026. The builds and stat weights then ran again on commit ae9b8c23a without it, with the item pool set and tank consumables.
 - **Fight.** 3 min, one level 63 boss that attacks the Paladin from the front. Full buffs. Tank consumables: the consumables of the Warrior test of wowsims, with Greater Arcane Elixir and Brilliant Wizard Oil (Analysis, Threat, part 6). 3,000 iterations, the same random seed for all runs.
 - **Gear and rotation.** The item pool Protection set of Analysis, Threat, part 6 ([wowsims link](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-pool-protection-paladin.html)): no raid, PvP or high reputation items. The default rotation of wowsims Forever. The talent search ran with the wowsims default set, which has raid, PvP and reputation items. With the default set, PT1 had 1,056 threat each sec, 295 damage taken each sec and a TMI of 45.3, and BS2 had 1,006, 331 and 56.3. The build order does not change.
 - **TMI.** The damage intake value of wowsims with a 6 sec window: less is better.
@@ -57,8 +57,8 @@ This file gives the best tank builds for the live trees and for the proposed tre
 - Retribution: Deflection 5, Benediction 4, Improved Judgement 2, Conviction 3, Sanctified Judgement 3.
 - **Dungeon tank** ([`v6p-353011021350153102-52233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-353011021350153102-52233), 0/36/15): Reach of Law 2 in place of Benediction 2. Judgement and Swift Judgement then pull from 20 yards with Seal of Fury. wowsims does not model the pull, and the raid values do not change.
 - **PS1** ([`v6p-3530110213501531-53233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-53233000001)): Benediction 3 and Sacred Arbiter in place of Benediction 4.
-- **Deflection 5, not Benediction 5.** After Improved Judgement, Conviction and Sanctified Judgement, 9 points stay for Deflection and Benediction. One point in Deflection gives 1.5% less damage taken. One point in Benediction gives 0.3% more threat. With Benediction 5 and Deflection 4, PT1 has 1,200 threat each sec, 306 damage taken each sec and a TMI of 43.9.
-- **Improved Seals (PI1, threat choice).** Divine Strength 5 and Improved Seals 5 cost 10 points. The best points to give up, against PS1: 3 Anticipation points, Benediction 3, Sanctified Judgement 3 and Sacred Arbiter. PI1 is 10/31/10, [`v6p05005-3530110213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05005-3530110213201531-5023). Against PS1, it has +3.2% threat (1,258 each sec), but 1.6% more damage taken (307) and a 0.7% worse TMI (43.9). It is the same trade as BS1 in the live trees. On 1 November (Holy Shield rank 3, default set), other places cost more. Anticipation 3 gave 1,020 / 300 / 46.1, and Retribution 7 (Deflection 5, Improved Judgement 2) gave 990 / 296 / 45.8.
+- **Deflection 5, not Benediction 5.** After Improved Judgement, Conviction and Sanctified Judgement, 9 points stay for Deflection and Benediction. One point in Deflection gives 1.5% less damage taken. One point in Benediction gives 0.3% more threat. With Benediction 5 and Deflection 4, PT1 has 1,243 threat each sec, 307 damage taken each sec and a TMI of 41.9.
+- **Improved Seals (PI1, threat choice).** Divine Strength 5 and Improved Seals 5 cost 10 points. The best points to give up, against PS1: 3 Anticipation points, Benediction 3, Sanctified Judgement 3 and Sacred Arbiter. PI1 is 10/31/10, [`v6p05005-3530110213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05005-3530110213201531-5023). Against PS1, it has +3.1% threat (1,303 each sec), but 1.6% more damage taken (308) and a 0.7% worse TMI (41.9). It is the same trade as BS1 in the live trees. On 1 November (Holy Shield rank 3, default set), other places cost more. Anticipation 3 gave 1,020 / 300 / 46.1, and Retribution 7 (Deflection 5, Improved Judgement 2) gave 990 / 296 / 45.8.
 
 ### Live: BS2
 
@@ -78,7 +78,7 @@ This file gives the best tank builds for the live trees and for the proposed tre
 - Protection: Redoubt 5, Precision 3, Sacred Duty 2, Templar's Bulwark, Shield Specialization 2, Toughness 2, Swift Judgement, Improved Righteous Fury 3, Anticipation 3, Holy Shield, Reckoning 5, Iron Creed 3, Shieldsworn.
 - Retribution: Deflection 5, Improved Judgement 2.
 - **BS1** ([`b205005-05302102213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205005-05302102213201531-5023)): no Holy Conduit, Anticipation 2, and Conviction 3.
-- **The tank build of the Analysis model** (B2T, 0/38/13, [`b2-25301102513501531-05233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2-25301102513501531-05233)) gives 1,132 threat each sec and 354 damage taken each sec. Its TMI is 53.9.
+- **The tank build of the Analysis model** (B2T, 0/38/13, [`b2-25301102513501531-05233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2-25301102513501531-05233)) gives 1,222 threat each sec and 346 damage taken each sec. Its TMI is 49.6.
 
 ## 3. Stat weights
 
@@ -87,24 +87,24 @@ Each stat + a small amount (20 Strength, Agility or Stamina, 40 spell damage, 10
 | Stat | BS2 threat | BS2 damage taken | BS2 TMI (10 points) | PT1 threat | PT1 damage taken | PT1 TMI (10 points) |
 | --- | --- | --- | --- | --- | --- | --- |
 | Strength | +0.34 | −0.01 | −0.01 | +0.33 | −0.01 | −0.02 |
-| Agility | +0.16 | −0.31 | −0.25 | +0.23 | −0.30 | −0.32 |
-| Stamina | +0.01 | 0 | −1.23 | 0 | 0 | −0.96 |
-| Spell damage | +0.80 | −0.02 | −0.03 | +0.81 | −0.02 | −0.03 |
-| Hit rating | +0.53 | −0.03 | −0.13 | +0.74 | +0.07 | +0.04 |
-| Expertise rating | +1.50 | −0.25 | −0.42 | +1.70 | −0.21 | −0.38 |
-| Defense rating | −0.20 | −0.72 | −1.11 | −0.31 | −0.57 | −0.59 |
-| Block rating | +0.57 | −0.08 | −0.13 | +0.05 | +0.03 | +0.06 |
-| Block value | −0.01 | −0.23 | −0.28 | 0 | −0.34 | −0.55 |
-| Dodge rating | −0.22 | −0.36 | −0.32 | −0.21 | −0.39 | −0.39 |
-| Parry rating | −0.14 | −0.33 | −0.17 | −0.16 | −0.32 | −0.28 |
+| Agility | +0.29 | −0.37 | −0.49 | +0.15 | −0.33 | −0.34 |
+| Stamina | +0.01 | +0.01 | −1.06 | 0 | −0.01 | −0.89 |
+| Spell damage | +0.82 | −0.01 | −0.03 | +0.81 | −0.02 | −0.02 |
+| Hit rating | +0.85 | +0.01 | +0.09 | +0.83 | 0 | −0.05 |
+| Expertise rating | +1.68 | −0.19 | −0.37 | +1.61 | −0.21 | −0.47 |
+| Defense rating | −0.08 | −0.88 | −1.39 | −0.51 | −0.59 | −0.60 |
+| Block rating | +0.75 | −0.33 | −0.78 | +0.03 | +0.01 | −0.08 |
+| Block value | 0 | −0.31 | −0.40 | 0 | −0.35 | −0.54 |
+| Dodge rating | 0 | −0.51 | −0.68 | −0.35 | −0.41 | −0.40 |
+| Parry rating | +0.04 | −0.40 | −0.62 | −0.22 | −0.35 | −0.28 |
 | Armor | 0 | −0.03 | −0.05 | 0 | −0.02 | −0.04 |
 
-- **Threat.** Expertise rating gives the most threat for each point. Spell damage gives about 2.4 times the threat of Strength, and Hit rating about 1.6 times (PT1: 2.2 times).
-- **Survival.** Stamina gives the best TMI for each point. Defense rating gives the largest decrease of damage taken.
-- **Block rating has almost no value with Redoubt (C-P1).** With Redoubt, about 61% of the boss swings are blocks. Misses, dodges, parries and blocks fill almost all of the attack table.
+- **Threat.** Expertise rating gives the most threat for each point. Hit rating and spell damage give about the same threat: 2.4–2.6 times the threat of Strength.
+- **Survival.** With Redoubt, Stamina gives the best TMI for each point. Without Redoubt, Defense rating gives a better TMI than Stamina. Defense rating gives the largest decrease of damage taken.
+- **Block rating has almost no value with Redoubt (C-P1).** With Redoubt, about 63% of the boss swings are blocks. Misses, dodges, parries and blocks fill almost all of the attack table.
 - **Dodge and parry cost threat with Redoubt.** Each dodge or parry takes the place of a block. Holy Shield and Reckoning need the blocks.
-- **Block value has more value with Redoubt:** about 61% of the swings are blocks, without Redoubt about 41%.
-- **Block rating has value without Redoubt.** Without Redoubt, only about 41% of the swings are blocks. Each point of Block rating gives +0.57 threat each sec and a small TMI gain. The BT1 weights are in `models/wowsims-b2/logs/finals.log`.
+- **Block value has more value with Redoubt:** about 63% of the swings are blocks, without Redoubt about 55%.
+- **Block rating has value without Redoubt.** Without Redoubt, only about 55% of the swings are blocks. Each point of Block rating gives +0.75 threat each sec and a small TMI gain. The BT1 weights are in `models/wowsims-b2/logs/finals.log`.
 
 ## 4. Limits
 
