@@ -1,14 +1,10 @@
-EP {0: 0.076, 1: 0.523, 3: 0.233, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.07, 15: 0.14, 17: 0.616, 18: 0.466, 19: 0.398, 20: 0.059, 13: 0.0} {0: 0.9593519015901052, 1: 0.0, 2: 1.324218514825145}
-cands {0: 19, 1: 16, 2: 15, 3: 18, 4: 17, 5: 15, 6: 17, 7: 16, 8: 15, 9: 18, 10: 16, 11: 16, 12: 39, 13: 39, 14: 25, 15: 0, 16: 16}
-start 585.9
-  pass0 slot0: Beaststalker's Cap -> Black Dragonscale Helm 585.9->598.7
-  pass0 slot2: Beaststalker's Mantle -> Shadowcraft Spaulders 598.7->604.0
-  pass0 slot4: Beaststalker's Tunic -> Dawn Armor 604.0->621.1
-  pass0 slot7: Beaststalker's Belt -> Ranger's Belt 621.1->628.5
-  pass0 slot9: Beaststalker's Boots -> Shadowcraft Boots 628.5->630.0
-  pass0 slot14: Legionite Glaive -> Stormcarver 630.0->632.0
-  pass0 slot16: Gorewood Bow -> Thornflinger 632.0->641.7
-  pass1 slot14: Stormcarver -> Arcanite Reaper 641.7->653.0
-FINAL Hunter 651.8 +- 0.3
-SET Black Dragonscale Helm(61) ; Horn of Ve'han(61) ; Shadowcraft Spaulders(60) ; Shifting Cloak(62) ; Dawn Armor(61) ; Beaststalker's Bindings(57) ; Beaststalker's Gloves(59) ; Ranger's Belt(60) ; Beaststalker's Pants(61) ; Shadowcraft Boots(59) ; Initiate's Signet of Ferocity(63) ; Highfeather Bangle(58) ; Cleansed Vilebranch Medallion(51) ; Frozen Heart of the Mountain(55) ; Arcanite Reaper(63) ; Thornflinger(57)
-ILVL 59.2 epics 4
+EP {0: 0.078, 1: 0.576, 3: 0.255, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.071, 15: 0.158, 17: 0.633, 18: 0.508, 19: 0.642, 20: 0.057, 13: 0.0} {0: 0.9774380136224636, 1: 0.0, 2: 1.186409651538554}
+cands {0: 21, 1: 17, 2: 15, 3: 21, 4: 18, 5: 15, 6: 17, 7: 16, 8: 16, 9: 21, 10: 20, 11: 20, 12: 69, 13: 69, 14: 38, 15: 0, 16: 27}
+start 742.5
+  pass0 slot1: Horn of Ve'han -> Star of Mystaria 742.5->744.4
+  pass0 slot9: Shadowcraft Boots -> Bloodmail Boots 744.4->746.5
+  pass0 slot13: Cleansed Vilebranch Medallion -> Flamebreak Talisman 746.5->748.5
+  pass0 slot16: Flawless Arcanite Rifle -> Deep Jungle Rifle 748.5->750.5
+FINAL Hunter 749.2 +- 0.3
+SET Black Dragonscale Helm(61) ; Star of Mystaria(63) ; Hermit's Pauldron(61) ; Cape of the Black Baron(63) ; Dawn Armor(61) ; Beaststalker's Bindings(57) ; Beaststalker's Gloves(59) ; Ranger's Belt(60) ; Beaststalker's Pants(61) ; Bloodmail Boots(61) ; Initiate's Signet of Ferocity(63) ; Tarnished Elven Ring(61) ; Hand of Justice(58) ; Flamebreak Talisman(61) ; Arcanite Reaper(63) ; Deep Jungle Rifle(63)
+ILVL 61.0 epics 3

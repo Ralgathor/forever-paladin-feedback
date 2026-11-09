@@ -1,10 +1,9 @@
-EP {0: 0.083, 1: 0.119, 3: 0.0, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.076, 15: 0.0, 17: 0.119, 18: 0.064, 19: 0.083, 20: 0.01, 13: 0.0} {0: 0.0, 1: 0.0, 2: 0.0}
-cands {0: 18, 1: 15, 2: 15, 3: 18, 4: 15, 5: 15, 6: 16, 7: 15, 8: 15, 9: 17, 10: 16, 11: 16, 12: 38, 13: 38, 14: 38, 15: 33, 16: 20}
-start 483.6
-  pass0 slot0: Blue Suede Hat -> Shadowcraft Cap 483.6->488.6
-  pass0 slot13: Thaelemaches' Talisman -> Molten Heart of the Mountain 488.6->490.6
-  pass0 slot14: Bold Dirk -> Heartseeker 490.6->506.1
-  pass0 slot15: Bold Dirk -> Masterwork Stormhammer 506.1->513.9
-FINAL Rogue 514.1 +- 0.3
-SET Shadowcraft Cap(62) ; Artifact Seeker's Pendant(58) ; Shadowcraft Spaulders(60) ; Shifting Cloak(62) ; Dawn Armor(61) ; Shadowcraft Bracers(57) ; Devilsaur Gauntlets(58) ; Assassin's Waistguard(60) ; Warbear Woolies(57) ; Mongoose Boots(62) ; Initiate's Signet of Ferocity(63) ; White Bone Band(52) ; Cleansed Vilebranch Medallion(51) ; Molten Heart of the Mountain(55) ; Heartseeker(63) ; Masterwork Stormhammer(63) ; Vicious Throwing Stars(50)
-ILVL 58.5 epics 3
+EP {0: 0.265, 1: 0.462, 3: 0.0, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.241, 15: 0.0, 17: 0.426, 18: 0.376, 19: 0.262, 20: 0.08, 13: 0.0} {0: 2.3890723852397286, 1: 0.7627597904491722, 2: 0.0}
+cands {0: 20, 1: 17, 2: 15, 3: 21, 4: 16, 5: 15, 6: 16, 7: 15, 8: 16, 9: 21, 10: 20, 11: 20, 12: 68, 13: 68, 14: 30, 15: 34, 16: 34}
+start 582.7
+  pass0 slot1: Artifact Seeker's Pendant -> Imperial Jewel 582.7->584.2
+  pass0 slot13: Molten Heart of the Mountain -> Flamebreak Talisman 584.2->587.5
+  pass0 slot14: Bagh Nakh -> Sword of Zeal 587.5->588.9
+FINAL Rogue 588.0 +- 0.3
+SET Shadowcraft Cap(62) ; Imperial Jewel(60) ; Shadowcraft Spaulders(60) ; Cape of the Black Baron(63) ; Dawn Armor(61) ; Shadowcraft Bracers(57) ; Devilsaur Gauntlets(58) ; Assassin's Waistguard(60) ; Warbear Woolies(57) ; Mongoose Boots(62) ; Initiate's Signet of Ferocity(63) ; Blackstone Ring(54) ; Hand of Justice(58) ; Flamebreak Talisman(61) ; Sword of Zeal(63) ; Masterwork Stormhammer(63) ; Precisely Calibrated Boomstick(48)
+ILVL 59.4 epics 3

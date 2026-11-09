@@ -1,10 +1,8 @@
-EP {0: 0.0, 1: 0.0, 3: 0.181, 5: 0.548, 7: 0.481, 11: 0.0, 14: 0.0, 15: 0.0, 17: 0.539, 18: 0.246, 19: 0.069, 20: 0.0, 13: 0.097} {0: 0.0, 1: 0.0, 2: 0.0}
-cands {0: 19, 1: 16, 2: 15, 3: 18, 4: 15, 5: 15, 6: 15, 7: 15, 8: 15, 9: 17, 10: 15, 11: 15, 12: 37, 13: 37, 14: 25, 15: 26, 16: 11}
-start 556.9
-  pass0 slot0: Magister's Crown -> Dreadmist Mask 556.9->559.3
-  pass0 slot4: Magister's Robes -> Robe of the Archmage 559.3->570.7
-  pass0 slot5: Magister's Bindings -> Runecloth Cuffs 570.7->573.4
-  pass0 slot6: Magister's Gloves -> Inferno Gloves 573.4->581.6
-FINAL Fire 580.7 +- 0.5
-SET Dreadmist Mask(62) ; Archlight Talisman(60) ; Netherflame Shoulders(47) ; Hide of the Wild(62) ; Robe of the Archmage(62) ; Runecloth Cuffs(57) ; Inferno Gloves(62) ; Belt of the Archmage(62) ; Ghostweave Pants(58) ; Venomspew Footpads(58) ; Jereman's Bauble(61) ; Initiate's Signet of Brilliance(63) ; Cleansed Vilebranch Icon(51) ; Frozen Heart of the Mountain(55) ; Notched Ritual Rib(45) ; Personal Spellbook(55) ; Brilliant Wand(60)
-ILVL 57.6 epics 3
+EP {0: 0.0, 1: 0.0, 3: 0.295, 5: 0.618, 7: 0.544, 11: 0.0, 14: 0.0, 15: 0.0, 17: 0.81, 18: 0.393, 19: 0.114, 20: 0.0, 13: 0.102} {0: 0.0, 1: 0.0, 2: 0.0}
+cands {0: 20, 1: 18, 2: 15, 3: 21, 4: 15, 5: 15, 6: 15, 7: 15, 8: 15, 9: 18, 10: 20, 11: 20, 12: 68, 13: 68, 14: 33, 15: 29, 16: 23}
+start 648.6
+  pass0 slot1: Archlight Talisman -> Star of Mystaria 648.6->650.1
+  pass0 slot8: Magister's Leggings -> Skyshroud Leggings 650.1->654.0
+FINAL Fire 654.7 +- 0.5
+SET Crimson Felt Hat(59) ; Star of Mystaria(63) ; Rotgrip Mantle(53) ; Hide of the Wild(62) ; Robe of the Archmage(62) ; Runecloth Cuffs(57) ; Inferno Gloves(62) ; Belt of the Archmage(62) ; Skyshroud Leggings(60) ; Venomspew Footpads(58) ; Songstone of Ironforge(60) ; Maiden's Circle(61) ; Eye of the Beast(63) ; Second Wind(59) ; Arbiter's Blade(53) ; Lord Sakrasis' Scepter(47) ; Brilliant Wand(60)
+ILVL 58.9 epics 3

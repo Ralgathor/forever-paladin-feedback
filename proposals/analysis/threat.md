@@ -11,19 +11,19 @@ All tanks in wowsims have tank consumables. The Paladin has the same consumables
 ## Short answer
 
 - **No. After the development notes of 2 November 2026, the Paladin tank has less threat than the Warrior and the Druid.** The notes give the Warrior ×1.44 and the Druid ×1.43 more threat. This replaces Blessing of Salvation (1 ÷ 0.7 = ×1.43). The Paladin received ×1.33 from Righteous Fury in the beta of 30 October, and no more on 2 November.
-- **With the same gear, the live Paladin has 70% of the Warrior threat** in the model. In wowsims, with item pool tank sets and tank consumables, it has 79% of the Warrior and 65% of the Druid. Before the notes, it had 101% and 108% of the Warrior.
-- **The Druid now has the most threat on one boss in wowsims: 121% of the Warrior.** wowsims master 9a8624af9 gives Bear Form +115% and the Maul, Swipe and Primal Bite threat of the player data.
+- **With the same gear, the live Paladin has 70% of the Warrior threat** in the model. In wowsims, with item pool tank sets and tank consumables, it has 79% of the Warrior and 75% of the Druid. Before the notes, it had 101% and 108% of the Warrior.
+- **The Druid now has the most threat on one boss in wowsims: 105% of the Warrior.** wowsims master 9a8624af9 gives Bear Form +115% and the Maul, Swipe and Primal Bite threat of the player data. Master 9f254e8d8 (9 November) decreases the Druid threat by 10% (part 6).
 - **From fresh 60 to Naxxramas, the live Paladin has 71–82% of the Warrior threat.** With Consecration on cooldown, it has 83–98%, but the mana does not last (see Mana).
-- **With the proposals, the Paladin is between the Warrior and the Druid.** Righteous Fury (C25) gives +90% to all threat (live: +33%). In wowsims, the proposed Paladin has 119% of the Warrior threat and 98% of the Druid (C25 alone: 112% and 92%). In the model, it has 114–135% of the Warrior from Naxxramas to fresh 60.
-- **With +80% (C25a), the live Paladin has 106% of the Warrior in wowsims** and 96–111% in the model. With Redoubt (C-P1), it has 113% of the Warrior and 93% of the Druid in wowsims.
-- **Righteous Fury (C25) closes the gap.** Redoubt (C-P1) gives more blocks, thus more Holy Shield damage: +6% in wowsims (84% of the Warrior). C25 multiplies all Paladin threat by 1.43.
+- **With the proposals, the Paladin is above the Warrior and has the Druid threat.** Righteous Fury (C25) gives +90% to all threat (live: +33%). In wowsims, the proposed Paladin has 114% of the Warrior threat and 109% of the Druid (C25 alone: 112% and 107%). In the model, it has 114–135% of the Warrior from Naxxramas to fresh 60.
+- **With +80% (C25a), the live Paladin has 106% of the Warrior in wowsims** and 96–111% in the model. With Redoubt (C-P1), it has 108% of the Warrior and 103% of the Druid in wowsims.
+- **Righteous Fury (C25) closes the gap.** Redoubt (C-P1) gives more blocks, thus more Holy Shield damage: +2% in wowsims (80% of the Warrior). C25 multiplies all Paladin threat by 1.43.
 - **Two threat proposals were withdrawn on 2 November 2026.** The Holy Strike Seal trigger (C1) and Reckoning (C-P12) each added +3% in wowsims of 1 November. They do not close the gap.
 - **Judgement of the Crusader is important.** It gives the tank about 72 TPS. In the live version, the raid can need the tank Judgement for Light or Wisdom. The tank then has 62% of the Warrior threat. With Personal Judgement of the Crusader (C2), the tank keeps Crusader.
-- **At the pull, the proposed Paladin has the best burst threat, but only with a Fury opener** (part 8). The Paladin casts Seal of Fury and Holy Shield before the pull. Two Judgements of Fury and Holy Strike then hit at 0 sec. The live Paladin then has 154% of the Warrior threat after 1.5 sec, 96% after 3 sec and 82% after 10 sec. The proposed Paladin has 143% after 3 sec and 126% after 10 sec. With the wowsims default opener, the live Paladin has 48% after 3 sec.
-- **In its best short windows, the live Paladin has 62–72% of the Warrior** (part 8). The proposed Paladin has 92–107%. The Druid has 116–123%. The Warrior has large spikes from Shield Slam, Revenge and Heroic Strike critical hits.
-- **Against 3 or more enemies, the Paladin still holds the extra enemies well.** On the enemy with the least threat, the live Paladin has 2.2 times the Warrior threat. The proposed Paladin has 3.2 times. With the proposals, its total threat is 122–128% of the Warrior and 98–100% of the Druid.
-- **Threat sets and survival sets give the same threat order** (part 6). With the survival sets, the live Paladin has 78% of the Warrior and the proposed Paladin 119%.
-- **With the same consumables, Redoubt (C-P1) gives the Paladin the damage taken of the Warrior** (part 6). The live Paladin takes 14% more damage than the Warrior. With Redoubt, it takes the same damage (threat sets) or 1% less (survival sets), and its TMI is lower than the Warrior TMI. Before 4 November evening, the Paladin test had no consumables, and the gap was 28%.
+- **At the pull, the proposed Paladin has the best burst threat, but only with a Fury opener** (part 8). The Paladin casts Seal of Fury and Holy Shield before the pull. Two Judgements of Fury and Holy Strike then hit at 0 sec. The live Paladin then has 150% of the Warrior threat after 1.5 sec, 100% after 3 sec and 89% after 10 sec. The proposed Paladin has 145% after 3 sec and 130% after 10 sec. With the wowsims default opener, the live Paladin has 50% after 3 sec.
+- **In its best short windows, the live Paladin has 62–73% of the Warrior** (part 8). The proposed Paladin has 89–106%. The Druid has 102–114%. The Warrior has large spikes from Shield Slam, Revenge and Heroic Strike critical hits.
+- **Against 3 or more enemies, the Paladin still holds the extra enemies well.** On the enemy with the least threat, the live Paladin has 2.5 times the Warrior threat. The proposed Paladin has 3.6 times. With the proposals, its total threat is 128–133% of the Warrior and 117% of the Druid.
+- **Threat sets and survival sets give the same threat order** (part 6). With the survival sets, the live Paladin has 84% of the Warrior and the proposed Paladin 122%.
+- **With the same consumables, Redoubt (C-P1) gives the Paladin the damage taken of the Warrior** (part 6). The live Paladin takes 3% more damage than the Warrior. With Redoubt, it takes 4% less damage (threat sets) or the same damage (survival sets), and its TMI is lower than the Warrior TMI. Before 4 November evening, the Paladin test had no consumables, and the gap was 28%.
 - **The wowsims tank sets obey the item pool rules** (part 6): no raid drops, no Zul'Gurub or Ahn'Qiraj items, no PvP items, no Revered or Exalted reputation items, item level 63 or lower. The wowsims default sets had these items.
 - **The model Druid uses the same multipliers as wowsims now:** Bear Form ×2.15, Maul ×1.75, Swipe ×1.75 and Primal Bite ×3. The Maul, Swipe and Primal Bite values come from player data. A test in the game must confirm them (part 2).
 
@@ -104,7 +104,7 @@ TPS on one boss. The two percentages compare the Paladin with the Warrior and wi
 
 - **The live Paladin is below the Warrior at all gear levels,** and the gap increases: 82% at fresh 60, 71% in Naxxramas. The Warrior and the Druid receive more Attack Power and rage from gear. The Paladin receives only spell power.
 - **Without Crusader,** the live Paladin has 65–72% of the Warrior threat.
-- **The proposed Paladin has 114–135%** of the Warrior threat in the model. Without C25, it has 80–94%. wowsims gives a smaller gain from Redoubt (part 6): the proposed Paladin has 119% there.
+- **The proposed Paladin has 114–135%** of the Warrior threat in the model. Without C25, it has 80–94%. wowsims gives a smaller gain from Redoubt (part 6): the proposed Paladin has 120% there.
 - **Consecration does not close the gap.** The live Paladin with Consecration on cooldown has 83–98% of the Warrior threat. It costs 565 mana each 8 sec. At fresh 60, the mana lasts only about 1 min with Consecration on cooldown. In Naxxramas, it lasts about 3 min (see Mana).
 - **The Druid multipliers** come from player data. wowsims master 9a8624af9 uses the same values. A test in the game must confirm them (see Open items).
 
@@ -149,10 +149,10 @@ Each cell gives the Paladin TPS as a percentage of the Warrior TPS, then of the 
 The design goal is a Paladin tank with the threat of the Warrior. The beta of 30 October reached it (101%). The development notes of 2 November give the Warrior and the Druid about ×1.44, and the Paladin no change. Thus, the live Paladin has 70% of the Warrior threat in the model, and 79% in wowsims.
 
 - **Why the gap.** Blessing of Salvation decreased the threat of the damage dealers by 30%. Blizzard removed it and gave the tanks about ×1.43 (1 ÷ 0.7). The Paladin received ×1.33 from Righteous Fury in the beta of 30 October. But the Paladin needed this ×1.33 to reach the Warrior before the notes.
-- **Redoubt (C-P1) adds 6% in wowsims.** With Redoubt only, the tank has 84% of the Warrior threat.
+- **Redoubt (C-P1) adds 2% in wowsims.** With Redoubt only, the tank has 80% of the Warrior threat. Argent Defender in the item pool set already gives the live tank 55% block (part 6).
 - **The Holy Strike Seal trigger (C1) and Reckoning (C-P12) were withdrawn.** Each added only +3% in wowsims of 1 November. They do not close the gap.
-- **The fix: Righteous Fury (C25).** The Paladin needs about ×1.44 on all threat. C25 changes the first part of Righteous Fury from +33% to +90% to all threat: ×1.43. The model needs +62% at fresh 60 and +88% in Naxxramas. wowsims needs +69% to reach the Warrior and +105% to reach the Druid, with the item pool tank sets and tank consumables. This is a baseline spell, thus the talent rule (a % only) is not necessary.
-- **With C25, the model gives 101–117% of the Warrior threat** from Naxxramas to fresh 60. Before the notes, the live Paladin had 101–118%. With all proposals, wowsims gives 119% of the Warrior and 98% of the Druid.
+- **The fix: Righteous Fury (C25).** The Paladin needs about ×1.44 on all threat. C25 changes the first part of Righteous Fury from +33% to +90% to all threat: ×1.43. The model needs +62% at fresh 60 and +88% in Naxxramas. wowsims needs +69% to reach the Warrior and +77% to reach the Druid, with the item pool tank sets and tank consumables. This is a baseline spell, thus the talent rule (a % only) is not necessary.
+- **With C25, the model gives 101–117% of the Warrior threat** from Naxxramas to fresh 60. Before the notes, the live Paladin had 101–118%. With all proposals, wowsims gives 114% of the Warrior and 109% of the Druid.
 - **The gear is not the same.** wowsims gives each class a tank set from the same item pool (part 6), but the items are different for each class. A Warrior with better gear can make the gap larger.
 - **Consumables are important.** The Paladin test of wowsims has only a Demonic Rune. With the tank consumables of the Warrior test and two Paladin choices, the live Paladin has +10% threat and −11% damage taken (part 6).
 - **Live tests give the real answer.** First, confirm the new Defensive Stance and Bear Form values on the live realms. Then compare the tanks with the same gear in real fights.
@@ -172,21 +172,24 @@ wowsims Forever plays the fight with the full rules of the game. Full buffs, one
 
 wowsims Forever master commit 9a8624af9 (4 November 2026) has the game data of client 1.60.1.70755 and the hotfixes of 4 November. This data has Holy Shield rank 4 (221 damage, 4 charges), Defensive Stance +80%, Defiance 7/13/20% and Bear Form +115%. The Warrior and Druid values are native wowsims values. The Paladin spells did not change since commit 8298ab833.
 
+The values below come from master commit 9f254e8d8 (9 November 2026, hotfix push 113823). This commit adds 262 items. It also changes the Windfury Totem rule and the Warrior and Druid threat rules. With the sets of 8 November, the Warrior gains 1.5% (1,489 → 1,512), the Druid loses 10% (1,756 → 1,582) and the live Paladin loses 2.8% (1,229 → 1,195). The search ran again for all tank sets. The Paladin threat set takes Warder's Gloves, Scalding Flamehoof (new) and Volunteer's Lucky Seal. It loses Justicar's Gloves and Enriched Seal: −0.6% threat and −3.9% damage taken. The Druid survival set takes Warden's Leather Bracers, Thrall's Resolve (new) and Scalding Flamehoof. The other sets do not change. On 8 November (commit ae9b8c23a), the Paladin threat set took Lightforge Belt, Hand of Edward the Odd and Argent Defender. On 6 November (commit df57e2571), Scarlet Kris replaced Greatflank Flayer in the Warrior set (1,448 → 1,503).
+
 | Tank | TPS (% of the Warrior, % of the Druid) | Damage taken each sec | TMI | Crushing blows |
 | --- | --- | --- | --- | --- |
-| Warrior | 1,448 (100%, 83%) | 300 | 41 | 1.0% |
-| Druid | 1,755 (121%, 100%) | 393 | 43.9 | 15.1% |
-| Paladin, live | 1,137 (79%, 65%) | 343 | 54.0 | 11.9% |
-| Paladin, Redoubt (C-P1) | 1,210 (84%, 69%) | 300 | 42.8 | 1.2% |
-| Paladin, Righteous Fury (C25) | 1,617 (112%, 92%) | 343 | 54.0 | 11.9% |
-| **Paladin, all kept proposals (C-P1, C-P13, C25)** | **1,722 (119%, 98%)** | **305** | **43.8** | **1.2%** |
+| Warrior | 1,512 (100%, 96%) | 306 | 43 | 1.1% |
+| Druid | 1,582 (105%, 100%) | 359 | 38.2 | 15.0% |
+| Paladin, live | 1,187 (79%, 75%) | 316 | 47.1 | 5.6% |
+| Paladin, Redoubt (C-P1) | 1,208 (80%, 76%) | 293 | 40.2 | 1.0% |
+| Paladin, Righteous Fury (C25) | 1,690 (112%, 107%) | 316 | 47.1 | 5.6% |
+| **Paladin, all kept proposals (C-P1, C-P13, C25)** | **1,720 (114%, 109%)** | **298** | **41.1** | **1.0%** |
 
-- **The live Paladin has 79% of the Warrior threat in wowsims.** The model gives 70%. The model has no consumables. Before the notes of 2 November, they gave 101% and 108%.
-- **The Druid has the most threat: 121% of the Warrior.** wowsims master 9a8624af9 gives Bear Form +115% and Maul ×1.75, Swipe ×1.75 and Primal Bite ×3. The earlier runs gave Bear Form only, and the Druid had 77% of the Warrior.
-- **The consumables give the Paladin +10% threat and −11% damage taken.** Without them (Demonic Rune only), the live Paladin had 1,029 TPS and 384 damage taken each sec.
-- **With Redoubt (C-P1), the Paladin takes the same damage as the Warrior** (300 each sec), and its TMI is near the Warrior TMI (42.8 against 41). The live Paladin takes 14% more damage than the Warrior. With all kept proposals, it takes 2% more.
-- **Redoubt adds less in wowsims:** +73 TPS (+6%) against +96 TPS (+15%) in the model. The model gives too many Holy Shield blocks.
-- **Righteous Fury (C25) multiplies all Paladin threat by 1.43.** With all kept proposals, the Paladin has 119% of the Warrior threat and 98% of the Druid. The model gives 115% of the Warrior (part 1).
+- **The live Paladin has 79% of the Warrior threat in wowsims.** The model gives 70%. The model has no consumables and no Argent Defender. Before the notes of 2 November, they gave 101% and 108%.
+- **The Paladin set of 8 November gave +8% threat** (1,137 → 1,229). Argent Defender increases the block chance after a hit: block 41% → 55%. Thus Holy Shield hits more, and the crushing blows decrease from 11.9% to 6.6% (5.6% with the set of 9 November). Hand of Edward the Odd gives 90 spell damage.
+- **The Druid has the most threat: 105% of the Warrior.** wowsims master 9a8624af9 gives Bear Form +115% and Maul ×1.75, Swipe ×1.75 and Primal Bite ×3. Master 9f254e8d8 decreases the Druid threat by 10% (118% → 105% of the Warrior). The earlier runs gave Bear Form only, and the Druid had 77% of the Warrior.
+- **The consumables give the Paladin +10% threat and −11% damage taken.** Without them (Demonic Rune only), the live Paladin had 1,029 TPS and 384 damage taken each sec (set of 4 November).
+- **With Redoubt (C-P1), the Paladin takes 4% less damage than the Warrior** (293 against 306 each sec). Its TMI is also lower (40.2 against 43). The live Paladin takes 3% more damage than the Warrior. With all kept proposals, it takes 2% less damage.
+- **Redoubt adds less in wowsims:** +21 TPS (+2%) against +96 TPS (+15%) in the model. The model gives too many Holy Shield blocks. With Argent Defender, the live Paladin already blocks 55% of the swings (Redoubt: 62%).
+- **Righteous Fury (C25) multiplies all Paladin threat by 1.43.** With all kept proposals, the Paladin has 114% of the Warrior threat and 109% of the Druid. The model gives 115% of the Warrior (part 1).
 - **Holy Shield rank 4 adds 6% in wowsims.** With the default set and rank 3 (wowsims of 1 November), the live Paladin had 928 TPS. With rank 4, it had 980 TPS.
 - **C1 (withdrawn) agrees:** +26 in wowsims of 1 November, +25 in the model. The C1 flag does not run on commit d97252f2a.
 - **Reckoning (C-P12), withdrawn.** With C1, it gave +27 more in wowsims of 1 November and +20 in the model.
@@ -196,29 +199,29 @@ wowsims Forever master commit 9a8624af9 (4 November 2026) has the game data of c
 
 | Tank | TPS (% of the Warrior, % of the Druid) | Damage taken each sec | TMI | Crushing blows |
 | --- | --- | --- | --- | --- |
-| Warrior | 1,382 (100%, 80%) | 292 | 41 | 0.9% |
-| Druid | 1,718 (124%, 100%) | 393 | 42.7 | 15.1% |
-| Paladin, live | 1,081 (78%, 63%) | 333 | 45.8 | 11.8% |
-| Paladin, Redoubt (C-P1) | 1,157 (84%, 67%) | 289 | 36.0 | 1.1% |
-| Paladin, Righteous Fury (C25) | 1,538 (111%, 90%) | 333 | 45.8 | 11.8% |
-| **Paladin, all kept proposals (C-P1, C-P13, C25)** | **1,647 (119%, 96%)** | **295** | **36.9** | **1.1%** |
+| Warrior | 1,389 (100%, 92%) | 293 | 41 | 0.9% |
+| Druid | 1,515 (109%, 100%) | 345 | 35.8 | 15.0% |
+| Paladin, live | 1,173 (84%, 77%) | 317 | 45.5 | 5.7% |
+| Paladin, Redoubt (C-P1) | 1,195 (86%, 79%) | 292 | 38.8 | 0.9% |
+| Paladin, Righteous Fury (C25) | 1,669 (120%, 110%) | 317 | 45.5 | 5.7% |
+| **Paladin, all kept proposals (C-P1, C-P13, C25)** | **1,700 (122%, 112%)** | **298** | **39.6** | **0.9%** |
 
-- **The threat order does not change.** The Paladin loses 5% threat with its survival set (1,137 → 1,081), the Warrior 5% and the Druid 2%. The Paladin keeps 78% (live) and 119% (all kept proposals) of the Warrior.
-- **The Paladin TMI decreases the most:** 54.0 → 45.8 (live) and 43.8 → 36.9 (all kept proposals). The Warrior TMI stays at 41.
-- **With Redoubt (C-P1), the Paladin takes 1% less damage than the Warrior,** and its TMI is lower (36.0 against 41). The live Paladin takes 14% more damage. The Warrior dodges more (22.5% against 13.9%), and the boss has 2.6% critical hits on the live Paladin (Warrior: 0.1%).
-- **C25a (+80%)** gives 105% of the Warrior (live) and 113% with C-P1 (threat sets: 106% and 113%).
+- **The threat order does not change.** The Paladin loses 1% threat with its survival set (1,187 → 1,173), the Warrior 8% (1,512 → 1,389) and the Druid 4%. The Paladin keeps 84% (live) and 122% (all kept proposals) of the Warrior.
+- **The TMI decreases for all three tanks:** Paladin 47.1 → 45.5 (live) and 41.1 → 39.6 (all kept proposals), Warrior 43 → 41, Druid 38.2 → 35.8.
+- **With Redoubt (C-P1), the Paladin takes the same damage as the Warrior** (292 against 293 each sec), and its TMI is lower (38.8 against 41). The live Paladin takes 8% more damage. The Warrior dodges more (22.7% against 14.3%), and the boss has 2.4% critical hits on the live Paladin (Warrior: 0.1%).
+- **C25a (+80%)** gives 114% of the Warrior (live) and 116% with C-P1 (threat sets: 106% and 108%).
 
 **Other fights (wowsims, 3 min, item pool threat sets).** TPS, % of the Warrior in brackets. "Fast" is a swing each 1.2 sec with 60% damage, thus the same damage each sec. "Two weapons" is a boss with a second weapon. The 5 min row has C-P1 only: Toughness removal (C-P13) does not change threat.
 
 | Boss | Warrior | Paladin, live | Paladin, C-P1 and C-P13 | Paladin, all kept proposals (×1.43) |
 | --- | --- | --- | --- | --- |
-| Normal, 5 min | 1,431 | 1,135 (79%) | 1,209 (84%) | 1,727 (121%) |
-| Fast | 1,538 | 1,255 (82%) | 1,305 (85%) | 1,864 (121%) |
-| Two weapons | 1,583 | 1,298 (82%) | 1,333 (84%) | 1,904 (120%) |
-| Fast, two weapons | 1,687 | 1,396 (83%) | 1,395 (83%) | 1,993 (118%) |
+| Normal, 5 min | 1,499 | 1,185 (79%) | 1,206 (80%) | 1,723 (115%) |
+| Fast | 1,593 | 1,294 (81%) | 1,303 (82%) | 1,862 (117%) |
+| Two weapons | 1,682 | 1,329 (79%) | 1,335 (79%) | 1,907 (113%) |
+| Fast, two weapons | 1,780 | 1,400 (79%) | 1,397 (78%) | 1,995 (112%) |
 
 - **Faster boss attacks help the Warrior and the Paladin.** The Warrior receives more rage. The Paladin blocks more, thus Holy Shield hits more.
-- **Against a fast boss with two weapons, Redoubt adds no threat.** The Holy Shield charges are empty too soon (Crushing blows, part 3).
+- **Against a boss with two weapons, Redoubt adds almost no threat** (−0.2% to +0.4%). The Holy Shield charges are empty too soon (Crushing blows, part 3).
 
 ## 7. Groups of enemies
 
@@ -237,19 +240,19 @@ This part compares the tanks against 3 and 5 enemies.
 | Paladin | Consecration rank 5 | 96 Holy damage to all enemies. The first 4 enemies also take 216 + 33.6% of spell power. 565 mana each 8 sec |
 | Paladin | Holy Shield rank 4 | Damage to the attacker on each block. 4 charges each 10 sec. The Shieldsworn trigger hits the Holy Strike target |
 
-**wowsims result.** Item pool tank sets and tank consumables (part 6). Each enemy is level 63 and hits for 1/3 of a boss hit. The Paladin uses its default rotation with Consecration. The values are TPS on each target, with the main target first. The Warrior and Druid values are native values of commit 9a8624af9 (part 6).
+**wowsims result.** Item pool tank sets and tank consumables (part 6). Each enemy is level 63 and hits for 1/3 of a boss hit. The Paladin uses its default rotation with Consecration. The values are TPS on each target, with the main target first. All values come from commit 9f254e8d8 (part 6).
 
 | Tank | 1 target | 3 targets | 5 targets |
 | --- | --- | --- | --- |
-| Paladin, live | 1,137 | 1,079 / 299 / 299 | 1,052 / 258 / 258 / 258 / 144 |
-| Paladin, proposed | 1,722 | 1,534 / 430 / 431 | 1,491 / 367 / 367 / 367 / 205 |
-| Warrior | 1,363 | 1,345 / 388 / 133 | 1,419 / 549 / 126 / 126 / 64 |
-| Druid | 1,422 | 1,694 / 378 / 366 | 1,877 / 402 / 387 / 63 / 63 |
+| Paladin, live | 1,187 | 1,095 / 300 / 301 | 1,076 / 256 / 256 / 256 / 139 |
+| Paladin, proposed | 1,719 | 1,556 / 428 / 428 | 1,529 / 365 / 365 / 365 / 197 |
+| Warrior | 1,399 | 1,361 / 334 / 120 | 1,433 / 489 / 112 / 113 / 52 |
+| Druid | 1,278 | 1,496 / 284 / 284 | 1,692 / 296 / 296 / 59 / 59 |
 
-- **On the lowest target, the Paladin still leads the Warrior.** On 3 targets, the live Paladin has 2.2 times the Warrior threat, but 82% of the Druid. On 5 targets, it has 2.2 times the Warrior threat and 2.3 times the Druid threat.
-- **The proposed Paladin leads by more.** On the lowest target, it has 3.2 times the Warrior threat on 3 and on 5 targets. It has 117% of the Druid on 3 targets and 3.3 times on 5 targets.
-- **In total, the live Paladin is last.** On 3 targets: live Paladin 1,678, Warrior 1,866, Druid 2,439. On 5 targets: live Paladin 1,970, Warrior 2,284, Druid 2,792.
-- **The proposed Paladin has the Druid total.** On 3 targets: 2,396 (128% of the Warrior, 98% of the Druid). On 5 targets: 2,798 (122% of the Warrior, 100% of the Druid).
+- **On the lowest target, the Paladin still leads the Warrior.** On 3 targets, the live Paladin has 2.5 times the Warrior threat and 106% of the Druid. On 5 targets, it has 2.7 times the Warrior threat and 2.4 times the Druid threat.
+- **The proposed Paladin leads by more.** On the lowest target, it has 3.6 times the Warrior threat on 3 targets and 3.8 times on 5 targets. It has 151% of the Druid on 3 targets and 3.3 times on 5 targets.
+- **In total, the live Paladin is last.** On 3 targets: live Paladin 1,696, Warrior 1,816, Druid 2,065. On 5 targets: live Paladin 1,984, Warrior 2,199, Druid 2,404.
+- **The proposed Paladin has more than the Druid total.** On 3 targets: 2,413 (133% of the Warrior, 117% of the Druid). On 5 targets: 2,822 (128% of the Warrior, 117% of the Druid).
 - **Redoubt changes almost nothing on groups:** less than 1%. On extra targets, all Holy Shield charges are already used in the live version. The gain comes from Righteous Fury (C25).
 - **The fifth enemy has less Paladin threat** because Consecration gives its full damage to 4 enemies only.
 - **The Warrior** holds only 2 targets well: Cleave hits 2 targets. **The Druid** holds only 3: Swipe hits 3 targets.
@@ -266,13 +269,13 @@ This part compares the tanks against 3 and 5 enemies.
 
 Values are TPS on all targets. Without Consecration, the proposed Paladin has 119–146% of the stronger tank on 3 targets, and 101–117% on 5 targets.
 
-**Conclusion.** Against 3 or more enemies, the Paladin holds the extra enemies better than the Warrior. On 5 targets, it holds them better than the Druid too. The live total threat is the lowest of the three tanks. The problem is the main target (parts 1 and 6). With Righteous Fury (C25), the Paladin is above the Warrior on the main target and in total, and it has the Druid total.
+**Conclusion.** Against 3 or more enemies, the Paladin holds the extra enemies better than the Warrior. On 5 targets, it holds them better than the Druid too. The live total threat is the lowest of the three tanks. The problem is the main target (parts 1 and 6). With Righteous Fury (C25), the Paladin is above the Warrior on the main target and in total, and above the Druid total.
 
 ## 8. Burst threat
 
 This part compares the threat in the first seconds of a pull and in the best short windows of a fight. A damage dealer pulls the boss when it has more threat than the tank. At the start of a pull, and after a large threat spike, this can occur before the sustained values of part 6 apply.
 
-**Setup.** wowsims, as in part 6: item pool tank sets, tank consumables, full buffs, one level 63 boss from the front, 3 min fight, 3,000 iterations. A recorder adds the threat on the boss in steps of 0.1 sec. All values come from commit 9a8624af9, except the Warrior variants of commit 6ee3c30f35 (default sets).
+**Setup.** wowsims, as in part 6: item pool tank sets, tank consumables, full buffs, one level 63 boss from the front, 3 min fight, 3,000 iterations. A recorder adds the threat on the boss in steps of 0.1 sec. All values come from commit 9f254e8d8, except the Warrior variants of commit 6ee3c30f35 (default sets).
 
 - **Warrior.** Default rotation, 0 rage at the pull. Bloodrage and a rage potion at −1.5 sec.
 - **Druid.** Default rotation, 25 rage at the pull.
@@ -292,64 +295,64 @@ Judgement and Swift Judgement are not on the global cooldown, thus both hit at 0
 
 | Tank | First 1.5 sec | First 3 sec | First 6 sec | First 10 sec | First 20 sec | 3 min (TPS) |
 | --- | --- | --- | --- | --- | --- | --- |
-| Warrior | 3,823 (100%) | 7,269 (100%) | 10,879 (100%) | 17,940 (100%) | 34,228 (100%) | 1,450 (100%) |
-| Druid | 4,081 (107%) | 7,018 (97%) | 10,499 (97%) | 17,880 (100%) | 38,190 (112%) | 1,751 (121%) |
-| Paladin, live, wowsims opener | 1,407 (37%) | 3,515 (48%) | 7,207 (66%) | 11,335 (63%) | 22,843 (67%) | 1,134 (78%) |
-| Paladin, live, Fury opener | 5,907 (154%) | 6,960 (96%) | 8,962 (82%) | 14,756 (82%) | 25,950 (76%) | 1,154 (80%) |
-| Paladin, proposed, wowsims opener | 2,001 (52%) | 4,992 (69%) | 10,742 (99%) | 17,226 (96%) | 34,797 (102%) | 1,721 (119%) |
-| Paladin, proposed, Fury opener | 8,641 (226%) | 10,399 (143%) | 13,740 (126%) | 22,602 (126%) | 39,479 (115%) | 1,751 (121%) |
+| Warrior | 3,969 (100%) | 7,094 (100%) | 10,948 (100%) | 17,371 (100%) | 33,772 (100%) | 1,514 (100%) |
+| Druid | 3,671 (93%) | 6,211 (88%) | 9,230 (84%) | 15,764 (91%) | 34,242 (101%) | 1,577 (104%) |
+| Paladin, live, wowsims opener | 1,421 (36%) | 3,527 (50%) | 7,444 (68%) | 11,896 (68%) | 24,026 (71%) | 1,186 (78%) |
+| Paladin, live, Fury opener | 5,935 (150%) | 7,124 (100%) | 9,407 (86%) | 15,496 (89%) | 27,095 (80%) | 1,205 (80%) |
+| Paladin, proposed, wowsims opener | 2,024 (51%) | 5,012 (71%) | 10,724 (98%) | 17,231 (99%) | 34,797 (103%) | 1,718 (114%) |
+| Paladin, proposed, Fury opener | 8,531 (215%) | 10,293 (145%) | 13,690 (125%) | 22,539 (130%) | 39,361 (117%) | 1,750 (116%) |
 
 - **With the wowsims default opener, the Paladin starts slowly.** The first global cooldown goes to Judgement of the Crusader. Holy Shield starts at 3 sec, and Holy Strike at 4.5 sec.
-- **With the Fury opener, the Paladin has the best start of the three tanks in the first 1.5 sec.** Two Judgements of Fury, Holy Strike, the Shieldsworn Holy Shield hit and the explosives hit the boss at the pull.
-- **The live lead does not last.** After 3 sec, the live Fury opener has 96% of the Warrior, and after 10 sec 82%. After 20 sec, it has 76%, near the sustained gap of part 6.
-- **The proposed Paladin keeps the lead.** With the Fury opener, it has 126% of the Warrior after 10 sec and 115% after 20 sec. In the first 3 sec, all of the gain comes from Righteous Fury (C25). Redoubt starts after the first blocks.
-- **The Druid starts as fast as the Warrior.** It uses its 25 rage at once. After 20 sec, it has 112% of the Warrior, and the proposed Paladin with the Fury opener 115%.
+- **With the Fury opener, the Paladin has the best start of the three tanks in the first 3 sec.** Two Judgements of Fury, Holy Strike, the Shieldsworn Holy Shield hit and the explosives hit the boss at the pull.
+- **The live lead does not last.** After 3 sec, the live Fury opener has 100% of the Warrior, and after 10 sec 89%. After 20 sec, it has 80%, near the sustained gap of part 6.
+- **The proposed Paladin keeps the lead.** With the Fury opener, it has 130% of the Warrior after 10 sec and 117% after 20 sec. In the first 3 sec, all of the gain comes from Righteous Fury (C25). Redoubt starts after the first blocks.
+- **The Druid starts a little slower than the Warrior.** It uses its 25 rage at once, but it has 84–93% of the Warrior in the first 6 sec. After 20 sec, it has 101% of the Warrior, and the proposed Paladin with the Fury opener 117%.
 - **The Warrior needs rage first.** It starts with 0 rage. Its threat increases fast from 2 sec, when the boss hits give rage.
 - **Boss armor helps the Paladin.** In the first 6 sec, the boss has less than 5 Sunder Armor stacks. This decreases Warrior and Druid physical damage. Most Paladin threat is Holy damage, thus boss armor does not decrease it.
-- **With one Judgement at 0 sec,** Swift Judgement hits at 1.5 sec. Only the first 1.5 sec change: 4,608 threat (121%) in place of 5,907. From 3 sec, the two openers have the same threat.
+- **With one Judgement at 0 sec,** Swift Judgement hits at 1.5 sec. Only the first 1.5 sec change: 4,639 threat (117%) in place of 5,935. From 3 sec, the two openers have the same threat.
 
 **Bad pulls** (threat on the 10% worst fights, % of the Warrior on its 10% worst fights)
 
 | Tank | First 3 sec | First 6 sec | First 10 sec |
 | --- | --- | --- | --- |
-| Warrior | 3,414 (100%) | 6,676 (100%) | 12,443 (100%) |
-| Druid | 3,341 (98%) | 5,948 (89%) | 11,693 (94%) |
-| Paladin, live, wowsims opener | 2,598 (76%) | 5,396 (81%) | 9,136 (73%) |
-| Paladin, live, Fury opener | 5,237 (153%) | 7,027 (105%) | 12,123 (97%) |
-| Paladin, proposed, Fury opener | 7,938 (233%) | 10,928 (164%) | 18,786 (151%) |
+| Warrior | 3,486 (100%) | 7,012 (100%) | 12,076 (100%) |
+| Druid | 2,851 (82%) | 5,281 (75%) | 10,294 (85%) |
+| Paladin, live, wowsims opener | 2,607 (75%) | 5,686 (81%) | 9,651 (80%) |
+| Paladin, live, Fury opener | 5,340 (153%) | 7,332 (105%) | 12,725 (105%) |
+| Paladin, proposed, Fury opener | 7,788 (223%) | 10,688 (152%) | 18,609 (154%) |
 
-- **A bad pull costs the Warrior and the Druid the most.** When their first attacks miss or the boss attacks miss them, they have no rage. The Warrior threat after 3 sec decreases to 47% of its mean. The Druid keeps 48%, and the live Paladin 74%.
+- **A bad pull costs the Warrior and the Druid the most.** When their first attacks miss or the boss attacks miss them, they have no rage. The Warrior threat after 3 sec decreases to 49% of its mean. The Druid keeps 46%, and the live Paladin 74%.
 - **A bad pull costs the Paladin less.** Judgement of Fury cannot be dodged or parried. Holy Shield and Seal of Fury cannot miss.
 
 **Best short windows** (the highest threat in a window at any time in the 3 min fight, % of the Warrior)
 
 | Tank | Best 3 sec | Best 6 sec | Best 10 sec | Best 3 sec ÷ mean 3 sec |
 | --- | --- | --- | --- | --- |
-| Warrior | 12,939 (100%) | 18,711 (100%) | 24,964 (100%) | ×3.0 |
-| Druid | 15,773 (122%) | 21,728 (116%) | 30,608 (123%) | ×3.0 |
-| Paladin, live, wowsims opener | 8,146 (63%) | 11,632 (62%) | 17,577 (70%) | ×2.4 |
-| Paladin, live, Fury opener | 8,780 (68%) | 11,734 (63%) | 17,979 (72%) | ×2.6 |
-| Paladin, proposed, wowsims opener | 12,018 (93%) | 17,234 (92%) | 26,026 (104%) | ×2.3 |
-| Paladin, proposed, Fury opener | 12,819 (99%) | 17,296 (92%) | 26,624 (107%) | ×2.5 |
+| Warrior | 12,805 (100%) | 19,206 (100%) | 25,169 (100%) | ×2.8 |
+| Druid | 14,614 (114%) | 19,562 (102%) | 27,475 (109%) | ×3.1 |
+| Paladin, live, wowsims opener | 8,285 (65%) | 11,892 (62%) | 17,996 (72%) | ×2.3 |
+| Paladin, live, Fury opener | 8,872 (69%) | 12,010 (63%) | 18,415 (73%) | ×2.5 |
+| Paladin, proposed, wowsims opener | 11,914 (93%) | 17,149 (89%) | 25,873 (103%) | ×2.3 |
+| Paladin, proposed, Fury opener | 12,745 (100%) | 17,299 (90%) | 26,570 (106%) | ×2.4 |
 
 - **The Paladin has no threat cooldown.** Its best windows come from Holy Strike, Judgement and Holy Shield in the same 3 sec, with critical hits. The Warrior adds Shield Slam, Revenge and Heroic Strike critical hits to the rage from boss hits. The Druid has the largest windows, from Maul and Primal Bite.
-- **The best-window gap is larger than the sustained gap.** Live: 62–72% against 78%. Proposed: 92–107% against 119%. Thus the Paladin has a smaller margin against a large threat spike from a damage dealer.
+- **The best-window gap is larger than the sustained gap.** Live: 62–73% against 78%. Proposed: 89–106% against 114%. Thus the Paladin has a smaller margin against a large threat spike from a damage dealer.
 
 **Warrior variants**
 
 | Warrior | First 1.5 sec | First 3 sec | First 6 sec | First 10 sec |
 | --- | --- | --- | --- | --- |
-| Default, with Goblin Sapper Charge (above) | 3,823 | 7,269 | 10,879 | 17,940 |
-| No engineering items | 2,563 (−33%) | 5,776 (−21%) | 9,393 (−14%) | 16,330 (−9%) |
+| Default, with Goblin Sapper Charge (above) | 3,969 | 7,094 | 10,948 | 17,371 |
+| No engineering items | 3,055 (−23%) | 5,900 (−17%) | 9,751 (−11%) | 15,737 (−9%) |
 | Default set, no engineering items, commit 6ee3c30f35 | 1,968 | 4,609 | 6,962 | 12,881 |
 | Default set, Charge at −0.5 sec, 20 yards (Vanguard), commit 6ee3c30f35 | 1,711 (−13%) | 4,213 (−9%) | 7,223 (+4%) | 13,354 (+4%) |
 
-- **Charge does not increase the Warrior burst.** Charge gives 15 rage, but this rage gives no threat. The Charge stun also delays the first boss swings, thus the Warrior receives less rage from boss hits. The Charge rotation does not run on commits 8298ab833 and 9a8624af9: the Warrior does almost no attacks. Thus, the Charge row comes from commit 6ee3c30f35 with the default Warrior set, and its % compare it with the default rotation of that commit. The two rows of commit 6ee3c30f35 are wowsims values × 1.445 (the Warrior multipliers of the notes of 2 November).
+- **Charge does not increase the Warrior burst.** Charge gives 15 rage, but this rage gives no threat. The Charge stun also delays the first boss swings, thus the Warrior receives less rage from boss hits. The Charge rotation does not run on commits 8298ab833, 9a8624af9, ae9b8c23a and 9f254e8d8: the Warrior does almost no attacks. Thus, the Charge row comes from commit 6ee3c30f35 with the default Warrior set, and its % compare it with the default rotation of that commit. The two rows of commit 6ee3c30f35 are wowsims values × 1.445 (the Warrior multipliers of the notes of 2 November).
 - **Charge in combat.** With Vanguard, the Warrior can charge in Defensive Stance. The Vanguard Charge row in the game files still has the "not in combat" attribute. Thus the Warrior can charge only at the pull. A test in the game must confirm this.
 
-**Tank swaps.** Shoulder the Burden (C-P5) moves 50% of the threat of an ally to the Paladin. After 30 sec, the Warrior has about 49,000 threat. Shoulder the Burden on the Warrior then gives the Paladin about 24,500 threat at once. This is 2.8 times the best 3 sec live Paladin window. It does not help at the pull, because no ally has threat yet.
+**Tank swaps.** Shoulder the Burden (C-P5) moves 50% of the threat of an ally to the Paladin. After 30 sec, the Warrior has about 49,000 threat. Shoulder the Burden on the Warrior then gives the Paladin about 25,000 threat at once. This is 3 times the best 3 sec live Paladin window. It does not help at the pull, because no ally has threat yet.
 
-**Conclusion.** The proposed Paladin can hold the boss at the pull better than the Warrior and the Druid, but only with a Fury opener. The live Paladin leads only in the first 1.5 sec. The default opener of wowsims gives it 48% of the Warrior threat in the first 3 sec. After 10 sec, the sustained gap of part 6 returns. In short windows later in the fight, the live Paladin has 62–72% of the Warrior. The proposed Paladin keeps the lead for the first 30 sec, and has 92–107% of the Warrior in short windows. The Druid has the largest short windows.
+**Conclusion.** The proposed Paladin can hold the boss at the pull better than the Warrior and the Druid, but only with a Fury opener. The live Paladin leads only in the first 3 sec. The default opener of wowsims gives it 50% of the Warrior threat in the first 3 sec. After 10 sec, the sustained gap of part 6 returns. In short windows later in the fight, the live Paladin has 62–73% of the Warrior. The proposed Paladin keeps the lead for the first 30 sec, and has 89–106% of the Warrior in short windows. The Druid has the largest short windows.
 
 ## 9. Righteous Fury alone: +90% (C25) and +80% (C25a)
 
@@ -357,7 +360,7 @@ This part gives parts 1 to 8 again with Righteous Fury (C25) alone, and with the
 
 - **Righteous Fury multiplies all Paladin threat.** Thus, C25 multiplies each Paladin value of the model by 1.43 (1.9 ÷ 1.33), and C25a by 1.35 (1.8 ÷ 1.33).
 - **The wowsims values come from new runs.** C25 multiplies the wowsims threat by 1.43, and C25a by 1.35.
-- **The Warrior and Druid values do not change.** They use the notes of 2 November, as in parts 1 to 8. The wowsims values are native values of commit 9a8624af9.
+- **The Warrior and Druid values do not change.** They use the notes of 2 November, as in parts 1 to 8. The wowsims values are native values of commit 9f254e8d8.
 
 **One boss, same gear (model, part 1).** Boss hit of 4,500 before armor. The cells give TPS, then % of the Warrior and of the Druid. The last column gives % of the Warrior at 3,000 and 6,000 hits.
 
@@ -412,60 +415,60 @@ This part gives parts 1 to 8 again with Righteous Fury (C25) alone, and with the
 
 | Paladin | Live (+33%) | C25 (+90%) | C25a (+80%) |
 | --- | --- | --- | --- |
-| Live | 1,137 (79%, 65%) | 1,617 (112%, 92%) | 1,533 (106%, 87%) |
-| Redoubt (C-P1) | 1,210 (84%, 69%) | 1,722 (119%, 98%) | 1,632 (113%, 93%) |
-| All kept proposals (with C-P13) | 1,210 (84%, 69%) | 1,722 (119%, 98%) | 1,632 (113%, 93%) |
+| Live | 1,187 (79%, 75%) | 1,690 (112%, 107%) | 1,602 (106%, 101%) |
+| Redoubt (C-P1) | 1,208 (80%, 76%) | 1,720 (114%, 109%) | 1,630 (108%, 103%) |
+| All kept proposals (with C-P13) | 1,208 (80%, 76%) | 1,720 (114%, 109%) | 1,630 (108%, 103%) |
 
-The Warrior has 1,448 and the Druid 1,755 (commit 9a8624af9).
+The Warrior has 1,512 and the Druid 1,582 (commit 9f254e8d8).
 
-- **C25: the live Paladin has 112% of the Warrior threat** in wowsims, and 119% with Redoubt (C-P1). The model gives 100%. The Druid keeps more threat: the Paladin has 92% and 98% of the Druid.
-- **C25a: the live Paladin has 106%,** and 113% with Redoubt (C-P1). The model gives 95%.
+- **C25: the live Paladin has 112% of the Warrior threat** in wowsims, and 114% with Redoubt (C-P1). The model gives 100%. The Paladin then has more than the Druid threat: 107% and 109% of the Druid.
+- **C25a: the live Paladin has 106%,** and 108% with Redoubt (C-P1). The model gives 95%. The Paladin has 101% and 103% of the Druid.
 - **Toughness removal (C-P13)** still does not change threat.
 
 **wowsims, groups (part 7).** TPS on each target, main target first, and the total.
 
 | Tank | 1 target | 3 targets | 5 targets |
 | --- | --- | --- | --- |
-| Paladin, live, C25 (+90%) | 1,617 | 1,540 / 425 / 425 (total 2,390) | 1,501 / 367 / 367 / 367 / 205 (total 2,807) |
-| Paladin, Redoubt (C-P1), C25 (+90%) | 1,722 | 1,534 / 430 / 431 (total 2,396) | 1,491 / 367 / 367 / 367 / 205 (total 2,798) |
-| Paladin, live, C25a (+80%) | 1,533 | 1,459 / 403 / 403 (total 2,265) | 1,422 / 348 / 348 / 348 / 194 (total 2,660) |
-| Paladin, Redoubt (C-P1), C25a (+80%) | 1,632 | 1,454 / 408 / 408 (total 2,270) | 1,413 / 348 / 348 / 348 / 194 (total 2,651) |
-| Warrior | 1,363 | 1,345 / 388 / 133 (total 1,866) | 1,419 / 549 / 126 / 126 / 64 (total 2,284) |
-| Druid | 1,422 | 1,694 / 378 / 366 (total 2,439) | 1,877 / 402 / 387 / 63 / 63 (total 2,792) |
+| Paladin, live, C25 (+90%) | 1,690 | 1,562 / 427 / 427 (total 2,417) | 1,536 / 364 / 365 / 365 / 197 (total 2,828) |
+| Paladin, Redoubt (C-P1), C25 (+90%) | 1,719 | 1,556 / 428 / 428 (total 2,413) | 1,529 / 365 / 365 / 365 / 197 (total 2,822) |
+| Paladin, live, C25a (+80%) | 1,602 | 1,480 / 405 / 405 (total 2,291) | 1,455 / 345 / 346 / 346 / 187 (total 2,680) |
+| Paladin, Redoubt (C-P1), C25a (+80%) | 1,630 | 1,475 / 406 / 405 (total 2,286) | 1,449 / 346 / 346 / 346 / 187 (total 2,674) |
+| Warrior | 1,399 | 1,361 / 334 / 120 (total 1,816) | 1,433 / 489 / 112 / 113 / 52 (total 2,199) |
+| Druid | 1,278 | 1,496 / 284 / 284 (total 2,065) | 1,692 / 296 / 296 / 59 / 59 (total 2,404) |
 
-- **On the main target of 1 target, the Paladin holds the enemy better than the Warrior and the Druid.** With C25, it has 119% of the Warrior and 114% of the Druid. With C25a, it has 112% and 108%. On 3 and 5 targets, the Druid has the most threat on the main target.
-- **In total, the Paladin is above the Warrior and near the Druid.** With C25: 128% of the Warrior on 3 targets and 123% on 5 targets (Druid: 98% and 101%). With C25a: 121% and 116% of the Warrior.
-- **On the lowest target, the lead becomes larger.** With C25, the Paladin has 3.2 times the Warrior threat on 3 and on 5 targets.
+- **On the main target of 1 target, the Paladin holds the enemy better than the Warrior and the Druid.** With C25, it has 121% of the Warrior and 132% of the Druid. With C25a, it has 115% and 125%. On 3 targets, the Paladin with C25 also has the most threat on the main target. On 5 targets, the Druid has the most.
+- **In total, the Paladin is above the Warrior and the Druid.** With C25: 133% of the Warrior on 3 targets and 129% on 5 targets (Druid: 117% and 118%). With C25a: 126% and 122% of the Warrior.
+- **On the lowest target, the lead becomes larger.** With C25, the Paladin has 3.6 times the Warrior threat on 3 targets and 3.8 times on 5 targets.
 - **The model gives a larger lead** (part 7). With C25, the proposed Paladin has 172–213% of the stronger tank on 3 targets, and 165–195% on 5 targets.
 
 **Burst threat (part 8).** Threat on the boss after the first seconds, % of the Warrior.
 
 | Tank | First 1.5 sec | First 3 sec | First 6 sec | First 10 sec | First 20 sec | First 30 sec |
 | --- | --- | --- | --- | --- | --- | --- |
-| Warrior | 3,823 | 7,269 | 10,879 | 17,940 | 34,228 | 48,995 |
-| Druid | 4,081 (107%) | 7,018 (97%) | 10,499 (97%) | 17,880 (100%) | 38,190 (112%) | 55,279 (113%) |
-| Paladin, live, wowsims opener, C25 (+90%) | 2,001 (52%) | 4,992 (69%) | 10,242 (94%) | 16,103 (90%) | 32,465 (95%) | 47,030 (96%) |
-| Paladin, Redoubt (C-P1), wowsims opener, C25 (+90%) | 2,001 (52%) | 4,992 (69%) | 10,742 (99%) | 17,226 (96%) | 34,797 (102%) | 50,477 (103%) |
-| Paladin, live, Fury opener, C25 (+90%) | 8,409 (220%) | 9,898 (136%) | 12,742 (117%) | 20,984 (117%) | 36,913 (108%) | 50,955 (104%) |
-| Paladin, Redoubt (C-P1), Fury opener, C25 (+90%) | 8,641 (226%) | 10,399 (143%) | 13,740 (126%) | 22,602 (126%) | 39,479 (115%) | 54,571 (111%) |
-| Paladin, live, wowsims opener, C25a (+80%) | 1,897 (50%) | 4,732 (65%) | 9,710 (89%) | 15,266 (85%) | 30,777 (90%) | 44,584 (91%) |
-| Paladin, Redoubt (C-P1), wowsims opener, C25a (+80%) | 1,897 (50%) | 4,732 (65%) | 10,183 (94%) | 16,330 (91%) | 32,987 (96%) | 47,850 (98%) |
-| Paladin, live, Fury opener, C25a (+80%) | 7,970 (208%) | 9,383 (129%) | 12,079 (111%) | 19,892 (111%) | 34,989 (102%) | 48,302 (99%) |
-| Paladin, Redoubt (C-P1), Fury opener, C25a (+80%) | 8,190 (214%) | 9,857 (136%) | 13,025 (120%) | 21,425 (119%) | 37,420 (109%) | 51,726 (106%) |
+| Warrior | 3,969 | 7,094 | 10,948 | 17,371 | 33,772 | 49,329 |
+| Druid | 3,671 (93%) | 6,211 (88%) | 9,230 (84%) | 15,764 (91%) | 34,242 (101%) | 50,224 (102%) |
+| Paladin, live, wowsims opener, C25 (+90%) | 2,024 (51%) | 5,012 (71%) | 10,588 (97%) | 16,917 (97%) | 34,182 (101%) | 49,637 (101%) |
+| Paladin, Redoubt (C-P1), wowsims opener, C25 (+90%) | 2,024 (51%) | 5,012 (71%) | 10,724 (98%) | 17,231 (99%) | 34,797 (103%) | 50,542 (102%) |
+| Paladin, live, Fury opener, C25 (+90%) | 8,454 (213%) | 10,140 (143%) | 13,387 (122%) | 22,057 (127%) | 38,576 (114%) | 53,399 (108%) |
+| Paladin, Redoubt (C-P1), Fury opener, C25 (+90%) | 8,531 (215%) | 10,293 (145%) | 13,690 (125%) | 22,539 (130%) | 39,361 (117%) | 54,545 (111%) |
+| Paladin, live, wowsims opener, C25a (+80%) | 1,918 (48%) | 4,751 (67%) | 10,037 (92%) | 16,036 (92%) | 32,400 (96%) | 47,049 (95%) |
+| Paladin, Redoubt (C-P1), wowsims opener, C25a (+80%) | 1,918 (48%) | 4,751 (67%) | 10,165 (93%) | 16,334 (94%) | 32,983 (98%) | 47,906 (97%) |
+| Paladin, live, Fury opener, C25a (+80%) | 8,012 (202%) | 9,611 (135%) | 12,688 (116%) | 20,906 (120%) | 36,562 (108%) | 50,612 (103%) |
+| Paladin, Redoubt (C-P1), Fury opener, C25a (+80%) | 8,085 (204%) | 9,756 (138%) | 12,976 (119%) | 21,362 (123%) | 37,305 (110%) | 51,698 (105%) |
 
-- **With the Fury opener, the Paladin has the best start by a large margin.** With C25, it has 136% of the Warrior after 3 sec and 117% after 10 sec. With C25a, it has 129% and 111%.
-- **The lead on the Warrior lasts about 30 sec.** After 30 sec, the live Paladin with C25 has 104% of the Warrior, and C25a 99%. With Redoubt (C-P1), C25 gives 111%. After 20 sec, the Druid has more threat than the live Paladin with C25.
-- **With the wowsims default opener, the start is still slow:** 69% after 3 sec with C25, 65% with C25a. After 6 sec, the Paladin has 89–99%.
+- **With the Fury opener, the Paladin has the best start by a large margin.** With C25, it has 143% of the Warrior after 3 sec and 127% after 10 sec. With C25a, it has 135% and 120%.
+- **The lead on the Warrior lasts 30 sec or more.** After 30 sec, the live Paladin with C25 has 108% of the Warrior, and C25a 103%. With Redoubt (C-P1), C25 gives 111%. After 30 sec, the Druid has 102% of the Warrior.
+- **With the wowsims default opener, the start is still slow:** 71% after 3 sec with C25, 67% with C25a. After 6 sec, the Paladin has 92–98%.
 
 **Bad pulls (part 8).** Threat on the 10% worst fights, % of the Warrior on its 10% worst fights.
 
 | Tank | First 3 sec | First 6 sec | First 10 sec |
 | --- | --- | --- | --- |
-| Warrior | 3,414 | 6,676 | 12,443 |
-| Paladin, live, Fury opener, C25 (+90%) | 7,446 (218%) | 9,983 (150%) | 17,218 (138%) |
-| Paladin, Redoubt (C-P1), Fury opener, C25 (+90%) | 7,938 (233%) | 10,928 (164%) | 18,786 (151%) |
-| Paladin, live, Fury opener, C25a (+80%) | 7,057 (207%) | 9,463 (142%) | 16,324 (131%) |
-| Paladin, Redoubt (C-P1), Fury opener, C25a (+80%) | 7,526 (220%) | 10,358 (155%) | 17,810 (143%) |
+| Warrior | 3,486 | 7,012 | 12,076 |
+| Paladin, live, Fury opener, C25 (+90%) | 7,599 (218%) | 10,446 (149%) | 18,098 (150%) |
+| Paladin, Redoubt (C-P1), Fury opener, C25 (+90%) | 7,788 (223%) | 10,688 (152%) | 18,609 (154%) |
+| Paladin, live, Fury opener, C25a (+80%) | 7,202 (207%) | 9,900 (141%) | 17,156 (142%) |
+| Paladin, Redoubt (C-P1), Fury opener, C25a (+80%) | 7,378 (212%) | 10,132 (144%) | 17,644 (146%) |
 
 - **A bad pull costs the Paladin less than the Warrior,** as in part 8. With C25, the Paladin has 2.2 times the Warrior threat after 3 sec.
 
@@ -473,17 +476,17 @@ The Warrior has 1,448 and the Druid 1,755 (commit 9a8624af9).
 
 | Tank | Best 3 sec | Best 6 sec | Best 10 sec |
 | --- | --- | --- | --- |
-| Warrior | 12,939 | 18,711 | 24,964 |
-| Druid | 15,773 (122%) | 21,728 (116%) | 30,608 (123%) |
-| Paladin, live, Fury opener, C25 (+90%) | 12,504 (97%) | 16,704 (89%) | 25,591 (103%) |
-| Paladin, Redoubt (C-P1), Fury opener, C25 (+90%) | 12,819 (99%) | 17,296 (92%) | 26,624 (107%) |
-| Paladin, live, Fury opener, C25a (+80%) | 11,850 (92%) | 15,832 (85%) | 24,255 (97%) |
-| Paladin, Redoubt (C-P1), Fury opener, C25a (+80%) | 12,149 (94%) | 16,392 (88%) | 25,233 (101%) |
+| Warrior | 12,805 | 19,206 | 25,169 |
+| Druid | 14,614 (114%) | 19,562 (102%) | 27,475 (109%) |
+| Paladin, live, Fury opener, C25 (+90%) | 12,640 (99%) | 17,105 (89%) | 26,225 (104%) |
+| Paladin, Redoubt (C-P1), Fury opener, C25 (+90%) | 12,745 (100%) | 17,299 (90%) | 26,570 (106%) |
+| Paladin, live, Fury opener, C25a (+80%) | 11,979 (94%) | 16,211 (84%) | 24,855 (99%) |
+| Paladin, Redoubt (C-P1), Fury opener, C25a (+80%) | 12,078 (94%) | 16,395 (85%) | 25,182 (100%) |
 
-- **The best windows are near the Warrior level.** With C25, the live Paladin has 89–103% of the Warrior. The Druid has 116–123%. With C25a, the Paladin has 85–97%.
+- **The best windows are near the Warrior level.** With C25, the live Paladin has 89–104% of the Warrior. The Druid has 102–114%. With C25a, the Paladin has 84–99%.
 - **The Paladin still has no threat cooldown.** The Warrior and the Druid keep the largest spikes.
 
-**Conclusion.** C25 (+90%) gives the Paladin the Warrior threat again in the model and in wowsims, with the live trees. It gives the positions of the beta of 30 October again. In wowsims, the Druid keeps more threat: the Paladin with C25 has 92% of the Druid, and 98% with Redoubt (C-P1). C25a (+80%) gives 96–98% of the Warrior on one boss in the late raids in the model, and 106% in wowsims. With Redoubt (C-P1), C25a gives 113% in wowsims. Thus, the recommendation stays C25, because the model is the lower case and the Druid has more threat. Use C25a if Blizzard adopts Redoubt (C-P1).
+**Conclusion.** C25 (+90%) gives the Paladin the Warrior threat again in the model and in wowsims, with the live trees. It gives the positions of the beta of 30 October again. In wowsims, the Paladin with C25 has more than the Druid threat: 107%, and 109% with Redoubt (C-P1). C25a (+80%) gives 96–98% of the Warrior on one boss in the late raids in the model, and 106% in wowsims. With Redoubt (C-P1), C25a gives 108% in wowsims and 103% of the Druid. Thus, the recommendation stays C25, because the model is the lower case. Use C25a if Blizzard adopts Redoubt (C-P1).
 
 ## 10. Inputs of the model
 
@@ -537,13 +540,13 @@ The Warrior has 1,448 and the Druid 1,755 (commit 9a8624af9).
 
 **Kept proposals (values from wowsims)**
 
-- Redoubt (C-P1): block 42.3% → 61.6%. The model multiplies the Holy Shield blocks by 1.46 and the Reckoning attacks by 1.29.
+- Redoubt (C-P1): block 55.0% → 61.9% (item pool set of 9 November, with Argent Defender; set of 4 November: 42.3% → 61.6%). The model multiplies the Holy Shield blocks by 1.46 and the Reckoning attacks by 1.29.
 - Reckoning (C-P12), withdrawn: extra attacks ×1.48.
 - Holy Strike Seal trigger (C1), withdrawn: each Holy Strike that lands also triggers Seal of Fury.
 
 ## 11. Method and limits
 
-- **Scripts.** `models/beta-30-oct/threat_tables_b2.py` for the model. `models/wowsims-b2` for wowsims Forever (master commit 9a8624af9 of 4 November 2026, game files of client 1.60.1.70755 and the hotfixes of 4 November), 3,000 iterations. `models/wowsims-b2/tank_gear/run_pool.sh` gives the runs with the item pool threat sets (`logs/checks_9a8624af9_pool.log`), and with the argument `surv` the runs with the survival sets (`logs/checks_9a8624af9_pool_surv.log`). The withdrawn ideas C1 and C-P12 use the runs of master commit 895cd67f9 (1 November). The Warrior and Druid wowsims values are native values. The Paladin has the tank consumables of part 6 (`feedbackConsumables` in `go/feedback_prot_test.go`). `FEEDBACK_CONSUMES=default` gives the Demonic Rune only, as in the runs before 4 November evening.
+- **Scripts.** `models/beta-30-oct/threat_tables_b2.py` for the model. `models/wowsims-b2` for wowsims Forever (master commit 9f254e8d8 of 9 November 2026, hotfix push 113823), 3,000 iterations. `models/wowsims-b2/tank_gear/run_pool.sh` gives the runs with the item pool threat sets (`logs/checks_9f254e8d8_pool.log`), and with the argument `surv` the runs with the survival sets (`logs/checks_9f254e8d8_pool_surv.log`). The runs of 4, 6 and 8 November are in `logs/checks_9a8624af9_pool.log`, `logs/checks_df57e2571_pool.log` and `logs/checks_ae9b8c23a_pool.log`. The sets of 8 November on commit 9f254e8d8: `logs/checks_9f254e8d8_pool_old_sets.log`. The withdrawn ideas C1 and C-P12 use the runs of master commit 895cd67f9 (1 November). The Warrior and Druid wowsims values are native values. The Paladin has the tank consumables of part 6 (`feedbackConsumables` in `go/feedback_prot_test.go`). `FEEDBACK_CONSUMES=default` gives the Demonic Rune only, as in the runs before 4 November evening.
 - **Holy Shield blocks.** The model gives Redoubt (C-P1) too many blocks. Use the wowsims value.
 - **Druid multipliers.** The Maul, Swipe and Primal Bite values come from player data. wowsims uses the same values. A test in the game must confirm them (see Open items).
 - **Gear.** The model gives all tanks the same gear. wowsims gives each class a threat set and a survival set from the item pool of Analysis, Damage, part 7 (part 6). Parts 7 to 9 use the threat sets. `models/wowsims-b2/tank_gear` has the search and the sets.

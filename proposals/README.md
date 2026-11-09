@@ -4,8 +4,8 @@ This document gives talent proposals for the WoW Forever Paladin. It has 14 chan
 
 **The three main asks**
 
-1. **Righteous Fury +90% to all threat (C25).** After the development notes of 2 November and the hotfixes of 4 November, the live Paladin tank has 70% of the Warrior threat in the model. In wowsims (item pool tank sets, tank consumables), it has 79% of the Warrior and 65% of the Druid. With C25 and Redoubt (C-P1), it has 119% of the Warrior and 98% of the Druid (C25 alone: 112% and 92%).
-2. **Redoubt on each Holy Shield cast (C-P1).** Crushing blows go from 11.9% to 1.2% of the boss attacks (wowsims, Warrior 1.0%). With the same consumables, the Paladin then takes the same damage as the Warrior.
+1. **Righteous Fury +90% to all threat (C25).** After the development notes of 2 November and the hotfixes of 4 November, the live Paladin tank has 70% of the Warrior threat in the model. In wowsims (item pool tank sets of 9 November, tank consumables), it has 79% of the Warrior and 75% of the Druid. With C25 and Redoubt (C-P1), it has 114% of the Warrior and 109% of the Druid (C25 alone: 112% and 107%).
+2. **Redoubt on each Holy Shield cast (C-P1).** Crushing blows go from 5.6% to 1.0% of the boss attacks (wowsims, Warrior 1.1%). With the same consumables, the Paladin then takes 4% less damage than the Warrior.
 3. **Reverence 25/50% (C-H1) and a Light's Vigil buff (C-H7).** On one tank, the Paladin goes from 8–15% to 3–7% below the Druid. In raids of 5 and 10 min, from 25–34% to 3–4% below.
 
 **Contents**

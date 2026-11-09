@@ -1,0 +1,17 @@
+EP {0: 0.0, 1: 0.0, 3: 0.195, 5: 0.61, 7: 0.536, 11: 0.0, 14: 0.0, 15: 0.0, 17: 0.713, 18: 0.354, 19: 0.122, 20: 0.0, 13: 0.028} {0: 0.0, 1: 0.0, 2: 0.0}
+cands {0: 19, 1: 18, 2: 15, 3: 19, 4: 15, 5: 15, 6: 15, 7: 15, 8: 15, 9: 18, 10: 17, 11: 17, 12: 61, 13: 61, 14: 34, 15: 29, 16: 18}
+start 590.9
+  pass0 slot0: Red Mageweave Headband -> Crimson Felt Hat 590.9->595.3
+  pass0 slot2: Netherflame Shoulders -> Rotgrip Mantle 595.3->596.6
+  pass0 slot10: Jereman's Bauble -> Songstone of Ironforge 596.6->598.7
+  pass0 slot11: Initiate's Signet of Brilliance -> Maiden's Circle 598.7->601.4
+  pass0 slot12: Cleansed Vilebranch Icon -> Eye of the Beast 601.4->606.4
+  pass0 slot13: Frozen Heart of the Mountain -> Cleansed Vilebranch Icon 606.4->609.1
+  pass0 slot14: Notched Ritual Rib -> Inventor's Focal Sword 609.1->616.7
+  pass0 slot15: Lapidis Tankard of Tidesippe -> Lord Sakrasis' Scepter 616.7->640.9
+  pass1 slot8: Ghostweave Pants -> Magister's Leggings 640.9->643.7
+  pass1 slot13: Cleansed Vilebranch Icon -> Second Wind 643.7->646.3
+  pass1 slot14: Inventor's Focal Sword -> Arbiter's Blade 646.3->648.3
+FINAL Fire 648.4 +- 0.5
+SET Crimson Felt Hat(59) ; Archlight Talisman(60) ; Rotgrip Mantle(53) ; Hide of the Wild(62) ; Robe of the Archmage(62) ; Runecloth Cuffs(57) ; Inferno Gloves(62) ; Belt of the Archmage(62) ; Magister's Leggings(61) ; Venomspew Footpads(58) ; Songstone of Ironforge(60) ; Maiden's Circle(61) ; Eye of the Beast(63) ; Second Wind(59) ; Arbiter's Blade(53) ; Lord Sakrasis' Scepter(47) ; Brilliant Wand(60)
+ILVL 58.8 epics 3
