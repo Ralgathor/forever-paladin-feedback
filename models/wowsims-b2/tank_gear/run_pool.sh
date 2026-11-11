@@ -2,7 +2,7 @@
 # Tank and Retribution jobs of logs/checks_8298ab833.log again, with the item pool sets (FEEDBACK_ITEMS):
 # the tank sets of this folder and the Retribution set of ../matched_gear (set_Retribution.json).
 # Usage: ./run_pool.sh <wowsims clone> [surv]. Set up the clone first with ../run.sh, but on master commit 9a8624af9 or later
-# (8 November 2026: ae9b8c23a; 9 November 2026: 9f254e8d8): apply ../patches/talents-9a8624af9.patch in place of talents.patch
+# (8 November 2026: ae9b8c23a; 9 November 2026: 9f254e8d8; 11 November 2026: 3633d376a, Go 1.27): apply ../patches/talents-9a8624af9.patch in place of talents.patch
 # (talents.patch and notes-2-november.patch do not apply on these commits; the notes are in the game data).
 # The log name has the commit of the clone: checks_<commit>_pool.log.
 # With "surv", the tank jobs use the survival tank sets (set_*_surv.json) and write checks_<commit>_pool_surv.log (no R jobs).

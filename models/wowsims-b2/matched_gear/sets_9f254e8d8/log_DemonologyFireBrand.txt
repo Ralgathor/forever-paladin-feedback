@@ -1,0 +1,8 @@
+EP {0: 0.0, 1: 0.0, 3: 0.204, 5: 0.691, 7: 0.555, 11: 0.141, 14: 0.0, 15: 0.0, 17: 0.74, 18: 0.297, 19: 0.019, 20: 0.0, 13: 0.028} {0: 0.0, 1: 0.0, 2: 0.0}
+cands {0: 20, 1: 18, 2: 15, 3: 21, 4: 15, 5: 15, 6: 15, 7: 15, 8: 15, 9: 18, 10: 20, 11: 20, 12: 68, 13: 68, 14: 33, 15: 30, 16: 23}
+start 644.2
+  pass0 slot14: Arbiter's Blade -> Mind Carver 644.2->645.6
+  pass1 slot1: Archlight Talisman -> Star of Mystaria 645.6->647.6
+FINAL DemonologyFireBrand 647.3 +- 0.3
+SET Crimson Felt Hat(59) ; Star of Mystaria(63) ; Dreadmist Mantle(60) ; Hide of the Wild(62) ; Robe of the Void(62) ; Runecloth Cuffs(57) ; Inferno Gloves(62) ; Belt of the Archmage(62) ; Dreadmist Leggings(61) ; Dreadmist Sandals(59) ; Songstone of Ironforge(60) ; Maiden's Circle(61) ; Eye of the Beast(63) ; Second Wind(59) ; Mind Carver(62) ; Lord Sakrasis' Scepter(47) ; Brilliant Wand(60)
+ILVL 59.9 epics 3

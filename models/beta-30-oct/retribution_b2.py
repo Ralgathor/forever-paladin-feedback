@@ -27,20 +27,21 @@ import sys
 import os; D = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, sys.argv[1] if len(sys.argv) > 1 else os.path.join(D, "..", "damage"))
 import damage_model as M
-# Pure damage classes: wowsims Forever 9f254e8d8 (9 November 2026, hotfix push 113823 and the Windfury Totem rule of
-# 8 November, new item search), same pre-raid item pool for each spec (game start and Dire Maul content,
+# Pure damage classes: wowsims Forever 3633d376a (11 November 2026, client 1.60.1.70888, new item search with the proc
+# items that wowsims implements), same pre-raid item pool for each spec (game start and Dire Maul content,
 # models/wowsims-b2/matched_gear), wowsims preset enchants, the same consumables for each spec, Ret raid buffs, 2 min,
-# 10,000 iterations. Fury 870.7, Combat Rogue 742.1, Hunter 905.4, Fire Mage 898.7, Demonology Warlock 926.0,
+# 10,000 iterations. Fury 946.2, Combat Rogue 767.0, Hunter 919.8, Fire Mage 915.5, Demonology Warlock 940.3,
 # Retribution 843.5. The values below put them on the scale of RET_SIM (x 841 / 843.5).
+# Commit 9f254e8d8 (9 November): Fury 870.7, Rogue 742.1, Hunter 905.4, Mage 898.7, Warlock 926.0, Retribution 843.5.
 # Commit ae9b8c23a (8 November): Fury 863.8, Rogue 730.4, Hunter 901.6, Mage 888.2, Warlock 921.6, Retribution 936.6.
 # Commit df57e2571 (6 November): Fury 828.5, Rogue 706.2, Hunter 872.7, Mage 815.6, Warlock 862.5, Retribution 908.3.
 # Commit 9a8624af9 and 8298ab833 (4 November): Fury 840.7 (8298ab833: 839.2), Rogue 671.6, Hunter 855.6, Mage 823.9, Warlock 856.3, Retribution 908.3.
 # Commit 6ee3c30f35 (4 November): Fury 836.6, Rogue 666.4, Hunter 887.0, Mage 823.9, Warlock 844.8, Retribution 906.5.
 # Commit d97252f2a (3 November): Fury 787.9, Rogue 634.4, Hunter 761.2, Mage 823.9, Warlock 844.8, Retribution 906.5.
 # Commit 895cd67f9 (1 November): Fury 804.8, Rogue 645.6, Hunter 799.6, Mage 824.0, Warlock 845.6, Retribution 874.4.
-PURE_MATCHED = {"Warrior": 870.7, "Rogue": 742.1, "Hunter": 905.4, "Mage": 898.7, "Warlock": 926.0}
+PURE_MATCHED = {"Warrior": 946.2, "Rogue": 767.0, "Hunter": 919.8, "Mage": 915.5, "Warlock": 940.3}
 RET_MATCHED = 843.5
-RET_SIM = 841                                                                          # wowsims master 9f254e8d8, item pool Retribution set (matched_gear/set_Retribution.json), full buffs, 2 min (the anchor of Analysis, Damage; 939 on master ae9b8c23a, before the Windfury Totem rule; 910 with the set of 4 November; default set: 938, 906 on 1 November)
+RET_SIM = 841                                                                          # wowsims master 3633d376a (841 on 9f254e8d8 too), item pool Retribution set (matched_gear/set_Retribution.json), full buffs, 2 min (the anchor of Analysis, Damage; 939 on master ae9b8c23a, before the Windfury Totem rule; 910 with the set of 4 November; default set: 938, 906 on 1 November)
 PURE = {k: v * RET_SIM / RET_MATCHED for k, v in PURE_MATCHED.items()}
 from damage_model import (gear, auto_table, spec_table, vengeance, fury, arms, rogue, TIER_NAMES, CRIT_SPEC, DODGE,
                           EXECUTE, FIGHT, KINGS, MOTW, MIGHT, SHOUT, NORM_2H, SPEED_2H, DR, MISS)

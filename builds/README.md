@@ -16,23 +16,23 @@ This folder gives the best build and the stat weights of each spec. It uses the 
 | --- | --- | --- | --- | --- |
 | Holy | Healing each sec, raid, 5 min | 728 | 479 | +52% |
 | Holy | Healing each sec, one tank, 5 min | 658 | 568 | +16% |
-| Protection | Threat each sec | 1,218 | 1,202 | +1.4% |
-| Protection | Damage taken each sec | 294 | 307 | −4% |
-| Protection | TMI (lower is better) | 40.8 | 45.6 | −11% |
+| Protection | Threat each sec | 1,219 | 1,147 | +6.3% |
+| Protection | Damage taken each sec | 295 | 328 | −10% |
+| Protection | TMI (lower is better) | 41.1 | 49.9 | −18% |
 | Retribution | DPS, raid | 847 | 847 | 0% |
 | Retribution | DPS, fresh 60 | 303 | 305 | −0.9% |
 | Shockadin | DPS, raid | 823 | 823 | 0% |
 | Shockadin | DPS, fresh 60 | 301 | 278 | +8.0% |
 
 - **Holy.** Light's Vigil (C-H7) gives the raid healing. Oath of Light 30% (C-H8) gives the one-tank healing. Reverence 50% (C-H1) gives +5–9% healing, more in long fights. HB2 takes Devoted Sacrifice (C-P11) with the free points.
-- **Protection.** Redoubt (C-P1) removes almost all crushing blows and adds threat with more Holy Shield blocks. Argent Defender (item pool sets of 8 and 9 November) already gives the live builds more block, thus the gain is smaller than on 4 November. Righteous Fury (C25) multiplies all threat by 1.43.
+- **Protection.** Redoubt (C-P1) removes almost all crushing blows and adds threat with more Holy Shield blocks. On commit 3633d376a, wowsims applies the block proc of Argent Defender only on a proc. Thus, the live builds have less block than on 9 November, and the gain is larger. Righteous Fury (C25) multiplies all threat by 1.42.
 - **Retribution.** Reverence 50% (C-H1) gives no gain with the item pool set of 8 November (−0.9% at fresh 60). In a raid, the proposed and live trees give the same damage. The 847 DPS use 3 min fights. Analysis, Damage gives 841 DPS with the 2 min wowsims test run. The new Windfury Totem rule of 9 November gives RB1 −11% in a raid.
 - **Shockadin.** SB1 is 97% of RB1 in a raid, with the item pool Shockadin set (8 November: 89%). Reverence 50% (C-H1) adds mana at fresh 60. Light's Vigil (C-H7) gives a build with 31 Holy points +9.4%, but this build stays 11% below SB1.
 
 ## Common rules
 
 - **Codes.** All build codes load with 51 points. The level-up codes show the points at a lower level. A code that starts with `v6p` opens the proposed trees. A code that starts with `b2` opens the live trees.
-- **Sim.** wowsims Forever, master of 9 November 2026 (commit 9f254e8d8, hotfix push 113823, game files of client 1.60.1.70862), with the proposals as flags (`models/wowsims-b2`). 3 min, one level 63 boss, 3,000 iterations.
+- **Sim.** wowsims Forever, master of 11 November 2026 (commit 3633d376a, hotfixes of 10 and 11 November, game files of client 1.60.1.70888), with the proposals as flags (`models/wowsims-b2`). 3 min, one level 63 boss, 3,000 iterations.
 - **Gear.** The item pool sets, the same item pool as Analysis, Damage and Threat (no raid, PvP, Zul'Gurub, Ahn'Qiraj or Revered and Exalted reputation items, item level 63 or lower): [Protection Paladin](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-pool-protection-paladin.html), [Retribution](https://ralgathor.github.io/forever-paladin-feedback/sets/build-retribution.html) and [Shockadin](https://ralgathor.github.io/forever-paladin-feedback/sets/build-shockadin.html). The talent search ran with the wowsims default sets. Level-up uses leveling gear (level-up.md).
 - **Holy.** wowsims Forever has no Holy healing sim. The Holy values come from the healing model (`models/beta-30-oct/healing_b2.py`), with 175% critical heals (Holy Power 5/5, main hypothesis).
 - **Stat weights.** Each stat changes by a small amount, with the same random seed for all runs. The reference stat is 1.00: healing power for Holy, Strength for Retribution, spell damage for the Shockadin. For Protection, the table gives the change for each point.
@@ -40,8 +40,8 @@ This folder gives the best build and the stat weights of each spec. It uses the 
 
 ## Sources
 
-- Damage and tank: talent search in wowsims Forever (commit 895cd67f9, default sets), builds and stat weights again on commit 9f254e8d8 with the item pool sets. Scripts and logs in `models/wowsims-b2` (`search.py`, `finals.py`, `logs/finals.log`).
-- Shockadin: talent search in wowsims Forever (commit 6ee3c30f35, wowsims Holy Shock set), builds and stat weights again on commit 9f254e8d8 with the item pool set, with the Light's Vigil flag CH7 (`search.py`, `finals.py shock`, `logs/finals_shock.log`).
+- Damage and tank: talent search in wowsims Forever (commit 895cd67f9, default sets), builds and stat weights again on commit 3633d376a with the item pool sets. Scripts and logs in `models/wowsims-b2` (`search.py`, `finals.py`, `logs/finals.log`).
+- Shockadin: talent search in wowsims Forever (commit 6ee3c30f35, wowsims Holy Shock set), builds and stat weights again on commit 3633d376a with the item pool set, with the Light's Vigil flag CH7 (`search.py`, `finals.py shock`, `logs/finals_shock.log`).
 - Healer: healing model and stat weights (`models/beta-30-oct/holy_builds_b2.py`).
 - Level-up: wowsims Forever (commit 895cd67f9), live talents (`models/wowsims-b2/levelup.py`).
 - The earlier files (trees of 18 October, calculator version 5) are in the history of the repository.

@@ -1,10 +1,12 @@
 # Tank sets with the rules of the damage item pool (matched_gear/opt.py, pre_raid).
 # Each item of the default wowsims tank set that breaks a rule is replaced by an item of the pool
-# in the same slot. Candidates: the 12 pool items with the best tank stat sum for the slot.
+# in the same slot. Candidates: the 12 pool items with the best tank stat sum for the slot, and (11 November 2026)
+# all pool items of the slot with an effect that wowsims implements (EFFECTS: the zzeffects list, core.HasItemEffect).
+# A proc item (for example Flurry Axe) has a low stat sum, but the sim gives its full value.
 # No item twice (quest rewards are once only). Each candidate runs in the full set (1,000 iterations); the best score is kept, slot by slot.
 # Score (as search.py): 40% threat, 20% damage, 20% damage taken, 20% TMI, each against the default set.
 # Shockadin (shock): the same method, with damage only as the score.
-# Usage: python3 search_tank.py <prot|war|bear|shock> <dumped request> ; needs /tmp/zztank (zztank_main.go).
+# Usage: EFFECTS=<zzeffects list> python3 search_tank.py <prot|war|bear|shock> <dumped request> ; needs /tmp/zztank (zztank_main.go).
 import json, os, subprocess, sys, tempfile
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'matched_gear'))
 from opt import d, by, pre_raid, ok_class, ilvl, st, SLOT_TYPE, ARMOR, WEAP, RANGED
@@ -22,6 +24,7 @@ req = json.load(open(dump))
 start = [x.get('id', 0) for x in (req['raid']['parties'][0]['players'][0]['equipment']['items'] + [{}] * 17)[:17]]
 twoh = by.get(start[14], {}).get('handType') == 4
 pool = [it for it in d['items'] if pre_raid(it) and ok_class(it, c) and 'randomSuffixOptions' not in it and ilvl(it) >= 45]
+EFF = set(int(x) for x in open(os.environ['EFFECTS'])) if os.environ.get('EFFECTS') else set()
 def fits(it, s):
     t = it.get('type')
     if s < 14: return t == SLOT_TYPE[s]
@@ -55,6 +58,7 @@ for s in bad: cur[s] = 0
 for s in bad:
     used = set(cur)
     L = sorted([it for it in pool if fits(it, s) and it['id'] not in used], key=lambda it: -val(it))[:12]
+    L += [it for it in pool if fits(it, s) and it['id'] not in used and it['id'] in EFF and it.get('itemEffects') and it not in L]
     sets = []
     for it in L:
         x = list(cur); x[s] = it['id']; sets.append(x)

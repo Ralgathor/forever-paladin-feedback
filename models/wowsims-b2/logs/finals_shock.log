@@ -1,4 +1,4 @@
-# wowsims Forever master 9f254e8d8 (hotfix push 113823 and the Windfury Totem rule of 8 November), item pool Shockadin set of 8 November (search.py: FEEDBACK_ITEMS of tank_gear/set_shock.json), 3 min, 3,000 iterations. The runs of 8 November: logs/finals_shock_ae9b8c23a.log.
+# wowsims Forever master 3633d376a (client 1.60.1.70888, hotfixes of 10 and 11 November), item pool Shockadin set of 8 November (search.py: FEEDBACK_ITEMS of tank_gear/set_shock.json), 3 min, 3,000 iterations. The runs of 9 November: logs/finals_shock_9f254e8d8.log.
 BUILD shock raid beta 05025210221021--0523330110130033 {'dps': 823.0, 'oom': 0.0}
 BUILD shock raid beta 05025211222021051--052323010013 {'dps': 672.2, 'oom': 0.0}
 BUILD shock raid beta 15325210222121201--052330002013 {'dps': 672.8, 'oom': 0.0}

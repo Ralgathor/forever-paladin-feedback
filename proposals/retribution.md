@@ -40,18 +40,18 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 ## Retribution against the pure average
 
 - **Model.** models/beta-30-oct/retribution_b2.py. It uses the wowsims default Retribution build of 1 November (14/6/31) and the wowsims rotation: plan 1 + 3 (see Mana with Unsealed Wrath).
-- **Start value.** wowsims Forever master commit 9f254e8d8 (9 November 2026, hotfix push 113823) gives 841 DPS at fresh level 60, with the item pool Retribution set (the set of the pure average, Analysis, Damage, part 7). With the wowsims default set, it gave 938 on 4 November. Build 70755 adds 5 Vengeance stacks and Holy damage to Two-Handed Weapon Specialization: +3.5% with the default set against 906 DPS on 1 November (Beta test results, W15). The Windfury Totem rule of this commit gives −10% (939 → 841): Holy Strike and Judgement of Command do not proc Windfury. The model gives the increase with gear. The pure average table uses 841. The six item pool sets open in wowsims from the [item pool sets](https://ralgathor.github.io/forever-paladin-feedback/sets/) page. The Seal plan tables below come from commit 8298ab833 with the item pool set of 4 November (910 DPS).
+- **Start value.** wowsims Forever master commit 3633d376a (11 November 2026, hotfixes of 10 and 11 November) gives 841 DPS at fresh level 60, with the item pool Retribution set (the set of the pure average, Analysis, Damage, part 7). With the wowsims default set, it gave 938 on 4 November. Build 70755 adds 5 Vengeance stacks and Holy damage to Two-Handed Weapon Specialization: +3.5% with the default set against 906 DPS on 1 November (Beta test results, W15). The Windfury Totem rule of commit 9f254e8d8 (9 November) gives −10% (939 → 841). Commit 3633d376a does not change this value: Holy Strike and Judgement of Command do not proc Windfury. The model gives the increase with gear. The pure average table uses 841. The six item pool sets open in wowsims from the [item pool sets](https://ralgathor.github.io/forever-paladin-feedback/sets/) page. The Seal plan tables below come from commit 8298ab833 with the item pool set of 4 November (910 DPS).
 - **Increase with gear.** Retribution damage increases less with gear than Fury damage: ×1.65 against ×1.73 from fresh level 60 to Naxxramas. Fixed base values of the Seals, Judgement and Holy Strike cause this (see Analysis, Damage, part 3).
-- **Pure average.** wowsims Forever, with the same pre-raid item pool, enchants and consumables for each spec (Analysis, Damage, part 7). The pure sets come from a new search on master commit 9f254e8d8 (9 November 2026). This commit adds 262 items. Fury and Combat Rogue use the increase of the model. Hunter, Mage and Warlock increase ×1.75 to Naxxramas (the main case of Analysis, Damage, part 1).
+- **Pure average.** wowsims Forever, with the same pre-raid item pool, enchants and consumables for each spec (Analysis, Damage, part 7). The pure sets come from a new search on master commit 3633d376a (11 November 2026). This commit adds 464 items. The search also tries all weapons and other items with a proc effect that wowsims implements, for example Ironfoe and Flurry Axe. In the item pool run, the pure average is 898 DPS (9 November: 869), and Retribution does not change. Fury and Combat Rogue use the increase of the model. Hunter, Mage and Warlock increase ×1.75 to Naxxramas (the main case of Analysis, Damage, part 1).
 
 | Build | Fresh level 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
 | --- | --- | --- | --- | --- | --- |
-| Live | 97% | 96% | 96% | 94% | 93% |
+| Live | 94% | 93% | 93% | 91% | 90% |
 
-- **Result.** The live version is above the hybrid target (95%) up to Molten Core: 2 points at fresh level 60. From Blackwing Lair, it is below the target: 94% in Blackwing Lair and 93% in Naxxramas.
-- **No damage proposal.** The decision of 9 November keeps the Holy Strike Seal trigger (C1) withdrawn (Withdrawn ideas). With C1, Retribution has 99–103% (Analysis, Damage, part 1).
+- **Result.** The live version is below the hybrid target (95%) at all tiers: 94% at fresh level 60, 91% in Blackwing Lair and 90% in Naxxramas. On 9 November, it was above the target up to Molten Core (97%). The new pure sets cause the change: Fury +8.7% with Ironfoe and Flurry Axe, the other pure specs +1.5–3.4%.
+- **No damage proposal.** The decision of 9 November keeps the Holy Strike Seal trigger (C1) withdrawn (Withdrawn ideas). With C1, Retribution has 95–99% (Analysis, Damage, part 1).
 - **Sacred Arbiter.** Do not decrease it now. At +10%, Retribution loses 0.8% in wowsims (W15).
-- **Other cases.** Hunter, Mage and Warlock ×1.60: live 97–99%. ×1.90: live 88–97%.
+- **Other cases.** Hunter, Mage and Warlock ×1.60: live 94–96%. ×1.90: live 86–94%.
 
 ## Mana with Unsealed Wrath (W29)
 
@@ -107,7 +107,7 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 
 ## wowsims check
 
-- **Sim.** wowsims Forever, master commit 9f254e8d8 (hotfix push 113823), with the proposals as flags (models/wowsims-b2). The item pool Retribution set of 8 November (the search of 9 November keeps it), with the default enchants, rotation, consumables and build (14/6/31), 3,000 iterations (`logs/checks_9f254e8d8_pool.log`). The Seal plans ran on master commit 8298ab833 with the set of 4 November. They use the APLs of `seal_plans_apl.py` (`logs/seal_plans_8298ab833_pool.log`).
+- **Sim.** wowsims Forever, master commit 3633d376a (hotfixes of 10 and 11 November), with the proposals as flags (models/wowsims-b2). The item pool Retribution set of 8 November (the searches of 9 and 11 November keep it), with the default enchants, rotation, consumables and build (14/6/31), 3,000 iterations (`logs/checks_3633d376a_pool.log`). The Seal plans ran on master commit 8298ab833 with the set of 4 November. They use the APLs of `seal_plans_apl.py` (`logs/seal_plans_8298ab833_pool.log`).
 - **Full buffs** have Mana Spring Totem, Mana Tide Totem and Atiesh. **Lean buffs** have only Gift of the Wild, Battle Shout, Kings, Might and Wisdom.
 
 | Fight | Live | Seal cost −20% |
