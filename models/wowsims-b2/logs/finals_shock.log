@@ -62,3 +62,8 @@ WEIGHTS shock raid prop 05025211222021051--052323010013 base={'dps': 744.9}
 # SB3 with Reverence 50% only (REV50, no CH7), same settings, 3,000 iterations
 BUILD shock raid prop-REV50-only 15325210222121201--052330002013 {'dps': 683.1, 'oom': 0.0}
 BUILD shock fresh prop-REV50-only 15325210222121201--052330002013 {'dps': 246.7, 'oom': 111.2}
+# SB1 at fresh 60 with one new item at a time (set of 9 November + one item), same settings, 3,000 iterations
+BUILD shock fresh beta old+Storm-Gauntlets 05025210221021--0523330110130033 {'dps': 287.4, 'oom': 110.8}
+BUILD shock fresh prop old+Storm-Gauntlets 05025210221021--0523330110130033 {'dps': 288.5, 'oom': 111.0}
+BUILD shock fresh beta old+The-Needler 05025210221021--0523330110130033 {'dps': 279.7, 'oom': 107.2}
+BUILD shock fresh prop old+The-Needler 05025210221021--0523330110130033 {'dps': 301.3, 'oom': 100.6}

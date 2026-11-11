@@ -14,7 +14,7 @@ This file gives the Holy Shock damage build ("Shockadin") on one target. It uses
 - **SB1 is the best Holy Shock build found.** It is the wowsims Holy Shock build (`HolyShockTalents`). In a raid, the talent search found no move of 1 point with more than +2 DPS. At fresh 60, the search removes Holy Shock (part 2).
 - **SB1 is 98% of Retribution (RB1) in a raid.** RB1 has 847 DPS in a raid, 305 (live) and 303 (proposed) at fresh 60. On commit ae9b8c23a (8 November), SB1 was 89% of RB1. The proc items of 11 November (Storm Gauntlets and The Needler) give SB1 +1.3%. The new Windfury Totem rule decreases RB1 by 11% and SB1 by 3%. The two builds use sets from the same item pool, but with different items (part 1). Thus, the % is approximate.
 - **Holy Shock gives +11% in a raid.** Without Holy Shock and with Champion of the Light 4 (SF1), the damage is 749 in a raid. At fresh 60, SF1 has more damage than SB1: Holy Shock costs too much mana without buffs (part 2).
-- **Proposed against live.** Reverence 50% (C-H1) gives +0.1% at fresh 60 and 0% in a raid. With the Shockadin set of 9 November, it gave +8.0% at fresh 60. Light's Vigil (C-H7) gives a build with 31 Holy points +9.2%, but this build stays 11% below SB1 (part 2).
+- **Proposed against live.** Reverence 50% (C-H1) gives +0.1% at fresh 60 and 0% in a raid. With the Shockadin set of 9 November, it gave +8.0% at fresh 60. Storm Gauntlets cause the change (part 3). Light's Vigil (C-H7) gives a build with 31 Holy points +9.2%, but this build stays 11% below SB1 (part 2).
 - **Stat weights.** Spell damage is the main stat. In a raid, Hit rating is the best stat for each point (1.9 spell damage). At fresh 60, Hit rating also has the most value (1.4 spell damage) (part 3).
 
 ## 1. Method
@@ -72,7 +72,7 @@ Each stat + a small amount (20 Strength, Agility or Intellect, 40 spell damage o
 
 - **Spell damage is the main stat.** Holy Shock, Consecration, Exorcism, Judgements and Seals use spell damage. 1 spell damage is 1.8 Strength. For RB1, 1 spell damage is 0.9 Strength.
 - **Hit rating has the most value for each point in a raid:** 1.9 spell damage. It increases melee and spell hits.
-- **At fresh 60, Hit rating also has the most value:** 1.4 spell damage. With the Shockadin set of 11 November, Intellect has almost no value (0.1 spell damage), and Haste rating has a negative value. With the set of 9 November, Intellect was 2.8 spell damage. The cause of this change is not clear: SB1 still has no mana for 111 sec.
+- **At fresh 60, Hit rating also has the most value:** 1.4 spell damage. With the Shockadin set of 11 November, Intellect has almost no value (0.1 spell damage), and Haste rating has a negative value. With the set of 9 November, Intellect was 2.8 spell damage. A test of each new item shows the cause: Storm Gauntlets. With The Needler and Gauntlets of Elements, Reverence 50% still gives +7.7% at fresh 60 (279.7 → 301.3). With Storm Gauntlets, the live and proposed trees have the same mana.
 - **SB2 has mana in a raid.** Intellect then has almost no value.
 
 ## 4. Limits
