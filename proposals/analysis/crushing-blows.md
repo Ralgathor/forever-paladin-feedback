@@ -6,7 +6,7 @@
 
 - **The problem.** In the live version, a raid boss hits the Paladin with a crushing blow on 12.0% of its swings (part 3). A crushing blow does 150% damage. The Warrior takes crushing blows on only 0.9% of the swings.
 - **The fix.** With Redoubt (C-P1), each Holy Shield cast also starts Redoubt. The two block buffs are then active together. Crushing blows decrease to 1.2%, near the Warrior (0.9%).
-- **The tank takes 13% less damage** with C-P1. With the item pool tank sets and the same tank consumables as the Warrior, it then takes 1% less damage than the Warrior (294 against 297 each sec). Its TMI is also lower (40.4 against 44). With the survival sets, it takes 4% less damage than the Warrior, and its TMI is lower (35.8 against 41).
+- **The tank takes 13% less damage** with C-P1. The tanks have the item pool tank sets and the same tank consumables. The Paladin then takes 2% less damage than the Warrior (294 against 299 each sec). Its TMI is also lower (40.4 against 44). With the survival sets, it takes 4% more damage than the Warrior, but its TMI is lower (35.8 against 38).
 - **Keep Redoubt at 6–30% block.** At 4–20%, the crushing blows go to 5.2% on a normal boss (C-P1: 1.2%). Fast bosses and bosses with two weapons then give 1.3–2.9 points more.
 - **Fast bosses and bosses with two weapons** give both tanks more crushing blows. With C-P1, the Paladin is 0.2–0.9 points above the Warrior. At 4–20%, it is 2.2–3.1 points above.
 
@@ -45,12 +45,12 @@ Item pool threat set of each class (Analysis, Threat, part 6), tank consumables,
 | **Paladin, Redoubt (C-P1)** | **60.7%** | **1.2%** | **294 (−13%)** | **40.4** |
 | Paladin, C-P1 with Redoubt 4–20% | 53.8% | 5.2% | 319 (−5%) | 48.1 |
 | Paladin, Redoubt 4–20% without C-P1 | 39.4% | 12.9% | 342 (+2%) | 52.5 |
-| Warrior | 54.4% | 0.9% | 297 | 44 |
+| Warrior | 54.8% | 0.9% | 299 | 44 |
 | Druid | 0% | 14.9% | 358 | 37.9 |
 
 - **Argent Defender (correction).** The item pool set has Argent Defender, a shield of the hotfixes of 7 and 8 November. From 8 to 10 November, wowsims applied its proc buff (+18% block) all the time, by error. The live block was then 55.0%, and the crushing blows 5.6%. wowsims master 3633d376a (11 November) fixes this error. Now the live block is 41.2%, and the crushing blows 12.0%, the value before Argent Defender (11.9%).
 - **C-P1 puts the Paladin near the Warrior level for crushing blows:** 1.2% against 0.9%.
-- **With C-P1, the Paladin takes 1% less damage than the Warrior** (294 against 297 each sec). Its TMI is also lower (40.4 against 44). The live Paladin takes 13% more damage. The Warrior dodges more: 21.2% against 14.5%. The boss has 0.2% critical hits on the Paladin with C-P1.
+- **With C-P1, the Paladin takes 2% less damage than the Warrior** (294 against 299 each sec). Its TMI is also lower (40.4 against 44). The live Paladin takes 12% more damage. The Warrior dodges more: 21.2% against 14.5%. The boss has 0.2% critical hits on the Paladin with C-P1.
 - **Consumables are important.** Without consumables (Demonic Rune only, the runs before 4 November evening), the Paladin with C-P1 took 13% more damage than the Warrior (339 each sec, TMI 55.3), and the live Paladin 28% more.
 - **5 min fights give the same result.** Live 11.9%, C-P1 1.3%, C-P1 with 4–20% 5.3%, Warrior 0.9%.
 - **The Druid takes the most crushing blows,** but its armor and health keep it safe.
@@ -63,13 +63,13 @@ Item pool threat set of each class (Analysis, Threat, part 6), tank consumables,
 | **Paladin, Redoubt (C-P1)** | **59.9%** | **1.2%** | **280 (−13%)** | **35.8** |
 | Paladin, C-P1 with Redoubt 4–20% | 54.3% | 4.5% | 304 (−6%) | 42.3 |
 | Paladin, Redoubt 4–20% without C-P1 | 39.7% | 12.6% | 328 (+1%) | 46.7 |
-| Warrior | 52.2% | 0.9% | 292 | 41 |
+| Warrior | 52.4% | 0.9% | 270 | 38 |
 | Druid | 0% | 14.9% | 348 | 36.1 |
 
 - **The crushing blows do not change much with the set.** C-P1 gives 1.2% (Warrior: 0.9%).
-- **The Paladin TMI decreases:** 35.8 with C-P1 (threat set: 40.4). The Warrior goes from 44 to 41.
-- **With C-P1, the Paladin takes 4% less damage than the Warrior** (280 against 292 each sec; live: 11% more).
-- **Fast bosses and bosses with two weapons** give the same result as the table below. C-P1 is 0.4–1.2 points above the Warrior. With 4–20%, the Paladin is 2.2–2.8 points above.
+- **The Paladin TMI decreases:** 35.8 with C-P1 (threat set: 40.4). The Warrior goes from 44 to 38.
+- **With C-P1, the Paladin takes 4% more damage than the Warrior** (280 against 270 each sec; live: 20% more).
+- **Fast bosses and bosses with two weapons** give the same result as the table below. C-P1 is 0.5–1.2 points above the Warrior. With 4–20%, the Paladin is 2.2–2.8 points above.
 
 **Fast bosses and bosses with two weapons.** The same tanks and 3 min fight. "Fast" is a swing each 1.2 sec with 60% damage, thus the same damage each sec. "Two weapons" adds a second weapon. The Paladin uses the wowsims default tank build (12/32/7), with Toughness removal (C-P13) in the C-P1 columns.
 
@@ -77,18 +77,18 @@ Item pool threat set of each class (Analysis, Threat, part 6), tank consumables,
 | --- | --- | --- | --- | --- |
 | Normal (2.0 sec) | 0.9% | 1.2% | 5.2% | 12.0% |
 | Fast (1.2 sec) | 3.3% | 3.5% | 6.4% | 11.0% |
-| Two weapons | 4.3% | 5.1% | 7.3% | 10.9% |
+| Two weapons | 4.4% | 5.1% | 7.3% | 10.9% |
 | Fast, two weapons | 7.8% | 8.7% | 10.0% | 11.7% |
 
 | Boss | Damage taken each sec: Warrior | Paladin, C-P1 | Paladin, C-P1 with 4–20% | Paladin, live |
 | --- | --- | --- | --- | --- |
-| Normal | 297 | 299 | 325 | 336 |
-| Fast | 286 | 282 | 304 | 307 |
-| Two weapons | 450 | 456 | 483 | 483 |
-| Fast, two weapons | 447 | 450 | 467 | 459 |
+| Normal | 299 | 299 | 325 | 336 |
+| Fast | 289 | 282 | 304 | 307 |
+| Two weapons | 454 | 456 | 483 | 483 |
+| Fast, two weapons | 452 | 450 | 467 | 459 |
 
 - **More swings use the charges faster.** Both tanks then have gaps. The Warrior reaches 3.3–7.8% crushing blows, the Paladin with C-P1 3.5–8.7%.
-- **C-P1 follows the Warrior.** It is 0.2–0.9 points above the Warrior with each boss. Its damage taken is within 1% of the Warrior damage taken with each boss.
+- **C-P1 follows the Warrior.** It is 0.2–0.9 points above the Warrior with each boss. Its damage taken is within 3% of the Warrior damage taken with each boss.
 - **4–20% is worse with each boss.** On a normal boss, it gives 5.2% (C-P1: 1.2%). Against fast bosses and bosses with two weapons, it is 1.3–2.9 points above C-P1, and 2.2–3.1 points above the Warrior.
 - **Against fast bosses with two weapons,** C-P1 gives a smaller gain: 11.7% → 8.7%. The charges are empty too soon. The Warrior has 7.8%.
 

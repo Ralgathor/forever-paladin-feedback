@@ -1,63 +1,64 @@
-# wowsims Forever master 3633d376a (client 1.60.1.70888, hotfixes of 10 and 11 November), item pool Shockadin set of 8 November (search.py: FEEDBACK_ITEMS of tank_gear/set_shock.json), 3 min, 3,000 iterations. The runs of 9 November: logs/finals_shock_9f254e8d8.log.
-BUILD shock raid beta 05025210221021--0523330110130033 {'dps': 823.0, 'oom': 0.0}
-BUILD shock raid beta 05025211222021051--052323010013 {'dps': 672.2, 'oom': 0.0}
-BUILD shock raid beta 15325210222121201--052330002013 {'dps': 672.8, 'oom': 0.0}
-BUILD shock raid beta 0502521022102--0523330110130034 {'dps': 737.8, 'oom': 0.0}
-BUILD shock raid beta 0502520122102--0523330110130034 {'dps': 737.8, 'oom': 0.0}
-BUILD shock raid prop 05025210221021--0523330110130033 {'dps': 823.0, 'oom': 0.0}
-BUILD shock raid prop 05025211222021051--052323010013 {'dps': 735.7, 'oom': 0.0}
-BUILD shock raid prop 15325210222121201--052330002013 {'dps': 738.0, 'oom': 0.0}
-BUILD shock raid prop 0502521022102--0523330110130034 {'dps': 737.8, 'oom': 0.0}
-BUILD shock raid prop 0502520122102--0523330110130034 {'dps': 737.8, 'oom': 0.0}
-BUILD shock fresh beta 05025210221021--0523330110130033 {'dps': 278.2, 'oom': 107.2}
-BUILD shock fresh beta 05025211222021051--052323010013 {'dps': 223.3, 'oom': 118.6}
-BUILD shock fresh beta 15325210222121201--052330002013 {'dps': 234.9, 'oom': 107.4}
-BUILD shock fresh beta 0502521022102--0523330110130034 {'dps': 294.8, 'oom': 54.1}
-BUILD shock fresh beta 0502520122102--0523330110130034 {'dps': 292.7, 'oom': 54.1}
-BUILD shock fresh prop 05025210221021--0523330110130033 {'dps': 300.5, 'oom': 100.6}
-BUILD shock fresh prop 05025211222021051--052323010013 {'dps': 234.8, 'oom': 129.3}
-BUILD shock fresh prop 15325210222121201--052330002013 {'dps': 253.5, 'oom': 125.1}
-BUILD shock fresh prop 0502521022102--0523330110130034 {'dps': 319.3, 'oom': 36.4}
-BUILD shock fresh prop 0502520122102--0523330110130034 {'dps': 314.1, 'oom': 36.6}
-WEIGHTS shock raid beta 05025210221021--0523330110130033 base={'dps': 823.0}
+# wowsims Forever master 3633d376a (client 1.60.1.70888, hotfixes of 10 and 11 November), item pool Shockadin set of 11 November (search.py: FEEDBACK_ITEMS of tank_gear/set_shock.json), 3 min, 3,000 iterations. The runs of 9 November: logs/finals_shock_9f254e8d8.log.
+BUILD shock raid beta 05025210221021--0523330110130033 {'dps': 833.8, 'oom': 0.0}
+BUILD shock raid beta 05025211222021051--052323010013 {'dps': 682.0, 'oom': 0.0}
+BUILD shock raid beta 15325210222121201--052330002013 {'dps': 683.0, 'oom': 0.0}
+BUILD shock raid beta 0502521022102--0523330110130034 {'dps': 748.6, 'oom': 0.0}
+BUILD shock raid beta 0502520122102--0523330110130034 {'dps': 748.6, 'oom': 0.0}
+BUILD shock raid prop 05025210221021--0523330110130033 {'dps': 833.6, 'oom': 0.0}
+BUILD shock raid prop 05025211222021051--052323010013 {'dps': 744.9, 'oom': 0.0}
+BUILD shock raid prop 15325210222121201--052330002013 {'dps': 746.8, 'oom': 0.0}
+BUILD shock raid prop 0502521022102--0523330110130034 {'dps': 748.6, 'oom': 0.0}
+BUILD shock raid prop 0502520122102--0523330110130034 {'dps': 748.6, 'oom': 0.0}
+BUILD shock fresh beta 05025210221021--0523330110130033 {'dps': 288.6, 'oom': 110.8}
+BUILD shock fresh beta 05025211222021051--052323010013 {'dps': 222.6, 'oom': 120.9}
+BUILD shock fresh beta 15325210222121201--052330002013 {'dps': 242.4, 'oom': 111.0}
+BUILD shock fresh beta 0502521022102--0523330110130034 {'dps': 310.3, 'oom': 56.1}
+BUILD shock fresh beta 0502520122102--0523330110130034 {'dps': 296.5, 'oom': 58.3}
+BUILD shock fresh prop 05025210221021--0523330110130033 {'dps': 289.0, 'oom': 111.0}
+BUILD shock fresh prop 05025211222021051--052323010013 {'dps': 234.6, 'oom': 133.8}
+BUILD shock fresh prop 15325210222121201--052330002013 {'dps': 253.4, 'oom': 122.6}
+BUILD shock fresh prop 0502521022102--0523330110130034 {'dps': 324.7, 'oom': 44.8}
+BUILD shock fresh prop 0502520122102--0523330110130034 {'dps': 321.0, 'oom': 43.3}
+WEIGHTS shock raid beta 05025210221021--0523330110130033 base={'dps': 833.8}
   Strength: dps=+0.285
   Agility: dps=+0.275
   Intellect: dps=+0.220
   Spell damage: dps=+0.500
   Attack power: dps=+0.115
-  Hit rating: dps=+0.910
+  Hit rating: dps=+0.940
   Crit rating: dps=+0.440
-  Haste rating: dps=+0.440
-  Expertise rating: dps=+0.580
-WEIGHTS shock raid prop 05025210221021--0523330110130033 base={'dps': 823.0}
-  Strength: dps=+0.290
+  Haste rating: dps=+0.390
+  Expertise rating: dps=+0.600
+WEIGHTS shock raid prop 05025210221021--0523330110130033 base={'dps': 833.6}
+  Strength: dps=+0.285
   Agility: dps=+0.280
   Intellect: dps=+0.220
   Spell damage: dps=+0.500
-  Attack power: dps=+0.118
-  Hit rating: dps=+0.940
+  Attack power: dps=+0.115
+  Hit rating: dps=+0.970
   Crit rating: dps=+0.440
-  Haste rating: dps=+0.420
+  Haste rating: dps=+0.370
   Expertise rating: dps=+0.590
-WEIGHTS shock fresh beta 05025210221021--0523330110130033 base={'dps': 278.2}
+WEIGHTS shock fresh beta 05025210221021--0523330110130033 base={'dps': 288.6}
   Strength: dps=+0.145
-  Agility: dps=+0.175
-  Intellect: dps=+0.600
-  Spell damage: dps=+0.215
-  Attack power: dps=+0.065
-  Hit rating: dps=+0.250
-  Crit rating: dps=+0.270
-  Haste rating: dps=+0.120
-  Expertise rating: dps=+0.180
-WEIGHTS shock raid prop 05025211222021051--052323010013 base={'dps': 735.7}
-  Strength: dps=+0.250
-  Agility: dps=+0.220
+  Agility: dps=+0.125
   Intellect: dps=+0.025
+  Spell damage: dps=+0.220
+  Attack power: dps=+0.065
+  Hit rating: dps=+0.300
+  Crit rating: dps=+0.200
+  Haste rating: dps=-0.050
+  Expertise rating: dps=+0.220
+WEIGHTS shock raid prop 05025211222021051--052323010013 base={'dps': 744.9}
+  Strength: dps=+0.245
+  Agility: dps=+0.225
+  Intellect: dps=+0.020
   Spell damage: dps=+0.487
-  Attack power: dps=+0.102
-  Hit rating: dps=+0.790
+  Attack power: dps=+0.100
+  Hit rating: dps=+0.840
   Crit rating: dps=+0.380
-  Haste rating: dps=+0.340
-  Expertise rating: dps=+0.420
-BUILD shock raid prop-REV50-only 15325210222121201--052330002013 {'dps': 738.0, 'oom': 0.0}
-BUILD shock fresh prop-REV50-only 15325210222121201--052330002013 {'dps': 253.5, 'oom': 125.1}
+  Haste rating: dps=+0.430
+  Expertise rating: dps=+0.400
+# SB3 with Reverence 50% only (REV50, no CH7), same settings, 3,000 iterations
+BUILD shock raid prop-REV50-only 15325210222121201--052330002013 {'dps': 683.1, 'oom': 0.0}
+BUILD shock fresh prop-REV50-only 15325210222121201--052330002013 {'dps': 246.7, 'oom': 111.2}

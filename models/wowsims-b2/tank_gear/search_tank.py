@@ -6,7 +6,7 @@
 # No item twice (quest rewards are once only). Each candidate runs in the full set (1,000 iterations); the best score is kept, slot by slot.
 # Score (as search.py): 40% threat, 20% damage, 20% damage taken, 20% TMI, each against the default set.
 # Shockadin (shock): the same method, with damage only as the score.
-# Usage: EFFECTS=<zzeffects list> python3 search_tank.py <prot|war|bear|shock> <dumped request> ; needs /tmp/zztank (zztank_main.go).
+# Usage: [START=<set file>] EFFECTS=<zzeffects list> python3 search_tank.py <prot|war|bear|shock> <dumped request> ; needs /tmp/zztank (zztank_main.go).
 import json, os, subprocess, sys, tempfile
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'matched_gear'))
 from opt import d, by, pre_raid, ok_class, ilvl, st, SLOT_TYPE, ARMOR, WEAP, RANGED
@@ -55,7 +55,7 @@ bad = [s for s, i in enumerate(start) if i and not pre_raid(by[i])]
 print('DEFAULT', json.dumps(ref)); print('OUT OF POOL', [(s, name(start[s])) for s in bad])
 cur = list(start)
 for s in bad: cur[s] = 0
-for s in bad:
+for s in ([] if os.environ.get('START') else bad):
     used = set(cur)
     L = sorted([it for it in pool if fits(it, s) and it['id'] not in used], key=lambda it: -val(it))[:12]
     L += [it for it in pool if fits(it, s) and it['id'] not in used and it['id'] in EFF and it.get('itemEffects') and it not in L]
@@ -66,6 +66,27 @@ for s in bad:
     best = max(zip(L, res), key=lambda z: score(z[1], ref))
     cur[s] = best[0]['id']
     print('SLOT', s, name(start[s]), '->', best[0]['name'], ilvl(best[0]), round(score(best[1], ref), 4), [(it['name'], round(score(r, ref), 4)) for it, r in zip(L, res)])
+# Proc pass (11 November 2026): the loop above opens only the slots with an item outside the pool. With EFFECTS,
+# each other slot also runs all pool items with an effect that wowsims implements, slot by slot, against the set so far.
+# START=<set file> starts the proc pass from that set (the bad slots then keep the items of the set).
+if os.environ.get('START'):
+    cur = json.load(open(os.environ['START']))  # the loop above does not run
+if EFF:
+    base = run([cur], 1000)[0]
+    for s in range(17):
+        if s in bad or not cur[s]: continue
+        used = set(cur)
+        L = [it for it in pool if fits(it, s) and it['id'] not in used and it['id'] in EFF and it.get('itemEffects')]
+        if not L: continue
+        sets = []
+        for it in L:
+            x = list(cur); x[s] = it['id']; sets.append(x)
+        res = run(sets, 1000)
+        best = max(zip(L, res), key=lambda z: score(z[1], ref))
+        print('PROC', s, name(cur[s]), round(score(base, ref), 4), [(it['name'], round(score(r, ref), 4)) for it, r in zip(L, res)])
+        if score(best[1], ref) > score(base, ref) * 1.002:
+            print('PROC SLOT', s, name(cur[s]), '->', best[0]['name'])
+            cur[s] = best[0]['id']; base = best[1]
 fin = run([start, cur], 3000)
 print('FINAL default', json.dumps(fin[0])); print('FINAL pool', json.dumps(fin[1]))
 print('SET', json.dumps(cur)); print('SETNAMES', ' ; '.join(name(i) for i in cur))

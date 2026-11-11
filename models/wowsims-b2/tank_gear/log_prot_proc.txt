@@ -1,0 +1,13 @@
+DEFAULT {"tps": 1031.8408371102773, "dps": 428.0908709190108, "dtps": 295.90030312672235, "tmi": 44.742841783180744}
+OUT OF POOL [(2, 'Premier Chevalier Shoulders'), (6, 'Heavy Thorium Gauntlets'), (9, 'Depleted Thorium Sabatons'), (11, 'Ring of Awareness'), (12, 'Arena Grand Master'), (13, "Defender's Grip Stabilizer"), (14, 'Dark Iron Destroyer'), (15, 'Force Reactive Disk'), (16, 'Libram of Fervor')]
+PROC 0 Stalwart Helm 1.0023 [('Helm of Fire', 0.9665), ("Admiral's Hat", 0.9552), ('Clever Hat', 0.9394)]
+PROC 1 Horn of Ve'han 1.0023 [('Eidolon Talisman', 0.9838)]
+PROC 3 Cloak of Warding 1.0023 [('Cloak of Fire', 0.9937), ('Bristlecone Cloak', 0.9994)]
+PROC 4 Enriched Thorium Breastplate 1.0023 [('Truesilver Breastplate', 0.9811), ('Dragonscale Breastplate', 0.9725), ('Demon Forged Breastplate', 0.9849)]
+PROC 5 Lightforge Bracers 1.0023 [('Magically Sealed Bracers', 0.9914)]
+PROC 7 Lightforge Belt 1.0023 [('Girdle of Reprisal', 0.9799), ("Omokk's Girth Restrainer", 0.9882), ('Girdle of Extracted Answers', 0.987)]
+PROC 10 Ring of Protection 1.0023 [('Freezing Band', 0.9936), ('Ring of Saviors', 1.0003), ('Naglering', 1.003), ('Flame Seared Signet', 1.0017)]
+FINAL default {"tps": 1031.1810369715608, "dps": 427.91418495322273, "dtps": 295.6351601931641, "tmi": 44.72065774772665}
+FINAL pool {"tps": 1133.428008153921, "dps": 452.1179278223963, "dtps": 336.1150026804123, "tmi": 50.97947656676801}
+SET [250599, 275736, 16729, 18413, 250595, 16722, 250553, 16723, 12619, 250563, 15855, 275971, 280074, 271906, 2243, 13243, 228175]
+SETNAMES Stalwart Helm ; Horn of Ve'han ; Lightforge Spaulders ; Cloak of Warding ; Enriched Thorium Breastplate ; Lightforge Bracers ; Warder's Gloves ; Lightforge Belt ; Enchanted Thorium Leggings ; Warder's Sabatons ; Ring of Protection ; Initiate's Signet of Vigilance ; Scalding Flamehoof ; Volunteer's Lucky Seal ; Hand of Edward the Odd ; Argent Defender ; Libram of Holy Alacrity
