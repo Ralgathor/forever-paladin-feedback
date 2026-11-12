@@ -1,0 +1,34 @@
+# Druid threat by ability, item pool threat set, 3 min, 3,000 iterations (FEEDBACK_SRC=1)
+# threat, casts, damage, hits and crits are averages for each fight
+## master 52471a100 (12 November)
+SRC spell_id:9910  tag:1 threat=2315.5 casts=0.00 dmg=1077.0 hits=49.45 crits=0.00
+SRC other_id:OtherActionAttack  tag:14 threat=10700.5 casts=17.63 dmg=4977.0 hits=0.26 crits=5.26
+SRC spell_id:9881  tag:1  rank:7 threat=117356.8 casts=56.34 dmg=31191.2 hits=27.76 crits=12.50
+SRC spell_id:22842 threat=6851.6 casts=1.00 dmg=0.0 hits=0.00 crits=0.00
+SRC other_id:OtherActionRageGain threat=1821.9 casts=79.22 dmg=0.0 hits=0.00 crits=0.00
+SRC spell_id:1235827  rank:5 threat=62864.6 casts=80.36 dmg=8771.8 hits=0.00 crits=0.00
+SRC other_id:OtherActionAttack  tag:10610 threat=8080.6 casts=11.70 dmg=3758.4 hits=0.17 crits=3.50
+SRC spell_id:20343  rank:4 threat=4871.9 casts=0.00 dmg=0.0 hits=75.65 crits=0.00
+SRC other_id:OtherActionAttack  tag:15601 threat=1750.0 casts=2.80 dmg=813.9 hits=0.04 crits=0.82
+SRC spell_id:10301  tag:1 threat=2567.7 casts=0.00 dmg=1194.3 hits=49.35 crits=0.00
+SRC spell_id:11374 threat=2705.8 casts=13.98 dmg=0.0 hits=13.98 crits=0.00
+SRC spell_id:414647 threat=105217.4 casts=0.00 dmg=14681.5 hits=42.64 crits=18.78
+SRC spell_id:1238070  rank:3 threat=83711.0 casts=28.98 dmg=12978.5 hits=14.32 crits=6.40
+SRC item_id:9421 threat=3482.7 casts=2.00 dmg=0.0 hits=1.50 crits=0.50
+RESULT druid dur=180 tps=2302.2 dtps=359.4 tmi=38.06 crush=15.1%
+## master 3633d376a (11 November)
+SRC other_id:OtherActionAttack  tag:10610 threat=8021.7 casts=11.62 dmg=3731.0 hits=0.17 crits=3.49
+SRC other_id:OtherActionRageGain threat=3170.6 casts=79.25 dmg=0.0 hits=0.00 crits=0.00
+SRC item_id:9421 threat=3472.7 casts=2.00 dmg=0.0 hits=1.51 crits=0.49
+SRC other_id:OtherActionAttack  tag:15601 threat=1747.3 casts=2.78 dmg=812.7 hits=0.04 crits=0.84
+SRC spell_id:9910  tag:1 threat=2305.9 casts=0.00 dmg=1072.5 hits=49.24 crits=0.00
+SRC spell_id:414647 threat=31545.6 casts=0.00 dmg=14672.4 hits=42.77 crits=18.70
+SRC spell_id:1235827  rank:5 threat=11646.1 casts=80.29 dmg=5416.8 hits=0.00 crits=0.00
+SRC spell_id:22842 threat=6803.0 casts=1.00 dmg=0.0 hits=0.00 crits=0.00
+SRC spell_id:1238070  rank:3 threat=83814.1 casts=28.95 dmg=12994.4 hits=14.22 crits=6.45
+SRC other_id:OtherActionAttack  tag:14 threat=10862.5 casts=17.90 dmg=5052.3 hits=0.27 crits=5.30
+SRC spell_id:20343  rank:4 threat=4860.7 casts=0.00 dmg=0.0 hits=75.49 crits=0.00
+SRC spell_id:10301  tag:1 threat=2560.8 casts=0.00 dmg=1191.1 hits=49.22 crits=0.00
+SRC spell_id:11374 threat=2677.4 casts=13.84 dmg=0.0 hits=13.84 crits=0.00
+SRC spell_id:9881  tag:1  rank:7 threat=116893.6 casts=56.05 dmg=31068.1 hits=27.64 crits=12.46
+RESULT druid dur=180 tps=1613.6 dtps=358.3 tmi=37.90 crush=14.9%
