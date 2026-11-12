@@ -1,4 +1,4 @@
-# wowsims Forever master 3633d376a (client 1.60.1.70888, hotfixes of 10 and 11 November), survival tank set (search.py: TANK_SET=surv, FEEDBACK_ITEMS of tank_gear/set_prot_surv.json), 3 min, 3,000 iterations. Tank consumables (feedbackConsumables). The runs of 9 November: logs/finals_surv_9f254e8d8.log.
+# wowsims Forever master 52471a100 (client 1.60.1.70888, hotfixes of 11 and 12 November), survival tank set (search.py: TANK_SET=surv, FEEDBACK_ITEMS of tank_gear/set_prot_surv.json), 3 min, 3,000 iterations. Tank consumables (feedbackConsumables). The runs of 11 November: logs/finals_surv_3633d376a.log.
 BUILD prot raid beta 050050002-05302102213301531-502 {'dps': 430.7, 'tps': 1082.3, 'dtps': 323.4, 'tmi': 45.66, 'crush': 11.9, 'std': 5.56}
 BUILD prot raid beta 05005-05302102213201531-5023 {'dps': 438.3, 'tps': 1092.9, 'dtps': 325.4, 'tmi': 45.84, 'crush': 11.9, 'std': 5.49}
 BUILD prot raid beta -05302102313501531-52233000001 {'dps': 435.3, 'tps': 1095.3, 'dtps': 315.6, 'tmi': 44.62, 'crush': 12.0, 'std': 5.38}

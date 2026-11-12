@@ -1,6 +1,6 @@
-# wowsims Forever master 3633d376a (client 1.60.1.70888, hotfixes of 10 and 11 November), item pool Shockadin set of 11 November (search.py: FEEDBACK_ITEMS of tank_gear/set_shock.json), 3 min, 3,000 iterations. The runs of 9 November: logs/finals_shock_9f254e8d8.log.
+# wowsims Forever master 52471a100 (client 1.60.1.70888, hotfixes of 11 and 12 November), item pool Shockadin set of 11 November (search.py: FEEDBACK_ITEMS of tank_gear/set_shock.json), 3 min, 3,000 iterations. The runs of 11 November: logs/finals_shock_3633d376a.log.
 BUILD shock raid beta 05025210221021--0523330110130033 {'dps': 833.8, 'oom': 0.0}
-BUILD shock raid beta 05025211222021051--052323010013 {'dps': 682.0, 'oom': 0.0}
+BUILD shock raid beta 05025211222021051--052323010013 {'dps': 682.1, 'oom': 0.0}
 BUILD shock raid beta 15325210222121201--052330002013 {'dps': 683.0, 'oom': 0.0}
 BUILD shock raid beta 0502521022102--0523330110130034 {'dps': 748.6, 'oom': 0.0}
 BUILD shock raid beta 0502520122102--0523330110130034 {'dps': 748.6, 'oom': 0.0}
@@ -38,7 +38,7 @@ WEIGHTS shock raid prop 05025210221021--0523330110130033 base={'dps': 833.6}
   Hit rating: dps=+0.970
   Crit rating: dps=+0.440
   Haste rating: dps=+0.370
-  Expertise rating: dps=+0.590
+  Expertise rating: dps=+0.600
 WEIGHTS shock fresh beta 05025210221021--0523330110130033 base={'dps': 288.6}
   Strength: dps=+0.145
   Agility: dps=+0.125
@@ -50,9 +50,9 @@ WEIGHTS shock fresh beta 05025210221021--0523330110130033 base={'dps': 288.6}
   Haste rating: dps=-0.050
   Expertise rating: dps=+0.220
 WEIGHTS shock raid prop 05025211222021051--052323010013 base={'dps': 744.9}
-  Strength: dps=+0.245
+  Strength: dps=+0.250
   Agility: dps=+0.225
-  Intellect: dps=+0.020
+  Intellect: dps=+0.025
   Spell damage: dps=+0.487
   Attack power: dps=+0.100
   Hit rating: dps=+0.840
@@ -62,8 +62,3 @@ WEIGHTS shock raid prop 05025211222021051--052323010013 base={'dps': 744.9}
 # SB3 with Reverence 50% only (REV50, no CH7), same settings, 3,000 iterations
 BUILD shock raid prop-REV50-only 15325210222121201--052330002013 {'dps': 683.1, 'oom': 0.0}
 BUILD shock fresh prop-REV50-only 15325210222121201--052330002013 {'dps': 246.7, 'oom': 111.2}
-# SB1 at fresh 60 with one new item at a time (set of 9 November + one item), same settings, 3,000 iterations
-BUILD shock fresh beta old+Storm-Gauntlets 05025210221021--0523330110130033 {'dps': 287.4, 'oom': 110.8}
-BUILD shock fresh prop old+Storm-Gauntlets 05025210221021--0523330110130033 {'dps': 288.5, 'oom': 111.0}
-BUILD shock fresh beta old+The-Needler 05025210221021--0523330110130033 {'dps': 279.7, 'oom': 107.2}
-BUILD shock fresh prop old+The-Needler 05025210221021--0523330110130033 {'dps': 301.3, 'oom': 100.6}
