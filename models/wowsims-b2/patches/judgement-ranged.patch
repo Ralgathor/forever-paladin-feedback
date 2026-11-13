@@ -1,16 +1,3 @@
-diff --git a/sim/paladin/seal_of_command.go b/sim/paladin/seal_of_command.go
-index f3bb4e42b..00676f3d4 100644
---- a/sim/paladin/seal_of_command.go
-+++ b/sim/paladin/seal_of_command.go
-@@ -36,7 +36,7 @@ func (paladin *Paladin) registerSealOfCommand(_ int32, rank *spelldata.Spell) {
- 
- 	// Melee in SpellCategories with No Active Defense: hit and crit on the melee table, never
- 	// dodged, parried or blocked.
--	judgementConfig := spelldata.SpellConfig(&paladin.Unit, judgeRank, spelldata.Melee(core.ProcMaskMeleeMHSpecial), spelldata.RemoveFlags(core.SpellFlagAPL))
-+	judgementConfig := spelldata.SpellConfig(&paladin.Unit, judgeRank, spelldata.Melee(paladin.judgementProcMask()), spelldata.RemoveFlags(core.SpellFlagAPL))
- 	judgementConfig.ClassSpellMask = SpellMaskJudgementOfCommand
- 	// The judgement's dummy states no class flags; the damage spell it names does, and modifiers find
- 	// the judgement by those.
 diff --git a/sim/paladin/seal_of_fury.go b/sim/paladin/seal_of_fury.go
 index 8e9d230bf..cf2236da2 100644
 --- a/sim/paladin/seal_of_fury.go

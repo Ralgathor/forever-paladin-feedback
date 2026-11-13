@@ -13,7 +13,7 @@ The `sets/` pages at the root of the repository open these sets in wowsims Forev
 | tank-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180` | 1,037.5 threat per sec |
 | tank-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180` | 1,470.4 threat per sec |
 | tank-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180` | 2,503.1 threat per sec |
-| build-retribution.html | feedback_run_test.go, `FEEDBACK_DUR=180 FEEDBACK_BUFFS=full`, `FEEDBACK_ITEMS` of ../matched_gear/set_Retribution.json | 830.1 DPS (RB1) |
+| build-retribution.html | feedback_run_test.go, `FEEDBACK_DUR=180 FEEDBACK_BUFFS=full`, `FEEDBACK_ITEMS` of ../matched_gear/set_Retribution.json | 837.2 DPS (RB1) |
 | build-shockadin.html | feedback_run_test.go, `FEEDBACK_DUR=180 FEEDBACK_BUFFS=full FEEDBACK_SHOCK=1`, `FEEDBACK_ITEMS` of ../tank_gear/set_shock.json | 815.5 DPS (SB1) |
 
 Steps:

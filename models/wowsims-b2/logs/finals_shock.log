@@ -1,4 +1,4 @@
-# wowsims Forever master 8c7b5a5f5 (client 1.60.1.70938, hotfixes of 13 November, Judgement as a ranged attack: patches/judgement-ranged.patch), item pool Shockadin set of 12 November (129fcd89e, kept) (search.py: FEEDBACK_ITEMS of tank_gear/set_shock.json), 3 min, 3,000 iterations. The runs of 12 November, evening (129fcd89e): logs/finals_shock_129fcd89e.log.
+# wowsims Forever master 8c7b5a5f5 (client 1.60.1.70938, hotfixes of 13 November, Judgement as a ranged attack: patches/judgement-ranged.patch), item pool Shockadin set of 12 November (129fcd89e, kept) (search.py: FEEDBACK_ITEMS of tank_gear/set_shock.json), 3 min, 3,000 iterations. The runs of 12 November, evening (129fcd89e): logs/finals_shock_129fcd89e.log. Rerun with Judgement of Command as a melee attack (late hotfix of 13 November): the same values.
 BUILD shock raid beta 05025210221021--0523330110130033 {'dps': 815.5, 'oom': 0.0}
 BUILD shock raid beta 05025211222021051--052323010013 {'dps': 668.2, 'oom': 0.0}
 BUILD shock raid beta 15325210222121201--052330002013 {'dps': 668.4, 'oom': 0.0}

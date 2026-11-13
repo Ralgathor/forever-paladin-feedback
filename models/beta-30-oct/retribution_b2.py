@@ -28,11 +28,13 @@ import os; D = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, sys.argv[1] if len(sys.argv) > 1 else os.path.join(D, "..", "damage"))
 import damage_model as M
 # Pure damage classes: wowsims Forever 8c7b5a5f5 (13 November 2026, hotfixes of 13 November, Two-Handed Weapon
-# Specialization fix, judgements as ranged attacks with models/wowsims-b2/patches/judgement-ranged.patch, new item search
+# Specialization fix, Judgement of Righteousness and Fury as ranged attacks (hotfixes of 11 November, Command melee again
+# with the late hotfix of 13 November) with models/wowsims-b2/patches/judgement-ranged.patch, new item search
 # with the proc items that wowsims implements), same pre-raid item pool for each spec (game start and Dire Maul content,
 # models/wowsims-b2/matched_gear), wowsims preset enchants, the same consumables for each spec, Ret raid buffs, 2 min,
 # 10,000 iterations. Fury 897.2, Combat Rogue 754.1, Hunter 925.2, Fire Mage 917.8, Demonology Warlock 942.7,
-# Retribution 825.2. The values below put them on the scale of RET_SIM (x 825 / 825.2).
+# Retribution 832.6 (Judgement of Command melee again, late hotfix of 13 November; 825.2 with all three judgements ranged).
+# The values below put them on the scale of RET_SIM (x 831 / 832.6).
 # Commit 129fcd89e (12 November evening): Fury 900.3, Rogue 754.1, Hunter 925.2, Mage 917.8, Warlock 942.7, Retribution 837.8.
 # Commit 52471a100 (12 November): Fury 951.7, Rogue 768.0, Hunter 920.1, Mage 917.8, Warlock 942.7, Retribution 847.7.
 # Commit 3633d376a (11 November): Fury 946.2, Rogue 767.0, Hunter 919.8, Mage 915.5, Warlock 940.3, Retribution 843.5.
@@ -44,8 +46,8 @@ import damage_model as M
 # Commit d97252f2a (3 November): Fury 787.9, Rogue 634.4, Hunter 761.2, Mage 823.9, Warlock 844.8, Retribution 906.5.
 # Commit 895cd67f9 (1 November): Fury 804.8, Rogue 645.6, Hunter 799.6, Mage 824.0, Warlock 845.6, Retribution 874.4.
 PURE_MATCHED = {"Warrior": 897.2, "Rogue": 754.1, "Hunter": 925.2, "Mage": 917.8, "Warlock": 942.7}
-RET_MATCHED = 825.2
-RET_SIM = 825                                                                          # wowsims master 8c7b5a5f5 with ranged judgements, item pool Retribution set of 12 November evening (838 on 129fcd89e, 848 on 52471a100, 841 on 3633d376a and 9f254e8d8) (matched_gear/set_Retribution.json), full buffs, 2 min (the anchor of Analysis, Damage; 939 on master ae9b8c23a, before the Windfury Totem rule; 910 with the set of 4 November; default set: 938, 906 on 1 November)
+RET_MATCHED = 832.6
+RET_SIM = 831                                                                          # wowsims master 8c7b5a5f5 with Judgement of Righteousness and Fury ranged, Command melee (825 with all three ranged), item pool Retribution set of 12 November evening (838 on 129fcd89e, 848 on 52471a100, 841 on 3633d376a and 9f254e8d8) (matched_gear/set_Retribution.json), full buffs, 2 min (the anchor of Analysis, Damage; 939 on master ae9b8c23a, before the Windfury Totem rule; 910 with the set of 4 November; default set: 938, 906 on 1 November)
 PURE = {k: v * RET_SIM / RET_MATCHED for k, v in PURE_MATCHED.items()}
 from damage_model import (gear, auto_table, spec_table, vengeance, fury, arms, rogue, TIER_NAMES, CRIT_SPEC, DODGE,
                           EXECUTE, FIGHT, KINGS, MOTW, MIGHT, SHOUT, NORM_2H, SPEED_2H, DR, MISS)

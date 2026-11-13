@@ -1,4 +1,4 @@
-# wowsims Forever master 8c7b5a5f5, item pool sets (FEEDBACK_ITEMS), tank consumables for the Paladin. Jobs of checks_8298ab833.log.
+# wowsims Forever master 8c7b5a5f5, item pool sets (FEEDBACK_ITEMS), tank consumables for the Paladin. Jobs of checks_8298ab833.log. Jobs R: Judgement of Command melee again (late hotfix of 13 November), Judgement of Righteousness and Fury ranged.
 ### P | FEEDBACK_DUR=180 PROPOSE=
 PERTARGET [1138.6404512809454]
 TMI avg=50.40 std=6.50
@@ -445,47 +445,47 @@ BURST bear window 10 peak 36312.7 p10peak 32729.7 steady 22908.7
 PERTARGET [2265.7904425970623]
 RESULT druid dur=180 tps=2265.8 dtps=357.8 tmi=37.84 crush=15.0%
 ### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=full PROPOSE=
-RESULT dur=120 buffs=full propose="" dps=825.0 tto=408.6 oom=0.0
+RESULT dur=120 buffs=full propose="" dps=830.6 tto=417.2 oom=0.0
 ### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=full PROPOSE=
-RESULT dur=300 buffs=full propose="" dps=834.2 tto=781.3 oom=0.0
+RESULT dur=300 buffs=full propose="" dps=842.3 tto=779.9 oom=0.0
 ### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=lean PROPOSE=
-RESULT dur=120 buffs=lean propose="" dps=672.7 tto=430.3 oom=0.0
+RESULT dur=120 buffs=lean propose="" dps=679.5 tto=431.8 oom=0.0
 ### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=lean PROPOSE=
-RESULT dur=300 buffs=lean propose="" dps=681.7 tto=348.1 oom=1.1
+RESULT dur=300 buffs=lean propose="" dps=688.4 tto=346.0 oom=1.3
 ### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=full PROPOSE=C1
-RESULT dur=120 buffs=full propose="C1" dps=864.6 tto=419.1 oom=0.0
+RESULT dur=120 buffs=full propose="C1" dps=873.3 tto=417.6 oom=0.0
 ### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=full PROPOSE=SA10
-RESULT dur=120 buffs=full propose="SA10" dps=818.4 tto=408.6 oom=0.0
+RESULT dur=120 buffs=full propose="SA10" dps=824.0 tto=417.2 oom=0.0
 ### R | FEEDBACK_DUR=180 FEEDBACK_BUFFS=full PROPOSE=
-RESULT dur=180 buffs=full propose="" dps=830.1 tto=815.0 oom=0.0
+RESULT dur=180 buffs=full propose="" dps=837.2 tto=841.0 oom=0.0
 ### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=full PROPOSE=UW20
-RESULT dur=120 buffs=full propose="UW20" dps=825.0 tto=506.2 oom=0.0
+RESULT dur=120 buffs=full propose="UW20" dps=830.5 tto=505.7 oom=0.0
 ### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=full PROPOSE=C1
-RESULT dur=300 buffs=full propose="C1" dps=875.0 tto=844.9 oom=0.0
+RESULT dur=300 buffs=full propose="C1" dps=883.2 tto=841.7 oom=0.0
 ### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=full PROPOSE=UW20
-RESULT dur=300 buffs=full propose="UW20" dps=833.8 tto=1348.4 oom=0.0
+RESULT dur=300 buffs=full propose="UW20" dps=842.3 tto=1356.6 oom=0.0
 ### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=lean PROPOSE=C1
-RESULT dur=120 buffs=lean propose="C1" dps=707.2 tto=455.0 oom=0.0
+RESULT dur=120 buffs=lean propose="C1" dps=717.8 tto=455.9 oom=0.0
 ### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=lean PROPOSE=UW20
-RESULT dur=120 buffs=lean propose="UW20" dps=672.0 tto=442.1 oom=0.0
+RESULT dur=120 buffs=lean propose="UW20" dps=679.4 tto=447.1 oom=0.0
 ### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=lean PROPOSE=C1
-RESULT dur=300 buffs=lean propose="C1" dps=719.1 tto=361.4 oom=0.9
+RESULT dur=300 buffs=lean propose="C1" dps=726.3 tto=359.4 oom=1.0
 ### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=lean PROPOSE=UW20
-RESULT dur=300 buffs=lean propose="UW20" dps=682.8 tto=528.9 oom=0.0
+RESULT dur=300 buffs=lean propose="UW20" dps=690.6 tto=528.0 oom=0.0
 ### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=full FEEDBACK_BOOKTOTEMS=1 PROPOSE=
-RESULT dur=120 buffs=full propose="" dps=833.6 tto=408.6 oom=0.0
+RESULT dur=120 buffs=full propose="" dps=839.2 tto=417.2 oom=0.0
 ### R | FEEDBACK_DUR=180 FEEDBACK_BUFFS=none PROPOSE=
-RESULT dur=180 buffs=none propose="" dps=306.5 tto=57.8 oom=84.6
+RESULT dur=180 buffs=none propose="" dps=309.1 tto=57.6 oom=84.5
 ### R | FEEDBACK_DUR=180 FEEDBACK_BUFFS=none PROPOSE=REV50
-RESULT dur=180 buffs=none propose="REV50" dps=305.9 tto=61.2 oom=86.5
+RESULT dur=180 buffs=none propose="REV50" dps=307.7 tto=61.0 oom=86.8
 ### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=none PROPOSE=
-RESULT dur=300 buffs=none propose="" dps=297.8 tto=57.8 oom=166.9
+RESULT dur=300 buffs=none propose="" dps=299.9 tto=57.6 oom=166.8
 ### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=none PROPOSE=REV50
-RESULT dur=300 buffs=none propose="REV50" dps=295.4 tto=61.2 oom=175.2
+RESULT dur=300 buffs=none propose="REV50" dps=297.0 tto=61.0 oom=175.8
 ### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=full PROPOSE=REV50
-RESULT dur=120 buffs=full propose="REV50" dps=825.0 tto=474.6 oom=0.0
+RESULT dur=120 buffs=full propose="REV50" dps=830.5 tto=474.2 oom=0.0
 ### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=full PROPOSE=REV50
-RESULT dur=300 buffs=full propose="REV50" dps=833.8 tto=1245.6 oom=0.0
+RESULT dur=300 buffs=full propose="REV50" dps=842.6 tto=1249.2 oom=0.0
 ### P | FEEDBACK_DUR=180 PROPOSE=CP1,RD20,NOTOUGH
 TMI avg=48.15 std=6.42
 RESULT dur=180 propose="CP1,RD20,NOTOUGH" tps=1184.8 dps=476.4 dtps=304.9 swings=81.5 hit=2.5% miss=9.6% dodge=15.4% parry=12.4% block=54.4% crit=2.5% crush=3.2%

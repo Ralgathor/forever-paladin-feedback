@@ -70,7 +70,7 @@ The other sets stay. Two sets gain less than the run noise: the Paladin survival
 
 - Redoubt and Shieldsworn: each melee swing or ability against the Paladin rolls the 10% Redoubt chance, avoided attacks included. Before, only hits rolled it.
 - The Lion Horn of Stormwind: when struck, 10% chance to give 725 armor to the party for 30 sec (60 sec cooldown).
-- Since this round, the Paladin judgements are ranged attacks (`../patches/judgement-ranged.patch`). They no longer trigger melee weapon procs.
+- Since this round, Judgement of Righteousness and Judgement of Fury are ranged attacks (`../patches/judgement-ranged.patch`). They no longer trigger melee weapon procs. Judgement of Command is a melee attack again since the late hotfix of 13 November.
 
 First, the sets of 12 November, evening ran on this commit (`../logs/checks_8c7b5a5f5_pool_old_sets.log`, `../logs/checks_8c7b5a5f5_pool_surv_old_sets.log`). The live Paladin has 1,141.1 threat each sec (was 1,133.4, +0.7%) and takes 328.2 damage each sec (was 336.1, −2.4%). The Warrior and the Druid do not change. The Shockadin set has 815.5 DPS (was 823.8, −1.0%, from the ranged judgements).
 

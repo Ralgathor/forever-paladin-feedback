@@ -9,7 +9,7 @@ git apply "$D/patches/talents.patch" || true
 git apply "$D/patches/notes-2-november.patch" || true
 git apply "$D/patches/threat-options.patch" || true
 git apply "$D/patches/burst-threat.patch" || true
-# Since 13 November 2026 (master 8c7b5a5f5 or later): judgements as ranged attacks (JMELEE in PROPOSE keeps them melee).
+# Since 13 November 2026 (master 8c7b5a5f5 or later): Judgement of Righteousness and Fury as ranged attacks, Command stays melee (JMELEE in PROPOSE keeps all melee).
 git apply "$D/patches/judgement-ranged.patch" || true
 cp "$D/apl/furyopen.apl.json" "$D/apl/furyopen1.apl.json" ui/specs/paladin/protection/apls/
 cp "$D/apl/charge.apl.json" ui/specs/warrior/protection/apls/
