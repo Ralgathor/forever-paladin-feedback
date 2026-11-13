@@ -4,8 +4,8 @@ This document gives talent proposals for the WoW Forever Paladin. It has 14 chan
 
 **The three main asks**
 
-1. **Righteous Fury +90% to all threat (C25).** After the development notes of 2 November and the hotfixes of 4 November, the model gives the live Paladin tank 70% of the Warrior threat. In wowsims (item pool tank sets of 12 November, tank consumables), it has 69% of the Warrior. With C25 and Redoubt (C-P1), it has 104% of the Warrior (C25 alone: 98%). wowsims of 12 November gives the Druid +43% from a Lacerate rule with no level 60 test yet. Against this Druid, the Paladin has 49% (live) and 75% (C25 and C-P1).
-2. **Redoubt on each Holy Shield cast (C-P1).** Crushing blows go from 12.0% to 1.2% of the boss attacks (wowsims, Warrior 0.9%). With the same consumables, the Paladin then takes 1% less damage than the Warrior (live: 13% more).
+1. **Righteous Fury +90% to all threat (C25).** After the development notes of 2 November and the hotfixes of 4 November, the model gives the live Paladin tank 70% of the Warrior threat. In wowsims (item pool tank sets of 12 November, tank consumables, Hand of Justice nerf of 12 November evening), it has 71% of the Warrior. With C25 and Redoubt (C-P1), it has 107% of the Warrior (C25 alone: 101%). wowsims of 12 November gives the Druid +43% from a Lacerate rule with no level 60 test yet. Against this Druid, the Paladin has 50% (live) and 76% (C25 and C-P1).
+2. **Redoubt on each Holy Shield cast (C-P1).** Crushing blows go from 12.0% to 1.2% of the boss attacks (wowsims, Warrior 1.0%). With the same consumables, the Paladin then takes the same damage as the Warrior (0.5% less; live: 14% more).
 3. **Reverence 25/50% (C-H1) and a Light's Vigil buff (C-H7).** On one tank, the Paladin goes from 8–15% to 3–7% below the Druid. In raids of 5 and 10 min, from 25–34% to 3–4% below.
 
 **Contents**

@@ -4,9 +4,9 @@
 
 ## Short answer
 
-- **The problem.** In the live version, a raid boss hits the Paladin with a crushing blow on 12.0% of its swings (part 3). A crushing blow does 150% damage. The Warrior takes crushing blows on only 0.9% of the swings.
-- **The fix.** With Redoubt (C-P1), each Holy Shield cast also starts Redoubt. The two block buffs are then active together. Crushing blows decrease to 1.2%, near the Warrior (0.9%).
-- **The tank takes 13% less damage** with C-P1. The tanks have the item pool tank sets and the same tank consumables. The Paladin then takes 1% less damage than the Warrior (294 against 297 each sec). Its TMI is also lower (40.4 against 45). With the survival sets, it takes 10% more damage than the Warrior, but its TMI is lower (35.8 against 40).
+- **The problem.** In the live version, a raid boss hits the Paladin with a crushing blow on 12.0% of its swings (part 3). A crushing blow does 150% damage. The Warrior takes crushing blows on only 1.0% of the swings.
+- **The fix.** With Redoubt (C-P1), each Holy Shield cast also starts Redoubt. The two block buffs are then active together. Crushing blows decrease to 1.2%, near the Warrior (1.0%).
+- **The tank takes 13% less damage** with C-P1. The tanks have the item pool tank sets and the same tank consumables. The Paladin then takes 0.5% less damage than the Warrior (294 against 295 each sec). Its TMI is also lower (40.4 against 44). With the survival sets, it takes 12% more damage than the Warrior, but its TMI is lower (35.8 against 39).
 - **Keep Redoubt at 6–30% block.** At 4–20%, the crushing blows go to 5.2% on a normal boss (C-P1: 1.2%). Fast bosses and bosses with two weapons then give 1.3–2.9 points more.
 - **Fast bosses and bosses with two weapons** give both tanks more crushing blows. With C-P1, the Paladin is 0.1–0.8 points above the Warrior. At 4–20%, it is 2.1–3.0 points above.
 
@@ -45,12 +45,12 @@ Item pool threat set of each class (Analysis, Threat, part 6), tank consumables,
 | **Paladin, Redoubt (C-P1)** | **60.7%** | **1.2%** | **294 (−13%)** | **40.4** |
 | Paladin, C-P1 with Redoubt 4–20% | 53.8% | 5.2% | 319 (−5%) | 48.1 |
 | Paladin, Redoubt 4–20% without C-P1 | 39.4% | 12.9% | 342 (+2%) | 52.5 |
-| Warrior | 55.3% | 0.9% | 297 | 45 |
-| Druid | 0% | 15.1% | 359 | 38.1 |
+| Warrior | 55.1% | 1.0% | 295 | 44 |
+| Druid | 0% | 15.0% | 359 | 37.9 |
 
-- **Argent Defender (correction).** The item pool set has Argent Defender, a shield of the hotfixes of 7 and 8 November. From 8 to 10 November, wowsims applied its proc buff (+18% block) all the time, by error. The live block was then 55.0%, and the crushing blows 5.6%. wowsims master 3633d376a (11 November) fixes this error. Master 52471a100 (12 November) does not change the Paladin values. Now the live block is 41.2%, and the crushing blows 12.0%, the value before Argent Defender (11.9%).
-- **C-P1 puts the Paladin near the Warrior level for crushing blows:** 1.2% against 0.9%.
-- **With C-P1, the Paladin takes 1% less damage than the Warrior** (294 against 297 each sec). Its TMI is also lower (40.4 against 45). The live Paladin takes 13% more damage. The Warrior dodges more: 20.6% against 14.5%. The boss has 0.2% critical hits on the Paladin with C-P1.
+- **Argent Defender (correction).** The item pool set has Argent Defender, a shield of the hotfixes of 7 and 8 November. From 8 to 10 November, wowsims applied its proc buff (+18% block) all the time, by error. The live block was then 55.0%, and the crushing blows 5.6%. wowsims master 3633d376a (11 November) fixes this error. Masters 52471a100 and 129fcd89e (12 November) do not change the Paladin values. Now the live block is 41.2%, and the crushing blows 12.0%, the value before Argent Defender (11.9%).
+- **C-P1 puts the Paladin near the Warrior level for crushing blows:** 1.2% against 1.0%.
+- **With C-P1, the Paladin takes 0.5% less damage than the Warrior** (294 against 295 each sec). Its TMI is also lower (40.4 against 44). The live Paladin takes 14% more damage. The Warrior dodges more: 20.6% against 14.5%. The boss has 0.2% critical hits on the Paladin with C-P1.
 - **Consumables are important.** Without consumables (Demonic Rune only, the runs before 4 November evening), the Paladin with C-P1 took 13% more damage than the Warrior (339 each sec, TMI 55.3), and the live Paladin 28% more.
 - **5 min fights give the same result.** Live 11.9%, C-P1 1.3%, C-P1 with 4–20% 5.3%, Warrior 0.9%.
 - **The Druid takes the most crushing blows,** but its armor and health keep it safe.
@@ -63,29 +63,29 @@ Item pool threat set of each class (Analysis, Threat, part 6), tank consumables,
 | **Paladin, Redoubt (C-P1)** | **59.9%** | **1.2%** | **280 (−13%)** | **35.8** |
 | Paladin, C-P1 with Redoubt 4–20% | 54.3% | 4.5% | 304 (−6%) | 42.3 |
 | Paladin, Redoubt 4–20% without C-P1 | 39.7% | 12.6% | 328 (+1%) | 46.7 |
-| Warrior | 49.8% | 0.9% | 254 | 40 |
+| Warrior | 48.8% | 0.9% | 251 | 39 |
 | Druid | 0% | 15.0% | 347 | 35.9 |
 
 - **The crushing blows do not change much with the set.** C-P1 gives 1.2% (Warrior: 0.9%).
-- **The Paladin TMI decreases:** 35.8 with C-P1 (threat set: 40.4). The Warrior goes from 45 to 40.
-- **With C-P1, the Paladin takes 10% more damage than the Warrior** (280 against 254 each sec; live: 27% more).
-- **Fast bosses and bosses with two weapons** give the same result as the table below. C-P1 is 0.7–1.5 points above the Warrior. With 4–20%, the Paladin is 2.5–3.1 points above.
+- **The Paladin TMI decreases:** 35.8 with C-P1 (threat set: 40.4). The Warrior goes from 44 to 39.
+- **With C-P1, the Paladin takes 12% more damage than the Warrior** (280 against 251 each sec; live: 29% more).
+- **Fast bosses and bosses with two weapons** give the same result as the table below. C-P1 is 0.7–1.7 points above the Warrior. With 4–20%, the Paladin is 2.7–3.2 points above.
 
 **Fast bosses and bosses with two weapons.** The same tanks and 3 min fight. "Fast" is a swing each 1.2 sec with 60% damage, thus the same damage each sec. "Two weapons" adds a second weapon. The Paladin uses the wowsims default tank build (12/32/7), with Toughness removal (C-P13) in the C-P1 columns.
 
 | Boss | Warrior | Paladin, C-P1 | Paladin, C-P1 with 4–20% | Paladin, live |
 | --- | --- | --- | --- | --- |
-| Normal (2.0 sec) | 0.9% | 1.2% | 5.2% | 12.0% |
+| Normal (2.0 sec) | 1.0% | 1.2% | 5.2% | 12.0% |
 | Fast (1.2 sec) | 3.4% | 3.5% | 6.4% | 11.0% |
 | Two weapons | 4.4% | 5.1% | 7.3% | 10.9% |
 | Fast, two weapons | 7.9% | 8.7% | 10.0% | 11.7% |
 
 | Boss | Damage taken each sec: Warrior | Paladin, C-P1 | Paladin, C-P1 with 4–20% | Paladin, live |
 | --- | --- | --- | --- | --- |
-| Normal | 297 | 299 | 325 | 336 |
+| Normal | 295 | 299 | 325 | 336 |
 | Fast | 284 | 282 | 304 | 307 |
-| Two weapons | 449 | 456 | 483 | 483 |
-| Fast, two weapons | 446 | 450 | 467 | 459 |
+| Two weapons | 448 | 456 | 483 | 483 |
+| Fast, two weapons | 445 | 450 | 467 | 459 |
 
 - **More swings use the charges faster.** Both tanks then have gaps. The Warrior reaches 3.4–7.9% crushing blows, the Paladin with C-P1 3.5–8.7%.
 - **C-P1 follows the Warrior.** It is 0.1–0.8 points above the Warrior with each boss. Its damage taken is within 2% of the Warrior damage taken with each boss.
@@ -124,12 +124,12 @@ Both tanks have 440 Defense and 100 Agility. The boss swings each 2 sec. Shield 
 | Warrior | About 80% (2 of 2.5 swings each 5 sec) | 15% | About 3% |
 | Paladin with C-P1 | About 100% | 0% at 440 Defense | Only in gaps |
 
-- wowsims gives the Warrior 0.9% and the Paladin 1.2%. Thus, the two tanks are almost equal for crushing blows.
+- wowsims gives the Warrior 1.0% and the Paladin 1.2%. Thus, the two tanks are almost equal for crushing blows.
 - The Warrior gaps depend on the swing speed of the boss. The Paladin gaps depend on when Holy Shield is cast. With fast bosses or two weapons, both tanks have more gaps (part 3).
 
 ## 6. Method and limits
 
-- **Sim.** wowsims Forever, master commit 52471a100 (hotfixes of 11 and 12 November), with the proposals as flags (`models/wowsims-b2`). The item pool tank set of each class (`models/wowsims-b2/tank_gear`), tank consumables, full buffs, one level 63 boss, 3,000 iterations, 3 min. Logs: `logs/checks_52471a100_pool.log` and `logs/checks_52471a100_pool_surv.log`. The runs of 11 November: `logs/checks_3633d376a_pool.log` and `logs/checks_3633d376a_pool_surv.log`. The runs of 9 November (with the Argent Defender error): `logs/checks_9f254e8d8_pool.log` and `logs/checks_9f254e8d8_pool_surv.log`. The runs of 8 November: `logs/checks_ae9b8c23a_pool.log` and `logs/checks_ae9b8c23a_pool_surv.log`. The runs of 4 and 6 November (set without Argent Defender): `logs/checks_9a8624af9_pool.log`, `logs/checks_9a8624af9_pool_surv.log` and `logs/checks_df57e2571_pool.log`.
+- **Sim.** wowsims Forever, master commit 129fcd89e (hotfixes of 12 November and push 114027), with the proposals as flags (`models/wowsims-b2`). The item pool tank set of each class (`models/wowsims-b2/tank_gear`), tank consumables, full buffs, one level 63 boss, 3,000 iterations, 3 min. Logs: `logs/checks_129fcd89e_pool.log` and `logs/checks_129fcd89e_pool_surv.log`. The runs of 12 November (52471a100): `logs/checks_52471a100_pool.log` and `logs/checks_52471a100_pool_surv.log`. The runs of 11 November: `logs/checks_3633d376a_pool.log` and `logs/checks_3633d376a_pool_surv.log`. The runs of 9 November (with the Argent Defender error): `logs/checks_9f254e8d8_pool.log` and `logs/checks_9f254e8d8_pool_surv.log`. The runs of 8 November: `logs/checks_ae9b8c23a_pool.log` and `logs/checks_ae9b8c23a_pool_surv.log`. The runs of 4 and 6 November (set without Argent Defender): `logs/checks_9a8624af9_pool.log`, `logs/checks_9a8624af9_pool_surv.log` and `logs/checks_df57e2571_pool.log`.
 - **Gear.** The item pool tank sets are pre-raid sets. They do not reach 440 Defense. Thus, the boss still has 0.2% critical hits on the Paladin with C-P1.
 - **Boss.** The main tables use a boss with one weapon and a 2 sec swing. Part 3 also gives fast bosses and bosses with two weapons (`FEEDBACK_BOSS` in `models/wowsims-b2`).
 - **Talents.** The values use the live talents. A change to Holy Shield or Redoubt changes all values.
