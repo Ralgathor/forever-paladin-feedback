@@ -1,0 +1,39 @@
+diff --git a/sim/paladin/seal_of_command.go b/sim/paladin/seal_of_command.go
+index f3bb4e42b..00676f3d4 100644
+--- a/sim/paladin/seal_of_command.go
++++ b/sim/paladin/seal_of_command.go
+@@ -36,7 +36,7 @@ func (paladin *Paladin) registerSealOfCommand(_ int32, rank *spelldata.Spell) {
+ 
+ 	// Melee in SpellCategories with No Active Defense: hit and crit on the melee table, never
+ 	// dodged, parried or blocked.
+-	judgementConfig := spelldata.SpellConfig(&paladin.Unit, judgeRank, spelldata.Melee(core.ProcMaskMeleeMHSpecial), spelldata.RemoveFlags(core.SpellFlagAPL))
++	judgementConfig := spelldata.SpellConfig(&paladin.Unit, judgeRank, spelldata.Melee(paladin.judgementProcMask()), spelldata.RemoveFlags(core.SpellFlagAPL))
+ 	judgementConfig.ClassSpellMask = SpellMaskJudgementOfCommand
+ 	// The judgement's dummy states no class flags; the damage spell it names does, and modifiers find
+ 	// the judgement by those.
+diff --git a/sim/paladin/seal_of_fury.go b/sim/paladin/seal_of_fury.go
+index 8e9d230bf..cf2236da2 100644
+--- a/sim/paladin/seal_of_fury.go
++++ b/sim/paladin/seal_of_fury.go
+@@ -44,7 +44,7 @@ func (paladin *Paladin) registerSealOfFury(_ int32, rank *spelldata.Spell) {
+ 
+ 	// Melee in SpellCategories with No Active Defense: hit and crit on the melee table, never
+ 	// dodged, parried or blocked.
+-	judgementConfig := spelldata.SpellConfig(&paladin.Unit, judgementRank, spelldata.Melee(core.ProcMaskMeleeMHSpecial), spelldata.RemoveFlags(core.SpellFlagAPL), spelldata.Flags(core.SpellFlagBinary))
++	judgementConfig := spelldata.SpellConfig(&paladin.Unit, judgementRank, spelldata.Melee(paladin.judgementProcMask()), spelldata.RemoveFlags(core.SpellFlagAPL), spelldata.Flags(core.SpellFlagBinary))
+ 	judgementConfig.ClassSpellMask = SpellMaskJudgementOfFury
+ 	judgementConfig.BonusCoefficient = judgementDamage.Coeff()
+ 	judgementConfig.DirectVariance = judgementDamage.DirectVariance()
+diff --git a/sim/paladin/seal_of_righteousness.go b/sim/paladin/seal_of_righteousness.go
+index 5fad09458..e5fbb5350 100644
+--- a/sim/paladin/seal_of_righteousness.go
++++ b/sim/paladin/seal_of_righteousness.go
+@@ -53,7 +53,7 @@ func (paladin *Paladin) registerSealOfRighteousness(_ int32, rank *spelldata.Spe
+ 
+ 	// The judgement is Melee in SpellCategories and carries No Active Defense: it rolls hit and
+ 	// crit on the melee table and cannot be dodged, parried or blocked.
+-	judgementConfig := spelldata.SpellConfig(&paladin.Unit, judgeRank, spelldata.Melee(core.ProcMaskMeleeMHSpecial), spelldata.RemoveFlags(core.SpellFlagAPL), spelldata.Flags(core.SpellFlagBinary))
++	judgementConfig := spelldata.SpellConfig(&paladin.Unit, judgeRank, spelldata.Melee(paladin.judgementProcMask()), spelldata.RemoveFlags(core.SpellFlagAPL), spelldata.Flags(core.SpellFlagBinary))
+ 	judgementConfig.ClassSpellMask = SpellMaskJudgementOfRighteousness
+ 	judgementConfig.BonusCoefficient = judgeDamage.Coeff()
+ 	judgementConfig.DirectVariance = judgeDamage.DirectVariance()

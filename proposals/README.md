@@ -4,8 +4,8 @@ This document gives talent proposals for the WoW Forever Paladin. It has 14 chan
 
 **The three main asks**
 
-1. **Righteous Fury +90% to all threat (C25).** After the development notes of 2 November and the hotfixes of 4 November, the model gives the live Paladin tank 70% of the Warrior threat. In wowsims (item pool tank sets of 12 November, tank consumables, Hand of Justice nerf of 12 November evening), it has 71% of the Warrior. With C25 and Redoubt (C-P1), it has 107% of the Warrior (C25 alone: 101%). wowsims of 12 November gives the Druid +43% from a Lacerate rule with no level 60 test yet. Against this Druid, the Paladin has 50% (live) and 76% (C25 and C-P1).
-2. **Redoubt on each Holy Shield cast (C-P1).** Crushing blows go from 12.0% to 1.2% of the boss attacks (wowsims, Warrior 1.0%). With the same consumables, the Paladin then takes the same damage as the Warrior (0.5% less; live: 14% more).
+1. **Righteous Fury +90% to all threat (C25).** After the development notes of 2 November and the hotfixes of 4 November, the model gives the live Paladin tank 70% of the Warrior threat. In wowsims (item pool tank sets of 13 November, tank consumables, hotfixes of 13 November), it has 75% of the Warrior. With C25 and Redoubt (C-P1), it has 112% of the Warrior (C25 alone: 106%). wowsims of 12 November gives the Druid +43% from a Lacerate rule with no level 60 test yet. Against this Druid, the Paladin has 50% (live) and 75% (C25 and C-P1).
+2. **Redoubt on each Holy Shield cast (C-P1).** Crushing blows go from 10.1% to 1.2% of the boss attacks (wowsims, Warrior 1.0%). With the same consumables, the Paladin then takes 5% more damage than the Warrior (live: 17% more).
 3. **Reverence 25/50% (C-H1) and a Light's Vigil buff (C-H7).** On one tank, the Paladin goes from 8–15% to 3–7% below the Druid. In raids of 5 and 10 min, from 25–34% to 3–4% below.
 
 **Contents**
@@ -42,7 +42,7 @@ This document gives talent proposals for the WoW Forever Paladin. It has 14 chan
 | C-H1 | Reverence | Holy, row 2 | 15/30% of the mana regeneration continues during casts | 25/50% |
 | C-H7 | Light's Vigil | Holy, row 7 | A cast on an ally (1,340 mana): the next Holy Shock on the ally has no cooldown and heals the party | Holy Shock, Judgement and Holy Strike give a stack of a buff for 30 sec, once each 6 sec, up to 3 stacks. With the buff, the next Holy Shock has no cooldown and uses one stack. On an ally, it also heals each party member for 60% of the heal |
 | C-H8 | Oath of Light | Holy, row 4 | On one ally: Holy Light +400, Flash of Light +115, Holy Shock +229 | On one ally: Holy Light, Flash of Light and Holy Shock +30%. With a 225% critical heal: +20% |
-| C-P1 | Redoubt | Protection, row 1 | 10% chance when you are hit: +6–30% block | The same. Each Holy Shield cast also starts it |
+| C-P1 | Redoubt | Protection, row 1 | 10% chance on each melee attack against you: +6–30% block | The same. Each Holy Shield cast also starts it |
 | C-P5 | Shoulder the Burden (new) | Baseline spell | — | 50% of the threat of an ally moves to you, 5 min cooldown |
 | C-P7 | Reach of Law (new) | Protection, row 5 | — | 2 ranks, requires Swift Judgement: Judgement and Swift Judgement range +5/10 yards while Seal of Fury is active |
 | M-P2 | Stoicism | Protection | Row 5, column 1 | Row 4, column 4 (move only, for Reach of Law) |

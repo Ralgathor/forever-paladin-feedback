@@ -1,9 +1,9 @@
 {
  "DpsWarrior": {
-  "base": 670.8,
-  "ench": 747.9,
-  "cons": 815.9,
-  "both": 900.3
+  "base": 674.2,
+  "ench": 751.7,
+  "cons": 819.3,
+  "both": 897.2
  },
  "Rogue": {
   "base": 600.3,
@@ -18,14 +18,14 @@
   "both": 925.2
  },
  "Retribution": {
-  "base": 617.1,
-  "ench": 658.6,
-  "cons": 791.6,
-  "both": 837.8
+  "base": 611.1,
+  "ench": 650.2,
+  "cons": 781.4,
+  "both": 825.2
  },
  "Fire": {
-  "base": 672.6,
-  "ench": 723.6,
+  "base": 672.5,
+  "ench": 723.5,
   "cons": 864.3,
   "both": 917.8
  },

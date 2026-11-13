@@ -1,0 +1,12 @@
+EP {0: 0.566, 1: 0.57, 3: 0.0, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.257, 15: 0.0, 17: 0.541, 18: 0.764, 19: 0.333, 20: 0.089, 13: 0.0} {0: 2.937074250112812, 1: 0.7773327102907729, 2: 0.0}
+cands {0: 18, 1: 16, 2: 16, 3: 17, 4: 18, 5: 16, 6: 20, 7: 17, 8: 15, 9: 15, 10: 19, 11: 19, 12: 38, 13: 38, 14: 46, 15: 39, 16: 28}
+start 650.0
+  pass0 slot1: Sentimental Locket -> Mark of Fordring 650.0->652.8
+  pass0 slot2: Hermit's Pauldron -> Truestrike Shoulders 652.8->655.3
+  pass0 slot5: Warpwood Bracers -> Battleborn Armbraces 655.3->660.7
+  pass0 slot9: Bloodmail Boots -> Windreaver Greaves 660.7->662.3
+  pass0 slot14: Sword of Zeal -> Ironfoe 662.3->695.0
+  pass0 slot15: Mirah's Song -> Flurry Axe 695.0->703.5
+FINAL DpsWarrior 704.0 +- 0.5
+SET Lionheart Helm(61) ; Mark of Fordring(63) ; Truestrike Shoulders(61) ; Cape of the Black Baron(63) ; Timbermaw Tunic(61) ; Battleborn Armbraces(63) ; Devilsaur Gauntlets(58) ; Valiant's Waistguard(60) ; Warbear Woolies(57) ; Windreaver Greaves(61) ; Initiate's Signet of Ferocity(63) ; Magni's Will(60) ; Hand of Justice(58) ; Cleansed Vilebranch Medallion(51) ; Ironfoe(60) ; Flurry Axe(47) ; Satyr's Bow(58)
+ILVL 59.1 epics 5

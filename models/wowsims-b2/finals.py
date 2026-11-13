@@ -29,8 +29,8 @@ SHOCK_WEIGHTS = [("shock", "raid", "beta", SB1), ("shock", "raid", "prop", SB1),
 RET_STATS = [(0, "Strength", 20), (1, "Agility", 20), (3, "Intellect", 20), (5, "Spell damage", 40),
              (14, "Attack power", 40), (17, "Hit rating", 10), (18, "Crit rating", 10), (19, "Haste rating", 10),
              (21, "Expertise rating", 10)]
-PROT_STATS = [(0, "Strength", 20), (1, "Agility", 20), (2, "Stamina", 20), (5, "Spell damage", 40),
-              (17, "Hit rating", 10), (21, "Expertise rating", 10), (22, "Defense rating", 10),
+PROT_STATS = [(0, "Strength", 20), (1, "Agility", 20), (2, "Stamina", 20), (3, "Intellect", 20), (5, "Spell damage", 40),
+              (14, "Attack power", 40), (17, "Hit rating", 10), (18, "Crit rating", 10), (21, "Expertise rating", 10), (22, "Defense rating", 10),
               (23, "Block rating", 10), (24, "Block value", 20), (25, "Dodge rating", 10), (26, "Parry rating", 10),
               (28, "Armor", 200)]
 WEIGHTS = [("ret", "raid", "beta", RB1), ("ret", "raid", "prop", RB1), ("ret", "fresh", "beta", RB1),
@@ -56,7 +56,7 @@ if __name__ == "__main__":
         with ThreadPoolExecutor(4) as ex:
             rr = list(ex.map(lambda j: go(spec, case, mode, code, j), jobs))
         base = rr[0]
-        print(f"WEIGHTS {spec} {case} {mode} {code} base={ {k: base[k] for k in ('dps', 'tps', 'dtps', 'tmi') if k in base} }")
+        print(f"WEIGHTS {spec} {case} {mode} {code} base={ {k: base[k] for k in ('dps', 'tps', 'dtps', 'tmi', 'oom') if k in base} }")
         for (i, name, n), r in zip(st, rr[1:]):
             d = {k: (r[k] - base[k]) / n for k in ("dps", "tps", "dtps", "tmi") if k in base}
-            print(f"  {name}: " + " ".join(f"{k}={v:+.3f}" for k, v in d.items()), flush=True)
+            print(f"  {name}: " + " ".join(f"{k}={v:+.3f}" for k, v in d.items()) + (f" oom={r['oom']:.1f}" if 'oom' in r else ""), flush=True)

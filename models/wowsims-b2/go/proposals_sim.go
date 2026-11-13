@@ -233,3 +233,13 @@ func holyShieldThreat() float64 {
 	}
 	return 1.2
 }
+
+// Judgement is a ranged attack since the hotfixes of 11 November 2026: it uses the ranged hit chance
+// and no longer triggers melee item or effect procs. wowsims master still makes the damaging
+// judgements melee. JMELEE keeps the old melee judgements.
+func (paladin *Paladin) judgementProcMask() core.ProcMask {
+	if proposeFlag("JMELEE") {
+		return core.ProcMaskMeleeMHSpecial
+	}
+	return core.ProcMaskRangedSpecial
+}
