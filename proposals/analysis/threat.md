@@ -235,6 +235,22 @@ The values below come from master commit 8c7b5a5f5 (13 November 2026, client 1.6
 - **Faster boss attacks help the Warrior and the Paladin.** The Warrior receives more rage. The Paladin blocks more, thus Holy Shield hits more.
 - **Against a boss with two weapons, Redoubt adds little threat** (0% to +1.7%). The Holy Shield charges are empty too soon (Crushing blows, part 3).
 
+**Other Seals (wowsims, 3 min, item pool threat set).** Threat each sec, damage taken each sec and TMI. Seal of Command needs a build with 13 Retribution points: [`b201005-05302102213301531-50223001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b201005-05302102213301531-50223001). It takes Conviction 2, Sanctified Judgement 3 and Seal of Command in place of Divine Strength 4 and Holy Conduit 2.
+
+| Build and Seal | Live: threat | Live: damage taken | Live: TMI | C25 and C-P1: threat |
+| --- | --- | --- | --- | --- |
+| Live build, Seal of Fury | 1,139 | 316 | 50.4 | 1,703 |
+| Live build, Seal of Righteousness | 1,123 (−1.4%) | 329 | 52.7 | 1,681 (−1.3%) |
+| Seal of Command build, Seal of Fury | 1,161 | 316 | 50.4 | 1,735 |
+| Seal of Command build, Seal of Righteousness | 1,144 (−1.5%) | 329 | 52.7 | 1,711 (−1.4%) |
+| Seal of Command build, Seal of Command | 1,065 (−8.3%) | 332 | 53.1 | 1,592 (−8.2%) |
+
+- **Seal of Fury stays the best tank Seal.** Seal of Righteousness gives 1.4% less threat, and Seal of Command 8% less. The proposals do not change this order.
+- **The other Seals also cost survival.** Without the Seal of Fury absorb shield, the Paladin takes 4–5% more damage, and the TMI increases by 2–3 points.
+- **Seal of Command procs only on a part of the swings.** Seal of Fury and Seal of Righteousness hit on each swing. These runs have the judgement hotfixes: Judgement of Command is a melee attack, and Judgement of Righteousness is a ranged attack.
+- **The Seal of Command build has more threat with Seal of Fury** (+1.9% against the live build, 1,161 against 1,139). It also has more than BS2 (1,154, Builds). Conviction and Sanctified Judgement give more than Divine Strength and Holy Conduit. A new talent search is due.
+- **Files.** `models/wowsims-b2/apl/sor.apl.siml` and `soc.apl.siml` (flag `FEEDBACK_APL`), log `logs/seals_8c7b5a5f5.log`.
+
 ## 7. Groups of enemies
 
 This part compares the tanks against 3 and 5 enemies.
