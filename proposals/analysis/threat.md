@@ -248,7 +248,7 @@ The values below come from master commit 8c7b5a5f5 (13 November 2026, client 1.6
 - **Seal of Fury stays the best tank Seal.** Seal of Righteousness gives 1.4% less threat, and Seal of Command 8% less. The proposals do not change this order.
 - **The other Seals also cost survival.** Without the Seal of Fury absorb shield, the Paladin takes 4–5% more damage, and the TMI increases by 2–3 points.
 - **Seal of Command procs only on a part of the swings.** Seal of Fury and Seal of Righteousness hit on each swing. These runs have the judgement hotfixes: Judgement of Command is a melee attack, and Judgement of Righteousness is a ranged attack.
-- **The Seal of Command build has more threat with Seal of Fury** (+1.9% against the live build, 1,161 against 1,139). It also has more than BS2 (1,154, Builds). Conviction and Sanctified Judgement give more than Divine Strength and Holy Conduit. A new talent search is due.
+- **The Seal of Command build has more threat with Seal of Fury** (+1.9% against the live build, 1,161 against 1,139). It has almost the same values as BS1 (Builds: 1,159 threat, 318 damage taken). Against BS2 (1,154), it has +0.6% threat, but 2.6% more damage taken (316 against 308). Thus, BS2 stays the tank build.
 - **Files.** `models/wowsims-b2/apl/sor.apl.siml` and `soc.apl.siml` (flag `FEEDBACK_APL`), log `logs/seals_8c7b5a5f5.log`.
 
 **Seals and weapon speed (same settings, main hand replaced).** Threat each sec. The percent is the difference against Seal of Fury with the same weapon and build.
