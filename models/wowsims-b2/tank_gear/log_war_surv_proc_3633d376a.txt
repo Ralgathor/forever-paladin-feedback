@@ -1,0 +1,21 @@
+DEFAULT {"tps": 1482.79539670457, "dps": 449.07413555253635, "dtps": 290.81776245759636, "tmi": 48.04783192197635}
+OUT OF POOL [(1, 'Beads of Ogre Might'), (8, 'Hyperion Legplates'), (9, "Commander's Boots"), (10, 'Ring of Awareness'), (12, "Defender's Grip Stabilizer"), (14, 'Annihilator'), (16, 'Archstrike Bow')]
+PROC 0 Hyperion Helm 1.0532 [('Helm of Fire', 1.0321), ("Admiral's Hat", 1.0071), ('Clever Hat', 1.0018)]
+PROC 2 Hermit's Pauldron 1.0532 [('Stoneform Shoulders', 1.0684)]
+PROC SLOT 2 Hermit's Pauldron -> Stoneform Shoulders
+PROC 3 Cloak of Warding 1.0684 [('Cloak of Fire', 1.0534), ('Bristlecone Cloak', 1.0645)]
+PROC 4 Dawn Armor 1.0684 [('Truesilver Breastplate', 1.0609), ('Dragonscale Breastplate', 1.0517), ('Demon Forged Breastplate', 1.0691)]
+PROC 5 Mighty Armsplints 1.0684 [('Magically Sealed Bracers', 1.0794)]
+PROC SLOT 5 Mighty Armsplints -> Magically Sealed Bracers
+PROC 6 Sentinel's Gloves 1.0794 [('Gauntlets of the Sea', 1.0387), ('Fiery Plate Gauntlets', 1.0544), ('Storm Gauntlets', 1.0557), ('Razor Gauntlets', 1.058), ('Force Imbued Gauntlets', 1.0833)]
+PROC SLOT 6 Sentinel's Gloves -> Force Imbued Gauntlets
+PROC 7 Valiant's Waistguard 1.0833 [('Girdle of Reprisal', 1.04), ("Omokk's Girth Restrainer", 1.0558), ('Girdle of Extracted Answers', 1.0422)]
+PROC 11 Ring of Protection 1.0833 [('Freezing Band', 1.0649), ('Ring of Saviors', 1.0795), ('Naglering', 1.0842), ('Flame Seared Signet', 1.0736)]
+PROC 13 Demon's Blood 1.0833 [('Lifestone', 1.0779), ('Ankh of Life', 1.0779), ("Uther's Strength", 1.0812), ('Smoking Heart of the Mountain', 1.078), ('Hand of Justice', 1.0855), ('Second Wind', 1.0779), ("Linken's Boomerang", 1.0779), ('Orb of Fire', 1.0786), ('Heart of the Scale', 1.0779), ("Smokey's Lighter", 1.0779), ('Mark of Tyranny', 1.0849), ('Eye of the Beast', 1.0781), ('Prismcharm', 1.0779), ("Ragged John's Neverending Cup", 1.0779), ('Mark of Resolution', 1.0779), ('Vigilance Charm', 1.0814), ('Mindtap Talisman', 1.0779), ('Major Recombobulator', 1.0779), ('Frozen Heart of the Mountain', 1.0824), ('Molten Heart of the Mountain', 1.0793), ('Dormant Heart of the Mountain', 1.078), ('Golden Banana', 1.0779), ('Toy Soldier', 1.0779), ('Everlook Pathcarver', 1.0779), ('Everlook Delivery Bot', 1.0779), ('Lucky Shovelnose Tuft', 1.0816), ('Behemoth Bones', 1.0823), ('Flamebreak Talisman', 1.0781), ('Mark of the Red Flight', 1.0779)]
+PROC SLOT 13 Demon's Blood -> Hand of Justice
+PROC 15 Sacred Protector 1.0855 [('Skullflame Shield', 1.0906), ('Wall of the Dead', 1.0776), ('Bramblebark Barrier', 1.0607)]
+PROC SLOT 15 Sacred Protector -> Skullflame Shield
+FINAL default {"tps": 1483.5482623477346, "dps": 449.1872292649406, "dtps": 290.196078077943, "tmi": 48.04749162714142}
+FINAL pool {"tps": 1448.4098727563533, "dps": 443.0690059930168, "dtps": 270.329555789968, "tmi": 38.20423040398037}
+SET [10388, 277202, 13955, 18413, 252483, 18351, 18383, 272403, 250596, 16734, 275971, 15855, 4130, 11815, 250618, 1168, 16996]
+SETNAMES Hyperion Helm ; Artifact Seeker's Pendant ; Stoneform Shoulders ; Cloak of Warding ; Dawn Armor ; Magically Sealed Bracers ; Force Imbued Gauntlets ; Valiant's Waistguard ; Enriched Thorium Leggings ; Boots of Valor ; Initiate's Signet of Vigilance ; Ring of Protection ; Smotts' Compass ; Hand of Justice ; Bagh Nakh ; Skullflame Shield ; Gorewood Bow

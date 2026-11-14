@@ -40,18 +40,26 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 ## Retribution against the pure average
 
 - **Model.** models/beta-30-oct/retribution_b2.py. It uses the wowsims default Retribution build of 1 November (14/6/31) and the wowsims rotation: plan 1 + 3 (see Mana with Unsealed Wrath).
-- **Start value.** wowsims Forever master commit 9f254e8d8 (9 November 2026, hotfix push 113823) gives 841 DPS at fresh level 60, with the item pool Retribution set (the set of the pure average, Analysis, Damage, part 7). With the wowsims default set, it gave 938 on 4 November. Build 70755 adds 5 Vengeance stacks and Holy damage to Two-Handed Weapon Specialization: +3.5% with the default set against 906 DPS on 1 November (Beta test results, W15). The Windfury Totem rule of this commit gives −10% (939 → 841): Holy Strike and Judgement of Command do not proc Windfury. The model gives the increase with gear. The pure average table uses 841. The six item pool sets open in wowsims from the [item pool sets](https://ralgathor.github.io/forever-paladin-feedback/sets/) page. The Seal plan tables below come from commit 8298ab833 with the item pool set of 4 November (910 DPS).
+- **Start value.** wowsims Forever master commit 8c7b5a5f5 (13 November 2026, client 1.60.1.70938, hotfixes of 13 November) with the judgement hotfixes gives 831 DPS at fresh level 60. This value uses the item pool Retribution set, the set of the pure average (Analysis, Damage, part 7). With the wowsims default set, it gave 938 on 4 November. Build 70755 adds 5 Vengeance stacks and Holy damage to Two-Handed Weapon Specialization: +3.5% with the default set against 906 DPS on 1 November (Beta test results, W15). The Windfury Totem rule of commit 9f254e8d8 (9 November) gives −10% (939 → 841). Commit 3633d376a does not change this value: Holy Strike and Judgement of Command do not proc Windfury.
+
+  The search of 12 November gives a new set with Warblade of Caer Darrow: +0.8% (841 → 848). Commit 129fcd89e gives Hand of Justice its full proc chance only against Dwarves: −2.1% (848 → 831). The evening search takes Demonshear: +0.9% (831 → 838). The hotfixes of 11 November make the judgements ranged attacks. Thus, they no longer trigger melee weapon procs. The late hotfix of 13 November makes Judgement of Command a melee attack again.
+
+  Judgement of Righteousness and Judgement of Fury stay ranged. With the Two-Handed Weapon Specialization fix of commit 8c7b5a5f5, the value is 831 (825 with all three judgements ranged). The model gives the increase with gear. The pure average table uses 831. The six item pool sets open in wowsims from the [item pool sets](https://ralgathor.github.io/forever-paladin-feedback/sets/) page. The Seal plan tables below come from commit 8298ab833 with the item pool set of 4 November (910 DPS).
 - **Increase with gear.** Retribution damage increases less with gear than Fury damage: ×1.65 against ×1.73 from fresh level 60 to Naxxramas. Fixed base values of the Seals, Judgement and Holy Strike cause this (see Analysis, Damage, part 3).
-- **Pure average.** wowsims Forever, with the same pre-raid item pool, enchants and consumables for each spec (Analysis, Damage, part 7). The pure sets come from a new search on master commit 9f254e8d8 (9 November 2026). This commit adds 262 items. Fury and Combat Rogue use the increase of the model. Hunter, Mage and Warlock increase ×1.75 to Naxxramas (the main case of Analysis, Damage, part 1).
+- **Pure average.** wowsims Forever, with the same pre-raid item pool, enchants and consumables for each spec (Analysis, Damage, part 7). The pure sets come from new searches on master commits 3633d376a (11 November 2026, 464 new items) and 52471a100 (12 November, 69 new items). Two more searches ran on 129fcd89e (12 November, evening, Hand of Justice and Ironfoe change) and on 8c7b5a5f5 (13 November, 46 new items). The searches also try all weapons and other items with a proc effect that wowsims implements, for example Ironfoe and Flurry Axe.
+
+  In the item pool run, the pure average is 887 DPS (9 November: 869), and Retribution 833 (9 November: 844). Fury and Combat Rogue use the increase of the model. Hunter, Mage and Warlock increase ×1.75 to Naxxramas (the main case of Analysis, Damage, part 1).
 
 | Build | Fresh level 60 | Pre-raid | Molten Core | Blackwing Lair | Naxxramas |
 | --- | --- | --- | --- | --- | --- |
-| Live | 97% | 96% | 96% | 94% | 93% |
+| Live | 94% | 93% | 92% | 91% | 90% |
 
-- **Result.** The live version is above the hybrid target (95%) up to Molten Core: 2 points at fresh level 60. From Blackwing Lair, it is below the target: 94% in Blackwing Lair and 93% in Naxxramas.
-- **No damage proposal.** The decision of 9 November keeps the Holy Strike Seal trigger (C1) withdrawn (Withdrawn ideas). With C1, Retribution has 99–103% (Analysis, Damage, part 1).
+- **Result.** The live version is below the hybrid target (95%) at all tiers: 94% at fresh level 60, 91% in Blackwing Lair and 90% in Naxxramas. On 9 November, it was above the target up to Molten Core (97%). The new pure sets of 11 November cause the change: Fury +8.7% with Ironfoe and Flurry Axe, the other pure specs +1.5–3.4%. On 12 November, the pure average and Retribution both increase by 0.3–0.5%.
+
+  On 12 November, evening, the Hand of Justice and Ironfoe change decreases Fury by 5.4%, and the pure average and Retribution both by 1.2–1.3%. Thus, the % do not change. On 13 November, the judgement hotfixes decrease Retribution by 0.6%, and the pure average stays almost the same (−0.1%). Retribution loses half a point. Judgement of Command is melee again (late hotfix of 13 November), thus the loss is less than with all three judgements ranged (−1.5%).
+- **No damage proposal.** The decision of 9 November keeps the Holy Strike Seal trigger (C1) withdrawn (Withdrawn ideas). With C1, Retribution has 95–99% (Analysis, Damage, part 1).
 - **Sacred Arbiter.** Do not decrease it now. At +10%, Retribution loses 0.8% in wowsims (W15).
-- **Other cases.** Hunter, Mage and Warlock ×1.60: live 97–99%. ×1.90: live 88–97%.
+- **Other cases.** Hunter, Mage and Warlock ×1.60: live 94–95%. ×1.90: live 85–94%.
 
 ## Mana with Unsealed Wrath (W29)
 
@@ -73,7 +81,7 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 - **Model columns.** Fresh level 60, Blessing of Wisdom, no consumables.
 - **Result.** Plan 1 + 3 gives the most damage, with half the Seal casts of plan 1 + 1. A copy of Seal of Command has more value than a copy of Seal of Righteousness. Thus, plan 3 + 1 is the weakest plan with copies.
 - **Mana.** At fresh level 60, plan 1 + 3 lasts for a 3 min fight. In a 5 min fight, plan 3 + 3 is the best: −2.5% (model). From Molten Core, plan 1 + 3 is the best in a 5 min fight. The mana costs 2.0% in Molten Core, 0.7% in Blackwing Lair and 0% in Naxxramas. With Reverence 50% (C-H1), plan 1 + 3 lasts 5 min 20 sec at fresh level 60. It is then the best plan at all gear levels.
-- **The pure average table above uses plan 1 + 3 and no mana limit.** The start value (841) comes from wowsims with the same plan.
+- **The pure average table above uses plan 1 + 3 and no mana limit.** The start value (831) comes from wowsims with the same plan.
 - **Spell data.** Unsealed Wrath has a Seal cost effect at 0% (wowsims spell data, spell 1310735). A −20% value, as Twist of Light had, gives 0% in a 2 min fight and +2.6% in a 5 min fight (model). Plan 1 + 3 then lasts 5 min 40 sec.
 
 **Other Seal pairs (wowsims, plan 1 + 3).** Seal of Command with a second Seal in place of Seal of Righteousness.
@@ -107,16 +115,16 @@ The live version changes most of the Retribution tree. Unsealed Wrath replaces T
 
 ## wowsims check
 
-- **Sim.** wowsims Forever, master commit 9f254e8d8 (hotfix push 113823), with the proposals as flags (models/wowsims-b2). The item pool Retribution set of 8 November (the search of 9 November keeps it), with the default enchants, rotation, consumables and build (14/6/31), 3,000 iterations (`logs/checks_9f254e8d8_pool.log`). The Seal plans ran on master commit 8298ab833 with the set of 4 November. They use the APLs of `seal_plans_apl.py` (`logs/seal_plans_8298ab833_pool.log`).
+- **Sim.** wowsims Forever, master commit 8c7b5a5f5 (client 1.60.1.70938, hotfixes of 13 November), with the judgement hotfixes (`patches/judgement-ranged.patch`) and the proposals as flags (models/wowsims-b2). Judgement of Righteousness and Judgement of Fury are ranged attacks, and Judgement of Command is a melee attack. The item pool Retribution set of 12 November, evening, with Demonshear. Default enchants, rotation, consumables and build (14/6/31), 3,000 iterations (`logs/checks_8c7b5a5f5_pool.log`). The Seal plans ran on master commit 8298ab833 with the set of 4 November. They use the APLs of `seal_plans_apl.py` (`logs/seal_plans_8298ab833_pool.log`).
 - **Full buffs** have Mana Spring Totem, Mana Tide Totem and Atiesh. **Lean buffs** have only Gift of the Wild, Battle Shout, Kings, Might and Wisdom.
 
 | Fight | Live | Seal cost −20% |
 | --- | --- | --- |
-| 2 min, full buffs | 841 DPS | 0% |
-| 5 min, full buffs | 853 DPS | 0% |
-| 2 min, lean buffs | 687 DPS | +0.1% |
-| 5 min, lean buffs | 695 DPS | +0.4% |
+| 2 min, full buffs | 831 DPS | 0% |
+| 5 min, full buffs | 842 DPS | 0% |
+| 2 min, lean buffs | 680 DPS | 0% |
+| 5 min, lean buffs | 688 DPS | +0.3% |
 
-- **Mana.** Only the 5 min run with lean buffs has zero mana, for 1.6 sec. The wowsims consumables now include Major Mana Potion. In the model, plan 1 + 3 has zero mana after 3 min 43 sec, because the model has no consumables.
-- **Seal cost −20%.** It has almost no effect in wowsims (0–0.4%), because the mana lasts. The model gives 0–2.6%.
+- **Mana.** Only the 5 min run with lean buffs has zero mana, for 1.3 sec. The wowsims consumables now include Major Mana Potion. In the model, plan 1 + 3 has zero mana after 3 min 43 sec, because the model has no consumables.
+- **Seal cost −20%.** It has almost no effect in wowsims (0% to +0.3%), because the mana lasts. The model gives 0–2.6%.
 

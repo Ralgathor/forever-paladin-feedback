@@ -19,12 +19,13 @@ def fits(it,slot):
         return t==13 and it.get('handType') in (2,3) and it.get('weaponType') not in (5,7)
     return t==14
 items=[{'id':x['id']} if x.get('id') and x['id'] in by and pre_raid(by[x['id']]) and not x.get('randomSuffix') else {} for x in start]
-# SEED=<set file>: start from that set (the run of 6 November 2026 starts from the sets of sets_9a8624af9/, the run of 8 November from sets_df57e2571/, the run of 9 November from sets_ae9b8c23a/)
+# SEED=<set file>: start from that set (the run of 6 November 2026 starts from the sets of sets_9a8624af9/, the run of 8 November from sets_df57e2571/, the run of 9 November from sets_ae9b8c23a/, the run of 11 November from sets_9f254e8d8/)
 if os.environ.get('SEED'): items=[{'id':x['id']} if x.get('id') else {} for x in json.load(open(os.environ['SEED']))['items']]
 log=open(f'/tmp/ms/log_{spec}.txt','w')
 def P(*a):
     print(*a); print(*a,file=log); log.flush()
 w,pw=ep(spec,[{'id':x['id']} if x.get('id') else {} for x in start] if os.environ.get('EPFULL') else items); P('EP',{k:round(v,3) for k,v in w.items()},pw)
+EFF=set(int(x) for x in open(os.environ['EFFECTS'])) if os.environ.get('EFFECTS') else set()
 cand={}
 for s in range(17):
     L=[it for it in pool if fits(it,s)]
@@ -32,6 +33,9 @@ for s in range(17):
     n=25 if s>=14 else 15
     eff=[it for it in L if it.get('itemEffects')][: (15 if s>=12 else 8)]
     if s in (12,13): eff=[it for it in L if it.get('itemEffects')]
+    # EFFECTS=<zzeffects list> (11 November 2026): all items of the slot with an effect that wowsims implements (core.HasItemEffect),
+    # for example proc weapons such as Flurry Axe and Ironfoe. Their stat value is low, but the sim gives their full value.
+    if os.environ.get('EFFECTS'): eff=[it for it in L if it.get('itemEffects') and it['id'] in EFF]
     cand[s]=[it['id'] for it in L[:n]]+[it['id'] for it in eff if it['id'] not in [x['id'] for x in L[:n]]]
 P('cands',{s:len(v) for s,v in cand.items()})
 # fill empty slots with EP best
@@ -56,6 +60,7 @@ for p in range(3):
             t=[dict(x) for x in items]; t[s]={'id':i}; jobs.append({'spec':spec,'items':t,'iters':1000}); ids.append(i)
         if not jobs: continue
         r=run(jobs); k=max(range(len(r)),key=lambda k:r[k]['dps'])
+        P(f'  pass{p} slot{s} all:',' ; '.join(f"{by[i]['name']} {x['dps']:.1f}" for i,x in zip(ids,r)))  # every candidate run (11 November 2026)
         if r[k]['dps']>best*1.002:
             P(f'  pass{p} slot{s}: {by[items[s]["id"]]["name"] if items[s].get("id") else "-"} -> {by[ids[k]]["name"]} {best:.1f}->{r[k]["dps"]:.1f}')
             items[s]={'id':ids[k]}; best=r[k]['dps']; imp=True

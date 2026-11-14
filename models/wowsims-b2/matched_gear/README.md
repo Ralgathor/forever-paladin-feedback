@@ -1,4 +1,4 @@
-# Pure damage specs with the same item pool (2 November 2026, new searches on 6, 8 and 9 November)
+# Pure damage specs with the same item pool (2 November 2026, new searches on 6, 8, 9, 11 and 12 November, two on 12 November)
 
 This run gives the pure average of Analysis, Damage (parts 1, 3 and 7).
 
@@ -8,7 +8,23 @@ The item search ran on wowsims Forever, master commit `895cd67f9` (1 November 20
 
 **New search (8 November 2026).** Master commit `ae9b8c23a` (hotfixes of 7 and 8 November, client 1.60.1.70862) adds 362 items that obey the pool rules for a Paladin, for example Hand of Justice and Cape of the Black Baron. The same commit makes Attack Power on gear also give ranged Attack Power (Hunter). The search ran again on this commit for all six specs. Each search starts from the set of 6 November (`sets_df57e2571/`, `SEED` in main.py), with the same rules and steps. The sets of 8 November and their logs are in `sets_ae9b8c23a/`, their values in `ec_results_ae9b8c23a.json`.
 
-**New search (9 November 2026).** Master commit `9f254e8d8` (hotfix push 113823) adds 262 items to the database. The same commit changes the Windfury Totem rule: Windfury now procs only from auto attacks and from main-hand or next-swing abilities. Holy Strike and Judgement of Command do not proc it (0 of 78 and 0 of 105 in the Forever logs). The search ran again on this commit for all six specs. Each search starts from the set of 8 November (`sets_ae9b8c23a/`, `SEED` in main.py), with the same rules and steps. The results below come from commit `9f254e8d8`.
+**New search (9 November 2026).** Master commit `9f254e8d8` (hotfix push 113823) adds 262 items to the database. The same commit changes the Windfury Totem rule: Windfury now procs only from auto attacks and from main-hand or next-swing abilities. Holy Strike and Judgement of Command do not proc it (0 of 78 and 0 of 105 in the Forever logs). The search ran again on this commit for all six specs. Each search starts from the set of 8 November (`sets_ae9b8c23a/`, `SEED` in main.py), with the same rules and steps. The sets of 9 November and their logs are in `sets_9f254e8d8/`, their values in `ec_results_9f254e8d8.json`.
+
+**New search (11 November 2026).** Master commit `3633d376a` (client 1.60.1.70888, hotfixes of 10 and 11 November) adds 464 items to the database. 335 of them obey the pool rules for a Paladin, for example Ironfoe, Dal'Rend's Sacred Charge and Blackhand Doomsaw. The commit also changes the Warlock dots (Wrack), the Arcane Missiles channel and many Warrior and Druid rules. With the sets of 9 November on this commit (`ec_results_3633d376a_old_sets.json`), no spec changes by more than 0.1% (both).
+
+The pure average is 868.7, and Retribution 97.1%. The search ran again for all six specs. Each search starts from the set of 9 November (`sets_9f254e8d8/`, `SEED` in main.py), with one new rule: all items of a slot with an effect that wowsims implements are candidates (`EFFECTS`, see below). The sets of 11 November and their logs are in `sets_3633d376a/`, their values in `ec_results_3633d376a.json`.
+
+**New search (12 November 2026).** Master commit `52471a100` (hotfixes of 11 and 12 November) adds 69 items, for example Warblade of Caer Darrow. It also changes some rules. The Whirlwind off-hand strike starts Flurry, and Highborne Research Tablet procs from spell hits. Weapon procs skip shield and magic abilities. The spell resistance constant is 8 × level + 19.
+
+With the sets of 11 November on this commit (`ec_results_52471a100_old_sets.json`), the pure average is 898.5 (+0.1%), and Retribution 93.9%. The search ran again for all six specs. Each search starts from the set of 11 November (`sets_3633d376a/`, `SEED` in main.py). It uses the same rules and the `EFFECTS` list of this commit (275 items). The sets of 12 November (52471a100) and their logs are in `sets_52471a100/`, their values in `ec_results_52471a100.json`.
+
+**New search (12 November 2026, evening).** Master commit `129fcd89e` (hotfixes of 12 November and push 114027) changes two proc items. Hand of Justice has its full proc chance (3%) only against Dwarves, and 1% against other targets. Ironfoe has 6% against Orcs and 3% against other targets. The commit also adds Blackhand's Breadth, gives the set bonuses of 113 item sets and changes the Shaman Stormstrike. With the sets of 12 November on this commit (`ec_results_129fcd89e_old_sets.json`), Fury loses 5.8%, Combat Rogue 4.1% and Retribution 1.8%.
+
+The pure average is 882.7 (−1.9%), and Retribution 94.3%. The search ran again for all six specs. Each search starts from the set of 12 November (`sets_52471a100/`, `SEED` in main.py). It uses the same rules and the `EFFECTS` list of this commit (296 items). The sets of 12 November, evening (129fcd89e) and their logs are in `sets_129fcd89e/`, their values in `ec_results_129fcd89e.json`.
+
+**New search (13 November 2026).** Master commit `8c7b5a5f5` (client 1.60.1.70938, hotfixes of 13 November) adds 46 items, for example Gauntlets of Heroism and The Lion Horn of Stormwind. It also fixes Two-Handed Weapon Specialization for Retribution. Since this round, Judgement of Righteousness and Judgement of Fury are ranged attacks (`../patches/judgement-ranged.patch`, see `../README.md`). Thus, they no longer trigger melee weapon procs. Judgement of Command is a melee attack again since the late hotfix of 13 November. With the sets of 12 November, evening on this commit, and all three judgements ranged (`ec_results_8c7b5a5f5_old_sets.json`), only Retribution changes: −1.5% (837.8 → 825.2).
+
+The pure average stays 888.0, and Retribution is 92.9%. The search ran again for all six specs. Each search starts from the set of 12 November, evening (`sets_129fcd89e/`, `SEED` in main.py). It uses the same rules and the `EFFECTS` list of this commit (308 items). The results below come from commit `8c7b5a5f5`.
 
 ## Rules (the same for each spec)
 
@@ -22,15 +38,38 @@ The item search ran on wowsims Forever, master commit `895cd67f9` (1 November 20
 
 | Spec | No enchants, no consumables | Enchants | Consumables | Both | Average item level | Epic items |
 | --- | --- | --- | --- | --- | --- | --- |
-| Demonology Warlock | 647.3 | 702.8 | 867.0 | 926.0 | 59.9 | 3 |
-| Hunter | 749.2 | 801.0 | 850.8 | 905.4 | 61.0 | 3 |
-| Fire Mage | 654.7 | 705.5 | 845.3 | 898.7 | 58.9 | 3 |
-| Fury Warrior | 648.8 | 724.0 | 788.0 | 870.7 | 59.2 | 3 |
-| Combat Rogue | 588.0 | 630.9 | 695.0 | 742.1 | 59.4 | 3 |
-| Pure average | 657.6 | 712.8 | 809.2 | 868.6 | | |
-| Retribution (live) | 618.5 (94.1%) | 661.8 (92.8%) | 795.8 (98.3%) | 843.5 (97.1%) | 59.3 | 4 |
+| Demonology Warlock | 661.9 | 717.5 | 883.6 | 942.7 | 59.9 | 4 |
+| Hunter | 762.7 | 820.3 | 863.9 | 925.2 | 60.9 | 3 |
+| Fire Mage | 672.6 | 723.6 | 864.3 | 917.8 | 59.9 | 4 |
+| Fury Warrior | 674.2 | 751.7 | 819.3 | 897.2 | 59.4 | 7 |
+| Combat Rogue | 600.3 | 642.7 | 707.0 | 754.1 | 59.5 | 4 |
+| Pure average | 674.3 | 731.1 | 827.6 | 887.4 | | |
+| Retribution (live) | 614.0 (91.1%) | 654.8 (89.6%) | 787.1 (95.1%) | 832.6 (93.8%) | 60.4 | 4 |
 
-Without the Rogue (both): 900.2, Retribution 93.7%. Retribution against Fury (both): 96.9%. wowsims links to each set: `links.md`.
+Without the Rogue (both): 920.7, Retribution 90.4%. Retribution against Fury (both): 92.8%. wowsims links to each set: `links.md`.
+
+- **Commit 8c7b5a5f5 (13 November) against commit 129fcd89e (both).** Retribution −0.6% (837.8 → 832.6), Fury −0.3% (900.3 → 897.2). The other specs do not change. Pure average 888.0 → 887.4, Retribution 94.3% → 93.8%. The ranged Judgement of Righteousness and Judgement of Fury and the Two-Handed Weapon Specialization fix cause the Retribution loss. With all three judgements ranged, Retribution had 825.2 (93.0%).
+- **Set changes (13 November).** Fury: Gauntlets of Heroism (new, in place of Death Grips). Without enchants and consumables, the new set gives +0.5% (670.8 → 674.2). With both, it gives −0.3%. The rules keep the result of the search (see the Fire Mage of 6 November).
+
+  The other five sets do not change. The Retribution search finds no better item with all three judgements ranged. The melee Judgement of Command of the late hotfix of 13 November uses the same set.
+- **Commit 129fcd89e (12 November, evening) against commit 52471a100 (both).** Fury −5.4% (951.7 → 900.3), Combat Rogue −1.8% (768.0 → 754.1), Retribution −1.2% (847.7 → 837.8). Hunter +0.6% (920.1 → 925.2). Fire Mage and Demonology Warlock do not change. Pure average 900.1 → 888.0, Retribution 94.2% → 94.3%.
+
+  The Hand of Justice and Ironfoe change causes the losses. The new sets give back 0.4–2.4%. The Rogue set now has two Devilsaur items, and their 2-piece bonus gives +2% hit.
+- **Set changes (12 November, evening).** Fury: Cloudkeeper Legplates (in place of Warbear Woolies). The set keeps Ironfoe and Hand of Justice. Combat Rogue: Devilsaur Leggings and Blackhand's Breadth (in place of Warbear Woolies and Hand of Justice). Hunter: Blackhand's Breadth (in place of Flamebreak Talisman).
+
+  Retribution: Demonshear (in place of Warblade of Caer Darrow, +0.5% in the search). The Fire Mage and Demonology Warlock sets do not change. Blackhand's Breadth is new in the database.
+- **Commit 52471a100 (12 November) against commit 3633d376a (both).** Fury +0.6% (946.2 → 951.7), Retribution +0.5% (843.5 → 847.7), Fire Mage +0.3% (915.5 → 917.8), Demonology Warlock +0.3% (940.3 → 942.7). Combat Rogue +0.1% (767.0 → 768.0), Hunter +0.0% (919.8 → 920.1). Pure average 897.8 → 900.1, Retribution 94.0% → 94.2%.
+- **Set changes (12 November).** Fury: Death Grips and Highborne Research Tablet (in place of Devilsaur Gauntlets and Cleansed Vilebranch Medallion). Combat Rogue: Highborne Research Tablet (in place of Flamebreak Talisman). Hunter: Highborne Research Tablet (in place of Hand of Justice). Demonology Warlock: Eye of Orgrimmar (in place of Maiden's Circle).
+
+  Retribution: Battleborn Armbraces, Highborne Research Tablet and Warblade of Caer Darrow (in place of Skirmisher's Mail Bracers, Cleansed Vilebranch Medallion and Arcanite Reaper). The Fire Mage set does not change. Of these items, only Warblade of Caer Darrow is new in the database. Highborne Research Tablet now procs from spell hits, thus its value changes.
+- **Commit 3633d376a (11 November) against commit 9f254e8d8 (both).** Fury +8.7% (870.7 → 946.2), Combat Rogue +3.4% (742.1 → 767.0), Fire Mage +1.9% (898.7 → 915.5). Hunter +1.6% (905.4 → 919.8), Demonology Warlock +1.5% (926.0 → 940.3). Retribution does not change (843.5). Pure average 868.6 → 897.8, Retribution 97.1% → 94.0%. All the change comes from the new sets.
+- **Set changes (11 November).** Fury: Ironfoe in the main hand and Flurry Axe in the off hand (+6.2% in the search, without enchants and consumables). Also Mark of Fordring, Truestrike Shoulders, Battleborn Armbraces and Windreaver Greaves. Combat Rogue: Mark of Fordring, Ironfoe and Talon of Tor'Rel. Hunter: Mark of Fordring, Truestrike Shoulders and Windreaver Greaves.
+
+  Fire Mage: Eye of Flame, Burial Shawl, Sublime Wristguards, Omnicast Boots and Witchblade. Demonology Warlock: Eye of Flame, Royal Seal of Eldre'Thalas, Witchblade and Bonecreeper Stylus. All these items are new in the database, except Flurry Axe and Talon of Tor'Rel.
+- **Retribution (11 November).** The search tested 28 two-handed weapons, all proc weapons that wowsims implements among them. No item is better than the set of 9 November. The log has the value of each candidate (`log_Retribution.txt`).
+- **Proc items (`EFFECTS`).** The search keeps a list of candidates for each slot from the stat values. A proc weapon has low stat values, but the sim gives its full value. Before 11 November, the search took only the 8 items with an effect and the best stat values. In the weapon slots, it took 15, and in the trinket slots all items.
+
+  Now, with `EFFECTS=<list>`, it takes all items of the slot with an effect that wowsims implements. The list comes from the sim (`core.HasItemEffect`, `../tank_gear/zzeffects_main.go`): 266 items on commit 3633d376a (`../tank_gear/effects_3633d376a.txt`), 275 on commit 52471a100 (`../tank_gear/effects_52471a100.txt`), 296 on commit 129fcd89e (`../tank_gear/effects_129fcd89e.txt`), 308 on commit 8c7b5a5f5 (`../tank_gear/effects_8c7b5a5f5.txt`). 77 Paladin pool items have an effect that wowsims implements, 23 of them weapons. For example, Flurry Axe and Ironfoe are in the list, but Destiny is not: its proc is not active in wowsims.
 
 - **Commit 9f254e8d8 (9 November) against commit ae9b8c23a (both).** Retribution −9.9% (936.6 → 843.5). Combat Rogue +1.6% (730.4 → 742.1), Fire Mage +1.2% (888.2 → 898.7), Fury +0.8% (863.8 → 870.7), Demonology Warlock +0.5% (921.6 → 926.0), Hunter +0.4% (901.6 → 905.4). Pure average 861.1 → 868.6, Retribution 108.8% → 97.1%.
 - **Two causes (9 November).** With the sets of 8 November on commit 9f254e8d8 (`ec_results_9f254e8d8_old_sets.json`), the Windfury Totem rule gives Retribution −9.9% and Fury −2.6%. The other specs do not change. The pure average is then 856.9, and Retribution 98.4%. The new items give the rest: Fury +3.5%, Combat Rogue +1.4%, Fire Mage +1.2%.
@@ -67,12 +106,12 @@ With the consumables of each wowsims preset as they are, Retribution was 116.3% 
 | dump.patch | Patch to `sim/core/test_suite.go`: with `ZZDUMP=<dir>`, each spec test writes its request as JSON |
 | zzbatch_main.go | Batch runner. Copy to `cmd/zzbatch/main.go`, build with `-tags with_db`. It reads the dumped requests from `/tmp/zzdump` (or from the `dir` of the job) |
 | solo.py | Runs each zzbatch job in its own process: `python3 solo.py jobs.json out.json`. Use it for all final values (see below) |
-| opt.py, main.py | Item pool and search: `python3 main.py <Spec>` (Hunter: `EPFULL=1`, see below) |
+| opt.py, main.py | Item pool and search: `python3 main.py <Spec>` (Hunter: `EPFULL=1`, see below). The run of 13 November: `SEED=sets_129fcd89e/set_<Spec>.json EFFECTS=<zzeffects list> python3 main.py <Spec>` |
 | set_*.json | The final set of each spec (item ids, slot order of wowsims) |
-| log_*.txt | Stat values, slot changes and final DPS of each spec |
+| log_*.txt | Stat values, slot changes and final DPS of each spec. Since 11 November, also the DPS of each candidate (lines `all:`) |
 | enchants.json | Enchant ids by slot for each spec (wowsims presets; Mage and Warlock: Balance Druid caster enchants, 2504 on the weapon) |
 | enchants_consumables.py | Second run: writes `/tmp/zzdump_u` (same elixirs and extras for each spec) and the zzbatch jobs |
-| ec_results.json | DPS of the second run on commit 9f254e8d8 (base, ench, cons, both). `ec_results_ae9b8c23a.json`, `ec_results_df57e2571.json`, `ec_results_9a8624af9.json`, `ec_results_8298ab833.json`, `ec_results_6ee3c30f35.json`, `ec_results_d97252f2a.json` and `ec_results_895cd67f9.json`: the same on the earlier commits |
+| ec_results.json | DPS of the second run on commit 8c7b5a5f5 (base, ench, cons, both). `ec_results_129fcd89e.json`, `ec_results_52471a100.json`, `ec_results_3633d376a.json`, `ec_results_9f254e8d8.json`, `ec_results_ae9b8c23a.json`, `ec_results_df57e2571.json`, `ec_results_9a8624af9.json`, `ec_results_8298ab833.json`, `ec_results_6ee3c30f35.json`, `ec_results_d97252f2a.json` and `ec_results_895cd67f9.json`: the same on the earlier commits |
 | links.md, zzlink_main.go | wowsims links to the final set of each spec, and the script that makes them |
 
 - **One job for each process.** zzbatch runs its jobs in parallel in one process. In a batch of different specs and enchants, some results changed by up to 3%. All values in this folder and in Analysis, Damage come again from `solo.py`, one job for each process. They agree with the batch values.

@@ -1,0 +1,9 @@
+# wowsims Forever master 3633d376a: Fury and Arms, wowsims pre-raid set, full buffs (go/feedback_warrior_dps_test.go). Jobs F of checks_8298ab833.log.
+### F | FEEDBACK_DUR=120 FEEDBACK_SPEC=fury FEEDBACK_GEAR=prebis
+RESULT fury prebis dur=120 dps=804.4
+### F | FEEDBACK_DUR=300 FEEDBACK_SPEC=fury FEEDBACK_GEAR=prebis
+RESULT fury prebis dur=300 dps=796.0
+### F | FEEDBACK_DUR=120 FEEDBACK_SPEC=arms FEEDBACK_GEAR=prebis
+RESULT arms prebis dur=120 dps=779.8
+### F | FEEDBACK_DUR=300 FEEDBACK_SPEC=arms FEEDBACK_GEAR=prebis
+RESULT arms prebis dur=300 dps=774.0

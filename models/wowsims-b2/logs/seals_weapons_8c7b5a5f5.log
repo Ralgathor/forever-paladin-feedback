@@ -1,0 +1,166 @@
+# wowsims Forever master 8c7b5a5f5 (judgement hotfixes: patches/judgement-ranged.patch), Protection Paladin, item pool threat set (tank_gear/set_prot.json) with the main hand (slot 14 of FEEDBACK_ITEMS) replaced by WPN, tank consumables, 3 min, 3,000 iterations. FEEDBACK_APL: default = Seal of Fury, sor = Seal of Righteousness, soc = Seal of Command. WPN: 2243 Hand of Edward the Odd 1.6, 12794 Masterwork Stormhammer 1.6, 871 Flurry Axe 1.5, 13182 Phase Blade 2.1, 18683 Hammer of the Vesper 2.5, 12797 Frostguard 2.8, 6622 Sword of Zeal 2.8, 18048 Mastersmith's Hammer 2.4, 281586 Elderwild Construction Hammer 2.4, 276404 Masterwork Crimson Hammer 2.4, 11684 Ironfoe 2.4.
+### W | WPN=2243 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=default
+TMI avg=50.40 std=6.50
+RESULT dur=180 propose="" tps=1138.9 dps=459.3 dtps=315.5 swings=81.4 hit=6.8% miss=9.5% dodge=15.5% parry=12.4% block=44.0% crit=1.7% crush=10.1%
+### W | WPN=2243 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=sor
+TMI avg=52.73 std=6.72
+RESULT dur=180 propose="" tps=1122.9 dps=453.1 dtps=329.3 swings=81.3 hit=6.8% miss=9.5% dodge=15.4% parry=12.5% block=43.8% crit=1.7% crush=10.4%
+### W | WPN=2243 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=default
+TMI avg=50.42 std=6.49
+RESULT dur=180 propose="" tps=1161.1 dps=468.7 dtps=315.5 swings=81.4 hit=6.8% miss=9.5% dodge=15.5% parry=12.4% block=44.0% crit=1.7% crush=10.1%
+### W | WPN=2243 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=sor
+TMI avg=52.73 std=6.65
+RESULT dur=180 propose="" tps=1144.1 dps=462.1 dtps=329.4 swings=81.3 hit=6.7% miss=9.5% dodge=15.4% parry=12.5% block=43.7% crit=1.7% crush=10.4%
+### W | WPN=2243 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=soc
+TMI avg=53.13 std=6.61
+RESULT dur=180 propose="" tps=1065.3 dps=427.4 dtps=331.5 swings=82.1 hit=6.8% miss=9.4% dodge=15.7% parry=12.5% block=43.9% crit=1.6% crush=10.1%
+### W | WPN=12794 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=default
+TMI avg=50.56 std=6.53
+RESULT dur=180 propose="" tps=1090.5 dps=447.3 dtps=316.4 swings=81.3 hit=6.9% miss=9.5% dodge=15.5% parry=12.4% block=43.9% crit=1.7% crush=10.1%
+### W | WPN=12794 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=sor
+TMI avg=52.82 std=6.68
+RESULT dur=180 propose="" tps=1072.8 dps=440.2 dtps=329.2 swings=81.4 hit=6.8% miss=9.5% dodge=15.5% parry=12.5% block=43.6% crit=1.7% crush=10.3%
+### W | WPN=12794 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=default
+TMI avg=50.53 std=6.54
+RESULT dur=180 propose="" tps=1111.5 dps=456.5 dtps=316.2 swings=81.3 hit=6.9% miss=9.5% dodge=15.5% parry=12.4% block=43.9% crit=1.7% crush=10.1%
+### W | WPN=12794 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=sor
+TMI avg=52.85 std=6.64
+RESULT dur=180 propose="" tps=1092.8 dps=449.1 dtps=329.3 swings=81.3 hit=6.8% miss=9.6% dodge=15.5% parry=12.4% block=43.6% crit=1.7% crush=10.3%
+### W | WPN=12794 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=soc
+TMI avg=53.00 std=6.58
+RESULT dur=180 propose="" tps=1034.4 dps=422.2 dtps=331.3 swings=82.1 hit=6.9% miss=9.5% dodge=15.6% parry=12.5% block=43.7% crit=1.7% crush=10.1%
+### W | WPN=871 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=default
+TMI avg=51.37 std=6.91
+RESULT dur=180 propose="" tps=1124.3 dps=460.2 dtps=320.7 swings=82.5 hit=6.8% miss=9.5% dodge=15.7% parry=12.2% block=43.8% crit=1.7% crush=10.2%
+### W | WPN=871 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=sor
+TMI avg=53.36 std=6.68
+RESULT dur=180 propose="" tps=1099.2 dps=450.1 dtps=332.8 swings=82.5 hit=6.9% miss=9.6% dodge=15.5% parry=12.5% block=43.6% crit=1.7% crush=10.2%
+### W | WPN=871 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=default
+TMI avg=51.30 std=6.90
+RESULT dur=180 propose="" tps=1146.0 dps=469.7 dtps=320.2 swings=82.5 hit=6.8% miss=9.5% dodge=15.7% parry=12.3% block=43.8% crit=1.7% crush=10.2%
+### W | WPN=871 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=sor
+TMI avg=53.41 std=6.67
+RESULT dur=180 propose="" tps=1120.2 dps=459.3 dtps=333.1 swings=82.5 hit=6.9% miss=9.6% dodge=15.5% parry=12.4% block=43.6% crit=1.7% crush=10.2%
+### W | WPN=871 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=soc
+TMI avg=53.84 std=6.79
+RESULT dur=180 propose="" tps=1033.9 dps=420.4 dtps=336.4 swings=83.2 hit=6.9% miss=9.5% dodge=15.6% parry=12.4% block=43.8% crit=1.7% crush=10.2%
+### W | WPN=13182 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=default
+TMI avg=48.29 std=5.82
+RESULT dur=180 propose="" tps=1045.9 dps=430.9 dtps=312.4 swings=80.2 hit=6.8% miss=9.6% dodge=15.6% parry=12.4% block=43.7% crit=1.7% crush=10.2%
+### W | WPN=13182 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=sor
+TMI avg=50.25 std=5.93
+RESULT dur=180 propose="" tps=1056.5 dps=435.1 dtps=324.3 swings=80.1 hit=6.9% miss=9.5% dodge=15.5% parry=12.4% block=43.8% crit=1.7% crush=10.2%
+### W | WPN=13182 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=default
+TMI avg=48.20 std=5.78
+RESULT dur=180 propose="" tps=1064.8 dps=439.2 dtps=311.8 swings=80.2 hit=6.8% miss=9.5% dodge=15.7% parry=12.3% block=43.7% crit=1.7% crush=10.2%
+### W | WPN=13182 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=sor
+TMI avg=50.27 std=5.98
+RESULT dur=180 propose="" tps=1074.6 dps=443.1 dtps=323.9 swings=80.1 hit=6.9% miss=9.6% dodge=15.6% parry=12.3% block=43.7% crit=1.7% crush=10.3%
+### W | WPN=13182 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=soc
+TMI avg=50.57 std=5.91
+RESULT dur=180 propose="" tps=1042.0 dps=426.9 dtps=327.6 swings=80.9 hit=6.9% miss=9.4% dodge=15.6% parry=12.4% block=43.9% crit=1.7% crush=10.2%
+### W | WPN=18683 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=default
+TMI avg=47.56 std=5.66
+RESULT dur=180 propose="" tps=1036.0 dps=430.6 dtps=308.2 swings=79.1 hit=6.9% miss=9.6% dodge=15.5% parry=12.4% block=43.7% crit=1.7% crush=10.2%
+### W | WPN=18683 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=sor
+TMI avg=49.39 std=5.76
+RESULT dur=180 propose="" tps=1056.1 dps=438.6 dtps=319.5 swings=79.1 hit=6.9% miss=9.5% dodge=15.7% parry=12.4% block=43.7% crit=1.7% crush=10.3%
+### W | WPN=18683 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=default
+TMI avg=47.55 std=5.71
+RESULT dur=180 propose="" tps=1051.1 dps=437.5 dtps=308.0 swings=79.1 hit=7.0% miss=9.6% dodge=15.6% parry=12.4% block=43.6% crit=1.7% crush=10.2%
+### W | WPN=18683 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=sor
+TMI avg=49.32 std=5.73
+RESULT dur=180 propose="" tps=1073.0 dps=446.1 dtps=319.4 swings=79.1 hit=7.0% miss=9.4% dodge=15.7% parry=12.4% block=43.6% crit=1.7% crush=10.3%
+### W | WPN=18683 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=soc
+TMI avg=49.77 std=5.99
+RESULT dur=180 propose="" tps=1061.4 dps=438.2 dtps=321.4 swings=79.6 hit=6.9% miss=9.5% dodge=15.6% parry=12.4% block=43.6% crit=1.7% crush=10.2%
+### W | WPN=12797 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=default
+TMI avg=48.79 std=6.01
+RESULT dur=180 propose="" tps=1027.4 dps=428.7 dtps=306.9 swings=78.5 hit=6.9% miss=9.5% dodge=15.6% parry=12.4% block=43.7% crit=1.7% crush=10.2%
+### W | WPN=12797 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=sor
+TMI avg=50.31 std=6.03
+RESULT dur=180 propose="" tps=1055.0 dps=439.6 dtps=316.7 swings=78.4 hit=6.8% miss=9.5% dodge=15.6% parry=12.5% block=43.7% crit=1.7% crush=10.3%
+### W | WPN=12797 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=default
+TMI avg=48.85 std=6.10
+RESULT dur=180 propose="" tps=1040.7 dps=435.0 dtps=307.0 swings=78.5 hit=7.0% miss=9.5% dodge=15.6% parry=12.4% block=43.6% crit=1.7% crush=10.2%
+### W | WPN=12797 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=sor
+TMI avg=50.37 std=5.98
+RESULT dur=180 propose="" tps=1069.2 dps=446.2 dtps=317.3 swings=78.4 hit=6.9% miss=9.6% dodge=15.6% parry=12.4% block=43.5% crit=1.7% crush=10.4%
+### W | WPN=12797 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=soc
+TMI avg=50.82 std=5.83
+RESULT dur=180 propose="" tps=1074.9 dps=444.9 dtps=320.0 swings=79.2 hit=6.9% miss=9.6% dodge=15.7% parry=12.4% block=43.5% crit=1.7% crush=10.2%
+### W | WPN=6622 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=default
+TMI avg=48.55 std=5.88
+RESULT dur=180 propose="" tps=1031.6 dps=431.4 dtps=307.0 swings=79.1 hit=6.8% miss=9.6% dodge=15.7% parry=12.2% block=43.8% crit=1.7% crush=10.2%
+### W | WPN=6622 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=sor
+TMI avg=50.05 std=5.87
+RESULT dur=180 propose="" tps=1059.7 dps=442.5 dtps=316.8 swings=79.0 hit=6.8% miss=9.6% dodge=15.6% parry=12.4% block=43.6% crit=1.7% crush=10.3%
+### W | WPN=6622 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=default
+TMI avg=48.54 std=5.87
+RESULT dur=180 propose="" tps=1045.5 dps=437.9 dtps=306.8 swings=79.1 hit=7.0% miss=9.6% dodge=15.6% parry=12.3% block=43.7% crit=1.7% crush=10.2%
+### W | WPN=6622 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=sor
+TMI avg=50.13 std=5.89
+RESULT dur=180 propose="" tps=1074.0 dps=449.1 dtps=317.3 swings=79.1 hit=6.9% miss=9.6% dodge=15.6% parry=12.4% block=43.4% crit=1.7% crush=10.4%
+### W | WPN=6622 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=soc
+TMI avg=50.62 std=5.88
+RESULT dur=180 propose="" tps=1080.5 dps=448.2 dtps=320.2 swings=79.7 hit=6.9% miss=9.6% dodge=15.6% parry=12.4% block=43.7% crit=1.7% crush=10.1%
+### W | WPN=18048 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=default
+TMI avg=47.33 std=5.73
+RESULT dur=180 propose="" tps=1061.3 dps=432.8 dtps=305.0 swings=78.9 hit=6.8% miss=9.6% dodge=15.7% parry=12.5% block=43.6% crit=1.7% crush=10.2%
+### W | WPN=18048 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=sor
+TMI avg=49.44 std=5.81
+RESULT dur=180 propose="" tps=1082.0 dps=441.2 dtps=318.3 swings=78.9 hit=6.9% miss=9.5% dodge=15.6% parry=12.5% block=43.7% crit=1.7% crush=10.1%
+### W | WPN=18048 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=default
+TMI avg=47.24 std=5.65
+RESULT dur=180 propose="" tps=1078.4 dps=440.1 dtps=305.0 swings=78.9 hit=6.9% miss=9.6% dodge=15.6% parry=12.4% block=43.6% crit=1.7% crush=10.2%
+### W | WPN=18048 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=sor
+TMI avg=49.50 std=5.76
+RESULT dur=180 propose="" tps=1099.4 dps=448.7 dtps=318.8 swings=78.9 hit=6.9% miss=9.4% dodge=15.6% parry=12.5% block=43.7% crit=1.7% crush=10.2%
+### W | WPN=18048 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=soc
+TMI avg=49.71 std=5.90
+RESULT dur=180 propose="" tps=1066.9 dps=432.3 dtps=320.7 swings=79.3 hit=6.8% miss=9.6% dodge=15.5% parry=12.3% block=43.8% crit=1.7% crush=10.2%
+### W | WPN=281586 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=default
+TMI avg=47.74 std=5.85
+RESULT dur=180 propose="" tps=1058.0 dps=431.6 dtps=305.9 swings=78.9 hit=6.8% miss=9.6% dodge=15.6% parry=12.4% block=43.8% crit=1.7% crush=10.2%
+### W | WPN=281586 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=sor
+TMI avg=49.65 std=5.72
+RESULT dur=180 propose="" tps=1077.2 dps=439.2 dtps=318.6 swings=78.9 hit=6.8% miss=9.6% dodge=15.6% parry=12.4% block=43.8% crit=1.7% crush=10.2%
+### W | WPN=281586 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=default
+TMI avg=47.72 std=5.86
+RESULT dur=180 propose="" tps=1076.7 dps=439.7 dtps=305.8 swings=78.9 hit=6.8% miss=9.6% dodge=15.6% parry=12.4% block=43.8% crit=1.7% crush=10.2%
+### W | WPN=281586 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=sor
+TMI avg=49.66 std=5.69
+RESULT dur=180 propose="" tps=1096.8 dps=447.6 dtps=319.0 swings=78.9 hit=6.8% miss=9.5% dodge=15.6% parry=12.4% block=43.8% crit=1.7% crush=10.2%
+### W | WPN=281586 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=soc
+TMI avg=49.94 std=5.67
+RESULT dur=180 propose="" tps=1062.8 dps=430.8 dtps=321.1 swings=79.2 hit=6.8% miss=9.6% dodge=15.5% parry=12.3% block=43.9% crit=1.7% crush=10.2%
+### W | WPN=276404 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=default
+TMI avg=47.60 std=5.82
+RESULT dur=180 propose="" tps=1039.0 dps=424.5 dtps=306.3 swings=78.9 hit=6.8% miss=9.6% dodge=15.6% parry=12.4% block=43.8% crit=1.7% crush=10.2%
+### W | WPN=276404 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=sor
+TMI avg=49.44 std=5.68
+RESULT dur=180 propose="" tps=1058.3 dps=432.1 dtps=318.6 swings=78.9 hit=6.8% miss=9.6% dodge=15.6% parry=12.4% block=43.8% crit=1.7% crush=10.2%
+### W | WPN=276404 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=default
+TMI avg=47.53 std=5.83
+RESULT dur=180 propose="" tps=1054.9 dps=431.4 dtps=305.9 swings=78.9 hit=6.9% miss=9.6% dodge=15.6% parry=12.4% block=43.6% crit=1.7% crush=10.2%
+### W | WPN=276404 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=sor
+TMI avg=49.43 std=5.64
+RESULT dur=180 propose="" tps=1075.4 dps=439.4 dtps=318.9 swings=78.9 hit=6.9% miss=9.5% dodge=15.6% parry=12.4% block=43.7% crit=1.7% crush=10.2%
+### W | WPN=276404 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=soc
+TMI avg=49.73 std=5.68
+RESULT dur=180 propose="" tps=1045.4 dps=424.3 dtps=321.2 swings=79.2 hit=6.8% miss=9.5% dodge=15.5% parry=12.3% block=43.9% crit=1.7% crush=10.3%
+### W | WPN=11684 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=default
+TMI avg=48.83 std=6.03
+RESULT dur=180 propose="" tps=1062.2 dps=444.5 dtps=307.6 swings=79.1 hit=6.8% miss=9.6% dodge=15.6% parry=12.4% block=43.7% crit=1.7% crush=10.2%
+### W | WPN=11684 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=sor
+TMI avg=50.73 std=5.88
+RESULT dur=180 propose="" tps=1081.7 dps=452.4 dtps=319.2 swings=79.1 hit=6.8% miss=9.5% dodge=15.5% parry=12.4% block=43.7% crit=1.7% crush=10.2%
+### W | WPN=11684 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=default
+TMI avg=48.82 std=6.01
+RESULT dur=180 propose="" tps=1079.9 dps=452.4 dtps=307.4 swings=79.1 hit=6.9% miss=9.6% dodge=15.6% parry=12.4% block=43.7% crit=1.7% crush=10.2%
+### W | WPN=11684 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=sor
+TMI avg=50.80 std=5.89
+RESULT dur=180 propose="" tps=1101.2 dps=461.2 dtps=319.7 swings=79.1 hit=6.9% miss=9.5% dodge=15.5% parry=12.4% block=43.8% crit=1.7% crush=10.2%
+### W | WPN=11684 FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=soc
+TMI avg=50.96 std=6.18
+RESULT dur=180 propose="" tps=1088.5 dps=454.0 dtps=320.7 swings=79.5 hit=6.9% miss=9.5% dodge=15.6% parry=12.4% block=43.8% crit=1.7% crush=10.2%

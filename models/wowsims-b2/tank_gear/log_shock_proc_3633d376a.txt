@@ -1,0 +1,17 @@
+DEFAULT {"tps": 676.2088969259652, "dps": 820.6177288652015, "dtps": 7.219821484924619, "tmi": 0}
+OUT OF POOL [(10, 'Blessed Band of Light'), (11, "Channeler's Ring"), (12, 'Jewel of the Guard Captain'), (13, 'Adaptive Combat Assistant'), (16, 'Libram of Law')]
+PROC 0 Magister's Crown 1.004 [('Helm of Fire', 0.9861), ("Admiral's Hat", 0.9783), ('Clever Hat', 0.9824)]
+PROC 1 Archlight Talisman 1.004 [('Eidolon Talisman', 0.994)]
+PROC 2 Lightforge Spaulders 1.004 [('Stoneform Shoulders', 0.9749)]
+PROC 3 Hide of the Wild 1.004 [('Cloak of Fire', 0.9944), ('Bristlecone Cloak', 0.9928)]
+PROC 4 Vest of Elements 1.004 [('Truesilver Breastplate', 0.9852), ('Dragonscale Breastplate', 0.9852), ('Demon Forged Breastplate', 0.9852)]
+PROC 5 Lightforge Bracers 1.004 [('Magically Sealed Bracers', 0.9867)]
+PROC 6 Gauntlets of Elements 1.004 [('Gauntlets of the Sea', 0.9998), ('Fiery Plate Gauntlets', 0.9909), ('Storm Gauntlets', 1.0126), ('Razor Gauntlets', 0.9896), ('Force Imbued Gauntlets', 0.989)]
+PROC SLOT 6 Gauntlets of Elements -> Storm Gauntlets
+PROC 7 Lightforge Belt 1.0126 [('Girdle of Reprisal', 0.9884), ("Omokk's Girth Restrainer", 0.9963), ('Girdle of Extracted Answers', 0.9884)]
+PROC 14 Shin Blade 1.0126 [('Darkspear', 0.9637), ('Doombringer', 0.9818), ('The Needler', 1.0164), ('Thunderstrike', 0.9899)]
+PROC SLOT 14 Shin Blade -> The Needler
+FINAL default {"tps": 676.2227617865564, "dps": 820.6027336631377, "dtps": 7.257533212220107, "tmi": 0}
+FINAL pool {"tps": 687.0720939273156, "dps": 833.7683077510552, "dtps": 7.406960874805774, "tmi": 0}
+SET [16686, 15856, 16729, 18510, 16666, 16722, 12632, 16723, 16687, 16682, 275968, 275969, 11815, 13213, 13060, 0, 228175]
+SETNAMES Magister's Crown ; Archlight Talisman ; Lightforge Spaulders ; Hide of the Wild ; Vest of Elements ; Lightforge Bracers ; Storm Gauntlets ; Lightforge Belt ; Magister's Leggings ; Magister's Boots ; Initiate's Signet of Ferocity ; Initiate's Signet of Brilliance ; Hand of Justice ; Smolderweb's Eye ; The Needler ; - ; Libram of Holy Alacrity

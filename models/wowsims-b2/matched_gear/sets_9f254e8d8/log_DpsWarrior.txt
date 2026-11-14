@@ -1,0 +1,9 @@
+EP {0: 0.56, 1: 0.522, 3: 0.0, 5: 0.0, 7: 0.0, 11: 0.0, 14: 0.255, 15: 0.0, 17: 0.807, 18: 0.712, 19: 0.408, 20: 0.087, 13: 0.0} {0: 2.880362558064314, 1: 0.7745926202289866, 2: 0.0}
+cands {0: 21, 1: 17, 2: 15, 3: 20, 4: 21, 5: 15, 6: 20, 7: 17, 8: 16, 9: 22, 10: 20, 11: 20, 12: 68, 13: 68, 14: 30, 15: 37, 16: 34}
+start 636.1
+  pass0 slot14: Bagh Nakh -> Sword of Zeal 636.1->643.8
+  pass1 slot9: Scalegut Treaders -> Bloodmail Boots 643.8->646.3
+  pass1 slot16: Skypierce Javelin -> Satyr's Bow 646.3->649.6
+FINAL DpsWarrior 648.8 +- 0.5
+SET Lionheart Helm(61) ; Sentimental Locket(54) ; Hermit's Pauldron(61) ; Cape of the Black Baron(63) ; Timbermaw Tunic(61) ; Warpwood Bracers(57) ; Devilsaur Gauntlets(58) ; Valiant's Waistguard(60) ; Warbear Woolies(57) ; Bloodmail Boots(61) ; Initiate's Signet of Ferocity(63) ; Magni's Will(60) ; Hand of Justice(58) ; Cleansed Vilebranch Medallion(51) ; Sword of Zeal(63) ; Mirah's Song(61) ; Satyr's Bow(58)
+ILVL 59.2 epics 3
