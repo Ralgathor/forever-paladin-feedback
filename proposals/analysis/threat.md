@@ -251,6 +251,28 @@ The values below come from master commit 8c7b5a5f5 (13 November 2026, client 1.6
 - **The Seal of Command build has more threat with Seal of Fury** (+1.9% against the live build, 1,161 against 1,139). It also has more than BS2 (1,154, Builds). Conviction and Sanctified Judgement give more than Divine Strength and Holy Conduit. A new talent search is due.
 - **Files.** `models/wowsims-b2/apl/sor.apl.siml` and `soc.apl.siml` (flag `FEEDBACK_APL`), log `logs/seals_8c7b5a5f5.log`.
 
+**Seals and weapon speed (same settings, main hand replaced).** Threat each sec. The percent is the difference against Seal of Fury with the same weapon and build.
+
+| Main hand | Speed | Live: Fury | Live: Righteousness | SoC build: Fury | SoC build: Righteousness | SoC build: Command |
+| --- | --- | --- | --- | --- | --- | --- |
+| Flurry Axe | 1.5 | 1,124 | 1,099 (−2.2%) | 1,146 | 1,120 (−2.3%) | 1,034 (−9.8%) |
+| Hand of Edward the Odd (set, +90 spell damage) | 1.6 | 1,139 | 1,123 (−1.4%) | 1,161 | 1,144 (−1.5%) | 1,065 (−8.3%) |
+| Masterwork Stormhammer | 1.6 | 1,091 | 1,073 (−1.6%) | 1,112 | 1,093 (−1.7%) | 1,034 (−6.9%) |
+| Phase Blade | 2.1 | 1,046 | 1,057 (+1.0%) | 1,065 | 1,075 (+0.9%) | 1,042 (−2.1%) |
+| Ironfoe | 2.4 | 1,062 | 1,082 (+1.8%) | 1,080 | 1,101 (+2.0%) | 1,089 (+0.8%) |
+| Mastersmith's Hammer (+68 spell damage) | 2.4 | 1,061 | 1,082 (+2.0%) | 1,078 | 1,099 (+1.9%) | 1,067 (−1.1%) |
+| Elderwild Construction Hammer (+68 spell damage) | 2.4 | 1,058 | 1,077 (+1.8%) | 1,077 | 1,097 (+1.9%) | 1,063 (−1.3%) |
+| Masterwork Crimson Hammer | 2.4 | 1,039 | 1,058 (+1.9%) | 1,055 | 1,075 (+1.9%) | 1,045 (−0.9%) |
+| Hammer of the Vesper | 2.5 | 1,036 | 1,056 (+1.9%) | 1,051 | 1,073 (+2.1%) | 1,061 (+1.0%) |
+| Frostguard | 2.8 | 1,027 | 1,055 (+2.7%) | 1,041 | 1,069 (+2.7%) | 1,075 (+3.3%) |
+| Sword of Zeal | 2.8 | 1,032 | 1,060 (+2.7%) | 1,046 | 1,074 (+2.7%) | 1,081 (+3.3%) |
+
+- **Seal of Righteousness and Seal of Command increase with a slow weapon.** With a 2.8 sec weapon, Seal of Righteousness gives +2.7% and Seal of Command +3.3% against Seal of Fury. With a 1.5–1.6 sec weapon, Seal of Righteousness gives −1.4 to −2.3%, and Seal of Command −7 to −10%.
+- **The change point is at approximately 2 sec for Seal of Righteousness and 2.4 sec for Seal of Command.** Above this speed, the Seal is better than Seal of Fury with the same weapon.
+- **The weapon is more important than the Seal.** Hand of Edward the Odd with Seal of Fury stays the best (1,161 in the Seal of Command build). The best slow weapon with its best Seal (Sword of Zeal, Seal of Command) gives 1,081, 7% less. Hand of Edward the Odd has +90 spell damage, and the Holy spells give most of the tank threat.
+- **A fast weapon increases the damage taken.** With Hand of Edward the Odd, the boss swings 81.4 times in 3 min, against 79 with a 2.4–2.8 sec weapon. The damage taken is 3% more (316 against 305–308).
+- **Log.** `logs/seals_weapons_8c7b5a5f5.log`.
+
 ## 7. Groups of enemies
 
 This part compares the tanks against 3 and 5 enemies.
