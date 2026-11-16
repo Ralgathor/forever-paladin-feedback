@@ -46,6 +46,8 @@ First, the sets of 13 November ran on this commit: `logs/checks_6084403a9_pool_o
 
 The damage, tank and Shockadin searches then ran again (`matched_gear/README.md`, `tank_gear/README.md`). All checks and builds ran again with the new sets: `logs/checks_6084403a9_pool.log`, `logs/checks_6084403a9_pool_surv.log`, `logs/checks_6084403a9_warrior_dps.log`, `logs/finals.log`, `logs/finals_surv.log` and `logs/finals_shock.log`. The logs of 13 November (8c7b5a5f5) have the commit in the file name (`finals_8c7b5a5f5.log` and the others).
 
+On 16 November 2026, an open item search (`tank_gear/search_open.py`) changed all six tank sets on the same commit (`tank_gear/README.md`). The live Paladin has 1,180 threat each sec (+2.5%) and takes 5% less damage. The Warrior has 1,838 (+9.6%), and the Druid 2,454 (+0.6%). The tank checks and the Protection builds ran again. The runs with the first sets of 15 November have `_6084403a9_first` in the file name. `logs/threat_sources_6084403a9.log` gives the threat and the damage of each ability for the three tanks (`FEEDBACK_SRC=1`; the test files now also print the damage).
+
 The folders: `patches/` (the wowsims patches), `go/` (the sim flags and the test files), `apl/` (the rotations), `logs/` (the run logs). The logs of commit 6ee3c30f35 are `checks_6ee3c30f35.log` and `finals.log` (the same values as on commit d97252f2a). `checks_d97252f2a.log` has the runs of 3 November. `finals_895cd67f9.log` has the runs of commit 895cd67f9. The scripts stay in this folder.
 
 | File | What it does |

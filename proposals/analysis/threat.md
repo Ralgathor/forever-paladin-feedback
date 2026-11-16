@@ -234,6 +234,15 @@ Thus, the open search gives the Warrior more threat than the Paladin. With all k
 
   Maul, Primal Bite and the melee hits do not change. Lacerate now gives 41% of the Druid threat (was 15%). Log: `logs/druid_threat_by_ability_52471a100.log`.
 - **wowsims applies its rules correctly.** Each ability has the threat for each point of damage that its rule gives: melee hits 2.15 (Bear Form +115%), Maul 3.76 (×1.75), Primal Bite 6.45 (×3), Lacerate hit and ticks 7.17 (×10/3). Our runs give the same values as the wowsims runs. The only open point is the Lacerate rule at level 60.
+- **Bonus threat of the abilities (16 November).** Each tank has a base multiplier: Warrior ×2.16, Druid ×2.15, Paladin ×1.33 (Holy damage ×2.53). Some abilities add threat above damage × this multiplier. The stance or form multiplier also applies to this bonus threat. Log: `logs/threat_sources_6084403a9.log`.
+
+  | Tank | Threat each sec | Damage × multiplier | Bonus threat | Largest bonus |
+  | --- | --- | --- | --- | --- |
+  | Warrior | 1,838 | about 1,250 | about 535 (29%) | Revenge 367, Heroic Strike 97, Shield Slam 71 |
+  | Druid | 2,454 | about 1,050 | about 1,300 (53%) | Lacerate ticks 424, Primal Bite 322, Maul 309, Lacerate hit 243 |
+  | Paladin, live | 1,180 | about 1,050 | about 76 (6%) | Holy Shield 40 (×1.2), Holy Strike 36 (Iron Creed) |
+
+  Without the bonus threat, the live Paladin has about 91% of the Warrior and 103% of the Druid. Thus, the bonus threat of the abilities causes most of the gap, and the raise of 2 November multiplies it. Most Druid bonus values come from player data or from the wowsims Lacerate rule. A test at level 60 must confirm them. The game files give Judgement of Fury a third effect (1,691 + 18% of spell power) that wowsims does not use (Open items). If it is bonus threat, it adds about 200 TPS to the Paladin.
 - **If the Lacerate rule is different at level 60 (commit 52471a100).** wowsims notes that rank 5 in Dire Bear Form fits 10/3 only in part. With ×2 in place of ×10/3, the Druid has 1,929 threat each sec (117% of the Warrior). With no Lacerate bonus, it has 1,649 (100%). The live Paladin then has 59% and 69% of the Druid. With C25 and C-P1, it has 89% and 104%.
 - **The Druid values before 12 November.** wowsims master 9a8624af9 gives Bear Form +115% and Maul ×1.75, Swipe ×1.75 and Primal Bite ×3. Master 9f254e8d8 decreases the Druid threat by 10% (118% → 105% of the Warrior). Master 3633d376a gives the Warrior Shield Slam flat threat (105% → 101%). Hand of Justice in the Warrior set gives 99%. The earlier runs gave Bear Form only, and the Druid had 77% of the Warrior.
 - **The consumables give the Paladin +10% threat and −11% damage taken.** Without them (Demonic Rune only), the live Paladin had 1,029 TPS and 384 damage taken each sec (set of 4 November).

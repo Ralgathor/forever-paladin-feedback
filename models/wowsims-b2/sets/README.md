@@ -1,15 +1,15 @@
-# wowsims links of the tank and builds sets (15 November 2026)
+# wowsims links of the tank and builds sets (16 November 2026)
 
 The `sets/` pages at the root of the repository open these sets in wowsims Forever: https://ralgathor.github.io/forever-paladin-feedback/sets/
 
 | Page | Sim | Check on commit 6084403a9 |
 | --- | --- | --- |
-| tank-pool-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_prot.json | 1,150.8 threat per sec |
-| tank-pool-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_war.json | 1,677.5 threat per sec |
-| tank-pool-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_bear.json | 2,439.0 threat per sec |
-| tank-surv-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_prot_surv.json | 1,102.4 threat per sec |
-| tank-surv-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_war_surv.json | 1,590.2 threat per sec |
-| tank-surv-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_bear_surv.json | 2,319.2 threat per sec |
+| tank-pool-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_prot.json | 1,179.7 threat per sec |
+| tank-pool-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_war.json | 1,838.0 threat per sec |
+| tank-pool-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_bear.json | 2,453.8 threat per sec |
+| tank-surv-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_prot_surv.json | 1,078.8 threat per sec |
+| tank-surv-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_war_surv.json | 1,540.5 threat per sec |
+| tank-surv-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_bear_surv.json | 2,232.4 threat per sec |
 | tank-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180` | 1,054.2 threat per sec |
 | tank-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180` | 1,716.8 threat per sec |
 | tank-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180` | 2,679.7 threat per sec |
@@ -31,5 +31,7 @@ On 12 November 2026, the searches on master commit 52471a100 changed both Warrio
 The Warrior loses 3.0% threat and the Druid 1.1%. On 13 November 2026, master commit 8c7b5a5f5 adds 46 items, and the runs use the ranged judgements. The searches on this commit changed four sets: the Paladin threat and survival sets, the Warrior threat set and the Druid survival set. All four have The Lion Horn of Stormwind. All links come again from commit 8c7b5a5f5 with the same steps.
 
 On 15 November 2026, master commit 6084403a9 adds 98 items and changes the Warrior and Druid presets, the rage rules and Windfury Totem. The searches on this commit changed three sets: both Warrior sets and the Druid threat set (`../tank_gear/README.md`). The Retribution set takes Counterattack Lodestone. Some other links change because the wowsims presets changed (for example the default Warrior and Druid sets).
+
+On 16 November 2026, an open item search on the same commit (`../tank_gear/search_open.py`) changed all six item pool tank sets. The six tank pool links come again from commit 6084403a9 with the same steps. The other links do not change.
 
 The links have the live talents and no proposal. Since commit 9a8624af9, wowsims gives the Warrior and the Druid the threat multipliers of the hotfixes of 4 November (Defensive Stance +80%, Defiance 20%, Bear Form +115%). The Paladin links have the tank consumables of `feedbackConsumables` (`../go/feedback_prot_test.go`).

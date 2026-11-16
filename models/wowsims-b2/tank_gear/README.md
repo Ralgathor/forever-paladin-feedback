@@ -101,6 +101,27 @@ The search then ran again for all tank sets and the Shockadin set, with the slot
 
 The other sets stay: the Paladin threat set (+0.16%), the Shockadin set (+0.22%), the Paladin survival set and the Druid survival set (less than 0.5%). The search logs of 13 November have the commit in the file name (`log_*_8c7b5a5f5.txt`).
 
+**Open search (16 November 2026).** The slot search of `search_tank.py` changes one slot at a time from the default set, and keeps a new item only if the score is 0.5% better. Thus, it can stop at a set that is not the best. `search_open.py` searches again from the current sets on the same commit (6084403a9):
+
+- Each slot tries the 12 pool items with the best tank stat sum, all pool items with an implemented effect and, for the Paladin, all pool items with spell damage and Defense.
+- It makes up to 3 passes over the 17 slots. A new item must improve the score by more than 0.2% at 1,000 iterations. The final set runs with 3,000 iterations.
+- It also requires item level 45 or higher. No item of item level 31 to 44 with an effect improved a set in a test run.
+
+Usage: `[TANK_SCORE=survival SUF=_surv] python3 search_open.py <prot|war|bear> <dump> pool`. All six tank sets change. The search logs of the first sets of 15 November are `log_*_6084403a9_first.txt`.
+
+| Set | Score (old → new) | New items | Threat / damage taken / TMI (old set) |
+| --- | --- | --- | --- |
+| Paladin, threat | 1.0032 → 1.0422 | Shifting Cloak, Soulforge Chestguards, Warder's Wristguards, Warder's Waistguard, Initiate's Signet of Vigilance, Myrmidon's Signet, Flamebreak Talisman | 1,179.7 / 300.2 / 46.9 (1,150.8 / 316.6 / 50.5) |
+| Warrior, threat | 1.0394 → 1.1107 | Lightforge Spaulders, Stoneskin Gargoyle Cape, Breastplate of Heroism, Gargantuan Wristguards, Handguards of Heroism, Valiant's Waistguard, Legplates of Valor, Myrmidon's Signet, Royal Seal of Eldre'Thalas, The Lion Horn of Stormwind (other slot), Ironfoe | 1,838.0 / 293.6 / 37.3 (1,677.5 / 295.7 / 38.2) |
+| Druid, threat | 0.9775 → 0.9886 | Horn of Ve'han, Death's Clutch, Cloak of Warding | 2,453.8 / 346.8 / 36.7 (2,439.0 / 354.5 / 37.1) |
+| Paladin, survival | 1.0043 → 1.0405 | Enriched Thorium Helm, Shifting Cloak, Soulforge Chestguards, Vigorsteel Vambraces, Warder's Waistguard, Enriched Thorium Leggings | 1,078.8 / 293.9 / 39.1 (1,102.4 / 302.1 / 43.9) |
+| Warrior, survival | 1.0915 → 1.2068 | 11 items, for example Faceguard of Heroism, Spaulders of Valor, Handguards of Heroism and Krol Blade (`log_war_surv.txt`) | 1,540.5 / 254.6 / 29.5 (1,590.2 / 282.0 / 36.2) |
+| Druid, survival | 1.0274 → 1.0619 | Cloak of Warding, Songbird Blouse, Dinosaur Hide Belt, Feralheart Treads | 2,232.4 / 331.3 / 31.4 (2,319.2 / 336.6 / 35.3) |
+
+- The Warrior threat set gains 9.6% threat, the Paladin threat set 2.5% and the Druid threat set 0.6%. Thus, the live Paladin goes from 69% to 64% of the Warrior threat.
+- The Paladin threat set takes 5% less damage. Soulforge Chestguards and the Warder's pieces give Defense and dodge.
+- All checks and builds ran again with the new sets: `../logs/checks_6084403a9_pool.log`, `../logs/checks_6084403a9_pool_surv.log`, `../logs/finals.log` and `../logs/finals_surv.log`. The runs with the first sets of 15 November have `_6084403a9_first` in the file name.
+
 ## Method
 
 1. Dump the request of each tank test with `FEEDBACK_DUMP` (feedback_prot_test.go, feedback_warrior_test.go, feedback_bear_test.go, `FEEDBACK_DUR=180`).
@@ -124,16 +145,17 @@ The other sets stay: the Paladin threat set (+0.16%), the Shockadin set (+0.22%)
 | Protection Warrior | Phantasmal Cloak → Shifting Cloak, Cloudkeeper Legplates → Wraithplate Leggings, Blackstone Ring → Ring of Saviors, Skullflame Shield → Intricately Runed Shield, Deep Jungle Rifle → Eaglehorn Long Bow |
 | Bear Druid | Warbear Woolies → Warstrife Leggings, Feralheart Treads → Warden's Leather Boots, Counterattack Lodestone → Glimmering Mithril Insignia, Glimmering Mithril Insignia → The Lion Horn of Stormwind |
 
-| Tank (master 6084403a9) | Threat set: threat / damage taken / TMI | Survival set: threat / damage taken / TMI |
+| Tank (master 6084403a9, sets of 16 November) | Threat set: threat / damage taken / TMI | Survival set: threat / damage taken / TMI |
 | --- | --- | --- |
-| Protection Paladin, live | 1,150.8 / 316.6 / 50.5 | 1,102.4 / 302.1 / 44.0 |
-| Protection Warrior | 1,677.5 / 295.7 / 38 | 1,590.2 / 282.0 / 36 |
-| Bear Druid | 2,439.0 / 354.5 / 37.1 | 2,319.2 / 336.6 / 35.3 |
+| Protection Paladin, live | 1,179.7 / 300.2 / 46.9 | 1,078.8 / 293.9 / 39.1 |
+| Protection Warrior | 1,838.0 / 293.6 / 37 | 1,540.5 / 254.6 / 30 |
+| Bear Druid | 2,453.8 / 346.8 / 36.7 | 2,232.4 / 331.3 / 31.4 |
 
 The sets of 4 November were searched on master 8298ab833, with the Paladin without consumables. The search of 8 November ran on master ae9b8c23a. The search of 9 November ran on master 9f254e8d8. The searches of 11, 12, 13 and 15 November ran on masters 3633d376a, 52471a100, 129fcd89e, 8c7b5a5f5 and 6084403a9. The earlier values (threat set and survival set, threat / damage taken / TMI) are:
 
 | Master (sets) | Paladin, live | Warrior | Druid |
 | --- | --- | --- | --- |
+| 6084403a9 (sets of 15 November) | 1,150.8 / 316.6 / 50.5 and 1,102.4 / 302.1 / 44.0 | 1,677.5 / 295.7 / 38 and 1,590.2 / 282.0 / 36 | 2,439.0 / 354.5 / 37.1 and 2,319.2 / 336.6 / 35.3 |
 | 8c7b5a5f5 (sets of 13 November) | 1,138.9 / 315.5 / 50.4 and 1,089.7 / 300.2 / 43.6 | 1,525.0 / 269.1 / 38 and 1,385.9 / 250.9 / 39 | 2,276.8 / 358.6 / 37.9 and 2,162.9 / 334.2 / 35.1 |
 | 129fcd89e (sets of 12 November, evening) | 1,133.4 / 336.1 / 51.0 and 1,082.3 / 323.4 / 45.7 | 1,600.6 / 295.1 / 44 and 1,385.9 / 250.9 / 39 | 2,276.8 / 358.6 / 37.9 and 2,192.6 / 346.7 / 35.9 |
 | 52471a100 (sets of 12 November) | 1,133.4 / 336.1 / 51.0 and 1,082.3 / 323.4 / 45.7 | 1,650.2 / 297.0 / 45 and 1,452.4 / 253.7 / 40 | 2,302.2 / 359.4 / 38.1 and 2,192.6 / 346.7 / 35.9 |
