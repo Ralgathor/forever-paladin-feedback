@@ -1,4 +1,6 @@
-# Pure damage specs with the same item pool (2 November 2026, new searches on 6, 8, 9, 11, 12, 13 and 15 November, two on 12 November)
+# Pure damage specs with the same item pool (2 November 2026, with later searches)
+
+New searches ran on 6, 8, 9, 11, 12, 13 and 15 November, two of them on 12 November.
 
 This run gives the pure average of Analysis, Damage (parts 1, 3 and 7).
 
@@ -52,7 +54,7 @@ The pure average is 905.3 (+2.0%), and Retribution 97.5%. The search ran again f
 
 Without the Rogue (both): 943.6, Retribution 93.7%. Retribution against Fury (both): 90.5%. wowsims links to each set: `links.md`.
 
-- **Commit 6084403a9 (15 November) against commit 8c7b5a5f5 (both).** Fury +8.8% (897.2 → 976.6), Retribution +6.2% (832.6 → 884.0), Combat Rogue +2.9% (754.1 → 776.1), Hunter +0.8% (925.2 → 932.2), Fire Mage +0.6% (917.8 → 923.1). The Demonology Warlock does not change. Pure average 887.4 → 910.1, Retribution 93.8% → 97.1%. The Seal procs from the Windfury Totem strike cause the Retribution gain. The Windfury Totem on each main-hand ability causes most of the Fury gain. The Hunter set does not change: its gain comes from the commit (+0.8%).
+- **Commit 6084403a9 (15 November) against commit 8c7b5a5f5 (both).** Fury +8.8% (897.2 → 976.6), Retribution +6.2% (832.6 → 884.0) and Combat Rogue +2.9% (754.1 → 776.1). Hunter +0.8% (925.2 → 932.2) and Fire Mage +0.6% (917.8 → 923.1). The Demonology Warlock does not change. Pure average 887.4 → 910.1, Retribution 93.8% → 97.1%. The Seal procs from the Windfury Totem strike cause the Retribution gain. The Windfury Totem on each main-hand ability causes most of the Fury gain. The Hunter set does not change: its gain comes from the commit (+0.8%).
 - **Set changes (15 November).** Retribution: Counterattack Lodestone (in place of Hand of Justice). Fury: Battleboots of Heroism, Blackhand's Breadth, Counterattack Lodestone and Sword of Zeal (in place of Windreaver Greaves, Hand of Justice, Highborne Research Tablet and Ironfoe). Combat Rogue: Darkmantle Footpads (new) and Counterattack Lodestone (in place of Blackhand's Breadth). Fire Mage: Sorcerer's Crown and Sorcerer's Sandals (new, in place of Eye of Flame and Omnicast Boots). The Hunter and Demonology Warlock sets do not change.
 - **Commit 8c7b5a5f5 (13 November) against commit 129fcd89e (both).** Retribution −0.6% (837.8 → 832.6), Fury −0.3% (900.3 → 897.2). The other specs do not change. Pure average 888.0 → 887.4, Retribution 94.3% → 93.8%. The ranged Judgement of Righteousness and Judgement of Fury and the Two-Handed Weapon Specialization fix cause the Retribution loss. With all three judgements ranged, Retribution had 825.2 (93.0%).
 - **Set changes (13 November).** Fury: Gauntlets of Heroism (new, in place of Death Grips). Without enchants and consumables, the new set gives +0.5% (670.8 → 674.2). With both, it gives −0.3%. The rules keep the result of the search (see the Fire Mage of 6 November).

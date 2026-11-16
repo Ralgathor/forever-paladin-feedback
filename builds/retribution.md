@@ -75,7 +75,7 @@ Each stat + a small amount (20 Strength, Agility or Intellect, 40 spell damage o
 - **Spell damage is 0.8 Strength.** Seals, Judgements, Holy Strike and Consecration use spell damage.
 - **Haste rating has more value since commit 6084403a9.** Haste rating is 1.4 Strength (13 November: 1.0; all three judgements ranged: 0.7; 129fcd89e: 0.9; 52471a100: 1.3; 11 November: 1.8). More swings give more Windfury Totem strikes, and each Windfury strike now procs the Seal. Since commit 9f254e8d8, Windfury Totem procs from auto attacks, not from Holy Strike.
 - **Hit rating has little value in this set.** It is 0.1 Strength (13 November: 0.6; all three ranged: 0.2; 52471a100: 0.4; 11 November: 1.0). The value changes much from one commit and set to the next. The cause of this change is not known.
-- **At fresh 60, mana limits the damage.** Intellect is 1.3 Strength (13 November: 1.2; 129fcd89e: 1.6) and Expertise rating 1.5 Strength. Hit rating has little value (0.1 Strength), and Haste rating is 0.3 Strength (13 November: 0.4; all three judgements ranged: 0.7; 52471a100: 0.9; 11 November: −0.27). The fresh 60 weights change much from one set to the next. With the wowsims default set, Haste rating was 2.3 Strength.
+- **At fresh 60, mana limits the damage.** Intellect is 1.3 Strength (13 November: 1.2; 129fcd89e: 1.6) and Expertise rating 1.5 Strength. Hit rating has little value (0.1 Strength). Haste rating is 0.3 Strength (13 November: 0.4; all three judgements ranged: 0.7; 52471a100: 0.9; 11 November: −0.27). The fresh 60 weights change much from one set to the next. With the wowsims default set, Haste rating was 2.3 Strength.
 
 ## 4. Limits
 

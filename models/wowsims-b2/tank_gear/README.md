@@ -101,9 +101,9 @@ The search then ran again for all tank sets and the Shockadin set, with the slot
 
 The other sets stay: the Paladin threat set (+0.16%), the Shockadin set (+0.22%), the Paladin survival set and the Druid survival set (less than 0.5%). The search logs of 13 November have the commit in the file name (`log_*_8c7b5a5f5.txt`).
 
-**Open search (16 November 2026).** The slot search of `search_tank.py` changes one slot at a time from the default set, and keeps a new item only if the score is 0.5% better. Thus, it can stop at a set that is not the best. `search_open.py` searches again from the current sets on the same commit (6084403a9):
+**Open search (16 November 2026).** The slot search of `search_tank.py` changes one slot at a time from the default set. It keeps a new item only if the score is 0.5% better. Thus, it can stop at a set that is not the best. `search_open.py` searches again from the current sets on the same commit (6084403a9):
 
-- Each slot tries the 12 pool items with the best tank stat sum, all pool items with an implemented effect and, for the Paladin, all pool items with spell damage and Defense.
+- Each slot tries the 12 pool items with the best tank stat sum and all pool items with an implemented effect. For the Paladin, it also tries all pool items with spell damage and Defense.
 - It makes up to 3 passes over the 17 slots. A new item must improve the score by more than 0.2% at 1,000 iterations. The final set runs with 3,000 iterations.
 - It also requires item level 45 or higher. No item of item level 31 to 44 with an effect improved a set in a test run.
 
@@ -131,13 +131,22 @@ Usage: `[TANK_SCORE=survival SUF=_surv] python3 search_open.py <prot|war|bear> <
    After the slot search, the proc pass tests all pool items with an implemented effect in each other slot. `START=<set file>` runs only the proc pass, from that set. Each candidate runs in the full set, 1,000 iterations. The search keeps the candidate with the best score, slot by slot. The score is 40% threat, 20% damage, 20% damage taken and 20% TMI, each against the default set.
 
    No item is used two times. The enchants do not change. An item of the default set keeps its random suffix (for example Hyperion Helm of the Warrior). The final set runs with 3,000 iterations.
-4. Run `./run_pool.sh <wowsims clone>`. It runs all tank jobs of `../logs/checks_8298ab833.log` again with the new sets (`FEEDBACK_ITEMS`), on master commit 6084403a9 (Go 1.27). The output is `../logs/checks_6084403a9_pool.log` (13 November, master commit 8c7b5a5f5: `../logs/checks_8c7b5a5f5_pool.log`; 12 November, evening, master commit 129fcd89e: `../logs/checks_129fcd89e_pool.log`; 12 November, master commit 52471a100: `../logs/checks_52471a100_pool.log`; 11 November, master commit 3633d376a: `../logs/checks_3633d376a_pool.log`; 9 November, master commit 9f254e8d8: `../logs/checks_9f254e8d8_pool.log`; 4 November, master commit 9a8624af9: `../logs/checks_9a8624af9_pool.log`). The Paladin has the tank consumables of `feedbackConsumables` (`../go/feedback_prot_test.go`).
+4. Run `./run_pool.sh <wowsims clone>`. It runs all tank jobs of `../logs/checks_8298ab833.log` again with the new sets (`FEEDBACK_ITEMS`), on master commit 6084403a9 (Go 1.27). The output is `../logs/checks_6084403a9_pool.log`. Earlier outputs:
+
+   - 13 November, master commit 8c7b5a5f5: `../logs/checks_8c7b5a5f5_pool.log`
+   - 12 November, evening, master commit 129fcd89e: `../logs/checks_129fcd89e_pool.log`
+   - 12 November, master commit 52471a100: `../logs/checks_52471a100_pool.log`
+   - 11 November, master commit 3633d376a: `../logs/checks_3633d376a_pool.log`
+   - 9 November, master commit 9f254e8d8: `../logs/checks_9f254e8d8_pool.log`
+   - 4 November, master commit 9a8624af9: `../logs/checks_9a8624af9_pool.log`
+
+   The Paladin has the tank consumables of `feedbackConsumables` (`../go/feedback_prot_test.go`).
 
 `set_*.json` has the 17 item ids of each set. `log_*.txt` has the search output.
 
 ## Survival sets
 
-`TANK_SCORE=survival python3 search_tank.py <prot|war|bear> <dump>` uses the same method with a survival score: 40% threat, 30% damage taken and 30% TMI, each against the default set. The dump must have the default set (no `FEEDBACK_ITEMS`). The sets are `set_*_surv.json`, the search output `log_*_surv.txt`. `./run_pool.sh <wowsims clone> surv` runs all tank jobs with these sets: `../logs/checks_6084403a9_pool_surv.log`. `TANK_SET=surv python3 ../finals.py <codes>` runs the Protection builds with the Paladin survival set: `../logs/finals_surv.log`.
+`TANK_SCORE=survival python3 search_tank.py <prot|war|bear> <dump>` uses the same method with a survival score. The score is 40% threat, 30% damage taken and 30% TMI, each against the default set. The dump must have the default set (no `FEEDBACK_ITEMS`). The sets are `set_*_surv.json`, the search output `log_*_surv.txt`. `./run_pool.sh <wowsims clone> surv` runs all tank jobs with these sets: `../logs/checks_6084403a9_pool_surv.log`. `TANK_SET=surv python3 ../finals.py <codes>` runs the Protection builds with the Paladin survival set: `../logs/finals_surv.log`.
 
 | Tank | Items that differ from the threat set (threat set → survival set) |
 | --- | --- |

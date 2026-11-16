@@ -642,7 +642,7 @@ C25a (+80%) gives 96–98% of the Warrior on one boss in the late raids in the m
 
 **Kept proposals (values from wowsims)**
 
-- Redoubt (C-P1): block 44.0% → 58.7% (item pool set of 13 November, commit 6084403a9; commit 8c7b5a5f5: 44.0% → 58.8%; set of 11 November, commit 3633d376a: 41.2% → 60.7%; on commit 9f254e8d8, with the Argent Defender error: 55.0% → 61.9%; set of 4 November: 42.3% → 61.6%). The model multiplies the Holy Shield blocks by 1.46 and the Reckoning attacks by 1.29.
+- Redoubt (C-P1): block 44.0% → 58.7% (item pool set of 13 November, commit 6084403a9). Earlier values: commit 8c7b5a5f5 44.0% → 58.8%; set of 11 November, commit 3633d376a 41.2% → 60.7%. On commit 9f254e8d8, with the Argent Defender error: 55.0% → 61.9%. Set of 4 November: 42.3% → 61.6%. The model multiplies the Holy Shield blocks by 1.46 and the Reckoning attacks by 1.29.
 - Reckoning (C-P12), withdrawn: extra attacks ×1.48.
 - Holy Strike Seal trigger (C1), withdrawn: each Holy Strike that lands also triggers Seal of Fury.
 
