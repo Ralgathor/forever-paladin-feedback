@@ -208,7 +208,7 @@ With the sets of 13 November on this commit, the live Paladin gains 1.0% threat 
 
 Three sets change. The Warrior threat set takes Chestguard of Heroism, Force Imbued Gauntlets, Scarlet Kris and ten other items (+4.0% score). It has 6.9% more threat (1,569 → 1,678) and takes 3.0% more damage. The Warrior survival set (+6.7%) and the Druid threat set (+1.2%) also change. The Paladin sets, the Druid survival set and the Shockadin set stay: their searches gave less than 0.5%.
 
-On 16 November, the open search ran for all six tank sets on the same commit (`tank_gear/search_open.py`). The first search changed only the slots with an item outside the pool. Thus, it did not try good pool items in the other slots, for example Soulforge Chestguards for the Paladin and the Heroism items for the Warrior. All six sets change:
+On 16 November, the open search ran for all six tank sets on the same commit (`tank_gear/search_open.py`). The first search changed only the slots with an item outside the pool. Thus, it did not try good pool items in the other slots. Examples are Soulforge Chestguards for the Paladin and the Heroism items for the Warrior. All six sets change:
 
 - **Paladin threat set:** Soulforge Chestguards, Warder's Wristguards, Warder's Waistguard, Shifting Cloak, Initiate's Signet of Vigilance, Myrmidon's Signet and Flamebreak Talisman. It has 2.5% more threat (1,151 → 1,180) and takes 5% less damage (317 → 300).
 - **Warrior threat set:** Lightforge Spaulders, Stoneskin Gargoyle Cape, Breastplate and Handguards of Heroism, Legplates of Valor, Valiant's Waistguard, Ironfoe, Royal Seal of Eldre'Thalas and three other items. It has 9.6% more threat (1,678 → 1,838).
@@ -352,7 +352,7 @@ This part compares the tanks against 3 and 5 enemies.
 - **The proposed Paladin has about the Warrior and the Druid totals.** On 3 targets: 2,449 (102% of the Warrior, 99% of the Druid). On 5 targets: 2,842 (102% of the Warrior, 105% of the Druid). The open search sets of 16 November give the Warrior 18% more total threat on 3 targets (2,034 → 2,391), mostly on the second target.
 - **Redoubt changes almost nothing on groups:** less than 1%. On extra targets, all Holy Shield charges are already used in the live version. The gain comes from Righteous Fury (C25).
 - **The fifth enemy has less Paladin threat** because Consecration gives its full damage to 4 enemies only.
-- **The Warrior** holds only 2 targets well: Cleave hits 2 targets. **The Druid** holds only 3: Swipe hits 3 targets. Since 15 November, the Druid puts more threat on the second and third targets (277–280 → 477–486 on 3 targets), and less on the main target.
+- **The Warrior** holds only 2 targets well: Cleave hits 2 targets. **The Druid** holds only 3: Swipe hits 3 targets. Since 15 November, the Druid puts more threat on the second and third targets, and less on the main target. On 3 targets, the other targets go from 277–280 to 477–486.
 
 **Model result.** The model gives a larger Paladin lead. The live Paladin has 115–149% of the stronger of the two other tanks on all targets. The proposed Paladin has 165–214%. The model lead is too large. In the model, trash hits for only 1/3 of a boss hit, thus the Warrior and the Druid receive little rage.
 

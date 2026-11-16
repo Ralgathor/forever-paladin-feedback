@@ -6,7 +6,7 @@
 
 - **The problem.** In the live version, a raid boss hits the Paladin with a crushing blow on 10.1% of its swings (part 3). A crushing blow does 150% damage. The Warrior takes crushing blows on only 1.1% of the swings.
 - **The fix.** With Redoubt (C-P1), each Holy Shield cast also starts Redoubt. The two block buffs are then active together. Crushing blows decrease to 1.1%, the Warrior level (1.1%).
-- **The tank takes 11% less damage** with C-P1. The tanks have the item pool tank sets and the same tank consumables. The Paladin then takes 9% less damage than the Warrior (268 against 294 each sec), and its TMI is about the same (38.0 against 37). With the survival sets of 16 November, the Warrior takes less damage: the Paladin takes 3% more (263 against 255), and its TMI is a little higher (32.3 against 30).
+- **The tank takes 11% less damage** with C-P1. The tanks have the item pool tank sets and the same tank consumables. The Paladin then takes 9% less damage than the Warrior (268 against 294 each sec), and its TMI is about the same (38.0 against 37). With the survival sets of 16 November, the Warrior takes less damage. The Paladin then takes 3% more (263 against 255), and its TMI is a little higher (32.3 against 30).
 - **Keep Redoubt at 6–30% block.** With the open search set of 16 November, 4–20% gives the same crushing blows on a normal boss (1.1%). But the boss has more critical hits (1.6% against 0.2%), and the Paladin takes 3% more damage (281 against 273 each sec, without Toughness). Fast bosses and bosses with two weapons give about 2% more damage taken.
 - **Fast bosses and bosses with two weapons** give both tanks more crushing blows. With C-P1, the Paladin is 0.1–0.6 points below the Warrior. At 4–20%, it is 0.4–0.8 points below.
 
