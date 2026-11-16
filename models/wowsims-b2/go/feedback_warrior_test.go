@@ -85,13 +85,14 @@ func TestFeedbackRun(t *testing.T) {
 	}
 	if os.Getenv("FEEDBACK_SRC") != "" {
 		for _, a := range res.RaidMetrics.Parties[0].Players[0].Actions {
-			thr, casts := 0.0, 0.0
+			thr, casts, dmg := 0.0, 0.0, 0.0
 			for _, tm := range a.Targets {
 				thr += tm.Threat
 				casts += float64(tm.Casts)
+				dmg += tm.Damage
 			}
 			if thr != 0 {
-				fmt.Printf("SRC %v threat=%.1f casts=%.2f\n", a.Id, thr/float64(rsr.SimOptions.Iterations), casts/float64(rsr.SimOptions.Iterations))
+				fmt.Printf("SRC %v threat=%.1f casts=%.2f damage=%.1f\n", a.Id, thr/float64(rsr.SimOptions.Iterations), casts/float64(rsr.SimOptions.Iterations), dmg/float64(rsr.SimOptions.Iterations))
 			}
 		}
 	}

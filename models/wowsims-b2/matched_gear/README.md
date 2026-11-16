@@ -1,4 +1,6 @@
-# Pure damage specs with the same item pool (2 November 2026, new searches on 6, 8, 9, 11 and 12 November, two on 12 November)
+# Pure damage specs with the same item pool (2 November 2026, with later searches)
+
+New searches ran on 6, 8, 9, 11, 12, 13 and 15 November, two of them on 12 November.
 
 This run gives the pure average of Analysis, Damage (parts 1, 3 and 7).
 
@@ -24,7 +26,11 @@ The pure average is 882.7 (−1.9%), and Retribution 94.3%. The search ran again
 
 **New search (13 November 2026).** Master commit `8c7b5a5f5` (client 1.60.1.70938, hotfixes of 13 November) adds 46 items, for example Gauntlets of Heroism and The Lion Horn of Stormwind. It also fixes Two-Handed Weapon Specialization for Retribution. Since this round, Judgement of Righteousness and Judgement of Fury are ranged attacks (`../patches/judgement-ranged.patch`, see `../README.md`). Thus, they no longer trigger melee weapon procs. Judgement of Command is a melee attack again since the late hotfix of 13 November. With the sets of 12 November, evening on this commit, and all three judgements ranged (`ec_results_8c7b5a5f5_old_sets.json`), only Retribution changes: −1.5% (837.8 → 825.2).
 
-The pure average stays 888.0, and Retribution is 92.9%. The search ran again for all six specs. Each search starts from the set of 12 November, evening (`sets_129fcd89e/`, `SEED` in main.py). It uses the same rules and the `EFFECTS` list of this commit (308 items). The results below come from commit `8c7b5a5f5`.
+The pure average stays 888.0, and Retribution is 92.9%. The search ran again for all six specs. Each search starts from the set of 12 November, evening (`sets_129fcd89e/`, `SEED` in main.py). It uses the same rules and the `EFFECTS` list of this commit (308 items). The sets of 13 November and their logs are in `sets_8c7b5a5f5/`, their values in `ec_results_8c7b5a5f5.json`.
+
+**New search (15 November 2026).** Master commit `6084403a9` (hotfixes of 15 November) adds 98 items, for example Sorcerer's Crown and Darkmantle Footpads. wowsims now makes Judgement of Righteousness and Judgement of Fury ranged attacks itself, thus `../patches/judgement-ranged.patch` is not necessary. The Seals of Command, Fury and Righteousness now proc from the Windfury Totem strike, and the Windfury Totem rolls on each main-hand melee ability. With the sets of 13 November on this commit (`ec_results_6084403a9_old_sets.json`), Fury gains 7.6%, Retribution 6.0% and Combat Rogue 1.9%. The casters do not change.
+
+The pure average is 905.3 (+2.0%), and Retribution 97.5%. The search ran again for all six specs. Each search starts from the set of 13 November (`sets_8c7b5a5f5/`, `SEED` in main.py). It uses the same rules and the `EFFECTS` list of this commit (316 items). The results below come from commit `6084403a9`.
 
 ## Rules (the same for each spec)
 
@@ -38,16 +44,18 @@ The pure average stays 888.0, and Retribution is 92.9%. The search ran again for
 
 | Spec | No enchants, no consumables | Enchants | Consumables | Both | Average item level | Epic items |
 | --- | --- | --- | --- | --- | --- | --- |
+| Fury Warrior | 741.9 | 825.9 | 889.6 | 976.6 | 60.2 | 7 |
 | Demonology Warlock | 661.9 | 717.5 | 883.6 | 942.7 | 59.9 | 4 |
-| Hunter | 762.7 | 820.3 | 863.9 | 925.2 | 60.9 | 3 |
-| Fire Mage | 672.6 | 723.6 | 864.3 | 917.8 | 59.9 | 4 |
-| Fury Warrior | 674.2 | 751.7 | 819.3 | 897.2 | 59.4 | 7 |
-| Combat Rogue | 600.3 | 642.7 | 707.0 | 754.1 | 59.5 | 4 |
-| Pure average | 674.3 | 731.1 | 827.6 | 887.4 | | |
-| Retribution (live) | 614.0 (91.1%) | 654.8 (89.6%) | 787.1 (95.1%) | 832.6 (93.8%) | 60.4 | 4 |
+| Hunter | 769.3 | 827.0 | 870.7 | 932.2 | 60.9 | 3 |
+| Fire Mage | 679.4 | 731.5 | 868.7 | 923.1 | 60.2 | 5 |
+| Combat Rogue | 620.3 | 663.6 | 728.1 | 776.1 | 59.4 | 5 |
+| Pure average | 694.6 | 753.1 | 848.1 | 910.1 | | |
+| Retribution (live) | 658.4 (94.8%) | 701.9 (93.2%) | 835.9 (98.6%) | 884.0 (97.1%) | 60.7 | 4 |
 
-Without the Rogue (both): 920.7, Retribution 90.4%. Retribution against Fury (both): 92.8%. wowsims links to each set: `links.md`.
+Without the Rogue (both): 943.6, Retribution 93.7%. Retribution against Fury (both): 90.5%. wowsims links to each set: `links.md`.
 
+- **Commit 6084403a9 (15 November) against commit 8c7b5a5f5 (both).** Fury +8.8% (897.2 → 976.6), Retribution +6.2% (832.6 → 884.0) and Combat Rogue +2.9% (754.1 → 776.1). Hunter +0.8% (925.2 → 932.2) and Fire Mage +0.6% (917.8 → 923.1). The Demonology Warlock does not change. Pure average 887.4 → 910.1, Retribution 93.8% → 97.1%. The Seal procs from the Windfury Totem strike cause the Retribution gain. The Windfury Totem on each main-hand ability causes most of the Fury gain. The Hunter set does not change: its gain comes from the commit (+0.8%).
+- **Set changes (15 November).** Retribution: Counterattack Lodestone (in place of Hand of Justice). Fury: Battleboots of Heroism, Blackhand's Breadth, Counterattack Lodestone and Sword of Zeal (in place of Windreaver Greaves, Hand of Justice, Highborne Research Tablet and Ironfoe). Combat Rogue: Darkmantle Footpads (new) and Counterattack Lodestone (in place of Blackhand's Breadth). Fire Mage: Sorcerer's Crown and Sorcerer's Sandals (new, in place of Eye of Flame and Omnicast Boots). The Hunter and Demonology Warlock sets do not change.
 - **Commit 8c7b5a5f5 (13 November) against commit 129fcd89e (both).** Retribution −0.6% (837.8 → 832.6), Fury −0.3% (900.3 → 897.2). The other specs do not change. Pure average 888.0 → 887.4, Retribution 94.3% → 93.8%. The ranged Judgement of Righteousness and Judgement of Fury and the Two-Handed Weapon Specialization fix cause the Retribution loss. With all three judgements ranged, Retribution had 825.2 (93.0%).
 - **Set changes (13 November).** Fury: Gauntlets of Heroism (new, in place of Death Grips). Without enchants and consumables, the new set gives +0.5% (670.8 → 674.2). With both, it gives −0.3%. The rules keep the result of the search (see the Fire Mage of 6 November).
 
@@ -106,12 +114,12 @@ With the consumables of each wowsims preset as they are, Retribution was 116.3% 
 | dump.patch | Patch to `sim/core/test_suite.go`: with `ZZDUMP=<dir>`, each spec test writes its request as JSON |
 | zzbatch_main.go | Batch runner. Copy to `cmd/zzbatch/main.go`, build with `-tags with_db`. It reads the dumped requests from `/tmp/zzdump` (or from the `dir` of the job) |
 | solo.py | Runs each zzbatch job in its own process: `python3 solo.py jobs.json out.json`. Use it for all final values (see below) |
-| opt.py, main.py | Item pool and search: `python3 main.py <Spec>` (Hunter: `EPFULL=1`, see below). The run of 13 November: `SEED=sets_129fcd89e/set_<Spec>.json EFFECTS=<zzeffects list> python3 main.py <Spec>` |
+| opt.py, main.py | Item pool and search: `python3 main.py <Spec>` (Hunter: `EPFULL=1`, see below). The run of 15 November: `SEED=sets_8c7b5a5f5/set_<Spec>.json EFFECTS=<zzeffects list> python3 main.py <Spec>` |
 | set_*.json | The final set of each spec (item ids, slot order of wowsims) |
 | log_*.txt | Stat values, slot changes and final DPS of each spec. Since 11 November, also the DPS of each candidate (lines `all:`) |
 | enchants.json | Enchant ids by slot for each spec (wowsims presets; Mage and Warlock: Balance Druid caster enchants, 2504 on the weapon) |
 | enchants_consumables.py | Second run: writes `/tmp/zzdump_u` (same elixirs and extras for each spec) and the zzbatch jobs |
-| ec_results.json | DPS of the second run on commit 8c7b5a5f5 (base, ench, cons, both). `ec_results_129fcd89e.json`, `ec_results_52471a100.json`, `ec_results_3633d376a.json`, `ec_results_9f254e8d8.json`, `ec_results_ae9b8c23a.json`, `ec_results_df57e2571.json`, `ec_results_9a8624af9.json`, `ec_results_8298ab833.json`, `ec_results_6ee3c30f35.json`, `ec_results_d97252f2a.json` and `ec_results_895cd67f9.json`: the same on the earlier commits |
+| ec_results.json | DPS of the second run on commit 6084403a9 (base, ench, cons, both). `ec_results_8c7b5a5f5.json`, `ec_results_129fcd89e.json`, `ec_results_52471a100.json`, `ec_results_3633d376a.json`, `ec_results_9f254e8d8.json`, `ec_results_ae9b8c23a.json`, `ec_results_df57e2571.json`, `ec_results_9a8624af9.json`, `ec_results_8298ab833.json`, `ec_results_6ee3c30f35.json`, `ec_results_d97252f2a.json` and `ec_results_895cd67f9.json`: the same on the earlier commits |
 | links.md, zzlink_main.go | wowsims links to the final set of each spec, and the script that makes them |
 
 - **One job for each process.** zzbatch runs its jobs in parallel in one process. In a batch of different specs and enchants, some results changed by up to 3%. All values in this folder and in Analysis, Damage come again from `solo.py`, one job for each process. They agree with the batch values.

@@ -85,39 +85,87 @@ The search then ran again for all tank sets and the Shockadin set, with the slot
 
 The other sets stay: the Druid threat set (+0.46%), the Shockadin set (+0.32%) and the Warrior survival set (−0.46%). The search logs of 12 November, evening have the commit in the file name (`log_*_129fcd89e.txt`).
 
+**New search (15 November 2026).** Master commit `6084403a9` (hotfixes of 15 November) adds 98 items, for example the Soulforge and Heroism items of dungeon set 0.5. It also changes tank rules:
+
+- Spell damage, periodic damage and special attacks give a Warrior or a Druid two times the rage of a melee swing.
+- Shield Slam and Cleave have new flat threat values. Damage shields reflect no damage on a full block.
+- wowsims now makes Judgement of Righteousness and Judgement of Fury ranged attacks itself. Thus, `../patches/judgement-ranged.patch` is not necessary.
+
+First, the sets of 13 November ran on this commit (`../logs/checks_6084403a9_pool_old_sets.log`, `../logs/checks_6084403a9_pool_surv_old_sets.log`). The live Paladin has 1,150.8 threat each sec (was 1,138.9, +1.0%) and takes 316.6 damage each sec (was 315.5). The Warrior threat set has 1,569.2 (was 1,525.0, +2.9%), and the Druid threat set 2,428.3 (was 2,276.8, +6.7%). The Shockadin set has 819.0 DPS (was 815.5, +0.4%).
+
+The search then ran again for all tank sets and the Shockadin set, with the slot search and the proc pass in one run. The list of items with an implemented effect has 316 items on this commit (`effects_6084403a9.txt`). A new set replaces the old set only if its score is more than 0.5% better at 3,000 iterations. Three sets change:
+
+- Warrior threat set: +3.97% score. New items: Lionheart Helm, Phantasmal Cloak, Chestguard of Heroism, Sentinel's Wristguards, Force Imbued Gauntlets and Sentinel's Waistguard. Also Cloudkeeper Legplates, Furbolg Berserker's Boots, Blackstone Ring, Naglering, Volunteer's Lucky Seal, Scarlet Kris and Deep Jungle Rifle. 1,677.5 threat each sec, 295.7 damage taken each sec and TMI 38.2 (old set: 1,569.2, 287.2 and 40.2). The set gives 6.9% more threat and 3.0% more damage taken.
+- Warrior survival set: +6.7% score. The same new items as the threat set, with Shifting Cloak, Wraithplate Leggings, Ring of Saviors, Intricately Runed Shield and Eaglehorn Long Bow. 1,590.2, 282.0 and 36.2 (old set: 1,426.3, 269.4 and 41).
+- Druid threat set: +1.21% score. Feralheart Grips, Feralheart Treads, Ring of Protection and Counterattack Lodestone. 2,439.0, 354.5 and 37.1 (old set: 2,428.3, 360.9 and 38.1).
+
+The other sets stay: the Paladin threat set (+0.16%), the Shockadin set (+0.22%), the Paladin survival set and the Druid survival set (less than 0.5%). The search logs of 13 November have the commit in the file name (`log_*_8c7b5a5f5.txt`).
+
+**Open search (16 November 2026).** The slot search of `search_tank.py` changes one slot at a time from the default set. It keeps a new item only if the score is 0.5% better. Thus, it can stop at a set that is not the best. `search_open.py` searches again from the current sets on the same commit (6084403a9):
+
+- Each slot tries the 12 pool items with the best tank stat sum and all pool items with an implemented effect. For the Paladin, it also tries all pool items with spell damage and Defense.
+- It makes up to 3 passes over the 17 slots. A new item must improve the score by more than 0.2% at 1,000 iterations. The final set runs with 3,000 iterations.
+- It also requires item level 45 or higher. No item of item level 31 to 44 with an effect improved a set in a test run.
+
+Usage: `[TANK_SCORE=survival SUF=_surv] python3 search_open.py <prot|war|bear> <dump> pool`. All six tank sets change. The search logs of the first sets of 15 November are `log_*_6084403a9_first.txt`.
+
+| Set | Score (old → new) | New items | Threat / damage taken / TMI (old set) |
+| --- | --- | --- | --- |
+| Paladin, threat | 1.0032 → 1.0422 | Shifting Cloak, Soulforge Chestguards, Warder's Wristguards, Warder's Waistguard, Initiate's Signet of Vigilance, Myrmidon's Signet, Flamebreak Talisman | 1,179.7 / 300.2 / 46.9 (1,150.8 / 316.6 / 50.5) |
+| Warrior, threat | 1.0394 → 1.1107 | Lightforge Spaulders, Stoneskin Gargoyle Cape, Breastplate of Heroism, Gargantuan Wristguards, Handguards of Heroism, Valiant's Waistguard, Legplates of Valor, Myrmidon's Signet, Royal Seal of Eldre'Thalas, The Lion Horn of Stormwind (other slot), Ironfoe | 1,838.0 / 293.6 / 37.3 (1,677.5 / 295.7 / 38.2) |
+| Druid, threat | 0.9775 → 0.9886 | Horn of Ve'han, Death's Clutch, Cloak of Warding | 2,453.8 / 346.8 / 36.7 (2,439.0 / 354.5 / 37.1) |
+| Paladin, survival | 1.0043 → 1.0405 | Enriched Thorium Helm, Shifting Cloak, Soulforge Chestguards, Vigorsteel Vambraces, Warder's Waistguard, Enriched Thorium Leggings | 1,078.8 / 293.9 / 39.1 (1,102.4 / 302.1 / 43.9) |
+| Warrior, survival | 1.0915 → 1.2068 | 11 items, for example Faceguard of Heroism, Spaulders of Valor, Handguards of Heroism and Krol Blade (`log_war_surv.txt`) | 1,540.5 / 254.6 / 29.5 (1,590.2 / 282.0 / 36.2) |
+| Druid, survival | 1.0274 → 1.0619 | Cloak of Warding, Songbird Blouse, Dinosaur Hide Belt, Feralheart Treads | 2,232.4 / 331.3 / 31.4 (2,319.2 / 336.6 / 35.3) |
+
+- The Warrior threat set gains 9.6% threat, the Paladin threat set 2.5% and the Druid threat set 0.6%. Thus, the live Paladin goes from 69% to 64% of the Warrior threat.
+- The Paladin threat set takes 5% less damage. Soulforge Chestguards and the Warder's pieces give Defense and dodge.
+- All checks and builds ran again with the new sets: `../logs/checks_6084403a9_pool.log`, `../logs/checks_6084403a9_pool_surv.log`, `../logs/finals.log` and `../logs/finals_surv.log`. The runs with the first sets of 15 November have `_6084403a9_first` in the file name.
+
 ## Method
 
 1. Dump the request of each tank test with `FEEDBACK_DUMP` (feedback_prot_test.go, feedback_warrior_test.go, feedback_bear_test.go, `FEEDBACK_DUR=180`).
 2. Copy `zztank_main.go` to `cmd/zztank/main.go` in the wowsims clone and build it: `go build -tags with_db -o /tmp/zztank ./cmd/zztank`.
-3. Run `EFFECTS=effects_8c7b5a5f5.txt python3 search_tank.py <prot|war|bear|shock> <dump>`. For each item that is not in the pool, it takes the 12 pool items of the same slot with the best tank stat sum. It also takes all pool items of the slot with an effect that wowsims implements (`EFFECTS`, since 11 November). Make the list with `zzeffects_main.go` (copy to `cmd/zzeffects/main.go`, `go run -tags with_db ./cmd/zzeffects > effects.txt`).
+3. Run `EFFECTS=effects_6084403a9.txt python3 search_tank.py <prot|war|bear|shock> <dump>`. For each item that is not in the pool, it takes the 12 pool items of the same slot with the best tank stat sum. It also takes all pool items of the slot with an effect that wowsims implements (`EFFECTS`, since 11 November). Make the list with `zzeffects_main.go` (copy to `cmd/zzeffects/main.go`, `go run -tags with_db ./cmd/zzeffects > effects.txt`).
 
    After the slot search, the proc pass tests all pool items with an implemented effect in each other slot. `START=<set file>` runs only the proc pass, from that set. Each candidate runs in the full set, 1,000 iterations. The search keeps the candidate with the best score, slot by slot. The score is 40% threat, 20% damage, 20% damage taken and 20% TMI, each against the default set.
 
    No item is used two times. The enchants do not change. An item of the default set keeps its random suffix (for example Hyperion Helm of the Warrior). The final set runs with 3,000 iterations.
-4. Run `./run_pool.sh <wowsims clone>`. It runs all tank jobs of `../logs/checks_8298ab833.log` again with the new sets (`FEEDBACK_ITEMS`), on master commit 8c7b5a5f5 (Go 1.27). The output is `../logs/checks_8c7b5a5f5_pool.log` (12 November, evening, master commit 129fcd89e: `../logs/checks_129fcd89e_pool.log`; 12 November, master commit 52471a100: `../logs/checks_52471a100_pool.log`; 11 November, master commit 3633d376a: `../logs/checks_3633d376a_pool.log`; 9 November, master commit 9f254e8d8: `../logs/checks_9f254e8d8_pool.log`; 4 November, master commit 9a8624af9: `../logs/checks_9a8624af9_pool.log`). The Paladin has the tank consumables of `feedbackConsumables` (`../go/feedback_prot_test.go`).
+4. Run `./run_pool.sh <wowsims clone>`. It runs all tank jobs of `../logs/checks_8298ab833.log` again with the new sets (`FEEDBACK_ITEMS`), on master commit 6084403a9 (Go 1.27). The output is `../logs/checks_6084403a9_pool.log`. Earlier outputs:
+
+   - 13 November, master commit 8c7b5a5f5: `../logs/checks_8c7b5a5f5_pool.log`
+   - 12 November, evening, master commit 129fcd89e: `../logs/checks_129fcd89e_pool.log`
+   - 12 November, master commit 52471a100: `../logs/checks_52471a100_pool.log`
+   - 11 November, master commit 3633d376a: `../logs/checks_3633d376a_pool.log`
+   - 9 November, master commit 9f254e8d8: `../logs/checks_9f254e8d8_pool.log`
+   - 4 November, master commit 9a8624af9: `../logs/checks_9a8624af9_pool.log`
+
+   The Paladin has the tank consumables of `feedbackConsumables` (`../go/feedback_prot_test.go`).
 
 `set_*.json` has the 17 item ids of each set. `log_*.txt` has the search output.
 
 ## Survival sets
 
-`TANK_SCORE=survival python3 search_tank.py <prot|war|bear> <dump>` uses the same method with a survival score: 40% threat, 30% damage taken and 30% TMI, each against the default set. The dump must have the default set (no `FEEDBACK_ITEMS`). The sets are `set_*_surv.json`, the search output `log_*_surv.txt`. `./run_pool.sh <wowsims clone> surv` runs all tank jobs with these sets: `../logs/checks_8c7b5a5f5_pool_surv.log`. `TANK_SET=surv python3 ../finals.py <codes>` runs the Protection builds with the Paladin survival set: `../logs/finals_surv.log`.
+`TANK_SCORE=survival python3 search_tank.py <prot|war|bear> <dump>` uses the same method with a survival score. The score is 40% threat, 30% damage taken and 30% TMI, each against the default set. The dump must have the default set (no `FEEDBACK_ITEMS`). The sets are `set_*_surv.json`, the search output `log_*_surv.txt`. `./run_pool.sh <wowsims clone> surv` runs all tank jobs with these sets: `../logs/checks_6084403a9_pool_surv.log`. `TANK_SET=surv python3 ../finals.py <codes>` runs the Protection builds with the Paladin survival set: `../logs/finals_surv.log`.
 
 | Tank | Items that differ from the threat set (threat set → survival set) |
 | --- | --- |
 | Protection Paladin | Storm Gauntlets → Force Imbued Gauntlets, Ring of Protection → Naglering, Initiate's Signet of Ferocity → Myrmidon's Signet, Bolt's Charged Eyeball → Ragged John's Neverending Cup |
-| Protection Warrior | Horn of Ve'han → Talisman of Evasion, Legplates of Valor → Warmaster Legguards, Sabatons of Heroism → Shalehusk Boots, Myrmidon's Signet → Ezra's Seal of Authenticity, Ring of Protection → Naglering, The Lion Horn of Stormwind → Mark of Tyranny, Scaleguard Scimitar → Hammer of the Vesper, Blackcrow → Carapace Spine Crossbow |
-| Bear Druid | Warden's Leather Gauntlets → Feralheart Grips, Warbear Woolies → Warstrife Leggings, Ouroboros Ring → Ring of Protection, Hand of Justice → Glimmering Mithril Insignia, Glimmering Mithril Insignia → The Lion Horn of Stormwind |
+| Protection Warrior | Phantasmal Cloak → Shifting Cloak, Cloudkeeper Legplates → Wraithplate Leggings, Blackstone Ring → Ring of Saviors, Skullflame Shield → Intricately Runed Shield, Deep Jungle Rifle → Eaglehorn Long Bow |
+| Bear Druid | Warbear Woolies → Warstrife Leggings, Feralheart Treads → Warden's Leather Boots, Counterattack Lodestone → Glimmering Mithril Insignia, Glimmering Mithril Insignia → The Lion Horn of Stormwind |
 
-| Tank (master 8c7b5a5f5) | Threat set: threat / damage taken / TMI | Survival set: threat / damage taken / TMI |
+| Tank (master 6084403a9, sets of 16 November) | Threat set: threat / damage taken / TMI | Survival set: threat / damage taken / TMI |
 | --- | --- | --- |
-| Protection Paladin, live | 1,138.9 / 315.5 / 50.4 | 1,089.7 / 300.2 / 43.6 |
-| Protection Warrior | 1,525.0 / 269.1 / 38 | 1,385.9 / 250.9 / 39 |
-| Bear Druid | 2,276.8 / 358.6 / 37.9 | 2,162.9 / 334.2 / 35.1 |
+| Protection Paladin, live | 1,179.7 / 300.2 / 46.9 | 1,078.8 / 293.9 / 39.1 |
+| Protection Warrior | 1,838.0 / 293.6 / 37 | 1,540.5 / 254.6 / 30 |
+| Bear Druid | 2,453.8 / 346.8 / 36.7 | 2,232.4 / 331.3 / 31.4 |
 
-The sets of 4 November were searched on master 8298ab833, with the Paladin without consumables. The search of 8 November ran on master ae9b8c23a. The search of 9 November ran on master 9f254e8d8. The searches of 11, 12 and 13 November ran on masters 3633d376a, 52471a100, 129fcd89e and 8c7b5a5f5. The earlier values (threat set and survival set, threat / damage taken / TMI) are:
+The sets of 4 November were searched on master 8298ab833, with the Paladin without consumables. The search of 8 November ran on master ae9b8c23a. The search of 9 November ran on master 9f254e8d8. The searches of 11, 12, 13 and 15 November ran on masters 3633d376a, 52471a100, 129fcd89e, 8c7b5a5f5 and 6084403a9. The earlier values (threat set and survival set, threat / damage taken / TMI) are:
 
 | Master (sets) | Paladin, live | Warrior | Druid |
 | --- | --- | --- | --- |
+| 6084403a9 (sets of 15 November) | 1,150.8 / 316.6 / 50.5 and 1,102.4 / 302.1 / 44.0 | 1,677.5 / 295.7 / 38 and 1,590.2 / 282.0 / 36 | 2,439.0 / 354.5 / 37.1 and 2,319.2 / 336.6 / 35.3 |
+| 8c7b5a5f5 (sets of 13 November) | 1,138.9 / 315.5 / 50.4 and 1,089.7 / 300.2 / 43.6 | 1,525.0 / 269.1 / 38 and 1,385.9 / 250.9 / 39 | 2,276.8 / 358.6 / 37.9 and 2,162.9 / 334.2 / 35.1 |
 | 129fcd89e (sets of 12 November, evening) | 1,133.4 / 336.1 / 51.0 and 1,082.3 / 323.4 / 45.7 | 1,600.6 / 295.1 / 44 and 1,385.9 / 250.9 / 39 | 2,276.8 / 358.6 / 37.9 and 2,192.6 / 346.7 / 35.9 |
 | 52471a100 (sets of 12 November) | 1,133.4 / 336.1 / 51.0 and 1,082.3 / 323.4 / 45.7 | 1,650.2 / 297.0 / 45 and 1,452.4 / 253.7 / 40 | 2,302.2 / 359.4 / 38.1 and 2,192.6 / 346.7 / 35.9 |
 | 3633d376a (sets of 11 November) | 1,133.4 / 336.1 / 51.0 and 1,082.3 / 323.4 / 45.7 | 1,632.4 / 299.4 / 44 and 1,448.4 / 270.3 / 38 | 1,613.6 / 358.3 / 37.9 and 1,524.8 / 347.5 / 36.1 |

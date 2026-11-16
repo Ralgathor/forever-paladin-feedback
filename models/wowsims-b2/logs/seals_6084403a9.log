@@ -1,0 +1,31 @@
+# wowsims Forever master 6084403a9 (judgements ranged in wowsims itself), Protection Paladin, item pool threat set (tank_gear/set_prot.json), tank consumables, 3 min, 3,000 iterations. FEEDBACK_APL: default = Seal of Fury, sor = Seal of Righteousness, soc = Seal of Command (apl/sor.apl.siml, apl/soc.apl.siml; copy to ui/specs/paladin/protection/apls/).
+### S | FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=default
+TMI avg=50.48 std=6.49
+RESULT dur=180 propose="" tps=1150.8 dps=466.5 dtps=316.6 swings=81.5 hit=6.8% miss=9.4% dodge=15.5% parry=12.4% block=44.0% crit=1.7% crush=10.2%
+### S | FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=sor
+TMI avg=52.61 std=6.59
+RESULT dur=180 propose="" tps=1136.0 dps=460.5 dtps=328.3 swings=81.5 hit=6.8% miss=9.7% dodge=15.6% parry=12.4% block=43.8% crit=1.6% crush=10.2%
+### S | FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=default
+TMI avg=50.41 std=6.46
+RESULT dur=180 propose="" tps=1173.0 dps=475.7 dtps=316.3 swings=81.5 hit=6.8% miss=9.4% dodge=15.5% parry=12.4% block=43.9% crit=1.7% crush=10.2%
+### S | FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=sor
+TMI avg=52.66 std=6.54
+RESULT dur=180 propose="" tps=1157.6 dps=469.6 dtps=328.8 swings=81.5 hit=6.7% miss=9.7% dodge=15.5% parry=12.4% block=43.8% crit=1.6% crush=10.2%
+### S | FEEDBACK_DUR=180 PROPOSE= FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=soc
+TMI avg=53.44 std=6.69
+RESULT dur=180 propose="" tps=1085.0 dps=439.7 dtps=333.2 swings=82.6 hit=6.7% miss=9.5% dodge=15.7% parry=12.4% block=43.9% crit=1.7% crush=10.2%
+### S | FEEDBACK_DUR=180 PROPOSE=C25,CP1 FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=default
+TMI avg=40.84 std=3.96
+RESULT dur=180 propose="C25,CP1" tps=1721.2 dps=487.5 dtps=281.1 swings=81.7 hit=2.3% miss=9.5% dodge=15.7% parry=12.4% block=58.7% crit=0.2% crush=1.2%
+### S | FEEDBACK_DUR=180 PROPOSE=C25,CP1 FEEDBACK_TALENTS=050050002-05302102213301531-502 FEEDBACK_APL=sor
+TMI avg=43.04 std=3.99
+RESULT dur=180 propose="C25,CP1" tps=1697.8 dps=481.0 dtps=295.2 swings=81.7 hit=2.3% miss=9.5% dodge=15.6% parry=12.5% block=58.7% crit=0.2% crush=1.2%
+### S | FEEDBACK_DUR=180 PROPOSE=C25,CP1 FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=default
+TMI avg=40.79 std=3.95
+RESULT dur=180 propose="C25,CP1" tps=1753.4 dps=496.9 dtps=280.9 swings=81.7 hit=2.3% miss=9.5% dodge=15.7% parry=12.4% block=58.7% crit=0.2% crush=1.1%
+### S | FEEDBACK_DUR=180 PROPOSE=C25,CP1 FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=sor
+TMI avg=43.06 std=3.98
+RESULT dur=180 propose="C25,CP1" tps=1728.8 dps=490.1 dtps=295.3 swings=81.7 hit=2.3% miss=9.5% dodge=15.6% parry=12.5% block=58.7% crit=0.2% crush=1.2%
+### S | FEEDBACK_DUR=180 PROPOSE=C25,CP1 FEEDBACK_TALENTS=01005-05302102213301531-50223001 FEEDBACK_APL=soc
+TMI avg=43.88 std=4.22
+RESULT dur=180 propose="C25,CP1" tps=1622.0 dps=459.5 dtps=299.7 swings=82.8 hit=2.4% miss=9.6% dodge=15.5% parry=12.5% block=58.7% crit=0.2% crush=1.2%

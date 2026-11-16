@@ -32,7 +32,7 @@ The live version changes most of the Protection tree. Righteous Fury now increas
 - **Change.** Only the Holy Shield trigger is new. If Redoubt is active, a new trigger sets it again to 10 sec and 5 blocks.
 - **Why.** It removes most crushing blows (see Analysis, Crushing blows).
 - **Live.** The live version gives Redoubt 6–30% again (beta of 18 October: 4–20%). Holy Shield is now in row 5.
-- **Value (wowsims, live version).** With Holy Shield (30%) and Redoubt 5/5 (30%), block from talents can be 60%. This removes almost all crushing blows: 10.1% → 1.2% of the boss attacks. The Warrior has 1.0%. Thus, 60% is not too much. Keep 6–30% (see Protection, wowsims check).
+- **Value (wowsims, live version).** With Holy Shield (30%) and Redoubt 5/5 (30%), block from talents can be 60%. This removes almost all crushing blows: 10.1% → 1.1% of the boss attacks. The Warrior has 1.1%. Thus, 60% is not too much. Keep 6–30% (see Protection, wowsims check).
 - **Other specs.** Holy and Retribution can take Holy Shield with 20 Protection points. Then their Redoubt also starts with each Holy Shield.
 
 ## C-P5. Shoulder the Burden (baseline spell)
@@ -58,7 +58,7 @@ The live version changes most of the Protection tree. Righteous Fury now increas
 - **Change.** With Reach of Law 2/2, the range is 20 yards (15 yards at 1/2). Swift Judgement gives a second Judgement each min. Thus, the tank has two ranged pulls.
 - **Seal of Fury only.** Seal of Fury is the tank Seal. Retribution PvP builds also take Swift Judgement, but with Seal of Command or Seal of Justice. Thus, the range of their Judgements does not change.
 - **Model.** Arctic Reach (Mage) and Nature's Reach (Druid) give +10/20% range in 2 ranks. Hawk Eye (Hunter) gives +2/4/6 yards. Reach of Law gives yards: the range of Judgement is short (10 yards), thus a % gives an unclear value.
-- **Cost.** A dungeon tank takes it for 2 Benediction points: [`v6p-353011021350153102-52233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-353011021350153102-52233). In wowsims, the threat does not change against PT1 (1,151 each sec), because the raid buffs fill the mana. A raid tank can skip it.
+- **Cost.** A dungeon tank takes it for 2 Benediction points: [`v6p-353011021350153102-52233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-353011021350153102-52233). In wowsims, the threat does not change against PT1 (1,214 each sec), because the raid buffs fill the mana. A raid tank can skip it.
 - **Not in the sim.** wowsims does not model the pull. The value is the range, not damage or threat.
 
 ## M-P2. Stoicism move: row 4, column 4
@@ -126,7 +126,7 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 
 - **Change.** Remove Toughness (row 3, column 4, 5 ranks: +2–10% armor from items). Devoted Sacrifice (C-P11) takes its place.
 - **Why.** Toughness gives only a stat. The Protection Warrior of Forever has no armor talent.
-- **Balance with Redoubt (C-P1).** With the item pool tank sets and tank consumables, Redoubt (C-P1) decreases the damage gap to the Warrior from 17% to 5%. Without Toughness, the gap is 7% (see the table). With the item pool survival sets, the gap goes from 20% to 8% (10% without Toughness). The TMI is lower than the Warrior TMI: 36.7 against 39 (Analysis, Threat, part 6).
+- **Balance with Redoubt (C-P1).** With the item pool threat sets and tank consumables, the live Paladin takes 2% more damage than the Warrior. With Redoubt (C-P1), it takes 9% less, and 7% less without Toughness (see the table). With the item pool survival sets, the Paladin takes 15% more damage than the Warrior. Redoubt decreases this gap to 3%, or 5% without Toughness. The TMI is near the Warrior TMI (Analysis, Threat, part 6). It is 38.8 against 37 with the threat sets, and 33.0 against 30 with the survival sets.
 - **Druid.** Thick Hide (Druid) gives armor. But the Druid tank cannot block, and armor is its main defense.
 - **Holy and Retribution.** These specs do not take Toughness. Thus, they lose nothing. Holy can now take Devoted Sacrifice (C-P11) with 12 Protection points.
 - **Tank points.** Toughness removal frees 5 points. The tank uses them in the other trees, for example Retribution.
@@ -135,13 +135,13 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 
 | Case | Damage taken each sec | TMI |
 | --- | --- | --- |
-| Paladin, live | 316 | 50.4 |
-| Paladin, live, no Toughness | 321 (+2%) | 51.6 (+2.3%) |
-| Paladin, Redoubt (C-P1) | 282 | 40.9 |
-| Paladin, C-P1 and C-P13 | 287 (+2%) | 41.8 (+2.3%) |
-| Warrior | 269 | 38 |
+| Paladin, live | 300 | 46.9 |
+| Paladin, live, no Toughness | 305 (+2%) | 48.0 (+2.3%) |
+| Paladin, Redoubt (C-P1) | 268 | 38.0 |
+| Paladin, C-P1 and C-P13 | 273 (+2%) | 38.8 (+2.2%) |
+| Warrior | 294 | 37 |
 
-- Threat does not change: 1,196 each sec with C-P1, with and without Toughness.
+- Threat does not change: 1,227 each sec with C-P1, with and without Toughness.
 - Without Paladin consumables (the runs before 4 November evening): live 384 (TMI 68.6), C-P1 339 (55.3), C-P1 and C-P13 346 (56.7), Warrior 300 (41).
 
 ## C-P14. Swift Judgement: no prerequisite
@@ -155,9 +155,13 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 
 - **Proposed text.** "Increases all threat generated by 90%, and all threat generated by your Holy attacks by an additional 90%. Lasts 30 min." Live: 33%, and an additional 90%.
 - **Change.** Only the first part changes: all threat ×1.33 → ×1.9. Holy threat is then ×3.61 (live: ×2.527). The damage reduction and Improved Righteous Fury do not change.
-- **Problem.** The development notes of 2 November give Defensive Stance +80% threat (was +30%) and Bear Form +115% (was +50%). The Paladin has no change. Thus, the live Paladin tank has 75% of the Warrior threat in wowsims (see Analysis, Threat). These values use wowsims master 8c7b5a5f5 (hotfixes of 13 November, ranged Judgement of Fury), the item pool tank sets and tank consumables.
-- **Why +90%.** It gives the Paladin ×1.43 (1.9 ÷ 1.33). The notes give the Warrior ×1.445 and the Druid ×1.433. Thus, the Paladin has the same change as the other tanks. In wowsims, the Paladin with C25 has 106% of the Warrior threat, and 112% with Redoubt (C-P1).
-- **The Druid of 12 November.** wowsims master 52471a100 gives Lacerate 10/3 threat for each point of damage: Druid +43%. wowsims measured this rule only on rank 2, at levels 38 to 50. Against this Druid, the Paladin with C25 has 71%, and 75% with Redoubt. A level 60 test must confirm the rule before a change to C25 (W28).
+- **Problem.** The development notes of 2 November give Defensive Stance +80% threat (was +30%) and Bear Form +115% (was +50%). The Paladin has no change. Thus, the live Paladin tank has 64% of the Warrior threat in wowsims (see Analysis, Threat). These values use wowsims master 6084403a9 (hotfixes of 15 November, ranged Judgement of Fury) and tank consumables. The tanks have the item pool sets of the open search of 16 November.
+- **Why +90%.** It gives the Paladin ×1.43 (1.9 ÷ 1.33). The notes give the Warrior ×1.445 and the Druid ×1.433. Thus, the Paladin has the same change as the other tanks. In wowsims, the Paladin with C25 has 91% of the Warrior threat, and 95% with Redoubt (C-P1). Thus, C25 closes most of the gap. To reach the Warrior with Redoubt, Righteous Fury needs about +99%. The value stays +90% until the next review of the numbers.
+- **Blessing of Salvation.** The notes give the Bear Form raise as compensation for the removal of Blessing of Salvation. Salvation decreased the threat of the damage dealers by 30%. Thus, a tank needs ×1.43 (1 ÷ 0.7) to keep the same lead. The Warrior and the Druid received this value. The Paladin received +33% in the beta of 30 October, before the notes. Before the notes, the Paladin needed this +33% to reach the Warrior.
+- **Righteous Fury in the game files.** Spell 25780 has two threat effects: +90% for Holy damage and +33% for all damage. wowsims multiplies the two effects: Holy damage has ×2.53. C25 changes only the +33% effect. The +90% Holy effect does not change.
+- **Bonus threat of the abilities.** In wowsims, Revenge, Heroic Strike and Shield Slam give 29% of the Warrior threat as bonus threat. Maul, Primal Bite and Lacerate give 53% of the Druid threat. The Paladin has 6%: Holy Strike with Iron Creed and Holy Shield. The stance and form raise multiplies this bonus threat too. Thus, C25 alone gives 91% of the Warrior, not 100%.
+- **Tuning pass.** The developers expect a large tuning pass before the raids. If this pass changes the Warrior or Druid threat, review C25 again.
+- **The Druid of 12 November.** wowsims master 52471a100 gives Lacerate 10/3 threat for each point of damage: Druid +43%. wowsims measured this rule only on rank 2, at levels 38 to 50. Against this Druid, the Paladin with C25 has 68%, and 71% with Redoubt. A level 60 test must confirm the rule before a change to C25 (W28).
 - **Model.** On 2 November, Defensive Stance (Warrior) and Bear Form (Druid) received a larger flat threat bonus. Righteous Fury is the tank state of the Paladin. C25 gives it the same type of change.
 - **Why a baseline spell.** The notes changed the stance and the form, not talents. Thus, the design rules for talents do not apply.
 
@@ -165,41 +169,41 @@ At 900 healing power and 19% critical heals, Flash of Light and Holy Light give 
 
 | Case | Threat each sec | % of the Warrior | % of the Druid |
 | --- | --- | --- | --- |
-| Warrior | 1,525 | 100% | 67% |
-| Druid | 2,277 | 149% | 100% |
-| Paladin, live | 1,139 | 75% | 50% |
-| **Paladin, Righteous Fury (C25)** | **1,621** | **106%** | **71%** |
-| Paladin, C25 and Redoubt (C-P1) | 1,703 | 112% | 75% |
-| Paladin, C25a (+80%) | 1,536 | 101% | 67% |
-| Paladin, C25a and Redoubt (C-P1) | 1,614 | 106% | 71% |
+| Warrior | 1,838 | 100% | 75% |
+| Druid | 2,454 | 134% | 100% |
+| Paladin, live | 1,180 | 64% | 48% |
+| **Paladin, Righteous Fury (C25)** | **1,679** | **91%** | **68%** |
+| Paladin, C25 and Redoubt (C-P1) | 1,747 | 95% | 71% |
+| Paladin, C25a (+80%) | 1,591 | 87% | 65% |
+| Paladin, C25a and Redoubt (C-P1) | 1,656 | 90% | 67% |
 
-The Warrior and Druid values are native values of wowsims. All values come from master 8c7b5a5f5 (hotfixes of 13 November), with Judgement of Fury as a ranged attack (hotfixes of 11 November). The sets are the item pool sets of 13 November. The Warrior set has Scaleguard Scimitar, Skullflame Shield and The Lion Horn of Stormwind. The Paladin set has Draconian Deflector, Bolt's Charged Eyeball and The Lion Horn of Stormwind.
+The Warrior and Druid values are native values of wowsims. All values come from master 6084403a9 (hotfixes of 15 November), with Judgement of Fury as a ranged attack (hotfixes of 11 November). The sets are the item pool sets of the open search of 16 November. The Warrior set has Breastplate and Handguards of Heroism, Ironfoe and Skullflame Shield. The Paladin set has Soulforge Chestguards, Draconian Deflector and The Lion Horn of Stormwind.
 
-The Druid has Bear Form +115% and the Maul, Swipe and Primal Bite threat of the player data. Commit 3633d376a gives Shield Slam flat threat: the Warrior gains 5%. Commit 52471a100 gives Lacerate 10/3 threat: the Druid gains 43%. Commit 129fcd89e decreases the Hand of Justice and Ironfoe procs: the Warrior loses 3% and the Druid 1%. On commit 8c7b5a5f5, the new Warrior set has 5% less threat and takes 9% less damage.
+The Druid has Bear Form +115% and the Maul, Swipe and Primal Bite threat of the player data. Commit 3633d376a gives Shield Slam flat threat: the Warrior gains 5%. Commit 52471a100 gives Lacerate 10/3 threat: the Druid gains 43%. Commit 129fcd89e decreases the Hand of Justice and Ironfoe procs: the Warrior loses 3% and the Druid 1%. On commit 8c7b5a5f5, the new Warrior set had 5% less threat and took 9% less damage. On commit 6084403a9, new rage rules give the Warrior +3% and the Druid +7% with the same sets. The new Warrior set of 15 November then gives the Warrior 7% more threat. On 16 November, an open search of all slots gives the Warrior set 9.6% more threat, and the Paladin set 2.5% more.
 
 - **Gear levels (model).** With C25, the live Paladin has 117% of the Warrior threat at fresh level 60 and 101% in Naxxramas. Before the notes, it had 118% and 101%. With C25a, it has 111% and 96%.
 - **All threat cases.** Analysis, Threat, part 9 gives parts 1 to 8 again with C25 and C25a.
-- **Pull.** With a Fury opener, the Paladin has 139% of the Warrior threat after 3 sec and 119% after 10 sec. In its best short windows, it has 88–98% of the Warrior (live: 60–69%).
-- **Groups.** On 3 enemies, the Paladin total is 2,389 threat each sec. The Warrior has 1,921 and the Druid 2,177. On the enemy with the least threat, the Paladin has 3.4 times the Warrior threat.
+- **Pull.** With a Fury opener, the Paladin has 119% of the Warrior threat after 3 sec and 95% after 10 sec. In its best short windows, it has 77–85% of the Warrior (live: 52–60%).
+- **Groups.** On 3 enemies, the Paladin total is 2,449 threat each sec. The Warrior has 2,391 and the Druid 2,479. On the enemy with the least threat, the Paladin has 2.7 times the Warrior threat.
 - **Other specs.** Holy and Retribution use Righteous Fury only to tank. In PvP, threat has no effect.
-- **Alternative C25a.** +80% to all threat, the value of Defensive Stance. The live tank then has 101% of the Warrior threat in wowsims, and 106% with Redoubt (C-P1). The model gives 95% (Analysis, Threat, part 9). In wowsims, C25a now reaches the Warrior because the Warrior set of 13 November has 5% less threat. The model still needs C25 in the late raids.
+- **Alternative C25a.** +80% to all threat, the value of Defensive Stance. The live tank then has 87% of the Warrior threat in wowsims, and 90% with Redoubt (C-P1). The model gives 95% (Analysis, Threat, part 9). On 13 November, C25a reached the Warrior in wowsims (101%). The Warrior sets of 15 and 16 November have more threat, thus C25a no longer reaches it. The model also needs C25 in the late raids.
 - **First, a live test.** The hotfixes of 4 November have the Warrior and Druid values of the notes. The live realms must confirm them before this change (W28).
 
 ## wowsims check
 
-- **Sim.** wowsims Forever, master commit 8c7b5a5f5 (Holy Shield rank 4, ranged Judgement of Fury), with the proposals as flags (models/wowsims-b2). The item pool Protection set of 13 November with Draconian Deflector (Analysis, Threat, part 6): default enchants and rotation, tank consumables (the Warrior test consumables, with Greater Arcane Elixir and Brilliant Wizard Oil), talents 12/32/7 with Redoubt 5/5. A level 63 boss attacks the Paladin from the front. Full buffs, 3,000 iterations, 3 min, as in Analysis, Crushing blows.
+- **Sim.** wowsims Forever, master commit 6084403a9 (Holy Shield rank 4, ranged Judgement of Fury), with the proposals as flags (models/wowsims-b2). The item pool Protection set of the open search of 16 November, with Soulforge Chestguards and Draconian Deflector (Analysis, Threat, part 6). Default enchants and rotation, talents 12/32/7 with Redoubt 5/5. Tank consumables: the Warrior test consumables, with Greater Arcane Elixir and Brilliant Wizard Oil. A level 63 boss attacks the Paladin from the front. Full buffs, 3,000 iterations, 3 min, as in Analysis, Crushing blows.
 - **Warrior.** The Protection Warrior of wowsims with its item pool set, for comparison. The items are not the same.
 
 | Case | Block | Crushing blows | Damage taken each sec | Threat each sec |
 | --- | --- | --- | --- | --- |
-| Paladin, live | 44.0% | 10.1% | 316 | 1,139 |
-| Paladin, Redoubt (C-P1) | 58.8% | 1.2% | 282 (−11%) | 1,196 (+5%) |
-| Paladin, C-P1 with 4–20% | 54.4% | 3.2% | 299 (−5%) | 1,185 (+4%) |
-| Warrior | 53.8% | 1.0% | 269 | 1,525 |
+| Paladin, live | 43.1% | 10.1% | 300 | 1,180 |
+| Paladin, Redoubt (C-P1) | 55.9% | 1.1% | 268 (−11%) | 1,227 (+4%) |
+| Paladin, C-P1 with 4–20% | 54.3% | 1.1% | 276 (−8%) | 1,226 (+4%) |
+| Warrior | 57.7% | 1.1% | 294 | 1,838 |
 
-- **Result.** With Redoubt (C-P1), the Paladin has almost the crushing blows of the Warrior and takes 5% more damage. The live Paladin takes 17% more damage. With 4–20%, the crushing blows go to 3.2% on a normal boss. Against fast bosses and bosses with two weapons, 4–20% gives 0.5–1.4 points more than C-P1. Thus, keep Redoubt at 6–30% with the trigger.
+- **Result.** With Redoubt (C-P1), the Paladin has the crushing blows of the Warrior and takes 9% less damage. The live Paladin takes 2% more damage. With 4–20%, the crushing blows are the same on a normal boss (1.1%). But the Paladin takes 3% more damage than with C-P1 (276 against 268). Against fast bosses and bosses with two weapons, 4–20% gives about 2% more damage taken than C-P1. Thus, keep Redoubt at 6–30% with the trigger.
 - **Consumables.** Without Paladin consumables (Demonic Rune only), the Paladin with C-P1 took 13% more damage than the Warrior (live: 28% more).
-- **Threat.** More blocks give more Holy Shield damage. Thus, threat increases by 5%. Since 13 November, the live Redoubt rolls on each melee swing or ability, avoided attacks included. Thus, C-P1 adds less than before (+7%). The Warrior value has Defensive Stance +80% and Defiance 20% (hotfix of 4 November).
+- **Threat.** More blocks give more Holy Shield damage. Thus, threat increases by 4%. Since 13 November, the live Redoubt rolls on each melee swing or ability, avoided attacks included. Thus, C-P1 adds less than before (+7%). The Warrior value has Defensive Stance +80% and Defiance 20% (hotfix of 4 November).
 - **Fast bosses and bosses with two weapons.** Both tanks take more crushing blows. With C-P1, the Paladin is 0.2–0.9 points above the Warrior. With 4–20%, it is 2.2–3.1 points above (Crushing blows, part 3).
 - **5 min fights.** The results are the same: crushing blows 11.9% → 1.3%, damage taken −13%.
 - **Toughness removal (C-P13).** Without Toughness, damage taken increases by 2% (see Toughness removal, C-P13).

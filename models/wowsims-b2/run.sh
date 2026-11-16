@@ -9,7 +9,8 @@ git apply "$D/patches/talents.patch" || true
 git apply "$D/patches/notes-2-november.patch" || true
 git apply "$D/patches/threat-options.patch" || true
 git apply "$D/patches/burst-threat.patch" || true
-# Since 13 November 2026 (master 8c7b5a5f5 or later): Judgement of Righteousness and Fury as ranged attacks, Command stays melee (JMELEE in PROPOSE keeps all melee).
+# 13 to 15 November 2026 (master 8c7b5a5f5): Judgement of Righteousness and Fury as ranged attacks, Command stays melee (JMELEE in PROPOSE keeps all melee).
+# Since master 6084403a9 (15 November 2026), wowsims has this rule itself, and the patch does not apply (|| true).
 git apply "$D/patches/judgement-ranged.patch" || true
 cp "$D/apl/furyopen.apl.json" "$D/apl/furyopen1.apl.json" "$D/apl/sor.apl.siml" "$D/apl/soc.apl.siml" ui/specs/paladin/protection/apls/
 cp "$D/apl/charge.apl.json" ui/specs/warrior/protection/apls/
