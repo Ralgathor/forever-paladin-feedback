@@ -1,0 +1,56 @@
+# Consumable tests of 17 November 2026 (Analysis, Threat, part 6). wowsims master 6084403a9, item pool threat sets, 3 min, 1,000 iterations, one item at a time against the consumables of 16 November. FEEDBACK_CONSUMES_JSON in the tank tests.
+base                         tps=1180.9 (+0.0%) dtps=298.7 | str=317 agi=269 sta=457 int=156 sp=298 holy=0 ap=1021 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
++Flask Supreme Power         tps=1304.1 (+10.4%) dtps=296.1 | str=317 agi=269 sta=457 int=156 sp=448 holy=0 ap=1021 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
++Flask Titans                tps=1181.0 (+0.0%) dtps=298.7 | str=317 agi=269 sta=457 int=156 sp=298 holy=0 ap=1021 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
++Elixir Holy Power           tps=1213.7 (+2.8%) dtps=298.0 | str=317 agi=269 sta=457 int=156 sp=298 holy=40 ap=1021 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
++Winterfall Firewater        tps=1185.9 (+0.4%) dtps=298.7 | str=317 agi=269 sta=457 int=156 sp=298 holy=0 ap=1056 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
++Juju Power+Might            tps=1186.6 (+0.5%) dtps=298.7 | str=317 agi=269 sta=457 int=156 sp=298 holy=0 ap=1061 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
++ROIDS                       tps=1189.4 (+0.7%) dtps=298.3 | str=347 agi=269 sta=457 int=156 sp=298 holy=0 ap=1081 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
++Dragonbreath Chili          tps=1192.4 (+1.0%) dtps=300.3 | str=317 agi=269 sta=457 int=156 sp=298 holy=0 ap=1021 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
+food Lobster Stew            tps=1196.8 (+1.3%) dtps=298.4 | str=292 agi=269 sta=457 int=156 sp=326 holy=0 ap=971 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
+pot Spellblasting            tps=1189.8 (+0.8%) dtps=298.4 | str=317 agi=269 sta=457 int=156 sp=298 holy=0 ap=1021 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
+no pot                       tps=1177.1 (-0.3%) dtps=298.7 | str=317 agi=269 sta=457 int=156 sp=298 holy=0 ap=1021 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
++Grizzly                     tps=1180.9 (+0.0%) dtps=298.7 | str=317 agi=269 sta=457 int=156 sp=298 holy=0 ap=1021 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
++Arcane Elixir               tps=1180.9 (+0.0%) dtps=298.7 | str=317 agi=269 sta=457 int=156 sp=298 holy=0 ap=1021 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
+W base                     tps=1838.0 (+0.0%) dtps=293.6 | str=415 agi=330 sta=465 int=100 sp=33 holy=0 ap=1336 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+W +Flask Titans            tps=1835.1 (-0.2%) dtps=293.6 | str=415 agi=330 sta=465 int=100 sp=33 holy=0 ap=1336 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+W +Juju Power+Might        tps=1838.0 (+0.0%) dtps=293.6 | str=415 agi=330 sta=465 int=100 sp=33 holy=0 ap=1336 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+W +ROIDS                   tps=1870.0 (+1.7%) dtps=293.2 | str=443 agi=330 sta=465 int=100 sp=33 holy=0 ap=1392 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+W +Dragonbreath            tps=1839.1 (+0.1%) dtps=293.6 | str=415 agi=330 sta=465 int=100 sp=33 holy=0 ap=1336 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+W Elemental Sharp. Stone   tps=1861.9 (+1.3%) dtps=293.4 | str=415 agi=330 sta=465 int=100 sp=33 holy=0 ap=1336 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+W +Greater Strength        tps=1838.0 (+0.0%) dtps=293.6 | str=415 agi=330 sta=465 int=100 sp=33 holy=0 ap=1336 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+W +Distilled Firewater     tps=1838.0 (+0.0%) dtps=293.6 | str=415 agi=330 sta=465 int=100 sp=33 holy=0 ap=1336 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+W pot Mighty Rage          tps=1841.1 (+0.2%) dtps=293.9 | str=415 agi=330 sta=465 int=100 sp=33 holy=0 ap=1336 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+W bomb Dark Bomb           tps=1825.8 (-0.7%) dtps=294.4 | str=415 agi=330 sta=465 int=100 sp=33 holy=0 ap=1336 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+W food Mightfish           tps=1835.4 (-0.1%) dtps=293.8 | str=393 agi=330 sta=465 int=100 sp=33 holy=0 ap=1332 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+W +Scrolls Agi/Str         tps=1838.0 (+0.0%) dtps=293.6 | str=415 agi=330 sta=465 int=100 sp=33 holy=0 ap=1336 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+D base                     tps=2453.8 (+0.0%) dtps=346.8 | str=267 agi=336 sta=516 int=189 sp=33 holy=0 ap=1041 hit=29.0 crit=14.0 def=31 armor=11982 bv=0
+D +Flask Titans            tps=2466.0 (+0.5%) dtps=347.0 | str=267 agi=336 sta=516 int=189 sp=33 holy=0 ap=1041 hit=29.0 crit=14.0 def=31 armor=11982 bv=0
+D +Juju Power+Might        tps=2489.4 (+1.5%) dtps=346.8 | str=267 agi=336 sta=516 int=189 sp=33 holy=0 ap=1081 hit=29.0 crit=14.0 def=31 armor=11982 bv=0
+D +ROIDS                   tps=2501.8 (+2.0%) dtps=346.8 | str=294 agi=336 sta=516 int=189 sp=33 holy=0 ap=1095 hit=29.0 crit=14.0 def=31 armor=11982 bv=0
+D +Scorpok                 tps=2474.1 (+0.8%) dtps=339.9 | str=267 agi=364 sta=516 int=189 sp=33 holy=0 ap=1041 hit=29.0 crit=14.0 def=31 armor=12038 bv=0
+D +Dragonbreath            tps=2458.9 (+0.2%) dtps=346.8 | str=267 agi=336 sta=516 int=189 sp=33 holy=0 ap=1041 hit=29.0 crit=14.0 def=31 armor=11982 bv=0
+D food Dumplings           tps=2487.5 (+1.4%) dtps=346.3 | str=289 agi=336 sta=483 int=189 sp=33 holy=0 ap=1085 hit=29.0 crit=14.0 def=31 armor=11982 bv=0
+D food Flank au Poivre     tps=2466.6 (+0.5%) dtps=341.4 | str=267 agi=358 sta=483 int=189 sp=33 holy=0 ap=1041 hit=29.0 crit=14.0 def=31 armor=12026 bv=0
+D +pot Major Frenzy        tps=2453.8 (+0.0%) dtps=346.8 | str=267 agi=336 sta=516 int=189 sp=33 holy=0 ap=1041 hit=29.0 crit=14.0 def=31 armor=11982 bv=0
+D +Ferocity                tps=2472.2 (+0.7%) dtps=342.1 | str=268 agi=356 sta=516 int=189 sp=33 holy=0 ap=1043 hit=29.0 crit=14.0 def=31 armor=12022 bv=0
+D +Winterfall              tps=2484.9 (+1.3%) dtps=346.8 | str=267 agi=336 sta=516 int=189 sp=33 holy=0 ap=1076 hit=29.0 crit=14.0 def=31 armor=11982 bv=0
+D +Greater Defense         tps=2453.7 (-0.0%) dtps=343.1 | str=267 agi=336 sta=516 int=189 sp=33 holy=0 ap=1041 hit=29.0 crit=14.0 def=31 armor=12192 bv=0
+D +Phalanx                 tps=2453.8 (+0.0%) dtps=338.3 | str=267 agi=336 sta=516 int=189 sp=33 holy=0 ap=1041 hit=29.0 crit=14.0 def=31 armor=12482 bv=0
+D +Grizzly                 tps=2469.8 (+0.7%) dtps=346.8 | str=276 agi=336 sta=516 int=189 sp=33 holy=0 ap=1059 hit=29.0 crit=14.0 def=31 armor=11982 bv=0
+## Full sets and checks
+P full                         tps=1395.3 dtps=296.1 | str=323 agi=269 sta=457 int=156 sp=476 holy=40 ap=1073 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
+P oil->Elemental Stone         tps=1374.2 dtps=296.4 | str=323 agi=269 sta=457 int=156 sp=440 holy=40 ap=1073 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
+P flask Titans                 tps=1266.1 dtps=298.8 | str=323 agi=269 sta=457 int=156 sp=326 holy=40 ap=1073 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
+P food Dumplings               tps=1378.0 dtps=296.4 | str=347 agi=269 sta=457 int=156 sp=448 holy=40 ap=1121 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
+P pot Frenzy                   tps=1385.8 dtps=296.4 | str=323 agi=269 sta=457 int=156 sp=476 holy=40 ap=1073 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
+P -Juju Might +Winterfall      tps=1394.6 dtps=296.1 | str=323 agi=269 sta=457 int=156 sp=476 holy=40 ap=1068 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
+P +Flask Titans no SP: no flask tps=1266.1 dtps=298.7 | str=323 agi=269 sta=457 int=156 sp=326 holy=40 ap=1073 hit=43.0 crit=0.0 def=83 armor=8524 bv=40
+W full                         tps=1896.6 dtps=293.3 | str=443 agi=330 sta=465 int=100 sp=33 holy=0 ap=1392 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+W dense stone                  tps=1870.7 dtps=293.0 | str=443 agi=330 sta=465 int=100 sp=33 holy=0 ap=1392 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+W no flask                     tps=1898.6 dtps=292.9 | str=443 agi=330 sta=465 int=100 sp=33 holy=0 ap=1392 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+W -Winterfall                  tps=1899.3 dtps=293.3 | str=443 agi=330 sta=465 int=100 sp=33 holy=0 ap=1397 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+D full                         tps=2606.3 dtps=329.9 | str=317 agi=356 sta=496 int=189 sp=33 holy=0 ap=1176 hit=29.0 crit=14.0 def=31 armor=12732 bv=0
+D -Winterfall                  tps=2610.8 dtps=329.9 | str=317 agi=356 sta=496 int=189 sp=33 holy=0 ap=1181 hit=29.0 crit=14.0 def=31 armor=12732 bv=0
+D food Dirge                   tps=2570.2 dtps=330.0 | str=295 agi=356 sta=529 int=189 sp=33 holy=0 ap=1132 hit=29.0 crit=14.0 def=31 armor=12732 bv=0
+D Scorpok                      tps=2583.0 dtps=324.1 | str=290 agi=383 sta=496 int=189 sp=33 holy=0 ap=1122 hit=29.0 crit=14.0 def=31 armor=12786 bv=0

@@ -48,6 +48,10 @@ The damage, tank and Shockadin searches then ran again (`matched_gear/README.md`
 
 On 16 November 2026, an open item search (`tank_gear/search_open.py`) changed all six tank sets on the same commit (`tank_gear/README.md`). The live Paladin has 1,180 threat each sec (+2.5%) and takes 5% less damage. The Warrior has 1,838 (+9.6%), and the Druid 2,454 (+0.6%). The tank checks and the Protection builds ran again. The runs with the first sets of 15 November have `_6084403a9_first` in the file name. `logs/threat_sources_6084403a9.log` gives the threat and the damage of each ability for the three tanks (`FEEDBACK_SRC=1`; the test files now also print the damage).
 
+On 17 November 2026, the three tank tests received the full threat consumables (`feedbackFullConsumes`, `FEEDBACK_CONSUMES=full`). The same rules apply to the three tanks: one flask, one food, one potion, one weapon oil or stone, all elixirs that stack, Juju Power, Juju Might, R.O.I.D.S., Dragonbreath Chili, an explosive, Rumsey Rum and a Major Healthstone. Each tank takes the items that give it the most threat. The Paladin consumables of 4 to 16 November had no flask, no spell power food, no Elixir of Holy Power and no Juju or R.O.I.D.S. The Warrior and the Druid had the consumables of their wowsims tests.
+
+With the full threat consumables (same commit, open search sets), the live Paladin has 1,396 threat each sec (+18%), the Warrior 1,899 (+3%) and the Druid 2,611 (+6%). The live Paladin has 74% of the Warrior (was 64%), and 109% with all kept proposals (was 95%). Flask of Supreme Power alone gives the Paladin +10%. Logs: `logs/checks_6084403a9_pool_full.log`, `logs/checks_6084403a9_pool_surv_full.log`, `logs/finals_full.log`, `logs/finals_surv_full.log` and `logs/consumables_6084403a9.log` (the tests of each item). `FEEDBACK_CONSUMES_JSON` gives any ConsumesSpec as JSON, and `FEEDBACK_STATS=1` prints the final stats of the tank.
+
 The folders: `patches/` (the wowsims patches), `go/` (the sim flags and the test files), `apl/` (the rotations), `logs/` (the run logs). The logs of commit 6ee3c30f35 are `checks_6ee3c30f35.log` and `finals.log` (the same values as on commit d97252f2a). `checks_d97252f2a.log` has the runs of 3 November. `finals_895cd67f9.log` has the runs of commit 895cd67f9. The scripts stay in this folder.
 
 | File | What it does |
@@ -59,6 +63,7 @@ The folders: `patches/` (the wowsims patches), `go/` (the sim flags and the test
 | go/feedback_warrior_test.go | The same for the Protection Warrior (pre-raid set), for comparison |
 | go/feedback_bear_test.go | The same for the Druid tank (default Bear set): threat, damage taken, TMI and crushing blows |
 | go/feedback_warrior_dps_test.go | One Fury or Arms Warrior sim for Analysis, Damage, part 9: `FEEDBACK_SPEC` (`fury` or `arms`), `FEEDBACK_GEAR` (`prebis` or `p1`), full buffs |
+| `FEEDBACK_CONSUMES` | In the three tank tests: `full` (the full threat consumables of 17 November, `feedbackFullConsumes`), `default` (the wowsims test consumables), or empty (the consumables of 4 to 16 November). `FEEDBACK_CONSUMES_JSON`: a ConsumesSpec as JSON. `FEEDBACK_STATS=1`: print the final stats |
 | `FEEDBACK_MANA` | In the Paladin tank test: also print the mana sources (Analysis, Mana) |
 | `FEEDBACK_BOSS` | In the Paladin and Warrior tank tests: `fast` (a swing each 1.2 sec, 60% damage), `dw` (two weapons), or both |
 | `FEEDBACK_TARGETS` | In the three tank tests: the number of targets. Each target hits for 1/3 of the boss. The tests then print the threat on each target |

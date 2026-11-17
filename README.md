@@ -4,8 +4,8 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 **The three main asks**
 
-1. **Righteous Fury +90% to all threat (C25).** After the development notes of 2 November and the hotfixes of 4 November, the model gives the live Paladin tank 70% of the Warrior threat. In wowsims (item pool tank sets of 16 November, tank consumables, hotfixes of 15 November), it has 64% of the Warrior. With C25 and Redoubt (C-P1), it has 95% of the Warrior (C25 alone: 91%). The notes give the Warrior and the Druid ×1.43 to replace Blessing of Salvation (1 ÷ 0.7). C25 gives the Paladin the same ×1.43. wowsims of 12 November gives the Druid +43% from a Lacerate rule with no level 60 test yet. Against this Druid, the Paladin has 48% (live) and 71% (C25 and C-P1).
-2. **Redoubt on each Holy Shield cast (C-P1).** Crushing blows go from 10.2% to 1.2% of the boss attacks (wowsims, Warrior 1.4%). With the same consumables, the Paladin then takes 5% less damage than the Warrior (live: 7% more).
+1. **Righteous Fury +90% to all threat (C25).** After the development notes of 2 November and the hotfixes of 4 November, the model gives the live Paladin tank 70% of the Warrior threat. In wowsims (item pool tank sets of 16 November, full threat consumables of 17 November, hotfixes of 15 November), it has 74% of the Warrior. With C25 and Redoubt (C-P1), it has 109% of the Warrior (C25 alone: 105%). The notes give the Warrior and the Druid ×1.43 to replace Blessing of Salvation (1 ÷ 0.7). C25 gives the Paladin the same ×1.43. wowsims of 12 November gives the Druid +43% from a Lacerate rule with no level 60 test yet. Against this Druid, the Paladin has 53% (live) and 79% (C25 and C-P1).
+2. **Redoubt on each Holy Shield cast (C-P1).** Crushing blows go from 10.2% to 1.1% of the boss attacks (wowsims, Warrior 1.1%). With the same consumable rules, the Paladin then takes 10% less damage than the Warrior (live: 1% more).
 3. **Reverence 25/50% (C-H1) and a Light's Vigil buff (C-H7).** On one tank, the Paladin goes from 8–15% to 3–7% below the Druid. In raids of 5 and 10 min, from 25–34% to 3–4% below.
 
 ## Contents

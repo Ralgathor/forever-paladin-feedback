@@ -8,6 +8,8 @@
 # Since 6084403a9 (15 November 2026), wowsims has this rule itself: do not apply the patch.
 # The log name has the commit of the clone: checks_<commit>_pool.log.
 # With "surv", the tank jobs use the survival tank sets (set_*_surv.json) and write checks_<commit>_pool_surv.log (no R jobs).
+# FEEDBACK_CONSUMES=full (17 November 2026): the full threat consumables of the three tank tests (feedbackFullConsumes).
+# The log name then ends in _full (checks_<commit>_pool_full.log, checks_<commit>_pool_surv_full.log), with no R jobs.
 set -e
 W="$1"; V="${2:+_$2}"; D="$(cd "$(dirname "$0")/.." && pwd)"
 cp "$D/go/feedback_prot_test.go" "$W/sim/paladin/protection/feedback_run_test.go"
@@ -22,9 +24,14 @@ ids() { python3 -c "import json,sys;print(','.join(map(str,json.load(open(sys.ar
 IR=$(python3 -c "import json,sys;print(','.join(str(x.get('id',0)) for x in json.load(open(sys.argv[1]))['items']))" "$D/matched_gear/set_Retribution.json")
 IP=$(ids set_prot$V.json); IW=$(ids set_war$V.json); ID=$(ids set_bear$V.json)
 C=$(git -C "$W" rev-parse --short=9 HEAD)
-OUT="$D/logs/checks_${C}_pool$V.log"
-echo "# wowsims Forever master $C, item pool sets${2:+, $2 tank sets} (FEEDBACK_ITEMS), tank consumables for the Paladin. Jobs of checks_8298ab833.log." > "$OUT"
-J="PWDR"; [ -n "$V" ] && J="PWD"
+F=""; [ "$FEEDBACK_CONSUMES" = full ] && F="_full"
+OUT="$D/logs/checks_${C}_pool$V$F.log"
+if [ -n "$F" ]; then
+  echo "# wowsims Forever master $C, item pool sets${2:+, $2 tank sets} (FEEDBACK_ITEMS), full threat consumables for the three tanks (FEEDBACK_CONSUMES=full). Jobs of checks_8298ab833.log." > "$OUT"
+else
+  echo "# wowsims Forever master $C, item pool sets${2:+, $2 tank sets} (FEEDBACK_ITEMS), tank consumables for the Paladin. Jobs of checks_8298ab833.log." > "$OUT"
+fi
+J="PWDR"; [ -n "$V$F" ] && J="PWD"
 grep "^### [$J] " "$D/logs/checks_8298ab833.log" | while IFS= read -r line; do
   t=$(echo "$line" | sed 's/^### \(.\) | .*/\1/'); e=$(echo "$line" | sed 's/^### . | //')
   case $t in
