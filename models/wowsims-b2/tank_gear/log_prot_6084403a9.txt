@@ -1,0 +1,15 @@
+REF {"tps": 1055.162771239485, "dps": 443.0844388345697, "dtps": 289.5719011418791, "tmi": 43.778992612608484}
+BASE 1.0052 {"tps": 1150.7719257909755, "dps": 466.40455237442114, "dtps": 314.92435500357385, "tmi": 50.175360710823455}
+PASS 0
+SLOT 3 Cloak of Warding -> Shifting Cloak 18511 62 [] 1.0052 -> 1.0098
+SLOT 4 Enriched Thorium Breastplate -> Soulforge Chestguards 226992 60 [] 1.0098 -> 1.0224
+SLOT 5 Lightforge Bracers -> Warder's Wristguards 250583 50 [] 1.0224 -> 1.0263
+SLOT 7 Sentinel's Waistguard -> Warder's Waistguard 250573 55 [] 1.0263 -> 1.0305
+SLOT 10 Ring of Protection -> Initiate's Signet of Vigilance 275971 63 [] 1.0305 -> 1.0376
+SLOT 11 Initiate's Signet of Ferocity -> Myrmidon's Signet 2246 58 [] 1.0376 -> 1.0422
+SLOT 13 Bolt's Charged Eyeball -> Flamebreak Talisman 280071 61 [] 1.0422 -> 1.0448
+PASS 1
+FINAL old {"tps": 1150.8224455450088, "dps": 466.4517015391476, "dtps": 316.6148540971235, "tmi": 50.47689790510912} 1.0032
+FINAL new {"tps": 1179.669226313285, "dps": 477.3723382453921, "dtps": 300.177039841217, "tmi": 46.92189062620874} 1.0422
+SET [250599, 275736, 14552, 18511, 226992, 250583, 12632, 250573, 14554, 250563, 275971, 2246, 14557, 280071, 2243, 12602, 228175]
+SETNAMES Stalwart Helm ; Horn of Ve'han ; Stockade Pauldrons ; Shifting Cloak ; Soulforge Chestguards ; Warder's Wristguards ; Storm Gauntlets ; Warder's Waistguard ; Cloudkeeper Legplates ; Warder's Sabatons ; Initiate's Signet of Vigilance ; Myrmidon's Signet ; The Lion Horn of Stormwind ; Flamebreak Talisman ; Hand of Edward the Odd ; Draconian Deflector ; Libram of Holy Alacrity

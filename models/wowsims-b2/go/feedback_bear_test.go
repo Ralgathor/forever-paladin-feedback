@@ -20,7 +20,7 @@ func TestFeedbackBear(t *testing.T) {
 	player := &proto.Player{
 		Name: "Bear", Race: proto.Race_RaceNightElf, Class: proto.Class_ClassDruid,
 		Equipment:     feedbackItems(core.GetGearSet("../../../ui/specs/druid/feralbear/gear_sets", "default").GearSet),
-		Consumables:   DefaultConsumables,
+		Consumables:   feedbackConsumes(),
 		TalentsString: DefaultTalents,
 		Spec:          DefaultSpecOptions,
 		Rotation:      core.GetAplRotation("../../../ui/specs/druid/feralbear/apls", "adaptive").Rotation,
@@ -49,6 +49,7 @@ func TestFeedbackBear(t *testing.T) {
 	}
 	raid := core.SinglePlayerRaidProto(player, core.FullPartyBuffs, core.FullRaidBuffs, core.FullDebuffs)
 	raid.Tanks = append(raid.Tanks, &proto.UnitReference{Type: proto.UnitReference_Player, Index: 0})
+	feedbackPrintStats(raid)
 	rsr := &proto.RaidSimRequest{Raid: raid, Encounter: enc, SimOptions: &proto.SimOptions{Iterations: 3000, RandomSeed: 101}}
 	if os.Getenv("FEEDBACK_BURST") != "" {
 		enc.DurationVariation = 0 // the burst windows need the same fight length
@@ -129,4 +130,54 @@ func feedbackItems(eq *proto.EquipmentSpec) *proto.EquipmentSpec {
 		out.Items = append(out.Items, it)
 	}
 	return out
+}
+
+// feedbackConsumes: the consumables of the tank test.
+// FEEDBACK_CONSUMES: "" (the sets of 4 to 16 November: the Paladin has its tank consumables, the Warrior and the Druid
+// the consumables of their wowsims tests), "full" (the full threat set of 17 November, the same rules for the three tanks),
+// "default" (the wowsims test consumables only). FEEDBACK_CONSUMES_JSON: a ConsumesSpec as JSON, in place of all these.
+// FEEDBACK_STATS=1 prints the final stats of the tank.
+func feedbackConsumes() *proto.ConsumesSpec {
+	if v := os.Getenv("FEEDBACK_CONSUMES_JSON"); v != "" {
+		c := &proto.ConsumesSpec{}
+		if err := protojson.Unmarshal([]byte(v), c); err != nil {
+			panic(err)
+		}
+		return c
+	}
+	switch os.Getenv("FEEDBACK_CONSUMES") {
+	case "default":
+		return DefaultConsumables
+	case "full":
+		return feedbackFullConsumes
+	}
+	return DefaultConsumables
+}
+
+func feedbackPrintStats(raid *proto.Raid) {
+	if os.Getenv("FEEDBACK_STATS") == "" {
+		return
+	}
+	res := core.ComputeStats(&proto.ComputeStatsRequest{Raid: raid})
+	st := res.RaidStats.Parties[0].Players[0].FinalStats.Stats
+	fmt.Printf("STATS str=%.0f agi=%.0f sta=%.0f int=%.0f sp=%.0f holy=%.0f ap=%.0f hit=%.1f crit=%.1f def=%.0f armor=%.0f bv=%.0f\n",
+		st[proto.Stat_StatStrength], st[proto.Stat_StatAgility], st[proto.Stat_StatStamina], st[proto.Stat_StatIntellect],
+		st[proto.Stat_StatSpellDamage], st[proto.Stat_StatHolyDamage], st[proto.Stat_StatAttackPower], st[proto.Stat_StatHitRating],
+		st[proto.Stat_StatCritRating], st[proto.Stat_StatDefenseRating], st[proto.Stat_StatArmor], st[proto.Stat_StatBlockValue])
+}
+
+// feedbackFullConsumes: the full threat set of 17 November 2026 (the rules are in the Paladin test). The Druid test
+// consumables, with Flask of the Titans, Smoked Desert Dumplings in place of Dirge's Kickin' Chimaerok Chops, Major Frenzy
+// Potion, the Elixirs of Ferocity, Greater Defense and the Phalanx, Juju Power, Juju Might, R.O.I.D.S., Dragonbreath Chili
+// and Rumsey Rum. A Druid weapon takes no oil or stone in Bear Form.
+var feedbackFullConsumes = &proto.ConsumesSpec{
+	FlaskId:        13510,  // Flask of the Titans
+	FoodId:         20452,  // Smoked Desert Dumplings
+	OffensivePotId: 250943, // Major Frenzy Potion
+	DefensivePotId: 13455,  // Greater Stoneshield Potion
+	ConjuredId:     9421,   // Major Healthstone
+	// Elixir of Ferocity, Elixir of the Mongoose, Elixir of Greater Defense, Elixir of the Phalanx, Gift of Arthas
+	ElixirIds: []int32{250350, 13452, 13445, 250329, 9088},
+	// Goblin Sapper Charge, Rumsey Rum, Juju Power, Juju Might, R.O.I.D.S., Dragonbreath Chili, Scrolls of Agility IV, Strength IV and Protection IV
+	ExtraIds: []int32{10646, 17048, 12451, 12460, 8410, 12217, 10309, 10310, 10305},
 }

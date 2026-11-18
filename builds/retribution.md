@@ -6,24 +6,24 @@ This file gives the best damage builds on one target. It uses the live trees and
 
 | Trees | Case | Build | Points | Code | DPS |
 | --- | --- | --- | --- | --- | --- |
-| Live | Raid | RB1 | 14/6/31 | [`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351) | 890 |
-| Proposed | Raid | RB1 | 14/6/31 | [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 890 |
-| Live | Fresh 60 | RB1 | 14/6/31 | [`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351) | 310 |
-| Proposed | Fresh 60 | RB1 | 14/6/31 | [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 310 |
+| Live | Raid | RB1 | 14/6/31 | [`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351) | 914 |
+| Proposed | Raid | RB1 | 14/6/31 | [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 914 |
+| Live | Fresh 60 | RB1 | 14/6/31 | [`b2050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050250002-501-05233011201301351) | 309 |
+| Proposed | Fresh 60 | RB1 | 14/6/31 | [`v6p050250002-501-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050250002-501-05233011201301351) | 321 |
 
-- **RB1 is the main build in all four cases.** It is the wowsims default build of 1 November and RB1 of Analysis, Builds. The talent search found raid builds with at most +0.5%. These builds are 2.5% worse at fresh 60 (part 2).
+- **RB1 is the main build in all four cases.** It is the wowsims default build of 1 November and RB1 of Analysis, Builds. The talent search found raid builds with at most +0.2%. At fresh 60, RS1 gives +0.8% in the live trees, and RS3 −3.5% in the proposed trees (part 2).
 - **"Raid"** is full raid buffs and debuffs, with consumables. **"Fresh 60"** is no buffs, no debuffs and no consumables.
-- **Proposed against live.** Only Reverence 50% (C-H1) changes Retribution damage. With the item pool set of 15 November on commit 6084403a9, it gives −0.1% at fresh 60. In a raid, it gives 0%. On commit 8c7b5a5f5 with the set of 12 November, evening, it gave −0.5% at fresh 60. With all three judgements ranged, it gave −0.2%.
+- **Proposed against live.** Only Reverence 50% (C-H1) changes Retribution damage. With the item pool set of 18 November on commit ad6b13af8, it gives +4.0% at fresh 60. In a raid, it gives 0%. With the set of 15 November on commit 6084403a9, it gave −0.1% at fresh 60. On commit 8c7b5a5f5 with the set of 12 November, evening, it gave −0.5% at fresh 60. With all three judgements ranged, it gave −0.2%.
 
   On commit 129fcd89e, it gave +0.1% at fresh 60. With the set of 12 November (commit 52471a100), it gave +1.0% at fresh 60. The set of 11 November gave −0.9%, and the set of 4 November +0.4%. With the wowsims default set, it gave +4.2% at fresh 60.
-- **Stat weights.** In a raid, Expertise rating is the best stat for each point (2.3 Strength), then Haste rating (1.4 Strength) and Crit rating (1.0 Strength). Hit rating is only 0.1 Strength. At fresh 60, Intellect has more value (part 3).
+- **Stat weights.** In a raid, Expertise rating is the best stat for each point (2.3 Strength), then Crit rating (1.1 Strength) and Haste rating (0.9 Strength). Hit rating is only 0.4 Strength. At fresh 60, Intellect has more value (part 3).
 
 ## 1. Method
 
-- **Sim.** wowsims Forever, master of 15 November 2026 (commit 6084403a9, hotfixes of 15 November, game files of client 1.60.1.70938), with `models/wowsims-b2/patches/talents.patch`. wowsims itself makes Judgement of Righteousness and Judgement of Fury ranged attacks, as in the hotfixes of 11 November. Thus, they no longer trigger melee weapon procs. Judgement of Command stays a melee attack, as in the late hotfix of 13 November. The Seals of Command, Fury and Righteousness also proc from the Windfury Totem strike. The proposed trees use the flag REV50 (Reverence 25/50%). The other kept proposals do not change Retribution damage.
+- **Sim.** wowsims Forever, master of 18 November 2026 (commit ad6b13af8, hotfixes of 16 and 17 November), with `models/wowsims-b2/patches/talents.patch`. wowsims itself makes Judgement of Righteousness and Judgement of Fury ranged attacks, as in the hotfixes of 11 November. Thus, they no longer trigger melee weapon procs. Judgement of Command stays a melee attack, as in the late hotfix of 13 November. The Seals of Command, Fury and Righteousness also proc from the Windfury Totem strike. The proposed trees use the flag REV50 (Reverence 25/50%). The other kept proposals do not change Retribution damage.
 
-  The talent search ran on master of 1 November (commit 895cd67f9). It used earlier flags: Reverence 30% and the Holy Strike Seal trigger (C1, withdrawn on 2 November 2026). The builds and stat weights then ran again on commit 6084403a9 with REV50 only. They use the item pool set of 15 November (Demonshear, Counterattack Lodestone). The set of 8 November is the start of this search.
-- **890 against 882.** This file uses 3 min fights: 890 DPS in a raid. Analysis, Damage uses the 2 min wowsims test run: 882 DPS. Both use the item pool set of 15 November and commit 6084403a9. On commit 8c7b5a5f5 with the set of 12 November, evening, the values were 837 and 831. The Seal procs from the Windfury Totem strike give +6%. On commit 129fcd89e, the values were 843 and 838. The two ranged judgements and the Two-Handed Weapon Specialization fix give −0.7 to −0.9%. With all three judgements ranged, the values were 830 and 825.
+  The talent search ran on master of 1 November (commit 895cd67f9). It used earlier flags: Reverence 30% and the Holy Strike Seal trigger (C1, withdrawn on 2 November 2026). The builds and stat weights then ran again on commit ad6b13af8 with REV50 only. They use the item pool set of 18 November (Destiny, Soulforge Warboots, Counterattack Lodestone). The set of 8 November is the start of this search.
+- **914 against 905.** This file uses 3 min fights: 914 DPS in a raid. Analysis, Damage uses the 2 min wowsims test run: 905 DPS. Both use the item pool set of 18 November and commit ad6b13af8. On commit 6084403a9 with the set of 15 November, the values were 890 and 882. Destiny and Soulforge Warboots give +3%. On commit 8c7b5a5f5 with the set of 12 November, evening, the values were 837 and 831. The Seal procs from the Windfury Totem strike give +6%. On commit 129fcd89e, the values were 843 and 838. The two ranged judgements and the Two-Handed Weapon Specialization fix give −0.7 to −0.9%. With all three judgements ranged, the values were 830 and 825.
 
   With the set of 12 November on commit 52471a100, the values were 854 and 848. The Hand of Justice change of commit 129fcd89e gives −2%. With the set of 11 November, the values were 847 and 841. On commit ae9b8c23a (8 November), the values were 949 and 939. The new Windfury Totem rule of commit 9f254e8d8 gives RB1 −11% in a raid: Holy Strike and Judgement of Command do not proc Windfury. With the wowsims default set (4 November), the values were 944 and 938.
 - **Fight.** 3 min, one level 63 boss, 3,000 iterations, the same random seed for all runs.
@@ -45,13 +45,13 @@ This file gives the best damage builds on one target. It uses the live trees and
 
 | Build | Trees | Code | Raid | Fresh 60 | Change against RB1 |
 | --- | --- | --- | --- | --- | --- |
-| RS1, 12/8/31 | Live | [`b2050150001-503-15233011101301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050150001-503-15233011101301351) | 894 (+0.5%) | 303 (−2.5%) | Reverence 1, Holy Conduit 1, Pursuit of Justice 1, Precision 3, Deflection 1 |
-| RS2, 13/7/31 | Proposed | [`v6p050150002-502-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050150002-502-05233011201301351) | 890 (+0.1%) | — | Reverence 1, Precision 2 |
-| RS3, 12/8/31 | Proposed | [`v6p050050002-503-15233011101301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050050002-503-15233011101301351) | — | 302 (−2.6%) | Reverence 0, Pursuit of Justice 1, Precision 3, Deflection 1 |
+| RS1, 12/8/31 | Live | [`b2050150001-503-15233011101301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050150001-503-15233011101301351) | 915 (+0.1%) | 311 (+0.8%) | Reverence 1, Holy Conduit 1, Pursuit of Justice 1, Precision 3, Deflection 1 |
+| RS2, 13/7/31 | Proposed | [`v6p050150002-502-05233011201301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050150002-502-05233011201301351) | 916 (+0.2%) | — | Reverence 1, Precision 2 |
+| RS3, 12/8/31 | Proposed | [`v6p050050002-503-15233011101301351`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p050050002-503-15233011101301351) | — | 310 (−3.5%) | Reverence 0, Pursuit of Justice 1, Precision 3, Deflection 1 |
 
 - **Precision is the only gain in a raid.** The raid buffs fill the mana. Thus, the search moves Reverence points to Precision 3.
-- **At fresh 60, Reverence has value.** With no buffs, RB1 has no mana for 84 sec of the 3 min fight. RS1 has no mana for 93 sec.
-- **The gain is small.** +0.5% is 4 DPS. A tank or a boss with more armor can change the order. Thus, RB1 stays the main build.
+- **At fresh 60, mana limits the damage.** With no buffs, RB1 has no mana for 91 sec of the 3 min fight, and RS1 for 89 sec. With Reverence 50% (proposed), RB1 has no mana for 81 sec, and RS3 (no Reverence) for 86 sec.
+- **The gain is small.** In a raid, +0.2% is 2 DPS. At fresh 60, RS1 gives +0.8% (3 DPS). A tank or a boss with more armor can change the order. Thus, RB1 stays the main build.
 - Unyielding Faith 1 and Pursuit of Justice give no damage. They fill the rows to Unsealed Wrath (Analysis, Builds, part 4).
 
 ## 3. Stat weights
@@ -60,22 +60,22 @@ Each stat + a small amount (20 Strength, Agility or Intellect, 40 spell damage o
 
 | Stat | Live, raid | Proposed, raid | Live, fresh 60 |
 | --- | --- | --- | --- |
-| DPS for 1 Strength | 0.49 | 0.49 | 0.22 |
+| DPS for 1 Strength | 0.48 | 0.48 | 0.22 |
 | Strength | 1.00 | 1.00 | 1.00 |
-| Agility | 0.70 | 0.70 | 0.61 |
-| Intellect | 0.59 | 0.60 | 1.25 |
-| Spell damage | 0.78 | 0.78 | 0.83 |
-| Attack Power | 0.42 | 0.42 | 0.45 |
-| Hit rating | 0.12 | 0.10 | 0.09 |
-| Crit rating | 0.99 | 1.01 | 0.95 |
-| Haste rating | 1.36 | 1.38 | 0.32 |
-| Expertise rating | 2.31 | 2.33 | 1.45 |
+| Agility | 0.75 | 0.75 | 0.65 |
+| Intellect | 0.60 | 0.60 | 1.93 |
+| Spell damage | 0.80 | 0.80 | 0.80 |
+| Attack Power | 0.42 | 0.41 | 0.45 |
+| Hit rating | 0.40 | 0.40 | 0.05 |
+| Crit rating | 1.06 | 1.07 | 0.98 |
+| Haste rating | 0.88 | 0.88 | −0.60 |
+| Expertise rating | 2.27 | 2.32 | 1.72 |
 
 - **Expertise rating** has the most value for each point in a raid: 2.3 Strength.
 - **Spell damage is 0.8 Strength.** Seals, Judgements, Holy Strike and Consecration use spell damage.
-- **Haste rating has more value since commit 6084403a9.** Haste rating is 1.4 Strength (13 November: 1.0; all three judgements ranged: 0.7; 129fcd89e: 0.9; 52471a100: 1.3; 11 November: 1.8). More swings give more Windfury Totem strikes, and each Windfury strike now procs the Seal. Since commit 9f254e8d8, Windfury Totem procs from auto attacks, not from Holy Strike.
-- **Hit rating has little value in this set.** It is 0.1 Strength (13 November: 0.6; all three ranged: 0.2; 52471a100: 0.4; 11 November: 1.0). The value changes much from one commit and set to the next. The cause of this change is not known.
-- **At fresh 60, mana limits the damage.** Intellect is 1.3 Strength (13 November: 1.2; 129fcd89e: 1.6) and Expertise rating 1.5 Strength. Hit rating has little value (0.1 Strength). Haste rating is 0.3 Strength (13 November: 0.4; all three judgements ranged: 0.7; 52471a100: 0.9; 11 November: −0.27). The fresh 60 weights change much from one set to the next. With the wowsims default set, Haste rating was 2.3 Strength.
+- **Haste rating is 0.9 Strength** (15 November: 1.4; 13 November: 1.0; all three judgements ranged: 0.7; 129fcd89e: 0.9; 52471a100: 1.3; 11 November: 1.8). More swings give more Windfury Totem strikes, and each Windfury strike procs the Seal (since commit 6084403a9). Since commit 9f254e8d8, Windfury Totem procs from auto attacks, not from Holy Strike.
+- **Hit rating has little value in this set.** It is 0.4 Strength (15 November: 0.1; 13 November: 0.6; all three ranged: 0.2; 52471a100: 0.4; 11 November: 1.0). The value changes much from one commit and set to the next. The cause of this change is not known.
+- **At fresh 60, mana limits the damage.** Intellect is 1.9 Strength (15 November: 1.3; 13 November: 1.2; 129fcd89e: 1.6) and Expertise rating 1.7 Strength. Hit rating has almost no value (0.05 Strength). Haste rating decreases the damage: −0.6 Strength (15 November: 0.3; 13 November: 0.4; all three judgements ranged: 0.7; 52471a100: 0.9; 11 November: −0.27). The fresh 60 weights change much from one set to the next. With the wowsims default set, Haste rating was 2.3 Strength.
 
 ## 4. Limits
 

@@ -1,0 +1,12 @@
+REF {"tps": 2680.2273821225813, "dps": 531.2355829224686, "dtps": 383.27255513979367, "tmi": 40.01150441570108}
+BASE 0.9774 {"tps": 2436.231088133226, "dps": 481.6522665410433, "dtps": 354.08181530871246, "tmi": 37.04052690171635}
+PASS 0
+SLOT 1 Artifact Seeker's Pendant -> Horn of Ve'han 275736 61 [] 0.9774 -> 0.9812
+SLOT 3 Shifting Cloak -> Cloak of Warding 18413 62 [] 0.9812 -> 0.9874
+PASS 1
+SLOT 2 Warden's Leather Shoulders -> Death's Clutch 14503 62 [] 0.9874 -> 0.9903
+PASS 2
+FINAL old {"tps": 2438.9974588604373, "dps": 482.0950254824832, "dtps": 354.5043334291059, "tmi": 37.08738914322401} 0.9775
+FINAL new {"tps": 2453.7957670007318, "dps": 486.5749422685391, "dtps": 346.8374482227547, "tmi": 36.673134803071235} 0.9886
+SET [252485, 275736, 14503, 18413, 252483, 252541, 226802, 272396, 15065, 226803, 12544, 15855, 18537, 10418, 18531, 0, 0]
+SETNAMES Warbear Helm ; Horn of Ve'han ; Death's Clutch ; Cloak of Warding ; Dawn Armor ; Warden's Leather Bracers ; Feralheart Grips ; Shifter's Belt ; Warbear Woolies ; Feralheart Treads ; Thrall's Resolve ; Ring of Protection ; Counterattack Lodestone ; Glimmering Mithril Insignia ; Unyielding Maul ; - ; -

@@ -1,22 +1,9 @@
-REF {"tps": 1721.5235469626148, "dps": 528.3159358322638, "dtps": 297.3196683739401, "tmi": 49.0273568542277}
-BASE 1.0945 {"tps": 1589.5228631954633, "dps": 480.2125467975059, "dtps": 281.11786364917367, "tmi": 36.062281926949794}
+REF {"tps": 1785.097576139894, "dps": 548.2404431661191, "dtps": 297.2002148543838, "tmi": 37.96434556233243}
+BASE 1.1686 {"tps": 1603.389529652122, "dps": 499.1400588279555, "dtps": 253.30483918110332, "tmi": 24.904880794147015}
 PASS 0
-SLOT 0 Lionheart Helm -> Faceguard of Heroism 226869 60 [] 1.0945 -> 1.114
-SLOT 1 Horn of Ve'han -> Talisman of Evasion 13177 60 [] 1.114 -> 1.1212
-SLOT 2 Stoneform Shoulders -> Spaulders of Valor 16733 60 [] 1.1212 -> 1.1301
-SLOT 6 Force Imbued Gauntlets -> Handguards of Heroism 226870 55 [] 1.1301 -> 1.1352
-SLOT 7 Sentinel's Waistguard -> Valiant's Waistguard 272403 60 [] 1.1352 -> 1.1431
-SLOT 8 Wraithplate Leggings -> Cloudkeeper Legplates 14554 62 [] 1.1431 -> 1.1461
-SLOT 9 Furbolg Berserker's Boots -> Sabatons of Heroism 226871 60 [] 1.1461 -> 1.1613
-SLOT 10 Ring of Saviors -> Myrmidon's Signet 2246 58 [] 1.1613 -> 1.1729
-SLOT 11 Naglering -> Ouroboros Ring 260216 62 [] 1.1729 -> 1.1762
-SLOT 13 Volunteer's Lucky Seal -> Royal Seal of Eldre'Thalas 18466 62 [] 1.1762 -> 1.1917
-SLOT 14 Scarlet Kris -> Krol Blade 2244 56 [] 1.1917 -> 1.2044
+SLOT 11 Naglering -> Ezra's Seal of Authenticity 276396 59 [] 1.1686 -> 1.1716
 PASS 1
-SLOT 5 Sentinel's Wristguards -> Vigorsteel Vambraces 13951 62 [] 1.2044 -> 1.207
-SLOT 11 Ouroboros Ring -> Naglering 11669 59 [] 1.207 -> 1.2095
-PASS 2
-FINAL old {"tps": 1590.1868244250124, "dps": 480.14087662589264, "dtps": 281.98393672042306, "tmi": 36.249389511975515} 1.0915
-FINAL new {"tps": 1540.526527430118, "dps": 480.41335044143864, "dtps": 254.58064674849575, "tmi": 29.50300173090463} 1.2068
-SET [226869, 13177, 16733, 18511, 226872, 13951, 226870, 272403, 14554, 226871, 2246, 11669, 14557, 18466, 2244, 18696, 13023]
-SETNAMES Faceguard of Heroism ; Talisman of Evasion ; Spaulders of Valor ; Shifting Cloak ; Chestguard of Heroism ; Vigorsteel Vambraces ; Handguards of Heroism ; Valiant's Waistguard ; Cloudkeeper Legplates ; Sabatons of Heroism ; Myrmidon's Signet ; Naglering ; The Lion Horn of Stormwind ; Royal Seal of Eldre'Thalas ; Krol Blade ; Intricately Runed Shield ; Eaglehorn Long Bow
+FINAL old {"tps": 1604.8383576853284, "dps": 499.67770696532534, "dtps": 254.2843452660877, "tmi": 24.9120727922926} 1.1674
+FINAL new {"tps": 1609.589054422166, "dps": 500.93473810657764, "dtps": 254.1085316296141, "tmi": 24.86430427535421} 1.1696
+SET [226869, 13177, 16733, 18511, 226872, 13951, 226870, 272403, 14554, 226871, 2246, 276396, 14557, 18466, 2244, 18696, 13023]
+SETNAMES Faceguard of Heroism ; Talisman of Evasion ; Spaulders of Valor ; Shifting Cloak ; Chestguard of Heroism ; Vigorsteel Vambraces ; Handguards of Heroism ; Valiant's Waistguard ; Cloudkeeper Legplates ; Sabatons of Heroism ; Myrmidon's Signet ; Ezra's Seal of Authenticity ; The Lion Horn of Stormwind ; Royal Seal of Eldre'Thalas ; Krol Blade ; Intricately Runed Shield ; Eaglehorn Long Bow

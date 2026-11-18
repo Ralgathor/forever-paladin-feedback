@@ -26,7 +26,7 @@ func TestFeedbackRun(t *testing.T) {
 	player := &proto.Player{
 		Name: "Prot", Race: proto.Race_RaceHuman, Class: proto.Class_ClassPaladin,
 		Equipment:     feedbackItems(core.GetGearSet("../../../ui/specs/paladin/protection/gear_sets", "default").GearSet),
-		Consumables:   feedbackConsumables(),
+		Consumables:   feedbackConsumes(),
 		TalentsString: talents,
 		Spec:          DefaultOptions,
 		Rotation:      core.GetAplRotation("../../../ui/specs/paladin/protection/apls", feedbackApl()).Rotation,
@@ -62,6 +62,7 @@ func TestFeedbackRun(t *testing.T) {
 	}
 	raid := core.SinglePlayerRaidProto(player, core.FullPartyBuffs, core.FullRaidBuffs, core.FullDebuffs)
 	raid.Tanks = append(raid.Tanks, &proto.UnitReference{Type: proto.UnitReference_Player, Index: 0})
+	feedbackPrintStats(raid)
 	rsr := &proto.RaidSimRequest{Raid: raid, Encounter: enc, SimOptions: &proto.SimOptions{Iterations: feedbackIter(), RandomSeed: 101}}
 	if os.Getenv("FEEDBACK_BURST") != "" {
 		enc.DurationVariation = 0 // the burst windows need the same fight length
@@ -226,4 +227,56 @@ func feedbackConsumables() *proto.ConsumesSpec {
 		ElixirIds: []int32{250350, 13454, 13452, 13445, 250329},
 		ExtraIds:  []int32{10646, 17048}, // Goblin Sapper Charge, Rumsey Rum
 	}
+}
+
+// feedbackConsumes: the consumables of the tank test.
+// FEEDBACK_CONSUMES: "" (the sets of 4 to 16 November: the Paladin has its tank consumables, the Warrior and the Druid
+// the consumables of their wowsims tests), "full" (the full threat set of 17 November, the same rules for the three tanks),
+// "default" (the wowsims test consumables only). FEEDBACK_CONSUMES_JSON: a ConsumesSpec as JSON, in place of all these.
+// FEEDBACK_STATS=1 prints the final stats of the tank.
+func feedbackConsumes() *proto.ConsumesSpec {
+	if v := os.Getenv("FEEDBACK_CONSUMES_JSON"); v != "" {
+		c := &proto.ConsumesSpec{}
+		if err := protojson.Unmarshal([]byte(v), c); err != nil {
+			panic(err)
+		}
+		return c
+	}
+	switch os.Getenv("FEEDBACK_CONSUMES") {
+	case "default":
+		return DefaultConsumables
+	case "full":
+		return feedbackFullConsumes
+	}
+	return feedbackConsumables()
+}
+
+func feedbackPrintStats(raid *proto.Raid) {
+	if os.Getenv("FEEDBACK_STATS") == "" {
+		return
+	}
+	res := core.ComputeStats(&proto.ComputeStatsRequest{Raid: raid})
+	st := res.RaidStats.Parties[0].Players[0].FinalStats.Stats
+	fmt.Printf("STATS str=%.0f agi=%.0f sta=%.0f int=%.0f sp=%.0f holy=%.0f ap=%.0f hit=%.1f crit=%.1f def=%.0f armor=%.0f bv=%.0f\n",
+		st[proto.Stat_StatStrength], st[proto.Stat_StatAgility], st[proto.Stat_StatStamina], st[proto.Stat_StatIntellect],
+		st[proto.Stat_StatSpellDamage], st[proto.Stat_StatHolyDamage], st[proto.Stat_StatAttackPower], st[proto.Stat_StatHitRating],
+		st[proto.Stat_StatCritRating], st[proto.Stat_StatDefenseRating], st[proto.Stat_StatArmor], st[proto.Stat_StatBlockValue])
+}
+
+// feedbackFullConsumes: the full threat set of 17 November 2026. The same rules for the three tanks: one flask, one food,
+// one potion, one weapon oil or stone, all elixirs that stack, Juju Power and Juju Might, R.O.I.D.S., Dragonbreath Chili,
+// an explosive, Rumsey Rum and a Major Healthstone. Each tank takes the item of each kind that gives it the most threat.
+// The Paladin choices: Flask of Supreme Power (+150 spell damage), Lobster Stew (+28 spell damage), Major Spellblasting
+// Potion, Brilliant Wizard Oil and Elixir of Holy Power (+40 Holy damage). Juju Might replaces Winterfall Firewater: the two do not stack.
+var feedbackFullConsumes = &proto.ConsumesSpec{
+	FlaskId:        13512,  // Flask of Supreme Power
+	FoodId:         13933,  // Lobster Stew
+	OffensivePotId: 250937, // Major Spellblasting Potion
+	MhImbueId:      20749,  // Brilliant Wizard Oil
+	ExplosiveId:    260817, // EZ-Thro Dark Bomb
+	ConjuredId:     9421,   // Major Healthstone
+	// Elixir of Ferocity, Greater Arcane Elixir, Elixir of the Mongoose, Elixir of Greater Defense, Elixir of the Phalanx, Elixir of Holy Power
+	ElixirIds: []int32{250350, 13454, 13452, 13445, 250329, 21546},
+	// Goblin Sapper Charge, Rumsey Rum, Juju Power, Juju Might, R.O.I.D.S., Dragonbreath Chili
+	ExtraIds: []int32{10646, 17048, 12451, 12460, 8410, 12217},
 }

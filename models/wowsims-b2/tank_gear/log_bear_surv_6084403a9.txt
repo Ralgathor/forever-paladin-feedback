@@ -1,0 +1,12 @@
+REF {"tps": 2680.2273821225813, "dps": 531.2355829224686, "dtps": 383.27255513979367, "tmi": 40.01150441570108}
+BASE 1.0267 {"tps": 2320.746601474631, "dps": 457.96573743519866, "dtps": 336.9225089098343, "tmi": 35.4001578499884}
+PASS 0
+SLOT 3 Shifting Cloak -> Cloak of Warding 18413 62 [] 1.0267 -> 1.0398
+SLOT 4 Dawn Armor -> Songbird Blouse 13378 58 [] 1.0398 -> 1.0448
+SLOT 7 Shifter's Belt -> Dinosaur Hide Belt 287040 61 [] 1.0448 -> 1.0562
+SLOT 9 Warden's Leather Boots -> Feralheart Treads 226803 60 [] 1.0562 -> 1.0614
+PASS 1
+FINAL old {"tps": 2319.223568816446, "dps": 457.4376806261746, "dtps": 336.62678462801455, "tmi": 35.33254196298546} 1.0274
+FINAL new {"tps": 2232.3928374719917, "dps": 439.0176042171024, "dtps": 331.2772841851213, "tmi": 31.44995781699959} 1.0619
+SET [252485, 277202, 252536, 18413, 13378, 252541, 226802, 287040, 11821, 226803, 12544, 15855, 10418, 14557, 18531, 0, 0]
+SETNAMES Warbear Helm ; Artifact Seeker's Pendant ; Warden's Leather Shoulders ; Cloak of Warding ; Songbird Blouse ; Warden's Leather Bracers ; Feralheart Grips ; Dinosaur Hide Belt ; Warstrife Leggings ; Feralheart Treads ; Thrall's Resolve ; Ring of Protection ; Glimmering Mithril Insignia ; The Lion Horn of Stormwind ; Unyielding Maul ; - ; -
