@@ -1,0 +1,14 @@
+REF {"tps": 1055.162771239485, "dps": 443.0844388345697, "dtps": 289.5719011418791, "tmi": 43.778992612608484}
+BASE 1.0016 {"tps": 1102.1789851682436, "dps": 443.5150042200962, "dtps": 302.8744421494871, "tmi": 44.23163697084195}
+PASS 0
+SLOT 0 Stalwart Helm -> Enriched Thorium Helm 250597 63 [] 1.0016 -> 1.0129
+SLOT 3 Cloak of Warding -> Shifting Cloak 18511 62 [] 1.0129 -> 1.0181
+SLOT 4 Enriched Thorium Breastplate -> Soulforge Chestguards 226992 60 [] 1.0181 -> 1.0314
+SLOT 5 Lightforge Bracers -> Vigorsteel Vambraces 13951 62 [] 1.0314 -> 1.038
+SLOT 7 Sentinel's Waistguard -> Warder's Waistguard 250573 55 [] 1.038 -> 1.0412
+SLOT 8 Cloudkeeper Legplates -> Enriched Thorium Leggings 250596 63 [] 1.0412 -> 1.0449
+PASS 1
+FINAL old {"tps": 1102.3715567685897, "dps": 443.6583656675673, "dtps": 302.0906701340306, "tmi": 43.94502562384435} 1.0043
+FINAL new {"tps": 1078.8253986153036, "dps": 431.86503856849555, "dtps": 293.90996632290216, "tmi": 39.097335587327834} 1.0405
+SET [250597, 275736, 14552, 18511, 226992, 13951, 18383, 250573, 250596, 250563, 11669, 2246, 14557, 15873, 2243, 12602, 228175]
+SETNAMES Enriched Thorium Helm ; Horn of Ve'han ; Stockade Pauldrons ; Shifting Cloak ; Soulforge Chestguards ; Vigorsteel Vambraces ; Force Imbued Gauntlets ; Warder's Waistguard ; Enriched Thorium Leggings ; Warder's Sabatons ; Naglering ; Myrmidon's Signet ; The Lion Horn of Stormwind ; Ragged John's Neverending Cup ; Hand of Edward the Odd ; Draconian Deflector ; Libram of Holy Alacrity

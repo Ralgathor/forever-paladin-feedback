@@ -1,0 +1,20 @@
+REF {"tps": 1721.5235469626148, "dps": 528.3159358322638, "dtps": 297.3196683739401, "tmi": 49.0273568542277}
+BASE 1.0412 {"tps": 1678.4528363521165, "dps": 507.08263325803284, "dtps": 294.53695445766056, "tmi": 38.09416586660753}
+PASS 0
+SLOT 2 Stoneform Shoulders -> Lightforge Spaulders 16729 60 [] 1.0412 -> 1.0526
+SLOT 3 Phantasmal Cloak -> Stoneskin Gargoyle Cape 13397 62 [] 1.0526 -> 1.0572
+SLOT 5 Sentinel's Wristguards -> Gargantuan Wristguards 280010 63 [] 1.0572 -> 1.0602
+SLOT 6 Force Imbued Gauntlets -> Handguards of Heroism 226870 55 [] 1.0602 -> 1.0625
+SLOT 7 Sentinel's Waistguard -> Valiant's Waistguard 272403 60 [] 1.0625 -> 1.0723
+SLOT 11 Naglering -> Myrmidon's Signet 2246 58 [] 1.0723 -> 1.0814
+SLOT 12 The Lion Horn of Stormwind -> Royal Seal of Eldre'Thalas 18466 62 [] 1.0814 -> 1.0887
+SLOT 13 Volunteer's Lucky Seal -> The Lion Horn of Stormwind 14557 63 [] 1.0887 -> 1.0953
+SLOT 14 Scarlet Kris -> Ironfoe 11684 60 [] 1.0953 -> 1.103
+PASS 1
+SLOT 4 Chestguard of Heroism -> Breastplate of Heroism 226862 60 [] 1.103 -> 1.1069
+SLOT 8 Cloudkeeper Legplates -> Legplates of Valor 16732 61 [] 1.1069 -> 1.1118
+PASS 2
+FINAL old {"tps": 1677.48997084911, "dps": 506.99754096953416, "dtps": 295.6521646058949, "tmi": 38.22155923189962} 1.0394
+FINAL new {"tps": 1838.0483401805823, "dps": 575.9905654733307, "dtps": 293.6155117198998, "tmi": 37.27363128832026} 1.1107
+SET [12640, 275736, 16729, 13397, 226862, 280010, 226870, 272403, 16732, 287033, 17713, 2246, 18466, 14557, 11684, 1168, 280020]
+SETNAMES Lionheart Helm ; Horn of Ve'han ; Lightforge Spaulders ; Stoneskin Gargoyle Cape ; Breastplate of Heroism ; Gargantuan Wristguards ; Handguards of Heroism ; Valiant's Waistguard ; Legplates of Valor ; Furbolg Berserker's Boots ; Blackstone Ring ; Myrmidon's Signet ; Royal Seal of Eldre'Thalas ; The Lion Horn of Stormwind ; Ironfoe ; Skullflame Shield ; Deep Jungle Rifle

@@ -1,0 +1,16 @@
+# Consumable checks of 18 November 2026 (Analysis, Threat, part 6). wowsims Forever master ad6b13af8 (hotfixes of 16 and 17 November), item pool sets of 18 November, 3 min, 1,000 iterations. Full set, then one change at a time. The tests of each item on 17 November: logs/consumables_6084403a9.log.
+P full                         tps=1384.0 dtps=291.7 | str=323 agi=277 sta=474 int=156 sp=462 holy=40 ap=1073 hit=45.0 crit=0.0 def=86 armor=8742 bv=40
+P oil->Elemental Stone         tps=1362.7 dtps=291.9 | str=323 agi=277 sta=474 int=156 sp=426 holy=40 ap=1073 hit=45.0 crit=0.0 def=86 armor=8742 bv=40
+P flask Titans                 tps=1254.3 dtps=294.4 | str=323 agi=277 sta=474 int=156 sp=312 holy=40 ap=1073 hit=45.0 crit=0.0 def=86 armor=8742 bv=40
+P food Dumplings               tps=1366.6 dtps=292.0 | str=347 agi=277 sta=474 int=156 sp=434 holy=40 ap=1121 hit=45.0 crit=0.0 def=86 armor=8742 bv=40
+P pot Frenzy                   tps=1374.4 dtps=291.9 | str=323 agi=277 sta=474 int=156 sp=462 holy=40 ap=1073 hit=45.0 crit=0.0 def=86 armor=8742 bv=40
+P -Juju Might +Winterfall      tps=1383.3 dtps=291.7 | str=323 agi=277 sta=474 int=156 sp=462 holy=40 ap=1068 hit=45.0 crit=0.0 def=86 armor=8742 bv=40
+P +Flask Titans no SP: no flask tps=1254.6 dtps=294.3 | str=323 agi=277 sta=474 int=156 sp=312 holy=40 ap=1073 hit=45.0 crit=0.0 def=86 armor=8742 bv=40
+W full                         tps=1911.2 dtps=292.8 | str=443 agi=330 sta=465 int=100 sp=33 holy=0 ap=1392 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+W dense stone                  tps=1886.1 dtps=292.9 | str=443 agi=330 sta=465 int=100 sp=33 holy=0 ap=1392 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+W no flask                     tps=1909.9 dtps=293.3 | str=443 agi=330 sta=465 int=100 sp=33 holy=0 ap=1392 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+W -Winterfall                  tps=1914.0 dtps=292.8 | str=443 agi=330 sta=465 int=100 sp=33 holy=0 ap=1397 hit=75.0 crit=28.0 def=47 armor=8838 bv=100
+D full                         tps=2568.9 dtps=316.4 | str=325 agi=303 sta=516 int=177 sp=33 holy=0 ap=1216 hit=28.0 crit=0.0 def=40 armor=14066 bv=0
+D -Winterfall                  tps=2573.3 dtps=316.4 | str=325 agi=303 sta=516 int=177 sp=33 holy=0 ap=1221 hit=28.0 crit=0.0 def=40 armor=14066 bv=0
+D food Dirge                   tps=2530.5 dtps=316.2 | str=303 agi=303 sta=549 int=177 sp=33 holy=0 ap=1172 hit=28.0 crit=0.0 def=40 armor=14066 bv=0
+D Scorpok                      tps=2544.2 dtps=310.1 | str=298 agi=331 sta=516 int=177 sp=33 holy=0 ap=1162 hit=28.0 crit=0.0 def=40 armor=14122 bv=0

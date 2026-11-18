@@ -16,25 +16,25 @@ This folder gives the best build and the stat weights of each spec. It uses the 
 | --- | --- | --- | --- | --- |
 | Holy | Healing each sec, raid, 5 min | 728 | 479 | +52% |
 | Holy | Healing each sec, one tank, 5 min | 658 | 568 | +16% |
-| Protection | Threat each sec | 1,460 | 1,409 | +3.6% |
-| Protection | Damage taken each sec | 266 | 290 | −8% |
-| Protection | TMI (lower is better) | 37.9 | 45.4 | −16% |
-| Retribution | DPS, raid | 890 | 890 | 0% |
-| Retribution | DPS, fresh 60 | 310 | 310 | −0.1% |
-| Shockadin | DPS, raid | 819 | 819 | 0% |
-| Shockadin | DPS, fresh 60 | 285 | 279 | +2.1% |
+| Protection | Threat each sec | 1,444 | 1,395 | +3.5% |
+| Protection | Damage taken each sec | 262 | 285 | −8% |
+| Protection | TMI (lower is better) | 35.9 | 42.8 | −16% |
+| Retribution | DPS, raid | 914 | 914 | 0% |
+| Retribution | DPS, fresh 60 | 321 | 309 | +4.0% |
+| Shockadin | DPS, raid | 818 | 818 | 0% |
+| Shockadin | DPS, fresh 60 | 284 | 279 | +2.0% |
 
 - **Holy.** Light's Vigil (C-H7) gives the raid healing. Oath of Light 30% (C-H8) gives the one-tank healing. Reverence 50% (C-H1) gives +5–9% healing, more in long fights. HB2 takes Devoted Sacrifice (C-P11) with the free points.
 - **Protection.** Redoubt (C-P1) removes almost all crushing blows and adds threat with more Holy Shield blocks. Since commit 3633d376a (11 November), wowsims applies the block proc of Argent Defender only on a proc. Thus, the live builds have less block than on 9 November, and the gain is larger. Righteous Fury (C25) multiplies all threat by 1.42.
-- **Retribution.** Reverence 50% (C-H1) gives −0.1% at fresh 60 with the item pool set of 15 November on commit 6084403a9. Earlier values: 8c7b5a5f5 −0.5%, all three judgements ranged −0.2%, 129fcd89e +0.1%, set of 12 November on 52471a100 +1.0%, set of 11 November −0.9%. In a raid, the proposed and live trees give the same damage. The 890 DPS use 3 min fights. Analysis, Damage gives 882 DPS with the 2 min wowsims test run.
+- **Retribution.** Reverence 50% (C-H1) gives +4.0% at fresh 60 with the item pool set of 18 November on commit ad6b13af8. Earlier values: 6084403a9 −0.1%, 8c7b5a5f5 −0.5%, all three judgements ranged −0.2%, 129fcd89e +0.1%, set of 12 November on 52471a100 +1.0%, set of 11 November −0.9%. In a raid, the proposed and live trees give the same damage. The 914 DPS use 3 min fights. Analysis, Damage gives 905 DPS with the 2 min wowsims test run.
 
-  Commit 6084403a9 (15 November) gives RB1 +6%: the Seals now proc from the Windfury Totem strike. The ranged Judgement of Righteousness and Judgement of Fury (hotfixes of 11 November) and the Two-Handed Weapon Specialization fix give RB1 −0.7 to −0.9%. Judgement of Command is melee again (late hotfix of 13 November). With all three judgements ranged, the loss was −1.5%. The Hand of Justice change of commit 129fcd89e gives RB1 −2%. The new Windfury Totem rule of 9 November gives RB1 −11% in a raid.
-- **Shockadin.** SB1 is 92% of RB1 in a raid, with the item pool Shockadin set (13 November: 97%; 8 November: 89%). The Windfury Totem strike gives RB1 more Seal procs than SB1. Reverence 50% (C-H1) gives +2.1% at fresh 60 with the set of 11 November on commit 6084403a9 (129fcd89e: +0.3%; set of 9 November: +8.0%). Light's Vigil (C-H7) gives a build with 31 Holy points +8.8%, but this build stays 11% below SB1.
+  Commit ad6b13af8 (18 November) and the new set with Destiny give RB1 +2.8%. Commit 6084403a9 (15 November) gives RB1 +6%: the Seals now proc from the Windfury Totem strike. The ranged Judgement of Righteousness and Judgement of Fury (hotfixes of 11 November) and the Two-Handed Weapon Specialization fix give RB1 −0.7 to −0.9%. Judgement of Command is melee again (late hotfix of 13 November). With all three judgements ranged, the loss was −1.5%. The Hand of Justice change of commit 129fcd89e gives RB1 −2%. The new Windfury Totem rule of 9 November gives RB1 −11% in a raid.
+- **Shockadin.** SB1 is 89% of RB1 in a raid, with the item pool Shockadin set (15 November: 92%; 13 November: 97%; 8 November: 89%). The Windfury Totem strike gives RB1 more Seal procs than SB1, and Destiny gives RB1 more damage. Reverence 50% (C-H1) gives +2.0% at fresh 60 with the set of 11 November on commit ad6b13af8 (6084403a9: +2.1%; 129fcd89e: +0.3%; set of 9 November: +8.0%). Light's Vigil (C-H7) gives a build with 31 Holy points +10.3%, but this build stays 9% below SB1.
 
 ## Common rules
 
 - **Codes.** All build codes load with 51 points. The level-up codes show the points at a lower level. A code that starts with `v6p` opens the proposed trees. A code that starts with `b2` opens the live trees.
-- **Sim.** wowsims Forever, master of 15 November 2026 (commit 6084403a9, hotfixes of 15 November, client 1.60.1.70938). Judgement of Righteousness and Judgement of Fury are ranged attacks, as in the hotfixes of 11 November. Judgement of Command is a melee attack, as in the late hotfix of 13 November. wowsims now has these rules itself. The proposals are flags (`models/wowsims-b2`). 3 min, one level 63 boss, 3,000 iterations.
+- **Sim.** wowsims Forever, master of 18 November 2026 (commit ad6b13af8, hotfixes of 16 and 17 November). Judgement of Righteousness and Judgement of Fury are ranged attacks, as in the hotfixes of 11 November. Judgement of Command is a melee attack, as in the late hotfix of 13 November. wowsims now has these rules itself. The proposals are flags (`models/wowsims-b2`). 3 min, one level 63 boss, 3,000 iterations.
 - **Gear.** The item pool sets, the same item pool as Analysis, Damage and Threat (no raid, PvP, Zul'Gurub, Ahn'Qiraj or Revered and Exalted reputation items, item level 63 or lower): [Protection Paladin](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-pool-protection-paladin.html), [Retribution](https://ralgathor.github.io/forever-paladin-feedback/sets/build-retribution.html) and [Shockadin](https://ralgathor.github.io/forever-paladin-feedback/sets/build-shockadin.html). The talent search ran with the wowsims default sets. Level-up uses leveling gear (level-up.md).
 - **Holy.** wowsims Forever has no Holy healing sim. The Holy values come from the healing model (`models/beta-30-oct/healing_b2.py`), with 175% critical heals (Holy Power 5/5, main hypothesis).
 - **Stat weights.** Each stat changes by a small amount, with the same random seed for all runs. The reference stat is 1.00: healing power for Holy, Strength for Retribution, spell damage for the Shockadin. For Protection, the table gives the change for each point.
@@ -42,8 +42,8 @@ This folder gives the best build and the stat weights of each spec. It uses the 
 
 ## Sources
 
-- Damage and tank: talent search in wowsims Forever (commit 895cd67f9, default sets). Builds and stat weights again on commit 6084403a9 with the item pool sets. Scripts and logs in `models/wowsims-b2` (`search.py`, `finals.py`, `logs/finals.log`).
-- Shockadin: talent search in wowsims Forever (commit 6ee3c30f35, wowsims Holy Shock set). The builds and stat weights ran again on commit 6084403a9, with the item pool set and the Light's Vigil flag CH7 (`search.py`, `finals.py shock`, `logs/finals_shock.log`).
+- Damage and tank: talent search in wowsims Forever (commit 895cd67f9, default sets). Builds and stat weights again on commit ad6b13af8 with the item pool sets. Scripts and logs in `models/wowsims-b2` (`search.py`, `finals.py`, `logs/finals.log`).
+- Shockadin: talent search in wowsims Forever (commit 6ee3c30f35, wowsims Holy Shock set). The builds and stat weights ran again on commit ad6b13af8, with the item pool set and the Light's Vigil flag CH7 (`search.py`, `finals.py shock`, `logs/finals_shock.log`).
 - Healer: healing model and stat weights (`models/beta-30-oct/holy_builds_b2.py`).
 - Level-up: wowsims Forever (commit 895cd67f9), live talents (`models/wowsims-b2/levelup.py`).
 - The earlier files (trees of 18 October, calculator version 5) are in the history of the repository.
