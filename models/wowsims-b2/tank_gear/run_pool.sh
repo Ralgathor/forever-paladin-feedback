@@ -23,6 +23,13 @@ cp "$D/go/feedback_run_test.go" "$W/sim/paladin/retribution/feedback_run_test.go
 ids() { python3 -c "import json,sys;print(','.join(map(str,json.load(open(sys.argv[1])))))" "$D/tank_gear/$1"; }
 IR=$(python3 -c "import json,sys;print(','.join(str(x.get('id',0)) for x in json.load(open(sys.argv[1]))['items']))" "$D/matched_gear/set_Retribution.json")
 IP=$(ids set_prot$V.json); IW=$(ids set_war$V.json); ID=$(ids set_bear$V.json)
+# 18 November 2026: the same enchant rules for the three tanks and Retribution (matched_gear/enchants_fair.json) (search_enchants.py, enchants_<tank>[_surv].json).
+# FEEDBACK_ENCHANTS=default keeps the enchants of the default sets (the runs before 18 November, evening).
+EP=""; EW=""; ED=""; ER=""
+if [ "$FEEDBACK_ENCHANTS" != default ]; then EP=$(ids enchants_prot$V.json); EW=$(ids enchants_war$V.json); ED=$(ids enchants_bear$V.json)
+  ER=$(python3 -c "import json,sys;e=json.load(open(sys.argv[1]))['Retribution'];print(','.join(str(e.get(str(s),0)) for s in range(17)))" "$D/matched_gear/enchants_fair.json"); fi
+# The survival sets take Greater Stoneshield Potion (FEEDBACK_CONSUMES=fullsurv), the same for the three tanks.
+CM="$FEEDBACK_CONSUMES"; [ "$CM" = full ] && [ -n "$V" ] && CM=fullsurv
 C=$(git -C "$W" rev-parse --short=9 HEAD)
 F=""; [ "$FEEDBACK_CONSUMES" = full ] && F="_full"
 OUT="$D/logs/checks_${C}_pool$V$F.log"
@@ -35,15 +42,15 @@ J="PWDR"; [ -n "$V$F" ] && J="PWD"
 grep "^### [$J] " "$D/logs/checks_8298ab833.log" | while IFS= read -r line; do
   t=$(echo "$line" | sed 's/^### \(.\) | .*/\1/'); e=$(echo "$line" | sed 's/^### . | //')
   case $t in
-    P) b=/tmp/prottest; dir=sim/paladin/protection; r=TestFeedbackRun; I=$IP;;
-    W) b=/tmp/wartest; dir=sim/warrior/protection; r=TestFeedbackRun; I=$IW;;
-    R) b=/tmp/bin/rettest; dir=sim/paladin/retribution; r=TestFeedbackRun; I=$IR;;
-    D) b=/tmp/beartest; dir=sim/druid/feralbear; r=TestFeedbackBear; I=$ID;;
+    P) b=/tmp/prottest; dir=sim/paladin/protection; r=TestFeedbackRun; I=$IP; EN=$EP;;
+    W) b=/tmp/wartest; dir=sim/warrior/protection; r=TestFeedbackRun; I=$IW; EN=$EW;;
+    R) b=/tmp/bin/rettest; dir=sim/paladin/retribution; r=TestFeedbackRun; I=$IR; EN=$ER;;
+    D) b=/tmp/beartest; dir=sim/druid/feralbear; r=TestFeedbackBear; I=$ID; EN=$ED;;
   esac
   echo "$line" >> "$OUT"
-  (cd "$W/$dir" && env FEEDBACK_ITEMS=$I $e $b -test.run $r -test.v 2>&1 | grep -E "RESULT|TMI|PERTARGET|BURST|panic" >> "$OUT") || true
+  (cd "$W/$dir" && env FEEDBACK_ITEMS=$I FEEDBACK_ENCHANTS=$EN FEEDBACK_CONSUMES=$CM $e $b -test.run $r -test.v 2>&1 | grep -E "RESULT|TMI|PERTARGET|BURST|panic" >> "$OUT") || true
 done
 # Extra job for Analysis, Crushing blows, part 3 (normal boss, C-P1 with 4-20%, no Toughness)
 echo "### P | FEEDBACK_DUR=180 PROPOSE=CP1,RD20,NOTOUGH" >> "$OUT"
-(cd "$W/sim/paladin/protection" && env FEEDBACK_ITEMS=$IP FEEDBACK_DUR=180 PROPOSE=CP1,RD20,NOTOUGH /tmp/prottest -test.run TestFeedbackRun -test.v 2>&1 | grep -E "RESULT|TMI" >> "$OUT")
+(cd "$W/sim/paladin/protection" && env FEEDBACK_ITEMS=$IP FEEDBACK_ENCHANTS=$EP FEEDBACK_CONSUMES=$CM FEEDBACK_DUR=180 PROPOSE=CP1,RD20,NOTOUGH /tmp/prottest -test.run TestFeedbackRun -test.v 2>&1 | grep -E "RESULT|TMI" >> "$OUT")
 echo DONE >> "$OUT"

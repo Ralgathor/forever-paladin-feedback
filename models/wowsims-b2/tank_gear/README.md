@@ -137,6 +137,27 @@ Usage: `[TANK_SCORE=survival SUF=_surv] python3 search_open.py <prot|war|bear> <
 - The new Paladin threat set has 0.9% less threat, but takes 1.9% less damage and has a 6% better TMI. The new Druid threat set has 1.4% less threat and takes 4% less damage.
 - All checks and builds ran again with the new sets: `../logs/checks_ad6b13af8_pool*.log` and `../logs/finals*.log`. The search logs of 16 November have `_6084403a9` in the file name.
 
+**Enchants (18 November 2026, evening).** Before, the Paladin pool sets had no enchants (`FEEDBACK_ITEMS` kept the enchants of the default set, and the default Paladin set has none in the replaced slots). The Warrior and the Druid had the enchants of their default sets. `search_enchants.py` now sets the enchants of the six tank sets with the same rules:
+
+- An enchant must have a source in the game data.
+- No source in a raid zone, and no reputation source at Revered or Exalted. An enchant with one such source is out, also if it has other sources (for example the Zul'Gurub arcanums and shoulder enchants).
+- Phase 1 only.
+
+The search runs one slot at a time, with the score of the set (threat set or survival set), 1,000 iterations for each enchant. A candidate must beat the current enchant by more than 0.2%. Two passes at most. The results are `enchants_<tank>[_surv].json` (17 enchant ids, slot order of wowsims), the logs `log_ench_<tank>[_surv].txt`. `run_pool.sh` passes them to the tests (`FEEDBACK_ENCHANTS`, `FEEDBACK_ENCHANTS=default` for the runs without them).
+
+The same day, the Paladin and the Warrior full consumables received Gift of Arthas and the three Scrolls (Agility, Strength, Protection IV), as the Druid. The survival sets of all three tanks take Greater Stoneshield Potion (`FEEDBACK_CONSUMES=fullsurv`). The Druid threat set no longer has it.
+
+| Set | Threat / damage taken / TMI, no enchant search | With the enchants |
+| --- | --- | --- |
+| Paladin, threat | 1,383.5 / 290.6 / 43.5 | 1,471.5 / 277.7 / 38.2 |
+| Paladin, survival | 1,292.2 / 288.2 / 37.7 | 1,325.8 / 226.1 / 26.4 |
+| Warrior, threat | 1,914.0 / 292.8 / 30 | 1,931.5 / 291.4 / 30 |
+| Warrior, survival | 1,604.8 / 254.3 / 25 | 1,600.5 / 237.3 / 23 |
+| Druid, threat | 2,573.3 / 316.4 / 25.7 | 2,674.3 / 327.5 / 25.3 |
+| Druid, survival | 2,389.1 / 300.3 / 23.2 | 2,405.7 / 276.2 / 20.1 |
+
+The survival values also include Greater Stoneshield Potion for the Paladin and the Warrior. The runs without the enchant search: `../logs/checks_ad6b13af8_pool_full_no_enchants.log` and `../logs/checks_ad6b13af8_pool_surv_full_no_enchants.log`.
+
 ## Method
 
 1. Dump the request of each tank test with `FEEDBACK_DUMP` (feedback_prot_test.go, feedback_warrior_test.go, feedback_bear_test.go, `FEEDBACK_DUR=180`).
@@ -145,7 +166,7 @@ Usage: `[TANK_SCORE=survival SUF=_surv] python3 search_open.py <prot|war|bear> <
 
    After the slot search, the proc pass tests all pool items with an implemented effect in each other slot. `START=<set file>` runs only the proc pass, from that set. Each candidate runs in the full set, 1,000 iterations. The search keeps the candidate with the best score, slot by slot. The score is 40% threat, 20% damage, 20% damage taken and 20% TMI, each against the default set.
 
-   No item is used two times. The enchants do not change. An item of the default set keeps its random suffix (for example Hyperion Helm of the Warrior). The final set runs with 3,000 iterations.
+   No item is used two times. The enchants do not change in the item search (the enchant search follows, see Enchants). An item of the default set keeps its random suffix (for example Hyperion Helm of the Warrior). The final set runs with 3,000 iterations.
 4. Run `./run_pool.sh <wowsims clone>`. It runs all tank jobs of `../logs/checks_8298ab833.log` again with the new sets (`FEEDBACK_ITEMS`), on master commit ad6b13af8 (Go 1.27). The output is `../logs/checks_ad6b13af8_pool.log`. Earlier outputs:
 
    - 15 and 16 November, master commit 6084403a9: `../logs/checks_6084403a9_pool.log`

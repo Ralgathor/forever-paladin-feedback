@@ -1,0 +1,24 @@
+REMOVE 5 Enchant Bracer - Healing Power
+START [2543, 904, 0, 849, 1891, 0, 8206, 0, 2543, 1887, 0, 0, 0, 0, 1900, 0, 0] 912.4
+SLOT 0 Lionheart Helm 2543:912.4 1506:908.1 1508:907.2 0:904.2
+SLOT 1 Horn of Ve'han 856:913.2 904:912.4 0:910.9
+SLOT 3 Cape of the Black Baron 7667:913.4 247:912.4 849:912.4 0:911.4
+SLOT 4 Timbermaw Tunic 1891:912.4 8491:909.8 8488:909.4 8486:909.1 8483:908.7
+SLOT 5 Battleborn Armbraces 1885:916.7 7656:915.6 1887:915.0 904:914.5 823:914.3
+  -> none => Enchant Bracer - Superior Strength
+SLOT 6 Storm Gauntlets 2563:920.1 8207:917.8 8206:916.7 8491:915.1 8488:914.7
+  -> Enchant Gloves - Greater Agility => Enchant 2H Weapon - Lesser Strength
+SLOT 8 Pristine Scorpid Leggings 2543:920.1 1506:915.7 1508:914.8 8491:913.7 8488:913.4
+SLOT 9 Soulforge Warboots 1887:920.1 8491:919.7 8488:919.4 8486:919.0 247:918.9
+SLOT 14 Destiny 1900:920.1 8217:911.0 803:910.8 2646:904.7 2563:902.9
+SLOT 0 Lionheart Helm 2543:920.1 1506:915.7 1508:914.8 0:911.8
+SLOT 1 Horn of Ve'han 856:920.8 904:920.1 0:918.5
+SLOT 3 Cape of the Black Baron 7667:921.2 247:920.1 849:920.1 0:919.2
+SLOT 4 Timbermaw Tunic 1891:920.1 8491:917.6 8488:917.2 8486:916.8 8483:916.5
+SLOT 5 Battleborn Armbraces 1885:920.1 7656:919.1 1887:918.5 904:917.9 823:917.8
+SLOT 6 Storm Gauntlets 2563:920.1 8207:917.8 8206:916.7 8491:915.1 8488:914.7
+SLOT 8 Pristine Scorpid Leggings 2543:920.1 1506:915.7 1508:914.8 8491:913.7 8488:913.4
+SLOT 9 Soulforge Warboots 1887:920.1 8491:919.7 8488:919.4 8486:919.0 247:918.9
+SLOT 14 Destiny 1900:920.1 8217:911.0 803:910.8 2646:904.7 2563:902.9
+FINAL [2543, 904, 0, 849, 1891, 1885, 2563, 0, 2543, 1887, 0, 0, 0, 0, 1900, 0, 0]
+ENCHANTS 0:Arcanum of Rapidity | 1:Enchant Boots - Agility | 3:Enchant Cloak - Lesser Agility | 4:Enchant Chest - Greater Stats | 5:Enchant Bracer - Superior Strength | 6:Enchant 2H Weapon - Lesser Strength | 8:Arcanum of Rapidity | 9:Enchant Boots - Greater Agility | 14:Enchant Weapon - Crusader

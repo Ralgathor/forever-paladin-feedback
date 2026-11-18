@@ -1,0 +1,43 @@
+# wowsims Forever master ad6b13af8, item pool Retribution set (FEEDBACK_ITEMS) with the enchants of 18 November evening (FEEDBACK_ENCHANTS, matched_gear/enchants_fair.json). The R jobs of checks_8298ab833.log. Before: the R jobs of checks_ad6b13af8_pool.log (preset enchants).
+### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=full PROPOSE=
+RESULT dur=120 buffs=full propose="" dps=910.1 tto=472.1 oom=0.0
+### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=full PROPOSE=
+RESULT dur=300 buffs=full propose="" dps=924.8 tto=1241.0 oom=0.0
+### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=lean PROPOSE=
+RESULT dur=120 buffs=lean propose="" dps=692.3 tto=501.1 oom=0.0
+### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=lean PROPOSE=
+RESULT dur=300 buffs=lean propose="" dps=705.2 tto=389.4 oom=0.3
+### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=full PROPOSE=C1
+RESULT dur=120 buffs=full propose="C1" dps=957.8 tto=485.0 oom=0.0
+### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=full PROPOSE=SA10
+RESULT dur=120 buffs=full propose="SA10" dps=903.0 tto=472.1 oom=0.0
+### R | FEEDBACK_DUR=180 FEEDBACK_BUFFS=full PROPOSE=
+RESULT dur=180 buffs=full propose="" dps=919.0 tto=725.3 oom=0.0
+### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=full PROPOSE=UW20
+RESULT dur=120 buffs=full propose="UW20" dps=910.1 tto=608.4 oom=0.0
+### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=full PROPOSE=C1
+RESULT dur=300 buffs=full propose="C1" dps=973.6 tto=1296.1 oom=0.0
+### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=full PROPOSE=UW20
+RESULT dur=300 buffs=full propose="UW20" dps=924.4 tto=1434.8 oom=0.0
+### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=lean PROPOSE=C1
+RESULT dur=120 buffs=lean propose="C1" dps=732.0 tto=536.3 oom=0.0
+### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=lean PROPOSE=UW20
+RESULT dur=120 buffs=lean propose="UW20" dps=692.6 tto=434.1 oom=0.0
+### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=lean PROPOSE=C1
+RESULT dur=300 buffs=lean propose="C1" dps=744.3 tto=402.9 oom=0.2
+### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=lean PROPOSE=UW20
+RESULT dur=300 buffs=lean propose="UW20" dps=705.5 tto=699.4 oom=0.0
+### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=full FEEDBACK_BOOKTOTEMS=1 PROPOSE=
+RESULT dur=120 buffs=full propose="" dps=919.6 tto=472.1 oom=0.0
+### R | FEEDBACK_DUR=180 FEEDBACK_BUFFS=none PROPOSE=
+RESULT dur=180 buffs=none propose="" dps=310.9 tto=64.5 oom=90.5
+### R | FEEDBACK_DUR=180 FEEDBACK_BUFFS=none PROPOSE=REV50
+RESULT dur=180 buffs=none propose="REV50" dps=323.1 tto=72.5 oom=81.2
+### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=none PROPOSE=
+RESULT dur=300 buffs=none propose="" dps=297.5 tto=64.5 oom=185.1
+### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=none PROPOSE=REV50
+RESULT dur=300 buffs=none propose="REV50" dps=311.8 tto=72.5 oom=169.4
+### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=full PROPOSE=REV50
+RESULT dur=120 buffs=full propose="REV50" dps=910.1 tto=571.8 oom=0.0
+### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=full PROPOSE=REV50
+RESULT dur=300 buffs=full propose="REV50" dps=924.5 tto=1408.3 oom=0.0

@@ -36,27 +36,42 @@ The pure average is 905.3 (+2.0%), and Retribution 97.5%. The search ran again f
 
 The pure average is 924.8 (+1.6%), and Retribution 95.4%. The search ran again for all six specs. Each search starts from the set of 15 November (`sets_6084403a9/`, `SEED` in main.py). It uses the same rules and the `EFFECTS` list of this commit (368 items, `../tank_gear/effects_ad6b13af8.txt`). The results below come from commit `ad6b13af8`.
 
+**Enchant rules (18 November 2026, evening).** The wowsims preset enchants were not equal, and some did not obey the item pool rules. Retribution had Healing Power (Argent Dawn, Exalted) on the bracers. The Rogue had the off-hand Agility enchant of Timbermaw Hold (Revered). The Hunter had no head enchant and a Zul'Gurub scope. Mage and Warlock had the Molten Core weapon enchant. `search_enchants_dps.py` now gives each spec the rules of the tank enchant search (`../tank_gear/search_enchants.py`):
+
+- An enchant must have a source in the game data.
+- No source in a raid, and no reputation source at Revered or Exalted.
+- Phase 1 only. Scopes only on bows, guns and crossbows.
+
+The search starts from `enchants.json` and removes the enchants that break the rules. Then each slot in turn tries all candidates (1,000 iterations, enchants and consumables of the second run). A candidate replaces the enchant only if the DPS is more than 0.2% higher. Two passes at most. The result is `enchants_fair.json`, and the logs are `log_ench_<Spec>.txt`. The values with the preset enchants are in `ec_results_ad6b13af8_preset_enchants.json`.
+
+- Retribution and Fury: Superior Strength on the bracers, +15 Strength on the gloves.
+- Combat Rogue: Greater Stats, Greater Agility boots and Crusader on the off hand. These replace Living Stats, Minor Speed and the Revered Agility enchant.
+- Hunter: Lesser Arcane Amalgamation on the head and the legs, Greater Agility gloves, Revelation and the SAF-T scope.
+- Fire Mage and Demonology Warlock: Revelation in place of the Molten Core weapon enchant, armor kits on the gloves. The Warlock also takes the off-hand Wisdom enchant.
+
 ## Rules (the same for each spec)
 
 - **Item pool.** Uncommon, rare and epic items of item level 63 or lower, for level 60 or lower. Only content of the game start and Dire Maul. No Classic items with item ids 19000–23999. These items are from patch 1.6 or later: Zul'Gurub, Ahn'Qiraj and Naxxramas era items, dungeon set 2 and battleground rewards. No items that need Revered or Exalted reputation. Not Jewel of the Guard Captain (a battleground name, no source). No raid drops and no world boss drops (zone and NPC sources in the wowsims data and AtlasLoot). No PvP items, no PvP reputation items, and not the raid items of the earlier `GEARFIX` list. No items with random enchantments.
 - **Class.** Each spec keeps its armor and weapon types and its weapon setup (two-handed weapon, two weapons, or weapon and off-hand item).
 - **Search.** Start: the wowsims test set without the items outside the pool (Fury: the `prebis_fury` set). For each slot, the candidates are the best items for the stat values of the spec (measured in the sim). All items with an effect are also candidates. The search keeps the best item for each slot (1,000 iterations, fixed seed) and repeats until no slot changes (3 passes at most). Final value: 10,000 iterations.
 - **Conditions.** The search runs with no enchants and no consumables. The class weapon items stay (oils, stones, poisons). The full wowsims test raid buffs and debuffs, the same for all specs (melee and caster buffs, totems, auras, all debuffs with Judgement of the Crusader). Level 63 boss, 2 min.
-- **Enchants and consumables (second run).** The sets of the search, with enchants and consumables (`enchants_consumables.py`, see below).
+- **Enchants and consumables (second run).** The sets of the search, with enchants and consumables (`enchants_consumables.py`, see below). Since 18 November evening, the enchants come from `enchants_fair.json` (the same enchant rules for each spec).
 
 ## Results
 
 | Spec | No enchants, no consumables | Enchants | Consumables | Both | Average item level | Epic items |
 | --- | --- | --- | --- | --- | --- | --- |
-| Fury Warrior | 750.5 | 833.7 | 894.5 | 980.8 | 60.8 | 7 |
-| Demonology Warlock | 666.6 | 722.9 | 884.2 | 944.0 | 59.9 | 4 |
-| Hunter | 778.3 | 836.5 | 880.7 | 942.7 | 60.6 | 3 |
-| Fire Mage | 681.1 | 733.5 | 871.2 | 925.8 | 60.2 | 5 |
-| Combat Rogue | 709.9 | 752.0 | 817.8 | 863.6 | 59.6 | 6 |
-| Pure average | 717.3 | 775.7 | 869.7 | 931.4 | | |
-| Retribution (live) | 682.3 (95.1%) | 729.4 (94.0%) | 862.1 (99.1%) | 914.8 (98.2%) | 60.6 | 6 |
+| Fury Warrior | 750.5 | 838.4 | 894.5 | 988.9 | 60.8 | 7 |
+| Hunter | 778.3 | 846.7 | 880.7 | 950.8 | 60.6 | 3 |
+| Demonology Warlock | 666.6 | 719.0 | 884.2 | 942.7 | 59.9 | 4 |
+| Fire Mage | 681.1 | 733.7 | 871.2 | 927.3 | 60.2 | 5 |
+| Combat Rogue | 709.9 | 754.3 | 817.8 | 865.5 | 59.6 | 6 |
+| Pure average | 717.3 | 778.4 | 869.7 | 935.0 | | |
+| Retribution (live) | 682.3 (95.1%) | 734.7 (94.4%) | 862.1 (99.1%) | 919.5 (98.3%) | 60.6 | 6 |
 
-Without the Rogue (both): 948.3, Retribution 96.5%. Retribution against Fury (both): 93.3%. wowsims links to each set: `links.md`.
+Without the Rogue (both): 952.4, Retribution 96.5%. Retribution against Fury (both): 93.0%. wowsims links to each set: `links.md`.
+
+- **Enchant rules (18 November evening) against the preset enchants (both).** Hunter +0.9% (942.7 → 950.8), Fury +0.8% (980.8 → 988.9), Retribution +0.5% (914.8 → 919.5), Combat Rogue +0.2% (863.6 → 865.5), Fire Mage +0.2% (925.8 → 927.3), Demonology Warlock −0.1% (944.0 → 942.7). Pure average 931.4 → 935.0, Retribution 98.2% → 98.3%. Without the Rogue: 948.3 → 952.4, Retribution 96.5% (no change).
 
 - **Commit ad6b13af8 (18 November) against commit 6084403a9 (both).** Combat Rogue +11.3% (776.1 → 863.6), Retribution +3.5% (884.0 → 914.8), Hunter +1.1% (932.2 → 942.7), Fury +0.4% (976.6 → 980.8). Fire Mage +0.3% (923.1 → 925.8) and Demonology Warlock +0.1% (942.7 → 944.0). Pure average 910.1 → 931.4, Retribution 97.1% → 98.2%. The commit gives the Rogue gain. The new sets give the rest: Retribution +3.7%, Fury +1.4%, Hunter +1.2%, Combat Rogue +1.1%.
 - **Set changes (18 November).** Retribution: Destiny and Soulforge Warboots (in place of Demonshear and Hippogryph Hide Boots). Fury: Ironfoe and Bashguuder (in place of Sword of Zeal and Flurry Axe). Combat Rogue: two Felstriker (in place of Ironfoe and Talon of Tor'Rel). Hunter: The Blackrock Slicer (in place of Arcanite Reaper). The Fire Mage and Demonology Warlock sets do not change.
@@ -109,7 +124,7 @@ Without the Rogue (both): 948.3, Retribution 96.5%. Retribution against Fury (bo
 
 With the consumables of each wowsims preset as they are, Retribution was 116.3% (both, commit 895cd67f9). The presets are not equal: Retribution has 9 elixirs, the Rogue has none. Thus, the second run gives the same elixirs and extras to all specs.
 
-`models/beta-30-oct/retribution_b2.py` uses the "Both" column. It puts the values on the scale of the Retribution start value (905, the item pool set with the Retribution test buffs, full buffs and consumables): each pure spec × 905 / 914.8.
+`models/beta-30-oct/retribution_b2.py` uses the "Both" column. It puts the values on the scale of the Retribution start value (910, the item pool set with the Retribution test buffs, full buffs and consumables, and the enchants of `enchants_fair.json`): each pure spec × 910 / 919.5. With the preset enchants, the start value was 905 (× 905 / 914.8).
 
 **First pool (replaced).** The first search let in later items: Zul'Gurub, Ahn'Qiraj and Argent Dawn reputation items, dungeon set 2, battleground weapons and trinkets. With it, the pure average was 850.2 and Retribution 108.3% (both). The sets of that run are in `first_pool/`.
 
@@ -123,9 +138,10 @@ With the consumables of each wowsims preset as they are, Retribution was 116.3% 
 | opt.py, main.py | Item pool and search: `python3 main.py <Spec>` (Hunter: `EPFULL=1`, see below). The run of 18 November: `SEED=sets_6084403a9/set_<Spec>.json EFFECTS=<zzeffects list> python3 main.py <Spec>` |
 | set_*.json | The final set of each spec (item ids, slot order of wowsims) |
 | log_*.txt | Stat values, slot changes and final DPS of each spec. Since 11 November, also the DPS of each candidate (lines `all:`) |
-| enchants.json | Enchant ids by slot for each spec (wowsims presets; Mage and Warlock: Balance Druid caster enchants, 2504 on the weapon) |
+| enchants.json | Enchant ids by slot for each spec (wowsims presets; Mage and Warlock: Balance Druid caster enchants, 2504 on the weapon). The start of the enchant search |
+| search_enchants_dps.py, enchants_fair.json, log_ench_*.txt | The enchant search of 18 November evening (the same rules for each spec), its result and its logs. `enchants_consumables.py` uses `enchants_fair.json` (`ENCHANTS=enchants.json` gives the preset enchants) |
 | enchants_consumables.py | Second run: writes `/tmp/zzdump_u` (same elixirs and extras for each spec) and the zzbatch jobs |
-| ec_results.json | DPS of the second run on commit ad6b13af8 (base, ench, cons, both). `ec_results_6084403a9.json`, `ec_results_8c7b5a5f5.json`, `ec_results_129fcd89e.json`, `ec_results_52471a100.json`, `ec_results_3633d376a.json`, `ec_results_9f254e8d8.json`, `ec_results_ae9b8c23a.json`, `ec_results_df57e2571.json`, `ec_results_9a8624af9.json`, `ec_results_8298ab833.json`, `ec_results_6ee3c30f35.json`, `ec_results_d97252f2a.json` and `ec_results_895cd67f9.json`: the same on the earlier commits |
+| ec_results.json | DPS of the second run on commit ad6b13af8 with `enchants_fair.json` (base, ench, cons, both). `ec_results_ad6b13af8_preset_enchants.json`: the same with the preset enchants. `ec_results_6084403a9.json`, `ec_results_8c7b5a5f5.json`, `ec_results_129fcd89e.json`, `ec_results_52471a100.json`, `ec_results_3633d376a.json`, `ec_results_9f254e8d8.json`, `ec_results_ae9b8c23a.json`, `ec_results_df57e2571.json`, `ec_results_9a8624af9.json`, `ec_results_8298ab833.json`, `ec_results_6ee3c30f35.json`, `ec_results_d97252f2a.json` and `ec_results_895cd67f9.json`: the same on the earlier commits |
 | links.md, zzlink_main.go | wowsims links to the final set of each spec, and the script that makes them |
 
 - **One job for each process.** zzbatch runs its jobs in parallel in one process. In a batch of different specs and enchants, some results changed by up to 3%. All values in this folder and in Analysis, Damage come again from `solo.py`, one job for each process. They agree with the batch values.
