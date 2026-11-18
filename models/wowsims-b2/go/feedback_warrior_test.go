@@ -154,8 +154,8 @@ func feedbackItems(eq *proto.EquipmentSpec) *proto.EquipmentSpec {
 }
 
 // feedbackEnchants: FEEDBACK_ENCHANTS is a comma list of 17 enchant ids, one for each slot (0 = no enchant, "-" = keep
-// the enchant of the set). It replaces the enchants of the set (18 November 2026: the same enchant rules for all tanks,
-// ../tank_gear/enchants.json). An empty slot takes no enchant.
+// the enchant of the set). It replaces the enchants of the set (18 November 2026: the same enchant rules for all specs,
+// ../tank_gear/enchants_<tank>[_surv].json, ../matched_gear/enchants_fair.json). An empty slot takes no enchant.
 func feedbackEnchants(eq *proto.EquipmentSpec) *proto.EquipmentSpec {
 	v := os.Getenv("FEEDBACK_ENCHANTS")
 	if v == "" {
