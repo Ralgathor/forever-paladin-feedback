@@ -4,7 +4,8 @@
    (all elixirs and extras of the six test presets). Each spec keeps its own flask, food and potions.
    The Hunter preset has no flask: it takes the physical flask of Fury and Rogue (274274).
 2. Writes ec_jobs.json for zzbatch: for each spec, base / enchants / consumables / both.
-   Enchants: enchants.json (wowsims preset enchants by slot; Mage and Warlock: Balance pre-raid caster
+   Enchants: enchants_fair.json since 18 November 2026 (the same enchant rules for all specs, search_enchants_dps.py).
+   Before: enchants.json (wowsims preset enchants by slot; Mage and Warlock: Balance pre-raid caster
    enchants, 2504 Weapon Spell Power on the main hand).
 Fire Mage crashes with the full elixir list in wowsims 895cd67f9. It keeps its own preset consumables
 (the physical elixirs do not help a caster: Demonology Warlock 862.8 with its own, 861.2 with the full list).
@@ -25,7 +26,7 @@ for s, d in D.items():
     if s == 'Hunter':
         c['flaskId'] = 274274
     json.dump(d, open(f'/tmp/zzdump_u/Test{s}-Average-Default.json', 'w'))
-E = json.load(open('enchants.json'))
+E = json.load(open(os.environ.get('ENCHANTS', 'enchants_fair.json')))  # 18 November 2026: enchants_fair.json (search_enchants_dps.py); ENCHANTS=enchants.json gives the preset enchants
 jobs = []
 for s in S:
     items = json.load(open(f'set_{s}.json'))['items']

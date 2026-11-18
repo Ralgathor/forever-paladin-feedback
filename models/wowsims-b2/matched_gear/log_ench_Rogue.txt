@@ -1,0 +1,31 @@
+REMOVE 4 Enchant Chest - Living Stats
+REMOVE 9 Enchant Boots - Minor Speed
+REMOVE 15 Enchant Weapon - Agility
+START [1508, 904, 0, 7667, 0, 7656, 8206, 0, 1508, 0, 0, 0, 0, 0, 1900, 0, 0] 851.8
+SLOT 0 Shadowcraft Cap 1508:851.8 2543:851.6 1506:849.9 0:847.4
+SLOT 1 Mark of Fordring 904:851.8 856:850.3 0:848.9
+SLOT 3 Cape of the Black Baron 7667:851.8 247:850.8 849:850.8 0:848.9
+SLOT 4 Dawn Armor 1891:854.8 8491:854.5 8488:854.0 8486:853.4 8483:852.9
+  -> none => Enchant Chest - Greater Stats
+SLOT 5 Shadowcraft Bracers 7656:854.8 1887:853.9 904:852.9 1885:852.7 8204:852.4
+SLOT 6 Devilsaur Gauntlets 8206:854.8 2563:854.1 8207:852.5 8491:852.2 8488:851.7
+SLOT 8 Devilsaur Leggings 2543:855.2 1508:854.8 8491:853.7 1506:853.4 8488:853.1
+SLOT 9 Darkmantle Footpads 1887:858.7 8491:857.5 8488:857.0 247:856.7 8486:856.4
+  -> none => Enchant Boots - Greater Agility
+SLOT 14 Felstriker 1900:858.7 803:857.2 1897:854.7 2563:852.7 0:848.0
+SLOT 15 Felstriker 1900:865.0 803:863.6 2563:863.3 1897:860.5 0:858.7
+  -> none => Enchant Weapon - Crusader
+SLOT 16 Precisely Calibrated Boomstick 0:865.0 30:865.0 32:865.0 33:865.0 663:865.0
+SLOT 0 Shadowcraft Cap 2543:865.0 1508:865.0 1506:863.0 0:860.6
+SLOT 1 Mark of Fordring 904:865.0 856:864.2 0:862.5
+SLOT 3 Cape of the Black Baron 7667:865.0 247:864.0 849:864.0 0:862.5
+SLOT 4 Dawn Armor 1891:865.0 8491:864.7 8488:864.1 8486:863.6 8483:863.0
+SLOT 5 Shadowcraft Bracers 7656:865.0 1887:864.0 904:863.0 1885:862.9 8204:862.5
+SLOT 6 Devilsaur Gauntlets 8206:865.0 2563:864.3 8207:862.6 8491:862.4 8488:861.8
+SLOT 8 Devilsaur Leggings 2543:865.0 1508:865.0 8491:863.3 1506:863.0 8488:862.7
+SLOT 9 Darkmantle Footpads 1887:865.0 8491:863.8 8488:863.2 247:863.0 8486:862.7
+SLOT 14 Felstriker 1900:865.0 803:863.5 1897:861.0 2563:859.0 0:854.4
+SLOT 15 Felstriker 1900:865.0 803:863.6 2563:863.3 1897:860.5 0:858.7
+SLOT 16 Precisely Calibrated Boomstick 0:865.0 30:865.0 32:865.0 33:865.0 663:865.0
+FINAL [1508, 904, 0, 7667, 1891, 7656, 8206, 0, 1508, 1887, 0, 0, 0, 0, 1900, 1900, 0]
+ENCHANTS 0:Lesser Arcane Amalgamation | 1:Enchant Boots - Agility | 3:Enchant Cloak - Agility | 4:Enchant Chest - Greater Stats | 5:Enchant Bracer - Superior Agility | 6:Enchant Gloves - Greater Agility | 8:Lesser Arcane Amalgamation | 9:Enchant Boots - Greater Agility | 14:Enchant Weapon - Crusader | 15:Enchant Weapon - Crusader

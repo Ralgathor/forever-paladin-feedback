@@ -79,6 +79,15 @@ def pool_ids(spec):  # the item pool set of each spec (FEEDBACK_ITEMS); FEEDBACK
     ids = [x.get("id", 0) for x in d["items"]] if isinstance(d, dict) else d
     return ",".join(str(i) for i in (ids + [0] * 17)[:17])
 
+def pool_enchants(spec):  # 18 November 2026: the enchants of the fair enchant searches (FEEDBACK_ENCHANTS=default keeps the set enchants)
+    if spec == "prot":
+        f = "tank_gear/enchants_prot%s.json" % ("_surv" if os.environ.get("TANK_SET") == "surv" else "")
+        return ",".join(str(i) for i in json.load(open(os.path.join(HERE, f))))
+    if spec == "ret":
+        e = json.load(open(os.path.join(HERE, "matched_gear/enchants_fair.json")))["Retribution"]
+        return ",".join(str(e.get(str(s), 0)) for s in range(17))
+    return ""
+
 def run(spec, case, b, mode, it=1000, extra=None):
     env = dict(os.environ, FEEDBACK_DUR="180", FEEDBACK_ITER=str(it), FEEDBACK_TALENTS=sim_string(b, mode),
                PROPOSE=PROP_FLAGS[spec] if mode == "prop" else "")
@@ -88,6 +97,8 @@ def run(spec, case, b, mode, it=1000, extra=None):
         env["FEEDBACK_SHOCK"] = "1"
     if os.environ.get("FEEDBACK_GEAR") != "default":
         env["FEEDBACK_ITEMS"] = pool_ids(spec)
+        if os.environ.get("FEEDBACK_ENCHANTS") != "default":
+            env["FEEDBACK_ENCHANTS"] = pool_enchants(spec)
     env.update(extra or {})
     out = subprocess.run([BIN[spec], "-test.run", "TestFeedbackRun", "-test.v"], cwd=os.path.join(WOWSIMS, DIRS[spec]),
                          env=env, capture_output=True, text=True).stdout

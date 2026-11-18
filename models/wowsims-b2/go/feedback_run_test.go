@@ -120,6 +120,32 @@ func envOr(k, d string) string {
 
 // FEEDBACK_ITEMS: 17 item ids (0 = empty slot) in place of the items of the set. The enchants of each slot stay. An item of the set keeps its random suffix.
 func feedbackItems(eq *proto.EquipmentSpec) *proto.EquipmentSpec {
+	return feedbackEnchants(feedbackItemIds(eq))
+}
+
+// feedbackEnchants: FEEDBACK_ENCHANTS is a comma list of 17 enchant ids, one for each slot (0 = no enchant, "-" = keep
+// the enchant of the set). It replaces the enchants of the set (18 November 2026: the same enchant rules for all specs,
+// ../tank_gear/enchants_<tank>[_surv].json, ../matched_gear/enchants_fair.json). An empty slot takes no enchant.
+func feedbackEnchants(eq *proto.EquipmentSpec) *proto.EquipmentSpec {
+	v := os.Getenv("FEEDBACK_ENCHANTS")
+	if v == "" {
+		return eq
+	}
+	for i, s := range strings.Split(v, ",") {
+		s = strings.TrimSpace(s)
+		if i >= len(eq.Items) || eq.Items[i] == nil || s == "-" {
+			continue
+		}
+		e, _ := strconv.Atoi(s)
+		if eq.Items[i].Id == 0 {
+			e = 0
+		}
+		eq.Items[i].Enchant = int32(e)
+	}
+	return eq
+}
+
+func feedbackItemIds(eq *proto.EquipmentSpec) *proto.EquipmentSpec {
 	v := os.Getenv("FEEDBACK_ITEMS")
 	if v == "" {
 		return eq
