@@ -37,6 +37,10 @@ USEFUL = {0, 1, 2, 14, 16, 17, 18, 19, 22, 23, 24, 25, 26, 27, 28}  # Str, Agi, 
 if tank == 'prot':
     USEFUL |= {3, 5, 9}  # Intellect, spell damage, Holy damage
 PROCS = {1900, 803, 1894, 1898, 1899, 1897, 1896, 8216, 8217, 8721, 2543, 2545, 863, 1704, 463}
+if tank == 'prot':
+    # 19 November 2026: no Protection ability procs Revelation (8217) in game. In wowsims, only the heal of Judgement
+    # of Light procs it, and the next Judgement of Fury then crits (+2% threat). Thus the Paladin tank sets do not use it.
+    PROCS.discard(8217)
 
 def legal(e):
     srcs = e.get('sources') or []
