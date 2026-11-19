@@ -150,7 +150,7 @@ The same day, the Paladin and the Warrior full consumables received Gift of Arth
 | Set | Threat / damage taken / TMI, no enchant search | With the enchants |
 | --- | --- | --- |
 | Paladin, threat | 1,383.5 / 290.6 / 43.5 | 1,439.3 / 277.7 / 38.5 (19 November, Crusader; with Revelation: 1,471.5 / 277.7 / 38.2) |
-| Paladin, survival | 1,292.2 / 288.2 / 37.7 | 1,302.2 / 226.8 / 26.5 (19 November, Crusader; with Revelation: 1,325.8 / 226.1 / 26.4) |
+| Paladin, survival | 1,292.2 / 288.2 / 37.7 | 1,246.9 / 211.0 / 26.3 (19 November, Crusader and Deathbone Guardian; Crusader without Deathbone: 1,302.2 / 226.8 / 26.5; with Revelation: 1,325.8 / 226.1 / 26.4) |
 | Warrior, threat | 1,914.0 / 292.8 / 30 | 1,931.5 / 291.4 / 30 |
 | Warrior, survival | 1,604.8 / 254.3 / 25 | 1,600.5 / 237.3 / 23 |
 | Druid, threat | 2,573.3 / 316.4 / 25.7 | 2,674.3 / 327.5 / 25.3 |
@@ -187,7 +187,7 @@ The survival values also include Greater Stoneshield Potion for the Paladin and 
 
 | Tank | Items that differ from the threat set (threat set → survival set) |
 | --- | --- |
-| Protection Paladin | Stalwart Helm → Enriched Thorium Helm, Vigorsteel Vambraces → Warder's Wristguards, Warder's Gloves → Force Imbued Gauntlets, Cloudkeeper Legplates → Enriched Thorium Leggings, Warder's Sabatons → Soulforge Sabatons, Frozen Heart of the Mountain → Ragged John's Neverending Cup |
+| Protection Paladin | Stalwart Helm → Enriched Thorium Helm, Vigorsteel Vambraces → Warder's Wristguards, Frozen Heart of the Mountain → Ragged John's Neverending Cup. Since 19 November, the 5 pieces of Deathbone Guardian: Soulforge Chestguards → Deathbone Chestplate, Warder's Gloves → Deathbone Gauntlets, Warder's Waistguard → Deathbone Girdle, Cloudkeeper Legplates → Deathbone Legguards, Warder's Sabatons → Deathbone Sabatons (before: Force Imbued Gauntlets, Enriched Thorium Leggings, Soulforge Sabatons) |
 | Protection Warrior | 15 items, for example Breastplate of Heroism → Chestguard of Heroism, Ironfoe → Krol Blade, Skullflame Shield → Intricately Runed Shield (`set_war.json`, `set_war_surv.json`) |
 | Bear Druid | Truestrike Shoulders → Warden's Leather Shoulders, Cloudrunner Girdle → Dinosaur Hide Belt, Warbear Woolies → Warstrife Leggings, Counterattack Lodestone → Glimmering Mithril Insignia, Glimmering Mithril Insignia → The Lion Horn of Stormwind |
 
@@ -212,6 +212,21 @@ The sets of 4 November were searched on master 8298ab833, with the Paladin witho
 | 9f254e8d8 (sets of 9 November) | 1,187.4 / 316.2 / 47.1 and 1,172.7 / 316.6 / 45.5 | 1,511.8 / 306.1 / 43 and 1,388.6 / 292.8 / 41 | 1,582.3 / 359.4 / 38.2 and 1,514.6 / 345.3 / 35.8 |
 | ae9b8c23a (sets of 8 November) | 1,228.5 / 329.2 / 49.0 and 1,204.1 / 317.6 / 45.5 | 1,488.9 / 305.9 / 43 and 1,368.8 / 292.4 / 41 | 1,756.1 / 361.5 / 38.6 and 1,673.4 / 355.9 / 36.2 |
 | 9a8624af9 (sets of 4 November; Warrior threat set of 6 November) | 1,136.9 / 342.7 / 54.0 and 1,081.0 / 333.1 / 45.8 | 1,503.0 / 305.8 / 43 and 1,382.3 / 292.4 / 41 | 1,754.7 / 393.3 / 43.9 and 1,717.9 / 392.5 / 42.7 |
+
+## Set bonuses
+
+`search_tank.py` changes one slot at a time, thus it does not see a set bonus. `[TANK_SCORE=survival SUF=_surv] python3 search_sets.py <prot|war|bear> <dump>` tests the item sets. It uses the score, the dump and the item pool of `search_tank.py`, and starts from `set_<tank>[_surv].json`. For each item set with pool pieces in 2 or more slots, it makes the sets of 2 to n pieces: each set takes the pieces with the best gain. Each set runs with 1,000 iterations (`C1000` lines), and the best sets run again with 5,000 (`C5000` lines). A set must increase the score by more than 0.2%. The results are `log_sets_<tank>[_surv].txt`.
+
+| Set | Best item set | Score | Kept |
+| --- | --- | --- | --- |
+| Paladin, threat | Deathbone Guardian, 2 pieces | 0.994 | No |
+| Paladin, survival | Deathbone Guardian, 5 pieces | 1.0068 | Yes (19 November) |
+| Warrior, threat | Battlegear of Valor, 2 pieces | 0.991 | No |
+| Warrior, survival | Battlegear of Valor, 4 pieces | 0.998 | No |
+| Druid, threat | Devilsaur Armor, 2 pieces | 0.996 | No |
+| Druid, survival | Shadowcraft Armor, 2 pieces | 0.999 | No |
+
+With Deathbone Guardian, the Paladin survival set takes 7% less damage (226.8 → 211.0), but it has 4% less threat (1,302.2 → 1,246.9). The TMI does not change much (26.5 → 26.3). The 3 and 4 pieces give 1.0042 and 1.0043. Soulforge Armor has only 4 pool pieces (helm, chest, gloves, boots); with these 4 pieces, the Paladin threat set has 1,375 threat each sec against 1,439.
 
 ## Shockadin set
 

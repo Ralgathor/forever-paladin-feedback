@@ -23,21 +23,21 @@ This file gives the best tank builds for the live trees and for the proposed tre
   Since commit 8c7b5a5f5 (13 November), each melee attack against the Paladin rolls the live Redoubt, avoided attacks included. Thus, with the same set, the live BT1 takes 2.4% less damage than on 12 November. The item pool set of 13 November (Draconian Deflector, The Lion Horn of Stormwind) takes 4% less damage again. Thus, the gap is smaller. Commit 6084403a9 (15 November) gives all builds about +1% threat, and the damage taken does not change. The open search set of 16 November gives all builds 1–3% more threat and 5% less damage taken. The full threat consumables of 17 November give all builds 18–19% more threat and 1–2% less damage taken (Flask of Supreme Power, Elixir of Holy Power and other spell power items). Commit ad6b13af8 (18 November) and its new item pool sets give all builds about 1% less threat, 2% less damage taken and a 5–6% better TMI. The enchants of 18 November evening give all builds 5–6% more threat, about 4% less damage taken and an 11–12% better TMI (Analysis, Threat, part 6). Before, the Paladin sets had no enchants. On 19 November, Crusader replaces Revelation on the weapon (no Protection ability procs Revelation in the game). All builds then have 1.5–2.2% less threat, and the damage taken and the TMI change by 1% or less. The runs with Revelation are in `models/wowsims-b2/logs/finals_full_revelation.log` and `finals_surv_full_revelation.log`.
 - **Stat weights.** For threat, Expertise rating is the best stat for each point, then Hit rating and spell damage. Crit rating gives about 1.7–1.8 times the threat of Strength. For survival, Stamina, Defense rating and Block value (proposed trees) are the best (part 3).
 
-**Survival set.** The table above uses the item pool threat set of 18 November, with the enchants of 18 November evening and Crusader on the weapon (19 November). The same builds with the item pool survival set ([wowsims link](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-surv-protection-paladin.html), Analysis, Threat, part 6):
+**Survival set.** The table above uses the item pool threat set of 18 November, with the enchants of 18 November evening and Crusader on the weapon (19 November). The same builds with the item pool survival set of 19 November, with 5 pieces of Deathbone Guardian ([wowsims link](https://ralgathor.github.io/forever-paladin-feedback/sets/tank-surv-protection-paladin.html), Analysis, Threat, part 6):
 
 | Trees | Build | Threat each sec | With Righteous Fury (C25) | Damage taken each sec | TMI |
 | --- | --- | --- | --- | --- | --- |
-| Proposed | PT1 | 1,316 | 1,874 | 206 | 22.9 |
-| Proposed | PS1 | 1,344 | 1,914 | 206 | 22.9 |
-| Proposed | PI1 | 1,383 | 1,970 | 210 | 23.1 |
-| Live | BS2 | 1,312 | — | 220 | 25.5 |
-| Live | BT1 | 1,302 | — | 227 | 26.5 |
-| Live | BS1 | 1,340 | — | 229 | 26.8 |
+| Proposed | PT1 | 1,251 | 1,782 | 199 | 24.0 |
+| Proposed | PS1 | 1,277 | 1,819 | 199 | 24.0 |
+| Proposed | PI1 | 1,319 | 1,879 | 203 | 24.2 |
+| Live | BS2 | 1,261 | — | 205 | 25.5 |
+| Live | BT1 | 1,247 | — | 211 | 26.3 |
+| Live | BS1 | 1,295 | — | 214 | 26.6 |
 
-- **The build order of the proposed trees does not change.** All builds have 9–11% less threat, 17–19% less damage taken and a 28–32% better TMI than with the threat set. The survival set has Greater Stoneshield Potion (+2,000 armor). In the live trees, BS1 has 2.2% more threat than BS2 with this set too.
-- **PI1 against PS1:** +2.9% threat, 1.8% more damage taken and a 1.0% worse TMI.
-- **PT1 against BS2:** +0.3% threat, 6% less damage taken and a 10% better TMI.
-- **Stat weights** with the survival set, on commit ad6b13af8 (`models/wowsims-b2/logs/finals_surv_full.log`). For threat, Hit rating and Expertise rating are the best stats (PT1: +1.74 and +1.59 for each point). For survival, Stamina, Defense rating and Block value stay the best.
+- **The build order of the proposed trees does not change.** All builds have 13–15% less threat, 20–25% less damage taken and a 25–32% better TMI than with the threat set. The survival set has Greater Stoneshield Potion (+2,000 armor). In the live trees, BS1 has 2.7% more threat than BS2 with this set too. Before 19 November, without Deathbone Guardian, all builds had 3–5% more threat and took 3–8% more damage.
+- **PI1 against PS1:** +3.3% threat, 2.2% more damage taken and a 1.1% worse TMI.
+- **PT1 against BS2:** −0.7% threat, 3% less damage taken and a 6% better TMI.
+- **Stat weights** with the survival set, on commit ad6b13af8 (`models/wowsims-b2/logs/finals_surv_full.log`). For threat, Expertise rating and Hit rating are the best stats (PT1: +1.67 and +1.52 for each point). For survival, Stamina, Defense rating and Block value stay the best.
 
 ## 1. Method
 

@@ -22,8 +22,8 @@ All tanks in wowsims have the full threat consumables of 17 November (part 6). S
 - **At the pull, the proposed Paladin has the best burst threat, but only with a Fury opener** (part 8). The Paladin casts Seal of Fury and Holy Shield before the pull. Two Judgements of Fury and Holy Strike then hit at 0 sec. The live Paladin then has 183% of the Warrior threat after 1.5 sec, 99% after 3 sec and 79% after 10 sec. The proposed Paladin has 145% after 3 sec and 117% after 10 sec. With the wowsims default opener, the live Paladin has 50% after 3 sec.
 - **In its best short windows, the live Paladin has 62–70% of the Warrior** (part 8). The proposed Paladin has 89–102%. The Druid has 116–129%. The Warrior has large spikes from Shield Slam, Revenge and Heroic Strike critical hits.
 - **Against 3 or more enemies, the Paladin holds the extra enemies better than the Warrior** (part 7). On the enemy with the least threat, the live Paladin has 1.9–2.1 times the Warrior threat. The proposed Paladin has 2.7–3.1 times. On 3 targets, the Druid holds this enemy better (live Paladin: 69% of the Druid). With the proposals, the Paladin total threat is 119–122% of the Warrior and 112–119% of the Druid.
-- **Threat sets and survival sets give the same threat order** (part 6). With the survival sets, the live Paladin has 81% of the Warrior and the proposed Paladin 119%.
-- **The Paladin takes less damage than the Warrior** (part 6). With the threat sets, the live Paladin takes 5% less damage than the Warrior. With Redoubt (C-P1), it takes 15% less damage, but its TMI is a little higher (31.3 against 30). With the survival sets, the Paladin with Redoubt takes 13% less damage than the Warrior. Before 18 November evening, only the Druid had a Greater Stoneshield Potion in the survival sets, and the Paladin with Redoubt took 2% more damage than the Warrior. Before 4 November evening, the Paladin test had no consumables, and the gap was 28%.
+- **Threat sets and survival sets give the same threat order** (part 6). With the survival sets, the live Paladin has 78% of the Warrior and the proposed Paladin 113%.
+- **The Paladin takes less damage than the Warrior** (part 6). With the threat sets, the live Paladin takes 5% less damage than the Warrior. With Redoubt (C-P1), it takes 15% less damage, but its TMI is a little higher (31.3 against 30). With the survival sets, the Paladin with Redoubt takes 16% less damage than the Warrior. Before 18 November evening, only the Druid had a Greater Stoneshield Potion in the survival sets, and the Paladin with Redoubt took 2% more damage than the Warrior. Before 4 November evening, the Paladin test had no consumables, and the gap was 28%.
 - **The wowsims tank sets obey the item pool rules** (part 6): no raid drops, no Zul'Gurub or Ahn'Qiraj items, no PvP items, no Revered or Exalted reputation items, item level 63 or lower. The wowsims default sets had these items. Since 18 November evening, the enchants obey the same rules: no raid source, no Revered or Exalted reputation source and phase 1 only. Before, the Paladin sets had no enchants.
 - **The model Druid uses the same multipliers as wowsims of 11 November:** Bear Form ×2.15, Maul ×1.75, Swipe ×1.75 and Primal Bite ×3. The Maul, Swipe and Primal Bite values come from player data. A test in the game must confirm them (part 2). The model does not have the Lacerate threat of 12 November.
 
@@ -227,6 +227,12 @@ wowsims Forever plays the fight with the full rules of the game. Full buffs, one
 
   The sets also had Libram of Holy Alacrity. This libram changes only Holy Shock and Holy Light, thus it does nothing for the tank. Libram of Invocation (the Seals cost 5% less mana) replaces it, with no change in threat. Libram of Law (+4% Judgement damage) and Steadfast Libram (+30% block value with Holy Shield) help the tank. But they have item level 65, and the item pool rules stop at 63. The runs with Revelation: `logs/checks_ad6b13af8_pool_full_revelation.log` and `logs/checks_ad6b13af8_pool_surv_full_revelation.log`.
 
+  **Set bonuses (19 November).** The item search changes one slot at a time, thus it does not see a set bonus. A second search tests each item set with pieces in the item pool, from 2 pieces to the full set. Each set runs with 1,000 iterations, and the best sets run again with 5,000. A set must increase the score by more than 0.2%. Script: `models/wowsims-b2/tank_gear/search_sets.py`. Results: `tank_gear/log_sets_*.txt`.
+
+  - **Paladin survival set:** the 5 pieces of Deathbone Guardian (chest, hands, waist, legs, feet) give +0.7% score. The Paladin takes 7% less damage (227 → 211), but it has 4% less threat (1,302 → 1,247). The TMI does not change (26.5 → 26.3). The 3 and 4 pieces give +0.4%.
+  - **Paladin threat set:** no set wins. The best is Deathbone 2 pieces (−0.6%). Soulforge (4 pieces in the pool) gives 1,375 threat each sec against 1,439.
+  - **Warrior and Druid:** no set wins. Battlegear of Valor and Battlegear of Heroism lose in both sets. The best Druid sets are Devilsaur 2 pieces (threat set, −0.4%) and Shadowcraft 2 pieces (survival set, −0.1%).
+
 wowsims Forever master commit 9a8624af9 (4 November 2026) has the game data of client 1.60.1.70755 and the hotfixes of 4 November. This data has Holy Shield rank 4 (221 damage, 4 charges), Defensive Stance +80%, Defiance 7/13/20% and Bear Form +115%. The Warrior and Druid values are native wowsims values. The Paladin spells did not change since commit 8298ab833.
 
 Master commit 9f254e8d8 (9 November 2026, hotfix push 113823) adds 262 items. It also changes the Windfury Totem rule and the Warrior and Druid threat rules. With the sets of 8 November, the Warrior gains 1.5% (1,489 → 1,512). The Druid loses 10% (1,756 → 1,582), and the live Paladin 2.8% (1,229 → 1,195). The search ran again for all tank sets. The Paladin threat set takes Warder's Gloves, Scalding Flamehoof (new) and Volunteer's Lucky Seal.
@@ -328,15 +334,15 @@ The tables below use the runs of 19 November: the same sets with the enchants, G
 | --- | --- | --- | --- | --- |
 | Warrior | 1,601 (100%, 67%) | 237 | 23 | 0.9% |
 | Druid | 2,406 (150%, 100%) | 276 | 20.1 | 15.1% |
-| Paladin, live | 1,302 (81%, 54%) | 227 | 26.5 | 8.6% |
-| Paladin, Redoubt (C-P1) | 1,335 (83%, 55%) | 206 | 22.6 | 0.9% |
-| Paladin, Righteous Fury (C25) | 1,854 (116%, 77%) | 227 | 26.5 | 8.6% |
-| **Paladin, all kept proposals (C-P1, C-P13, C25)** | **1,900 (119%, 79%)** | **209** | **23.1** | **0.9%** |
+| Paladin, live | 1,247 (78%, 52%) | 211 | 26.3 | 6.1% |
+| Paladin, Redoubt (C-P1) | 1,268 (79%, 53%) | 199 | 23.7 | 0.9% |
+| Paladin, Righteous Fury (C25) | 1,775 (111%, 74%) | 211 | 26.3 | 6.1% |
+| **Paladin, all kept proposals (C-P1, C-P13, C25)** | **1,805 (113%, 75%)** | **202** | **24.2** | **0.9%** |
 
-- **The threat order does not change.** The Paladin loses 10% threat with its survival set (1,439 → 1,302), the Warrior 17% (1,932 → 1,601) and the Druid 10% (2,674 → 2,406). Thus, with the survival sets the Paladin has 81% (live) and 119% (all kept proposals) of the Warrior.
-- **The TMI decreases for all three tanks:** Paladin 38.5 → 26.5 (live) and 32.0 → 23.1 (all kept proposals), Druid 25.3 → 20.1, Warrior 30 → 23.
-- **With Redoubt (C-P1), the Paladin takes 13% less damage than the Warrior** (206 against 237 each sec), and its TMI is a little lower (22.6 against 23). The live Paladin takes 4% less damage. Before 18 November evening, only the Druid had Greater Stoneshield Potion, and the Paladin with Redoubt took 2% more damage than the Warrior. With the first survival sets of 15 November, Redoubt gave 4% less damage than the Warrior.
-- **C25a (+80%)** gives 110% of the Warrior (live) and 113% with C-P1 (threat sets: 101% and 104%).
+- **The threat order does not change.** The Paladin loses 13% threat with its survival set (1,439 → 1,247), the Warrior 17% (1,932 → 1,601) and the Druid 10% (2,674 → 2,406). Thus, with the survival sets the Paladin has 78% (live) and 113% (all kept proposals) of the Warrior.
+- **The TMI decreases for all three tanks:** Paladin 38.5 → 26.3 (live) and 32.0 → 24.2 (all kept proposals), Druid 25.3 → 20.1, Warrior 30 → 23.
+- **With Redoubt (C-P1), the Paladin takes 16% less damage than the Warrior** (199 against 237 each sec), but its TMI is a little higher (23.7 against 23). The live Paladin takes 11% less damage. Before 18 November evening, only the Druid had Greater Stoneshield Potion, and the Paladin with Redoubt took 2% more damage than the Warrior. With the first survival sets of 15 November, Redoubt gave 4% less damage than the Warrior.
+- **C25a (+80%)** gives 105% of the Warrior (live) and 107% with C-P1 (threat sets: 101% and 104%).
 
 **Other fights (wowsims, 3 min, item pool threat sets, full threat consumables, enchants).** TPS, % of the Warrior in brackets. "Fast" is a swing each 1.2 sec with 60% damage, thus the same damage each sec. "Two weapons" is a boss with a second weapon. The 5 min row has C-P1 only: Toughness removal (C-P13) does not change threat.
 

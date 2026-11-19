@@ -1,138 +1,138 @@
-# wowsims Forever master ad6b13af8, item pool sets, surv tank sets (FEEDBACK_ITEMS), full threat consumables for the three tanks (FEEDBACK_CONSUMES=full). Jobs of checks_8298ab833.log. 19 November 2026: Paladin tank sets with Crusader and Libram of Invocation (no Revelation, no Libram of Holy Alacrity). The runs before: logs/checks_ad6b13af8_pool_surv_full_revelation.log.
+# wowsims Forever master ad6b13af8, item pool sets, surv tank sets (FEEDBACK_ITEMS), full threat consumables for the three tanks (FEEDBACK_CONSUMES=full). Jobs of checks_8298ab833.log. 19 November 2026: Paladin tank sets with Crusader and Libram of Invocation (no Revelation, no Libram of Holy Alacrity). The runs before: logs/checks_ad6b13af8_pool_surv_full_revelation.log. Later on 19 November: the Paladin survival set takes the 5 pieces of Deathbone Guardian (tank_gear/search_sets.py). The P blocks ran again; the runs before: logs/checks_ad6b13af8_pool_surv_full_no_deathbone.log.
 ### P | FEEDBACK_DUR=180 PROPOSE=
-PERTARGET [1301.952177288681]
-TMI avg=26.47 std=3.30
-RESULT dur=180 propose="" tps=1302.2 dps=525.8 dtps=226.8 swings=80.4 hit=1.8% miss=11.2% dodge=19.7% parry=14.3% block=44.1% crit=0.4% crush=8.6%
+PERTARGET [1246.6214600722956]
+TMI avg=26.30 std=3.19
+RESULT dur=180 propose="" tps=1246.9 dps=500.7 dtps=211.0 swings=80.9 hit=1.7% miss=12.3% dodge=20.7% parry=15.5% block=43.7% crit=0.0% crush=6.1%
 ### P | FEEDBACK_DUR=180 PROPOSE=C1
         panic({0xfc9648?, 0x1593850?})
         	/root/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.27.3.linux-amd64/src/runtime/panic.go:859 +0x125
 ### P | FEEDBACK_DUR=180 PROPOSE=CP1
-PERTARGET [1334.2523510398628]
-TMI avg=22.60 std=2.21
-RESULT dur=180 propose="CP1" tps=1334.5 dps=537.7 dtps=205.8 swings=80.5 hit=1.7% miss=11.5% dodge=19.5% parry=14.3% block=51.9% crit=0.0% crush=0.9%
+PERTARGET [1267.5623722795983]
+TMI avg=23.71 std=2.47
+RESULT dur=180 propose="CP1" tps=1267.8 dps=508.4 dtps=198.8 swings=81.0 hit=1.6% miss=12.5% dodge=20.6% parry=15.4% block=49.1% crit=0.0% crush=0.9%
 ### P | FEEDBACK_DUR=180 PROPOSE=CP1,NOTOUGH
-PERTARGET [1334.252392136033]
-TMI avg=23.07 std=2.26
-RESULT dur=180 propose="CP1,NOTOUGH" tps=1334.5 dps=537.7 dtps=209.3 swings=80.5 hit=1.7% miss=11.5% dodge=19.5% parry=14.3% block=51.9% crit=0.0% crush=0.9%
+PERTARGET [1267.562493337524]
+TMI avg=24.20 std=2.52
+RESULT dur=180 propose="CP1,NOTOUGH" tps=1267.8 dps=508.4 dtps=202.1 swings=81.0 hit=1.6% miss=12.5% dodge=20.6% parry=15.4% block=49.1% crit=0.0% crush=0.9%
 ### P | FEEDBACK_DUR=180 PROPOSE=CP1,RD20
-PERTARGET [1334.192361633482]
-TMI avg=22.63 std=2.21
-RESULT dur=180 propose="CP1,RD20" tps=1334.4 dps=537.6 dtps=205.9 swings=80.5 hit=1.9% miss=11.5% dodge=19.6% parry=14.3% block=51.7% crit=0.0% crush=1.0%
+PERTARGET [1267.370311939739]
+TMI avg=23.80 std=2.51
+RESULT dur=180 propose="CP1,RD20" tps=1267.6 dps=508.2 dtps=199.1 swings=81.0 hit=1.6% miss=12.5% dodge=20.6% parry=15.4% block=48.9% crit=0.0% crush=1.0%
 ### P | FEEDBACK_DUR=180 PROPOSE=RD20
-PERTARGET [1301.94001852456]
-TMI avg=26.50 std=3.29
-RESULT dur=180 propose="RD20" tps=1302.2 dps=525.8 dtps=227.0 swings=80.4 hit=1.9% miss=11.2% dodge=19.7% parry=14.2% block=44.0% crit=0.4% crush=8.6%
+PERTARGET [1246.1151657732032]
+TMI avg=26.36 std=3.21
+RESULT dur=180 propose="RD20" tps=1246.4 dps=500.4 dtps=211.4 swings=80.9 hit=1.7% miss=12.3% dodge=20.7% parry=15.5% block=43.5% crit=0.0% crush=6.2%
 ### P | FEEDBACK_DUR=180 PROPOSE=NOTOUGH
-PERTARGET [1301.9521772886808]
-TMI avg=27.03 std=3.38
-RESULT dur=180 propose="NOTOUGH" tps=1302.2 dps=525.8 dtps=230.5 swings=80.4 hit=1.8% miss=11.2% dodge=19.7% parry=14.3% block=44.1% crit=0.4% crush=8.6%
+PERTARGET [1246.621553036405]
+TMI avg=26.84 std=3.26
+RESULT dur=180 propose="NOTOUGH" tps=1246.9 dps=500.7 dtps=214.4 swings=80.9 hit=1.7% miss=12.3% dodge=20.7% parry=15.5% block=43.7% crit=0.0% crush=6.1%
 ### P | FEEDBACK_DUR=180 PROPOSE=C1,CP1,RK100,RKICD4
         panic({0xfc9648?, 0x1593850?})
         	/root/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.27.3.linux-amd64/src/runtime/panic.go:859 +0x125
 ### P | FEEDBACK_DUR=300 PROPOSE=
-PERTARGET [1301.0333350611024]
-TMI avg=26.95 std=2.69
-RESULT dur=300 propose="" tps=1301.2 dps=524.3 dtps=223.7 swings=134.0 hit=2.0% miss=11.3% dodge=19.7% parry=14.3% block=43.8% crit=0.4% crush=8.5%
+PERTARGET [1246.4357360375216]
+TMI avg=26.75 std=2.59
+RESULT dur=300 propose="" tps=1246.6 dps=499.4 dtps=207.8 swings=134.9 hit=1.8% miss=12.4% dodge=20.9% parry=15.4% block=43.4% crit=0.0% crush=6.0%
 ### P | FEEDBACK_DUR=300 PROPOSE=CP1
-PERTARGET [1333.655028529524]
-TMI avg=23.00 std=1.80
-RESULT dur=300 propose="CP1" tps=1333.8 dps=536.4 dtps=203.6 swings=134.1 hit=1.9% miss=11.4% dodge=19.7% parry=14.3% block=51.5% crit=0.0% crush=1.1%
+PERTARGET [1266.9830527666825]
+TMI avg=24.14 std=2.00
+RESULT dur=300 propose="CP1" tps=1267.1 dps=507.0 dtps=196.3 swings=135.0 hit=1.8% miss=12.5% dodge=20.8% parry=15.4% block=48.6% crit=0.0% crush=1.0%
 ### P | FEEDBACK_DUR=300 PROPOSE=CP1,RD20
-PERTARGET [1333.4196315625295]
-TMI avg=23.06 std=1.84
-RESULT dur=300 propose="CP1,RD20" tps=1333.6 dps=536.3 dtps=203.9 swings=134.1 hit=2.1% miss=11.4% dodge=19.7% parry=14.3% block=51.3% crit=0.0% crush=1.1%
+PERTARGET [1266.6943014475914]
+TMI avg=24.24 std=2.04
+RESULT dur=300 propose="CP1,RD20" tps=1266.8 dps=506.8 dtps=196.8 swings=135.0 hit=1.9% miss=12.5% dodge=20.8% parry=15.4% block=48.4% crit=0.0% crush=1.1%
 ### P | RF_ALL=1.90 FEEDBACK_DUR=180 PROPOSE=C25
-PERTARGET [1853.714206175536]
-TMI avg=26.47 std=3.30
-RESULT dur=180 propose="C25" tps=1854.0 dps=525.8 dtps=226.8 swings=80.4 hit=1.8% miss=11.2% dodge=19.7% parry=14.3% block=44.1% crit=0.4% crush=8.6%
+PERTARGET [1775.1123632038064]
+TMI avg=26.30 std=3.19
+RESULT dur=180 propose="C25" tps=1775.4 dps=500.7 dtps=211.0 swings=80.9 hit=1.7% miss=12.3% dodge=20.7% parry=15.5% block=43.7% crit=0.0% crush=6.1%
 ### P | RF_ALL=1.90 FEEDBACK_DUR=180 PROPOSE=CP1,C25
-PERTARGET [1899.909665324993]
-TMI avg=22.60 std=2.21
-RESULT dur=180 propose="CP1,C25" tps=1900.3 dps=537.7 dtps=205.8 swings=80.5 hit=1.7% miss=11.5% dodge=19.5% parry=14.3% block=51.9% crit=0.0% crush=0.9%
+PERTARGET [1805.094273690881]
+TMI avg=23.71 std=2.47
+RESULT dur=180 propose="CP1,C25" tps=1805.4 dps=508.4 dtps=198.8 swings=81.0 hit=1.6% miss=12.5% dodge=20.6% parry=15.4% block=49.1% crit=0.0% crush=0.9%
 ### P | RF_ALL=1.90 FEEDBACK_DUR=180 PROPOSE=CP1,NOTOUGH,C25
-PERTARGET [1899.909724033808]
-TMI avg=23.07 std=2.26
-RESULT dur=180 propose="CP1,NOTOUGH,C25" tps=1900.3 dps=537.7 dtps=209.3 swings=80.5 hit=1.7% miss=11.5% dodge=19.5% parry=14.3% block=51.9% crit=0.0% crush=0.9%
+PERTARGET [1805.094446630775]
+TMI avg=24.20 std=2.52
+RESULT dur=180 propose="CP1,NOTOUGH,C25" tps=1805.4 dps=508.4 dtps=202.1 swings=81.0 hit=1.6% miss=12.5% dodge=20.6% parry=15.4% block=49.1% crit=0.0% crush=0.9%
 ### P | RF_ALL=1.80 FEEDBACK_DUR=180 PROPOSE=C25
-PERTARGET [1756.9138502304736]
-TMI avg=26.47 std=3.30
-RESULT dur=180 propose="C25" tps=1757.2 dps=525.8 dtps=226.8 swings=80.4 hit=1.8% miss=11.2% dodge=19.7% parry=14.3% block=44.1% crit=0.4% crush=8.6%
+PERTARGET [1682.3946609000325]
+TMI avg=26.30 std=3.19
+RESULT dur=180 propose="C25" tps=1682.7 dps=500.7 dtps=211.0 swings=80.9 hit=1.7% miss=12.3% dodge=20.7% parry=15.5% block=43.7% crit=0.0% crush=6.1%
 ### P | RF_ALL=1.80 FEEDBACK_DUR=180 PROPOSE=CP1,C25
-PERTARGET [1800.6715400118128]
-TMI avg=22.60 std=2.21
-RESULT dur=180 propose="CP1,C25" tps=1801.0 dps=537.7 dtps=205.8 swings=80.5 hit=1.7% miss=11.5% dodge=19.5% parry=14.3% block=51.9% crit=0.0% crush=0.9%
+PERTARGET [1710.790431338025]
+TMI avg=23.71 std=2.47
+RESULT dur=180 propose="CP1,C25" tps=1711.1 dps=508.4 dtps=198.8 swings=81.0 hit=1.6% miss=12.5% dodge=20.6% parry=15.4% block=49.1% crit=0.0% crush=0.9%
 ### P | RF_ALL=1.80 FEEDBACK_DUR=180 PROPOSE=CP1,NOTOUGH,C25
-PERTARGET [1800.6715956306905]
-TMI avg=23.07 std=2.26
-RESULT dur=180 propose="CP1,NOTOUGH,C25" tps=1801.0 dps=537.7 dtps=209.3 swings=80.5 hit=1.7% miss=11.5% dodge=19.5% parry=14.3% block=51.9% crit=0.0% crush=0.9%
+PERTARGET [1710.7905951758191]
+TMI avg=24.20 std=2.52
+RESULT dur=180 propose="CP1,NOTOUGH,C25" tps=1711.1 dps=508.4 dtps=202.1 swings=81.0 hit=1.6% miss=12.5% dodge=20.6% parry=15.4% block=49.1% crit=0.0% crush=0.9%
 ### P | FEEDBACK_BOSS=fast FEEDBACK_DUR=180 PROPOSE=
-PERTARGET [1425.5818834798686]
-TMI avg=20.38 std=2.05
-RESULT dur=180 propose="" tps=1425.9 dps=572.9 dtps=200.7 swings=130.5 hit=2.6% miss=11.3% dodge=19.6% parry=14.3% block=44.5% crit=0.3% crush=7.4%
+PERTARGET [1365.437284439198]
+TMI avg=20.29 std=2.10
+RESULT dur=180 propose="" tps=1365.7 dps=545.5 dtps=187.7 swings=131.0 hit=2.2% miss=12.5% dodge=20.7% parry=15.4% block=43.7% crit=0.0% crush=5.4%
 ### P | FEEDBACK_BOSS=fast FEEDBACK_DUR=180 PROPOSE=CP1,NOTOUGH
-PERTARGET [1448.4074032417739]
-TMI avg=18.82 std=1.83
-RESULT dur=180 propose="CP1,NOTOUGH" tps=1448.7 dps=581.5 dtps=189.3 swings=130.5 hit=1.9% miss=11.4% dodge=19.7% parry=14.3% block=50.2% crit=0.1% crush=2.4%
+PERTARGET [1382.5512080159565]
+TMI avg=19.14 std=1.89
+RESULT dur=180 propose="CP1,NOTOUGH" tps=1382.8 dps=552.0 dtps=180.4 swings=131.1 hit=1.7% miss=12.6% dodge=20.7% parry=15.5% block=47.9% crit=0.0% crush=1.7%
 ### P | FEEDBACK_BOSS=fast FEEDBACK_DUR=180 PROPOSE=CP1,RD20,NOTOUGH
-PERTARGET [1446.2166636000395]
-TMI avg=18.99 std=1.85
-RESULT dur=180 propose="CP1,RD20,NOTOUGH" tps=1446.5 dps=580.5 dtps=190.2 swings=130.5 hit=2.7% miss=11.5% dodge=19.6% parry=14.4% block=49.1% crit=0.1% crush=2.6%
+PERTARGET [1381.6906537262912]
+TMI avg=19.54 std=2.03
+RESULT dur=180 propose="CP1,RD20,NOTOUGH" tps=1382.0 dps=551.5 dtps=182.6 swings=131.0 hit=2.0% miss=12.6% dodge=20.7% parry=15.4% block=46.9% crit=0.0% crush=2.4%
 ### W | FEEDBACK_BOSS=fast FEEDBACK_DUR=180
 PERTARGET [1681.709958213518]
 TMI avg=21
 RESULT dur=180 propose="" tps=1682.1 dps=521.7 dtps=223.4 swings=130.6 hit=4.8% miss=9.6% dodge=25.5% parry=12.4% block=44.4% crit=0.5% crush=2.9%
 ### P | FEEDBACK_BOSS=dw FEEDBACK_DUR=180 PROPOSE=
-PERTARGET [1473.0700612831665]
-TMI avg=36.30 std=4.00
-RESULT dur=180 propose="" tps=1473.4 dps=592.3 dtps=319.6 swings=155.4 hit=3.1% miss=11.5% dodge=19.5% parry=14.3% block=44.0% crit=0.3% crush=7.3%
+PERTARGET [1411.9464400190718]
+TMI avg=36.21 std=3.98
+RESULT dur=180 propose="" tps=1412.2 dps=564.2 dtps=299.3 swings=155.9 hit=2.7% miss=12.6% dodge=20.7% parry=15.4% block=43.2% crit=0.0% crush=5.3%
 ### P | FEEDBACK_BOSS=dw FEEDBACK_DUR=180 PROPOSE=CP1,NOTOUGH
-PERTARGET [1491.1586200853362]
-TMI avg=34.27 std=3.53
-RESULT dur=180 propose="CP1,NOTOUGH" tps=1491.5 dps=599.4 dtps=309.1 swings=155.4 hit=2.4% miss=11.5% dodge=19.5% parry=14.3% block=48.8% crit=0.1% crush=3.3%
+PERTARGET [1423.476683299441]
+TMI avg=34.87 std=3.75
+RESULT dur=180 propose="CP1,NOTOUGH" tps=1423.8 dps=568.8 dtps=292.5 swings=156.0 hit=2.0% miss=12.6% dodge=20.7% parry=15.5% block=46.8% crit=0.0% crush=2.4%
 ### P | FEEDBACK_BOSS=dw FEEDBACK_DUR=180 PROPOSE=CP1,RD20,NOTOUGH
-PERTARGET [1488.5174101417954]
-TMI avg=34.73 std=3.61
-RESULT dur=180 propose="CP1,RD20,NOTOUGH" tps=1488.8 dps=598.0 dtps=311.2 swings=155.4 hit=3.6% miss=11.4% dodge=19.6% parry=14.3% block=47.2% crit=0.1% crush=3.8%
+PERTARGET [1421.9517966880946]
+TMI avg=36.01 std=4.08
+RESULT dur=180 propose="CP1,RD20,NOTOUGH" tps=1422.2 dps=568.0 dtps=297.4 swings=156.0 hit=2.4% miss=12.6% dodge=20.7% parry=15.4% block=45.4% crit=0.0% crush=3.4%
 ### W | FEEDBACK_BOSS=dw FEEDBACK_DUR=180
 PERTARGET [1709.2707835916933]
 TMI avg=34
 RESULT dur=180 propose="" tps=1709.7 dps=532.7 dtps=354.4 swings=155.4 hit=6.2% miss=9.5% dodge=25.5% parry=12.4% block=42.0% crit=0.6% crush=3.8%
 ### P | FEEDBACK_BOSS=fast,dw FEEDBACK_DUR=180 PROPOSE=
-PERTARGET [1568.9542396692411]
-TMI avg=30.10 std=2.52
-RESULT dur=180 propose="" tps=1569.3 dps=633.8 dtps=296.2 swings=255.5 hit=5.4% miss=11.4% dodge=19.7% parry=14.3% block=40.2% crit=0.4% crush=8.6%
+PERTARGET [1504.4018488145782]
+TMI avg=29.80 std=2.73
+RESULT dur=180 propose="" tps=1504.7 dps=604.0 dtps=275.4 swings=256.1 hit=4.6% miss=12.5% dodge=20.6% parry=15.5% block=40.1% crit=0.0% crush=6.6%
 ### P | FEEDBACK_BOSS=fast,dw FEEDBACK_DUR=180 PROPOSE=CP1,NOTOUGH
-PERTARGET [1570.1061806070359]
-TMI avg=29.62 std=2.49
-RESULT dur=180 propose="CP1,NOTOUGH" tps=1570.4 dps=635.1 dtps=292.8 swings=255.5 hit=4.7% miss=11.4% dodge=19.6% parry=14.3% block=43.0% crit=0.3% crush=6.7%
+PERTARGET [1508.2486594103434]
+TMI avg=29.46 std=2.68
+RESULT dur=180 propose="CP1,NOTOUGH" tps=1508.6 dps=605.8 dtps=273.2 swings=256.1 hit=3.9% miss=12.6% dodge=20.8% parry=15.4% block=42.4% crit=0.0% crush=5.0%
 ### P | FEEDBACK_BOSS=fast,dw FEEDBACK_DUR=180 PROPOSE=CP1,RD20,NOTOUGH
-PERTARGET [1564.2824463979382]
-TMI avg=30.33 std=2.51
-RESULT dur=180 propose="CP1,RD20,NOTOUGH" tps=1564.6 dps=631.8 dtps=298.5 swings=255.4 hit=6.9% miss=11.4% dodge=19.6% parry=14.3% block=39.9% crit=0.3% crush=7.6%
+PERTARGET [1503.8348491904544]
+TMI avg=30.76 std=2.81
+RESULT dur=180 propose="CP1,RD20,NOTOUGH" tps=1504.1 dps=603.5 dtps=282.4 swings=256.1 hit=4.6% miss=12.6% dodge=20.8% parry=15.4% block=39.5% crit=0.0% crush=7.1%
 ### W | FEEDBACK_BOSS=fast,dw FEEDBACK_DUR=180
 PERTARGET [1806.0837595658998]
 TMI avg=30
 RESULT dur=180 propose="" tps=1806.5 dps=567.6 dtps=349.0 swings=255.3 hit=11.3% miss=9.5% dodge=25.5% parry=12.4% block=33.0% crit=1.2% crush=7.2%
 ### P | FEEDBACK_TARGETS=1 FEEDBACK_DUR=180 RF_ALL=1.90 PROPOSE=
-PERTARGET [1301.6162997249521]
-TMI avg=5.26 std=0.71
-RESULT dur=180 propose="" tps=1301.8 dps=525.8 dtps=56.8 swings=80.4 hit=1.8% miss=11.2% dodge=19.7% parry=14.3% block=44.1% crit=0.4% crush=8.6%
+PERTARGET [1246.1894008352429]
+TMI avg=5.13 std=0.69
+RESULT dur=180 propose="" tps=1246.4 dps=500.7 dtps=52.7 swings=80.9 hit=1.7% miss=12.3% dodge=20.7% parry=15.5% block=43.7% crit=0.0% crush=6.1%
 ### P | FEEDBACK_TARGETS=1 FEEDBACK_DUR=180 RF_ALL=1.90 PROPOSE=C25
-PERTARGET [1853.2343810844952]
-TMI avg=5.26 std=0.71
-RESULT dur=180 propose="C25" tps=1853.6 dps=525.8 dtps=56.8 swings=80.4 hit=1.8% miss=11.2% dodge=19.7% parry=14.3% block=44.1% crit=0.4% crush=8.6%
+PERTARGET [1774.495135722302]
+TMI avg=5.13 std=0.69
+RESULT dur=180 propose="C25" tps=1774.8 dps=500.7 dtps=52.7 swings=80.9 hit=1.7% miss=12.3% dodge=20.7% parry=15.5% block=43.7% crit=0.0% crush=6.1%
 ### P | FEEDBACK_TARGETS=1 FEEDBACK_DUR=180 RF_ALL=1.90 PROPOSE=CP1,C25
-PERTARGET [1898.711900120824]
-TMI avg=4.31 std=0.49
-RESULT dur=180 propose="CP1,C25" tps=1899.1 dps=537.7 dtps=48.3 swings=80.5 hit=1.7% miss=11.5% dodge=19.5% parry=14.3% block=51.9% crit=0.0% crush=0.9%
+PERTARGET [1803.9679094859757]
+TMI avg=4.51 std=0.53
+RESULT dur=180 propose="CP1,C25" tps=1804.3 dps=508.4 dtps=47.5 swings=81.0 hit=1.6% miss=12.5% dodge=20.6% parry=15.4% block=49.1% crit=0.0% crush=0.9%
 ### P | FEEDBACK_TARGETS=1 FEEDBACK_DUR=180 RF_ALL=1.80 PROPOSE=C25
-PERTARGET [1756.4592790915929]
-TMI avg=5.26 std=0.71
-RESULT dur=180 propose="C25" tps=1756.8 dps=525.8 dtps=56.8 swings=80.4 hit=1.8% miss=11.2% dodge=19.7% parry=14.3% block=44.1% crit=0.4% crush=8.6%
+PERTARGET [1681.8099190754494]
+TMI avg=5.13 std=0.69
+RESULT dur=180 propose="C25" tps=1682.1 dps=500.7 dtps=52.7 swings=80.9 hit=1.7% miss=12.3% dodge=20.7% parry=15.5% block=43.7% crit=0.0% crush=6.1%
 ### P | FEEDBACK_TARGETS=1 FEEDBACK_DUR=180 RF_ALL=1.80 PROPOSE=CP1,C25
-PERTARGET [1799.536815081547]
-TMI avg=4.31 std=0.49
-RESULT dur=180 propose="CP1,C25" tps=1799.9 dps=537.7 dtps=48.3 swings=80.5 hit=1.7% miss=11.5% dodge=19.5% parry=14.3% block=51.9% crit=0.0% crush=0.9%
+PERTARGET [1709.7233494596935]
+TMI avg=4.51 std=0.53
+RESULT dur=180 propose="CP1,C25" tps=1710.0 dps=508.4 dtps=47.5 swings=81.0 hit=1.6% miss=12.5% dodge=20.6% parry=15.4% block=49.1% crit=0.0% crush=0.9%
 ### W | FEEDBACK_TARGETS=1 FEEDBACK_DUR=180
 PERTARGET [1528.107045398782]
 TMI avg=9
@@ -141,25 +141,25 @@ RESULT dur=180 propose="" tps=1528.5 dps=473.0 dtps=66.9 swings=80.7 hit=2.8% mi
 PERTARGET [2002.5237606740714]
 RESULT druid dur=180 tps=2002.9 dtps=94.5 tmi=5.84 crush=15.0%
 ### P | FEEDBACK_TARGETS=3 FEEDBACK_DUR=180 RF_ALL=1.90 PROPOSE=
-PERTARGET [1251.5543669420197 340.6730742744811 340.2124407469937]
-TMI avg=17.04 std=1.53
-RESULT dur=180 propose="" tps=1932.8 dps=796.3 dtps=178.2 swings=81.0 hit=4.9% miss=11.4% dodge=19.7% parry=14.4% block=41.1% crit=0.4% crush=8.2%
+PERTARGET [1197.5930484640173 333.58808248671164 333.29837533404776]
+TMI avg=16.71 std=1.56
+RESULT dur=180 propose="" tps=1864.9 dps=764.0 dtps=165.3 swings=81.7 hit=4.3% miss=12.7% dodge=20.7% parry=15.5% block=40.7% crit=0.0% crush=6.2%
 ### P | FEEDBACK_TARGETS=3 FEEDBACK_DUR=180 RF_ALL=1.90 PROPOSE=C25
-PERTARGET [1785.902467933329 484.64347840827696 483.9854305118657]
-TMI avg=17.04 std=1.53
-RESULT dur=180 propose="C25" tps=2755.1 dps=796.3 dtps=178.2 swings=81.0 hit=4.9% miss=11.4% dodge=19.7% parry=14.4% block=41.1% crit=0.4% crush=8.2%
+PERTARGET [1709.001966660837 474.70915812182807 474.29529076087937]
+TMI avg=16.71 std=1.56
+RESULT dur=180 propose="C25" tps=2658.6 dps=764.0 dtps=165.3 swings=81.7 hit=4.3% miss=12.7% dodge=20.7% parry=15.5% block=40.7% crit=0.0% crush=6.2%
 ### P | FEEDBACK_TARGETS=3 FEEDBACK_DUR=180 RF_ALL=1.90 PROPOSE=CP1,C25
-PERTARGET [1789.3392696392705 486.060265262924 486.1707135777866]
-TMI avg=16.28 std=1.47
-RESULT dur=180 propose="CP1,C25" tps=2762.1 dps=798.6 dtps=171.2 swings=81.1 hit=4.3% miss=11.5% dodge=19.6% parry=14.2% block=44.1% crit=0.3% crush=6.1%
+PERTARGET [1713.661676146401 476.0934863306707 475.3877741772967]
+TMI avg=16.05 std=1.49
+RESULT dur=180 propose="CP1,C25" tps=2665.8 dps=766.6 dtps=159.7 swings=81.7 hit=3.5% miss=12.6% dodge=20.8% parry=15.4% block=43.3% crit=0.0% crush=4.5%
 ### P | FEEDBACK_TARGETS=3 FEEDBACK_DUR=180 RF_ALL=1.80 PROPOSE=C25
-PERTARGET [1692.1571870576668 459.38551277076743 458.7620989741681]
-TMI avg=17.04 std=1.53
-RESULT dur=180 propose="C25" tps=2610.8 dps=796.3 dtps=178.2 swings=81.0 hit=4.9% miss=11.4% dodge=19.7% parry=14.4% block=41.1% crit=0.4% crush=8.2%
+PERTARGET [1619.2811038192897 449.95107467707 449.55898980880346]
+TMI avg=16.71 std=1.56
+RESULT dur=180 propose="C25" tps=2519.4 dps=764.0 dtps=165.3 swings=81.7 hit=4.3% miss=12.7% dodge=20.7% parry=15.5% block=40.7% crit=0.0% crush=6.2%
 ### P | FEEDBACK_TARGETS=3 FEEDBACK_DUR=180 RF_ALL=1.80 PROPOSE=CP1,C25
-PERTARGET [1695.4115008664705 460.7261282993992 460.8307635450577]
-TMI avg=16.28 std=1.47
-RESULT dur=180 propose="CP1,C25" tps=2617.5 dps=798.6 dtps=171.2 swings=81.1 hit=4.3% miss=11.5% dodge=19.6% parry=14.2% block=44.1% crit=0.3% crush=6.1%
+PERTARGET [1623.6949783342634 451.26195640357076 450.5933869951106]
+TMI avg=16.05 std=1.49
+RESULT dur=180 propose="CP1,C25" tps=2526.1 dps=766.6 dtps=159.7 swings=81.7 hit=3.5% miss=12.6% dodge=20.8% parry=15.4% block=43.3% crit=0.0% crush=4.5%
 ### W | FEEDBACK_TARGETS=3 FEEDBACK_DUR=180
 PERTARGET [1536.6405384287368 458.20800336994074 148.5780012718211]
 TMI avg=20
@@ -168,25 +168,25 @@ RESULT dur=180 propose="" tps=2144.0 dps=740.4 dtps=218.4 swings=80.7 hit=10.4% 
 PERTARGET [1454.7901440072935 499.55737197694793 492.6794446572694]
 RESULT druid dur=180 tps=2447.5 dtps=268.3 tmi=16.92 crush=15.0%
 ### P | FEEDBACK_TARGETS=5 FEEDBACK_DUR=180 RF_ALL=1.90 PROPOSE=
-PERTARGET [1229.8887592265612 298.0430105930459 297.24049562388035 297.21667401774926 164.46362023241227]
-TMI avg=30.71 std=2.18
-RESULT dur=180 propose="" tps=2287.3 dps=965.4 dtps=316.9 swings=81.5 hit=6.7% miss=11.4% dodge=19.5% parry=14.4% block=37.6% crit=0.4% crush=10.0%
+PERTARGET [1177.04536965827 291.8665945712369 291.7736525786522 291.2018688484192 160.57731561384176]
+TMI avg=30.19 std=2.32
+RESULT dur=180 propose="" tps=2212.9 dps=929.6 dtps=292.9 swings=82.2 hit=5.8% miss=12.5% dodge=20.8% parry=15.4% block=37.8% crit=0.0% crush=7.7%
 ### P | FEEDBACK_TARGETS=5 FEEDBACK_DUR=180 RF_ALL=1.90 PROPOSE=C25
-PERTARGET [1755.7519651792263 424.54375284563787 423.39730288968576 423.3632720237848 233.71605233044647]
-TMI avg=30.71 std=2.18
-RESULT dur=180 propose="C25" tps=3261.4 dps=965.4 dtps=316.9 swings=81.5 hit=6.7% miss=11.4% dodge=19.5% parry=14.4% block=37.6% crit=0.4% crush=10.0%
+PERTARGET [1680.3778445705543 415.83673730336375 415.7039630282408 414.8871291279097 228.28062450708453]
+TMI avg=30.19 std=2.32
+RESULT dur=180 propose="C25" tps=3155.8 dps=929.6 dtps=292.9 swings=82.2 hit=5.8% miss=12.5% dodge=20.8% parry=15.4% block=37.8% crit=0.0% crush=7.7%
 ### P | FEEDBACK_TARGETS=5 FEEDBACK_DUR=180 RF_ALL=1.90 PROPOSE=CP1,C25
-PERTARGET [1756.2979518820473 424.60821300567966 424.4482496981007 424.18301437388493 234.89289986833037]
-TMI avg=30.02 std=2.12
-RESULT dur=180 propose="CP1,C25" tps=3265.1 dps=967.5 dtps=310.4 swings=81.6 hit=6.2% miss=11.5% dodge=19.6% parry=14.4% block=39.2% crit=0.4% crush=8.9%
+PERTARGET [1681.1635353770246 415.9724584167916 415.2452231564683 416.00792175578596 228.2130757761863]
+TMI avg=29.44 std=2.21
+RESULT dur=180 propose="CP1,C25" tps=3157.3 dps=930.5 dtps=287.1 swings=82.3 hit=5.3% miss=12.6% dodge=20.7% parry=15.5% block=39.2% crit=0.0% crush=6.7%
 ### P | FEEDBACK_TARGETS=5 FEEDBACK_DUR=180 RF_ALL=1.80 PROPOSE=C25
-PERTARGET [1663.495262380517 402.35064016974474 401.2645296851586 401.23228991746333 221.5665028395633]
-TMI avg=30.71 std=2.18
-RESULT dur=180 propose="C25" tps=3090.5 dps=965.4 dtps=316.9 swings=81.5 hit=6.7% miss=11.4% dodge=19.5% parry=14.4% block=37.6% crit=0.4% crush=10.0%
+PERTARGET [1592.0739016034875 394.0875894556215 393.96180330024214 393.1879606578236 216.40285101704183]
+TMI avg=30.19 std=2.32
+RESULT dur=180 propose="C25" tps=2990.4 dps=929.6 dtps=292.9 swings=82.2 hit=5.8% miss=12.5% dodge=20.8% parry=15.4% block=37.8% crit=0.0% crush=7.7%
 ### P | FEEDBACK_TARGETS=5 FEEDBACK_DUR=180 RF_ALL=1.80 PROPOSE=CP1,C25
-PERTARGET [1664.0125732844797 402.41176803318007 402.2602238470528 402.00894827674335 222.68147137674381]
-TMI avg=30.02 std=2.12
-RESULT dur=180 propose="CP1,C25" tps=3094.0 dps=967.5 dtps=310.4 swings=81.6 hit=6.2% miss=11.5% dodge=19.6% parry=14.4% block=39.2% crit=0.4% crush=8.9%
+PERTARGET [1592.818053135671 394.2159802259764 393.5270205056702 394.2495770734443 216.33867035592968]
+TMI avg=29.44 std=2.21
+RESULT dur=180 propose="CP1,C25" tps=2991.8 dps=930.5 dtps=287.1 swings=82.3 hit=5.3% miss=12.6% dodge=20.7% parry=15.5% block=39.2% crit=0.0% crush=6.7%
 ### W | FEEDBACK_TARGETS=5 FEEDBACK_DUR=180
 PERTARGET [1591.7075999172312 566.8342057785914 139.32967511507906 139.2857523740537 78.20142952420998]
 TMI avg=32
@@ -195,181 +195,181 @@ RESULT dur=180 propose="" tps=2516.0 dps=892.1 dtps=392.2 swings=80.8 hit=14.7% 
 PERTARGET [1868.6346500123009 367.3551371552907 361.35735897894915 77.37300734100154 77.36975351347641]
 RESULT druid dur=180 tps=2752.7 dtps=427.6 tmi=27.12 crush=14.9%
 ### P | FEEDBACK_APL=default FEEDBACK_DUR=180 FEEDBACK_BURST=pal_default_live PROPOSE=
-BURST pal_default_live open 1.5 mean 1780.7 p10 1016.7 p90 2544.1
-BURST pal_default_live open 3.0 mean 4251.6 p10 3102.8 p90 5509.5
-BURST pal_default_live open 4.5 mean 5321.4 p10 3938.3 p90 6813.7
-BURST pal_default_live open 6.0 mean 8489.4 p10 6292.9 p90 10613.5
-BURST pal_default_live open 8.0 mean 9965.9 p10 7608.9 p90 12287.9
-BURST pal_default_live open 10.0 mean 13324.8 p10 10691.9 p90 16029.9
-BURST pal_default_live open 15.0 mean 19157.2 p10 15838.0 p90 22467.4
-BURST pal_default_live open 20.0 mean 26434.1 p10 22499.3 p90 30417.2
-BURST pal_default_live open 30.0 mean 38084.4 p10 33358.0 p90 42849.5
-BURST pal_default_live window 3 peak 9403.2 p10peak 8390.3 steady 3898.4
-BURST pal_default_live window 6 peak 13404.6 p10peak 12117.4 steady 7796.9
-BURST pal_default_live window 10 peak 20222.1 p10peak 18500.7 steady 12994.8
-PERTARGET [1299.856414116741]
-TMI avg=26.32 std=3.18
-RESULT dur=180 propose="" tps=1299.9 dps=525.1 dtps=225.7 swings=80.4 hit=1.8% miss=11.5% dodge=19.5% parry=14.3% block=44.0% crit=0.4% crush=8.5%
+BURST pal_default_live open 1.5 mean 1738.9 p10 997.8 p90 2494.6
+BURST pal_default_live open 3.0 mean 4088.1 p10 2984.1 p90 5266.1
+BURST pal_default_live open 4.5 mean 5110.0 p10 3754.4 p90 6548.1
+BURST pal_default_live open 6.0 mean 8090.5 p10 5936.7 p90 10110.8
+BURST pal_default_live open 8.0 mean 9474.1 p10 7143.2 p90 11705.0
+BURST pal_default_live open 10.0 mean 12688.1 p10 10092.5 p90 15274.4
+BURST pal_default_live open 15.0 mean 18299.3 p10 14939.6 p90 21712.1
+BURST pal_default_live open 20.0 mean 25306.1 p10 21301.3 p90 29332.2
+BURST pal_default_live open 30.0 mean 36437.4 p10 31601.3 p90 41370.5
+BURST pal_default_live window 3 peak 9163.3 p10peak 8162.4 steady 3731.7
+BURST pal_default_live window 6 peak 13007.9 p10peak 11716.6 steady 7463.4
+BURST pal_default_live window 10 peak 19544.0 p10peak 17870.1 steady 12438.9
+PERTARGET [1243.6147365735087]
+TMI avg=26.18 std=3.20
+RESULT dur=180 propose="" tps=1243.6 dps=499.2 dtps=209.9 swings=80.9 hit=1.7% miss=12.7% dodge=20.8% parry=15.4% block=43.4% crit=0.0% crush=6.0%
 ### P | FEEDBACK_APL=furyopen FEEDBACK_DUR=180 FEEDBACK_BURST=pal_furyopen_live PROPOSE=
-BURST pal_furyopen_live open 1.5 mean 6954.6 p10 4980.0 p90 8825.9
-BURST pal_furyopen_live open 3.0 mean 8173.7 p10 6045.8 p90 10283.6
-BURST pal_furyopen_live open 4.5 mean 9303.0 p10 6983.5 p90 11582.8
-BURST pal_furyopen_live open 6.0 mean 10609.0 p10 8223.0 p90 13063.7
-BURST pal_furyopen_live open 8.0 mean 13932.7 p10 11060.6 p90 16766.6
-BURST pal_furyopen_live open 10.0 mean 17286.7 p10 14081.4 p90 20550.4
-BURST pal_furyopen_live open 15.0 mean 22990.7 p10 19134.1 p90 26808.0
-BURST pal_furyopen_live open 20.0 mean 30010.6 p10 25739.5 p90 34316.4
-BURST pal_furyopen_live open 30.0 mean 41219.7 p10 36058.9 p90 46392.6
-BURST pal_furyopen_live window 3 peak 10110.2 p10peak 8830.5 steady 3925.5
-BURST pal_furyopen_live window 6 peak 13613.4 p10peak 12314.4 steady 7851.0
-BURST pal_furyopen_live window 10 peak 20736.5 p10peak 18893.7 steady 13085.1
-PERTARGET [1320.124449918973]
-TMI avg=26.34 std=3.16
-RESULT dur=180 propose="" tps=1320.1 dps=532.0 dtps=225.8 swings=80.5 hit=1.2% miss=11.4% dodge=19.7% parry=14.2% block=44.6% crit=0.4% crush=8.4%
+BURST pal_furyopen_live open 1.5 mean 6716.0 p10 4725.9 p90 8501.4
+BURST pal_furyopen_live open 3.0 mean 7904.4 p10 5821.0 p90 9939.5
+BURST pal_furyopen_live open 4.5 mean 8953.8 p10 6795.3 p90 11141.9
+BURST pal_furyopen_live open 6.0 mean 10184.7 p10 7927.4 p90 12546.5
+BURST pal_furyopen_live open 8.0 mean 13324.7 p10 10387.4 p90 16175.6
+BURST pal_furyopen_live open 10.0 mean 16541.8 p10 13357.7 p90 19660.1
+BURST pal_furyopen_live open 15.0 mean 21969.9 p10 18060.7 p90 25837.5
+BURST pal_furyopen_live open 20.0 mean 28689.9 p10 24265.4 p90 33149.3
+BURST pal_furyopen_live open 30.0 mean 39458.5 p10 34355.5 p90 44673.9
+BURST pal_furyopen_live window 3 peak 9814.2 p10peak 8595.1 steady 3759.4
+BURST pal_furyopen_live window 6 peak 13184.1 p10peak 11918.6 steady 7518.7
+BURST pal_furyopen_live window 10 peak 20018.0 p10peak 18214.3 steady 12531.2
+PERTARGET [1264.9573059175518]
+TMI avg=26.14 std=3.15
+RESULT dur=180 propose="" tps=1265.0 dps=507.1 dtps=209.8 swings=80.9 hit=1.1% miss=12.5% dodge=20.8% parry=15.4% block=44.3% crit=0.0% crush=5.8%
 ### P | FEEDBACK_APL=furyopen1 FEEDBACK_DUR=180 FEEDBACK_BURST=pal_furyopen1_live PROPOSE=
-BURST pal_furyopen1_live open 1.5 mean 5421.6 p10 3466.4 p90 7122.5
-BURST pal_furyopen1_live open 3.0 mean 8162.6 p10 6023.0 p90 10203.6
-BURST pal_furyopen1_live open 4.5 mean 9277.5 p10 7072.9 p90 11465.2
-BURST pal_furyopen1_live open 6.0 mean 10561.5 p10 8194.5 p90 12993.6
-BURST pal_furyopen1_live open 8.0 mean 13871.3 p10 10949.2 p90 16871.8
-BURST pal_furyopen1_live open 10.0 mean 17213.7 p10 14023.0 p90 20508.1
-BURST pal_furyopen1_live open 15.0 mean 22955.5 p10 19059.3 p90 26846.8
-BURST pal_furyopen1_live open 20.0 mean 29975.7 p10 25686.9 p90 34409.5
-BURST pal_furyopen1_live open 30.0 mean 41152.8 p10 36295.7 p90 46327.0
-BURST pal_furyopen1_live window 3 peak 9887.8 p10peak 8754.3 steady 3924.6
-BURST pal_furyopen1_live window 6 peak 13513.0 p10peak 12265.9 steady 7849.1
-BURST pal_furyopen1_live window 10 peak 20606.1 p10peak 18812.8 steady 13081.9
-PERTARGET [1319.247678257869]
-TMI avg=26.30 std=3.16
-RESULT dur=180 propose="" tps=1319.2 dps=531.6 dtps=225.5 swings=80.5 hit=1.2% miss=11.6% dodge=19.6% parry=14.3% block=44.5% crit=0.4% crush=8.5%
+BURST pal_furyopen1_live open 1.5 mean 5227.6 p10 3277.6 p90 6975.3
+BURST pal_furyopen1_live open 3.0 mean 7907.1 p10 5751.4 p90 9952.9
+BURST pal_furyopen1_live open 4.5 mean 8963.5 p10 6696.5 p90 11227.9
+BURST pal_furyopen1_live open 6.0 mean 10192.7 p10 7796.9 p90 12596.6
+BURST pal_furyopen1_live open 8.0 mean 13317.7 p10 10511.1 p90 16143.9
+BURST pal_furyopen1_live open 10.0 mean 16543.9 p10 13456.7 p90 19744.5
+BURST pal_furyopen1_live open 15.0 mean 22028.1 p10 18263.7 p90 25888.0
+BURST pal_furyopen1_live open 20.0 mean 28739.2 p10 24318.8 p90 33120.6
+BURST pal_furyopen1_live open 30.0 mean 39486.8 p10 34368.9 p90 44623.9
+BURST pal_furyopen1_live window 3 peak 9628.4 p10peak 8521.3 steady 3760.6
+BURST pal_furyopen1_live window 6 peak 13125.9 p10peak 11859.5 steady 7521.1
+BURST pal_furyopen1_live window 10 peak 19931.0 p10peak 18164.2 steady 12535.2
+PERTARGET [1265.3587625816244]
+TMI avg=26.25 std=3.16
+RESULT dur=180 propose="" tps=1265.4 dps=507.1 dtps=210.7 swings=81.0 hit=1.2% miss=12.5% dodge=20.7% parry=15.4% block=44.3% crit=0.0% crush=5.9%
 ### P | RF_ALL=1.90 FEEDBACK_APL=default FEEDBACK_DUR=180 FEEDBACK_BURST=pal_default_1.90_C25 PROPOSE=C25
-BURST pal_default_1.90_C25 open 1.5 mean 2537.4 p10 1451.0 p90 3624.3
-BURST pal_default_1.90_C25 open 3.0 mean 6048.3 p10 4407.9 p90 7844.2
-BURST pal_default_1.90_C25 open 4.5 mean 7570.2 p10 5594.2 p90 9694.5
-BURST pal_default_1.90_C25 open 6.0 mean 12083.4 p10 8951.0 p90 15106.4
-BURST pal_default_1.90_C25 open 8.0 mean 14185.1 p10 10833.1 p90 17487.9
-BURST pal_default_1.90_C25 open 10.0 mean 18960.6 p10 15208.7 p90 22816.8
-BURST pal_default_1.90_C25 open 15.0 mean 27266.3 p10 22546.8 p90 31987.4
-BURST pal_default_1.90_C25 open 20.0 mean 37624.7 p10 32038.7 p90 43289.1
-BURST pal_default_1.90_C25 open 30.0 mean 54208.2 p10 47469.4 p90 60993.3
-BURST pal_default_1.90_C25 window 3 peak 13399.6 p10peak 11952.0 steady 5550.3
-BURST pal_default_1.90_C25 window 6 peak 19095.9 p10peak 17260.0 steady 11100.6
-BURST pal_default_1.90_C25 window 10 peak 28804.4 p10peak 26360.3 steady 18501.0
-PERTARGET [1850.7284099523924]
-TMI avg=26.32 std=3.18
-RESULT dur=180 propose="C25" tps=1850.7 dps=525.1 dtps=225.7 swings=80.4 hit=1.8% miss=11.5% dodge=19.5% parry=14.3% block=44.0% crit=0.4% crush=8.5%
+BURST pal_default_1.90_C25 open 1.5 mean 2477.8 p10 1422.8 p90 3554.7
+BURST pal_default_1.90_C25 open 3.0 mean 5814.8 p10 4245.5 p90 7500.0
+BURST pal_default_1.90_C25 open 4.5 mean 7268.8 p10 5331.5 p90 9314.7
+BURST pal_default_1.90_C25 open 6.0 mean 11514.2 p10 8451.3 p90 14403.6
+BURST pal_default_1.90_C25 open 8.0 mean 13483.4 p10 10162.8 p90 16658.0
+BURST pal_default_1.90_C25 open 10.0 mean 18052.7 p10 14353.3 p90 21747.5
+BURST pal_default_1.90_C25 open 15.0 mean 26043.5 p10 21262.8 p90 30906.0
+BURST pal_default_1.90_C25 open 20.0 mean 36017.8 p10 30279.9 p90 41756.4
+BURST pal_default_1.90_C25 open 30.0 mean 51863.5 p10 44972.1 p90 58902.5
+BURST pal_default_1.90_C25 window 3 peak 13059.5 p10peak 11622.5 steady 5313.5
+BURST pal_default_1.90_C25 window 6 peak 18532.5 p10peak 16697.7 steady 10627.1
+BURST pal_default_1.90_C25 window 10 peak 27842.1 p10peak 25440.6 steady 17711.8
+PERTARGET [1770.8174140316899]
+TMI avg=26.18 std=3.20
+RESULT dur=180 propose="C25" tps=1770.8 dps=499.2 dtps=209.9 swings=80.9 hit=1.7% miss=12.7% dodge=20.8% parry=15.4% block=43.4% crit=0.0% crush=6.0%
 ### P | RF_ALL=1.90 FEEDBACK_APL=furyopen FEEDBACK_DUR=180 FEEDBACK_BURST=pal_furyopen_1.90_C25 PROPOSE=C25
-BURST pal_furyopen_1.90_C25 open 1.5 mean 9910.8 p10 7092.9 p90 12573.2
-BURST pal_furyopen_1.90_C25 open 3.0 mean 11639.2 p10 8616.1 p90 14656.9
-BURST pal_furyopen_1.90_C25 open 4.5 mean 13245.5 p10 9940.0 p90 16501.1
-BURST pal_furyopen_1.90_C25 open 6.0 mean 15104.3 p10 11703.0 p90 18593.4
-BURST pal_furyopen_1.90_C25 open 8.0 mean 19840.9 p10 15747.2 p90 23880.5
-BURST pal_furyopen_1.90_C25 open 10.0 mean 24615.2 p10 20065.7 p90 29255.9
-BURST pal_furyopen_1.90_C25 open 15.0 mean 32733.5 p10 27248.9 p90 38177.0
-BURST pal_furyopen_1.90_C25 open 20.0 mean 42738.5 p10 36634.2 p90 48889.1
-BURST pal_furyopen_1.90_C25 open 30.0 mean 58687.6 p10 51324.7 p90 66080.6
-BURST pal_furyopen_1.90_C25 window 3 peak 14406.8 p10peak 12581.2 steady 5589.1
-BURST pal_furyopen_1.90_C25 window 6 peak 19393.1 p10peak 17544.0 steady 11178.2
-BURST pal_furyopen_1.90_C25 window 10 peak 29538.6 p10peak 26908.6 steady 18630.3
-PERTARGET [1879.757527099852]
-TMI avg=26.34 std=3.16
-RESULT dur=180 propose="C25" tps=1879.8 dps=532.0 dtps=225.8 swings=80.5 hit=1.2% miss=11.4% dodge=19.7% parry=14.2% block=44.6% crit=0.4% crush=8.4%
+BURST pal_furyopen_1.90_C25 open 1.5 mean 9570.3 p10 6735.3 p90 12115.4
+BURST pal_furyopen_1.90_C25 open 3.0 mean 11254.7 p10 8284.6 p90 14145.1
+BURST pal_furyopen_1.90_C25 open 4.5 mean 12747.2 p10 9665.0 p90 15868.1
+BURST pal_furyopen_1.90_C25 open 6.0 mean 14499.0 p10 11291.8 p90 17843.5
+BURST pal_furyopen_1.90_C25 open 8.0 mean 18975.1 p10 14768.9 p90 23043.4
+BURST pal_furyopen_1.90_C25 open 10.0 mean 23555.0 p10 19027.6 p90 28010.1
+BURST pal_furyopen_1.90_C25 open 15.0 mean 31279.8 p10 25706.3 p90 36781.4
+BURST pal_furyopen_1.90_C25 open 20.0 mean 40860.0 p10 34537.9 p90 47236.6
+BURST pal_furyopen_1.90_C25 open 30.0 mean 56183.4 p10 48866.3 p90 63644.1
+BURST pal_furyopen_1.90_C25 window 3 peak 13986.1 p10peak 12252.2 steady 5353.1
+BURST pal_furyopen_1.90_C25 window 6 peak 18783.9 p10peak 16977.1 steady 10706.2
+BURST pal_furyopen_1.90_C25 window 10 peak 28519.3 p10peak 25948.5 steady 17843.7
+PERTARGET [1801.3613833762624]
+TMI avg=26.14 std=3.15
+RESULT dur=180 propose="C25" tps=1801.4 dps=507.1 dtps=209.8 swings=80.9 hit=1.1% miss=12.5% dodge=20.8% parry=15.4% block=44.3% crit=0.0% crush=5.8%
 ### P | RF_ALL=1.90 FEEDBACK_APL=default FEEDBACK_DUR=180 FEEDBACK_BURST=pal_default_1.90_CP1,C25 PROPOSE=CP1,C25
-BURST pal_default_1.90_CP1,C25 open 1.5 mean 2537.4 p10 1451.0 p90 3624.3
-BURST pal_default_1.90_CP1,C25 open 3.0 mean 6048.3 p10 4407.9 p90 7844.2
-BURST pal_default_1.90_CP1,C25 open 4.5 mean 7647.6 p10 5644.0 p90 9784.8
-BURST pal_default_1.90_CP1,C25 open 6.0 mean 12250.6 p10 9086.4 p90 15282.7
-BURST pal_default_1.90_CP1,C25 open 8.0 mean 14496.9 p10 11090.2 p90 17812.7
-BURST pal_default_1.90_CP1,C25 open 10.0 mean 19374.9 p10 15592.3 p90 23352.9
-BURST pal_default_1.90_CP1,C25 open 15.0 mean 27954.1 p10 23140.4 p90 32834.0
-BURST pal_default_1.90_CP1,C25 open 20.0 mean 38552.3 p10 32900.5 p90 44256.9
-BURST pal_default_1.90_CP1,C25 open 30.0 mean 55576.0 p10 48640.5 p90 62561.4
-BURST pal_default_1.90_CP1,C25 window 3 peak 13611.5 p10peak 12134.4 steady 5683.2
-BURST pal_default_1.90_CP1,C25 window 6 peak 19457.4 p10peak 17592.9 steady 11366.3
-BURST pal_default_1.90_CP1,C25 window 10 peak 29319.3 p10peak 26874.7 steady 18943.9
-PERTARGET [1895.9555926821504]
-TMI avg=22.62 std=2.22
-RESULT dur=180 propose="CP1,C25" tps=1896.0 dps=536.6 dtps=205.9 swings=80.5 hit=1.7% miss=11.5% dodge=19.6% parry=14.3% block=51.9% crit=0.0% crush=1.0%
+BURST pal_default_1.90_CP1,C25 open 1.5 mean 2477.8 p10 1422.8 p90 3554.7
+BURST pal_default_1.90_CP1,C25 open 3.0 mean 5814.8 p10 4245.5 p90 7500.0
+BURST pal_default_1.90_CP1,C25 open 4.5 mean 7322.3 p10 5377.0 p90 9408.7
+BURST pal_default_1.90_CP1,C25 open 6.0 mean 11631.4 p10 8531.1 p90 14561.2
+BURST pal_default_1.90_CP1,C25 open 8.0 mean 13687.5 p10 10355.7 p90 16945.0
+BURST pal_default_1.90_CP1,C25 open 10.0 mean 18337.9 p10 14578.8 p90 22029.4
+BURST pal_default_1.90_CP1,C25 open 15.0 mean 26537.6 p10 21642.1 p90 31408.1
+BURST pal_default_1.90_CP1,C25 open 20.0 mean 36707.8 p10 30915.4 p90 42519.0
+BURST pal_default_1.90_CP1,C25 open 30.0 mean 53020.3 p10 46091.2 p90 60175.9
+BURST pal_default_1.90_CP1,C25 window 3 peak 13166.9 p10peak 11756.2 steady 5404.2
+BURST pal_default_1.90_CP1,C25 window 6 peak 18757.7 p10peak 16975.8 steady 10808.5
+BURST pal_default_1.90_CP1,C25 window 10 peak 28161.6 p10peak 25713.8 steady 18014.2
+PERTARGET [1801.9742526586494]
+TMI avg=23.58 std=2.48
+RESULT dur=180 propose="CP1,C25" tps=1802.0 dps=507.2 dtps=197.6 swings=81.0 hit=1.6% miss=12.6% dodge=20.8% parry=15.4% block=48.8% crit=0.0% crush=0.9%
 ### P | RF_ALL=1.90 FEEDBACK_APL=furyopen FEEDBACK_DUR=180 FEEDBACK_BURST=pal_furyopen_1.90_CP1,C25 PROPOSE=CP1,C25
-BURST pal_furyopen_1.90_CP1,C25 open 1.5 mean 10017.3 p10 7243.8 p90 12738.6
-BURST pal_furyopen_1.90_CP1,C25 open 3.0 mean 11869.5 p10 8795.0 p90 14901.3
-BURST pal_furyopen_1.90_CP1,C25 open 4.5 mean 13591.9 p10 10306.7 p90 16882.0
-BURST pal_furyopen_1.90_CP1,C25 open 6.0 mean 15545.3 p10 12005.3 p90 19083.9
-BURST pal_furyopen_1.90_CP1,C25 open 8.0 mean 20440.8 p10 16251.4 p90 24611.4
-BURST pal_furyopen_1.90_CP1,C25 open 10.0 mean 25331.4 p10 20717.1 p90 30015.7
-BURST pal_furyopen_1.90_CP1,C25 open 15.0 mean 33738.9 p10 28291.1 p90 39288.9
-BURST pal_furyopen_1.90_CP1,C25 open 20.0 mean 43980.8 p10 37859.3 p90 50149.2
-BURST pal_furyopen_1.90_CP1,C25 open 30.0 mean 60384.3 p10 53155.3 p90 67618.3
-BURST pal_furyopen_1.90_CP1,C25 window 3 peak 14587.5 p10peak 12761.8 steady 5730.0
-BURST pal_furyopen_1.90_CP1,C25 window 6 peak 19688.7 p10peak 17854.8 steady 11460.0
-BURST pal_furyopen_1.90_CP1,C25 window 10 peak 30113.7 p10peak 27570.7 steady 19099.9
-PERTARGET [1929.3510365027341]
-TMI avg=22.54 std=2.28
-RESULT dur=180 propose="CP1,C25" tps=1929.4 dps=544.7 dtps=205.3 swings=80.6 hit=1.1% miss=11.4% dodge=19.7% parry=14.3% block=52.8% crit=0.0% crush=0.6%
+BURST pal_furyopen_1.90_CP1,C25 open 1.5 mean 9648.0 p10 6903.2 p90 12187.4
+BURST pal_furyopen_1.90_CP1,C25 open 3.0 mean 11423.1 p10 8461.5 p90 14377.7
+BURST pal_furyopen_1.90_CP1,C25 open 4.5 mean 12994.2 p10 9799.7 p90 16142.5
+BURST pal_furyopen_1.90_CP1,C25 open 6.0 mean 14799.2 p10 11521.2 p90 18161.8
+BURST pal_furyopen_1.90_CP1,C25 open 8.0 mean 19360.1 p10 15255.2 p90 23428.4
+BURST pal_furyopen_1.90_CP1,C25 open 10.0 mean 24026.3 p10 19489.4 p90 28458.1
+BURST pal_furyopen_1.90_CP1,C25 open 15.0 mean 31960.5 p10 26408.5 p90 37353.4
+BURST pal_furyopen_1.90_CP1,C25 open 20.0 mean 41693.6 p10 35527.5 p90 47847.2
+BURST pal_furyopen_1.90_CP1,C25 open 30.0 mean 57296.6 p10 49883.0 p90 64708.5
+BURST pal_furyopen_1.90_CP1,C25 window 3 peak 14074.4 p10peak 12315.7 steady 5435.8
+BURST pal_furyopen_1.90_CP1,C25 window 6 peak 18911.6 p10peak 17142.1 steady 10871.6
+BURST pal_furyopen_1.90_CP1,C25 window 10 peak 28789.9 p10peak 26284.0 steady 18119.3
+PERTARGET [1831.7589986080066]
+TMI avg=23.54 std=2.46
+RESULT dur=180 propose="CP1,C25" tps=1831.8 dps=514.7 dtps=197.7 swings=81.1 hit=1.1% miss=12.6% dodge=20.7% parry=15.4% block=49.7% crit=0.0% crush=0.5%
 ### P | RF_ALL=1.80 FEEDBACK_APL=default FEEDBACK_DUR=180 FEEDBACK_BURST=pal_default_1.80_C25 PROPOSE=C25
-BURST pal_default_1.80_C25 open 1.5 mean 2404.6 p10 1375.8 p90 3433.5
-BURST pal_default_1.80_C25 open 3.0 mean 5733.1 p10 4178.4 p90 7434.4
-BURST pal_default_1.80_C25 open 4.5 mean 7175.7 p10 5302.1 p90 9188.9
-BURST pal_default_1.80_C25 open 6.0 mean 11452.8 p10 8483.0 p90 14316.2
-BURST pal_default_1.80_C25 open 8.0 mean 13444.9 p10 10266.5 p90 16578.1
-BURST pal_default_1.80_C25 open 10.0 mean 17971.9 p10 14415.4 p90 21625.5
-BURST pal_default_1.80_C25 open 15.0 mean 25843.6 p10 21369.5 p90 30316.4
-BURST pal_default_1.80_C25 open 20.0 mean 35661.5 p10 30366.4 p90 41029.6
-BURST pal_default_1.80_C25 open 30.0 mean 51379.5 p10 44994.4 p90 57810.2
-BURST pal_default_1.80_C25 window 3 peak 12698.5 p10peak 11329.9 steady 5260.5
-BURST pal_default_1.80_C25 window 6 peak 18097.4 p10peak 16357.8 steady 10521.0
-BURST pal_default_1.80_C25 window 10 peak 27298.8 p10peak 24980.8 steady 17535.0
-PERTARGET [1754.0842001566643]
-TMI avg=26.32 std=3.18
-RESULT dur=180 propose="C25" tps=1754.1 dps=525.1 dtps=225.7 swings=80.4 hit=1.8% miss=11.5% dodge=19.5% parry=14.3% block=44.0% crit=0.4% crush=8.5%
+BURST pal_default_1.80_C25 open 1.5 mean 2348.1 p10 1347.9 p90 3367.6
+BURST pal_default_1.80_C25 open 3.0 mean 5511.9 p10 4023.6 p90 7107.3
+BURST pal_default_1.80_C25 open 4.5 mean 6890.0 p10 5054.2 p90 8829.0
+BURST pal_default_1.80_C25 open 6.0 mean 10913.5 p10 8011.1 p90 13649.9
+BURST pal_default_1.80_C25 open 8.0 mean 12780.0 p10 9632.5 p90 15790.6
+BURST pal_default_1.80_C25 open 10.0 mean 17111.6 p10 13602.6 p90 20612.2
+BURST pal_default_1.80_C25 open 15.0 mean 24684.8 p10 20154.6 p90 29296.5
+BURST pal_default_1.80_C25 open 20.0 mean 34138.5 p10 28704.3 p90 39579.1
+BURST pal_default_1.80_C25 open 30.0 mean 49157.2 p10 42626.9 p90 55830.3
+BURST pal_default_1.80_C25 window 3 peak 12375.9 p10peak 11017.0 steady 5036.0
+BURST pal_default_1.80_C25 window 6 peak 17563.3 p10peak 15823.0 steady 10072.1
+BURST pal_default_1.80_C25 window 10 peak 26386.2 p10peak 24112.5 steady 16786.8
+PERTARGET [1678.3257162320083]
+TMI avg=26.18 std=3.20
+RESULT dur=180 propose="C25" tps=1678.3 dps=499.2 dtps=209.9 swings=80.9 hit=1.7% miss=12.7% dodge=20.8% parry=15.4% block=43.4% crit=0.0% crush=6.0%
 ### P | RF_ALL=1.80 FEEDBACK_APL=furyopen FEEDBACK_DUR=180 FEEDBACK_BURST=pal_furyopen_1.80_C25 PROPOSE=C25
-BURST pal_furyopen_1.80_C25 open 1.5 mean 9392.2 p10 6721.2 p90 11917.7
-BURST pal_furyopen_1.80_C25 open 3.0 mean 11031.2 p10 8164.2 p90 13888.6
-BURST pal_furyopen_1.80_C25 open 4.5 mean 12553.9 p10 9420.0 p90 15635.3
-BURST pal_furyopen_1.80_C25 open 6.0 mean 14315.6 p10 11093.2 p90 17621.8
-BURST pal_furyopen_1.80_C25 open 8.0 mean 18804.4 p10 14926.2 p90 22634.5
-BURST pal_furyopen_1.80_C25 open 10.0 mean 23329.5 p10 19015.8 p90 27729.9
-BURST pal_furyopen_1.80_C25 open 15.0 mean 31024.2 p10 25827.1 p90 36182.3
-BURST pal_furyopen_1.80_C25 open 20.0 mean 40505.5 p10 34723.2 p90 46334.3
-BURST pal_furyopen_1.80_C25 open 30.0 mean 55623.1 p10 48646.7 p90 62622.1
-BURST pal_furyopen_1.80_C25 window 3 peak 13653.0 p10peak 11927.1 steady 5297.2
-BURST pal_furyopen_1.80_C25 window 6 peak 18379.1 p10peak 16628.4 steady 10594.5
-BURST pal_furyopen_1.80_C25 window 10 peak 27994.4 p10peak 25501.8 steady 17657.5
-PERTARGET [1781.5762854891686]
-TMI avg=26.34 std=3.16
-RESULT dur=180 propose="C25" tps=1781.6 dps=532.0 dtps=225.8 swings=80.5 hit=1.2% miss=11.4% dodge=19.7% parry=14.2% block=44.6% crit=0.4% crush=8.4%
+BURST pal_furyopen_1.80_C25 open 1.5 mean 9069.6 p10 6385.1 p90 11482.4
+BURST pal_furyopen_1.80_C25 open 3.0 mean 10666.9 p10 7853.3 p90 13408.4
+BURST pal_furyopen_1.80_C25 open 4.5 mean 12081.7 p10 9162.1 p90 15037.6
+BURST pal_furyopen_1.80_C25 open 6.0 mean 13742.1 p10 10703.8 p90 16915.3
+BURST pal_furyopen_1.80_C25 open 8.0 mean 17983.8 p10 13997.8 p90 21838.3
+BURST pal_furyopen_1.80_C25 open 10.0 mean 22324.6 p10 18030.8 p90 26545.2
+BURST pal_furyopen_1.80_C25 open 15.0 mean 29646.5 p10 24364.2 p90 34861.5
+BURST pal_furyopen_1.80_C25 open 20.0 mean 38724.9 p10 32736.0 p90 44764.8
+BURST pal_furyopen_1.80_C25 open 30.0 mean 53249.2 p10 46316.3 p90 60311.5
+BURST pal_furyopen_1.80_C25 window 3 peak 13254.1 p10peak 11611.6 steady 5073.5
+BURST pal_furyopen_1.80_C25 window 6 peak 17801.5 p10peak 16088.7 steady 10147.0
+BURST pal_furyopen_1.80_C25 window 10 peak 27027.8 p10peak 24590.8 steady 16911.7
+PERTARGET [1707.255404874733]
+TMI avg=26.14 std=3.15
+RESULT dur=180 propose="C25" tps=1707.3 dps=507.1 dtps=209.8 swings=80.9 hit=1.1% miss=12.5% dodge=20.8% parry=15.4% block=44.3% crit=0.0% crush=5.8%
 ### P | RF_ALL=1.80 FEEDBACK_APL=default FEEDBACK_DUR=180 FEEDBACK_BURST=pal_default_1.80_CP1,C25 PROPOSE=CP1,C25
-BURST pal_default_1.80_CP1,C25 open 1.5 mean 2404.6 p10 1375.8 p90 3433.5
-BURST pal_default_1.80_CP1,C25 open 3.0 mean 5733.1 p10 4178.4 p90 7434.4
-BURST pal_default_1.80_CP1,C25 open 4.5 mean 7249.0 p10 5350.0 p90 9274.0
-BURST pal_default_1.80_CP1,C25 open 6.0 mean 11611.3 p10 8617.2 p90 14486.6
-BURST pal_default_1.80_CP1,C25 open 8.0 mean 13740.3 p10 10514.2 p90 16880.6
-BURST pal_default_1.80_CP1,C25 open 10.0 mean 18364.4 p10 14784.1 p90 22139.3
-BURST pal_default_1.80_CP1,C25 open 15.0 mean 26495.4 p10 21933.3 p90 31119.9
-BURST pal_default_1.80_CP1,C25 open 20.0 mean 36540.4 p10 31190.6 p90 41944.7
-BURST pal_default_1.80_CP1,C25 open 30.0 mean 52675.5 p10 46100.6 p90 59292.8
-BURST pal_default_1.80_CP1,C25 window 3 peak 12899.2 p10peak 11502.0 steady 5386.3
-BURST pal_default_1.80_CP1,C25 window 6 peak 18439.9 p10peak 16673.8 steady 10772.7
-BURST pal_default_1.80_CP1,C25 window 10 peak 27786.3 p10peak 25470.4 steady 17954.5
-PERTARGET [1796.9251325648938]
-TMI avg=22.62 std=2.22
-RESULT dur=180 propose="CP1,C25" tps=1796.9 dps=536.6 dtps=205.9 swings=80.5 hit=1.7% miss=11.5% dodge=19.6% parry=14.3% block=51.9% crit=0.0% crush=1.0%
+BURST pal_default_1.80_CP1,C25 open 1.5 mean 2348.1 p10 1347.9 p90 3367.6
+BURST pal_default_1.80_CP1,C25 open 3.0 mean 5511.9 p10 4023.6 p90 7107.3
+BURST pal_default_1.80_CP1,C25 open 4.5 mean 6940.8 p10 5095.6 p90 8916.6
+BURST pal_default_1.80_CP1,C25 open 6.0 mean 11024.6 p10 8085.2 p90 13801.7
+BURST pal_default_1.80_CP1,C25 open 8.0 mean 12973.4 p10 9815.3 p90 16060.9
+BURST pal_default_1.80_CP1,C25 open 10.0 mean 17381.8 p10 13816.2 p90 20880.9
+BURST pal_default_1.80_CP1,C25 open 15.0 mean 25153.1 p10 20510.8 p90 29770.6
+BURST pal_default_1.80_CP1,C25 open 20.0 mean 34792.3 p10 29307.8 p90 40299.8
+BURST pal_default_1.80_CP1,C25 open 30.0 mean 50253.2 p10 43682.4 p90 57036.7
+BURST pal_default_1.80_CP1,C25 window 3 peak 12477.5 p10peak 11139.6 steady 5121.9
+BURST pal_default_1.80_CP1,C25 window 6 peak 17776.4 p10peak 16087.0 steady 10243.8
+BURST pal_default_1.80_CP1,C25 window 10 peak 26688.6 p10peak 24371.3 steady 17073.0
+PERTARGET [1707.8332229995647]
+TMI avg=23.58 std=2.48
+RESULT dur=180 propose="CP1,C25" tps=1707.8 dps=507.2 dtps=197.6 swings=81.0 hit=1.6% miss=12.6% dodge=20.8% parry=15.4% block=48.8% crit=0.0% crush=0.9%
 ### P | RF_ALL=1.80 FEEDBACK_APL=furyopen FEEDBACK_DUR=180 FEEDBACK_BURST=pal_furyopen_1.80_CP1,C25 PROPOSE=CP1,C25
-BURST pal_furyopen_1.80_CP1,C25 open 1.5 mean 9493.1 p10 6864.1 p90 12071.2
-BURST pal_furyopen_1.80_CP1,C25 open 3.0 mean 11249.4 p10 8338.3 p90 14123.2
-BURST pal_furyopen_1.80_CP1,C25 open 4.5 mean 12882.1 p10 9767.4 p90 15998.1
-BURST pal_furyopen_1.80_CP1,C25 open 6.0 mean 14733.5 p10 11378.1 p90 18087.3
-BURST pal_furyopen_1.80_CP1,C25 open 8.0 mean 19372.7 p10 15402.3 p90 23325.8
-BURST pal_furyopen_1.80_CP1,C25 open 10.0 mean 24008.1 p10 19634.5 p90 28447.8
-BURST pal_furyopen_1.80_CP1,C25 open 15.0 mean 31976.8 p10 26809.9 p90 37231.1
-BURST pal_furyopen_1.80_CP1,C25 open 20.0 mean 41682.3 p10 35880.7 p90 47531.4
-BURST pal_furyopen_1.80_CP1,C25 open 30.0 mean 57230.3 p10 50382.4 p90 64082.7
-BURST pal_furyopen_1.80_CP1,C25 window 3 peak 13824.1 p10peak 12092.5 steady 5430.7
-BURST pal_furyopen_1.80_CP1,C25 window 6 peak 18659.0 p10peak 16922.8 steady 10861.4
-BURST pal_furyopen_1.80_CP1,C25 window 10 peak 28539.0 p10peak 26127.7 steady 18102.3
-PERTARGET [1828.5526109922725]
-TMI avg=22.54 std=2.28
-RESULT dur=180 propose="CP1,C25" tps=1828.6 dps=544.7 dtps=205.3 swings=80.6 hit=1.1% miss=11.4% dodge=19.7% parry=14.3% block=52.8% crit=0.0% crush=0.6%
+BURST pal_furyopen_1.80_CP1,C25 open 1.5 mean 9143.2 p10 6541.4 p90 11549.0
+BURST pal_furyopen_1.80_CP1,C25 open 3.0 mean 10826.5 p10 8020.8 p90 13625.6
+BURST pal_furyopen_1.80_CP1,C25 open 4.5 mean 12315.7 p10 9288.6 p90 15300.7
+BURST pal_furyopen_1.80_CP1,C25 open 6.0 mean 14026.6 p10 10922.3 p90 17212.9
+BURST pal_furyopen_1.80_CP1,C25 open 8.0 mean 18348.5 p10 14457.9 p90 22204.4
+BURST pal_furyopen_1.80_CP1,C25 open 10.0 mean 22771.2 p10 18469.9 p90 26969.6
+BURST pal_furyopen_1.80_CP1,C25 open 15.0 mean 30291.4 p10 25031.2 p90 35400.6
+BURST pal_furyopen_1.80_CP1,C25 open 20.0 mean 39514.5 p10 33673.1 p90 45342.2
+BURST pal_furyopen_1.80_CP1,C25 open 30.0 mean 54303.7 p10 47276.6 p90 61324.5
+BURST pal_furyopen_1.80_CP1,C25 window 3 peak 13337.8 p10peak 11670.6 steady 5151.8
+BURST pal_furyopen_1.80_CP1,C25 window 6 peak 17922.3 p10peak 16245.8 steady 10303.6
+BURST pal_furyopen_1.80_CP1,C25 window 10 peak 27284.0 p10peak 24909.1 steady 17172.7
+PERTARGET [1736.0446624850408]
+TMI avg=23.54 std=2.46
+RESULT dur=180 propose="CP1,C25" tps=1736.0 dps=514.7 dtps=197.7 swings=81.1 hit=1.1% miss=12.6% dodge=20.7% parry=15.4% block=49.7% crit=0.0% crush=0.5%
 ### W | FEEDBACK_DUR=180
 PERTARGET [1600.1576416059916]
 TMI avg=23
@@ -445,7 +445,7 @@ BURST bear window 10 peak 38167.3 p10peak 34284.9 steady 23961.5
 PERTARGET [2394.086584767438]
 RESULT druid dur=180 tps=2394.1 dtps=275.3 tmi=20.04 crush=15.0%
 ### P | FEEDBACK_DUR=180 PROPOSE=CP1,RD20,NOTOUGH
-PERTARGET [1334.1924027296527]
-TMI avg=23.10 std=2.26
-RESULT dur=180 propose="CP1,RD20,NOTOUGH" tps=1334.4 dps=537.6 dtps=209.4 swings=80.5 hit=1.9% miss=11.5% dodge=19.6% parry=14.3% block=51.7% crit=0.0% crush=1.0%
+PERTARGET [1267.3704329976647]
+TMI avg=24.29 std=2.56
+RESULT dur=180 propose="CP1,RD20,NOTOUGH" tps=1267.6 dps=508.2 dtps=202.3 swings=81.0 hit=1.6% miss=12.5% dodge=20.6% parry=15.4% block=48.9% crit=0.0% crush=1.0%
 DONE

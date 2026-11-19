@@ -6,7 +6,7 @@
 
 - **The problem.** In the live version, a raid boss hits the Paladin with a crushing blow on 10.3% of its swings (part 3). A crushing blow does 150% damage. The Warrior takes crushing blows on only 1.0% of the swings.
 - **The fix.** With Redoubt (C-P1), each Holy Shield cast also starts Redoubt. The two block buffs are then active together. Crushing blows decrease to 1.1%, the Warrior level (1.0%).
-- **The tank takes 11% less damage** with C-P1. The tanks have the item pool tank sets, the full threat consumables and the enchants (the same rules for all tanks). The Paladin then takes 15% less damage than the Warrior (248 against 291 each sec), but its TMI is a little higher (31.3 against 30). With the survival sets, the Paladin takes 13% less damage than the Warrior (206 against 237), and its TMI is a little lower (22.6 against 23).
+- **The tank takes 11% less damage** with C-P1. The tanks have the item pool tank sets, the full threat consumables and the enchants (the same rules for all tanks). The Paladin then takes 15% less damage than the Warrior (248 against 291 each sec), but its TMI is a little higher (31.3 against 30). With the survival sets, the Paladin takes 16% less damage than the Warrior (199 against 237), but its TMI is a little higher (23.7 against 23).
 - **Keep Redoubt at 6–30% block.** With the item pool set and the enchants of 18 November, 4–20% gives the same crushing blows and damage taken on a normal boss (1.1%, 253 each sec without Toughness). Fast bosses and bosses with two weapons give up to 1% more damage taken. Without the enchants, 4–20% gave 2% more damage taken on a normal boss.
 - **Fast bosses and bosses with two weapons** give both tanks more crushing blows. With C-P1, the Paladin is 0.3–0.9 points below the Warrior. At 4–20%, it is 0.4–0.9 points below.
 
@@ -66,16 +66,16 @@ Item pool threat set of each class (Analysis, Threat, part 6), full threat consu
 
 | Tank | Block | Crushing blows | Damage taken each sec | TMI |
 | --- | --- | --- | --- | --- |
-| Paladin, live | 44.1% | 8.6% | 227 | 26.5 |
-| **Paladin, Redoubt (C-P1)** | **51.9%** | **0.9%** | **206 (−9%)** | **22.6** |
-| Paladin, C-P1 with Redoubt 4–20% | 51.7% | 1.0% | 206 (−9%) | 22.6 |
-| Paladin, Redoubt 4–20% without C-P1 | 44.0% | 8.6% | 227 (+0%) | 26.5 |
+| Paladin, live | 43.7% | 6.1% | 211 | 26.3 |
+| **Paladin, Redoubt (C-P1)** | **49.1%** | **0.9%** | **199 (−6%)** | **23.7** |
+| Paladin, C-P1 with Redoubt 4–20% | 48.9% | 1.0% | 199 (−6%) | 23.8 |
+| Paladin, Redoubt 4–20% without C-P1 | 43.5% | 6.2% | 211 (+0%) | 26.4 |
 | Warrior | 49.6% | 0.9% | 237 | 23 |
 | Druid | 0% | 15.1% | 276 | 20.1 |
 
-- **The crushing blows do not change much with the set.** C-P1 gives 0.9% (Warrior: 0.9%).
-- **The TMI decreases:** 22.6 for the Paladin with C-P1 (threat set: 31.3). The Warrior goes from 30 to 23.
-- **With C-P1, the Paladin takes 13% less damage than the Warrior** (206 against 237 each sec; live: 4% less). The Warrior survival set dodges more (25.5% against 19.5%), but the Paladin blocks more. Before 18 November evening, only the Druid had Greater Stoneshield Potion, and the Paladin with C-P1 took 2% more damage than the Warrior. With the first survival sets of 15 November, it took 4% less.
+- **The crushing blows do not change much with the set.** C-P1 gives 0.9% (Warrior: 0.9%). The live Paladin has 6.1%, because the Deathbone Guardian set gives more Defense and more dodge (20.7% against 19.5%; 19 November, before: 8.6%).
+- **The TMI decreases:** 23.7 for the Paladin with C-P1 (threat set: 31.3). The Warrior goes from 30 to 23.
+- **With C-P1, the Paladin takes 16% less damage than the Warrior** (199 against 237 each sec; live: 11% less). Before 19 November, without Deathbone Guardian, it took 13% less. The Warrior survival set dodges more (25.5% against 20.6%), but the Paladin blocks more. Before 18 November evening, only the Druid had Greater Stoneshield Potion, and the Paladin with C-P1 took 2% more damage than the Warrior. With the first survival sets of 15 November, it took 4% less.
 - **Fast bosses and bosses with two weapons.** C-P1 is 0.5 points below the Warrior. With 4–20%, the Paladin is between 0.3 points below and 0.4 points above.
 
 **Fast bosses and bosses with two weapons.** The same tanks and 3 min fight. "Fast" is a swing each 1.2 sec with 60% damage, thus the same damage each sec. "Two weapons" adds a second weapon. The Paladin uses the wowsims default tank build (12/32/7), with Toughness removal (C-P13) in the C-P1 columns.
