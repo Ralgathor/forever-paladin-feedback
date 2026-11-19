@@ -1,0 +1,55 @@
+# wowsims Forever master ad6b13af8 (hotfixes of 16 and 17 November), item pool survival set of 18 November (TANK_SET=surv), 3 min, 3,000 iterations. Full threat consumables with Greater Stoneshield Potion (FEEDBACK_CONSUMES=fullsurv). Protection builds only. Enchants of 18 November: the same enchant rules for all specs (no raid source, no Revered or Exalted reputation source, phase 1 only; tank_gear/search_enchants.py, matched_gear/search_enchants_dps.py). The runs without enchants: logs/finals_surv_full_no_enchants.log.
+BUILD prot raid beta 050050002-05302102213301531-502 {'dps': 532.1, 'tps': 1325.8, 'dtps': 226.1, 'tmi': 26.38, 'crush': 8.4, 'std': 3.23}
+BUILD prot raid beta 05005-05302102213201531-5023 {'dps': 548.8, 'tps': 1361.1, 'dtps': 229.0, 'tmi': 26.78, 'crush': 8.8, 'std': 3.25}
+BUILD prot raid beta -05302102313501531-52233000001 {'dps': 533.5, 'tps': 1332.1, 'dtps': 219.7, 'tmi': 25.57, 'crush': 7.9, 'std': 3.04}
+BUILD prot raid prop -3530110213501531-54233 {'dps': 535.8, 'tps': 1333.3, 'dtps': 207.5, 'tmi': 23.02, 'crush': 1.0, 'std': 2.31}
+BUILD prot raid prop -3530110213501531-53233000001 {'dps': 543.9, 'tps': 1360.3, 'dtps': 207.5, 'tmi': 23.02, 'crush': 1.0, 'std': 2.31}
+WEIGHTS prot raid beta 050050002-05302102213301531-502 base={'dps': 532.1, 'tps': 1325.8, 'dtps': 226.1, 'tmi': 26.38}
+  Strength: dps=+0.200 tps=+0.325 dtps=-0.010 tmi=-0.001
+  Agility: dps=+0.140 tps=+0.260 dtps=-0.310 tmi=-0.030
+  Stamina: dps=+0.000 tps=+0.000 dtps=+0.000 tmi=-0.049
+  Intellect: dps=+0.005 tps=-0.015 dtps=+0.000 tmi=+0.001
+  Spell damage: dps=+0.340 tps=+0.857 dtps=-0.015 tmi=-0.002
+  Attack power: dps=+0.082 tps=+0.132 dtps=+0.000 tmi=+0.000
+  Hit rating: dps=+0.730 tps=+1.720 dtps=-0.010 tmi=+0.003
+  Crit rating: dps=+0.250 tps=+0.520 dtps=+0.010 tmi=+0.004
+  Expertise rating: dps=+0.830 tps=+1.890 dtps=-0.140 tmi=-0.007
+  Defense rating: dps=-0.050 tps=-0.160 dtps=-0.700 tmi=-0.084
+  Block rating: dps=+0.180 tps=+0.460 dtps=-0.320 tmi=-0.052
+  Block value: dps=+0.000 tps=+0.000 dtps=-0.245 tmi=-0.028
+  Dodge rating: dps=-0.020 tps=-0.100 dtps=-0.380 tmi=-0.032
+  Parry rating: dps=+0.010 tps=-0.030 dtps=-0.340 tmi=-0.034
+  Armor: dps=+0.000 tps=+0.000 dtps=-0.015 tmi=-0.002
+WEIGHTS prot raid beta -05302102313501531-52233000001 base={'dps': 533.5, 'tps': 1332.1, 'dtps': 219.7, 'tmi': 25.57}
+  Strength: dps=+0.200 tps=+0.335 dtps=-0.010 tmi=-0.002
+  Agility: dps=+0.100 tps=+0.175 dtps=-0.335 tmi=-0.035
+  Stamina: dps=+0.000 tps=+0.000 dtps=+0.000 tmi=-0.047
+  Intellect: dps=+0.010 tps=+0.005 dtps=-0.005 tmi=-0.001
+  Spell damage: dps=+0.330 tps=+0.843 dtps=-0.015 tmi=-0.002
+  Attack power: dps=+0.090 tps=+0.153 dtps=+0.000 tmi=+0.000
+  Hit rating: dps=+0.670 tps=+1.620 dtps=-0.020 tmi=-0.002
+  Crit rating: dps=+0.230 tps=+0.500 dtps=-0.020 tmi=-0.004
+  Expertise rating: dps=+0.740 tps=+1.700 dtps=-0.190 tmi=-0.019
+  Defense rating: dps=-0.060 tps=-0.170 dtps=-0.740 tmi=-0.091
+  Block rating: dps=+0.200 tps=+0.510 dtps=-0.320 tmi=-0.059
+  Block value: dps=+0.000 tps=+0.000 dtps=-0.245 tmi=-0.029
+  Dodge rating: dps=-0.090 tps=-0.250 dtps=-0.470 tmi=-0.050
+  Parry rating: dps=-0.070 tps=-0.220 dtps=-0.350 tmi=-0.040
+  Armor: dps=+0.000 tps=+0.000 dtps=-0.015 tmi=-0.002
+WEIGHTS prot raid prop -3530110213501531-54233 base={'dps': 535.8, 'tps': 1333.3, 'dtps': 207.5, 'tmi': 23.02}
+  Strength: dps=+0.190 tps=+0.315 dtps=-0.010 tmi=-0.001
+  Agility: dps=+0.070 tps=+0.115 dtps=-0.270 tmi=-0.024
+  Stamina: dps=+0.000 tps=+0.000 dtps=+0.000 tmi=-0.041
+  Intellect: dps=+0.010 tps=+0.000 dtps=+0.000 tmi=+0.000
+  Spell damage: dps=+0.328 tps=+0.830 dtps=-0.015 tmi=-0.002
+  Attack power: dps=+0.087 tps=+0.145 dtps=+0.000 tmi=+0.000
+  Hit rating: dps=+0.730 tps=+1.740 dtps=-0.110 tmi=-0.007
+  Crit rating: dps=+0.220 tps=+0.490 dtps=-0.010 tmi=-0.001
+  Expertise rating: dps=+0.790 tps=+1.800 dtps=-0.240 tmi=-0.025
+  Defense rating: dps=-0.120 tps=-0.340 dtps=-0.480 tmi=-0.041
+  Block rating: dps=-0.010 tps=-0.020 dtps=-0.010 tmi=-0.002
+  Block value: dps=+0.000 tps=+0.000 dtps=-0.285 tmi=-0.037
+  Dodge rating: dps=-0.090 tps=-0.280 dtps=-0.320 tmi=-0.026
+  Parry rating: dps=-0.070 tps=-0.170 dtps=-0.250 tmi=-0.022
+  Armor: dps=+0.000 tps=+0.000 dtps=-0.014 tmi=-0.002
+BUILD prot raid prop 05005-3530110213201531-5023 {'dps': 564.8, 'tps': 1404.6, 'dtps': 210.9, 'tmi': 23.22, 'crush': 1.0, 'std': 2.27}

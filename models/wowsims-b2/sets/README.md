@@ -1,13 +1,13 @@
-# wowsims links of the tank and builds sets (18 November 2026, evening)
+# wowsims links of the tank and builds sets (19 November 2026)
 
 The `sets/` pages at the root of the repository open these sets in wowsims Forever: https://ralgathor.github.io/forever-paladin-feedback/sets/
 
 | Page | Sim | Check on commit ad6b13af8 |
 | --- | --- | --- |
-| tank-pool-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_prot.json | 1,471.5 threat per sec |
+| tank-pool-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_prot.json | 1,439.3 threat per sec |
 | tank-pool-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_war.json | 1,931.5 threat per sec |
 | tank-pool-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_bear.json | 2,674.3 threat per sec |
-| tank-surv-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_prot_surv.json | 1,325.8 threat per sec |
+| tank-surv-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_prot_surv.json | 1,302.2 threat per sec |
 | tank-surv-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_war_surv.json | 1,600.5 threat per sec |
 | tank-surv-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_bear_surv.json | 2,405.7 threat per sec |
 | tank-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180` | 1,051.9 threat per sec |
@@ -37,5 +37,7 @@ On 16 November 2026, an open item search on the same commit (`../tank_gear/searc
 On 18 November 2026, master commit ad6b13af8 changes the proc rates of many items and adds the Destiny proc. The searches on this commit changed four tank sets: the Paladin threat and survival sets and the Druid threat and survival sets (`../tank_gear/README.md`). The Retribution set takes Destiny and Soulforge Warboots (`../matched_gear/README.md`). All links come again from commit ad6b13af8 with the same steps. The Warrior sets and the Shockadin set do not change.
 
 On the evening of 18 November 2026, the six item pool tank links and the Retribution link come again from commit ad6b13af8 with the enchants of the same rules (`FEEDBACK_ENCHANTS`: `../tank_gear/enchants_*.json`, `../matched_gear/enchants_fair.json`). The tank links also have the full threat consumables (`FEEDBACK_CONSUMES=full`, `fullsurv` for the survival sets). The values of the table come from these runs. The default set links and the Shockadin link do not change.
+
+On 19 November 2026, the two Paladin item pool tank links come again from commit ad6b13af8 with the same steps. The Paladin sets now have Crusader on the weapon (not Revelation) and Libram of Invocation (not Libram of Holy Alacrity). The other links do not change.
 
 The links have the live talents and no proposal. Since commit 9a8624af9, wowsims gives the Warrior and the Druid the threat multipliers of the hotfixes of 4 November (Defensive Stance +80%, Defiance 20%, Bear Form +115%). The Paladin default set link has the tank consumables of `feedbackConsumables` (`../go/feedback_prot_test.go`).
