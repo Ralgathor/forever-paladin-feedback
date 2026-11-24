@@ -13,6 +13,10 @@
 #   healing only, Swiftmend heals for the full heal over time (Forever text). Priest: no Penance (the DoubleZug
 #   build has Prayer of Mending and Binding Heal; Penance needs 20 Discipline points more). Shaman: Healing Way 25%.
 #   Inner Focus + Prayer of Healing scales the coefficient the same way as the base heal.
+# Version 3 (review of 24 November 2026, against the DoubleZug sheets and the wowsims Forever game data):
+# - Spirit regeneration: 6.25 + Spirit/8 mana per sec for all classes (was the Classic class formulas).
+# - Wild Growth from the game files (was 17% too low).
+# - Each class takes Spirit, Intellect and critical chance as arguments (class gear case: class_gear_b2.py).
 import math
 from scipy.optimize import linprog
 
@@ -36,8 +40,11 @@ def uses(T, cd, dur=0.0):
     A use counts only if it ends before the end of the fight."""
     return max(0, math.floor((T - dur - 1e-9) / cd) + 1)
 
-def regen_full(cls, spi):   # Classic 1.12 Spirit regeneration, mana per sec, out of the 5-second rule
-    return {"pri": (13 + spi/4)/2, "pal": (15 + spi/5)/2, "dru": (15 + spi/5)/2, "sha": (17 + spi/5)/2}[cls]
+def regen_full(cls, spi):
+    """Spirit regeneration, mana per sec, out of the 5-second rule. Forever: 6.25 + Spirit/8 for all classes
+    (wowsims Forever, sim/core/mana.go; the DoubleZug sheets of November 2026 agree). Review of 24 November 2026:
+    the Classic 1.12 class formulas (Paladin and Druid 7.5 + Spirit/10) gave 15-18% less regeneration."""
+    return 6.25 + spi/8
 
 class Spell:
     """raw/eff: healing for one cast (all targets); tank: share that lands on the tank.
@@ -128,10 +135,10 @@ def paladin(hp=HPG, tank=False, rev=0.30, illum=0.50, light=1.12, bol=True, ling
                 extra=None, spells=sp, groups={}, crit=c, end_loss=(end, end*0.5))
 
 # ---------------------------------------------------------------- Priest
-def priest(hp_gear=HPG, tank=False):
-    hp = hp_gear + 84          # Spiritual Guidance 5/5: 25% of 336 Spirit
+def priest(hp_gear=HPG, tank=False, spi=336, intel=422, crit=0.1903):
+    hp = hp_gear + 0.25*spi    # Spiritual Guidance 5/5: 25% of Spirit (84 with 336 Spirit)
     d = hp - 799
-    c = 0.1903; k = 1 + 0.5*c; k_if = 1 + 0.5*(c + 0.25)
+    c = crit; k = 1 + 0.5*c; k_if = 1 + 0.5*(c + 0.25)
     def S(name, J, I, crit, cost, time, oh, **kw):
         raw = (J + I*d) * (k if crit else 1.0)
         return Spell(name, raw, raw*(1-oh), cost, time, **kw)
@@ -151,12 +158,12 @@ def priest(hp_gear=HPG, tank=False):
     sp.append(renew)
     if not tank:
         sp.append(S("Prayer of Healing (5 targets)", 5*886.9, 5*0.315, True, 927, 3.0, 0.35, tank=0.2))
-    return dict(cls="Priest", pool=1436 - 280 + 15*422, regen=regen_full("pri", 336), castfrac=0.5,
+    return dict(cls="Priest", pool=1436 - 280 + 15*intel, regen=regen_full("pri", spi), castfrac=0.5,
                 extra=None, spells=sp, groups={}, crit=c)
 
 # ---------------------------------------------------------------- Druid
-def druid(hp=HPG, tank=False, ooc_wg=0, sm_consumes=False, splendor=True):
-    c = 0.183; k = 1 + 0.5*c
+def druid(hp=HPG, tank=False, ooc_wg=0, sm_consumes=False, splendor=True, spi=386, intel=438, crit=0.183):
+    c = crit; k = 1 + 0.5*c
     kh = k if HOT_CRIT else 1.0                 # heals over time: critical ticks in Forever
     # Talents (DoubleZug build): Gift of Nature +10% healing, Improved Rejuvenation +15%, Genesis +5% periodic
     # healing, Improved Regrowth +50% critical chance, Gift of the Earthmother (global cooldown 1 sec for
@@ -166,7 +173,7 @@ def druid(hp=HPG, tank=False, ooc_wg=0, sm_consumes=False, splendor=True):
     gen = 1.10 if NOTES_NOV2 else 1.05          # Genesis 5/5
     gcd = 1.5 if NOTES_NOV2 else 1.0            # no Gift of the Earthmother after the notes of 2 November
     wg_time = 2.5 if NOTES_NOV2 else 1.0        # Wild Growth: 3 sec - 0.5 (Naturalist 5/5)
-    bloom = 386*k if NOTES_NOV2 else 0.0        # Bloom: 100% of Spirit (386) when the heal over time ends
+    bloom = spi*k if NOTES_NOV2 else 0.0        # Bloom: 100% of Spirit (386 in the same gear) when the heal over time ends
     rej_t, rg_t = (15, 27) if splendor else (12, 21)   # Nature's Splendor: +3 sec and +6 sec
     rej0 = (776*rej_t/12 + 0.8*rej_t/12*hp)*1.1*1.15*gen
     rej = rej0*kh
@@ -184,7 +191,9 @@ def druid(hp=HPG, tank=False, ooc_wg=0, sm_consumes=False, splendor=True):
       Spell("Swiftmend", sm, sm*0.8, 249, gcd, maxn=cd_limit(15, gcd)),
       Spell("Healing Touch", (2934.8 + 1.1*(hp-715))*k, (2934.8 + 1.1*(hp-715))*k*0.8, 680, 3.0),
     ]
-    wg = (4854.4 + 1.305*(hp-715))*kh*gen/1.05  # heal over time: critical ticks in Forever
+    # Wild Growth rank 3 (game files, review of 24 November 2026): 97 each sec for 7 sec on 5 targets,
+    # coefficient 0.066 each tick. Gift of Nature +10% and Genesis on the periodic healing.
+    wg = 5*(7*97 + 7*0.066*hp)*1.1*gen*kh
     if tank:
         sp.append(Spell("Rejuvenation (one at a time)", rej + bloom, (rej + bloom)*0.75, 360, gcd, maxn=lambda T: math.floor(T/rej_t)))
         # Regrowth kept for 27 sec, or recast: the new one replaces the heal over time after 2 sec
@@ -200,14 +209,14 @@ def druid(hp=HPG, tank=False, ooc_wg=0, sm_consumes=False, splendor=True):
     if ooc_wg:
         sp.append(Spell("Wild Growth (free, Omen of Clarity)", wg, wg*0.5, 0, wg_time,
                         maxn=lambda T: round(ooc_wg*T/60), tank=0.2))
-    regen = regen_full("dru", 386)
+    regen = regen_full("dru", spi)
     innerv = lambda T: uses(T, 360, 20) * 20 * (5*regen - 0.5*regen)   # Innervate on itself
-    return dict(cls="Druid", pool=1244 - 280 + 15*438, regen=regen, castfrac=0.5, extra=innerv,
+    return dict(cls="Druid", pool=1244 - 280 + 15*intel, regen=regen, castfrac=0.5, extra=innerv,
                 spells=sp, groups=groups, crit=c)
 
 # ---------------------------------------------------------------- Shaman
-def shaman(hp=HPG, tank=False, T=180):
-    c = 0.243; k = 1 + 0.5*c
+def shaman(hp=HPG, tank=False, T=180, spi=336, intel=438, crit=0.243):
+    c = crit; k = 1 + 0.5*c
     kh = k if HOT_CRIT else 1.0                 # heals over time: critical ticks in Forever
     # Riptide rank 3: direct 799-883 (coefficient 0.2), 805 over 15 sec (0.5). Purification x1.1.
     rt_dir = 0.0 if NOTES_NOV2 else (841 + 0.2*hp)*1.1*k; rt_hot = (805 + 0.5*hp)*1.1*kh
@@ -231,7 +240,7 @@ def shaman(hp=HPG, tank=False, T=180):
         sp += [Spell("Riptide", r, r*0.75, rt_cost, 1.5, maxn=cd_limit(rt_cd, 1.5)),
                Spell("Chain Heal (2.5 targets, on a Riptide target)", ch, ch*0.75, 333.7, 2.5)]
         groups = {}
-    return dict(cls="Shaman", pool=1520 - 280 + 15*438, regen=regen_full("sha", 336), castfrac=0.5,
+    return dict(cls="Shaman", pool=1520 - 280 + 15*intel, regen=regen_full("sha", spi), castfrac=0.5,
                 extra=None, spells=sp, groups=groups, crit=c)
 
 # ---------------------------------------------------------------- fight

@@ -6,7 +6,7 @@ This project gives player feedback for the Paladin in **World of Warcraft: Forev
 
 1. **Righteous Fury +90% to all threat (C25).** After the development notes of 2 November and the hotfixes of 4 November, the model gives the live Paladin tank 70% of the Warrior threat. In wowsims (item pool tank sets of 18 November, full threat consumables of 17 November, enchants with the same rules for all tanks, Crusader on the Paladin weapon, hotfixes of 16 and 17 November), it has 75% of the Warrior. With C25 and Redoubt (C-P1), it has 110% of the Warrior (C25 alone: 106%). The notes give the Warrior and the Druid ×1.43 to replace Blessing of Salvation (1 ÷ 0.7). C25 gives the Paladin the same ×1.43. wowsims of 12 November gives the Druid +43% from a Lacerate rule with no level 60 test yet. Against this Druid, the Paladin has 54% (live) and 79% (C25 and C-P1).
 2. **Redoubt on each Holy Shield cast (C-P1).** Crushing blows go from 10.0% to 1.1% of the boss attacks (wowsims, Warrior 1.1%). With the same consumable rules, the Paladin then takes 11% less damage than the Warrior (live: 1% less).
-3. **Reverence 25/50% (C-H1) and a Light's Vigil buff (C-H7).** On one tank, the Paladin goes from 8–15% to 3–7% below the Druid. In raids of 5 and 10 min, from 25–34% to 3–4% below.
+3. **Reverence 25/50% (C-H1) and a Light's Vigil buff (C-H7).** On one tank, the Paladin goes from 10–16% to 5–8% below the Druid. In raids of 5 and 10 min, from 40–42% to 7–8% below.
 
 ## Contents
 

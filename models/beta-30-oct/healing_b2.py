@@ -20,11 +20,11 @@ import healing_model as H
 from healing_model import Spell, cd_limit, regen_full, solve, priest, druid, shaman, budget, max_hps, HPG, CRIT_BASE, PAL_CRIT
 
 def paladin_b2(hp=HPG, tank=False, oath=None, bonus=0.75, conv=0.06, boundless=0.30, light=1.12, rev=0.30,
-               illum=0.50, bened=0.10, lv=True, df_cd=120, bl_fol=0.0):
+               illum=0.50, bened=0.10, lv=True, df_cd=120, bl_fol=0.0, spi=336, intel=438, crit=None):
     """oath: Oath of Light on the healed target (default: True on one tank, False in the raid).
     bonus: critical heal bonus (0.5 = no Holy Power, 1.25 = Holy Power 5/5 with the server rule)."""
     if oath is None: oath = tank
-    c = CRIT_BASE + PAL_CRIT + conv
+    c = (CRIT_BASE + PAL_CRIT if crit is None else crit) + conv   # crit: critical chance from gear, Intellect and base
     c_hs = c + (0 if oath else boundless)
     o = (lambda v: v) if oath else (lambda v: 0)
     c_fol = c + (0 if oath else bl_fol)   # Boundless Light for Flash of Light (withdrawn idea)
@@ -58,7 +58,7 @@ def paladin_b2(hp=HPG, tank=False, oath=None, bonus=0.75, conv=0.06, boundless=0
     sp.append(Spell("Flash of Light, Holy Light on Infusion", fol_r + p_inf_fol*hl_r, fol_e + p_inf_fol*hl_e,
                     fol_cost + p_inf_fol*hl_cost, 1.5 + p_inf_fol*1.5))
     sp.append(Spell("Holy Light", hl_r, hl_e, hl_cost, 2.5))
-    return dict(cls="Paladin", pool=1512 - 280 + 15*438, regen=regen_full("pal", 336), castfrac=rev,
+    return dict(cls="Paladin", pool=1512 - 280 + 15*intel, regen=regen_full("pal", spi), castfrac=rev,
                 extra=None, spells=sp, groups={}, crit=c)
 
 def others(hp, T, tank):
