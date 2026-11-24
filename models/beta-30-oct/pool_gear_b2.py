@@ -10,7 +10,7 @@ Item pool: the rules of the matched sets (../wowsims-b2/matched_gear/opt.py, pre
 or less, no raid or world boss drop, no PvP item, no Revered or Exalted reputation reward. Items with a condition
 (versus undead, in an area) are not used. Armor and weapons by class. Random suffix items are not used.
 Static stats only: Intellect, healing power, Spirit, critical strike rating (14 = 1%) and MP5, and the Druid idol
-Mystic Mushroom (Spirit +5%). Use effects, procs and relic effects on spells are not counted. Set bonuses: the dungeon set 3-piece (+18 healing) and 6-piece (+8 MP5).
+Mystic Mushroom (Spirit +5%) and the weapon enchant Insight (Spirit +100% for 10 sec, mean x1.20). Use effects, procs and relic effects on spells are not counted. Set bonuses: the dungeon set 3-piece (+18 healing) and 6-piece (+8 MP5).
 Enchants: the enchants of the database for the slot, with a source, phase 1, no raid source and no Revered or Exalted
 reputation (the rules of search_enchants_dps.py).
 
@@ -25,8 +25,7 @@ Totals (game files, wowsims Forever; buffs and consumables of the DoubleZug prof
 - Critical chance = class base (Paladin 3.5%, Priest 0.8%, Shaman 2.3%, Druid 1.8%) + Intellect / 59.9 (Priest 59.5,
   Shaman 59.2) + gear rating / 14 + 3% aura + talents as in the model (Priest 5%, Druid 4%, Shaman 10%; Paladin:
   Conviction 6% in the model).
-No racial. The DoubleZug Druid sheet has one more Spirit multiplier (Insight x1.20). It is not in the game files: not used here.
-
+No racial. 
 Set choice: a search slot by slot (all candidates of a slot, then the next slot, until no change) on the model value:
 the mean of raid and one tank healing after overhealing in a 5 min fight. Paladin: live talents, critical heal 175%.
 """
@@ -80,6 +79,9 @@ def fits(it, s):
     return True
 
 SPI_MULT = {249396: 1.05}     # Mystic Mushroom (Druid idol, crafted): Spirit +5% (game files)
+# Enchant Weapon - Insight (vendor): a spell cast has a 35% chance to give Spirit +100% for 10 sec, 45 sec cooldown
+# (game files). Mean uptime about 20%: 10 sec of each 45 + 5 sec. The model uses the mean: Spirit x1.20.
+SPI_ENCH = {8216: 1.20}
 
 def pool(c):
     its = [it for it in db["items"] if P.pre_raid(it) and ok(it, c) and (stats(it) or it["id"] in SPI_MULT)]
@@ -97,7 +99,7 @@ def ench_for(s, it):
     for e in db["enchants"]:
         if not legal_ench(e): continue
         es = {i: v for i, v in enumerate(e.get("stats", [])) if v and i in (INT, HEAL, SPI, CRIT, MP5S)}
-        if not es: continue
+        if not es and e["effectId"] not in SPI_ENCH: continue
         types = [e.get("type")] + e.get("extraTypes", [])
         if P.SLOT_TYPE[s] not in types: continue
         if s in (14, 15):
@@ -130,6 +132,8 @@ def totals(c, gear, ench):
     spi = (bs + g.get(SPI, 0) + 40 + 16 + 25 + (0 if c in FOOD_INT else 20)) * 1.1 * 1.15 * (1.15 if c == "Druid" else 1)
     for it in gear:
         if it is not None: spi *= SPI_MULT.get(it["id"], 1.0)
+    for e in ench:
+        if e is not None: spi *= SPI_ENCH.get(e["effectId"], 1.0)
     crit = bc + intel/ipc/100 + g.get(CRIT, 0)/14/100 + 0.03 + TAL_CRIT[c]
     return dict(hp=hp, intel=intel, spi=spi, crit=crit, mp5=mp5, gear_hp=g.get(HEAL, 0), gear_int=g.get(INT, 0),
                 gear_spi=g.get(SPI, 0), gear_crit=g.get(CRIT, 0), gear_mp5=g.get(MP5S, 0), set_n=n)

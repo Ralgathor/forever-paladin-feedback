@@ -335,7 +335,7 @@
      "4": 135,
      "13": 17
     },
-    "enchant": "Enchant 2H Weapon - Mighty Healing Power"
+    "enchant": "Enchant Weapon - Insight"
    },
    {
     "slot": "Relic",
@@ -346,12 +346,12 @@
    }
   ],
   "totals": {
-   "hp": 584,
+   "hp": 484,
    "intel": 346.06000000000006,
-   "spi": 746.9413875,
+   "spi": 896.329665,
    "crit": 0.1457729549248748,
    "mp5": 86,
-   "gear_hp": 554,
+   "gear_hp": 454,
    "gear_int": 139,
    "gear_spi": 278,
    "gear_crit": 0,
@@ -500,10 +500,10 @@
    },
    {
     "slot": "Trinket 2",
-    "item": "Burst of Knowledge",
-    "id": 11832,
+    "item": "Lucky Shovelnose Tuft",
+    "id": 280060,
     "stats": {
-     "31": 8
+     "13": 11
     },
     "enchant": null
    },
@@ -516,7 +516,7 @@
      "4": 150,
      "13": 9
     },
-    "enchant": "Enchant 2H Weapon - Mighty Healing Power"
+    "enchant": "Enchant Weapon - Insight"
    },
    {
     "slot": "Relic",
@@ -530,16 +530,16 @@
    }
   ],
   "totals": {
-   "hp": 699,
+   "hp": 599,
    "intel": 371.4700000000001,
-   "spi": 554.0699999999999,
+   "spi": 681.582,
    "crit": 0.16043193277310924,
-   "mp5": 90,
-   "gear_hp": 669,
+   "mp5": 82,
+   "gear_hp": 569,
    "gear_int": 140,
-   "gear_spi": 212,
+   "gear_spi": 223,
    "gear_crit": 14,
-   "gear_mp5": 10,
+   "gear_mp5": 2,
    "set_n": 0
   }
  },
