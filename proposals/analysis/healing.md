@@ -4,7 +4,7 @@
 
 The design goal of Holy is a healer for long fights and the best healer on one target. It does not need to be the best raid healer. Three Holy talent proposals stay: Reverence 25/50% (C-H1), Light's Vigil (C-H7) and Oath of Light 30% (C-H8). The other values are for the live Holy Paladin.
 
-All values are healing each sec after overhealing, at 715 healing power, from the healing model. A critical heal heals for 175% (Holy Power 5/5, main hypothesis since 3 November). All healers have the same gear. Part 10 gives each healer the gear of its class.
+All values are healing each sec after overhealing, at 715 healing power, from the healing model. A critical heal heals for 175% (Holy Power 5/5, main hypothesis since 3 November). All healers have the same gear. Part 10 gives each healer a set from the level 60 item pool.
 
 **Review of 24 November 2026.** A check against the DoubleZug healer sheets (November 2026) and the game data of wowsims Forever corrected two model inputs. Spirit regeneration now uses the Forever formula (6.25 + Spirit/8 mana each sec, all classes), not the Classic formulas. Wild Growth now uses the game files. The Druid gains 5–8%, and the Paladin 1–3%. Against the Druid, the Paladin is 1–3 points lower.
 
@@ -22,7 +22,7 @@ The Druid, Shaman and Priest values use the development notes of 2 November 2026
 - **Light's Vigil (C-H7) is the raid proposal (3 November).** A Holy Shock with the buff also heals the party for 60% of the heal, once each 6 sec. Raid: +22 to +30 points. With Reverence 50% (C-H1), the Paladin is 7–8% below the Druid in raids of 5 and 10 min. No change on one tank.
 - **Reverence 50% (C-H1) is the Holy proposal for mana (2 November).** It gives +4 to +6 points in raids. On one tank, the Paladin is then 5–8% below the Druid. It has no link to critical heals. Lingering Light (C-H2) is withdrawn.
 - **Oath of Light 30% (C-H8) is the one-tank proposal (3 November).** It gives 30% to Holy Light, Flash of Light and Holy Shock on the Oath target, in place of the flat values. With Reverence 50% and Light's Vigil, the Paladin is 0–4% above the Druid on one tank. No change in raids. At 225%, the value is 20%.
-- **The same gear is not neutral (part 10).** With the gear of each class (DoubleZug profiles), the Druid has 878 Spirit. The Druid uses Spirit for regeneration, Innervate and Bloom. The Paladin is limited by cast time, not by mana. Then the Paladin is 61–64% below the Druid in raids and 31–38% below on one tank. With the three Holy proposals: 40–46% and 26–31% below.
+- **The same gear is not neutral (part 10).** In sets from the level 60 item pool, the Druid has 747 Spirit. The Druid uses Spirit for regeneration, Innervate and Bloom. The Paladin is limited by cast time, not by mana. Then the live Paladin is 54–57% below the Druid in raids and 24–30% below on one tank. With the three Holy proposals: 29–35% and 9–15% below.
 
 ## 1. Raid healing
 
@@ -217,14 +217,14 @@ The values are raid healing against the Shaman, 3 / 5 / 10 min, without Reverenc
 ## 9. Method and limits
 
 - **Source.** The model uses the method of the DoubleZug sheets for the Forever healers. Three reviews corrected it (22 October 2026). A check against the game files in wowsims Forever (23 October 2026) corrected the Paladin critical chance, Regrowth and Chain Heal. A check against the DoubleZug sheets of November 2026 and the wowsims game data (24 November 2026) corrected the Spirit regeneration and Wild Growth. The spell values of the model are the level 60 values of the game files. The DoubleZug sheets use the level 65 tooltip values (for example Holy Light 1,609, not 1,580): this adds 2–3% to the heals.
-- **Scripts.** `models/healing/healing_model.py` (Priest, Druid, Shaman, solver; `NOTES_NOV2` gives the notes of 2 November), `models/beta-30-oct/healing_b2.py` (Paladin), `recovery_b2.py` (part 3), `holy_proposals_b2.py` (part 7), `healing_sens_b2.py` (parts 5, 6 and 9), `light_vigil_ch7.py` and `oath_light_ch8.py` (part 7), `class_gear_b2.py` (part 10).
+- **Scripts.** `models/healing/healing_model.py` (Priest, Druid, Shaman, solver; `NOTES_NOV2` gives the notes of 2 November), `models/beta-30-oct/healing_b2.py` (Paladin), `recovery_b2.py` (part 3), `holy_proposals_b2.py` (part 7), `healing_sens_b2.py` (parts 5, 6 and 9), `light_vigil_ch7.py` and `oath_light_ch8.py` (part 7), `pool_gear_b2.py` and `class_gear_b2.py` (part 10).
 - **Holy Power** is the largest open question (part 6). The model uses 175%.
 - **Prayer of Mending.** The model gives it 5 targets. With 3 targets, the raid Priest gives 777, not 938.
 - **Omen of Clarity.** With 2 free Wild Growth casts each min, the raid Druid gives 1,106, not 1,004.
 - **Mana Tide Totem.** With two totems, the raid Shaman gives 733, not 701.
 - **Swiftmend.** A player test shows that it does not remove the heal over time. If it does, the Druid gives 993 in raids and 689 on one tank.
 - **Nature's Splendor** needs 11 Balance points. Without it, the Druid gives 887 in raids and 710 on one tank.
-- **Bloom.** The model gives Bloom to each Rejuvenation and Regrowth that ends at its full duration, with the critical chance of the Druid. The value of Bloom depends on the Spirit of the Druid (386 in the model, 878 in part 10).
+- **Bloom.** The model gives Bloom to each Rejuvenation and Regrowth that ends at its full duration, with the critical chance of the Druid. The value of Bloom depends on the Spirit of the Druid (386 in the model, 747 in part 10).
 - **Chain Heal** keeps the Riptide bonus of the DoubleZug sheet: 90% of the heals land on a Riptide target. The model keeps it also when the raid plan casts no Riptide. This gives the Shaman a little too much.
 - **Classic tick rule.** With no critical ticks, the Paladin is 17–18% below the Shaman and 38–41% below the Druid in raids. On one tank, it is 8–14% below the Druid.
 - **Overhealing** values are estimates. They change with the raid and the healer tasks.
@@ -233,38 +233,63 @@ The values are raid healing against the Shaman, 3 / 5 / 10 min, without Reverenc
 - **Light's Vigil.** The model gives the Paladin a full party of 5.
 - **No wowsims check.** wowsims Forever has no Holy heal rotation and no Druid or Shaman heals. The earlier check (beta of 18 October) found the Paladin model within −4.3% to +5.3% of wowsims.
 
-## 10. Class gear
+## 10. Gear from the item pool
 
-Parts 1 to 9 give all healers the same gear. That gear has little Spirit (336). The Druid uses Spirit three times: regeneration, Innervate and Bloom. In raids, the Druid is limited by mana: in fights of 5 min, it does not cast for about 150 sec. The Paladin is limited by cast time: it casts all the fight. Thus more Spirit helps the Druid, and it does not help the Paladin.
+Parts 1 to 9 give all healers the same gear. That gear has little Spirit (336). The Druid uses Spirit three times: regeneration, Innervate and Bloom. In raids, the Druid is limited by mana. The Paladin is limited by cast time: it casts all the fight. Thus more Spirit helps the Druid, and it does not help the Paladin.
 
-This part gives each healer the gear of its class: the totals of the DoubleZug profiles (November 2026), with raid buffs. Spells, talents, buffs and consumables do not change. Model: `models/beta-30-oct/class_gear_b2.py`.
+This part gives each healer a set from the level 60 item pool, with the same rules for all. Model: `models/beta-30-oct/pool_gear_b2.py`.
 
-| Class | Healing power | Intellect | Spirit | Critical chance |
+- **Item pool.** The rules of the matched sets: launch items of item level 63 or less. No raid or world boss drop, no PvP item, no Revered or Exalted reputation reward. Armor and weapons by class. Enchants with the same rules. Dungeon set bonuses: 3 pieces +18 healing, 6 pieces +8 MP5.
+- **Set choice.** A search slot by slot on the model value: the mean of raid and one tank healing in a fight of 5 min. The Paladin set uses the live talents.
+- **Totals.** Base stats, talents and buffs from the game files (wowsims Forever), with the buffs and consumables of the DoubleZug profiles for all classes. Blessing of Kings ×1.10, the class Intellect talent ×1.10, Dark Inspiration ×1.15 Spirit, Living Spirit ×1.15 Spirit (Druid), Mystic Mushroom ×1.05 Spirit (Druid idol). Brilliant Mana Oil gives 30 healing and 15 MP5 (game files).
+
+| Class | Healing power | Intellect | Spirit | Critical chance | MP5 |
+| --- | --- | --- | --- | --- | --- |
+| Paladin | 762 | 375 | 356 | 20.8% (with Conviction) | 108 |
+| Druid | 584 | 346 | 747 | 14.6% | 86 |
+| Priest | 699 (838 with Spiritual Guidance) | 372 | 554 | 16.0% | 90 |
+| Shaman | 759 | 385 | 430 | 21.8% | 99 |
+
+| Slot | Paladin | Druid | Priest | Shaman |
 | --- | --- | --- | --- | --- |
-| Paladin | 623 | 399 | 359 | 24.7% (with Conviction) |
-| Druid | 573 | 345 | 878 | 14.8% |
-| Shaman | 616 | 459 | 334 | 24.6% |
-| Priest | 851 (with Spiritual Guidance) | 408 | 630 | 18.8% |
+| Head | Living Crown | Living Crown | Virtuous Crown | Living Crown |
+| Neck | Jeweled Amulet of Cainwyn | Jeweled Amulet of Cainwyn | Jeweled Amulet of Cainwyn | Jeweled Amulet of Cainwyn |
+| Shoulder | Justice Epaulets | Grovekeeper Pauldrons | Pauldrons of Conviction | Spiritcaller Epaulets |
+| Back | Hide of the Wild | Amplifying Cloak | Hide of the Wild | Hide of the Wild |
+| Chest | Breastplate of Salvation | Embrace of the Wind Serpent | Truefaith Vestments | Embrace of the Wind Serpent |
+| Wrist | Loomguard Armbraces | Bleak Howler Armguards | Wyrmthalak's Shackles | Loomguard Armbraces |
+| Hands | Hands of the Exalted Herald | Feralheart Gauntlets | Virtuous Mitts | Hands of the Exalted Herald |
+| Waist | Sash of Mercy | Caretaker's Cord | Penitent's Cinch | Sash of Mercy |
+| Legs | Martyr's Legplates | Devout Skirt | Leggings of Conviction | Legplates of the Chromatic Defier |
+| Feet | Justice Treads | Feralheart Sandals | Virtuous Sandals | Greaves of The Five Thunders |
+| Finger | Fordring's Seal | Ring of Nature's Cycles | Ring of Nature's Cycles | Fordring's Seal |
+| Finger | Rosewine Circle | The Postmaster's Seal | Fordring's Seal | Rosewine Circle |
+| Trinket | Burst of Knowledge | Ankh of Life | Ankh of Life | Burst of Knowledge |
+| Trinket | Mindtap Talisman | Lucky Shovelnose Tuft | Burst of Knowledge | Uther's Strength |
+| Weapon (two-hand) | Hammer of the Grand Crusader | Hammer of the Grand Crusader | Glowing Brightwood Staff | Glowing Brightwood Staff |
+| Relic | none | Mystic Mushroom | Bonecreeper Stylus (wand) | none |
 
-| Healer, class gear, 175% | Raid, 3 / 5 / 10 min | One tank, 3 / 5 / 10 min |
+| Healer, item pool sets, 175% | Raid, 3 / 5 / 10 min | One tank, 3 / 5 / 10 min |
 | --- | --- | --- |
-| Druid | 1,427 / 1,180 / 1,100 | 922 / 798 / 759 |
-| Priest | 1,072 / 975 / 901 | 710 / 621 / 556 |
-| Shaman | 660 / 555 / 478 | 587 / 490 / 419 |
-| **Paladin, live version** | **537 / 457 / 394** | **631 / 548 / 472** |
-| Paladin, Light's Vigil (C-H7) | 744 / 661 / 595 | 631 / 548 / 472 |
-| Paladin, C-H7 and Reverence 50% (C-H1) | 777 / 702 / 632 | 671 / 588 / 521 |
+| Druid | 1,249 / 1,022 / 944 | 844 / 727 / 686 |
+| Priest | 983 / 892 / 823 | 637 / 554 / 492 |
+| Shaman | 714 / 614 / 540 | 606 / 518 / 453 |
+| **Paladin, live version** | **545 / 470 / 405** | **639 / 556 / 479** |
+| Paladin, Light's Vigil (C-H7) | 778 / 689 / 621 | 639 / 556 / 479 |
+| Paladin, C-H7 and Reverence 50% (C-H1) | 810 / 730 / 659 | 678 / 599 / 528 |
+| Paladin, C-H7, C-H1 and Oath of Light 30% (C-H8) | 810 / 730 / 659 | 745 / 659 / 581 |
 
-| Paladin against the Druid, class gear | Raid, 3 / 5 / 10 min | One tank, 3 / 5 / 10 min |
+| Paladin against the Druid, item pool sets | Raid, 3 / 5 / 10 min | One tank, 3 / 5 / 10 min |
 | --- | --- | --- |
-| **Live version, 175%** | **−62% / −61% / −64%** | **−32% / −31% / −38%** |
-| C-H7, 175% | −48% / −44% / −46% | −32% / −31% / −38% |
-| C-H7 and C-H1, 175% | −46% / −40% / −43% | −27% / −26% / −31% |
-| Live version, 225% | −58% / −57% / −60% | −24% / −23% / −31% |
-| C-H7 and C-H1, 225% | −37% / −31% / −33% | −19% / −18% / −23% |
+| **Live version, 175%** | **−56% / −54% / −57%** | **−24% / −24% / −30%** |
+| C-H7, 175% | −38% / −33% / −34% | −24% / −24% / −30% |
+| C-H7 and C-H1, 175% | −35% / −29% / −30% | −20% / −18% / −23% |
+| C-H7, C-H1 and C-H8, 175% | −35% / −29% / −30% | −12% / −9% / −15% |
+| Live version, 225% | −52% / −49% / −53% | −17% / −16% / −23% |
+| C-H7 and C-H1, 225% | −26% / −18% / −19% | −12% / −9% / −15% |
 
-- **With class gear, the Druid is far ahead.** The Paladin is 61–64% below in raids and 31–38% below on one tank. The DoubleZug sheet gives 64–68% below in raids of 5 min.
-- **The Paladin passes the Shaman** with Light's Vigil (C-H7) in raids: +13% to +25%. On one tank, it is 8–13% above the Shaman and 11–15% below the Priest.
-- **The Druid value depends on Spirit.** With the same gear and 600 Spirit for the Druid, the Paladin is 48–51% below in raids. The gap of the main case (40–43%) is the smallest gap.
-- **The Paladin gains little from Spirit or mana.** It casts Flash of Light all the fight. More healing power or more critical chance helps it.
-- **Limits.** The DoubleZug profiles are one set of gear for each class. The Druid gear puts much on Spirit, because of Bloom. The Druid casts only Regrowth in raids and does not cast for 104 sec in 5 min.
+- **With gear from the item pool, the Druid is far ahead.** The live Paladin is 54–57% below in raids and 24–30% below on one tank. With the three Holy proposals: 29–35% below in raids and 9–15% below on one tank.
+- **The gap is 7 points smaller than with the DoubleZug profiles** (`class_gear_b2.py`: 61–64% below in raids, 31–38% on one tank). Two causes. The Paladin set has 762 healing power (DoubleZug: 623). The Druid has 747 Spirit (DoubleZug: 878). The DoubleZug Druid sheet has one more Spirit multiplier (Insight ×1.20). It is not in the game files.
+- **The Paladin passes the Shaman** with Light's Vigil (C-H7) in raids: +9% to +15%. On one tank, the live Paladin is equal to the Priest (−3% to 0%) and 5–7% above the Shaman.
+- **The Druid is limited by mana.** In raids of 5 min, it casts only Regrowth and does not cast for 125 sec. The Paladin does not cast for 11 sec. More healing power or more critical chance helps the Paladin. More Spirit helps the Druid.
+- **Limits.** Static stats only: use effects, procs and relic effects on spells (librams, totems) are not counted. Some items are world drops (Jeweled Amulet of Cainwyn, Glowing Brightwood Staff, Sash of Mercy, Ankh of Life). The database has no source for Ring of Nature's Cycles. A set for raids only can be different.
