@@ -1,0 +1,4 @@
+START [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] {"dur": 180.0, "tps": 2497.9, "dtps": 303.3, "tmi": 23.1, "crush": 15.1, "dps": 1.0}
+SLOT 0 Feralheart Faceguard 2545:1.0059 1507:1.0049 1508:1.0038 2543:1.003 1506:1.0025
+  -> none => Arcanum of Protection
+SLOT 1 Evil Eye Pendant 904:1.0077 925:1.0077 856:1.0075 0:1.0059
