@@ -1,9 +1,15 @@
-REF {"tps": 1785.097576139894, "dps": 548.2404431661191, "dtps": 297.2002148543838, "tmi": 37.96434556233243}
-BASE 1.1001 {"tps": 1912.947435199834, "dps": 600.8600569591028, "dtps": 293.35324523245663, "tmi": 30.4135729448688}
+REF {"tps": 1838.1969968342216, "dps": 575.06798828457, "dtps": 311.61089171649274, "tmi": 32.37020782573421}
+BASE 1.0 {"tps": 1838.1969968342216, "dps": 575.06798828457, "dtps": 311.61089171649274, "tmi": 32.37020782573421}
 PASS 0
-SLOT 15 Skullflame Shield -> Intricately Runed Shield 18696 62 [] 1.1001 -> 1.1037
+SLOT 2 Lightforge Spaulders -> Shoulders of Glory 273946 60 [] 1.0 -> 1.0161
+SLOT 3 Stoneskin Gargoyle Cape -> Shifting Cloak 18511 62 [] 1.0161 -> 1.0189
+SLOT 6 Handguards of Heroism -> Gauntlets of Glory 273945 60 [] 1.0189 -> 1.0404
+SLOT 8 Legplates of Valor -> Legplates of Glory 273944 60 [] 1.0404 -> 1.0427
+SLOT 9 Furbolg Berserker's Boots -> Sabatons of Glory 273951 60 [] 1.0427 -> 1.0495
+SLOT 15 Skullflame Shield -> Intricately Runed Shield 18696 62 [] 1.0495 -> 1.0564
+SLOT 16 Deep Jungle Rifle -> Satyr's Bow 18323 58 [] 1.0564 -> 1.06
 PASS 1
-FINAL old {"tps": 1914.004114454454, "dps": 600.8963915764199, "dtps": 292.8345501719731, "tmi": 30.409085734881767} 1.1008
-FINAL new {"tps": 1916.383367194208, "dps": 601.6160156440179, "dtps": 294.0245702854749, "tmi": 30.12494247840088} 1.1031
-SET [12640, 275736, 16729, 13397, 226862, 280010, 226870, 272403, 16732, 287033, 17713, 2246, 18466, 14557, 11684, 18696, 280020]
-SETNAMES Lionheart Helm ; Horn of Ve'han ; Lightforge Spaulders ; Stoneskin Gargoyle Cape ; Breastplate of Heroism ; Gargantuan Wristguards ; Handguards of Heroism ; Valiant's Waistguard ; Legplates of Valor ; Furbolg Berserker's Boots ; Blackstone Ring ; Myrmidon's Signet ; Royal Seal of Eldre'Thalas ; The Lion Horn of Stormwind ; Ironfoe ; Intricately Runed Shield ; Deep Jungle Rifle
+FINAL old {"tps": 1840.9398096502803, "dps": 575.8505601751365, "dtps": 312.7241478831575, "tmi": 32.438591257444216} 0.9997
+FINAL new {"tps": 1941.6728081233753, "dps": 609.1123259702629, "dtps": 297.2603093661016, "tmi": 30.12413806424626} 1.0589
+SET [12640, 275736, 273946, 18511, 226862, 280010, 273945, 272403, 273944, 273951, 17713, 2246, 18466, 14557, 11684, 18696, 18323]
+SETNAMES Lionheart Helm ; Horn of Ve'han ; Shoulders of Glory ; Shifting Cloak ; Breastplate of Heroism ; Gargantuan Wristguards ; Gauntlets of Glory ; Valiant's Waistguard ; Legplates of Glory ; Sabatons of Glory ; Blackstone Ring ; Myrmidon's Signet ; Royal Seal of Eldre'Thalas ; The Lion Horn of Stormwind ; Ironfoe ; Intricately Runed Shield ; Satyr's Bow

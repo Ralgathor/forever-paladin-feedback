@@ -1,0 +1,36 @@
+START [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] {"tmi": 43.53, "dur": 180.0, "tps": 1391.4, "dps": 562.6, "dtps": 291.2, "swings": 26.8, "hit": 4.4, "miss": 10.0, "dodge": 18.2, "parry": 12.6, "block": 43.1, "crit": 1.5, "crush": 10.2}
+SLOT 0 Stalwart Helm 1507:1.0035 2544:1.0031 2545:1.0014 1506:1.0013 1508:1.0008
+  -> none => Lesser Arcane Amalgamation
+SLOT 1 Horn of Ve'han 8218:1.0058 8219:1.0051 904:1.0045 856:1.0043 925:1.004
+  -> none => Enchant Necklace - Spell Power
+SLOT 3 Shifting Cloak 1889:1.0083 7667:1.0068 247:1.0061 849:1.0061 0:1.0058
+  -> none => Enchant Cloak - Superior Defense
+SLOT 4 Soulforge Chestguards 1892:1.0133 8719:1.0131 8490:1.0125 8492:1.0122 8487:1.0118
+  -> none => Enchant Chest - Major Stamina
+SLOT 5 Vigorsteel Vambraces 7665:1.0196 1886:1.0176 8214:1.0171 929:1.0167 923:1.0161
+  -> none => Enchant Bracer - Greater Spellpower
+SLOT 6 Warder's Gloves 7646:1.027 8719:1.0241 8490:1.0237 8492:1.0235 8487:1.023
+  -> none => Enchant Gloves - Holy Power
+SLOT 8 Cloudkeeper Legplates 8719:1.0315 8490:1.0311 1507:1.0309 8492:1.0309 8487:1.0304
+  -> none => Wild Leather Armor Kit
+SLOT 9 Warder's Sabatons 8719:1.0397 1887:1.0361 8490:1.0357 8492:1.0354 929:1.035
+  -> none => Wild Leather Armor Kit
+SLOT 14 Hand of Edward the Odd 8217:1.0605 803:1.0495 1900:1.0493 8721:1.0455 1897:1.0426
+  -> none => Enchant Weapon - Revelation
+SLOT 15 Draconian Deflector 1886:1.0649 929:1.064 863:1.0632 848:1.0617 0:1.0605
+  -> none => Enchant Shield - Greater Stamina
+SLOT 0 Stalwart Helm 1508:1.067 2545:1.0659 1507:1.0649 2544:1.0647 2543:1.063
+  -> Lesser Arcane Amalgamation => Lesser Arcane Amalgamation
+SLOT 1 Horn of Ve'han 904:1.0679 925:1.0671 8218:1.067 8219:1.0662 856:1.0653
+SLOT 3 Shifting Cloak 7667:1.0676 1889:1.067 247:1.0659 849:1.0659 0:1.0643
+SLOT 4 Soulforge Chestguards 8719:1.0718 1892:1.067 1891:1.067 8492:1.0662 8490:1.0659
+  -> Enchant Chest - Major Stamina => Wild Leather Armor Kit
+SLOT 5 Vigorsteel Vambraces 7665:1.0718 1886:1.0692 8214:1.0691 923:1.0685 929:1.0683
+SLOT 6 Warder's Gloves 7646:1.0718 8719:1.0715 8492:1.0681 8490:1.0677 8206:1.0676
+SLOT 8 Cloudkeeper Legplates 8719:1.0718 1508:1.0663 8492:1.0662 8490:1.0659 2503:1.0658
+SLOT 9 Warder's Sabatons 8719:1.0718 8492:1.0662 8490:1.0659 1887:1.0658 2503:1.0658
+SLOT 14 Hand of Edward the Odd 8217:1.0718 1900:1.0592 803:1.058 8721:1.0548 2563:1.0508
+SLOT 15 Draconian Deflector 1886:1.0718 929:1.0705 848:1.0685 863:1.0678 0:1.0674
+FINAL start [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] {"tmi": 43.5, "dur": 180.0, "tps": 1389.7, "dps": 561.8, "dtps": 290.5, "swings": 80.4, "hit": 4.4, "miss": 9.8, "dodge": 18.5, "parry": 12.7, "block": 42.9, "crit": 1.4, "crush": 10.2}
+FINAL new [1508, 8218, 0, 1889, 8719, 7665, 7646, 0, 8719, 8719, 0, 0, 0, 0, 8217, 1886, 0] {"tmi": 38.2, "dur": 180.0, "tps": 1471.5, "dps": 594.0, "dtps": 277.7, "swings": 80.4, "hit": 3.2, "miss": 10.2, "dodge": 19.3, "parry": 13.2, "block": 42.9, "crit": 1.1, "crush": 10.1} score 1.072
+ENCHANTS 0:Lesser Arcane Amalgamation | 1:Enchant Necklace - Spell Power | 3:Enchant Cloak - Superior Defense | 4:Wild Leather Armor Kit | 5:Enchant Bracer - Greater Spellpower | 6:Enchant Gloves - Holy Power | 8:Wild Leather Armor Kit | 9:Wild Leather Armor Kit | 14:Enchant Weapon - Revelation | 15:Enchant Shield - Greater Stamina

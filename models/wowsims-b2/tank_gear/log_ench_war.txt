@@ -1,25 +1,19 @@
-START [1506, 0, 0, 7667, 1891, 8214, 8207, 0, 1506, 1887, 0, 0, 0, 0, 1900, 1886, 0] {"tmi": 30.0, "dur": 180.0, "tps": 1928.8, "dps": 600.9, "dtps": 293.5, "swings": 80.8, "hit": 2.7, "miss": 8.2, "dodge": 18.5, "parry": 11.1, "block": 58.2, "crit": 0.3, "crush": 1.0}
-SLOT 0 Lionheart Helm 1508:1.0002 1506:1.0 2545:0.9996 2543:0.9969 0:0.9966
-SLOT 1 Horn of Ve'han 904:1.0024 856:1.0017 925:1.0009 0:1.0
-  -> none => Enchant Boots - Agility
-SLOT 3 Stoneskin Gargoyle Cape 7667:1.0024 247:1.0013 849:1.0013 1889:1.0007 0:1.0
-SLOT 4 Breastplate of Heroism 1891:1.0024 8719:1.0 8490:0.9988 8487:0.9987 8484:0.9987
-SLOT 5 Gargantuan Wristguards 7656:1.0034 1887:1.0025 8214:1.0024 923:1.0017 929:0.9992
-SLOT 6 Handguards of Heroism 2563:1.0041 8207:1.0024 8206:1.0021 8491:1.0006 8488:1.0002
-SLOT 8 Legplates of Valor 1508:1.0024 1506:1.0024 2545:1.0017 8491:1.0013 8488:1.0009
-SLOT 9 Furbolg Berserker's Boots 1887:1.0024 8491:1.0013 8488:1.0008 8486:1.0004 247:1.0004
-SLOT 14 Ironfoe 1900:1.0024 2563:0.9949 803:0.9933 1897:0.9916 8216:0.9898
-SLOT 15 Skullflame Shield 1886:1.0024 929:1.0022 848:0.9964 863:0.9962 0:0.996
-SLOT 0 Lionheart Helm 1508:1.0024 1506:1.0024 2545:1.0017 2543:0.9995 0:0.9989
-SLOT 1 Horn of Ve'han 904:1.0024 856:1.0017 925:1.0009 0:1.0
-SLOT 3 Stoneskin Gargoyle Cape 7667:1.0024 247:1.0013 849:1.0013 1889:1.0007 0:1.0
-SLOT 4 Breastplate of Heroism 1891:1.0024 8719:1.0 8490:0.9988 8487:0.9987 8484:0.9987
-SLOT 5 Gargantuan Wristguards 7656:1.0034 1887:1.0025 8214:1.0024 923:1.0017 929:0.9992
-SLOT 6 Handguards of Heroism 2563:1.0041 8207:1.0024 8206:1.0021 8491:1.0006 8488:1.0002
-SLOT 8 Legplates of Valor 1508:1.0024 1506:1.0024 2545:1.0017 8491:1.0013 8488:1.0009
-SLOT 9 Furbolg Berserker's Boots 1887:1.0024 8491:1.0013 8488:1.0008 8486:1.0004 247:1.0004
-SLOT 14 Ironfoe 1900:1.0024 2563:0.9949 803:0.9933 1897:0.9916 8216:0.9898
-SLOT 15 Skullflame Shield 1886:1.0024 929:1.0022 848:0.9964 863:0.9962 0:0.996
-FINAL start [1506, 0, 0, 7667, 1891, 8214, 8207, 0, 1506, 1887, 0, 0, 0, 0, 1900, 1886, 0] {"tmi": 30.0, "dur": 180.0, "tps": 1928.8, "dps": 600.9, "dtps": 293.5, "swings": 80.8, "hit": 2.7, "miss": 8.2, "dodge": 18.5, "parry": 11.1, "block": 58.2, "crit": 0.3, "crush": 1.0}
-FINAL new [1506, 904, 0, 7667, 1891, 8214, 8207, 0, 1506, 1887, 0, 0, 0, 0, 1900, 1886, 0] {"tmi": 30.0, "dur": 180.0, "tps": 1931.5, "dps": 602.0, "dtps": 291.4, "swings": 80.8, "hit": 2.6, "miss": 8.3, "dodge": 18.8, "parry": 11.1, "block": 57.9, "crit": 0.2, "crush": 1.0} score 1.0024
-ENCHANTS 0:Lesser Arcane Amalgamation | 1:Enchant Boots - Agility | 3:Enchant Cloak - Agility | 4:Enchant Chest - Greater Stats | 5:Enchant Bracer - Superior Deflection | 6:Enchant Gloves - Greater Strength | 8:Lesser Arcane Amalgamation | 9:Enchant Boots - Greater Agility | 14:Enchant Weapon - Crusader | 15:Enchant Shield - Greater Stamina
+START [1506, 0, 0, 7667, 1891, 8214, 8207, 0, 1506, 1887, 0, 0, 0, 0, 1900, 1886, 0] {"tmi": 30.0, "dur": 180.0, "tps": 1939.1, "dps": 608.2, "dtps": 298.6, "swings": 80.3, "hit": 2.5, "miss": 8.3, "dodge": 19.5, "parry": 11.3, "block": 57.1, "crit": 0.2, "crush": 1.0}
+SLOT 0 Lionheart Helm 1506:1.0 1508:0.9993 2543:0.9992 2545:0.9985 0:0.9964
+SLOT 1 Horn of Ve'han 856:1.0021 904:1.0017 925:1.0007 0:1.0
+  -> none => Enchant Bracer - Strength
+SLOT 3 Shifting Cloak 7667:1.0021 247:1.0007 849:1.0007 1889:1.0002 0:0.9993
+SLOT 4 Breastplate of Heroism 1891:1.0021 8491:1.0005 8488:0.9999 8719:0.9996 8486:0.9995
+SLOT 5 Gargantuan Wristguards 7656:1.0027 8214:1.0021 1887:1.0017 923:1.001 1886:0.9995
+SLOT 6 Gauntlets of Glory 2563:1.0042 8207:1.0021 8206:1.0009 8491:1.0 8488:0.9994
+  -> Enchant Gloves - Greater Strength => Enchant 2H Weapon - Lesser Strength
+SLOT 8 Legplates of Glory 1506:1.0042 1508:1.0035 2543:1.0034 8491:1.003 2545:1.0027
+SLOT 9 Sabatons of Glory 1887:1.0042 8491:1.0029 8488:1.0024 8719:1.0021 247:1.002
+SLOT 14 Ironfoe 1900:1.0042 2563:0.9955 803:0.9955 1898:0.9929 1897:0.9917
+SLOT 15 Intricately Runed Shield 1886:1.0042 929:1.0039 848:0.998 863:0.9977 0:0.9976
+SLOT 0 Lionheart Helm 1506:1.0042 1508:1.0035 2543:1.0034 2545:1.0027 0:1.0007
+SLOT 1 Horn of Ve'han 856:1.0042 904:1.0038 925:1.0028 0:1.0021
+SLOT 3 Shifting Cloak 7667:1.0042 247:1.0029 849:1.0029 1889:1.0024 0:1.0015
+SLOT 4 Breastplate of Heroism 1891:1.0042 8491:1.0029 8488:1.0023 8719:1.002 8486:1.0019
+SLOT 5 Gargantuan Wristguards 7656:1.0049 8214:1.0042 1887:1.0039 923:1.0032 1886:1.0017
+SLOT 6 Gauntlets of Glory 2563:1.0042 8207:1.0021 8206:1.0009 8491:1.0 8488:0.9994

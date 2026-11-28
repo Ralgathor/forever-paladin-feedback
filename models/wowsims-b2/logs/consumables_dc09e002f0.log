@@ -1,0 +1,97 @@
+# Consumable checks of 28 November 2026. wowsims Forever master dc09e002f0 (item data of 27 November, push 114405), item pool tank sets and enchants of 18 and 19 November, full threat consumables of 18 November, 3 min, 1,000 iterations. One change at a time: '-' removes an item, '+' adds an item, 'A -> B' replaces an elixir of the same group. The game rule since 24 November: one elixir for each group, and only the strongest amount of each stat counts (elixirs and scrolls). Script: cons_study.py of the review notes.
+P full 1448.3 293.6 str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P -Elixir of Ferocity 1448.3 293.6 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P -Greater Arcane Elixir 1418.2 294.2 -2.08% str=315 agi=266 sta=517 int=162 sp=463 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P -Elixir of the Mongoose 1427.9 296.3 -1.41% str=315 agi=258 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8327 bv=40
+P -Elixir of Greater Defense 1448.3 293.6 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P -Elixir of the Phalanx 1448.1 294.9 -0.01% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8293 bv=40
+P -Elixir of Holy Power 1415.6 294.3 -2.26% str=315 agi=266 sta=517 int=162 sp=498 holy=20 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P -Gift of Arthas 1441.1 294.9 -0.50% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P -Goblin Sapper Charge 1445.1 295.2 -0.22% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P -Rumsey Rum 1448.3 293.7 +0.00% str=315 agi=266 sta=506 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P -Juju Power 1444.3 293.6 -0.28% str=301 agi=266 sta=517 int=162 sp=498 holy=60 ap=1029 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P -Juju Might 1442.7 293.6 -0.39% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1017 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P -R.O.I.D.S. 1439.8 293.8 -0.59% str=285 agi=266 sta=517 int=162 sp=498 holy=60 ap=997 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P -Dragonbreath Chili 1429.2 294.2 -1.32% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P -Scroll of Agility IV 1448.3 293.6 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P -Scroll of Strength IV 1448.3 293.6 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P -Scroll of Protection IV 1448.3 293.6 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P +Elixir of Greater Agility 1448.3 293.6 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P +Elixir of Cunning 1448.3 293.6 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P +Scroll of Stamina IV 1448.3 293.6 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P +Winterfall Firewater 1448.3 293.6 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P +Elixir of Greater Fortitude 1448.3 293.6 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P +Scroll of Intellect IV 1448.3 293.6 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P +Elixir of Brute Force 1448.3 293.6 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P +Elixir of Greater Strength 1448.3 293.6 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P +Elixir of the Grizzly 1448.3 293.6 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P +Elixir of the Owl 1448.3 293.6 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P Elixir of Ferocity -> Elixir of Greater Strength 1448.3 293.6 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P Elixir of Ferocity -> Elixir of Brute Force 1448.3 293.6 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8343 bv=40
+P Elixir of the Mongoose -> Elixir of the Grizzly 1446.7 295.9 -0.11% str=315 agi=258 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8327 bv=40
+P Elixir of the Mongoose -> Elixir of the Owl 1446.7 295.9 -0.11% str=315 agi=258 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8327 bv=40
+P Elixir of the Phalanx -> Elixir of Greater Fortitude 1448.3 294.8 +0.00% str=315 agi=266 sta=517 int=162 sp=498 holy=60 ap=1057 hit=45.0 crit=0.0 def=98 armor=8293 bv=40
+W full 1840.9 312.7 str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W -Elixir of Ferocity 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W -Elixir of the Mongoose 1811.9 314.4 -1.58% str=456 agi=308 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8344 bv=87
+W -Elixir of Greater Defense 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W -Elixir of the Phalanx 1839.6 313.1 -0.07% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8308 bv=87
+W -Gift of Arthas 1828.6 312.9 -0.67% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W -Goblin Sapper Charge 1832.7 312.2 -0.45% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W -Rumsey Rum 1838.5 312.7 -0.13% str=456 agi=315 sta=454 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W -Juju Power 1826.4 312.8 -0.79% str=443 agi=315 sta=465 int=100 sp=33 holy=0 ap=1397 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W -Juju Might 1818.9 312.7 -1.20% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1383 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W -R.O.I.D.S. 1810.0 313.0 -1.68% str=429 agi=315 sta=465 int=100 sp=33 holy=0 ap=1369 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W -Dragonbreath Chili 1834.0 312.0 -0.37% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W -Scroll of Agility IV 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W -Scroll of Strength IV 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W -Scroll of Protection IV 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W +Elixir of Greater Agility 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W +Elixir of Cunning 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W +Scroll of Stamina IV 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W +Winterfall Firewater 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W +Elixir of Greater Fortitude 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W +Scroll of Intellect IV 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W +Elixir of Brute Force 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W +Elixir of Greater Strength 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W +Elixir of the Grizzly 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W +Elixir of the Owl 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W +Greater Arcane Elixir 1843.0 312.7 +0.11% str=456 agi=315 sta=465 int=100 sp=68 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W +Elixir of Holy Power 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=40 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W Elixir of Ferocity -> Elixir of Greater Strength 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W Elixir of Ferocity -> Elixir of Brute Force 1840.9 312.7 +0.00% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8358 bv=87
+W Elixir of the Mongoose -> Elixir of the Grizzly 1835.8 314.1 -0.28% str=456 agi=308 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8344 bv=87
+W Elixir of the Mongoose -> Elixir of the Owl 1835.8 314.1 -0.28% str=456 agi=308 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8344 bv=87
+W Elixir of the Phalanx -> Elixir of Greater Fortitude 1840.1 313.9 -0.04% str=456 agi=315 sta=465 int=100 sp=33 holy=0 ap=1423 hit=75.0 crit=28.0 def=47 armor=8308 bv=87
+D full 2629.9 339.8 str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D -Elixir of Ferocity 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D -Elixir of the Mongoose 2573.6 342.5 -2.14% str=338 agi=284 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14277 bv=0
+D -Elixir of Greater Defense 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D -Elixir of the Phalanx 2629.1 341.1 -0.03% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14243 bv=0
+D -Gift of Arthas 2611.8 340.3 -0.69% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D -Goblin Sapper Charge 2613.4 335.9 -0.63% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D -Rumsey Rum 2630.2 340.2 +0.01% str=338 agi=292 sta=549 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D -Juju Power 2607.5 339.8 -0.85% str=325 agi=292 sta=562 int=177 sp=33 holy=0 ap=1221 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D -Juju Might 2595.4 339.8 -1.31% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1207 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D -R.O.I.D.S. 2583.3 339.8 -1.77% str=311 agi=292 sta=562 int=177 sp=33 holy=0 ap=1193 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D -Dragonbreath Chili 2619.6 339.3 -0.39% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D -Scroll of Agility IV 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D -Scroll of Strength IV 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D -Scroll of Protection IV 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D +Elixir of Greater Agility 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D +Elixir of Cunning 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D +Scroll of Stamina IV 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D +Winterfall Firewater 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D +Elixir of Greater Fortitude 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D +Scroll of Intellect IV 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D +Elixir of Brute Force 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D +Elixir of Greater Strength 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D +Elixir of the Grizzly 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D +Elixir of the Owl 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D +Greater Arcane Elixir 2632.9 339.8 +0.11% str=338 agi=292 sta=562 int=177 sp=68 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D +Elixir of Holy Power 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=40 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D Elixir of Ferocity -> Elixir of Greater Strength 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D Elixir of Ferocity -> Elixir of Brute Force 2629.9 339.8 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14293 bv=0
+D Elixir of the Mongoose -> Elixir of the Grizzly 2623.5 341.7 -0.24% str=338 agi=284 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14277 bv=0
+D Elixir of the Mongoose -> Elixir of the Owl 2623.5 341.7 -0.24% str=338 agi=284 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14277 bv=0
+D Elixir of the Phalanx -> Elixir of Greater Fortitude 2629.9 340.9 +0.00% str=338 agi=292 sta=562 int=177 sp=33 holy=0 ap=1247 hit=28.0 crit=0.0 def=61 armor=14243 bv=0

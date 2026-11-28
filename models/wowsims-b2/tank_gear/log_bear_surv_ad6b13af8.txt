@@ -1,0 +1,13 @@
+REF {"tps": 2845.6811722774005, "dps": 566.3048633729527, "dtps": 361.74976716679527, "tmi": 30.735128669646762}
+BASE 1.0541 {"tps": 2381.456439880482, "dps": 470.5675337677497, "dtps": 314.8678437099122, "tmi": 24.605909951112956}
+PASS 0
+SLOT 0 Warbear Helm -> Feralheart Faceguard 226801 60 [] 1.0541 -> 1.0648
+SLOT 1 Artifact Seeker's Pendant -> Evil Eye Pendant 18381 62 [] 1.0648 -> 1.0685
+SLOT 4 Songbird Blouse -> Feralheart Armor 226804 60 [] 1.0685 -> 1.0926
+PASS 1
+SLOT 1 Evil Eye Pendant -> Horn of Ve'han 275736 61 [] 1.0926 -> 1.0962
+PASS 2
+FINAL old {"tps": 2378.9691704536585, "dps": 470.09580944761365, "dtps": 315.8633710443244, "tmi": 24.6883786033639} 1.0515
+FINAL new {"tps": 2389.0849384768703, "dps": 473.3347607986346, "dtps": 300.2630473405031, "tmi": 23.246570140609425} 1.0939
+SET [226801, 275736, 252536, 18413, 226804, 252541, 226802, 287040, 11821, 226803, 12544, 15855, 10418, 14557, 18531, 0, 0]
+SETNAMES Feralheart Faceguard ; Horn of Ve'han ; Warden's Leather Shoulders ; Cloak of Warding ; Feralheart Armor ; Warden's Leather Bracers ; Feralheart Grips ; Dinosaur Hide Belt ; Warstrife Leggings ; Feralheart Treads ; Thrall's Resolve ; Ring of Protection ; Glimmering Mithril Insignia ; The Lion Horn of Stormwind ; Unyielding Maul ; - ; -

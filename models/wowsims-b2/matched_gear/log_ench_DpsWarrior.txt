@@ -1,27 +1,26 @@
-START [2543, 904, 0, 7667, 1891, 7656, 8206, 0, 2543, 1887, 0, 0, 0, 0, 1900, 1900, 0] 979.3
-SLOT 0 Lionheart Helm 1506:979.3 2543:979.3 1508:977.8 0:973.4
-SLOT 1 Mark of Fordring 856:979.9 904:979.3 0:976.6
-SLOT 3 Cape of the Black Baron 7667:979.3 247:978.8 849:978.8 0:976.6
-SLOT 4 Timbermaw Tunic 1891:979.3 8491:977.8 8488:977.1 8486:976.5 8483:975.8
-SLOT 5 Battleborn Armbraces 1885:981.4 7656:979.3 1887:978.8 823:977.5 904:977.1
-  -> Enchant Bracer - Superior Agility => Enchant Bracer - Superior Strength
-SLOT 6 Gauntlets of Heroism 2563:986.7 8207:983.4 8206:981.4 8491:979.5 8488:978.9
+START [2543, 904, 0, 7667, 1891, 7656, 8206, 0, 2543, 1887, 0, 0, 0, 0, 1900, 1900, 0] 963.0
+SLOT 0 Lionheart Helm 2543:963.0 1506:962.3 1508:961.4 0:957.2
+SLOT 1 Mark of Fordring 904:963.0 856:961.9 0:958.7
+SLOT 3 Cape of the Black Baron 7667:963.0 247:961.8 849:961.8 0:958.7
+SLOT 4 Timbermaw Tunic 1891:963.0 8491:960.3 8488:959.7 8486:959.0 8483:958.4
+SLOT 5 Battleborn Armbraces 1885:963.5 7656:963.0 1887:961.8 904:960.3 823:959.7
+SLOT 6 Gauntlets of Glory 2563:966.5 8207:963.3 8206:963.0 8491:959.5 8488:958.9
   -> Enchant Gloves - Greater Agility => Enchant 2H Weapon - Lesser Strength
-SLOT 8 Cloudkeeper Legplates 2543:986.7 1506:985.9 1508:984.9 8491:983.3 8488:982.7
-SLOT 9 Battleboots of Heroism 1887:986.7 8491:986.1 8488:985.5 8486:984.8 247:984.8
-SLOT 14 Ironfoe 1900:986.7 803:964.9 2563:963.3 1897:959.1 0:952.2
-SLOT 15 Bashguuder 1900:986.7 2563:980.1 803:974.3 1897:972.3 0:969.0
-SLOT 16 Satyr's Bow 0:986.7 30:986.7 32:986.7 33:986.7 663:986.7
-SLOT 0 Lionheart Helm 2543:986.7 1506:985.9 1508:984.9 0:980.1
-SLOT 1 Mark of Fordring 856:988.3 904:986.7 0:984.4
-SLOT 3 Cape of the Black Baron 7667:986.7 247:985.7 849:985.7 0:984.4
-SLOT 4 Timbermaw Tunic 1891:986.7 8491:985.4 8488:984.8 8486:984.1 8483:983.5
-SLOT 5 Battleborn Armbraces 1885:986.7 7656:984.8 1887:984.0 823:983.4 248:982.8
-SLOT 6 Gauntlets of Heroism 2563:986.7 8207:983.4 8206:981.4 8491:979.5 8488:978.9
-SLOT 8 Cloudkeeper Legplates 2543:986.7 1506:985.9 1508:984.9 8491:983.3 8488:982.7
-SLOT 9 Battleboots of Heroism 1887:986.7 8491:986.1 8488:985.5 8486:984.8 247:984.8
-SLOT 14 Ironfoe 1900:986.7 803:964.9 2563:963.3 1897:959.1 0:952.2
-SLOT 15 Bashguuder 1900:986.7 2563:980.1 803:974.3 1897:972.3 0:969.0
-SLOT 16 Satyr's Bow 0:986.7 30:986.7 32:986.7 33:986.7 663:986.7
-FINAL [2543, 904, 0, 7667, 1891, 1885, 2563, 0, 2543, 1887, 0, 0, 0, 0, 1900, 1900, 0]
-ENCHANTS 0:Arcanum of Rapidity | 1:Enchant Boots - Agility | 3:Enchant Cloak - Agility | 4:Enchant Chest - Greater Stats | 5:Enchant Bracer - Superior Strength | 6:Enchant 2H Weapon - Lesser Strength | 8:Arcanum of Rapidity | 9:Enchant Boots - Greater Agility | 14:Enchant Weapon - Crusader | 15:Enchant Weapon - Crusader
+SLOT 8 Cloudkeeper Legplates 1506:967.5 1508:967.1 2543:966.5 8491:965.0 8488:964.3
+SLOT 9 Greaves of Glory 1887:966.5 8491:964.6 247:964.6 8488:964.0 8486:963.4
+SLOT 14 Ironfoe 1900:966.5 803:945.4 2563:943.5 1897:939.4 1898:939.0
+SLOT 15 Felstriker 1900:966.5 2563:960.0 803:954.5 1897:952.6 1898:951.8
+SLOT 16 Satyr's Bow 0:966.5 30:966.5 32:966.5 33:966.5 663:966.5
+SLOT 0 Lionheart Helm 1506:967.5 1508:967.1 2543:966.5 0:961.8
+SLOT 1 Mark of Fordring 856:966.7 904:966.5 0:962.9
+SLOT 3 Cape of the Black Baron 7667:966.5 247:965.5 849:965.5 0:962.9
+SLOT 4 Timbermaw Tunic 1891:966.5 8491:965.2 8488:964.6 8486:964.0 8483:963.3
+SLOT 5 Battleborn Armbraces 1885:966.7 7656:966.5 1887:965.5 904:964.6 823:963.5
+SLOT 6 Gauntlets of Glory 2563:966.5 8207:963.3 8206:963.0 8491:959.5 8488:958.9
+SLOT 8 Cloudkeeper Legplates 1506:967.5 1508:967.1 2543:966.5 8491:965.0 8488:964.3
+SLOT 9 Greaves of Glory 1887:966.5 8491:964.6 247:964.6 8488:964.0 8486:963.4
+SLOT 14 Ironfoe 1900:966.5 803:945.4 2563:943.5 1897:939.4 1898:939.0
+SLOT 15 Felstriker 1900:966.5 2563:960.0 803:954.5 1897:952.6 1898:951.8
+SLOT 16 Satyr's Bow 0:966.5 30:966.5 32:966.5 33:966.5 663:966.5
+FINAL [2543, 904, 0, 7667, 1891, 7656, 2563, 0, 2543, 1887, 0, 0, 0, 0, 1900, 1900, 0]
+ENCHANTS 0:Arcanum of Rapidity | 1:Enchant Boots - Agility | 3:Enchant Cloak - Agility | 4:Enchant Chest - Greater Stats | 5:Enchant Bracer - Superior Agility | 6:Enchant 2H Weapon - Lesser Strength | 8:Arcanum of Rapidity | 9:Enchant Boots - Greater Agility | 14:Enchant Weapon - Crusader | 15:Enchant Weapon - Crusader
