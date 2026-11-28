@@ -1,0 +1,84 @@
+# wowsims Forever master dc09e002f, item pool sets, surv tank sets (FEEDBACK_ITEMS), full threat consumables for the three tanks (FEEDBACK_CONSUMES=full). Jobs of checks_8298ab833.log.
+### P | FEEDBACK_DUR=180 PROPOSE=
+PERTARGET [1289.898269975021]
+TMI avg=27.95 std=3.75
+RESULT dur=180 propose="" tps=1290.1 dps=521.9 dtps=204.5 swings=80.1 hit=1.6% miss=11.5% dodge=23.3% parry=14.3% block=44.3% crit=0.4% crush=4.8%
+### P | FEEDBACK_DUR=180 PROPOSE=C1
+        panic({0x100cdf8?, 0x15ea1a0?})
+        	/root/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.27.3.linux-amd64/src/runtime/panic.go:859 +0x125
+### P | FEEDBACK_DUR=180 PROPOSE=CP1
+PERTARGET [1306.8090551237356]
+TMI avg=24.80 std=2.68
+RESULT dur=180 propose="CP1" tps=1307.0 dps=528.1 dtps=191.3 swings=80.1 hit=1.5% miss=11.6% dodge=23.3% parry=14.4% block=48.4% crit=0.0% crush=0.8%
+### P | FEEDBACK_DUR=180 PROPOSE=CP1,NOTOUGH
+PERTARGET [1306.8090551237353]
+TMI avg=25.36 std=2.74
+RESULT dur=180 propose="CP1,NOTOUGH" tps=1307.0 dps=528.1 dtps=194.7 swings=80.1 hit=1.5% miss=11.6% dodge=23.3% parry=14.4% block=48.4% crit=0.0% crush=0.8%
+### P | FEEDBACK_DUR=180 PROPOSE=CP1,RD20
+PERTARGET [1306.5293125921412]
+TMI avg=24.94 std=2.75
+RESULT dur=180 propose="CP1,RD20" tps=1306.8 dps=527.9 dtps=191.7 swings=80.1 hit=1.5% miss=11.6% dodge=23.3% parry=14.4% block=48.2% crit=0.0% crush=1.0%
+### P | FEEDBACK_DUR=180 PROPOSE=RD20
+PERTARGET [1289.9738001518856]
+TMI avg=28.00 std=3.75
+RESULT dur=180 propose="RD20" tps=1290.2 dps=521.9 dtps=204.6 swings=80.1 hit=1.6% miss=11.5% dodge=23.3% parry=14.3% block=44.1% crit=0.3% crush=4.9%
+### P | FEEDBACK_DUR=180 PROPOSE=NOTOUGH
+PERTARGET [1289.9364372711702]
+TMI avg=28.58 std=3.84
+RESULT dur=180 propose="NOTOUGH" tps=1290.2 dps=521.9 dtps=208.1 swings=80.1 hit=1.6% miss=11.5% dodge=23.3% parry=14.3% block=44.3% crit=0.4% crush=4.8%
+### P | FEEDBACK_DUR=180 PROPOSE=C1,CP1,RK100,RKICD4
+        panic({0x100cdf8?, 0x15ea1a0?})
+        	/root/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.27.3.linux-amd64/src/runtime/panic.go:859 +0x125
+### P | FEEDBACK_DUR=300 PROPOSE=
+PERTARGET [1288.9798112615092]
+TMI avg=28.05 std=3.01
+RESULT dur=300 propose="" tps=1289.1 dps=519.8 dtps=202.7 swings=133.5 hit=1.8% miss=11.5% dodge=23.3% parry=14.2% block=44.1% crit=0.4% crush=4.8%
+### P | FEEDBACK_DUR=300 PROPOSE=CP1
+PERTARGET [1305.475245322513]
+TMI avg=24.81 std=2.14
+RESULT dur=300 propose="CP1" tps=1305.6 dps=525.8 dtps=189.9 swings=133.5 hit=1.7% miss=11.5% dodge=23.3% parry=14.4% block=48.1% crit=0.0% crush=0.9%
+### P | FEEDBACK_DUR=300 PROPOSE=CP1,RD20
+PERTARGET [1305.2395609046248]
+TMI avg=24.96 std=2.20
+RESULT dur=300 propose="CP1,RD20" tps=1305.4 dps=525.7 dtps=190.4 swings=133.5 hit=1.7% miss=11.5% dodge=23.3% parry=14.4% block=47.9% crit=0.0% crush=1.1%
+### P | RF_ALL=1.90 FEEDBACK_DUR=180 PROPOSE=C25
+PERTARGET [1836.9892875216449]
+TMI avg=27.95 std=3.75
+RESULT dur=180 propose="C25" tps=1837.3 dps=521.9 dtps=204.5 swings=80.1 hit=1.6% miss=11.5% dodge=23.3% parry=14.3% block=44.3% crit=0.4% crush=4.8%
+### P | RF_ALL=1.90 FEEDBACK_DUR=180 PROPOSE=CP1,C25
+PERTARGET [1861.2122228678538]
+TMI avg=24.80 std=2.68
+RESULT dur=180 propose="CP1,C25" tps=1861.5 dps=528.1 dtps=191.3 swings=80.1 hit=1.5% miss=11.6% dodge=23.3% parry=14.4% block=48.4% crit=0.0% crush=0.8%
+### P | RF_ALL=1.90 FEEDBACK_DUR=180 PROPOSE=CP1,NOTOUGH,C25
+PERTARGET [1861.212222867854]
+TMI avg=25.36 std=2.74
+RESULT dur=180 propose="CP1,NOTOUGH,C25" tps=1861.5 dps=528.1 dtps=194.7 swings=80.1 hit=1.5% miss=11.6% dodge=23.3% parry=14.4% block=48.4% crit=0.0% crush=0.8%
+### P | RF_ALL=1.80 FEEDBACK_DUR=180 PROPOSE=C25
+PERTARGET [1741.0084072503118]
+TMI avg=27.95 std=3.75
+RESULT dur=180 propose="C25" tps=1741.3 dps=521.9 dtps=204.5 swings=80.1 hit=1.6% miss=11.5% dodge=23.3% parry=14.3% block=44.3% crit=0.4% crush=4.8%
+### P | RF_ALL=1.80 FEEDBACK_DUR=180 PROPOSE=CP1,C25
+PERTARGET [1763.9485092285374]
+TMI avg=24.80 std=2.68
+RESULT dur=180 propose="CP1,C25" tps=1764.3 dps=528.1 dtps=191.3 swings=80.1 hit=1.5% miss=11.6% dodge=23.3% parry=14.4% block=48.4% crit=0.0% crush=0.8%
+### P | RF_ALL=1.80 FEEDBACK_DUR=180 PROPOSE=CP1,NOTOUGH,C25
+PERTARGET [1763.9485092285377]
+TMI avg=25.36 std=2.74
+RESULT dur=180 propose="CP1,NOTOUGH,C25" tps=1764.3 dps=528.1 dtps=194.7 swings=80.1 hit=1.5% miss=11.6% dodge=23.3% parry=14.4% block=48.4% crit=0.0% crush=0.8%
+### P | FEEDBACK_BOSS=fast FEEDBACK_DUR=180 PROPOSE=
+PERTARGET [1407.8840181703017]
+TMI avg=20.68 std=2.36
+RESULT dur=180 propose="" tps=1408.2 dps=566.4 dtps=176.4 swings=130.2 hit=2.1% miss=11.5% dodge=23.3% parry=14.4% block=44.1% crit=0.3% crush=4.3%
+### P | FEEDBACK_BOSS=fast FEEDBACK_DUR=180 PROPOSE=CP1,NOTOUGH
+PERTARGET [1421.1718943090511]
+TMI avg=19.43 std=2.03
+RESULT dur=180 propose="CP1,NOTOUGH" tps=1421.5 dps=571.4 dtps=170.1 swings=130.2 hit=1.6% miss=11.5% dodge=23.4% parry=14.3% block=47.7% crit=0.1% crush=1.4%
+### P | FEEDBACK_BOSS=fast FEEDBACK_DUR=180 PROPOSE=CP1,RD20,NOTOUGH
+PERTARGET [1420.4224370193594]
+TMI avg=20.01 std=2.29
+RESULT dur=180 propose="CP1,RD20,NOTOUGH" tps=1420.7 dps=571.1 dtps=172.8 swings=130.2 hit=1.7% miss=11.5% dodge=23.3% parry=14.3% block=46.8% crit=0.1% crush=2.3%
+### W | FEEDBACK_BOSS=fast FEEDBACK_DUR=180
+PERTARGET [1683.5643315615519]
+TMI avg=20
+RESULT dur=180 propose="" tps=1684.0 dps=524.8 dtps=216.7 swings=129.6 hit=3.9% miss=10.7% dodge=25.2% parry=14.6% block=42.7% crit=0.2% crush=2.6%
+### P | FEEDBACK_BOSS=dw FEEDBACK_DUR=180 PROPOSE=
