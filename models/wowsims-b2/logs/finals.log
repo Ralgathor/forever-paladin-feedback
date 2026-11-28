@@ -90,3 +90,12 @@ WEIGHTS prot raid prop -3530110213501531-54233 base={'dps': 511.2, 'tps': 1269.2
   Dodge rating: dps=-0.160 tps=-0.410 dtps=-0.410 tmi=-0.032
   Parry rating: dps=-0.090 tps=-0.260 dtps=-0.360 tmi=-0.030
   Armor: dps=+0.000 tps=+0.000 dtps=-0.021 tmi=-0.003
+BUILD ret raid prop-C1 050250002-501-05233011201301351 {'dps': 991.9, 'oom': 0.0}
+BUILD ret raid prop -50322130101000002-05233001211301351 {'dps': 869.4, 'oom': 4.8}
+BUILD ret raid prop-C1 -50322130101000002-05233001211301351 {'dps': 911.7, 'oom': 4.8}
+BUILD ret raid prop -50322130101005002-052330012213013 {'dps': 729.4, 'oom': 0.0}
+BUILD ret raid prop 050250002-5-05233301101301351 {'dps': 929.3, 'oom': 0.0}
+BUILD ret raid prop-C1 050250002-5-05233301101301351 {'dps': 976.3, 'oom': 0.0}
+BUILD prot raid prop 05005-3530110213201531-5023 {'dps': 536.7, 'tps': 1332.7, 'dtps': 265.2, 'tmi': 32.57, 'crush': 1.1, 'std': 3.1}
+BUILD prot raid prop -3530110213501531-45233 {'dps': 512.3, 'tps': 1272.0, 'dtps': 265.4, 'tmi': 32.63, 'crush': 1.1, 'std': 2.97}
+BUILD prot raid beta -25301102513501531-05233 {'dps': 496.8, 'tps': 1230.7, 'dtps': 299.6, 'tmi': 38.34, 'crush': 10.2, 'std': 4.22}

@@ -59,3 +59,5 @@ WEIGHTS shock raid prop 05025211222021051--052323010013 base={'dps': 790.8, 'oom
   Crit rating: dps=+0.390 oom=0.1
   Haste rating: dps=-0.180 oom=0.1
   Expertise rating: dps=+0.590 oom=0.1
+BUILD shock raid prop-REV50-only 15325210222121201--052330002013 {'dps': 679.7, 'oom': 0.0}
+BUILD shock fresh prop-REV50-only 15325210222121201--052330002013 {'dps': 250.6, 'oom': 110.8}

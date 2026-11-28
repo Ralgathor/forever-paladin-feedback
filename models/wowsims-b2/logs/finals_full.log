@@ -52,3 +52,4 @@ WEIGHTS prot raid prop -3530110213501531-54233 base={'dps': 608.4, 'tps': 1503.3
   Dodge rating: dps=-0.170 tps=-0.470 dtps=-0.410 tmi=-0.032
   Parry rating: dps=-0.150 tps=-0.370 dtps=-0.300 tmi=-0.025
   Armor: dps=+0.000 tps=+0.000 dtps=-0.020 tmi=-0.003
+BUILD prot raid prop 05005-3530110213201531-5023 {'dps': 641.6, 'tps': 1586.1, 'dtps': 260.9, 'tmi': 31.99, 'crush': 1.1, 'std': 2.97}

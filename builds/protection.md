@@ -8,14 +8,14 @@ This file gives the best tank builds for the live trees and for the proposed tre
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Proposed | PT1 | 0/34/17 | [`v6p-3530110213501531-54233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-54233) | 1,503 | 2,142 | 257 | 31.8 |
 | Proposed | PS1 | 0/34/17 | [`v6p-3530110213501531-53233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-53233000001) | 1,536 | 2,187 | 257 | 31.8 |
-| Proposed | PI1 | 10/31/10 | [`v6p05005-3530110213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05005-3530110213201531-5023) | @PI1F@ |
+| Proposed | PI1 | 10/31/10 | [`v6p05005-3530110213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05005-3530110213201531-5023) | 1,586 | 2,258 | 261 | 32.0 |
 | Live | BS2 | 0/35/16 | [`b2-05302102313501531-52233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2-05302102313501531-52233000001) | 1,488 | — | 278 | 37.1 |
 | Live | BT1 | 12/32/7 | [`b2050050002-05302102213301531-502`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2050050002-05302102213301531-502) | 1,470 | — | 285 | 38.0 |
 | Live | BS1 | 10/31/10 | [`b205005-05302102213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205005-05302102213201531-5023) | 1,532 | — | 287 | 38.2 |
 
 - **Righteous Fury (C25)** is a baseline spell change, not a talent. It multiplies all threat by 1.42 in wowsims (1.9 ÷ 1.33 on the threat multiplier). In the C25 run of Analysis, Threat, part 6, on commit dc09e002f0, it is 2,094 ÷ 1,470. Thus, the build order and the stat order do not change. The C25 column uses this multiplier.
 - **Proposed: PS1 is PT1 with Sacred Arbiter.** One Benediction point goes to Sacred Arbiter: +2.1% threat, the same damage taken and the same TMI. PT1 is the tank of Analysis, Builds.
-- **Proposed: PI1 is the threat choice.** @PI1B@
+- **Proposed: PI1 is the threat choice.** Divine Strength and Improved Seals give +3.3% threat against PS1, but 1.5% more damage taken and a 0.6% worse TMI.
 - **Live: BS2 is the tank build.** It takes Sacred Arbiter and Sanctified Judgement 3. Against the wowsims default build BT1, it has +1.2% threat, 2.2% less damage taken and a 2.3% better TMI.
 - **Live: BS1 is the threat choice.** It has only +2.9% threat against BS2, but 3.1% more damage taken and a 3.0% worse TMI.
 - **Proposed against live.** PT1 has +1.0% threat against BS2, 8% less damage taken and a 14% better TMI. PS1 has +3.2% threat. With Righteous Fury (C25), PT1 has +44% threat against BS2. Redoubt (C-P1) removes almost all crushing blows: 1.1% against 10.2%.
@@ -31,13 +31,13 @@ This file gives the best tank builds for the live trees and for the proposed tre
 | --- | --- | --- | --- | --- | --- |
 | Proposed | PT1 | 1,294 | 1,843 | 193 | 25.2 |
 | Proposed | PS1 | 1,320 | 1,881 | 193 | 25.2 |
-| Proposed | PI1 | @PI1S@ |
+| Proposed | PI1 | 1,363 | 1,942 | 197 | 25.5 |
 | Live | BS2 | 1,306 | — | 198 | 26.7 |
 | Live | BT1 | 1,290 | — | 205 | 28.0 |
 | Live | BS1 | 1,344 | — | 206 | 28.3 |
 
 - **The build order of the proposed trees does not change.** All builds have 12–14% less threat, 25–29% less damage taken and a 21–28% better TMI than with the threat set. The survival set has Greater Stoneshield Potion (+2,000 armor). In the live trees, BS1 has 2.9% more threat than BS2 with this set too. Against the survival set of 19 November on commit ad6b13af8, all builds have 3–4% more threat and 3–4% less damage taken, but a 5–7% worse TMI. Before 19 November, without Deathbone Guardian, all builds had 3–5% more threat and took 3–8% more damage.
-- **PI1 against PS1:** @PI1SB@
+- **PI1 against PS1:** +3.3% threat, 1.8% more damage taken and a 1.1% worse TMI.
 - **PT1 against BS2:** −1.0% threat, 2% less damage taken and a 6% better TMI.
 - **Stat weights** with the survival set, on commit dc09e002f0 (`models/wowsims-b2/logs/finals_surv_full.log`). For threat, Hit rating and Expertise rating are the best stats (PT1: +1.63 and +1.46 for each point). For survival, Stamina, Defense rating and Block value stay the best.
 
@@ -62,7 +62,7 @@ This file gives the best tank builds for the live trees and for the proposed tre
 - **Dungeon tank** ([`v6p-353011021350153102-52233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-353011021350153102-52233), 0/36/15): Reach of Law 2 in place of Benediction 2. Judgement and Swift Judgement then pull from 20 yards with Seal of Fury. wowsims does not model the pull, and the raid values do not change.
 - **PS1** ([`v6p-3530110213501531-53233000001`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p-3530110213501531-53233000001)): Benediction 3 and Sacred Arbiter in place of Benediction 4.
 - **Deflection 5, not Benediction 5.** After Improved Judgement, Conviction and Sanctified Judgement, 9 points stay for Deflection and Benediction. One point in Deflection gives 1.5% less damage taken. One point in Benediction gives 0.3% more threat. With Benediction 5 and Deflection 4, PT1 had 1,217 threat each sec, 274 damage taken each sec and a TMI of 38.9 (consumables of 16 November).
-- **Improved Seals (PI1, threat choice).** Divine Strength 5 and Improved Seals 5 cost 10 points. The best points to give up, against PS1: 3 Anticipation points, Benediction 3, Sanctified Judgement 3 and Sacred Arbiter. PI1 is 10/31/10, [`v6p05005-3530110213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05005-3530110213201531-5023). Against PS1, it has +3.3% threat (1,546 each sec), but 2.2% more damage taken (255) and a 1.1% worse TMI (32.2).
+- **Improved Seals (PI1, threat choice).** Divine Strength 5 and Improved Seals 5 cost 10 points. The best points to give up, against PS1: 3 Anticipation points, Benediction 3, Sanctified Judgement 3 and Sacred Arbiter. PI1 is 10/31/10, [`v6p05005-3530110213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05005-3530110213201531-5023). Against PS1, it has +3.3% threat (1,586 each sec), but 1.5% more damage taken (261) and a 0.6% worse TMI (32.0).
 
   It is the same trade as BS1 in the live trees. On 1 November (Holy Shield rank 3, default set), other places cost more. Anticipation 3 gave 1,020 / 300 / 46.1, and Retribution 7 (Deflection 5, Improved Judgement 2) gave 990 / 296 / 45.8.
 
@@ -84,7 +84,7 @@ This file gives the best tank builds for the live trees and for the proposed tre
 - Protection: Redoubt 5, Precision 3, Sacred Duty 2, Templar's Bulwark, Shield Specialization 2, Toughness 2, Swift Judgement, Improved Righteous Fury 3, Anticipation 3, Holy Shield, Reckoning 5, Iron Creed 3, Shieldsworn.
 - Retribution: Deflection 5, Improved Judgement 2.
 - **BS1** ([`b205005-05302102213201531-5023`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205005-05302102213201531-5023)): no Holy Conduit, Anticipation 2, and Conviction 3.
-- **The tank build of the Analysis model** (B2T, 0/38/13, [`b2-25301102513501531-05233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2-25301102513501531-05233)) @B2T@
+- **The tank build of the Analysis model** (B2T, 0/38/13, [`b2-25301102513501531-05233`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b2-25301102513501531-05233)) gives 1,231 threat each sec and 300 damage taken each sec. Its TMI is 38.3.
 
 ## 3. Stat weights
 

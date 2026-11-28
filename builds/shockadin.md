@@ -55,7 +55,7 @@ This file gives the Holy Shock damage build ("Shockadin") on one target. It uses
 | SF2, 22/0/29 | Proposed | [`v6p0502520122102--0523330110130034`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p0502520122102--0523330110130034) | 765 (−10%) | 310 (+3.3%) | No Holy Shock. Illumination 1 in place of Divine Favor, Champion of the Light 4 |
 
 - **Light's Vigil (C-H7) adds damage, but not enough.** It gives SB2 +76 DPS in a raid (+10.6%): one Holy Shock each 6 sec, in place of each 10 sec. SB2 has no Vengeance and no Champion of the Light, thus it stays 7% below SB1. The talent search from SB2 at fresh 60 moved the Light's Vigil point to other talents at its second step.
-@SB3@ The heal talents of SB3 give no damage, and this sim has no heals.
+- **In a raid, SB3 has 4% less damage than SB2.** Light's Vigil (C-H7) gives +12.3% in a raid. At fresh 60, it gives only +5.4%: with more Holy Shocks, the build has no mana for 119 sec of the 3 min fight. Reverence 50% (C-H1) gives no damage there. The heal talents of SB3 give no damage, and this sim has no heals.
 - **At fresh 60, Holy Shock costs too much mana.** The search moved the Holy Shock point to Champion of the Light. SF1 is a Retribution build with the Holy Shock set, not a Shockadin. In the final runs, SB1 has no mana for 115 sec of the 3 min fight, and SF1 for 62 sec. With the proposed trees, SF1 now has more damage than SF2 at fresh 60 (315 against 310).
 - **The search did not find a better Shockadin.** In a raid, no move of 1 point from SB1 gave more than +2 DPS, in the live and in the proposed trees.
 
