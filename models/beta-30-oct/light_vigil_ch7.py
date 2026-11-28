@@ -29,9 +29,9 @@ import healing_b2 as B
 TS = (180, 300, 600)
 X = 0.60   # party heal, % of the Holy Shock heal
 
-def ch7(hp=715, tank=False, x=None, icd=6, oh=0.50, bonus=0.75, rev=0.30):
+def ch7(hp=715, tank=False, x=None, icd=6, oh=0.50, bonus=0.75, rev=0.30, **gear):
     x = X if x is None else x
-    k = B.paladin_b2(hp, tank, bonus=bonus, rev=rev, lv=False)
+    k = B.paladin_b2(hp, tank, bonus=bonus, rev=rev, lv=False, **gear)
     hs = [s for s in k["spells"] if s.name == "Holy Shock"][0]
     k["spells"] = [s for s in k["spells"] if s.name != "Holy Shock"]
     one = x*hs.raw                                   # party heal on one member: x of the Holy Shock heal (crit included)

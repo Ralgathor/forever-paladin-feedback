@@ -1,0 +1,754 @@
+{
+ "Paladin": {
+  "items": [
+   {
+    "slot": "Head",
+    "item": "Living Crown",
+    "id": 252561,
+    "stats": {
+     "3": 18,
+     "4": 73,
+     "13": 14
+    },
+    "enchant": "Lesser Arcane Amalgamation"
+   },
+   {
+    "slot": "Neck",
+    "item": "Jeweled Amulet of Cainwyn",
+    "id": 1443,
+    "stats": {
+     "3": 18,
+     "4": 18,
+     "13": 10
+    },
+    "enchant": "Enchant Necklace - Healing Power"
+   },
+   {
+    "slot": "Shoulder",
+    "item": "Justice Epaulets",
+    "id": 273914,
+    "stats": {
+     "3": 10,
+     "4": 20,
+     "13": 9,
+     "18": 14
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Back",
+    "item": "Hide of the Wild",
+    "id": 18510,
+    "stats": {
+     "3": 10,
+     "4": 42
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Chest",
+    "item": "Breastplate of Salvation",
+    "id": 250601,
+    "stats": {
+     "3": 14,
+     "4": 40,
+     "13": 33
+    },
+    "enchant": "Enchant Chest - Major Intellect"
+   },
+   {
+    "slot": "Wrist",
+    "item": "Loomguard Armbraces",
+    "id": 13969,
+    "stats": {
+     "3": 7,
+     "4": 29,
+     "31": 3
+    },
+    "enchant": "Enchant Bracer - Greater Spellpower"
+   },
+   {
+    "slot": "Hands",
+    "item": "Hands of the Exalted Herald",
+    "id": 12554,
+    "stats": {
+     "3": 13,
+     "4": 31,
+     "13": 12
+    },
+    "enchant": "Mystic Rugged Armor Kit"
+   },
+   {
+    "slot": "Waist",
+    "item": "Sash of Mercy",
+    "id": 14553,
+    "stats": {
+     "4": 53,
+     "13": 12
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Legs",
+    "item": "Martyr's Legplates",
+    "id": 250600,
+    "stats": {
+     "3": 14,
+     "4": 73,
+     "13": 18
+    },
+    "enchant": "Lesser Arcane Amalgamation"
+   },
+   {
+    "slot": "Feet",
+    "item": "Justice Treads",
+    "id": 273915,
+    "stats": {
+     "3": 11,
+     "4": 18,
+     "18": 14,
+     "31": 5
+    },
+    "enchant": "Mystic Rugged Armor Kit"
+   },
+   {
+    "slot": "Finger 1",
+    "item": "Fordring's Seal",
+    "id": 16058,
+    "stats": {
+     "3": 6,
+     "4": 37
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Finger 2",
+    "item": "Rosewine Circle",
+    "id": 13178,
+    "stats": {
+     "4": 24,
+     "31": 6
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Trinket 1",
+    "item": "Burst of Knowledge",
+    "id": 11832,
+    "stats": {
+     "31": 8
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Trinket 2",
+    "item": "Mindtap Talisman",
+    "id": 18371,
+    "stats": {
+     "31": 6
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Main hand",
+    "item": "Hammer of the Grand Crusader",
+    "id": 18717,
+    "stats": {
+     "3": 26,
+     "4": 135,
+     "13": 17
+    },
+    "enchant": "Enchant 2H Weapon - Mighty Healing Power"
+   }
+  ],
+  "totals": {
+   "hp": 762,
+   "intel": 375.1,
+   "spi": 355.465,
+   "crit": 0.14762103505843072,
+   "mp5": 108,
+   "gear_hp": 732,
+   "gear_int": 173,
+   "gear_spi": 125,
+   "gear_crit": 28,
+   "gear_mp5": 28,
+   "set_n": 0
+  }
+ },
+ "Druid": {
+  "items": [
+   {
+    "slot": "Head",
+    "item": "Living Crown",
+    "id": 252561,
+    "stats": {
+     "3": 18,
+     "4": 73,
+     "13": 14
+    },
+    "enchant": "Lesser Arcane Amalgamation"
+   },
+   {
+    "slot": "Neck",
+    "item": "Jeweled Amulet of Cainwyn",
+    "id": 1443,
+    "stats": {
+     "3": 18,
+     "4": 18,
+     "13": 10
+    },
+    "enchant": "Enchant Necklace - Healing Power"
+   },
+   {
+    "slot": "Shoulder",
+    "item": "Grovekeeper Pauldrons",
+    "id": 273894,
+    "stats": {
+     "3": 12,
+     "4": 24,
+     "13": 11,
+     "31": 4
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Back",
+    "item": "Amplifying Cloak",
+    "id": 18350,
+    "stats": {
+     "4": 15,
+     "13": 14
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Chest",
+    "item": "Embrace of the Wind Serpent",
+    "id": 12462,
+    "stats": {
+     "3": 10,
+     "4": 33,
+     "13": 30
+    },
+    "enchant": "Enchant Chest - Greater Stats"
+   },
+   {
+    "slot": "Wrist",
+    "item": "Bleak Howler Armguards",
+    "id": 13208,
+    "stats": {
+     "3": 9,
+     "4": 15,
+     "13": 14
+    },
+    "enchant": "Enchant Bracer - Superior Spirit"
+   },
+   {
+    "slot": "Hands",
+    "item": "Feralheart Gauntlets",
+    "id": 226784,
+    "stats": {
+     "3": 11,
+     "4": 24,
+     "13": 18
+    },
+    "enchant": "Mystic Rugged Armor Kit"
+   },
+   {
+    "slot": "Waist",
+    "item": "Caretaker's Cord",
+    "id": 272398,
+    "stats": {
+     "4": 23,
+     "13": 24
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Legs",
+    "item": "Devout Skirt",
+    "id": 16694,
+    "stats": {
+     "3": 15,
+     "4": 24,
+     "13": 23
+    },
+    "enchant": "Lesser Arcane Amalgamation"
+   },
+   {
+    "slot": "Feet",
+    "item": "Feralheart Sandals",
+    "id": 226781,
+    "stats": {
+     "3": 13,
+     "4": 20,
+     "13": 20,
+     "31": 2
+    },
+    "enchant": "Enchant Boots - Spirit"
+   },
+   {
+    "slot": "Finger 1",
+    "item": "Ring of Nature's Cycles",
+    "id": 275740,
+    "stats": {
+     "4": 20,
+     "13": 14
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Finger 2",
+    "item": "The Postmaster's Seal",
+    "id": 13392,
+    "stats": {
+     "3": 3,
+     "4": 13,
+     "13": 12
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Trinket 1",
+    "item": "Ankh of Life",
+    "id": 1713,
+    "stats": {
+     "13": 12
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Trinket 2",
+    "item": "Lucky Shovelnose Tuft",
+    "id": 280060,
+    "stats": {
+     "13": 11
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Main hand",
+    "item": "Gift of the Elven Magi",
+    "id": 13360,
+    "stats": {
+     "3": 10,
+     "4": 135,
+     "13": 7
+    },
+    "enchant": "Enchant Weapon - Insight"
+   },
+   {
+    "slot": "Off hand",
+    "item": "Penelope's Rose",
+    "id": 15805,
+    "stats": {
+     "3": 11,
+     "4": 22,
+     "13": 10
+    },
+    "enchant": "Enchant Off-Hand - Wisdom"
+   },
+   {
+    "slot": "Relic",
+    "item": "Mystic Mushroom",
+    "id": 249396,
+    "stats": {},
+    "enchant": null
+   }
+  ],
+  "totals": {
+   "hp": 506,
+   "intel": 347.2700000000001,
+   "spi": 905.49459,
+   "crit": 0.14597495826377296,
+   "mp5": 86,
+   "gear_hp": 476,
+   "gear_int": 140,
+   "gear_spi": 283,
+   "gear_crit": 0,
+   "gear_mp5": 6,
+   "set_n": 1
+  }
+ },
+ "Priest": {
+  "items": [
+   {
+    "slot": "Head",
+    "item": "Virtuous Crown",
+    "id": 226947,
+    "stats": {
+     "3": 17,
+     "4": 33,
+     "13": 16,
+     "18": 14
+    },
+    "enchant": "Lesser Arcane Amalgamation"
+   },
+   {
+    "slot": "Neck",
+    "item": "Jeweled Amulet of Cainwyn",
+    "id": 1443,
+    "stats": {
+     "3": 18,
+     "4": 18,
+     "13": 10
+    },
+    "enchant": "Enchant Necklace - Healing Power"
+   },
+   {
+    "slot": "Shoulder",
+    "item": "Pauldrons of Conviction",
+    "id": 273926,
+    "stats": {
+     "3": 11,
+     "4": 32,
+     "13": 13
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Back",
+    "item": "Hide of the Wild",
+    "id": 18510,
+    "stats": {
+     "3": 10,
+     "4": 42
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Chest",
+    "item": "Truefaith Vestments",
+    "id": 14154,
+    "stats": {
+     "4": 73,
+     "13": 16
+    },
+    "enchant": "Enchant Chest - Greater Stats"
+   },
+   {
+    "slot": "Wrist",
+    "item": "Wyrmthalak's Shackles",
+    "id": 13958,
+    "stats": {
+     "4": 20,
+     "13": 15
+    },
+    "enchant": "Enchant Bracer - Greater Spellpower"
+   },
+   {
+    "slot": "Hands",
+    "item": "Virtuous Mitts",
+    "id": 226950,
+    "stats": {
+     "3": 11,
+     "4": 24,
+     "13": 18
+    },
+    "enchant": "Mystic Rugged Armor Kit"
+   },
+   {
+    "slot": "Waist",
+    "item": "Penitent's Cinch",
+    "id": 272394,
+    "stats": {
+     "4": 23,
+     "13": 24
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Legs",
+    "item": "Leggings of Conviction",
+    "id": 273924,
+    "stats": {
+     "3": 16,
+     "4": 33,
+     "13": 20
+    },
+    "enchant": "Lesser Arcane Amalgamation"
+   },
+   {
+    "slot": "Feet",
+    "item": "Virtuous Sandals",
+    "id": 226952,
+    "stats": {
+     "3": 13,
+     "4": 20,
+     "13": 20,
+     "31": 2
+    },
+    "enchant": "Enchant Boots - Spirit"
+   },
+   {
+    "slot": "Finger 1",
+    "item": "Ring of Nature's Cycles",
+    "id": 275740,
+    "stats": {
+     "4": 20,
+     "13": 14
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Finger 2",
+    "item": "Fordring's Seal",
+    "id": 16058,
+    "stats": {
+     "3": 6,
+     "4": 37
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Trinket 1",
+    "item": "Ankh of Life",
+    "id": 1713,
+    "stats": {
+     "13": 12
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Trinket 2",
+    "item": "Lucky Shovelnose Tuft",
+    "id": 280060,
+    "stats": {
+     "13": 11
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Main hand",
+    "item": "Gift of the Elven Magi",
+    "id": 13360,
+    "stats": {
+     "3": 10,
+     "4": 135,
+     "13": 7
+    },
+    "enchant": "Enchant Weapon - Insight"
+   },
+   {
+    "slot": "Off hand",
+    "item": "Penelope's Rose",
+    "id": 15805,
+    "stats": {
+     "3": 11,
+     "4": 22,
+     "13": 10
+    },
+    "enchant": "Enchant Off-Hand - Wisdom"
+   },
+   {
+    "slot": "Relic",
+    "item": "Bonecreeper Stylus",
+    "id": 13938,
+    "stats": {
+     "3": 5,
+     "4": 11
+    },
+    "enchant": null
+   }
+  ],
+  "totals": {
+   "hp": 606,
+   "intel": 369.05,
+   "spi": 701.316,
+   "crit": 0.16002521008403361,
+   "mp5": 82,
+   "gear_hp": 576,
+   "gear_int": 138,
+   "gear_spi": 236,
+   "gear_crit": 14,
+   "gear_mp5": 2,
+   "set_n": 0
+  }
+ },
+ "Shaman": {
+  "items": [
+   {
+    "slot": "Head",
+    "item": "Living Crown",
+    "id": 252561,
+    "stats": {
+     "3": 18,
+     "4": 73,
+     "13": 14
+    },
+    "enchant": "Lesser Arcane Amalgamation"
+   },
+   {
+    "slot": "Neck",
+    "item": "Jeweled Amulet of Cainwyn",
+    "id": 1443,
+    "stats": {
+     "3": 18,
+     "4": 18,
+     "13": 10
+    },
+    "enchant": "Enchant Necklace - Healing Power"
+   },
+   {
+    "slot": "Shoulder",
+    "item": "Spiritcaller Epaulets",
+    "id": 273938,
+    "stats": {
+     "3": 14,
+     "4": 24,
+     "13": 12
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Back",
+    "item": "Hide of the Wild",
+    "id": 18510,
+    "stats": {
+     "3": 10,
+     "4": 42
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Chest",
+    "item": "Embrace of the Wind Serpent",
+    "id": 12462,
+    "stats": {
+     "3": 10,
+     "4": 33,
+     "13": 30
+    },
+    "enchant": "Enchant Chest - Greater Stats"
+   },
+   {
+    "slot": "Wrist",
+    "item": "Bleak Howler Armguards",
+    "id": 13208,
+    "stats": {
+     "3": 9,
+     "4": 15,
+     "13": 14
+    },
+    "enchant": "Enchant Bracer - Greater Spellpower"
+   },
+   {
+    "slot": "Hands",
+    "item": "Hands of the Exalted Herald",
+    "id": 12554,
+    "stats": {
+     "3": 13,
+     "4": 31,
+     "13": 12
+    },
+    "enchant": "Mystic Rugged Armor Kit"
+   },
+   {
+    "slot": "Waist",
+    "item": "Sash of Mercy",
+    "id": 14553,
+    "stats": {
+     "4": 53,
+     "13": 12
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Legs",
+    "item": "Legplates of the Chromatic Defier",
+    "id": 12945,
+    "stats": {
+     "3": 16,
+     "4": 44,
+     "13": 19
+    },
+    "enchant": "Lesser Arcane Amalgamation"
+   },
+   {
+    "slot": "Feet",
+    "item": "Greaves of The Five Thunders",
+    "id": 227015,
+    "stats": {
+     "3": 13,
+     "4": 20,
+     "13": 20,
+     "31": 2
+    },
+    "enchant": "Enchant Boots - Spirit"
+   },
+   {
+    "slot": "Finger 1",
+    "item": "Fordring's Seal",
+    "id": 16058,
+    "stats": {
+     "3": 6,
+     "4": 37
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Finger 2",
+    "item": "Ring of Nature's Cycles",
+    "id": 275740,
+    "stats": {
+     "4": 20,
+     "13": 14
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Trinket 1",
+    "item": "Burst of Knowledge",
+    "id": 11832,
+    "stats": {
+     "31": 8
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Trinket 2",
+    "item": "Uther's Strength",
+    "id": 11302,
+    "stats": {
+     "4": 18
+    },
+    "enchant": null
+   },
+   {
+    "slot": "Main hand",
+    "item": "Gift of the Elven Magi",
+    "id": 13360,
+    "stats": {
+     "3": 10,
+     "4": 135,
+     "13": 7
+    },
+    "enchant": "Enchant Weapon - Insight"
+   },
+   {
+    "slot": "Off hand",
+    "item": "Penelope's Rose",
+    "id": 15805,
+    "stats": {
+     "3": 11,
+     "4": 22,
+     "13": 10
+    },
+    "enchant": "Enchant Off-Hand - Wisdom"
+   }
+  ],
+  "totals": {
+   "hp": 648,
+   "intel": 377.5200000000001,
+   "spi": 584.4300000000001,
+   "crit": 0.2167702702702703,
+   "mp5": 90,
+   "gear_hp": 618,
+   "gear_int": 158,
+   "gear_spi": 204,
+   "gear_crit": 0,
+   "gear_mp5": 10,
+   "set_n": 0
+  }
+ }
+}

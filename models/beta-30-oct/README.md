@@ -15,6 +15,8 @@ These scripts run the models of the Analysis tabs on the live trees (hotfix push
 | retribution_b2.py | `python3 retribution_b2.py` | Retribution with Unsealed Wrath: Holy Strike Seal trigger (C1, withdrawn on 2 November 2026), Burning Zeal (C-R4), Seal plans and mana (W29), against the pure average. Start value: wowsims of 1 November (906 DPS), build 14/6/31 |
 | damage_tables_b2.py | `python3 damage_tables_b2.py` | Analysis, Damage: stats, sources, increase with gear, % of Fury, the C1 review, Judgement of the Crusader and stat values |
 | pvp_burst_b2.py | `python3 pvp_burst_b2.py` | PvP burst in one Hammer of Justice stun, and Reckoning charges in PvP (W6), beta and proposed |
+| pool_gear_b2.py | `python3 pool_gear_b2.py` (`--build`: new sets, about 5 min) | Analysis, Healing, part 10: each healer in a set from the level 60 item pool, with the same rules and buffs for all (sets in pool_gear_b2.json) |
+| class_gear_b2.py | `python3 class_gear_b2.py` | Analysis, Healing, part 10 (comparison): each healer with the totals of the DoubleZug profiles (November 2026) |
 | healing_sens_b2.py | `python3 healing_sens_b2.py` | Analysis, Healing, parts 5, 6 and 9: cost values, Holy Power cases and limits. NOTES_OFF=1 runs it without the development notes of 2 November |
 | holy_builds_b2.py | `python3 holy_builds_b2.py` | builds/holy.md: the value of each healing talent and the stat weights of HB1 (model) |
 | threat_options_b2.py | `python3 threat_options_b2.py` | Threat options after the development notes of 2 November (not proposals): % of the Warrior at each gear tier |

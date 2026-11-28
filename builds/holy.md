@@ -6,13 +6,13 @@ This file gives the best healing build on the live trees, the value of each heal
 
 | Trees | Build | Points | Code | Raid, 3 / 5 / 10 min | One tank, 3 / 5 / 10 min |
 | --- | --- | --- | --- | --- | --- |
-| Proposed | HB2 | 31/12/8 | [`v6p50320115202101251-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50320115202101251-50122000000000002-0503) | 814 / 728 / 647 | 755 / 658 / 571 |
-| Live | HB1 | 38/5/8 | [`b250325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b250325115202121251-5-0503) | 563 / 479 / 404 | 658 / 568 / 480 |
+| Proposed | HB2 | 31/12/8 | [`v6p50320115202101251-50122000000000002-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p50320115202101251-50122000000000002-0503) | 826 / 745 / 666 | 771 / 674 / 594 |
+| Live | HB1 | 38/5/8 | [`b250325115202121251-5-0503`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b250325115202121251-5-0503) | 571 / 487 / 416 | 666 / 578 / 494 |
 
 - Healing each sec after overhealing, 715 healing power, 175% critical heals (Holy Power 5/5, main hypothesis since 3 November).
 - In both trees, all healing talents fit in 51 points. Thus, the best healing build takes all of them. The other points give only utility.
-- HB2 heals 45–60% more than HB1 in raids, with Light's Vigil (C-H7) and Reverence 50% (C-H1). On one tank, it heals 15–19% more, with Oath of Light 30% (C-H8) and Reverence 50%. The gain increases with the fight length. HB2 also takes Devoted Sacrifice (C-P11) and Protection saves in place of Improved Seals and Consecrated Ground.
-- **Stat weights.** MP5 is the best stat for each point in all fight lengths (2.3–3.3 healing power). Intellect is 0.7–1.3 healing power, crit rating 1.1–1.4 (part 3).
+- HB2 heals 45–60% more than HB1 in raids, with Light's Vigil (C-H7) and Reverence 50% (C-H1). On one tank, it heals 16–20% more, with Oath of Light 30% (C-H8) and Reverence 50%. The gain increases with the fight length. HB2 also takes Devoted Sacrifice (C-P11) and Protection saves in place of Improved Seals and Consecrated Ground.
+- **Stat weights.** MP5 is the best stat for each point in all fight lengths (2.3–3.1 healing power). Intellect is 0.6–1.3 healing power, crit rating 1.0–1.4 (part 3).
 
 ## 1. Builds
 
@@ -39,23 +39,23 @@ The healing without the talent, 5 min fight, against HB1. Reverence 50% and Oath
 
 | Talent | Raid | One tank |
 | --- | --- | --- |
-| Reverence 50% in place of 30% (C-H1, HB2 only) | −6.1% | −5.6% |
+| Reverence 50% in place of 30% (C-H1, HB2 only) | −5.6% | −6.2% |
 | Oath of Light 30% (C-H8, HB2 only) | 0% | −23.1% |
 | Oath of Light (live: +400 / +115 / +229) | 0% | −15.8% |
-| Reverence 2/2 and Illumination 5/5 (Illumination needs Reverence) | −21.0% | −21.0% |
-| Illumination 5/5 | −12.0% | −12.0% |
-| Healing Light 3/3 | −10.7% | −10.7% |
-| Conviction 3/3 | −6.0% | −6.0% |
+| Reverence 2/2 and Illumination 5/5 (Illumination needs Reverence) | −21.5% | −21.4% |
+| Illumination 5/5 | −11.4% | −11.3% |
+| Healing Light 3/3 | −10.6% | −10.7% |
+| Conviction 3/3 | −5.7% | −5.6% |
 | Holy Power 5/5 (175% critical heals) | −5.7% | −5.7% |
-| Divine Intellect 5/5 | −2.6% | −2.6% |
-| Divine Favor | −1.9% | −2.0% |
+| Divine Intellect 5/5 | −2.3% | −2.1% |
+| Divine Favor | −2.0% | −2.1% |
 | Benediction 5/5 | 0% | 0% |
 | Boundless Light 2/2 | 0% | 0% |
 | Light's Vigil | 0% | 0% |
 
 - **Oath of Light gives the most on one tank,** and nothing in raids. It helps only one ally (model: `models/beta-30-oct/oath_light_ch8.py`).
 - **Mana talents give the most.** Reverence and Illumination together give 21% of the healing. Holy Power gives 6% (15% at 225%).
-- **Holy Shock, Boundless Light and Light's Vigil give 0%.** The best spell plan does not cast them: they heal the least for each mana point. Holy Shock has value when you move. In the proposed trees, Light's Vigil (C-H7) gives HB1 +44% in raids at 5 min (479 → 692).
+- **Holy Shock, Boundless Light and Light's Vigil give 0%.** The best spell plan does not cast them: they heal the least for each mana point. Holy Shock has value when you move. In the proposed trees, Light's Vigil (C-H7) gives HB1 +44% in raids at 5 min (487 → 703).
 - **Benediction gives 0%** because the plan casts no instant spell. It has value with Holy Shock and Seals.
 
 ## 3. Stat weights
@@ -64,12 +64,12 @@ Each stat + a small amount (40 healing power, Intellect or Spirit, 10 MP5, 14 cr
 
 | Stat | Raid, 3 min | Raid, 5 min | Raid, 10 min | One tank, 5 min |
 | --- | --- | --- | --- | --- |
-| Healing each sec for 1 healing power | 0.331 | 0.322 | 0.272 | 0.322 |
+| Healing each sec for 1 healing power | 0.331 | 0.324 | 0.280 | 0.325 |
 | Healing power | 1.00 | 1.00 | 1.00 | 1.00 |
-| Intellect | 1.28 | 0.86 | 0.67 | 0.94 |
-| Spirit | 0.34 | 0.38 | 0.61 | 0.42 |
-| MP5 | 2.28 | 2.45 | 3.33 | 2.66 |
-| Crit rating | 1.35 | 1.09 | 1.09 | 1.29 |
+| Intellect | 1.28 | 0.83 | 0.64 | 0.88 |
+| Spirit | 0.43 | 0.44 | 0.69 | 0.46 |
+| MP5 | 2.28 | 2.33 | 3.13 | 2.44 |
+| Crit rating | 1.38 | 1.04 | 1.08 | 1.16 |
 
 - **MP5 has the most value in all cases.** Its value increases with the fight length.
 - **Intellect** gives mana and critical chance. In a short fight, the critical chance has more value.
