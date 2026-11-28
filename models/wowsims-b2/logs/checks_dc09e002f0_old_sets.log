@@ -1,0 +1,42 @@
+### P | FEEDBACK_DUR=180 RF_ALL=1.90 PROPOSE=
+TMI avg=40.99 std=5.39
+RESULT dur=180 propose="" tps=1450.7 dps=587.1 dtps=294.4 swings=80.4 hit=3.8% miss=10.3% dodge=18.3% parry=13.3% block=42.9% crit=1.2% crush=10.2%
+### P | FEEDBACK_DUR=180 RF_ALL=1.90 PROPOSE=CP1
+TMI avg=33.37 std=3.27
+RESULT dur=180 propose="CP1" tps=1503.6 dps=606.5 dtps=263.6 swings=80.6 hit=2.0% miss=10.3% dodge=18.3% parry=13.2% block=55.0% crit=0.1% crush=1.1%
+### P | FEEDBACK_DUR=180 RF_ALL=1.90 PROPOSE=C25
+TMI avg=40.99 std=5.39
+RESULT dur=180 propose="C25" tps=2066.0 dps=587.1 dtps=294.4 swings=80.4 hit=3.8% miss=10.3% dodge=18.3% parry=13.3% block=42.9% crit=1.2% crush=10.2%
+### P | FEEDBACK_DUR=180 RF_ALL=1.90 PROPOSE=CP1,C25
+TMI avg=33.37 std=3.27
+RESULT dur=180 propose="CP1,C25" tps=2141.7 dps=606.5 dtps=263.6 swings=80.6 hit=2.0% miss=10.3% dodge=18.3% parry=13.2% block=55.0% crit=0.1% crush=1.1%
+### P | FEEDBACK_DUR=180 RF_ALL=1.80 PROPOSE=C25
+TMI avg=40.99 std=5.39
+RESULT dur=180 propose="C25" tps=1958.1 dps=587.1 dtps=294.4 swings=80.4 hit=3.8% miss=10.3% dodge=18.3% parry=13.3% block=42.9% crit=1.2% crush=10.2%
+### W | FEEDBACK_DUR=180
+TMI avg=32
+RESULT dur=180 propose="" tps=1840.9 dps=575.9 dtps=312.7 swings=80.9 hit=2.8% miss=8.3% dodge=17.7% parry=11.2% block=58.6% crit=0.3% crush=1.1%
+### D | FEEDBACK_DUR=180
+RESULT druid dur=180 tps=2629.9 dtps=339.8 tmi=26.29 crush=15.0%
+### P_surv | FEEDBACK_DUR=180 PROPOSE=
+TMI avg=28.06 std=3.35
+RESULT dur=180 propose="" tps=1286.4 dps=517.4 dtps=222.9 swings=80.0 hit=1.7% miss=12.6% dodge=19.5% parry=15.4% block=44.0% crit=0.0% crush=6.8%
+### P_surv | FEEDBACK_DUR=180 PROPOSE=CP1
+TMI avg=24.85 std=2.60
+RESULT dur=180 propose="CP1" tps=1312.6 dps=527.1 dtps=207.8 swings=80.1 hit=1.6% miss=12.5% dodge=19.6% parry=15.5% block=49.9% crit=0.0% crush=0.9%
+### W_surv | FEEDBACK_DUR=180
+TMI avg=25
+RESULT dur=180 propose="" tps=1530.4 dps=475.1 dtps=251.4 swings=80.7 hit=2.0% miss=9.5% dodge=24.5% parry=12.3% block=50.4% crit=0.2% crush=1.0%
+### D_surv | FEEDBACK_DUR=180
+RESULT druid dur=180 tps=2386.3 dtps=284.9 tmi=20.71 crush=15.1%
+### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=full PROPOSE=
+RESULT dur=120 buffs=full propose="" dps=915.4 tto=446.6 oom=0.0
+### R | FEEDBACK_DUR=180 FEEDBACK_BUFFS=full PROPOSE=
+RESULT dur=180 buffs=full propose="" dps=922.2 tto=876.6 oom=0.0
+### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=full PROPOSE=
+RESULT dur=300 buffs=full propose="" dps=928.3 tto=1016.6 oom=0.0
+### R | FEEDBACK_DUR=120 FEEDBACK_BUFFS=lean PROPOSE=
+RESULT dur=120 buffs=lean propose="" dps=691.9 tto=297.0 oom=0.0
+### R | FEEDBACK_DUR=300 FEEDBACK_BUFFS=lean PROPOSE=
+RESULT dur=300 buffs=lean propose="" dps=696.5 tto=299.4 oom=6.0
+DONE

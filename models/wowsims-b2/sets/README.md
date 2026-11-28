@@ -1,24 +1,24 @@
-# wowsims links of the tank and builds sets (19 November 2026)
+# wowsims links of the tank and builds sets (28 November 2026)
 
 The `sets/` pages at the root of the repository open these sets in wowsims Forever: https://ralgathor.github.io/forever-paladin-feedback/sets/
 
-| Page | Sim | Check on commit ad6b13af8 |
+| Page | Sim | Check on commit dc09e002f0 |
 | --- | --- | --- |
-| tank-pool-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_prot.json | 1,439.3 threat per sec |
-| tank-pool-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_war.json | 1,931.5 threat per sec |
-| tank-pool-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_bear.json | 2,674.3 threat per sec |
-| tank-surv-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_prot_surv.json | 1,246.9 threat per sec |
-| tank-surv-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_war_surv.json | 1,600.5 threat per sec |
-| tank-surv-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_bear_surv.json | 2,405.7 threat per sec |
-| tank-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180` | 1,051.9 threat per sec |
-| tank-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180` | 1,730.6 threat per sec |
-| tank-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180` | 2,679.7 threat per sec |
-| build-retribution.html | feedback_run_test.go, `FEEDBACK_DUR=180 FEEDBACK_BUFFS=full`, `FEEDBACK_ITEMS` of ../matched_gear/set_Retribution.json | 919.0 DPS (RB1) |
-| build-shockadin.html | feedback_run_test.go, `FEEDBACK_DUR=180 FEEDBACK_BUFFS=full FEEDBACK_SHOCK=1`, `FEEDBACK_ITEMS` of ../tank_gear/set_shock.json | 817.6 DPS (SB1) |
+| tank-pool-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_prot.json | 1,469.9 threat per sec |
+| tank-pool-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_war.json | 1,952.5 threat per sec |
+| tank-pool-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_bear.json | 2,699.3 threat per sec |
+| tank-surv-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_prot_surv.json | 1,290.1 threat per sec |
+| tank-surv-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_war_surv.json | 1,596.8 threat per sec |
+| tank-surv-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180`, `FEEDBACK_ITEMS` of ../tank_gear/set_bear_surv.json | 2,489.8 threat per sec |
+| tank-protection-paladin.html | feedback_prot_test.go, `FEEDBACK_DUR=180` | 1,052.6 threat per sec |
+| tank-protection-warrior.html | feedback_warrior_test.go, `FEEDBACK_DUR=180` | 1,881.2 threat per sec |
+| tank-bear-druid.html | feedback_bear_test.go, `FEEDBACK_DUR=180` | 2,668.6 threat per sec |
+| build-retribution.html | feedback_run_test.go, `FEEDBACK_DUR=180 FEEDBACK_BUFFS=full`, `FEEDBACK_ITEMS` of ../matched_gear/set_Retribution.json | 941.8 DPS (RB1) |
+| build-shockadin.html | feedback_run_test.go, `FEEDBACK_DUR=180 FEEDBACK_BUFFS=full FEEDBACK_SHOCK=1 FEEDBACK_TALENTS=05025210221021--0523330110130033`, `FEEDBACK_ITEMS` of ../tank_gear/set_shock.json | 853.7 DPS (SB1) |
 
 Steps:
 
-1. Set up wowsims as in `../run.sh`, on master commit ad6b13af8 (Go 1.27) with `../patches/talents-9a8624af9.patch` (see `../tank_gear/run_pool.sh`). On this commit, the patch applies only with `patch -p1 --fuzz=3`. Since this commit, wowsims makes the judgements ranged attacks itself: do not apply `../patches/judgement-ranged.patch`.
+1. Set up wowsims as in `../run.sh`, on master commit dc09e002f0 (Go 1.27) with `../patches/talents-9a8624af9.patch` (see `../tank_gear/run_pool.sh`). On this commit, the patch applies only with `patch -p1 --fuzz=3`. Since this commit, wowsims makes the judgements ranged attacks itself: do not apply `../patches/judgement-ranged.patch`.
 2. Run each test of the table with `FEEDBACK_DUMP=<dir>/<file>.json` and no `PROPOSE` flag. For the item pool sets, also set `FEEDBACK_ITEMS`. The file names are in `jobs.json`.
 3. Copy `zzsets_main.go` to `cmd/zzsets/main.go` and run `go run -tags with_db ./cmd/zzsets <dir> jobs.json`. It prints the links. It also decodes each link and runs it again: the values of the table come from these runs.
 
@@ -41,5 +41,7 @@ On the evening of 18 November 2026, the six item pool tank links and the Retribu
 On 19 November 2026, the two Paladin item pool tank links come again from commit ad6b13af8 with the same steps. The Paladin sets now have Crusader on the weapon (not Revelation) and Libram of Invocation (not Libram of Holy Alacrity). The other links do not change.
 
 Later on 19 November 2026, the Paladin survival link comes again from commit ad6b13af8 with the same steps. The Paladin survival set now has the 5 pieces of Deathbone Guardian (`../tank_gear/search_sets.py`). The other links do not change.
+
+On 28 November 2026, all links come again from master commit dc09e002f0 (27 November) with the same steps. The searches of 28 November changed all six item pool tank sets, their enchants and the Retribution and Shockadin sets (`../tank_gear/README.md`, `../matched_gear/README.md`). The sets now have pieces of the crafted class sets of Forever, for example Justice Battleplate. The tank links have the full consumables with one elixir for each group. wowsims has no `prebis` Warrior set on this commit: the default Warrior link now has `prebis_balanced`, the wowsims default set (`../go/feedback_warrior_test.go`). On this commit, the wowsims Holy Shock talents of the test are not SB1. Thus, the Shockadin link now sets the SB1 talents (`FEEDBACK_TALENTS`).
 
 The links have the live talents and no proposal. Since commit 9a8624af9, wowsims gives the Warrior and the Druid the threat multipliers of the hotfixes of 4 November (Defensive Stance +80%, Defiance 20%, Bear Form +115%). The Paladin default set link has the tank consumables of `feedbackConsumables` (`../go/feedback_prot_test.go`).

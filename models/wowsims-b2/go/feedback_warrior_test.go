@@ -23,9 +23,16 @@ func TestFeedbackRun(t *testing.T) {
 	if v := os.Getenv("FEEDBACK_TALENTS"); v != "" {
 		talents = v
 	}
+	// 28 November 2026: wowsims dc09e002f0 has no "prebis" file (now prebis_balanced and prebis_offensive). Without
+	// FEEDBACK_ITEMS, the test takes the wowsims default set (prebis_balanced). With FEEDBACK_ITEMS, the old file name
+	// stays: the item pool runs then keep no item data of a default set (the same results as before).
+	gear := "prebis"
+	if os.Getenv("FEEDBACK_ITEMS") == "" {
+		gear = "prebis_balanced"
+	}
 	player := &proto.Player{
 		Name: "Prot", Race: proto.Race_RaceHuman, Class: proto.Class_ClassWarrior,
-		Equipment:     feedbackItems(core.GetGearSet("../../../ui/specs/warrior/protection/gear_sets", "prebis").GearSet),
+		Equipment:     feedbackItems(core.GetGearSet("../../../ui/specs/warrior/protection/gear_sets", gear).GearSet),
 		Consumables:   feedbackConsumes(),
 		TalentsString: talents,
 		Spec:          DefaultOptions,
