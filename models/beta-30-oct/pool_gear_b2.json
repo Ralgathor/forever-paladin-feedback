@@ -328,14 +328,25 @@
    },
    {
     "slot": "Main hand",
-    "item": "Hammer of the Grand Crusader",
-    "id": 18717,
+    "item": "Gift of the Elven Magi",
+    "id": 13360,
     "stats": {
-     "3": 26,
+     "3": 10,
      "4": 135,
-     "13": 17
+     "13": 7
     },
     "enchant": "Enchant Weapon - Insight"
+   },
+   {
+    "slot": "Off hand",
+    "item": "Penelope's Rose",
+    "id": 15805,
+    "stats": {
+     "3": 11,
+     "4": 22,
+     "13": 10
+    },
+    "enchant": "Enchant Off-Hand - Wisdom"
    },
    {
     "slot": "Relic",
@@ -346,14 +357,14 @@
    }
   ],
   "totals": {
-   "hp": 484,
-   "intel": 346.06000000000006,
-   "spi": 896.329665,
-   "crit": 0.1457729549248748,
+   "hp": 506,
+   "intel": 347.2700000000001,
+   "spi": 905.49459,
+   "crit": 0.14597495826377296,
    "mp5": 86,
-   "gear_hp": 454,
-   "gear_int": 139,
-   "gear_spi": 278,
+   "gear_hp": 476,
+   "gear_int": 140,
+   "gear_spi": 283,
    "gear_crit": 0,
    "gear_mp5": 6,
    "set_n": 1
@@ -509,14 +520,25 @@
    },
    {
     "slot": "Main hand",
-    "item": "Glowing Brightwood Staff",
-    "id": 812,
+    "item": "Gift of the Elven Magi",
+    "id": 13360,
     "stats": {
-     "3": 29,
-     "4": 150,
-     "13": 9
+     "3": 10,
+     "4": 135,
+     "13": 7
     },
     "enchant": "Enchant Weapon - Insight"
+   },
+   {
+    "slot": "Off hand",
+    "item": "Penelope's Rose",
+    "id": 15805,
+    "stats": {
+     "3": 11,
+     "4": 22,
+     "13": 10
+    },
+    "enchant": "Enchant Off-Hand - Wisdom"
    },
    {
     "slot": "Relic",
@@ -530,14 +552,14 @@
    }
   ],
   "totals": {
-   "hp": 599,
-   "intel": 371.4700000000001,
-   "spi": 681.582,
-   "crit": 0.16043193277310924,
+   "hp": 606,
+   "intel": 369.05,
+   "spi": 701.316,
+   "crit": 0.16002521008403361,
    "mp5": 82,
-   "gear_hp": 569,
-   "gear_int": 140,
-   "gear_spi": 223,
+   "gear_hp": 576,
+   "gear_int": 138,
+   "gear_spi": 236,
    "gear_crit": 14,
    "gear_mp5": 2,
    "set_n": 0
@@ -597,16 +619,16 @@
      "4": 33,
      "13": 30
     },
-    "enchant": "Enchant Chest - Major Intellect"
+    "enchant": "Enchant Chest - Greater Stats"
    },
    {
     "slot": "Wrist",
-    "item": "Loomguard Armbraces",
-    "id": 13969,
+    "item": "Bleak Howler Armguards",
+    "id": 13208,
     "stats": {
-     "3": 7,
-     "4": 29,
-     "31": 3
+     "3": 9,
+     "4": 15,
+     "13": 14
     },
     "enchant": "Enchant Bracer - Greater Spellpower"
    },
@@ -666,11 +688,11 @@
    },
    {
     "slot": "Finger 2",
-    "item": "Rosewine Circle",
-    "id": 13178,
+    "item": "Ring of Nature's Cycles",
+    "id": 275740,
     "stats": {
-     "4": 24,
-     "31": 6
+     "4": 20,
+     "13": 14
     },
     "enchant": null
    },
@@ -694,27 +716,38 @@
    },
    {
     "slot": "Main hand",
-    "item": "Glowing Brightwood Staff",
-    "id": 812,
+    "item": "Gift of the Elven Magi",
+    "id": 13360,
     "stats": {
-     "3": 29,
-     "4": 150,
-     "13": 9
+     "3": 10,
+     "4": 135,
+     "13": 7
     },
-    "enchant": "Enchant 2H Weapon - Mighty Healing Power"
+    "enchant": "Enchant Weapon - Insight"
+   },
+   {
+    "slot": "Off hand",
+    "item": "Penelope's Rose",
+    "id": 15805,
+    "stats": {
+     "3": 11,
+     "4": 22,
+     "13": 10
+    },
+    "enchant": "Enchant Off-Hand - Wisdom"
    }
   ],
   "totals": {
-   "hp": 759,
-   "intel": 384.78000000000003,
-   "spi": 430.1,
-   "crit": 0.21799662162162162,
-   "mp5": 99,
-   "gear_hp": 729,
-   "gear_int": 164,
-   "gear_spi": 159,
+   "hp": 648,
+   "intel": 377.5200000000001,
+   "spi": 584.4300000000001,
+   "crit": 0.2167702702702703,
+   "mp5": 90,
+   "gear_hp": 618,
+   "gear_int": 158,
+   "gear_spi": 204,
    "gear_crit": 0,
-   "gear_mp5": 19,
+   "gear_mp5": 10,
    "set_n": 0
   }
  }

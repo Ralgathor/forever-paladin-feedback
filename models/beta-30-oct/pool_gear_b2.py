@@ -26,7 +26,8 @@ Totals (game files, wowsims Forever; buffs and consumables of the DoubleZug prof
   Shaman 59.2) + gear rating / 14 + 3% aura + talents as in the model (Priest 5%, Druid 4%, Shaman 10%; Paladin:
   Conviction 6% in the model).
 No racial. 
-Set choice: a search slot by slot (all candidates of a slot, then the next slot, until no change) on the model value:
+Set choice: a search slot by slot (all candidates of a slot, then the next slot, until no change), and the pairs of
+a one-hand weapon and an off hand (the 8 best of each), on the model value:
 the mean of raid and one tank healing after overhealing in a 5 min fight. Paladin: live talents, critical heal 175%.
 """
 import json, os, sys
@@ -196,15 +197,34 @@ def build(c):
             bg, be, bv = cur_g, cur_e, best
             for it in cands:
                 gear[s] = it
-                if s == 14 and it is not None and it.get("handType") == 4: off, gear[15] = gear[15], None
+                if s == 14 and it is not None and it.get("handType") == 4: off, offe, gear[15], ench[15] = gear[15], ench[15], None, None
                 for e in ench_for(s, it):
                     ench[s] = e
                     v = val()
                     if v > bv + 1e-6: bg, be, bv = it, e, v
-                if s == 14 and it is not None and it.get("handType") == 4: gear[15] = off
+                if s == 14 and it is not None and it.get("handType") == 4: gear[15], ench[15] = off, offe
             gear[s], ench[s] = bg, be
             if s == 14 and bg is not None and bg.get("handType") == 4: gear[15] = None; ench[15] = None
             if bv > best + 1e-6: best = bv; changed = True
+        # Weapons: a slot search cannot leave a two-hand weapon for a one-hand weapon and an off hand (two slots).
+        # Thus also try the pairs: the 8 best one-hand weapons (with their best enchant) and the 8 best off hands.
+        def wv(mh, me, oh, oe):
+            g0, e0 = gear[14:16], ench[14:16]
+            gear[14:16], ench[14:16] = [mh, oh], [me, oe]
+            v = val(); gear[14:16], ench[14:16] = g0, e0
+            return v
+        used = {x["id"] for i, x in enumerate(gear) if x is not None and i not in (14, 15)}
+        mhs = [it for it in pl[14] if it.get("handType") in (1, 2) and it["id"] not in used]
+        mh_r = sorted(((max(wv(x, e, None, None) for e in ench_for(14, x)), x) for x in mhs), key=lambda z: -z[0])[:8]
+        oh_r = sorted(((max(wv(None, None, y, e) for e in ench_for(15, y)), y) for y in pl[15] if y["id"] not in used),
+                      key=lambda z: -z[0])[:8]
+        for _, x in mh_r:
+            for e in ench_for(14, x):
+                for _, y in oh_r:
+                    for f in ench_for(15, y):
+                        v = wv(x, e, y, f)
+                        if v > best + 1e-6:
+                            best = v; gear[14:16], ench[14:16] = [x, y], [e, f]; changed = True
         if not changed: break
     return gear, ench, best
 

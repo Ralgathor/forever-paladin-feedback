@@ -82,7 +82,7 @@ The Druid values use the development notes of 2 November 2026 (Bloom, Genesis 10
 | 225% | Raid, against the Druid | −36% / −33% / −35% | −9% / +1% / +2% | −5% / +7% / +8% |
 | 225% | Raid, against the Shaman | −9% / −8% / −10% | +31% / +38% / +43% | +36% / +45% / +51% |
 
-- **Raids.** With both Holy proposals (175%), the Paladin is 7–8% below the Druid in fights of 5 and 10 min. In fights of 3 min, it is 18% below. It stays 11–12% below the Priest. In sets from the level 60 item pool, the Druid has much more Spirit. The Paladin is then 36–41% below the Druid (Analysis, Healing, part 10).
+- **Raids.** With both Holy proposals (175%), the Paladin is 7–8% below the Druid in fights of 5 and 10 min. In fights of 3 min, it is 18% below. It stays 11–12% below the Priest. In sets from the level 60 item pool, the Druid has much more Spirit. The Paladin is then 36–42% below the Druid (Analysis, Healing, part 10).
 - **Party heal 60%.** The value comes from the 175% hypothesis (decision of 3 November). At 35%, the Paladin is 21–28% below the Druid. At 70%, it is equal to the Druid in fights of 5 and 10 min (−3% / −1%). If the Holy Power test gives 225%, decrease the party heal to 35%: the Paladin is then 9% below the Druid in fights of 5 and 10 min.
 - **One tank.** No change. The party heal goes to 5 players, thus the tank receives only a small part. The one-tank values come from Reverence 50% (C-H1) only. At 175%, the Druid stays first on one tank (W14). Oath of Light (C-H8) gives the first place to the Paladin.
 - **Cast plan.** About 51 Holy Shocks with Light's Vigil in 5 min (one each 6 sec). Flash of Light stays the main heal.
