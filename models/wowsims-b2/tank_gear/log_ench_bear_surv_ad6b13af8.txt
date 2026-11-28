@@ -1,0 +1,31 @@
+START [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] {"dur": 180.0, "tps": 2403.6, "dtps": 303.2, "tmi": 23.26, "crush": 15.0, "dps": 1.0}
+SLOT 0 Feralheart Faceguard 2545:1.0043 1507:1.004 1508:1.0033 1506:1.0025 2543:1.0007
+  -> none => Arcanum of Protection
+SLOT 1 Horn of Ve'han 904:1.0066 925:1.0059 856:1.0057 0:1.0043
+  -> none => Enchant Boots - Agility
+SLOT 3 Cloak of Warding 1889:1.0151 7667:1.0104 247:1.0078 849:1.0078 0:1.0066
+  -> none => Enchant Cloak - Superior Defense
+SLOT 4 Feralheart Armor 8719:1.023 8490:1.0209 8491:1.0206 1891:1.0202 8487:1.02
+  -> none => Wild Leather Armor Kit
+SLOT 5 Warden's Leather Bracers 8214:1.0321 923:1.03 1886:1.028 929:1.0273 7656:1.0272
+  -> none => Enchant Bracer - Superior Deflection
+SLOT 6 Feralheart Grips 8719:1.042 8490:1.0393 8206:1.0391 8491:1.0381 8487:1.0377
+  -> none => Wild Leather Armor Kit
+SLOT 8 Warstrife Leggings 8719:1.0522 2545:1.0492 8490:1.0489 8491:1.0479 8487:1.0478
+  -> none => Wild Leather Armor Kit
+SLOT 9 Feralheart Treads 8719:1.0623 8490:1.0582 8487:1.0574 8491:1.0573 8488:1.0566
+  -> none => Wild Leather Armor Kit
+SLOT 14 Unyielding Maul 2646:1.0772 1900:1.0753 8721:1.0708 1896:1.0693 2618:1.0675
+  -> none => Enchant 2H Weapon - Agility
+SLOT 0 Feralheart Faceguard 2545:1.0772 1507:1.075 2543:1.0745 1508:1.0743 1506:1.073
+SLOT 1 Horn of Ve'han 904:1.0772 925:1.0763 856:1.0737 0:1.0723
+SLOT 3 Cloak of Warding 1889:1.0772 7667:1.0726 247:1.0713 849:1.0713 0:1.0707
+SLOT 4 Feralheart Armor 8719:1.0772 8491:1.0742 8490:1.0742 8488:1.0735 8487:1.0732
+SLOT 5 Warden's Leather Bracers 8214:1.0772 923:1.0748 1886:1.0729 929:1.0716 7656:1.0703
+SLOT 6 Feralheart Grips 8719:1.0772 8491:1.0742 8490:1.0742 8488:1.0735 8206:1.0735
+SLOT 8 Warstrife Leggings 8719:1.0772 8491:1.0742 8490:1.0742 8488:1.0735 8487:1.0732
+SLOT 9 Feralheart Treads 8719:1.0772 8491:1.0742 8490:1.0742 8488:1.0735 8487:1.0732
+SLOT 14 Unyielding Maul 2646:1.0772 1900:1.0753 8721:1.0708 1896:1.0693 2618:1.0675
+FINAL start [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] {"dur": 180.0, "tps": 2403.6, "dtps": 303.2, "tmi": 23.26, "crush": 15.0, "dps": 1.0}
+FINAL new [2545, 904, 0, 1889, 8719, 8214, 8719, 0, 8719, 8719, 0, 0, 0, 0, 2646, 0, 0] {"dur": 180.0, "tps": 2405.7, "dtps": 276.2, "tmi": 20.08, "crush": 15.1, "dps": 1.0} score 1.0772
+ENCHANTS 0:Arcanum of Protection | 1:Enchant Boots - Agility | 3:Enchant Cloak - Superior Defense | 4:Wild Leather Armor Kit | 5:Enchant Bracer - Superior Deflection | 6:Wild Leather Armor Kit | 8:Wild Leather Armor Kit | 9:Wild Leather Armor Kit | 14:Enchant 2H Weapon - Agility

@@ -1,0 +1,101 @@
+# wowsims Forever master ad6b13af8 (hotfixes of 16 and 17 November), item pool sets of 18 November (search.py: FEEDBACK_ITEMS of matched_gear/set_Retribution.json and tank_gear/set_prot.json), 3 min, 3,000 iterations. Protection: tank consumables (feedbackConsumables). Enchants of 18 November: the same enchant rules for all specs (no raid source, no Revered or Exalted reputation source, phase 1 only; tank_gear/search_enchants.py, matched_gear/search_enchants_dps.py). The runs without enchants: logs/finals_no_enchants.log. 19 November 2026: the Paladin tank sets take Crusader in place of Revelation (no Protection ability procs Revelation in game) and Libram of Invocation in place of Libram of Holy Alacrity (no effect for Protection). The runs before: logs/finals_revelation.log.
+BUILD ret raid beta 050250002-501-05233011201301351 {'dps': 919.0, 'oom': 0.0}
+BUILD ret raid beta 050150001-503-15233011101301351 {'dps': 919.5, 'oom': 0.0}
+BUILD ret raid prop 050250002-501-05233011201301351 {'dps': 918.9, 'oom': 0.0}
+BUILD ret raid prop 050150002-502-05233011201301351 {'dps': 920.8, 'oom': 0.0}
+BUILD ret fresh beta 050250002-501-05233011201301351 {'dps': 310.9, 'oom': 90.5}
+BUILD ret fresh beta 050150001-503-15233011101301351 {'dps': 313.5, 'oom': 88.5}
+BUILD ret fresh prop 050250002-501-05233011201301351 {'dps': 323.1, 'oom': 81.2}
+BUILD ret fresh prop 050050002-503-15233011101301351 {'dps': 312.0, 'oom': 86.4}
+BUILD prot raid beta 050050002-05302102213301531-502 {'dps': 492.4, 'tps': 1213.7, 'dtps': 282.3, 'tmi': 39.07, 'crush': 10.1, 'std': 5.07}
+BUILD prot raid beta 05005-05302102213201531-5023 {'dps': 508.8, 'tps': 1248.0, 'dtps': 285.3, 'tmi': 39.45, 'crush': 10.3, 'std': 5.11}
+BUILD prot raid beta -05302102313501531-52233000001 {'dps': 495.8, 'tps': 1226.1, 'dtps': 275.1, 'tmi': 38.19, 'crush': 10.2, 'std': 4.84}
+BUILD prot raid prop -3530110213501531-54233 {'dps': 504.1, 'tps': 1243.5, 'dtps': 253.2, 'tmi': 32.31, 'crush': 1.0, 'std': 3.1}
+BUILD prot raid prop -3530110213501531-53233000001 {'dps': 512.0, 'tps': 1269.7, 'dtps': 253.2, 'tmi': 32.31, 'crush': 1.0, 'std': 3.1}
+WEIGHTS ret raid beta 050250002-501-05233011201301351 base={'dps': 919.0, 'oom': 0.0}
+  Strength: dps=+0.475 oom=0.0
+  Agility: dps=+0.370 oom=0.0
+  Intellect: dps=+0.285 oom=0.0
+  Spell damage: dps=+0.380 oom=0.0
+  Attack power: dps=+0.197 oom=0.0
+  Hit rating: dps=+0.190 oom=0.0
+  Crit rating: dps=+0.520 oom=0.0
+  Haste rating: dps=+0.420 oom=0.0
+  Expertise rating: dps=+1.100 oom=0.0
+WEIGHTS ret raid prop 050250002-501-05233011201301351 base={'dps': 918.9, 'oom': 0.0}
+  Strength: dps=+0.475 oom=0.0
+  Agility: dps=+0.375 oom=0.0
+  Intellect: dps=+0.285 oom=0.0
+  Spell damage: dps=+0.380 oom=0.0
+  Attack power: dps=+0.197 oom=0.0
+  Hit rating: dps=+0.200 oom=0.0
+  Crit rating: dps=+0.520 oom=0.0
+  Haste rating: dps=+0.440 oom=0.0
+  Expertise rating: dps=+1.110 oom=0.0
+WEIGHTS ret fresh beta 050250002-501-05233011201301351 base={'dps': 310.9, 'oom': 90.5}
+  Strength: dps=+0.210 oom=90.5
+  Agility: dps=+0.140 oom=90.5
+  Intellect: dps=+0.415 oom=81.8
+  Spell damage: dps=+0.173 oom=90.5
+  Attack power: dps=+0.095 oom=90.5
+  Hit rating: dps=+0.010 oom=90.6
+  Crit rating: dps=+0.210 oom=90.5
+  Haste rating: dps=-0.130 oom=94.2
+  Expertise rating: dps=+0.370 oom=89.9
+WEIGHTS prot raid beta 050050002-05302102213301531-502 base={'dps': 492.4, 'tps': 1213.7, 'dtps': 282.3, 'tmi': 39.07}
+  Strength: dps=+0.210 tps=+0.340 dtps=-0.015 tmi=-0.002
+  Agility: dps=+0.135 tps=+0.255 dtps=-0.310 tmi=-0.025
+  Stamina: dps=+0.000 tps=+0.000 dtps=+0.005 tmi=-0.082
+  Intellect: dps=+0.005 tps=-0.005 dtps=+0.000 tmi=-0.000
+  Spell damage: dps=+0.310 tps=+0.820 dtps=-0.015 tmi=-0.003
+  Attack power: dps=+0.087 tps=+0.143 dtps=+0.000 tmi=+0.000
+  Hit rating: dps=+0.430 tps=+1.060 dtps=+0.050 tmi=+0.013
+  Crit rating: dps=+0.240 tps=+0.520 dtps=+0.000 tmi=-0.002
+  Expertise rating: dps=+0.730 tps=+1.620 dtps=-0.210 tmi=-0.025
+  Defense rating: dps=-0.070 tps=-0.180 dtps=-0.710 tmi=-0.085
+  Block rating: dps=+0.160 tps=+0.430 dtps=-0.020 tmi=+0.010
+  Block value: dps=+0.000 tps=+0.000 dtps=-0.240 tmi=-0.029
+  Dodge rating: dps=-0.050 tps=-0.150 dtps=-0.340 tmi=-0.013
+  Parry rating: dps=-0.030 tps=-0.080 dtps=-0.290 tmi=-0.017
+  Armor: dps=+0.000 tps=+0.000 dtps=-0.021 tmi=-0.004
+WEIGHTS prot raid beta -05302102313501531-52233000001 base={'dps': 495.8, 'tps': 1226.1, 'dtps': 275.1, 'tmi': 38.19}
+  Strength: dps=+0.210 tps=+0.355 dtps=-0.010 tmi=-0.002
+  Agility: dps=+0.110 tps=+0.235 dtps=-0.315 tmi=-0.032
+  Stamina: dps=-0.005 tps=-0.005 dtps=+0.000 tmi=-0.079
+  Intellect: dps=+0.005 tps=-0.005 dtps=+0.005 tmi=+0.001
+  Spell damage: dps=+0.302 tps=+0.810 dtps=-0.015 tmi=-0.002
+  Attack power: dps=+0.095 tps=+0.160 dtps=+0.000 tmi=+0.000
+  Hit rating: dps=+0.430 tps=+1.100 dtps=+0.040 tmi=-0.006
+  Crit rating: dps=+0.230 tps=+0.510 dtps=+0.000 tmi=-0.001
+  Expertise rating: dps=+0.800 tps=+1.850 dtps=-0.070 tmi=-0.018
+  Defense rating: dps=-0.100 tps=-0.210 dtps=-0.710 tmi=-0.099
+  Block rating: dps=+0.210 tps=+0.540 dtps=-0.140 tmi=-0.043
+  Block value: dps=+0.000 tps=+0.000 dtps=-0.240 tmi=-0.029
+  Dodge rating: dps=-0.050 tps=-0.120 dtps=-0.390 tmi=-0.038
+  Parry rating: dps=-0.010 tps=-0.020 dtps=-0.270 tmi=-0.026
+  Armor: dps=+0.000 tps=-0.000 dtps=-0.021 tmi=-0.004
+WEIGHTS prot raid prop -3530110213501531-54233 base={'dps': 504.1, 'tps': 1243.5, 'dtps': 253.2, 'tmi': 32.31}
+  Strength: dps=+0.205 tps=+0.335 dtps=-0.020 tmi=-0.003
+  Agility: dps=+0.070 tps=+0.085 dtps=-0.315 tmi=-0.029
+  Stamina: dps=+0.000 tps=-0.005 dtps=+0.000 tmi=-0.064
+  Intellect: dps=+0.005 tps=-0.010 dtps=+0.000 tmi=+0.000
+  Spell damage: dps=+0.300 tps=+0.802 dtps=-0.015 tmi=-0.002
+  Attack power: dps=+0.092 tps=+0.152 dtps=+0.000 tmi=+0.000
+  Hit rating: dps=+0.390 tps=+0.960 dtps=-0.020 tmi=+0.001
+  Crit rating: dps=+0.230 tps=+0.490 dtps=-0.010 tmi=-0.001
+  Expertise rating: dps=+0.660 tps=+1.520 dtps=-0.160 tmi=-0.029
+  Defense rating: dps=-0.190 tps=-0.510 dtps=-0.550 tmi=-0.048
+  Block rating: dps=+0.000 tps=-0.010 dtps=-0.020 tmi=-0.001
+  Block value: dps=+0.000 tps=+0.000 dtps=-0.300 tmi=-0.045
+  Dodge rating: dps=-0.120 tps=-0.340 dtps=-0.360 tmi=-0.027
+  Parry rating: dps=-0.070 tps=-0.210 dtps=-0.270 tmi=-0.018
+  Armor: dps=+0.000 tps=+0.000 dtps=-0.019 tmi=-0.003
+BUILD ret raid prop-C1 050250002-501-05233011201301351 {'dps': 967.6, 'oom': 0.0}
+BUILD ret raid prop -50322130101000002-05233001211301351 {'dps': 853.4, 'oom': 2.7}
+BUILD ret raid prop-C1 -50322130101000002-05233001211301351 {'dps': 896.8, 'oom': 2.1}
+BUILD ret raid prop -50322130101005002-052330012213013 {'dps': 717.9, 'oom': 0.0}
+BUILD ret raid prop 050250002-5-05233301101301351 {'dps': 907.6, 'oom': 0.0}
+BUILD ret raid prop-C1 050250002-5-05233301101301351 {'dps': 954.0, 'oom': 0.0}
+BUILD prot raid prop 05005-3530110213201531-5023 {'dps': 530.2, 'tps': 1305.7, 'dtps': 257.7, 'tmi': 32.61, 'crush': 1.1, 'std': 3.18}
+BUILD prot raid prop -3530110213501531-45233 {'dps': 505.3, 'tps': 1246.0, 'dtps': 257.6, 'tmi': 32.65, 'crush': 1.1, 'std': 3.1}
+BUILD prot raid beta -25301102513501531-05233 {'dps': 490.6, 'tps': 1207.3, 'dtps': 293.1, 'tmi': 38.92, 'crush': 10.2, 'std': 4.56}

@@ -306,9 +306,11 @@ var feedbackFullConsumes = &proto.ConsumesSpec{
 	MhImbueId:      20749,  // Brilliant Wizard Oil
 	ExplosiveId:    260817, // EZ-Thro Dark Bomb
 	ConjuredId:     9421,   // Major Healthstone
-	// Elixir of Ferocity, Greater Arcane Elixir, Elixir of the Mongoose, Elixir of Greater Defense, Elixir of the Phalanx, Elixir of Holy Power
-	ElixirIds: []int32{250350, 13454, 13452, 13445, 250329, 21546, 9088}, // and Gift of Arthas (18 November 2026)
-	// Goblin Sapper Charge, Rumsey Rum, Juju Power, Juju Might, R.O.I.D.S., Dragonbreath Chili, Scrolls of Agility IV, Strength IV
-	// and Protection IV (the scrolls of the Druid test, 18 November 2026)
-	ExtraIds: []int32{10646, 17048, 12451, 12460, 8410, 12217, 10309, 10310, 10305},
+	// 28 November 2026 (wowsims dc09e002f0): one elixir for each group, and only the strongest amount of each stat counts.
+	// Elixir of Ferocity, Elixir of Greater Defense and the Scrolls of Agility IV, Strength IV and Protection IV give nothing
+	// next to Juju Power, R.O.I.D.S., the Mongoose and the Phalanx, thus they are removed (logs/consumables_dc09e002f0.log).
+	// Greater Arcane Elixir, Elixir of the Mongoose, Elixir of the Phalanx, Elixir of Holy Power and Gift of Arthas
+	ElixirIds: []int32{13454, 13452, 250329, 21546, 9088},
+	// Goblin Sapper Charge, Rumsey Rum, Juju Power, Juju Might, R.O.I.D.S. and Dragonbreath Chili
+	ExtraIds: []int32{10646, 17048, 12451, 12460, 8410, 12217},
 }

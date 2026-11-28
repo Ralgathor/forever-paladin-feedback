@@ -1,11 +1,15 @@
-REF {"tps": 1237.2152774370418, "dps": 517.0955876333519, "dtps": 284.7017644518894, "tmi": 42.87057941935972}
-BASE 1.0408 {"tps": 1282.8678798389014, "dps": 517.2943558233408, "dtps": 290.5319654189763, "tmi": 38.72646393625749}
+REF {"tps": 1284.9506197712437, "dps": 516.9197808487623, "dtps": 222.86556049855642, "tmi": 27.985920383047677}
+BASE 1.0 {"tps": 1284.9506197712437, "dps": 516.9197808487623, "dtps": 222.86556049855642, "tmi": 27.985920383047677}
 PASS 0
-SLOT 5 Vigorsteel Vambraces -> Warder's Wristguards 250583 50 [] 1.0408 -> 1.0448
-SLOT 9 Warder's Sabatons -> Soulforge Sabatons 226991 60 [] 1.0448 -> 1.0478
-SLOT 10 Naglering -> Initiate's Signet of Vigilance 275971 63 [] 1.0478 -> 1.0556
+SLOT 0 Enriched Thorium Helm -> Helm of Awareness 18313 58 [] 1.0 -> 1.0063
+SLOT 1 Horn of Ve'han -> Talisman of Evasion 13177 60 [] 1.0063 -> 1.0161
+SLOT 11 Myrmidon's Signet -> Naglering 11669 59 [] 1.0161 -> 1.0205
+SLOT 13 Ragged John's Neverending Cup -> Smotts' Compass 4130 50 [] 1.0205 -> 1.0229
+SLOT 15 Draconian Deflector -> Barrier Shield 18499 62 [] 1.0229 -> 1.0309
 PASS 1
-FINAL old {"tps": 1281.9802911259437, "dps": 517.0517249990185, "dtps": 290.5797744005088, "tmi": 38.648264118715325} 1.0412
-FINAL new {"tps": 1292.2075194030012, "dps": 521.990841077737, "dtps": 288.2389882655469, "tmi": 37.660260018155654} 1.0556
-SET [250597, 275736, 14552, 18511, 226992, 250583, 18383, 250573, 250596, 226991, 275971, 2246, 14557, 15873, 2243, 12602, 228175]
-SETNAMES Enriched Thorium Helm ; Horn of Ve'han ; Stockade Pauldrons ; Shifting Cloak ; Soulforge Chestguards ; Warder's Wristguards ; Force Imbued Gauntlets ; Warder's Waistguard ; Enriched Thorium Leggings ; Soulforge Sabatons ; Initiate's Signet of Vigilance ; Myrmidon's Signet ; The Lion Horn of Stormwind ; Ragged John's Neverending Cup ; Hand of Edward the Odd ; Draconian Deflector ; Libram of Holy Alacrity
+SLOT 11 Naglering -> Ezra's Seal of Authenticity 276396 59 [] 1.0309 -> 1.0338
+PASS 2
+FINAL old {"tps": 1286.4317815985505, "dps": 517.3618893407594, "dtps": 222.89529546083148, "tmi": 28.064666303064115} 0.9996
+FINAL new {"tps": 1246.55115568493, "dps": 502.51171195707667, "dtps": 197.53930280508538, "tmi": 27.616289496098034} 1.0305
+SET [18313, 13177, 14552, 18511, 14624, 250583, 14622, 14620, 14623, 14621, 275971, 276396, 14557, 4130, 2243, 18499, 249442]
+SETNAMES Helm of Awareness ; Talisman of Evasion ; Stockade Pauldrons ; Shifting Cloak ; Deathbone Chestplate ; Warder's Wristguards ; Deathbone Gauntlets ; Deathbone Girdle ; Deathbone Legguards ; Deathbone Sabatons ; Initiate's Signet of Vigilance ; Ezra's Seal of Authenticity ; The Lion Horn of Stormwind ; Smotts' Compass ; Hand of Edward the Odd ; Barrier Shield ; Libram of Invocation

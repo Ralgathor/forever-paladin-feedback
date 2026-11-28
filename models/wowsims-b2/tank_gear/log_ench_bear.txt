@@ -1,30 +1,32 @@
-START [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] {"dur": 180.0, "tps": 2606.1, "dtps": 352.0, "tmi": 28.91, "crush": 15.0, "dps": 1.0}
-SLOT 0 Feralheart Faceguard 1508:1.0031 1507:1.0025 1506:1.0024 2545:1.002 2543:1.0014
+START [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] {"dur": 180.0, "tps": 2613.3, "dtps": 347.4, "tmi": 27.52, "crush": 15.0, "dps": 1.0}
+SLOT 0 Feralheart Faceguard 1507:1.0033 1508:1.0031 2545:1.0026 1506:1.0025 2543:1.0008
   -> none => Lesser Arcane Amalgamation
-SLOT 1 Horn of Ve'han 856:1.0047 904:1.0047 925:1.0047 0:1.0031
-SLOT 3 Cloak of Warding 1889:1.0097 7667:1.0047 247:1.0039 849:1.0039 0:1.0031
+SLOT 1 Horn of Ve'han 904:1.005 856:1.0049 925:1.0043 0:1.0033
+SLOT 3 Cloak of Warding 1889:1.0095 7667:1.005 247:1.0041 849:1.0041 0:1.0033
   -> none => Enchant Cloak - Superior Defense
-SLOT 4 Feralheart Armor 8719:1.0161 8490:1.015 8491:1.015 1891:1.0141 8487:1.014
+SLOT 4 Feralheart Armor 8719:1.0159 8490:1.0155 8491:1.0153 8488:1.0144 8487:1.0143
   -> none => Wild Leather Armor Kit
-SLOT 5 Warden's Leather Bracers 8214:1.0219 923:1.0208 1886:1.0199 929:1.0193 7656:1.0193
+SLOT 5 Warden's Leather Bracers 8214:1.0222 923:1.0205 7656:1.0195 1886:1.0186 1885:1.0186
   -> none => Enchant Bracer - Superior Deflection
-SLOT 6 Feralheart Grips 8490:1.0285 8719:1.0285 8491:1.0276 8487:1.0269 8488:1.0264
+SLOT 6 Grovekeeper Gauntlets 8719:1.0291 8490:1.0284 8491:1.0281 8206:1.0273 8487:1.0272
+  -> none => Wild Leather Armor Kit
+SLOT 8 Grovekeeper Leggings 8490:1.0353 8719:1.0353 8491:1.0346 8487:1.0338 8488:1.0334
   -> none => Rugged Armor Kit
-SLOT 8 Warbear Woolies 8719:1.0348 8490:1.0347 8491:1.0342 8487:1.0337 8488:1.0333
+SLOT 9 Grovekeeper Treads 8719:1.0416 8490:1.0413 8491:1.0411 8487:1.0404 8488:1.0399
   -> none => Wild Leather Armor Kit
-SLOT 9 Feralheart Treads 8719:1.0414 8490:1.0412 8491:1.0406 8487:1.04 8488:1.0396
-  -> none => Wild Leather Armor Kit
-SLOT 14 Unyielding Maul 1900:1.0537 2646:1.053 1896:1.0481 8721:1.048 2563:1.0459
+SLOT 14 Unyielding Maul 1900:1.0542 2646:1.0529 8721:1.0488 1896:1.0484 2563:1.0462
   -> none => Enchant Weapon - Crusader
-SLOT 0 Feralheart Faceguard 1508:1.0537 2545:1.0532 1507:1.0523 2543:1.0523 1506:1.0519
-SLOT 1 Horn of Ve'han 856:1.0553 925:1.0552 904:1.0549 0:1.0537
-SLOT 3 Cloak of Warding 1889:1.0537 7667:1.0463 247:1.0457 849:1.0457 0:1.0451
-SLOT 4 Feralheart Armor 8719:1.0537 8490:1.0531 8491:1.052 8487:1.0516 8488:1.0508
-SLOT 5 Warden's Leather Bracers 8214:1.0537 923:1.0523 7656:1.0508 1886:1.0505 1887:1.0502
-SLOT 6 Feralheart Grips 8490:1.0537 8719:1.0534 8491:1.0527 8487:1.0524 8492:1.0514
-SLOT 8 Warbear Woolies 8719:1.0537 8490:1.0531 8491:1.052 8487:1.0516 8488:1.0508
-SLOT 9 Feralheart Treads 8719:1.0537 8490:1.0531 8491:1.052 8487:1.0516 8488:1.0508
-SLOT 14 Unyielding Maul 1900:1.0537 2646:1.053 1896:1.0481 8721:1.048 2563:1.0459
-FINAL start [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] {"dur": 180.0, "tps": 2606.1, "dtps": 352.0, "tmi": 28.91, "crush": 15.0, "dps": 1.0}
-FINAL new [1508, 0, 0, 1889, 8719, 8214, 8490, 0, 8719, 8719, 0, 0, 0, 0, 1900, 0, 0] {"dur": 180.0, "tps": 2674.3, "dtps": 327.5, "tmi": 25.33, "crush": 14.9, "dps": 1.0} score 1.0537
-ENCHANTS 0:Lesser Arcane Amalgamation | 3:Enchant Cloak - Superior Defense | 4:Wild Leather Armor Kit | 5:Enchant Bracer - Superior Deflection | 6:Rugged Armor Kit | 8:Wild Leather Armor Kit | 9:Wild Leather Armor Kit | 14:Enchant Weapon - Crusader
+SLOT 0 Feralheart Faceguard 1508:1.0567 2545:1.0558 1507:1.0542 1506:1.054 2543:1.0528
+  -> Lesser Arcane Amalgamation => Lesser Arcane Amalgamation
+SLOT 1 Horn of Ve'han 904:1.0595 925:1.0583 856:1.0583 0:1.0567
+  -> none => Enchant Boots - Agility
+SLOT 3 Cloak of Warding 1889:1.0595 7667:1.0528 247:1.0522 849:1.0522 0:1.0513
+SLOT 4 Feralheart Armor 8719:1.0595 8490:1.0585 8491:1.0584 8487:1.0574 8488:1.0573
+SLOT 5 Warden's Leather Bracers 8214:1.0595 923:1.0583 7656:1.0562 1885:1.0552 1887:1.0551
+SLOT 6 Grovekeeper Gauntlets 8719:1.0595 8490:1.0585 8491:1.0584 8487:1.0574 8488:1.0573
+SLOT 8 Grovekeeper Leggings 8719:1.0595 8490:1.0595 8491:1.0593 8487:1.0584 8488:1.0584
+SLOT 9 Grovekeeper Treads 8719:1.0595 8490:1.0585 8491:1.0584 8487:1.0574 8488:1.0573
+SLOT 14 Unyielding Maul 1900:1.0595 2646:1.057 1896:1.0514 8721:1.0514 2563:1.0491
+FINAL start [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] {"dur": 180.0, "tps": 2613.3, "dtps": 347.4, "tmi": 27.52, "crush": 15.0, "dps": 1.0}
+FINAL new [1508, 904, 0, 1889, 8719, 8214, 8719, 0, 8490, 8719, 0, 0, 0, 0, 1900, 0, 0] {"dur": 180.0, "tps": 2699.3, "dtps": 320.8, "tmi": 23.96, "crush": 14.9, "dps": 1.0} score 1.0595
+ENCHANTS 0:Lesser Arcane Amalgamation | 1:Enchant Boots - Agility | 3:Enchant Cloak - Superior Defense | 4:Wild Leather Armor Kit | 5:Enchant Bracer - Superior Deflection | 6:Wild Leather Armor Kit | 8:Rugged Armor Kit | 9:Wild Leather Armor Kit | 14:Enchant Weapon - Crusader

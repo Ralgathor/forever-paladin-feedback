@@ -1,25 +1,25 @@
 REMOVE 14 Enchant Weapon - Spell Power
-START [2544, 8218, 0, 0, 8492, 7665, 7647, 0, 2544, 8492, 0, 0, 0, 0, 0, 0, 0] 922.9
-SLOT 0 Eye of Flame 2544:922.9 1509:919.3 0:916.9 2543:916.9
-SLOT 1 Star of Mystaria 8218:922.9 8219:921.4 0:918.4
-SLOT 4 Robe of the Void 8492:922.9 8489:922.2 1893:921.5 8485:921.4 1891:920.0
-SLOT 5 Runecloth Cuffs 7665:922.9 8209:915.4 1901:913.6 8208:913.2 1883:912.7
-SLOT 6 Inferno Gloves 8492:927.4 8489:926.6 8485:925.9 8482:924.4 0:922.9
+START [2544, 8218, 0, 0, 8492, 7665, 7647, 0, 2544, 8492, 0, 0, 0, 0, 0, 0, 0] 1004.7
+SLOT 0 Eye of Flame 2544:1004.7 1509:1002.1 0:998.3 2543:998.3
+SLOT 1 Star of Mystaria 8218:1004.7 8219:1003.1 0:999.9
+SLOT 4 Robe of the Void 8492:1004.7 1893:1004.3 8489:1003.9 8485:1003.1 1891:1001.7
+SLOT 5 Runecloth Cuffs 7665:1004.7 8209:996.6 1901:996.0 1883:995.3 8208:994.2
+SLOT 6 Inferno Gloves 8492:1009.5 8489:1008.7 8485:1007.9 8482:1006.3 0:1004.7
   -> Enchant Gloves - Arcane Power => Mystic Rugged Armor Kit
-SLOT 8 Dreadmist Leggings 2544:927.4 8492:925.9 8489:925.2 8485:924.4 1509:923.8
-SLOT 9 Dreadmist Sandals 8492:927.4 8489:926.6 8485:925.9 8482:924.4 0:922.9
-SLOT 14 Witchblade 8217:941.8 8216:928.8 0:927.4 803:927.4 1894:927.4
-  -> none => Enchant Weapon - Revelation
-SLOT 15 Lord Sakrasis' Scepter 7661:943.7 0:941.8
+SLOT 8 Demonheart Leggings 2544:1009.5 8492:1007.9 8489:1007.1 1509:1006.9 8485:1006.3
+SLOT 9 Omnicast Boots 8492:1009.5 8489:1008.7 8485:1007.9 8482:1006.3 0:1004.7
+SLOT 14 Elemental Mage Staff 7662:1061.8 8211:1053.7 8212:1036.8 8217:1024.7 1904:1013.8
+  -> none => Enchant 2H Weapon - Spellblasting
+SLOT 15 Lord Sakrasis' Scepter 7661:1065.3 0:1061.8
   -> none => Enchant Off-Hand - Wisdom
-SLOT 0 Eye of Flame 2544:943.7 1509:939.9 0:937.6 2543:937.6
-SLOT 1 Star of Mystaria 8218:943.7 8219:942.2 0:939.1
-SLOT 4 Robe of the Void 8492:943.7 8489:942.9 8485:942.2 1893:941.4 1891:940.8
-SLOT 5 Runecloth Cuffs 7665:943.7 8209:936.1 1901:933.8 8208:933.8 1883:933.2
-SLOT 6 Inferno Gloves 8492:943.7 8489:942.9 8485:942.2 8482:940.7 0:939.1
-SLOT 8 Dreadmist Leggings 2544:943.7 8492:942.2 8489:941.4 8485:940.7 1509:939.9
-SLOT 9 Dreadmist Sandals 8492:943.7 8489:942.9 8485:942.2 8482:940.7 0:939.1
-SLOT 14 Witchblade 8217:943.7 8216:930.3 0:929.1 803:929.1 1894:929.1
-SLOT 15 Lord Sakrasis' Scepter 7661:943.7 0:941.8
-FINAL [2544, 8218, 0, 0, 8492, 7665, 8492, 0, 2544, 8492, 0, 0, 0, 0, 8217, 7661, 0]
-ENCHANTS 0:Arcanum of Focus | 1:Enchant Necklace - Spell Power | 4:Mystic Rugged Armor Kit | 5:Enchant Bracer - Greater Spellpower | 6:Mystic Rugged Armor Kit | 8:Arcanum of Focus | 9:Mystic Rugged Armor Kit | 14:Enchant Weapon - Revelation | 15:Enchant Off-Hand - Wisdom
+SLOT 0 Eye of Flame 2544:1065.3 1509:1061.5 0:1058.9 2543:1058.9
+SLOT 1 Star of Mystaria 8218:1065.3 8219:1063.7 0:1060.5
+SLOT 4 Robe of the Void 8492:1065.3 8489:1064.5 1893:1063.7 8485:1063.7 8482:1062.1
+SLOT 5 Runecloth Cuffs 7665:1065.3 8209:1057.3 1901:1055.2 8208:1054.8 1883:1054.6
+SLOT 6 Inferno Gloves 8492:1065.3 8489:1064.5 8485:1063.7 8482:1062.1 0:1060.5
+SLOT 8 Demonheart Leggings 2544:1065.3 8492:1063.7 8489:1062.9 8485:1062.1 1509:1061.5
+SLOT 9 Omnicast Boots 8492:1065.3 8489:1064.5 8485:1063.7 8482:1062.1 0:1060.5
+SLOT 14 Elemental Mage Staff 7662:1065.3 8211:1057.3 8212:1040.3 8217:1027.9 1904:1015.6
+SLOT 15 Lord Sakrasis' Scepter 7661:1065.3 0:1061.8
+FINAL [2544, 8218, 0, 0, 8492, 7665, 8492, 0, 2544, 8492, 0, 0, 0, 0, 7662, 7661, 0]
+ENCHANTS 0:Arcanum of Focus | 1:Enchant Necklace - Spell Power | 4:Mystic Rugged Armor Kit | 5:Enchant Bracer - Greater Spellpower | 6:Mystic Rugged Armor Kit | 8:Arcanum of Focus | 9:Mystic Rugged Armor Kit | 14:Enchant 2H Weapon - Spellblasting | 15:Enchant Off-Hand - Wisdom

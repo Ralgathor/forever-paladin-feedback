@@ -1,13 +1,15 @@
-REF {"tps": 2845.6811722774005, "dps": 566.3048633729527, "dtps": 361.74976716679527, "tmi": 30.735128669646762}
-BASE 1.0541 {"tps": 2381.456439880482, "dps": 470.5675337677497, "dtps": 314.8678437099122, "tmi": 24.605909951112956}
+REF {"tps": 2383.6298097226995, "dps": 475.39148655946116, "dtps": 284.8756259598205, "tmi": 20.7066935628888}
+BASE 1.0 {"tps": 2383.6298097226995, "dps": 475.39148655946116, "dtps": 284.8756259598205, "tmi": 20.7066935628888}
 PASS 0
-SLOT 0 Warbear Helm -> Feralheart Faceguard 226801 60 [] 1.0541 -> 1.0648
-SLOT 1 Artifact Seeker's Pendant -> Evil Eye Pendant 18381 62 [] 1.0648 -> 1.0685
-SLOT 4 Songbird Blouse -> Feralheart Armor 226804 60 [] 1.0685 -> 1.0926
+SLOT 2 Warden's Leather Shoulders -> Grovekeeper Spaulders 273898 60 [] 1.0 -> 1.0106
+SLOT 5 Warden's Leather Bracers -> Elven Chain Wristguards 269501 60 [] 1.0106 -> 1.0154
+SLOT 6 Feralheart Grips -> Grovekeeper Gauntlets 273897 60 [] 1.0154 -> 1.024
+SLOT 8 Warstrife Leggings -> Grovekeeper Leggings 273896 60 [] 1.024 -> 1.0293
+SLOT 9 Feralheart Treads -> Grovekeeper Treads 273899 60 [] 1.0293 -> 1.0418
 PASS 1
-SLOT 1 Evil Eye Pendant -> Horn of Ve'han 275736 61 [] 1.0926 -> 1.0962
+SLOT 1 Horn of Ve'han -> Evil Eye Pendant 18381 62 [] 1.0418 -> 1.0442
 PASS 2
-FINAL old {"tps": 2378.9691704536585, "dps": 470.09580944761365, "dtps": 315.8633710443244, "tmi": 24.6883786033639} 1.0515
-FINAL new {"tps": 2389.0849384768703, "dps": 473.3347607986346, "dtps": 300.2630473405031, "tmi": 23.246570140609425} 1.0939
-SET [226801, 275736, 252536, 18413, 226804, 252541, 226802, 287040, 11821, 226803, 12544, 15855, 10418, 14557, 18531, 0, 0]
-SETNAMES Feralheart Faceguard ; Horn of Ve'han ; Warden's Leather Shoulders ; Cloak of Warding ; Feralheart Armor ; Warden's Leather Bracers ; Feralheart Grips ; Dinosaur Hide Belt ; Warstrife Leggings ; Feralheart Treads ; Thrall's Resolve ; Ring of Protection ; Glimmering Mithril Insignia ; The Lion Horn of Stormwind ; Unyielding Maul ; - ; -
+FINAL old {"tps": 2386.294471105037, "dps": 476.0293764701703, "dtps": 284.9279413643222, "tmi": 20.705686258897092} 1.0004
+FINAL new {"tps": 2497.3830503383197, "dps": 502.31329771299164, "dtps": 274.2841099521829, "tmi": 19.825814636683255} 1.044
+SET [226801, 18381, 273898, 18413, 226804, 269501, 273897, 287040, 273896, 273899, 12544, 15855, 10418, 14557, 18531, 0, 0]
+SETNAMES Feralheart Faceguard ; Evil Eye Pendant ; Grovekeeper Spaulders ; Cloak of Warding ; Feralheart Armor ; Elven Chain Wristguards ; Grovekeeper Gauntlets ; Dinosaur Hide Belt ; Grovekeeper Leggings ; Grovekeeper Treads ; Thrall's Resolve ; Ring of Protection ; Glimmering Mithril Insignia ; The Lion Horn of Stormwind ; Unyielding Maul ; - ; -

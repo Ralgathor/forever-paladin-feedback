@@ -1,26 +1,29 @@
-START [1506, 0, 0, 7667, 1891, 8214, 8207, 0, 1506, 1887, 0, 0, 0, 0, 1900, 1886, 0] {"tmi": 24.0, "dur": 180.0, "tps": 1607.3, "dps": 496.5, "dtps": 242.7, "swings": 80.7, "hit": 2.0, "miss": 9.4, "dodge": 24.3, "parry": 12.5, "block": 50.8, "crit": 0.1, "crush": 0.9}
-SLOT 0 Faceguard of Heroism 2545:1.0031 1508:1.0024 2543:1.0004 1506:1.0 1507:0.9979
+START [1506, 0, 0, 7667, 1891, 8214, 8207, 0, 1506, 1887, 0, 0, 0, 0, 1900, 1886, 0] {"tmi": 24.0, "dur": 180.0, "tps": 1630.6, "dps": 507.2, "dtps": 243.7, "swings": 79.6, "hit": 2.0, "miss": 10.6, "dodge": 22.5, "parry": 14.3, "block": 49.5, "crit": 0.1, "crush": 0.9}
+SLOT 0 Faceguard of Heroism 2545:1.0031 1508:1.0027 2543:1.0001 1506:1.0 1507:0.9976
   -> Lesser Arcane Amalgamation => Arcanum of Protection
-SLOT 1 Talisman of Evasion 904:1.0182 925:1.0176 856:1.0045 0:1.0031
+SLOT 1 Talisman of Evasion 904:1.006 856:1.0044 925:1.0042 0:1.0031
   -> none => Enchant Boots - Agility
-SLOT 3 Shifting Cloak 7667:1.0182 1889:1.0176 247:1.0175 849:1.0175 0:1.0031
-SLOT 4 Chestguard of Heroism 1891:1.0182 8719:1.0167 8490:1.0161 8484:1.016 8487:1.0159
-SLOT 5 Vigorsteel Vambraces 8214:1.0182 923:1.0174 929:1.0137 1886:1.0134 7656:1.0045
-SLOT 6 Handguards of Heroism 2563:1.0196 8206:1.0182 8207:1.0182 8491:1.0173 8719:1.0173
-SLOT 8 Cloudkeeper Legplates 2545:1.0199 1506:1.0182 1508:1.018 8491:1.0178 8719:1.0178
-SLOT 9 Sabatons of Heroism 1887:1.0182 8719:1.0173 8491:1.0173 8488:1.0169 247:1.0166
-SLOT 14 Krol Blade 1900:1.0182 2563:1.0141 803:1.0132 1897:1.0107 0:1.0097
-SLOT 15 Intricately Runed Shield 1886:1.0182 848:1.0059 0:1.0055 929:1.0053 863:1.0052
-SLOT 0 Faceguard of Heroism 2545:1.0182 1507:1.0142 1508:1.0042 1506:1.0033 2543:1.0025
-SLOT 1 Talisman of Evasion 904:1.0182 925:1.0176 856:1.0045 0:1.0031
-SLOT 3 Shifting Cloak 7667:1.0182 1889:1.0176 247:1.0175 849:1.0175 0:1.0031
-SLOT 4 Chestguard of Heroism 1891:1.0182 8719:1.0167 8490:1.0161 8484:1.016 8487:1.0159
-SLOT 5 Vigorsteel Vambraces 8214:1.0182 923:1.0174 929:1.0137 1886:1.0134 7656:1.0045
-SLOT 6 Handguards of Heroism 2563:1.0196 8206:1.0182 8207:1.0182 8491:1.0173 8719:1.0173
-SLOT 8 Cloudkeeper Legplates 2545:1.0199 1506:1.0182 1508:1.018 8491:1.0178 8719:1.0178
-SLOT 9 Sabatons of Heroism 1887:1.0182 8719:1.0173 8491:1.0173 8488:1.0169 247:1.0166
-SLOT 14 Krol Blade 1900:1.0182 2563:1.0141 803:1.0132 1897:1.0107 0:1.0097
-SLOT 15 Intricately Runed Shield 1886:1.0182 848:1.0059 0:1.0055 929:1.0053 863:1.0052
-FINAL start [1506, 0, 0, 7667, 1891, 8214, 8207, 0, 1506, 1887, 0, 0, 0, 0, 1900, 1886, 0] {"tmi": 24.0, "dur": 180.0, "tps": 1607.3, "dps": 496.5, "dtps": 242.7, "swings": 80.7, "hit": 2.0, "miss": 9.4, "dodge": 24.3, "parry": 12.5, "block": 50.8, "crit": 0.1, "crush": 0.9}
-FINAL new [2545, 904, 0, 7667, 1891, 8214, 8207, 0, 1506, 1887, 0, 0, 0, 0, 1900, 1886, 0] {"tmi": 23.0, "dur": 180.0, "tps": 1600.5, "dps": 494.5, "dtps": 237.3, "swings": 80.7, "hit": 2.0, "miss": 9.5, "dodge": 25.5, "parry": 12.4, "block": 49.6, "crit": 0.2, "crush": 0.9} score 1.0182
-ENCHANTS 0:Arcanum of Protection | 1:Enchant Boots - Agility | 3:Enchant Cloak - Agility | 4:Enchant Chest - Greater Stats | 5:Enchant Bracer - Superior Deflection | 6:Enchant Gloves - Greater Strength | 8:Lesser Arcane Amalgamation | 9:Enchant Boots - Greater Agility | 14:Enchant Weapon - Crusader | 15:Enchant Shield - Greater Stamina
+SLOT 3 Shifting Cloak 7667:1.006 247:1.0045 849:1.0045 1889:1.0044 0:1.0031
+SLOT 4 Chestguard of Heroism 8719:1.0177 1891:1.006 8491:1.0044 8488:1.0041 8486:1.0036
+  -> Enchant Chest - Greater Stats => Wild Leather Armor Kit
+SLOT 5 Vigorsteel Vambraces 8214:1.0177 923:1.003 7656:1.003 1887:1.0026 904:1.002
+SLOT 6 Handguards of Glory 8206:1.0193 2563:1.0192 8207:1.0177 8491:1.0168 8719:1.0166
+SLOT 8 Legguards of Glory 2545:1.0205 1508:1.019 1506:1.0177 8491:1.0173 8719:1.0171
+  -> Lesser Arcane Amalgamation => Arcanum of Protection
+SLOT 9 Sabatons of Glory 1887:1.0205 8491:1.0192 8719:1.019 8488:1.0188 247:1.0184
+SLOT 14 Krol Blade 1900:1.0205 2563:1.0158 803:1.0135 1897:1.0122 1898:1.0115
+SLOT 15 Intricately Runed Shield 848:1.0217 929:1.0205 1886:1.0205 863:1.0081 0:1.0079
+SLOT 0 Faceguard of Heroism 2545:1.0205 1508:1.019 1506:1.0177 0:1.015 1507:1.0149
+SLOT 1 Talisman of Evasion 904:1.0205 856:1.02 925:1.0195 0:1.0182
+SLOT 3 Shifting Cloak 7667:1.0205 1889:1.0195 247:1.0192 849:1.0192 0:1.0182
+SLOT 4 Chestguard of Heroism 1891:1.022 8719:1.0205 8490:1.019 1892:1.0179 8491:1.0075
+SLOT 5 Vigorsteel Vambraces 8214:1.0205 923:1.0191 7656:1.0189 1887:1.0178 904:1.0169
+SLOT 6 Handguards of Glory 8206:1.0235 2563:1.0222 8719:1.0206 8207:1.0205 8491:1.0197
+  -> Enchant Gloves - Greater Strength => Enchant Gloves - Greater Agility
+SLOT 8 Legguards of Glory 2545:1.0235 1508:1.0212 1506:1.0193 8719:1.0193 8491:1.019
+SLOT 9 Sabatons of Glory 1887:1.0235 8719:1.0216 247:1.0215 8491:1.0212 8488:1.0209
+SLOT 14 Krol Blade 1900:1.0235 8721:1.0208 2563:1.0176 803:1.0164 1897:1.014
+SLOT 15 Intricately Runed Shield 848:1.0241 863:1.0235 0:1.0235 1886:1.0235 929:1.0234
+FINAL start [1506, 0, 0, 7667, 1891, 8214, 8207, 0, 1506, 1887, 0, 0, 0, 0, 1900, 1886, 0] {"tmi": 24.0, "dur": 180.0, "tps": 1630.6, "dps": 507.2, "dtps": 243.7, "swings": 79.6, "hit": 2.0, "miss": 10.6, "dodge": 22.5, "parry": 14.3, "block": 49.5, "crit": 0.1, "crush": 0.9}
+FINAL new [2545, 904, 0, 7667, 8719, 8214, 8206, 0, 2545, 1887, 0, 0, 0, 0, 1900, 1886, 0] {"tmi": 23.0, "dur": 180.0, "tps": 1596.8, "dps": 496.6, "dtps": 229.4, "swings": 79.6, "hit": 1.8, "miss": 10.7, "dodge": 25.4, "parry": 14.5, "block": 46.6, "crit": 0.1, "crush": 0.9} score 1.0235
+ENCHANTS 0:Arcanum of Protection | 1:Enchant Boots - Agility | 3:Enchant Cloak - Agility | 4:Wild Leather Armor Kit | 5:Enchant Bracer - Superior Deflection | 6:Enchant Gloves - Greater Agility | 8:Arcanum of Protection | 9:Enchant Boots - Greater Agility | 14:Enchant Weapon - Crusader | 15:Enchant Shield - Greater Stamina

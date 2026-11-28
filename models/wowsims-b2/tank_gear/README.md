@@ -1,4 +1,4 @@
-# Item pool tank sets (4 November 2026, new searches on 6, 8, 9, 11, 12, 13, 15, 16 and 18 November, two on 12 November)
+# Item pool tank sets (4 November 2026, new searches on 6, 8, 9, 11, 12, 13, 15, 16, 18 and 28 November, two on 12 November)
 
 The tank sets of Analysis, Threat, parts 5 to 9, and Protection: a threat set and a survival set for each class (see Survival sets). Each set obeys the item pool rules of the damage sets (`../matched_gear/opt.py`, `pre_raid`):
 
@@ -156,7 +156,28 @@ The same day, the Paladin and the Warrior full consumables received Gift of Arth
 | Druid, threat | 2,573.3 / 316.4 / 25.7 | 2,674.3 / 327.5 / 25.3 |
 | Druid, survival | 2,389.1 / 300.3 / 23.2 | 2,405.7 / 276.2 / 20.1 |
 
-The survival values also include Greater Stoneshield Potion for the Paladin and the Warrior. The runs without the enchant search: `../logs/checks_ad6b13af8_pool_full_no_enchants.log` and `../logs/checks_ad6b13af8_pool_surv_full_no_enchants.log`.
+On 28 November (commit dc09e002f0), the enchant search ran again on the new sets (table above). The survival values also include Greater Stoneshield Potion for the Paladin and the Warrior. The runs without the enchant search: `../logs/checks_ad6b13af8_pool_full_no_enchants.log` and `../logs/checks_ad6b13af8_pool_surv_full_no_enchants.log`.
+
+**New search (28 November 2026).** Master commit `dc09e002f0` (27 November, client 1.60.1.71139, hotfixes up to push 114405) adds new dungeon sets: Justice Battleplate (Paladin), Battlegear of Glory and Battleplate of Glory (Warrior) and Grovekeeper Rage (Druid). It also changes the block value of the shields (Classic Era table), the Warrior threat values and the Unbridled Wrath rule (24 November). The elixirs now obey the elixir groups of the game, thus the full consumables lose Elixir of Ferocity, Elixir of Greater Defense and the three Scrolls (no effect, `../logs/consumables_dc09e002f0.log`). With the sets of 18 and 19 November on this commit (`../logs/checks_dc09e002f0_old_sets.log`): live Paladin 1,450.7 / 294.4, Warrior 1,840.9 / 312.7, Druid 2,629.9 / 339.8 (threat / damage taken).
+
+The open search (`search_open.py`), the enchant search (`search_enchants.py`) and the set search (`search_sets.py`) ran again in this order for the six tank sets. wowsims dc09e002f0 has no Warrior prebis file, thus the Warrior enchant search starts from the enchants of 18 November (`ENCH_START`). The logs of 18 and 19 November have `_ad6b13af8` in the file name.
+
+| Set | Sets of 18 and 19 November | Open search | Final (enchants and set bonuses) |
+| --- | --- | --- | --- |
+| Paladin, threat | 1,450.7 / 294.4 / 41.0 | 1,479.8 / 293.5 / 40.4 | 1,469.9 / 284.6 / 38.0 |
+| Paladin, survival | 1,286.4 / 222.9 / 28.1 | 1,246.6 / 197.5 / 27.6 | 1,290.1 / 204.5 / 28.0 |
+| Warrior, threat | 1,840.9 / 312.7 / 32.4 | 1,941.7 / 297.3 / 30.1 | 1,952.5 / 298.5 / 30 |
+| Warrior, survival | 1,530.4 / 251.4 / 24.7 | 1,624.8 / 237.8 / 23.7 | 1,596.8 / 229.4 / 23 |
+| Druid, threat | 2,629.9 / 339.8 / 26.3 | 2,696.3 / 322.6 / 24.1 | 2,699.3 / 320.8 / 24.0 |
+| Druid, survival | 2,386.3 / 284.9 / 20.7 | 2,497.4 / 274.3 / 19.8 | 2,489.8 / 273.7 / 19.7 |
+
+The values are threat / damage taken / TMI, full threat consumables (survival sets: with Greater Stoneshield Potion), 3,000 iterations.
+
+- **Paladin threat set:** Gargantuan Wristguards, Justice Handguards and Justice Sabatons (open search), then Justice Pauldrons and Justice Legguards (set search, +1.25% score). Enchants: Superior Deflection on the wrists and an armor kit on the hands, in place of Greater Spellpower and Holy Power.
+- **Paladin survival set:** Helm of Awareness, Talisman of Evasion, Ezra's Seal of Authenticity, Smotts' Compass and Barrier Shield (open search), then four pieces of Justice Battleplate in place of three pieces of Deathbone Guardian (set search, +0.3% score). Enchants: Lesser Deflection on the neck and Fiery Weapon in place of Crusader.
+- **Warrior threat set:** Shoulders, Gauntlets and Legplates of Glory (Battlegear of Glory), Sabatons of Glory, Shifting Cloak, Satyr's Bow and Intricately Runed Shield in place of Skullflame Shield (40 block value since this commit). The set search keeps this set.
+- **Warrior survival set:** Pauldrons, Handguards, Legguards and Sabatons of Glory (Battleplate of Glory) and Ezra's Seal of Authenticity.
+- **Druid sets:** four pieces of Grovekeeper Rage in both sets. The survival set also takes Evil Eye Pendant and Elven Chain Wristguards.
 
 ## Method
 
@@ -219,18 +240,18 @@ The sets of 4 November were searched on master 8298ab833, with the Paladin witho
 
 | Set | Best item set | Score | Kept |
 | --- | --- | --- | --- |
-| Paladin, threat | Deathbone Guardian, 2 pieces | 0.994 | No |
-| Paladin, survival | Deathbone Guardian, 5 pieces | 1.0068 | Yes (19 November) |
-| Warrior, threat | Battlegear of Valor, 2 pieces | 0.991 | No |
-| Warrior, survival | Battlegear of Valor, 4 pieces | 0.998 | No |
-| Druid, threat | Devilsaur Armor, 2 pieces | 0.996 | No |
-| Druid, survival | Shadowcraft Armor, 2 pieces | 0.999 | No |
+| Paladin, threat | Justice Battleplate, 4 pieces (28 November; 19 November: Deathbone Guardian, 2 pieces, 0.994) | 1.0125 | Yes (28 November) |
+| Paladin, survival | Justice Battleplate, 4 pieces (28 November; 19 November: Deathbone Guardian, 5 pieces, 1.0068) | 1.0032 | Yes (28 November; Deathbone Guardian on 19 November) |
+| Warrior, threat | Battleplate of Glory, 4 pieces (19 November: Battlegear of Valor, 2 pieces, 0.991) | 0.994 | No |
+| Warrior, survival | Battlegear of Valor, 2 pieces (19 November: 4 pieces, 0.998) | 0.987 | No |
+| Druid, threat | Shadowcraft Armor, 2 pieces (19 November: Devilsaur Armor, 2 pieces, 0.996) | 0.983 | No |
+| Druid, survival | Feralheart Raiment, 4 pieces (19 November: Shadowcraft Armor, 2 pieces, 0.999) | 0.980 | No |
 
 With Deathbone Guardian, the Paladin survival set takes 7% less damage (226.8 → 211.0), but it has 4% less threat (1,302.2 → 1,246.9). The TMI does not change much (26.5 → 26.3). The 3 and 4 pieces give 1.0042 and 1.0043. Soulforge Armor has only 4 pool pieces (helm, chest, gloves, boots); with these 4 pieces, the Paladin threat set has 1,375 threat each sec against 1,439.
 
 ## Shockadin set
 
-`search_tank.py shock` uses the same method for the Shockadin set of the Builds tab (`set_shock.json`, `log_shock.txt`). The score is damage only. The dump is the Shockadin test of feedback_run_test.go (`FEEDBACK_SHOCK=1`, `FEEDBACK_DUR=180`, full buffs). The item swap set (Manual Crowd Pummeler) does not change. On 18 November (master ad6b13af8), the search gives +0.05%, less than the 0.5% rule. Thus, the set of 11 November stays (817.6 DPS).
+`search_tank.py shock` uses the same method for the Shockadin set of the Builds tab (`set_shock.json`, `log_shock.txt`). The score is damage only. The dump is the Shockadin test of feedback_run_test.go (`FEEDBACK_SHOCK=1`, `FEEDBACK_DUR=180`, full buffs). The item swap set (Manual Crowd Pummeler) does not change. On 18 November (master ad6b13af8), the search gives +0.05%, less than the 0.5% rule. Thus, the set of 11 November stays (817.6 DPS). On 28 November (master dc09e002f0), the search takes Destiny in place of The Needler and Frozen Heart of the Mountain in place of Hand of Justice: +6.7% in the search (651.8 → 695.7), and 853.7 DPS in the final run (`../logs/finals_shock.log`). The search log of 18 November is `log_shock_ad6b13af8.txt`.
 
 ## Sets
 

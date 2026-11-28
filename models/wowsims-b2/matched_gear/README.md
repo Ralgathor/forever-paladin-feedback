@@ -1,6 +1,6 @@
 # Pure damage specs with the same item pool (2 November 2026, with later searches)
 
-New searches ran on 6, 8, 9, 11, 12, 13, 15 and 18 November, two of them on 12 November.
+New searches ran on 6, 8, 9, 11, 12, 13, 15, 18 and 28 November, two of them on 12 November.
 
 This run gives the pure average of Analysis, Damage (parts 1, 3 and 7).
 
@@ -34,7 +34,7 @@ The pure average is 905.3 (+2.0%), and Retribution 97.5%. The search ran again f
 
 **New search (18 November 2026).** Master commit `ad6b13af8` (hotfixes of 16 and 17 November) changes the proc rates of many items. wowsims now also implements more item effects, for example the Destiny proc. With the sets of 15 November on this commit (`ec_results_ad6b13af8_old_sets.json`), Combat Rogue gains 10.1% (776.1 → 854.5), and Fury loses 0.9%. The cause of the Rogue gain is not known. The other specs change by less than 0.3%.
 
-The pure average is 924.8 (+1.6%), and Retribution 95.4%. The search ran again for all six specs. Each search starts from the set of 15 November (`sets_6084403a9/`, `SEED` in main.py). It uses the same rules and the `EFFECTS` list of this commit (368 items, `../tank_gear/effects_ad6b13af8.txt`). The results below come from commit `ad6b13af8`.
+The pure average is 924.8 (+1.6%), and Retribution 95.4%. The search ran again for all six specs. Each search starts from the set of 15 November (`sets_6084403a9/`, `SEED` in main.py). It uses the same rules and the `EFFECTS` list of this commit (368 items, `../tank_gear/effects_ad6b13af8.txt`). The results of 18 November are in `ec_results_ad6b13af8.json`, and the sets in `sets_ad6b13af8/`.
 
 **Enchant rules (18 November 2026, evening).** The wowsims preset enchants were not equal, and some did not obey the item pool rules. Retribution had Healing Power (Argent Dawn, Exalted) on the bracers. The Rogue had the off-hand Agility enchant of Timbermaw Hold (Revered). The Hunter had no head enchant and a Zul'Gurub scope. Mage and Warlock had the Molten Core weapon enchant. `search_enchants_dps.py` now gives each spec the rules of the tank enchant search (`../tank_gear/search_enchants.py`):
 
@@ -49,6 +49,8 @@ The search starts from `enchants.json` and removes the enchants that break the r
 - Hunter: Lesser Arcane Amalgamation on the head and the legs, Greater Agility gloves, Revelation and the SAF-T scope.
 - Fire Mage and Demonology Warlock: Revelation in place of the Molten Core weapon enchant, armor kits on the gloves. The Warlock also takes the off-hand Wisdom enchant.
 
+**New search (28 November 2026).** Master commit `dc09e002f0` (27 November, client 1.60.1.71139, hotfixes up to push 114405) adds new dungeon sets, for example Justice Battlegear and Demonheart Raiment. It also changes the Judgement of Command proc roll, the Unbridled Wrath rule (24 November) and item proc rates. With the sets of 18 November on this commit (`ec_results_dc09e002f0_old_sets.json`), the pure average is 924.1 (−1.2%), and Retribution 99.4%. The item search and the enchant search ran again for all six specs. Each search starts from the set of 18 November (`sets_ad6b13af8/`). The results below come from commit `dc09e002f0`.
+
 ## Rules (the same for each spec)
 
 - **Item pool.** Uncommon, rare and epic items of item level 63 or lower, for level 60 or lower. Only content of the game start and Dire Maul. No Classic items with item ids 19000–23999. These items are from patch 1.6 or later: Zul'Gurub, Ahn'Qiraj and Naxxramas era items, dungeon set 2 and battleground rewards. No items that need Revered or Exalted reputation. Not Jewel of the Guard Captain (a battleground name, no source). No raid drops and no world boss drops (zone and NPC sources in the wowsims data and AtlasLoot). No PvP items, no PvP reputation items, and not the raid items of the earlier `GEARFIX` list. No items with random enchantments.
@@ -61,16 +63,18 @@ The search starts from `enchants.json` and removes the enchants that break the r
 
 | Spec | No enchants, no consumables | Enchants | Consumables | Both | Average item level | Epic items |
 | --- | --- | --- | --- | --- | --- | --- |
-| Fury Warrior | 750.5 | 838.4 | 894.5 | 988.9 | 60.8 | 7 |
-| Hunter | 778.3 | 846.7 | 880.7 | 950.8 | 60.6 | 3 |
-| Demonology Warlock | 666.6 | 719.0 | 884.2 | 942.7 | 59.9 | 4 |
-| Fire Mage | 681.1 | 733.7 | 871.2 | 927.3 | 60.2 | 5 |
-| Combat Rogue | 709.9 | 754.3 | 817.8 | 865.5 | 59.6 | 6 |
-| Pure average | 717.3 | 778.4 | 869.7 | 935.0 | | |
-| Retribution (live) | 682.3 (95.1%) | 734.7 (94.4%) | 862.1 (99.1%) | 919.5 (98.3%) | 60.6 | 6 |
+| Fury Warrior | 729.6 | 817.0 | 874.8 | 967.8 | 60.5 | 8 |
+| Hunter | 772.2 | 835.6 | 870.5 | 937.4 | 60.6 | 3 |
+| Demonology Warlock | 723.2 | 817.6 | 965.1 | 1064.9 | 59.8 | 7 |
+| Fire Mage | 706.4 | 766.3 | 902.1 | 966.0 | 59.8 | 8 |
+| Combat Rogue | 704.2 | 753.0 | 823.0 | 875.7 | 59.4 | 6 |
+| Pure average | 727.1 | 797.9 | 887.1 | 962.4 | | |
+| Retribution (live) | 703.9 (96.8%) | 755.9 (94.7%) | 887.7 (100.1%) | 943.6 (98.1%) | 60.5 | 8 |
 
-Without the Rogue (both): 952.4, Retribution 96.5%. Retribution against Fury (both): 93.0%. wowsims links to each set: `links.md`.
+Without the Rogue (both): 984.0, Retribution 95.9%. Retribution against Fury (both): 97.5%. On commit ad6b13af8 (18 November): pure average 935.0, Retribution 98.3%; without the Rogue 952.4 and 96.5%; against Fury 93.0%. wowsims links to each set: `links.md`.
 
+- **Commit dc09e002f0 and the sets of 28 November against commit ad6b13af8 (both).** Demonology Warlock +13.0% (942.7 → 1,064.9), Fire Mage +4.2% (927.3 → 966.0), Retribution +2.6% (919.5 → 943.6), Combat Rogue +1.2% (865.5 → 875.7), Hunter −1.4% (950.8 → 937.4), Fury −2.1% (988.9 → 967.8). Pure average 935.0 → 962.4, Retribution 98.3% → 98.1%. With the sets of 18 November on commit dc09e002f0 (`ec_results_dc09e002f0_old_sets.json`), the pure average is 924.1 and Retribution 99.4%. The Unbridled Wrath rule of 24 November and new item proc rates (Felstriker 0.5 procs each minute) cause the Fury and Hunter losses.
+- **Set changes (28 November).** Retribution: Justice Spaulders, Justice Gauntlets and Justice Greaves (Justice Battlegear), and Chained Essence of Eranikus. Fury: Gauntlets and Greaves of Glory, Blackstone Ring, Highborne Research Tablet and Felstriker. Demonology Warlock: Demonheart Spaulders, Demonheart Leggings, Omnicast Boots and Elemental Mage Staff. Fire Mage: Manaflare Mantle, Manaflare Pants, Sorcerer's Gauntlets, Eye of Orgrimmar and Chained Essence of Eranikus. Combat Rogue: Chained Essence of Eranikus. The Hunter set does not change. The enchant search also ran again (`log_ench_*.txt`).
 - **Enchant rules (18 November evening) against the preset enchants (both).** Hunter +0.9% (942.7 → 950.8), Fury +0.8% (980.8 → 988.9), Retribution +0.5% (914.8 → 919.5), Combat Rogue +0.2% (863.6 → 865.5), Fire Mage +0.2% (925.8 → 927.3), Demonology Warlock −0.1% (944.0 → 942.7). Pure average 931.4 → 935.0, Retribution 98.2% → 98.3%. Without the Rogue: 948.3 → 952.4, Retribution 96.5% (no change).
 
 - **Commit ad6b13af8 (18 November) against commit 6084403a9 (both).** Combat Rogue +11.3% (776.1 → 863.6), Retribution +3.5% (884.0 → 914.8), Hunter +1.1% (932.2 → 942.7), Fury +0.4% (976.6 → 980.8). Fire Mage +0.3% (923.1 → 925.8) and Demonology Warlock +0.1% (942.7 → 944.0). Pure average 910.1 → 931.4, Retribution 97.1% → 98.2%. The commit gives the Rogue gain. The new sets give the rest: Retribution +3.7%, Fury +1.4%, Hunter +1.2%, Combat Rogue +1.1%.

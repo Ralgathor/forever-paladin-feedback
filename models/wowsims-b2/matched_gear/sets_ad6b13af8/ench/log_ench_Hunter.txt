@@ -1,0 +1,30 @@
+REMOVE 6 Enchant Weapon - Agility
+REMOVE 16 Biznicks 247x128 Accurascope
+START [0, 904, 0, 849, 1891, 7656, 0, 0, 8491, 1887, 0, 0, 0, 0, 2646, 0, 0] 922.2
+SLOT 0 Black Dragonscale Helm 1508:927.8 2543:925.0 1506:923.1 0:922.2
+  -> none => Lesser Arcane Amalgamation
+SLOT 1 Mark of Fordring 904:927.8 856:924.6 0:924.0
+SLOT 3 Cape of the Black Baron 7667:929.0 247:927.8 849:927.8 0:925.9
+SLOT 4 Dawn Armor 1891:927.8 8491:925.9 8488:925.3 8486:924.7 8483:924.2
+SLOT 5 Beaststalker's Bindings 7656:927.8 1887:926.5 904:924.6 8204:924.0 1885:922.6
+SLOT 6 Beaststalker's Gloves 8206:934.7 8491:930.6 8488:930.1 2563:929.5 8486:929.5
+  -> none => Enchant Gloves - Greater Agility
+SLOT 8 Beaststalker's Pants 1508:937.4 8491:934.7 2543:934.7 8488:934.1 8486:933.5
+  -> Forceful Rugged Armor Kit => Lesser Arcane Amalgamation
+SLOT 9 Windreaver Greaves 1887:937.4 8491:935.3 8488:934.7 247:934.3 8486:934.2
+SLOT 14 The Blackrock Slicer 8217:940.8 2646:937.4 803:931.5 2618:926.2 1900:924.0
+  -> Enchant 2H Weapon - Agility => Enchant Weapon - Revelation
+SLOT 16 Deep Jungle Rifle 8720:951.3 664:943.8 663:942.9 33:942.1 32:941.6
+  -> none => SAF-T Ultra Precision Scope
+SLOT 0 Black Dragonscale Helm 1508:951.3 2543:948.4 1506:946.7 0:945.7
+SLOT 1 Mark of Fordring 904:951.3 856:948.8 0:948.2
+SLOT 3 Cape of the Black Baron 7667:952.6 247:951.3 849:951.3 0:949.5
+SLOT 4 Dawn Armor 1891:951.3 8491:950.1 8488:949.6 8486:949.0 8483:948.4
+SLOT 5 Beaststalker's Bindings 7656:951.3 1887:950.1 904:948.8 8204:948.2 1885:946.1
+SLOT 6 Beaststalker's Gloves 8206:951.3 8491:947.3 8488:946.7 2563:946.2 8486:946.1
+SLOT 8 Beaststalker's Pants 1508:951.3 8491:948.7 2543:948.4 8488:948.1 8486:947.5
+SLOT 9 Windreaver Greaves 1887:951.3 8491:949.3 247:948.8 8488:948.7 8486:948.1
+SLOT 14 The Blackrock Slicer 8217:951.3 2646:949.0 803:942.8 2618:937.6 1900:935.3
+SLOT 16 Deep Jungle Rifle 8720:951.3 664:943.8 663:942.9 33:942.1 32:941.6
+FINAL [1508, 904, 0, 849, 1891, 7656, 8206, 0, 1508, 1887, 0, 0, 0, 0, 8217, 0, 8720]
+ENCHANTS 0:Lesser Arcane Amalgamation | 1:Enchant Boots - Agility | 3:Enchant Cloak - Lesser Agility | 4:Enchant Chest - Greater Stats | 5:Enchant Bracer - Superior Agility | 6:Enchant Gloves - Greater Agility | 8:Lesser Arcane Amalgamation | 9:Enchant Boots - Greater Agility | 14:Enchant Weapon - Revelation | 16:SAF-T Ultra Precision Scope

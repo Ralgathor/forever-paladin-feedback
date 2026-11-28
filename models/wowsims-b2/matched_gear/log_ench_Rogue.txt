@@ -1,31 +1,32 @@
 REMOVE 4 Enchant Chest - Living Stats
 REMOVE 9 Enchant Boots - Minor Speed
 REMOVE 15 Enchant Weapon - Agility
-START [1508, 904, 0, 7667, 0, 7656, 8206, 0, 1508, 0, 0, 0, 0, 0, 1900, 0, 0] 851.8
-SLOT 0 Shadowcraft Cap 1508:851.8 2543:851.6 1506:849.9 0:847.4
-SLOT 1 Mark of Fordring 904:851.8 856:850.3 0:848.9
-SLOT 3 Cape of the Black Baron 7667:851.8 247:850.8 849:850.8 0:848.9
-SLOT 4 Dawn Armor 1891:854.8 8491:854.5 8488:854.0 8486:853.4 8483:852.9
+START [1508, 904, 0, 7667, 0, 7656, 8206, 0, 1508, 0, 0, 0, 0, 0, 1900, 0, 0] 859.4
+SLOT 0 Shadowcraft Cap 2543:861.0 1508:859.4 1506:857.5 0:854.9
+SLOT 1 Mark of Fordring 904:859.4 856:858.2 0:856.4
+SLOT 3 Cape of the Black Baron 7667:859.4 247:858.4 849:858.4 0:856.4
+SLOT 4 Dawn Armor 1891:862.8 8491:862.3 8488:861.8 8486:861.2 8483:860.6
   -> none => Enchant Chest - Greater Stats
-SLOT 5 Shadowcraft Bracers 7656:854.8 1887:853.9 904:852.9 1885:852.7 8204:852.4
-SLOT 6 Devilsaur Gauntlets 8206:854.8 2563:854.1 8207:852.5 8491:852.2 8488:851.7
-SLOT 8 Devilsaur Leggings 2543:855.2 1508:854.8 8491:853.7 1506:853.4 8488:853.1
-SLOT 9 Darkmantle Footpads 1887:858.7 8491:857.5 8488:857.0 247:856.7 8486:856.4
+SLOT 5 Shadowcraft Bracers 7656:862.8 1887:861.9 904:860.9 1885:860.9 8204:860.4
+SLOT 6 Devilsaur Gauntlets 8206:862.8 2563:862.1 8207:860.6 8491:860.3 8488:859.7
+SLOT 8 Devilsaur Leggings 2543:865.0 1508:862.8 8491:861.8 1506:861.5 8488:861.3
+  -> Lesser Arcane Amalgamation => Arcanum of Rapidity
+SLOT 9 Darkmantle Footpads 1887:868.5 8491:868.0 8488:867.4 8486:866.8 247:866.5
   -> none => Enchant Boots - Greater Agility
-SLOT 14 Felstriker 1900:858.7 803:857.2 1897:854.7 2563:852.7 0:848.0
-SLOT 15 Felstriker 1900:865.0 803:863.6 2563:863.3 1897:860.5 0:858.7
+SLOT 14 Felstriker 1900:868.5 803:865.4 1897:863.9 2563:861.4 1898:861.0
+SLOT 15 Felstriker 1900:876.5 803:873.9 2563:873.2 1898:871.0 1897:870.4
   -> none => Enchant Weapon - Crusader
-SLOT 16 Precisely Calibrated Boomstick 0:865.0 30:865.0 32:865.0 33:865.0 663:865.0
-SLOT 0 Shadowcraft Cap 2543:865.0 1508:865.0 1506:863.0 0:860.6
-SLOT 1 Mark of Fordring 904:865.0 856:864.2 0:862.5
-SLOT 3 Cape of the Black Baron 7667:865.0 247:864.0 849:864.0 0:862.5
-SLOT 4 Dawn Armor 1891:865.0 8491:864.7 8488:864.1 8486:863.6 8483:863.0
-SLOT 5 Shadowcraft Bracers 7656:865.0 1887:864.0 904:863.0 1885:862.9 8204:862.5
-SLOT 6 Devilsaur Gauntlets 8206:865.0 2563:864.3 8207:862.6 8491:862.4 8488:861.8
-SLOT 8 Devilsaur Leggings 2543:865.0 1508:865.0 8491:863.3 1506:863.0 8488:862.7
-SLOT 9 Darkmantle Footpads 1887:865.0 8491:863.8 8488:863.2 247:863.0 8486:862.7
-SLOT 14 Felstriker 1900:865.0 803:863.5 1897:861.0 2563:859.0 0:854.4
-SLOT 15 Felstriker 1900:865.0 803:863.6 2563:863.3 1897:860.5 0:858.7
-SLOT 16 Precisely Calibrated Boomstick 0:865.0 30:865.0 32:865.0 33:865.0 663:865.0
-FINAL [1508, 904, 0, 7667, 1891, 7656, 8206, 0, 1508, 1887, 0, 0, 0, 0, 1900, 1900, 0]
-ENCHANTS 0:Lesser Arcane Amalgamation | 1:Enchant Boots - Agility | 3:Enchant Cloak - Agility | 4:Enchant Chest - Greater Stats | 5:Enchant Bracer - Superior Agility | 6:Enchant Gloves - Greater Agility | 8:Lesser Arcane Amalgamation | 9:Enchant Boots - Greater Agility | 14:Enchant Weapon - Crusader | 15:Enchant Weapon - Crusader
+SLOT 16 Precisely Calibrated Boomstick 0:876.5 30:876.5 32:876.5 33:876.5 663:876.5
+SLOT 0 Shadowcraft Cap 1508:876.5 2543:875.9 1506:874.7 0:872.0
+SLOT 1 Mark of Fordring 904:876.5 856:875.5 0:874.0
+SLOT 3 Cape of the Black Baron 7667:876.5 247:875.5 849:875.5 0:874.0
+SLOT 4 Dawn Armor 1891:876.5 8491:876.0 8488:875.4 8486:874.8 8483:874.2
+SLOT 5 Shadowcraft Bracers 7656:876.5 1887:875.5 1885:874.5 904:874.5 8204:874.0
+SLOT 6 Devilsaur Gauntlets 8206:876.5 2563:875.8 8207:874.3 8491:874.0 8488:873.4
+SLOT 8 Devilsaur Leggings 2543:876.5 1508:874.9 8491:873.2 1506:872.9 8488:872.7
+SLOT 9 Darkmantle Footpads 1887:876.5 8491:876.0 8488:875.4 8486:874.8 247:874.5
+SLOT 14 Felstriker 1900:876.5 803:873.4 1897:871.8 2563:869.4 1898:868.9
+SLOT 15 Felstriker 1900:876.5 803:873.9 2563:873.2 1898:871.0 1897:870.4
+SLOT 16 Precisely Calibrated Boomstick 0:876.5 30:876.5 32:876.5 33:876.5 663:876.5
+FINAL [1508, 904, 0, 7667, 1891, 7656, 8206, 0, 2543, 1887, 0, 0, 0, 0, 1900, 1900, 0]
+ENCHANTS 0:Lesser Arcane Amalgamation | 1:Enchant Boots - Agility | 3:Enchant Cloak - Agility | 4:Enchant Chest - Greater Stats | 5:Enchant Bracer - Superior Agility | 6:Enchant Gloves - Greater Agility | 8:Arcanum of Rapidity | 9:Enchant Boots - Greater Agility | 14:Enchant Weapon - Crusader | 15:Enchant Weapon - Crusader

@@ -6,26 +6,26 @@ This file gives the Holy Shock damage build ("Shockadin") on one target. It uses
 
 | Trees | Case | Build | Points | Code | DPS | % of RB1 |
 | --- | --- | --- | --- | --- | --- | --- |
-| Live | Raid | SB1 | 23/0/28 | [`b205025210221021--0523330110130033`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205025210221021--0523330110130033) | 818 | 89% |
-| Proposed | Raid | SB1 | 23/0/28 | [`v6p05025210221021--0523330110130033`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05025210221021--0523330110130033) | 818 | 89% |
-| Live | Fresh 60 | SB1 | 23/0/28 | [`b205025210221021--0523330110130033`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205025210221021--0523330110130033) | 279 | 90% |
-| Proposed | Fresh 60 | SB1 | 23/0/28 | [`v6p05025210221021--0523330110130033`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05025210221021--0523330110130033) | 284 | 89% |
+| Live | Raid | SB1 | 23/0/28 | [`b205025210221021--0523330110130033`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205025210221021--0523330110130033) | 854 | 91% |
+| Proposed | Raid | SB1 | 23/0/28 | [`v6p05025210221021--0523330110130033`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05025210221021--0523330110130033) | 854 | 91% |
+| Live | Fresh 60 | SB1 | 23/0/28 | [`b205025210221021--0523330110130033`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205025210221021--0523330110130033) | 278 | 86% |
+| Proposed | Fresh 60 | SB1 | 23/0/28 | [`v6p05025210221021--0523330110130033`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05025210221021--0523330110130033) | 300 | 88% |
 
 - **SB1 is the best Holy Shock build found.** It is the wowsims Holy Shock build (`HolyShockTalents`). In a raid, the talent search found no move of 1 point with more than +2 DPS. At fresh 60, the search removes Holy Shock (part 2).
-- **SB1 is 89% of Retribution (RB1) in a raid.** RB1 has 914 DPS in a raid and 309 at fresh 60. From commit 6084403a9 to ad6b13af8, RB1 gains 2.8% with its new set (Destiny), and SB1 loses 0.2%. On commit 6084403a9, SB1 was 92% of RB1. From commit 8c7b5a5f5 to 6084403a9, RB1 gains 6.3% and SB1 0.4%. The Seals now proc from the Windfury Totem strike, and RB1 has more Seal procs. On commit 8c7b5a5f5, SB1 was 97% of RB1. From commit 129fcd89e to 8c7b5a5f5 (ranged Judgement of Righteousness and Judgement of Fury, Two-Handed Weapon Specialization fix), RB1 loses 0.7% and SB1 1.0%. With all three judgements ranged, RB1 lost 1.5%, and SB1 was 98% of RB1. From commit 52471a100 to 129fcd89e (Hand of Justice change), RB1 loses 1.3% with its new set, and SB1 1.2%.
+- **SB1 is 91% of Retribution (RB1) in a raid.** RB1 has 942 DPS in a raid and 323 at fresh 60. From commit ad6b13af8 to dc09e002f0 (27 November), RB1 gains 2.5% with its new set (Justice Battlegear), and SB1 4.4% with its new set (Destiny). On commit ad6b13af8, SB1 was 89% of RB1. From commit 6084403a9 to ad6b13af8, RB1 gains 2.8% with its new set (Destiny), and SB1 loses 0.2%. On commit 6084403a9, SB1 was 92% of RB1. From commit 8c7b5a5f5 to 6084403a9, RB1 gains 6.3% and SB1 0.4%. The Seals now proc from the Windfury Totem strike, and RB1 has more Seal procs. On commit 8c7b5a5f5, SB1 was 97% of RB1. From commit 129fcd89e to 8c7b5a5f5 (ranged Judgement of Righteousness and Judgement of Fury, Two-Handed Weapon Specialization fix), RB1 loses 0.7% and SB1 1.0%. With all three judgements ranged, RB1 lost 1.5%, and SB1 was 98% of RB1. From commit 52471a100 to 129fcd89e (Hand of Justice change), RB1 loses 1.3% with its new set, and SB1 1.2%.
 
   On commit ae9b8c23a (8 November), SB1 was 89% of RB1. The proc items of 11 November (Storm Gauntlets and The Needler) give SB1 +1.3%. The new Windfury Totem rule decreases RB1 by 11% and SB1 by 3%. The two builds use sets from the same item pool, but with different items (part 1). Thus, the % is approximate.
-- **Holy Shock gives +11% in a raid.** Without Holy Shock and with Champion of the Light 4 (SF1), the damage is 737 in a raid. At fresh 60, SF1 has more damage than SB1: Holy Shock costs too much mana without buffs (part 2).
-- **Proposed against live.** Reverence 50% (C-H1) gives +2.0% at fresh 60 and 0% in a raid (6084403a9: +2.1%; 129fcd89e: +0.3%). With the Shockadin set of 9 November, it gave +8.0% at fresh 60. Storm Gauntlets cause the change (part 3). Light's Vigil (C-H7) gives a build with 31 Holy points +10.3%, but this build stays 9% below SB1 (part 2).
-- **Stat weights.** Spell damage is the main stat. In a raid, Hit rating is the best stat for each point (1.9 spell damage). At fresh 60, Hit rating also has the most value (1.4 spell damage) (part 3).
+- **Holy Shock gives +12% in a raid.** Without Holy Shock and with Champion of the Light 4 (SF1), the damage is 765 in a raid. At fresh 60, SF1 has more damage than SB1: Holy Shock costs too much mana without buffs (part 2).
+- **Proposed against live.** Reverence 50% (C-H1) gives +7.8% at fresh 60 and 0% in a raid, with the Shockadin set of 28 November (ad6b13af8: +2.0%; 6084403a9: +2.1%; 129fcd89e: +0.3%). With the Shockadin set of 9 November, it gave +8.0% at fresh 60 (part 3). Light's Vigil (C-H7) gives a build with 31 Holy points +10.6%, but this build stays 7% below SB1 (part 2).
+- **Stat weights.** Spell damage is the main stat. In a raid, Hit rating is the best stat for each point (2.4–2.5 spell damage). At fresh 60, Haste rating has the most value (6.4 spell damage), then Hit rating (1.9). The fresh 60 values change much from one set to the next (part 3).
 
 ## 1. Method
 
-- **Sim.** wowsims Forever, master of 18 November 2026 (commit ad6b13af8, hotfixes of 16 and 17 November), with `models/wowsims-b2/patches/talents.patch`. wowsims itself makes Judgement of Righteousness and Judgement of Fury ranged attacks, as in the hotfixes of 11 November. Judgement of Command stays a melee attack, as in the late hotfix of 13 November. The Shockadin values do not change with this late hotfix. The proposed trees use the flags REV50 (Reverence 25/50%, C-H1) and CH7 (Light's Vigil, C-H7). The other kept proposals do not change the damage of this build.
+- **Sim.** wowsims Forever, master of 27 November 2026 (commit dc09e002f0, client 1.60.1.71139, hotfixes up to push 114405), with `models/wowsims-b2/patches/talents.patch`. wowsims itself makes Judgement of Righteousness and Judgement of Fury ranged attacks, as in the hotfixes of 11 November. Judgement of Command stays a melee attack, as in the late hotfix of 13 November. The Shockadin values do not change with this late hotfix. The proposed trees use the flags REV50 (Reverence 25/50%, C-H1) and CH7 (Light's Vigil, C-H7). The other kept proposals do not change the damage of this build.
 - **CH7 flag.** Holy Shock, Judgement and Holy Strike give a stack of Light's Vigil for 30 sec, once each 6 sec, up to 3 stacks. A Holy Shock cast uses one stack and then incurs no cooldown. The sim starts each fight with no stack. The party heal is not in the damage sim.
 - **Gear, rotation and consumables.** The sim uses the `shockadinSuite` of the wowsims Retribution test. The gear is the wowsims Holy Shock set (`holy_shock`: spell damage gear, and Manual Crowd Pummeler as a swap). It uses the item pool rules of Analysis, Damage, part 7 ([wowsims link](https://ralgathor.github.io/forever-paladin-feedback/sets/build-shockadin.html)). Five items are not in the pool: two rings, two trinkets and the libram. A search in wowsims replaced them with pool items (`models/wowsims-b2/tank_gear`, `search_tank.py shock`).
 
-  On 8 November, the search takes Hand of Justice and Smolderweb's Eye as trinkets: +0.2% damage against the default set (4 November: −1.4%). The search of 9 November found no better set, thus this set stays: +0.3% against the default set on commit 9f254e8d8 (823.0 against 820.6). On 11 November, the search also tested all pool items with a proc effect in each slot. It takes Storm Gauntlets and The Needler (a proc dagger) in place of Gauntlets of Elements and Shin Blade: 833.8 DPS (was 823.0). On 13 November, with the ranged judgements, the search gives Gauntlets of Elements back: +0.32%. This is less than the 0.5% rule of the tank sets, thus the set of 11 November stays (815.5 DPS). On 15 November (commit 6084403a9), the search found no better set again: the set of 11 November stays (819.0 DPS). On 18 November (commit ad6b13af8), the search gives +0.05%, less than the 0.5% rule. Thus, the set of 11 November stays (817.6 DPS).
+  On 8 November, the search takes Hand of Justice and Smolderweb's Eye as trinkets: +0.2% damage against the default set (4 November: −1.4%). The search of 9 November found no better set, thus this set stays: +0.3% against the default set on commit 9f254e8d8 (823.0 against 820.6). On 11 November, the search also tested all pool items with a proc effect in each slot. It takes Storm Gauntlets and The Needler (a proc dagger) in place of Gauntlets of Elements and Shin Blade: 833.8 DPS (was 823.0). On 13 November, with the ranged judgements, the search gives Gauntlets of Elements back: +0.32%. This is less than the 0.5% rule of the tank sets, thus the set of 11 November stays (815.5 DPS). On 15 November (commit 6084403a9), the search found no better set again: the set of 11 November stays (819.0 DPS). On 18 November (commit ad6b13af8), the search gives +0.05%, less than the 0.5% rule. Thus, the set of 11 November stays (817.6 DPS). On 28 November (commit dc09e002f0), the search takes Destiny in place of The Needler and Frozen Heart of the Mountain in place of Hand of Justice: +6.7% in the search, and 853.7 DPS in the final run.
 
   The rotation is `holy_shock.apl.siml`. The consumables add Cerebral Cortex Compound and Frost Oil. The race is Human, as for RB1. RB1 uses the item pool Retribution set, thus the two sets are not the same. The talent search ran with the wowsims Holy Shock set.
 - **Fight.** 3 min, one level 63 boss, 3,000 iterations, the same random seed for all runs. "Raid" is full raid buffs and debuffs, with consumables. "Fresh 60" is no buffs, no debuffs and no consumables.
@@ -41,22 +41,22 @@ This file gives the Holy Shock damage build ("Shockadin") on one target. It uses
 - Holy: Divine Strength 5, Reverence 2, Improved Seals 5, Purifying Power 2, Divine Favor, Holy Conduit 2, Divine Precision 2, Infusion of Light 1, Consecrated Ground 2, Holy Shock.
 - Retribution: Benediction 5, Improved Judgement 2, Conviction 3, Sanctified Judgement 3, Vindication 3, Seal of Command, Pursuit of Justice 1, Sacred Arbiter, Two-Handed Weapon Specialization 3, Vengeance 3, Champion of the Light 3.
 - **Holy Shock needs 20 Holy points.** The 23 Holy points leave 28 for Retribution. Thus, the build has no Unsealed Wrath and only 3 points in Champion of the Light.
-- **Mana.** In a raid, SB1 has mana for the full fight. At fresh 60, it has no mana for 112 sec of the 3 min fight (proposed trees: 111 sec).
+- **Mana.** In a raid, SB1 has mana for the full fight. At fresh 60, it has no mana for 115 sec of the 3 min fight (proposed trees: 111 sec).
 
 ### Other builds
 
 | Build | Trees | Code | Raid | Fresh 60 | Change against SB1 |
 | --- | --- | --- | --- | --- | --- |
-| SB2, 31/0/20 | Live | [`b205025211222021051--052323010013`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205025211222021051--052323010013) | 672 (−18%) | 216 (−23%) | Light's Vigil, Holy Power 5, Illumination 1, Infusion of Light 2. Retribution 20: no Vengeance, no Champion of the Light |
-| SB2, 31/0/20 | Proposed | [`v6p05025211222021051--052323010013`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05025211222021051--052323010013) | 741 (−9%) | 228 (−20%) | The same build, with Light's Vigil (C-H7) |
-| SB3, 32/0/19 | Live | [`b215325210222121201--052330002013`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b215325210222121201--052330002013) | 671 (−18%) | 234 (−16%) | A hybrid healer: Light's Vigil, Oath of Light, Healing Light 3, Boundless Light 2, no Holy Power. Retribution 19: no Vengeance, no Champion of the Light |
-| SB3, 32/0/19 | Proposed | [`v6p15325210222121201--052330002013`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p15325210222121201--052330002013) | 744 (−9%) | 252 (−11%) | The same build, with Light's Vigil (C-H7) |
-| SF1, 22/0/29 | Live | [`b20502521022102--0523330110130034`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b20502521022102--0523330110130034) | 737 (−10%) | 301 (+8.0%) | No Holy Shock. Champion of the Light 4 |
-| SF2, 22/0/29 | Proposed | [`v6p0502520122102--0523330110130034`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p0502520122102--0523330110130034) | 737 (−10%) | 312 (+9.8%) | No Holy Shock. Illumination 1 in place of Divine Favor, Champion of the Light 4 |
+| SB2, 31/0/20 | Live | [`b205025211222021051--052323010013`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b205025211222021051--052323010013) | 715 (−16%) | 223 (−20%) | Light's Vigil, Holy Power 5, Illumination 1, Infusion of Light 2. Retribution 20: no Vengeance, no Champion of the Light |
+| SB2, 31/0/20 | Proposed | [`v6p05025211222021051--052323010013`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p05025211222021051--052323010013) | 791 (−7%) | 236 (−21%) | The same build, with Light's Vigil (C-H7) |
+| SB3, 32/0/19 | Live | [`b215325210222121201--052330002013`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b215325210222121201--052330002013) | 680 (−20%) | 251 (−10%) | A hybrid healer: Light's Vigil, Oath of Light, Healing Light 3, Boundless Light 2, no Holy Power. Retribution 19: no Vengeance, no Champion of the Light |
+| SB3, 32/0/19 | Proposed | [`v6p15325210222121201--052330002013`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p15325210222121201--052330002013) | 763 (−11%) | 264 (−12%) | The same build, with Light's Vigil (C-H7) |
+| SF1, 22/0/29 | Live | [`b20502521022102--0523330110130034`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#b20502521022102--0523330110130034) | 765 (−10%) | 294 (+5.8%) | No Holy Shock. Champion of the Light 4 |
+| SF2, 22/0/29 | Proposed | [`v6p0502520122102--0523330110130034`](https://ralgathor.github.io/forever-paladin-feedback/calculator/#v6p0502520122102--0523330110130034) | 765 (−10%) | 310 (+3.3%) | No Holy Shock. Illumination 1 in place of Divine Favor, Champion of the Light 4 |
 
-- **Light's Vigil (C-H7) adds damage, but not enough.** It gives SB2 +69 DPS in a raid (+10.3%): one Holy Shock each 6 sec, in place of each 10 sec. SB2 has no Vengeance and no Champion of the Light, thus it stays 9% below SB1. The talent search from SB2 at fresh 60 moved the Light's Vigil point to other talents at its second step.
-- **In a raid, SB3 has the same damage as SB2.** Light's Vigil (C-H7) gives +10.7% in a raid. At fresh 60, it gives only +6.0%: with more Holy Shocks, the build has no mana for 119 sec of the 3 min fight. Reverence 50% (C-H1) gives +1.7% there. The heal talents of SB3 give no damage, and this sim has no heals.
-- **At fresh 60, Holy Shock costs too much mana.** The search moved the Holy Shock point to Champion of the Light. SF1 is a Retribution build with the Holy Shock set, not a Shockadin. In the final runs, SB1 has no mana for 112 sec of the 3 min fight, and SF1 for 55 sec.
+- **Light's Vigil (C-H7) adds damage, but not enough.** It gives SB2 +76 DPS in a raid (+10.6%): one Holy Shock each 6 sec, in place of each 10 sec. SB2 has no Vengeance and no Champion of the Light, thus it stays 7% below SB1. The talent search from SB2 at fresh 60 moved the Light's Vigil point to other talents at its second step.
+- **In a raid, SB3 has 4% less damage than SB2.** Light's Vigil (C-H7) gives +12.3% in a raid. At fresh 60, it gives only +5.4%: with more Holy Shocks, the build has no mana for 119 sec of the 3 min fight. Reverence 50% (C-H1) gives no damage there. The heal talents of SB3 give no damage, and this sim has no heals.
+- **At fresh 60, Holy Shock costs too much mana.** The search moved the Holy Shock point to Champion of the Light. SF1 is a Retribution build with the Holy Shock set, not a Shockadin. In the final runs, SB1 has no mana for 115 sec of the 3 min fight, and SF1 for 62 sec. With the proposed trees, SF1 now has more damage than SF2 at fresh 60 (315 against 310).
 - **The search did not find a better Shockadin.** In a raid, no move of 1 point from SB1 gave more than +2 DPS, in the live and in the proposed trees.
 
 ## 3. Stat weights
@@ -65,21 +65,21 @@ Each stat + a small amount (20 Strength, Agility or Intellect, 40 spell damage o
 
 | Stat | Live, raid | Proposed, raid | Live, fresh 60 | SB2, proposed, raid |
 | --- | --- | --- | --- | --- |
-| DPS for 1 spell damage | 0.49 | 0.49 | 0.21 | 0.48 |
+| DPS for 1 spell damage | 0.43 | 0.43 | 0.18 | 0.44 |
 | Spell damage | 1.00 | 1.00 | 1.00 | 1.00 |
-| Strength | 0.61 | 0.61 | 0.66 | 0.52 |
-| Agility | 0.57 | 0.57 | 0.59 | 0.45 |
-| Intellect | 0.44 | 0.44 | 0.02 | 0.04 |
-| Attack Power | 0.25 | 0.24 | 0.31 | 0.21 |
-| Hit rating | 1.94 | 1.92 | 1.42 | 1.88 |
-| Crit rating | 0.89 | 0.91 | 0.94 | 0.77 |
-| Haste rating | 0.52 | 0.62 | −0.09 | 0.67 |
-| Expertise rating | 1.18 | 1.03 | 1.08 | 1.15 |
+| Strength | 0.92 | 0.92 | 1.01 | 0.78 |
+| Agility | 0.67 | 0.67 | 0.70 | 0.53 |
+| Intellect | 0.45 | 0.44 | 1.63 | 0.08 |
+| Attack Power | 0.38 | 0.38 | 0.47 | 0.33 |
+| Hit rating | 2.37 | 2.51 | 1.85 | 2.37 |
+| Crit rating | 1.07 | 1.05 | 1.18 | 0.89 |
+| Haste rating | 0.49 | 0.40 | 6.40 | −0.41 |
+| Expertise rating | 1.60 | 1.53 | 1.29 | 1.35 |
 
-- **Spell damage is the main stat.** Holy Shock, Consecration, Exorcism, Judgements and Seals use spell damage. 1 spell damage is 1.6 Strength. For RB1, 1 spell damage is 0.8 Strength.
-- **Hit rating has the most value for each point in a raid:** 1.9 spell damage. It increases melee and spell hits.
-- **At fresh 60, Hit rating also has the most value:** 1.4 spell damage. With the Shockadin set of 11 November, Intellect has no value (0.0 spell damage), and Haste rating has a negative value. With the set of 9 November, Intellect was 2.8 spell damage. A test of each new item shows the cause: Storm Gauntlets. With The Needler and Gauntlets of Elements, Reverence 50% still gives +7.7% at fresh 60 (279.7 → 301.3). With Storm Gauntlets, the live and proposed trees have almost the same mana.
-- **SB2 has mana in a raid.** Intellect then has almost no value.
+- **Spell damage is the main stat.** Holy Shock, Consecration, Exorcism, Judgements and Seals use spell damage. 1 spell damage is 1.1 Strength (18 November: 1.6). Destiny gives more weapon damage, thus Strength has more value. For RB1, 1 spell damage is 0.8 Strength.
+- **Hit rating has the most value for each point in a raid:** 2.4–2.5 spell damage (18 November: 1.9). It increases melee and spell hits.
+- **At fresh 60, Haste rating has the most value:** 6.4 spell damage, then Hit rating (1.9) and Intellect (1.6). This Haste value is not stable: with the set of 11 November on commit ad6b13af8, it was −0.09. With the Shockadin set of 28 November, Intellect has value again, and Reverence 50% gives +7.8%. With the Shockadin set of 11 November, Intellect had no value (0.0 spell damage), and Haste rating had a negative value. With the set of 9 November, Intellect was 2.8 spell damage. A test of each new item shows the cause: Storm Gauntlets. With The Needler and Gauntlets of Elements, Reverence 50% still gives +7.7% at fresh 60 (279.7 → 301.3). With Storm Gauntlets and The Needler (set of 11 November), the live and proposed trees had almost the same mana.
+- **SB2 has mana in a raid.** Intellect then has almost no value. Haste rating decreases its damage (−0.41 spell damage).
 
 ## 4. Limits
 

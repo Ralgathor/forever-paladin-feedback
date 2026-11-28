@@ -15,7 +15,7 @@ Warrior set with 9 enchants. This search gives the three tanks the same enchant 
   better. Two passes at most. Final: 3,000 iterations.
 - Consumables: FEEDBACK_CONSUMES=full (threat sets) or fullsurv (survival sets, with Greater Stoneshield Potion).
 
-Usage: python3 search_enchants.py <wowsims clone> <prot|war|bear> [surv]. Needs the test binaries of run_pool.sh in /tmp/bin.
+Usage: [ENCH_START='[...]'] python3 search_enchants.py <wowsims clone> <prot|war|bear> [surv]. Needs the test binaries of run_pool.sh in /tmp/bin.
 Output: enchants_<tank>[_surv].json (17 enchant ids) and the log on stdout (log_ench_<tank>[_surv].txt).
 """
 import json, os, subprocess, sys
@@ -92,7 +92,9 @@ def score(r, ref):
 
 E_ALL = [e for e in db['enchants'] if legal(e) and useful(e)]
 name = {e['effectId']: e['name'] for e in db['enchants']}
-de = default_enchants()
+# 28 November 2026: wowsims dc09e002f0 has no Warrior prebis file (now prebis_balanced and prebis_offensive). ENCH_START
+# gives the start enchants as a JSON list, for example the START line of the earlier log.
+de = json.loads(os.environ['ENCH_START']) if os.environ.get('ENCH_START') else default_enchants()
 cur = [(de[s] if de and SET[s] else 0) for s in range(17)]
 start = list(cur)
 ref = run(cur, 1000)

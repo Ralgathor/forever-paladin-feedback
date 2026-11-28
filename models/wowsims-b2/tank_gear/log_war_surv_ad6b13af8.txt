@@ -1,0 +1,9 @@
+REF {"tps": 1785.097576139894, "dps": 548.2404431661191, "dtps": 297.2002148543838, "tmi": 37.96434556233243}
+BASE 1.1686 {"tps": 1603.389529652122, "dps": 499.1400588279555, "dtps": 253.30483918110332, "tmi": 24.904880794147015}
+PASS 0
+SLOT 11 Naglering -> Ezra's Seal of Authenticity 276396 59 [] 1.1686 -> 1.1716
+PASS 1
+FINAL old {"tps": 1604.8383576853284, "dps": 499.67770696532534, "dtps": 254.2843452660877, "tmi": 24.9120727922926} 1.1674
+FINAL new {"tps": 1609.589054422166, "dps": 500.93473810657764, "dtps": 254.1085316296141, "tmi": 24.86430427535421} 1.1696
+SET [226869, 13177, 16733, 18511, 226872, 13951, 226870, 272403, 14554, 226871, 2246, 276396, 14557, 18466, 2244, 18696, 13023]
+SETNAMES Faceguard of Heroism ; Talisman of Evasion ; Spaulders of Valor ; Shifting Cloak ; Chestguard of Heroism ; Vigorsteel Vambraces ; Handguards of Heroism ; Valiant's Waistguard ; Cloudkeeper Legplates ; Sabatons of Heroism ; Myrmidon's Signet ; Ezra's Seal of Authenticity ; The Lion Horn of Stormwind ; Royal Seal of Eldre'Thalas ; Krol Blade ; Intricately Runed Shield ; Eaglehorn Long Bow

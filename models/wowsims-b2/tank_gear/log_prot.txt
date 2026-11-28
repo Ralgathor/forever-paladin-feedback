@@ -1,11 +1,11 @@
-REF {"tps": 1237.2152774370418, "dps": 517.0955876333519, "dtps": 284.7017644518894, "tmi": 42.87057941935972}
-BASE 1.0472 {"tps": 1394.63529589604, "dps": 567.6337966564653, "dtps": 296.1404726201881, "tmi": 46.48277754272167}
+REF {"tps": 1448.2752368558547, "dps": 585.9227407767897, "dtps": 293.64586774309464, "tmi": 40.925444461814955}
+BASE 1.0 {"tps": 1448.2752368558547, "dps": 585.9227407767897, "dtps": 293.64586774309464, "tmi": 40.925444461814955}
 PASS 0
-SLOT 5 Warder's Wristguards -> Vigorsteel Vambraces 13951 62 [] 1.0472 -> 1.0496
-SLOT 6 Storm Gauntlets -> Warder's Gloves 250553 55 [] 1.0496 -> 1.0546
-SLOT 13 Flamebreak Talisman -> Frozen Heart of the Mountain 249469 55 [] 1.0546 -> 1.0577
+SLOT 5 Vigorsteel Vambraces -> Gargantuan Wristguards 280010 63 [] 1.0 -> 1.0023
+SLOT 6 Warder's Gloves -> Justice Handguards 273917 60 [] 1.0023 -> 1.0043
+SLOT 9 Warder's Sabatons -> Justice Sabatons 273919 60 [] 1.0043 -> 1.018
 PASS 1
-FINAL old {"tps": 1396.13097031965, "dps": 568.6948591565202, "dtps": 296.3374046872659, "tmi": 46.35147786205822} 1.0485
-FINAL new {"tps": 1383.4706112006784, "dps": 562.1431202255158, "dtps": 290.6069634505053, "tmi": 43.4756682927802} 1.0579
-SET [250599, 275736, 14552, 18511, 226992, 13951, 250553, 250573, 14554, 250563, 275971, 2246, 14557, 249469, 2243, 12602, 228175]
-SETNAMES Stalwart Helm ; Horn of Ve'han ; Stockade Pauldrons ; Shifting Cloak ; Soulforge Chestguards ; Vigorsteel Vambraces ; Warder's Gloves ; Warder's Waistguard ; Cloudkeeper Legplates ; Warder's Sabatons ; Initiate's Signet of Vigilance ; Myrmidon's Signet ; The Lion Horn of Stormwind ; Frozen Heart of the Mountain ; Hand of Edward the Odd ; Draconian Deflector ; Libram of Holy Alacrity
+FINAL old {"tps": 1450.7325788769976, "dps": 587.1168899650727, "dtps": 294.3912722635513, "tmi": 40.99281854073635} 1.0003
+FINAL new {"tps": 1479.8330599227843, "dps": 600.1105218912849, "dtps": 293.4607163737072, "tmi": 40.379010703113366} 1.0164
+SET [250599, 275736, 14552, 18511, 226992, 280010, 273917, 250573, 14554, 273919, 275971, 2246, 14557, 249469, 2243, 12602, 249442]
+SETNAMES Stalwart Helm ; Horn of Ve'han ; Stockade Pauldrons ; Shifting Cloak ; Soulforge Chestguards ; Gargantuan Wristguards ; Justice Handguards ; Warder's Waistguard ; Cloudkeeper Legplates ; Justice Sabatons ; Initiate's Signet of Vigilance ; Myrmidon's Signet ; The Lion Horn of Stormwind ; Frozen Heart of the Mountain ; Hand of Edward the Odd ; Draconian Deflector ; Libram of Invocation
